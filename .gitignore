@@ -1,3 +1,6 @@
+# Ignore where files get large
+data_sources/facilities/cdcr_population_pdfs
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
