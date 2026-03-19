@@ -1,0 +1,251 @@
+Year,Month,Location,Gender,Population
+2025,Jan,ASP,Female,(Blank)
+2025,Jan,ASP,Male,"3,784"
+2025,Jan,CIW,Female,"1,271"
+2025,Jan,CIW,Male,10
+2025,Jan,CMC,Female,(Blank)
+2025,Jan,CMC,Male,"2,200"
+2025,Jan,CMF,Female,*
+2025,Jan,CMF,Male,"1,868"
+2025,Jan,COR,Female,(Blank)
+2025,Jan,COR,Male,"2,664"
+2025,Jan,CRC,Female,(Blank)
+2025,Jan,CRC,Male,"2,737"
+2025,Jan,CTF,Female,(Blank)
+2025,Jan,CTF,Male,"4,346"
+2025,Jan,FOL,Female,(Blank)
+2025,Jan,FOL,Male,"2,765"
+2025,Jan,HDSP,Female,(Blank)
+2025,Jan,HDSP,Male,"2,801"
+2025,Jan,ISP,Female,(Blank)
+2025,Jan,ISP,Male,"2,823"
+2025,Jan,KVSP,Female,(Blank)
+2025,Jan,KVSP,Male,"3,182"
+2025,Jan,LAC,Female,(Blank)
+2025,Jan,LAC,Male,"3,113"
+2025,Jan,MCSP,Female,*
+2025,Jan,MCSP,Male,"3,851"
+2025,Jan,NKSP,Female,(Blank)
+2025,Jan,NKSP,Male,"2,697"
+2025,Jan,PBSP,Female,(Blank)
+2025,Jan,PBSP,Male,"2,030"
+2025,Jan,PVSP,Female,(Blank)
+2025,Jan,PVSP,Male,"2,899"
+2025,Jan,RJD,Female,(Blank)
+2025,Jan,RJD,Male,"3,273"
+2025,Jan,SAC,Female,(Blank)
+2025,Jan,SAC,Male,"2,113"
+2025,Jan,CAL,Female,(Blank)
+2025,Jan,CAL,Male,"2,485"
+2025,Jan,SATF,Female,(Blank)
+2025,Jan,SATF,Male,"5,146"
+2025,Jan,SCC,Female,(Blank)
+2025,Jan,SCC,Male,"4,170"
+2025,Jan,SOL,Female,(Blank)
+2025,Jan,SOL,Male,"3,882"
+2025,Jan,SQ,Female,(Blank)
+2025,Jan,SQ,Male,"2,931"
+2025,Jan,SVSP,Female,(Blank)
+2025,Jan,SVSP,Male,"2,356"
+2025,Jan,VSP,Female,(Blank)
+2025,Jan,VSP,Male,"3,132"
+2025,Jan,WSP,Female,(Blank)
+2025,Jan,WSP,Male,"3,834"
+2025,Jan,CPMP,Female,*
+2025,Jan,CPMP,Male,(Blank)
+2025,Jan,FCRF,Female,358
+2025,Jan,FCRF,Male,(Blank)
+2025,Jan,Alternative Custody Program,Female,*
+2025,Jan,Alternative Custody Program,Male,10
+2025,Jan,Department of State Hospitals,Female,12
+2025,Jan,Department of State Hospitals,Male,167
+2025,Jan,Male Community Reentry Facility,Female,(Blank)
+2025,Jan,Male Community Reentry Facility,Male,656
+2025,Jan,Medical Reprieve Program,Female,*
+2025,Jan,Medical Reprieve Program,Male,*
+2025,Jan,CCI,Female,(Blank)
+2025,Jan,CCI,Male,"2,371"
+2025,Jan,CCWF,Female,"1,982"
+2025,Jan,CCWF,Male,13
+2025,Jan,CEN,Female,(Blank)
+2025,Jan,CEN,Male,"2,794"
+2025,Jan,CHCF,Female,(Blank)
+2025,Jan,CHCF,Male,"2,095"
+2025,Jan,CIM,Female,(Blank)
+2025,Jan,CIM,Male,"2,238"
+2025,Feb,ASP,Female,(Blank)
+2025,Feb,ASP,Male,"3,765"
+2025,Feb,CIW,Female,"1,231"
+2025,Feb,CIW,Male,10
+2025,Feb,CMC,Female,(Blank)
+2025,Feb,CMC,Male,"2,205"
+2025,Feb,CMF,Female,*
+2025,Feb,CMF,Male,"1,889"
+2025,Feb,COR,Female,(Blank)
+2025,Feb,COR,Male,"2,632"
+2025,Feb,CRC,Female,(Blank)
+2025,Feb,CRC,Male,"2,756"
+2025,Feb,CTF,Female,(Blank)
+2025,Feb,CTF,Male,"4,324"
+2025,Feb,FOL,Female,(Blank)
+2025,Feb,FOL,Male,"2,817"
+2025,Feb,HDSP,Female,(Blank)
+2025,Feb,HDSP,Male,"2,793"
+2025,Feb,ISP,Female,(Blank)
+2025,Feb,ISP,Male,"2,610"
+2025,Feb,KVSP,Female,(Blank)
+2025,Feb,KVSP,Male,"3,153"
+2025,Feb,LAC,Female,(Blank)
+2025,Feb,LAC,Male,"3,144"
+2025,Feb,MCSP,Female,(Blank)
+2025,Feb,MCSP,Male,"3,805"
+2025,Feb,NKSP,Female,(Blank)
+2025,Feb,NKSP,Male,"2,650"
+2025,Feb,PBSP,Female,(Blank)
+2025,Feb,PBSP,Male,"2,018"
+2025,Feb,PVSP,Female,(Blank)
+2025,Feb,PVSP,Male,"2,834"
+2025,Feb,RJD,Female,(Blank)
+2025,Feb,RJD,Male,"3,366"
+2025,Feb,SAC,Female,(Blank)
+2025,Feb,SAC,Male,"2,058"
+2025,Feb,CAL,Female,(Blank)
+2025,Feb,CAL,Male,"2,539"
+2025,Feb,SATF,Female,(Blank)
+2025,Feb,SATF,Male,"5,234"
+2025,Feb,SCC,Female,(Blank)
+2025,Feb,SCC,Male,"4,180"
+2025,Feb,SOL,Female,(Blank)
+2025,Feb,SOL,Male,"3,875"
+2025,Feb,SQ,Female,(Blank)
+2025,Feb,SQ,Male,"2,879"
+2025,Feb,SVSP,Female,(Blank)
+2025,Feb,SVSP,Male,"2,370"
+2025,Feb,VSP,Female,(Blank)
+2025,Feb,VSP,Male,"3,083"
+2025,Feb,WSP,Female,(Blank)
+2025,Feb,WSP,Male,"3,819"
+2025,Feb,CPMP,Female,*
+2025,Feb,CPMP,Male,(Blank)
+2025,Feb,FCRF,Female,383
+2025,Feb,FCRF,Male,(Blank)
+2025,Feb,Alternative Custody Program,Female,*
+2025,Feb,Alternative Custody Program,Male,*
+2025,Feb,Department of State Hospitals,Female,15
+2025,Feb,Department of State Hospitals,Male,176
+2025,Feb,Male Community Reentry Facility,Female,(Blank)
+2025,Feb,Male Community Reentry Facility,Male,674
+2025,Feb,Medical Reprieve Program,Female,*
+2025,Feb,Medical Reprieve Program,Male,*
+2025,Feb,CCI,Female,(Blank)
+2025,Feb,CCI,Male,"2,420"
+2025,Feb,CCWF,Female,"2,010"
+2025,Feb,CCWF,Male,13
+2025,Feb,CEN,Female,(Blank)
+2025,Feb,CEN,Male,"2,797"
+2025,Feb,CHCF,Female,(Blank)
+2025,Feb,CHCF,Male,"2,079"
+2025,Feb,CIM,Female,(Blank)
+2025,Feb,CIM,Male,"2,310"
+2025,Mar,ASP,Female,(Blank)
+2025,Mar,ASP,Male,"3,809"
+2025,Mar,CIW,Female,"1,218"
+2025,Mar,CIW,Male,10
+2025,Mar,CMC,Female,(Blank)
+2025,Mar,CMC,Male,"2,185"
+2025,Mar,CMF,Female,*
+2025,Mar,CMF,Male,"1,907"
+2025,Mar,COR,Female,(Blank)
+2025,Mar,COR,Male,"2,618"
+2025,Mar,CRC,Female,(Blank)
+2025,Mar,CRC,Male,"2,698"
+2025,Mar,CTF,Female,(Blank)
+2025,Mar,CTF,Male,"4,304"
+2025,Mar,FOL,Female,(Blank)
+2025,Mar,FOL,Male,"2,829"
+2025,Mar,HDSP,Female,*
+2025,Mar,HDSP,Male,"2,902"
+2025,Mar,ISP,Female,(Blank)
+2025,Mar,ISP,Male,"2,514"
+2025,Mar,KVSP,Female,(Blank)
+2025,Mar,KVSP,Male,"3,072"
+2025,Mar,LAC,Female,(Blank)
+2025,Mar,LAC,Male,"3,081"
+2025,Mar,MCSP,Female,(Blank)
+2025,Mar,MCSP,Male,"3,803"
+2025,Mar,NKSP,Female,(Blank)
+2025,Mar,NKSP,Male,"2,596"
+2025,Mar,PBSP,Female,(Blank)
+2025,Mar,PBSP,Male,"2,005"
+2025,Mar,PVSP,Female,(Blank)
+2025,Mar,PVSP,Male,"2,844"
+2025,Mar,RJD,Female,(Blank)
+2025,Mar,RJD,Male,"3,433"
+2025,Mar,SAC,Female,(Blank)
+2025,Mar,SAC,Male,"2,075"
+2025,Mar,CAL,Female,(Blank)
+2025,Mar,CAL,Male,"2,555"
+2025,Mar,SATF,Female,(Blank)
+2025,Mar,SATF,Male,"5,337"
+2025,Mar,SCC,Female,(Blank)
+2025,Mar,SCC,Male,"4,110"
+2025,Mar,SOL,Female,(Blank)
+2025,Mar,SOL,Male,"3,882"
+2025,Mar,SQ,Female,(Blank)
+2025,Mar,SQ,Male,"2,865"
+2025,Mar,SVSP,Female,(Blank)
+2025,Mar,SVSP,Male,"2,403"
+2025,Mar,VSP,Female,(Blank)
+2025,Mar,VSP,Male,"3,022"
+2025,Mar,WSP,Female,(Blank)
+2025,Mar,WSP,Male,"3,644"
+2025,Mar,CPMP,Female,*
+2025,Mar,CPMP,Male,(Blank)
+2025,Mar,FCRF,Female,407
+2025,Mar,FCRF,Male,(Blank)
+2025,Mar,Alternative Custody Program,Female,(Blank)
+2025,Mar,Alternative Custody Program,Male,*
+2025,Mar,Department of State Hospitals,Female,*
+2025,Mar,Department of State Hospitals,Male,184
+2025,Mar,Male Community Reentry Facility,Female,(Blank)
+2025,Mar,Male Community Reentry Facility,Male,679
+2025,Mar,Medical Reprieve Program,Female,*
+2025,Mar,Medical Reprieve Program,Male,*
+2025,Mar,CCI,Female,(Blank)
+2025,Mar,CCI,Male,"2,413"
+2025,Mar,CCWF,Female,"1,992"
+2025,Mar,CCWF,Male,13
+2025,Mar,CEN,Female,(Blank)
+2025,Mar,CEN,Male,"2,819"
+2025,Mar,CHCF,Female,(Blank)
+2025,Mar,CHCF,Male,"2,094"
+2025,Mar,CIM,Female,(Blank)
+2025,Mar,CIM,Male,"2,347"
+2025,Apr,ASP,Female,(Blank)
+2025,Apr,ASP,Male,"3,945"
+2025,Apr,CIW,Female,"1,207"
+2025,Apr,CIW,Male,10
+2025,Apr,CMC,Female,(Blank)
+2025,Apr,CMC,Male,"2,225"
+2025,Apr,CMF,Female,*
+2025,Apr,CMF,Male,"1,964"
+2025,Apr,COR,Female,(Blank)
+2025,Apr,COR,Male,"2,648"
+2025,Apr,CRC,Female,(Blank)
+2025,Apr,CRC,Male,"2,762"
+2025,Apr,CTF,Female,(Blank)
+2025,Apr,CTF,Male,"4,290"
+2025,Apr,FOL,Female,(Blank)
+2025,Apr,FOL,Male,"2,855"
+2025,Apr,HDSP,Female,(Blank)
+2025,Apr,HDSP,Male,"2,823"
+2025,Apr,ISP,Female,(Blank)
+2025,Apr,ISP,Male,"2,624"
+2025,Apr,KVSP,Female,(Blank)
+2025,Apr,KVSP,Male,"3,111"
+2025,Apr,LAC,Female,(Blank)
+2025,Apr,LAC,Male,"2,854"
+2025,Apr,MCSP,Female,(Blank)
+2025,Apr,MCSP,Male,"3,775"
+2025,Apr,NKSP,Female,(Blank)
+2025,Apr,NKSP,Male,"2,517"

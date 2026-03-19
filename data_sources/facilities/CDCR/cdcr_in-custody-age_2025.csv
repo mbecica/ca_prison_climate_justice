@@ -1,0 +1,2001 @@
+Year,Month,Location,Age Group,Population
+2025,Jan,ASP,18-24 Years,130
+2025,Jan,ASP,25-29 Years,267
+2025,Jan,ASP,30-34 Years,418
+2025,Jan,ASP,35-39 Years,602
+2025,Jan,ASP,40-44 Years,675
+2025,Jan,ASP,45-49 Years,571
+2025,Jan,ASP,50-54 Years,475
+2025,Jan,ASP,55-59 Years,375
+2025,Jan,ASP,60-64 Years,266
+2025,Jan,ASP,65-69 Years,*
+2025,Jan,ASP,70-74 Years,(Blank)
+2025,Jan,ASP,75-79 Years,(Blank)
+2025,Jan,ASP,80-84 Years,(Blank)
+2025,Jan,ASP,85-89 Years,(Blank)
+2025,Jan,ASP,90-94 Years,(Blank)
+2025,Jan,ASP,95 and Older,(Blank)
+2025,Jan,CIW,18-24 Years,71
+2025,Jan,CIW,25-29 Years,152
+2025,Jan,CIW,30-34 Years,249
+2025,Jan,CIW,35-39 Years,229
+2025,Jan,CIW,40-44 Years,182
+2025,Jan,CIW,45-49 Years,127
+2025,Jan,CIW,50-54 Years,66
+2025,Jan,CIW,55-59 Years,70
+2025,Jan,CIW,60-64 Years,65
+2025,Jan,CIW,65-69 Years,35
+2025,Jan,CIW,70-74 Years,15
+2025,Jan,CIW,75-79 Years,14
+2025,Jan,CIW,80-84 Years,*
+2025,Jan,CIW,85-89 Years,(Blank)
+2025,Jan,CIW,90-94 Years,*
+2025,Jan,CIW,95 and Older,(Blank)
+2025,Jan,CMC,18-24 Years,53
+2025,Jan,CMC,25-29 Years,197
+2025,Jan,CMC,30-34 Years,376
+2025,Jan,CMC,35-39 Years,370
+2025,Jan,CMC,40-44 Years,331
+2025,Jan,CMC,45-49 Years,246
+2025,Jan,CMC,50-54 Years,180
+2025,Jan,CMC,55-59 Years,149
+2025,Jan,CMC,60-64 Years,149
+2025,Jan,CMC,65-69 Years,92
+2025,Jan,CMC,70-74 Years,41
+2025,Jan,CMC,75-79 Years,10
+2025,Jan,CMC,80-84 Years,*
+2025,Jan,CMC,85-89 Years,*
+2025,Jan,CMC,90-94 Years,(Blank)
+2025,Jan,CMC,95 and Older,(Blank)
+2025,Jan,CMF,18-24 Years,14
+2025,Jan,CMF,25-29 Years,81
+2025,Jan,CMF,30-34 Years,182
+2025,Jan,CMF,35-39 Years,187
+2025,Jan,CMF,40-44 Years,164
+2025,Jan,CMF,45-49 Years,203
+2025,Jan,CMF,50-54 Years,160
+2025,Jan,CMF,55-59 Years,203
+2025,Jan,CMF,60-64 Years,190
+2025,Jan,CMF,65-69 Years,203
+2025,Jan,CMF,70-74 Years,137
+2025,Jan,CMF,75-79 Years,94
+2025,Jan,CMF,80-84 Years,36
+2025,Jan,CMF,85-89 Years,11
+2025,Jan,CMF,90-94 Years,*
+2025,Jan,CMF,95 and Older,(Blank)
+2025,Jan,COR,18-24 Years,36
+2025,Jan,COR,25-29 Years,162
+2025,Jan,COR,30-34 Years,300
+2025,Jan,COR,35-39 Years,367
+2025,Jan,COR,40-44 Years,374
+2025,Jan,COR,45-49 Years,344
+2025,Jan,COR,50-54 Years,298
+2025,Jan,COR,55-59 Years,287
+2025,Jan,COR,60-64 Years,225
+2025,Jan,COR,65-69 Years,163
+2025,Jan,COR,70-74 Years,64
+2025,Jan,COR,75-79 Years,31
+2025,Jan,COR,80-84 Years,12
+2025,Jan,COR,85-89 Years,*
+2025,Jan,COR,90-94 Years,(Blank)
+2025,Jan,COR,95 and Older,(Blank)
+2025,Jan,CRC,18-24 Years,159
+2025,Jan,CRC,25-29 Years,281
+2025,Jan,CRC,30-34 Years,391
+2025,Jan,CRC,35-39 Years,465
+2025,Jan,CRC,40-44 Years,451
+2025,Jan,CRC,45-49 Years,305
+2025,Jan,CRC,50-54 Years,219
+2025,Jan,CRC,55-59 Years,194
+2025,Jan,CRC,60-64 Years,141
+2025,Jan,CRC,65-69 Years,98
+2025,Jan,CRC,70-74 Years,26
+2025,Jan,CRC,75-79 Years,*
+2025,Jan,CRC,80-84 Years,*
+2025,Jan,CRC,85-89 Years,(Blank)
+2025,Jan,CRC,90-94 Years,(Blank)
+2025,Jan,CRC,95 and Older,(Blank)
+2025,Jan,CTF,18-24 Years,33
+2025,Jan,CTF,25-29 Years,173
+2025,Jan,CTF,30-34 Years,397
+2025,Jan,CTF,35-39 Years,516
+2025,Jan,CTF,40-44 Years,577
+2025,Jan,CTF,45-49 Years,599
+2025,Jan,CTF,50-54 Years,612
+2025,Jan,CTF,55-59 Years,577
+2025,Jan,CTF,60-64 Years,465
+2025,Jan,CTF,65-69 Years,291
+2025,Jan,CTF,70-74 Years,84
+2025,Jan,CTF,75-79 Years,16
+2025,Jan,CTF,80-84 Years,*
+2025,Jan,CTF,85-89 Years,*
+2025,Jan,CTF,90-94 Years,(Blank)
+2025,Jan,CTF,95 and Older,(Blank)
+2025,Jan,FOL,18-24 Years,87
+2025,Jan,FOL,25-29 Years,319
+2025,Jan,FOL,30-34 Years,467
+2025,Jan,FOL,35-39 Years,437
+2025,Jan,FOL,40-44 Years,390
+2025,Jan,FOL,45-49 Years,312
+2025,Jan,FOL,50-54 Years,230
+2025,Jan,FOL,55-59 Years,204
+2025,Jan,FOL,60-64 Years,166
+2025,Jan,FOL,65-69 Years,91
+2025,Jan,FOL,70-74 Years,46
+2025,Jan,FOL,75-79 Years,12
+2025,Jan,FOL,80-84 Years,*
+2025,Jan,FOL,85-89 Years,*
+2025,Jan,FOL,90-94 Years,(Blank)
+2025,Jan,FOL,95 and Older,(Blank)
+2025,Jan,HDSP,18-24 Years,85
+2025,Jan,HDSP,25-29 Years,387
+2025,Jan,HDSP,30-34 Years,584
+2025,Jan,HDSP,35-39 Years,491
+2025,Jan,HDSP,40-44 Years,375
+2025,Jan,HDSP,45-49 Years,313
+2025,Jan,HDSP,50-54 Years,199
+2025,Jan,HDSP,55-59 Years,139
+2025,Jan,HDSP,60-64 Years,131
+2025,Jan,HDSP,65-69 Years,69
+2025,Jan,HDSP,70-74 Years,17
+2025,Jan,HDSP,75-79 Years,*
+2025,Jan,HDSP,80-84 Years,*
+2025,Jan,HDSP,85-89 Years,*
+2025,Jan,HDSP,90-94 Years,(Blank)
+2025,Jan,HDSP,95 and Older,(Blank)
+2025,Jan,ISP,18-24 Years,164
+2025,Jan,ISP,25-29 Years,254
+2025,Jan,ISP,30-34 Years,338
+2025,Jan,ISP,35-39 Years,398
+2025,Jan,ISP,40-44 Years,406
+2025,Jan,ISP,45-49 Years,351
+2025,Jan,ISP,50-54 Years,322
+2025,Jan,ISP,55-59 Years,255
+2025,Jan,ISP,60-64 Years,213
+2025,Jan,ISP,65-69 Years,100
+2025,Jan,ISP,70-74 Years,16
+2025,Jan,ISP,75-79 Years,*
+2025,Jan,ISP,80-84 Years,*
+2025,Jan,ISP,85-89 Years,(Blank)
+2025,Jan,ISP,90-94 Years,(Blank)
+2025,Jan,ISP,95 and Older,(Blank)
+2025,Jan,KVSP,18-24 Years,98
+2025,Jan,KVSP,25-29 Years,440
+2025,Jan,KVSP,30-34 Years,731
+2025,Jan,KVSP,35-39 Years,644
+2025,Jan,KVSP,40-44 Years,480
+2025,Jan,KVSP,45-49 Years,330
+2025,Jan,KVSP,50-54 Years,202
+2025,Jan,KVSP,55-59 Years,131
+2025,Jan,KVSP,60-64 Years,90
+2025,Jan,KVSP,65-69 Years,26
+2025,Jan,KVSP,70-74 Years,*
+2025,Jan,KVSP,75-79 Years,*
+2025,Jan,KVSP,80-84 Years,*
+2025,Jan,KVSP,85-89 Years,(Blank)
+2025,Jan,KVSP,90-94 Years,(Blank)
+2025,Jan,KVSP,95 and Older,(Blank)
+2025,Jan,LAC,18-24 Years,158
+2025,Jan,LAC,25-29 Years,349
+2025,Jan,LAC,30-34 Years,540
+2025,Jan,LAC,35-39 Years,507
+2025,Jan,LAC,40-44 Years,456
+2025,Jan,LAC,45-49 Years,352
+2025,Jan,LAC,50-54 Years,253
+2025,Jan,LAC,55-59 Years,207
+2025,Jan,LAC,60-64 Years,154
+2025,Jan,LAC,65-69 Years,93
+2025,Jan,LAC,70-74 Years,27
+2025,Jan,LAC,75-79 Years,13
+2025,Jan,LAC,80-84 Years,*
+2025,Jan,LAC,85-89 Years,*
+2025,Jan,LAC,90-94 Years,(Blank)
+2025,Jan,LAC,95 and Older,(Blank)
+2025,Jan,MCSP,18-24 Years,92
+2025,Jan,MCSP,25-29 Years,354
+2025,Jan,MCSP,30-34 Years,511
+2025,Jan,MCSP,35-39 Years,497
+2025,Jan,MCSP,40-44 Years,463
+2025,Jan,MCSP,45-49 Years,450
+2025,Jan,MCSP,50-54 Years,353
+2025,Jan,MCSP,55-59 Years,340
+2025,Jan,MCSP,60-64 Years,303
+2025,Jan,MCSP,65-69 Years,201
+2025,Jan,MCSP,70-74 Years,145
+2025,Jan,MCSP,75-79 Years,99
+2025,Jan,MCSP,80-84 Years,35
+2025,Jan,MCSP,85-89 Years,*
+2025,Jan,MCSP,90-94 Years,*
+2025,Jan,MCSP,95 and Older,(Blank)
+2025,Jan,NKSP,18-24 Years,223
+2025,Jan,NKSP,25-29 Years,465
+2025,Jan,NKSP,30-34 Years,566
+2025,Jan,NKSP,35-39 Years,516
+2025,Jan,NKSP,40-44 Years,363
+2025,Jan,NKSP,45-49 Years,233
+2025,Jan,NKSP,50-54 Years,148
+2025,Jan,NKSP,55-59 Years,102
+2025,Jan,NKSP,60-64 Years,48
+2025,Jan,NKSP,65-69 Years,22
+2025,Jan,NKSP,70-74 Years,*
+2025,Jan,NKSP,75-79 Years,*
+2025,Jan,NKSP,80-84 Years,(Blank)
+2025,Jan,NKSP,85-89 Years,(Blank)
+2025,Jan,NKSP,90-94 Years,(Blank)
+2025,Jan,NKSP,95 and Older,(Blank)
+2025,Jan,PBSP,18-24 Years,44
+2025,Jan,PBSP,25-29 Years,190
+2025,Jan,PBSP,30-34 Years,352
+2025,Jan,PBSP,35-39 Years,383
+2025,Jan,PBSP,40-44 Years,287
+2025,Jan,PBSP,45-49 Years,242
+2025,Jan,PBSP,50-54 Years,182
+2025,Jan,PBSP,55-59 Years,156
+2025,Jan,PBSP,60-64 Years,119
+2025,Jan,PBSP,65-69 Years,50
+2025,Jan,PBSP,70-74 Years,23
+2025,Jan,PBSP,75-79 Years,*
+2025,Jan,PBSP,80-84 Years,*
+2025,Jan,PBSP,85-89 Years,(Blank)
+2025,Jan,PBSP,90-94 Years,(Blank)
+2025,Jan,PBSP,95 and Older,(Blank)
+2025,Jan,PVSP,18-24 Years,244
+2025,Jan,PVSP,25-29 Years,539
+2025,Jan,PVSP,30-34 Years,612
+2025,Jan,PVSP,35-39 Years,515
+2025,Jan,PVSP,40-44 Years,400
+2025,Jan,PVSP,45-49 Years,274
+2025,Jan,PVSP,50-54 Years,160
+2025,Jan,PVSP,55-59 Years,91
+2025,Jan,PVSP,60-64 Years,62
+2025,Jan,PVSP,65-69 Years,*
+2025,Jan,PVSP,70-74 Years,(Blank)
+2025,Jan,PVSP,75-79 Years,(Blank)
+2025,Jan,PVSP,80-84 Years,(Blank)
+2025,Jan,PVSP,85-89 Years,(Blank)
+2025,Jan,PVSP,90-94 Years,(Blank)
+2025,Jan,PVSP,95 and Older,(Blank)
+2025,Jan,RJD,18-24 Years,28
+2025,Jan,RJD,25-29 Years,210
+2025,Jan,RJD,30-34 Years,360
+2025,Jan,RJD,35-39 Years,371
+2025,Jan,RJD,40-44 Years,405
+2025,Jan,RJD,45-49 Years,399
+2025,Jan,RJD,50-54 Years,363
+2025,Jan,RJD,55-59 Years,363
+2025,Jan,RJD,60-64 Years,295
+2025,Jan,RJD,65-69 Years,240
+2025,Jan,RJD,70-74 Years,133
+2025,Jan,RJD,75-79 Years,73
+2025,Jan,RJD,80-84 Years,28
+2025,Jan,RJD,85-89 Years,*
+2025,Jan,RJD,90-94 Years,(Blank)
+2025,Jan,RJD,95 and Older,(Blank)
+2025,Jan,SAC,18-24 Years,43
+2025,Jan,SAC,25-29 Years,258
+2025,Jan,SAC,30-34 Years,404
+2025,Jan,SAC,35-39 Years,331
+2025,Jan,SAC,40-44 Years,312
+2025,Jan,SAC,45-49 Years,232
+2025,Jan,SAC,50-54 Years,154
+2025,Jan,SAC,55-59 Years,120
+2025,Jan,SAC,60-64 Years,99
+2025,Jan,SAC,65-69 Years,99
+2025,Jan,SAC,70-74 Years,34
+2025,Jan,SAC,75-79 Years,26
+2025,Jan,SAC,80-84 Years,*
+2025,Jan,SAC,85-89 Years,(Blank)
+2025,Jan,SAC,90-94 Years,(Blank)
+2025,Jan,SAC,95 and Older,(Blank)
+2025,Jan,CAL,18-24 Years,86
+2025,Jan,CAL,25-29 Years,438
+2025,Jan,CAL,30-34 Years,631
+2025,Jan,CAL,35-39 Years,486
+2025,Jan,CAL,40-44 Years,360
+2025,Jan,CAL,45-49 Years,247
+2025,Jan,CAL,50-54 Years,123
+2025,Jan,CAL,55-59 Years,58
+2025,Jan,CAL,60-64 Years,44
+2025,Jan,CAL,65-69 Years,*
+2025,Jan,CAL,70-74 Years,(Blank)
+2025,Jan,CAL,75-79 Years,*
+2025,Jan,CAL,80-84 Years,(Blank)
+2025,Jan,CAL,85-89 Years,*
+2025,Jan,CAL,90-94 Years,(Blank)
+2025,Jan,CAL,95 and Older,(Blank)
+2025,Jan,SATF,18-24 Years,170
+2025,Jan,SATF,25-29 Years,465
+2025,Jan,SATF,30-34 Years,727
+2025,Jan,SATF,35-39 Years,685
+2025,Jan,SATF,40-44 Years,696
+2025,Jan,SATF,45-49 Years,616
+2025,Jan,SATF,50-54 Years,477
+2025,Jan,SATF,55-59 Years,467
+2025,Jan,SATF,60-64 Years,425
+2025,Jan,SATF,65-69 Years,258
+2025,Jan,SATF,70-74 Years,115
+2025,Jan,SATF,75-79 Years,28
+2025,Jan,SATF,80-84 Years,14
+2025,Jan,SATF,85-89 Years,*
+2025,Jan,SATF,90-94 Years,(Blank)
+2025,Jan,SATF,95 and Older,(Blank)
+2025,Jan,SCC,18-24 Years,462
+2025,Jan,SCC,25-29 Years,753
+2025,Jan,SCC,30-34 Years,855
+2025,Jan,SCC,35-39 Years,763
+2025,Jan,SCC,40-44 Years,556
+2025,Jan,SCC,45-49 Years,379
+2025,Jan,SCC,50-54 Years,197
+2025,Jan,SCC,55-59 Years,125
+2025,Jan,SCC,60-64 Years,59
+2025,Jan,SCC,65-69 Years,17
+2025,Jan,SCC,70-74 Years,*
+2025,Jan,SCC,75-79 Years,*
+2025,Jan,SCC,80-84 Years,(Blank)
+2025,Jan,SCC,85-89 Years,(Blank)
+2025,Jan,SCC,90-94 Years,(Blank)
+2025,Jan,SCC,95 and Older,(Blank)
+2025,Jan,SOL,18-24 Years,590
+2025,Jan,SOL,25-29 Years,612
+2025,Jan,SOL,30-34 Years,446
+2025,Jan,SOL,35-39 Years,388
+2025,Jan,SOL,40-44 Years,374
+2025,Jan,SOL,45-49 Years,359
+2025,Jan,SOL,50-54 Years,320
+2025,Jan,SOL,55-59 Years,245
+2025,Jan,SOL,60-64 Years,210
+2025,Jan,SOL,65-69 Years,159
+2025,Jan,SOL,70-74 Years,111
+2025,Jan,SOL,75-79 Years,50
+2025,Jan,SOL,80-84 Years,15
+2025,Jan,SOL,85-89 Years,*
+2025,Jan,SOL,90-94 Years,*
+2025,Jan,SOL,95 and Older,(Blank)
+2025,Jan,SQ,18-24 Years,73
+2025,Jan,SQ,25-29 Years,165
+2025,Jan,SQ,30-34 Years,231
+2025,Jan,SQ,35-39 Years,300
+2025,Jan,SQ,40-44 Years,373
+2025,Jan,SQ,45-49 Years,340
+2025,Jan,SQ,50-54 Years,278
+2025,Jan,SQ,55-59 Years,321
+2025,Jan,SQ,60-64 Years,325
+2025,Jan,SQ,65-69 Years,262
+2025,Jan,SQ,70-74 Years,165
+2025,Jan,SQ,75-79 Years,71
+2025,Jan,SQ,80-84 Years,25
+2025,Jan,SQ,85-89 Years,*
+2025,Jan,SQ,90-94 Years,(Blank)
+2025,Jan,SQ,95 and Older,(Blank)
+2025,Jan,SVSP,18-24 Years,64
+2025,Jan,SVSP,25-29 Years,321
+2025,Jan,SVSP,30-34 Years,502
+2025,Jan,SVSP,35-39 Years,404
+2025,Jan,SVSP,40-44 Years,343
+2025,Jan,SVSP,45-49 Years,225
+2025,Jan,SVSP,50-54 Years,184
+2025,Jan,SVSP,55-59 Years,131
+2025,Jan,SVSP,60-64 Years,100
+2025,Jan,SVSP,65-69 Years,64
+2025,Jan,SVSP,70-74 Years,12
+2025,Jan,SVSP,75-79 Years,*
+2025,Jan,SVSP,80-84 Years,*
+2025,Jan,SVSP,85-89 Years,(Blank)
+2025,Jan,SVSP,90-94 Years,(Blank)
+2025,Jan,SVSP,95 and Older,(Blank)
+2025,Jan,VSP,18-24 Years,303
+2025,Jan,VSP,25-29 Years,355
+2025,Jan,VSP,30-34 Years,148
+2025,Jan,VSP,35-39 Years,206
+2025,Jan,VSP,40-44 Years,286
+2025,Jan,VSP,45-49 Years,333
+2025,Jan,VSP,50-54 Years,289
+2025,Jan,VSP,55-59 Years,371
+2025,Jan,VSP,60-64 Years,367
+2025,Jan,VSP,65-69 Years,283
+2025,Jan,VSP,70-74 Years,120
+2025,Jan,VSP,75-79 Years,49
+2025,Jan,VSP,80-84 Years,19
+2025,Jan,VSP,85-89 Years,*
+2025,Jan,VSP,90-94 Years,*
+2025,Jan,VSP,95 and Older,(Blank)
+2025,Jan,WSP,18-24 Years,335
+2025,Jan,WSP,25-29 Years,611
+2025,Jan,WSP,30-34 Years,859
+2025,Jan,WSP,35-39 Years,703
+2025,Jan,WSP,40-44 Years,516
+2025,Jan,WSP,45-49 Years,330
+2025,Jan,WSP,50-54 Years,208
+2025,Jan,WSP,55-59 Years,134
+2025,Jan,WSP,60-64 Years,86
+2025,Jan,WSP,65-69 Years,36
+2025,Jan,WSP,70-74 Years,11
+2025,Jan,WSP,75-79 Years,*
+2025,Jan,WSP,80-84 Years,(Blank)
+2025,Jan,WSP,85-89 Years,*
+2025,Jan,WSP,90-94 Years,(Blank)
+2025,Jan,WSP,95 and Older,(Blank)
+2025,Jan,CPMP,18-24 Years,*
+2025,Jan,CPMP,25-29 Years,*
+2025,Jan,CPMP,30-34 Years,*
+2025,Jan,CPMP,35-39 Years,(Blank)
+2025,Jan,CPMP,40-44 Years,*
+2025,Jan,CPMP,45-49 Years,(Blank)
+2025,Jan,CPMP,50-54 Years,(Blank)
+2025,Jan,CPMP,55-59 Years,(Blank)
+2025,Jan,CPMP,60-64 Years,(Blank)
+2025,Jan,CPMP,65-69 Years,(Blank)
+2025,Jan,CPMP,70-74 Years,(Blank)
+2025,Jan,CPMP,75-79 Years,(Blank)
+2025,Jan,CPMP,80-84 Years,(Blank)
+2025,Jan,CPMP,85-89 Years,(Blank)
+2025,Jan,CPMP,90-94 Years,(Blank)
+2025,Jan,CPMP,95 and Older,(Blank)
+2025,Jan,FCRF,18-24 Years,15
+2025,Jan,FCRF,25-29 Years,58
+2025,Jan,FCRF,30-34 Years,72
+2025,Jan,FCRF,35-39 Years,56
+2025,Jan,FCRF,40-44 Years,68
+2025,Jan,FCRF,45-49 Years,31
+2025,Jan,FCRF,50-54 Years,19
+2025,Jan,FCRF,55-59 Years,18
+2025,Jan,FCRF,60-64 Years,11
+2025,Jan,FCRF,65-69 Years,*
+2025,Jan,FCRF,70-74 Years,(Blank)
+2025,Jan,FCRF,75-79 Years,*
+2025,Jan,FCRF,80-84 Years,(Blank)
+2025,Jan,FCRF,85-89 Years,(Blank)
+2025,Jan,FCRF,90-94 Years,(Blank)
+2025,Jan,FCRF,95 and Older,(Blank)
+2025,Jan,Alternative Custody Program,18-24 Years,(Blank)
+2025,Jan,Alternative Custody Program,25-29 Years,(Blank)
+2025,Jan,Alternative Custody Program,30-34 Years,*
+2025,Jan,Alternative Custody Program,35-39 Years,*
+2025,Jan,Alternative Custody Program,40-44 Years,*
+2025,Jan,Alternative Custody Program,45-49 Years,*
+2025,Jan,Alternative Custody Program,50-54 Years,(Blank)
+2025,Jan,Alternative Custody Program,55-59 Years,(Blank)
+2025,Jan,Alternative Custody Program,60-64 Years,(Blank)
+2025,Jan,Alternative Custody Program,65-69 Years,(Blank)
+2025,Jan,Alternative Custody Program,70-74 Years,(Blank)
+2025,Jan,Alternative Custody Program,75-79 Years,(Blank)
+2025,Jan,Alternative Custody Program,80-84 Years,(Blank)
+2025,Jan,Alternative Custody Program,85-89 Years,(Blank)
+2025,Jan,Alternative Custody Program,90-94 Years,(Blank)
+2025,Jan,Alternative Custody Program,95 and Older,(Blank)
+2025,Jan,Department of State Hospitals,18-24 Years,*
+2025,Jan,Department of State Hospitals,25-29 Years,10
+2025,Jan,Department of State Hospitals,30-34 Years,22
+2025,Jan,Department of State Hospitals,35-39 Years,33
+2025,Jan,Department of State Hospitals,40-44 Years,28
+2025,Jan,Department of State Hospitals,45-49 Years,25
+2025,Jan,Department of State Hospitals,50-54 Years,15
+2025,Jan,Department of State Hospitals,55-59 Years,14
+2025,Jan,Department of State Hospitals,60-64 Years,14
+2025,Jan,Department of State Hospitals,65-69 Years,*
+2025,Jan,Department of State Hospitals,70-74 Years,*
+2025,Jan,Department of State Hospitals,75-79 Years,*
+2025,Jan,Department of State Hospitals,80-84 Years,*
+2025,Jan,Department of State Hospitals,85-89 Years,(Blank)
+2025,Jan,Department of State Hospitals,90-94 Years,(Blank)
+2025,Jan,Department of State Hospitals,95 and Older,(Blank)
+2025,Jan,Male Community Reentry Facility,18-24 Years,25
+2025,Jan,Male Community Reentry Facility,25-29 Years,66
+2025,Jan,Male Community Reentry Facility,30-34 Years,144
+2025,Jan,Male Community Reentry Facility,35-39 Years,115
+2025,Jan,Male Community Reentry Facility,40-44 Years,100
+2025,Jan,Male Community Reentry Facility,45-49 Years,73
+2025,Jan,Male Community Reentry Facility,50-54 Years,49
+2025,Jan,Male Community Reentry Facility,55-59 Years,33
+2025,Jan,Male Community Reentry Facility,60-64 Years,31
+2025,Jan,Male Community Reentry Facility,65-69 Years,13
+2025,Jan,Male Community Reentry Facility,70-74 Years,*
+2025,Jan,Male Community Reentry Facility,75-79 Years,(Blank)
+2025,Jan,Male Community Reentry Facility,80-84 Years,(Blank)
+2025,Jan,Male Community Reentry Facility,85-89 Years,(Blank)
+2025,Jan,Male Community Reentry Facility,90-94 Years,(Blank)
+2025,Jan,Male Community Reentry Facility,95 and Older,(Blank)
+2025,Jan,Medical Reprieve Program,18-24 Years,(Blank)
+2025,Jan,Medical Reprieve Program,25-29 Years,(Blank)
+2025,Jan,Medical Reprieve Program,30-34 Years,(Blank)
+2025,Jan,Medical Reprieve Program,35-39 Years,(Blank)
+2025,Jan,Medical Reprieve Program,40-44 Years,(Blank)
+2025,Jan,Medical Reprieve Program,45-49 Years,(Blank)
+2025,Jan,Medical Reprieve Program,50-54 Years,(Blank)
+2025,Jan,Medical Reprieve Program,55-59 Years,*
+2025,Jan,Medical Reprieve Program,60-64 Years,*
+2025,Jan,Medical Reprieve Program,65-69 Years,(Blank)
+2025,Jan,Medical Reprieve Program,70-74 Years,(Blank)
+2025,Jan,Medical Reprieve Program,75-79 Years,*
+2025,Jan,Medical Reprieve Program,80-84 Years,(Blank)
+2025,Jan,Medical Reprieve Program,85-89 Years,*
+2025,Jan,Medical Reprieve Program,90-94 Years,(Blank)
+2025,Jan,Medical Reprieve Program,95 and Older,(Blank)
+2025,Jan,CCI,18-24 Years,172
+2025,Jan,CCI,25-29 Years,338
+2025,Jan,CCI,30-34 Years,407
+2025,Jan,CCI,35-39 Years,389
+2025,Jan,CCI,40-44 Years,367
+2025,Jan,CCI,45-49 Years,281
+2025,Jan,CCI,50-54 Years,176
+2025,Jan,CCI,55-59 Years,120
+2025,Jan,CCI,60-64 Years,72
+2025,Jan,CCI,65-69 Years,36
+2025,Jan,CCI,70-74 Years,*
+2025,Jan,CCI,75-79 Years,*
+2025,Jan,CCI,80-84 Years,*
+2025,Jan,CCI,85-89 Years,(Blank)
+2025,Jan,CCI,90-94 Years,(Blank)
+2025,Jan,CCI,95 and Older,(Blank)
+2025,Jan,CCWF,18-24 Years,87
+2025,Jan,CCWF,25-29 Years,255
+2025,Jan,CCWF,30-34 Years,389
+2025,Jan,CCWF,35-39 Years,367
+2025,Jan,CCWF,40-44 Years,295
+2025,Jan,CCWF,45-49 Years,195
+2025,Jan,CCWF,50-54 Years,130
+2025,Jan,CCWF,55-59 Years,106
+2025,Jan,CCWF,60-64 Years,71
+2025,Jan,CCWF,65-69 Years,58
+2025,Jan,CCWF,70-74 Years,29
+2025,Jan,CCWF,75-79 Years,*
+2025,Jan,CCWF,80-84 Years,*
+2025,Jan,CCWF,85-89 Years,(Blank)
+2025,Jan,CCWF,90-94 Years,*
+2025,Jan,CCWF,95 and Older,(Blank)
+2025,Jan,CEN,18-24 Years,83
+2025,Jan,CEN,25-29 Years,414
+2025,Jan,CEN,30-34 Years,690
+2025,Jan,CEN,35-39 Years,530
+2025,Jan,CEN,40-44 Years,422
+2025,Jan,CEN,45-49 Years,303
+2025,Jan,CEN,50-54 Years,185
+2025,Jan,CEN,55-59 Years,94
+2025,Jan,CEN,60-64 Years,58
+2025,Jan,CEN,65-69 Years,12
+2025,Jan,CEN,70-74 Years,*
+2025,Jan,CEN,75-79 Years,(Blank)
+2025,Jan,CEN,80-84 Years,*
+2025,Jan,CEN,85-89 Years,(Blank)
+2025,Jan,CEN,90-94 Years,(Blank)
+2025,Jan,CEN,95 and Older,(Blank)
+2025,Jan,CHCF,18-24 Years,15
+2025,Jan,CHCF,25-29 Years,54
+2025,Jan,CHCF,30-34 Years,134
+2025,Jan,CHCF,35-39 Years,137
+2025,Jan,CHCF,40-44 Years,167
+2025,Jan,CHCF,45-49 Years,175
+2025,Jan,CHCF,50-54 Years,210
+2025,Jan,CHCF,55-59 Years,235
+2025,Jan,CHCF,60-64 Years,239
+2025,Jan,CHCF,65-69 Years,244
+2025,Jan,CHCF,70-74 Years,223
+2025,Jan,CHCF,75-79 Years,153
+2025,Jan,CHCF,80-84 Years,68
+2025,Jan,CHCF,85-89 Years,28
+2025,Jan,CHCF,90-94 Years,12
+2025,Jan,CHCF,95 and Older,*
+2025,Jan,CIM,18-24 Years,25
+2025,Jan,CIM,25-29 Years,85
+2025,Jan,CIM,30-34 Years,160
+2025,Jan,CIM,35-39 Years,216
+2025,Jan,CIM,40-44 Years,234
+2025,Jan,CIM,45-49 Years,222
+2025,Jan,CIM,50-54 Years,226
+2025,Jan,CIM,55-59 Years,255
+2025,Jan,CIM,60-64 Years,251
+2025,Jan,CIM,65-69 Years,218
+2025,Jan,CIM,70-74 Years,188
+2025,Jan,CIM,75-79 Years,107
+2025,Jan,CIM,80-84 Years,40
+2025,Jan,CIM,85-89 Years,11
+2025,Jan,CIM,90-94 Years,(Blank)
+2025,Jan,CIM,95 and Older,(Blank)
+2025,Feb,ASP,18-24 Years,136
+2025,Feb,ASP,25-29 Years,272
+2025,Feb,ASP,30-34 Years,390
+2025,Feb,ASP,35-39 Years,592
+2025,Feb,ASP,40-44 Years,676
+2025,Feb,ASP,45-49 Years,569
+2025,Feb,ASP,50-54 Years,474
+2025,Feb,ASP,55-59 Years,379
+2025,Feb,ASP,60-64 Years,273
+2025,Feb,ASP,65-69 Years,*
+2025,Feb,ASP,70-74 Years,(Blank)
+2025,Feb,ASP,75-79 Years,(Blank)
+2025,Feb,ASP,80-84 Years,(Blank)
+2025,Feb,ASP,85-89 Years,(Blank)
+2025,Feb,ASP,90-94 Years,(Blank)
+2025,Feb,ASP,95 and Older,(Blank)
+2025,Feb,CIW,18-24 Years,69
+2025,Feb,CIW,25-29 Years,146
+2025,Feb,CIW,30-34 Years,237
+2025,Feb,CIW,35-39 Years,226
+2025,Feb,CIW,40-44 Years,173
+2025,Feb,CIW,45-49 Years,128
+2025,Feb,CIW,50-54 Years,64
+2025,Feb,CIW,55-59 Years,64
+2025,Feb,CIW,60-64 Years,64
+2025,Feb,CIW,65-69 Years,35
+2025,Feb,CIW,70-74 Years,15
+2025,Feb,CIW,75-79 Years,14
+2025,Feb,CIW,80-84 Years,*
+2025,Feb,CIW,85-89 Years,(Blank)
+2025,Feb,CIW,90-94 Years,*
+2025,Feb,CIW,95 and Older,(Blank)
+2025,Feb,CMC,18-24 Years,55
+2025,Feb,CMC,25-29 Years,198
+2025,Feb,CMC,30-34 Years,383
+2025,Feb,CMC,35-39 Years,368
+2025,Feb,CMC,40-44 Years,334
+2025,Feb,CMC,45-49 Years,246
+2025,Feb,CMC,50-54 Years,181
+2025,Feb,CMC,55-59 Years,149
+2025,Feb,CMC,60-64 Years,141
+2025,Feb,CMC,65-69 Years,92
+2025,Feb,CMC,70-74 Years,43
+2025,Feb,CMC,75-79 Years,10
+2025,Feb,CMC,80-84 Years,*
+2025,Feb,CMC,85-89 Years,*
+2025,Feb,CMC,90-94 Years,(Blank)
+2025,Feb,CMC,95 and Older,(Blank)
+2025,Feb,CMF,18-24 Years,12
+2025,Feb,CMF,25-29 Years,83
+2025,Feb,CMF,30-34 Years,182
+2025,Feb,CMF,35-39 Years,190
+2025,Feb,CMF,40-44 Years,173
+2025,Feb,CMF,45-49 Years,203
+2025,Feb,CMF,50-54 Years,168
+2025,Feb,CMF,55-59 Years,205
+2025,Feb,CMF,60-64 Years,191
+2025,Feb,CMF,65-69 Years,194
+2025,Feb,CMF,70-74 Years,140
+2025,Feb,CMF,75-79 Years,95
+2025,Feb,CMF,80-84 Years,38
+2025,Feb,CMF,85-89 Years,12
+2025,Feb,CMF,90-94 Years,*
+2025,Feb,CMF,95 and Older,(Blank)
+2025,Feb,COR,18-24 Years,39
+2025,Feb,COR,25-29 Years,157
+2025,Feb,COR,30-34 Years,298
+2025,Feb,COR,35-39 Years,361
+2025,Feb,COR,40-44 Years,368
+2025,Feb,COR,45-49 Years,342
+2025,Feb,COR,50-54 Years,292
+2025,Feb,COR,55-59 Years,290
+2025,Feb,COR,60-64 Years,215
+2025,Feb,COR,65-69 Years,165
+2025,Feb,COR,70-74 Years,60
+2025,Feb,COR,75-79 Years,33
+2025,Feb,COR,80-84 Years,10
+2025,Feb,COR,85-89 Years,*
+2025,Feb,COR,90-94 Years,(Blank)
+2025,Feb,COR,95 and Older,(Blank)
+2025,Feb,CRC,18-24 Years,157
+2025,Feb,CRC,25-29 Years,283
+2025,Feb,CRC,30-34 Years,411
+2025,Feb,CRC,35-39 Years,465
+2025,Feb,CRC,40-44 Years,457
+2025,Feb,CRC,45-49 Years,302
+2025,Feb,CRC,50-54 Years,220
+2025,Feb,CRC,55-59 Years,191
+2025,Feb,CRC,60-64 Years,140
+2025,Feb,CRC,65-69 Years,96
+2025,Feb,CRC,70-74 Years,27
+2025,Feb,CRC,75-79 Years,*
+2025,Feb,CRC,80-84 Years,*
+2025,Feb,CRC,85-89 Years,(Blank)
+2025,Feb,CRC,90-94 Years,(Blank)
+2025,Feb,CRC,95 and Older,(Blank)
+2025,Feb,CTF,18-24 Years,28
+2025,Feb,CTF,25-29 Years,171
+2025,Feb,CTF,30-34 Years,406
+2025,Feb,CTF,35-39 Years,505
+2025,Feb,CTF,40-44 Years,564
+2025,Feb,CTF,45-49 Years,599
+2025,Feb,CTF,50-54 Years,613
+2025,Feb,CTF,55-59 Years,568
+2025,Feb,CTF,60-64 Years,463
+2025,Feb,CTF,65-69 Years,300
+2025,Feb,CTF,70-74 Years,85
+2025,Feb,CTF,75-79 Years,16
+2025,Feb,CTF,80-84 Years,*
+2025,Feb,CTF,85-89 Years,*
+2025,Feb,CTF,90-94 Years,(Blank)
+2025,Feb,CTF,95 and Older,(Blank)
+2025,Feb,FOL,18-24 Years,94
+2025,Feb,FOL,25-29 Years,327
+2025,Feb,FOL,30-34 Years,476
+2025,Feb,FOL,35-39 Years,456
+2025,Feb,FOL,40-44 Years,391
+2025,Feb,FOL,45-49 Years,314
+2025,Feb,FOL,50-54 Years,232
+2025,Feb,FOL,55-59 Years,206
+2025,Feb,FOL,60-64 Years,166
+2025,Feb,FOL,65-69 Years,90
+2025,Feb,FOL,70-74 Years,49
+2025,Feb,FOL,75-79 Years,12
+2025,Feb,FOL,80-84 Years,*
+2025,Feb,FOL,85-89 Years,*
+2025,Feb,FOL,90-94 Years,(Blank)
+2025,Feb,FOL,95 and Older,(Blank)
+2025,Feb,HDSP,18-24 Years,87
+2025,Feb,HDSP,25-29 Years,384
+2025,Feb,HDSP,30-34 Years,573
+2025,Feb,HDSP,35-39 Years,492
+2025,Feb,HDSP,40-44 Years,376
+2025,Feb,HDSP,45-49 Years,306
+2025,Feb,HDSP,50-54 Years,202
+2025,Feb,HDSP,55-59 Years,143
+2025,Feb,HDSP,60-64 Years,129
+2025,Feb,HDSP,65-69 Years,73
+2025,Feb,HDSP,70-74 Years,16
+2025,Feb,HDSP,75-79 Years,*
+2025,Feb,HDSP,80-84 Years,*
+2025,Feb,HDSP,85-89 Years,*
+2025,Feb,HDSP,90-94 Years,(Blank)
+2025,Feb,HDSP,95 and Older,(Blank)
+2025,Feb,ISP,18-24 Years,110
+2025,Feb,ISP,25-29 Years,189
+2025,Feb,ISP,30-34 Years,304
+2025,Feb,ISP,35-39 Years,379
+2025,Feb,ISP,40-44 Years,394
+2025,Feb,ISP,45-49 Years,334
+2025,Feb,ISP,50-54 Years,318
+2025,Feb,ISP,55-59 Years,252
+2025,Feb,ISP,60-64 Years,210
+2025,Feb,ISP,65-69 Years,99
+2025,Feb,ISP,70-74 Years,16
+2025,Feb,ISP,75-79 Years,*
+2025,Feb,ISP,80-84 Years,*
+2025,Feb,ISP,85-89 Years,(Blank)
+2025,Feb,ISP,90-94 Years,(Blank)
+2025,Feb,ISP,95 and Older,(Blank)
+2025,Feb,KVSP,18-24 Years,94
+2025,Feb,KVSP,25-29 Years,431
+2025,Feb,KVSP,30-34 Years,731
+2025,Feb,KVSP,35-39 Years,633
+2025,Feb,KVSP,40-44 Years,473
+2025,Feb,KVSP,45-49 Years,331
+2025,Feb,KVSP,50-54 Years,197
+2025,Feb,KVSP,55-59 Years,131
+2025,Feb,KVSP,60-64 Years,94
+2025,Feb,KVSP,65-69 Years,27
+2025,Feb,KVSP,70-74 Years,*
+2025,Feb,KVSP,75-79 Years,*
+2025,Feb,KVSP,80-84 Years,*
+2025,Feb,KVSP,85-89 Years,(Blank)
+2025,Feb,KVSP,90-94 Years,(Blank)
+2025,Feb,KVSP,95 and Older,(Blank)
+2025,Feb,LAC,18-24 Years,193
+2025,Feb,LAC,25-29 Years,360
+2025,Feb,LAC,30-34 Years,532
+2025,Feb,LAC,35-39 Years,507
+2025,Feb,LAC,40-44 Years,463
+2025,Feb,LAC,45-49 Years,341
+2025,Feb,LAC,50-54 Years,255
+2025,Feb,LAC,55-59 Years,205
+2025,Feb,LAC,60-64 Years,154
+2025,Feb,LAC,65-69 Years,92
+2025,Feb,LAC,70-74 Years,27
+2025,Feb,LAC,75-79 Years,11
+2025,Feb,LAC,80-84 Years,*
+2025,Feb,LAC,85-89 Years,*
+2025,Feb,LAC,90-94 Years,(Blank)
+2025,Feb,LAC,95 and Older,(Blank)
+2025,Feb,MCSP,18-24 Years,89
+2025,Feb,MCSP,25-29 Years,344
+2025,Feb,MCSP,30-34 Years,494
+2025,Feb,MCSP,35-39 Years,489
+2025,Feb,MCSP,40-44 Years,465
+2025,Feb,MCSP,45-49 Years,454
+2025,Feb,MCSP,50-54 Years,348
+2025,Feb,MCSP,55-59 Years,334
+2025,Feb,MCSP,60-64 Years,291
+2025,Feb,MCSP,65-69 Years,207
+2025,Feb,MCSP,70-74 Years,145
+2025,Feb,MCSP,75-79 Years,99
+2025,Feb,MCSP,80-84 Years,37
+2025,Feb,MCSP,85-89 Years,*
+2025,Feb,MCSP,90-94 Years,*
+2025,Feb,MCSP,95 and Older,(Blank)
+2025,Feb,NKSP,18-24 Years,205
+2025,Feb,NKSP,25-29 Years,472
+2025,Feb,NKSP,30-34 Years,555
+2025,Feb,NKSP,35-39 Years,496
+2025,Feb,NKSP,40-44 Years,358
+2025,Feb,NKSP,45-49 Years,237
+2025,Feb,NKSP,50-54 Years,139
+2025,Feb,NKSP,55-59 Years,100
+2025,Feb,NKSP,60-64 Years,55
+2025,Feb,NKSP,65-69 Years,21
+2025,Feb,NKSP,70-74 Years,*
+2025,Feb,NKSP,75-79 Years,*
+2025,Feb,NKSP,80-84 Years,*
+2025,Feb,NKSP,85-89 Years,(Blank)
+2025,Feb,NKSP,90-94 Years,(Blank)
+2025,Feb,NKSP,95 and Older,(Blank)
+2025,Feb,PBSP,18-24 Years,49
+2025,Feb,PBSP,25-29 Years,197
+2025,Feb,PBSP,30-34 Years,346
+2025,Feb,PBSP,35-39 Years,382
+2025,Feb,PBSP,40-44 Years,282
+2025,Feb,PBSP,45-49 Years,232
+2025,Feb,PBSP,50-54 Years,187
+2025,Feb,PBSP,55-59 Years,159
+2025,Feb,PBSP,60-64 Years,112
+2025,Feb,PBSP,65-69 Years,48
+2025,Feb,PBSP,70-74 Years,22
+2025,Feb,PBSP,75-79 Years,*
+2025,Feb,PBSP,80-84 Years,*
+2025,Feb,PBSP,85-89 Years,(Blank)
+2025,Feb,PBSP,90-94 Years,(Blank)
+2025,Feb,PBSP,95 and Older,(Blank)
+2025,Feb,PVSP,18-24 Years,243
+2025,Feb,PVSP,25-29 Years,520
+2025,Feb,PVSP,30-34 Years,605
+2025,Feb,PVSP,35-39 Years,506
+2025,Feb,PVSP,40-44 Years,389
+2025,Feb,PVSP,45-49 Years,265
+2025,Feb,PVSP,50-54 Years,159
+2025,Feb,PVSP,55-59 Years,88
+2025,Feb,PVSP,60-64 Years,59
+2025,Feb,PVSP,65-69 Years,(Blank)
+2025,Feb,PVSP,70-74 Years,(Blank)
+2025,Feb,PVSP,75-79 Years,(Blank)
+2025,Feb,PVSP,80-84 Years,(Blank)
+2025,Feb,PVSP,85-89 Years,(Blank)
+2025,Feb,PVSP,90-94 Years,(Blank)
+2025,Feb,PVSP,95 and Older,(Blank)
+2025,Feb,RJD,18-24 Years,30
+2025,Feb,RJD,25-29 Years,226
+2025,Feb,RJD,30-34 Years,376
+2025,Feb,RJD,35-39 Years,396
+2025,Feb,RJD,40-44 Years,398
+2025,Feb,RJD,45-49 Years,405
+2025,Feb,RJD,50-54 Years,367
+2025,Feb,RJD,55-59 Years,365
+2025,Feb,RJD,60-64 Years,305
+2025,Feb,RJD,65-69 Years,249
+2025,Feb,RJD,70-74 Years,142
+2025,Feb,RJD,75-79 Years,74
+2025,Feb,RJD,80-84 Years,28
+2025,Feb,RJD,85-89 Years,*
+2025,Feb,RJD,90-94 Years,(Blank)
+2025,Feb,RJD,95 and Older,(Blank)
+2025,Feb,SAC,18-24 Years,39
+2025,Feb,SAC,25-29 Years,253
+2025,Feb,SAC,30-34 Years,380
+2025,Feb,SAC,35-39 Years,337
+2025,Feb,SAC,40-44 Years,302
+2025,Feb,SAC,45-49 Years,222
+2025,Feb,SAC,50-54 Years,155
+2025,Feb,SAC,55-59 Years,114
+2025,Feb,SAC,60-64 Years,98
+2025,Feb,SAC,65-69 Years,96
+2025,Feb,SAC,70-74 Years,34
+2025,Feb,SAC,75-79 Years,27
+2025,Feb,SAC,80-84 Years,*
+2025,Feb,SAC,85-89 Years,(Blank)
+2025,Feb,SAC,90-94 Years,(Blank)
+2025,Feb,SAC,95 and Older,(Blank)
+2025,Feb,CAL,18-24 Years,90
+2025,Feb,CAL,25-29 Years,439
+2025,Feb,CAL,30-34 Years,637
+2025,Feb,CAL,35-39 Years,499
+2025,Feb,CAL,40-44 Years,370
+2025,Feb,CAL,45-49 Years,258
+2025,Feb,CAL,50-54 Years,132
+2025,Feb,CAL,55-59 Years,54
+2025,Feb,CAL,60-64 Years,49
+2025,Feb,CAL,65-69 Years,*
+2025,Feb,CAL,70-74 Years,(Blank)
+2025,Feb,CAL,75-79 Years,*
+2025,Feb,CAL,80-84 Years,(Blank)
+2025,Feb,CAL,85-89 Years,(Blank)
+2025,Feb,CAL,90-94 Years,(Blank)
+2025,Feb,CAL,95 and Older,(Blank)
+2025,Feb,SATF,18-24 Years,195
+2025,Feb,SATF,25-29 Years,468
+2025,Feb,SATF,30-34 Years,746
+2025,Feb,SATF,35-39 Years,702
+2025,Feb,SATF,40-44 Years,696
+2025,Feb,SATF,45-49 Years,624
+2025,Feb,SATF,50-54 Years,491
+2025,Feb,SATF,55-59 Years,461
+2025,Feb,SATF,60-64 Years,427
+2025,Feb,SATF,65-69 Years,263
+2025,Feb,SATF,70-74 Years,114
+2025,Feb,SATF,75-79 Years,29
+2025,Feb,SATF,80-84 Years,15
+2025,Feb,SATF,85-89 Years,*
+2025,Feb,SATF,90-94 Years,(Blank)
+2025,Feb,SATF,95 and Older,(Blank)
+2025,Feb,SCC,18-24 Years,459
+2025,Feb,SCC,25-29 Years,754
+2025,Feb,SCC,30-34 Years,874
+2025,Feb,SCC,35-39 Years,747
+2025,Feb,SCC,40-44 Years,552
+2025,Feb,SCC,45-49 Years,383
+2025,Feb,SCC,50-54 Years,205
+2025,Feb,SCC,55-59 Years,127
+2025,Feb,SCC,60-64 Years,56
+2025,Feb,SCC,65-69 Years,18
+2025,Feb,SCC,70-74 Years,*
+2025,Feb,SCC,75-79 Years,*
+2025,Feb,SCC,80-84 Years,(Blank)
+2025,Feb,SCC,85-89 Years,(Blank)
+2025,Feb,SCC,90-94 Years,(Blank)
+2025,Feb,SCC,95 and Older,(Blank)
+2025,Feb,SOL,18-24 Years,617
+2025,Feb,SOL,25-29 Years,609
+2025,Feb,SOL,30-34 Years,442
+2025,Feb,SOL,35-39 Years,373
+2025,Feb,SOL,40-44 Years,363
+2025,Feb,SOL,45-49 Years,364
+2025,Feb,SOL,50-54 Years,318
+2025,Feb,SOL,55-59 Years,245
+2025,Feb,SOL,60-64 Years,206
+2025,Feb,SOL,65-69 Years,165
+2025,Feb,SOL,70-74 Years,105
+2025,Feb,SOL,75-79 Years,51
+2025,Feb,SOL,80-84 Years,14
+2025,Feb,SOL,85-89 Years,*
+2025,Feb,SOL,90-94 Years,*
+2025,Feb,SOL,95 and Older,(Blank)
+2025,Feb,SQ,18-24 Years,72
+2025,Feb,SQ,25-29 Years,152
+2025,Feb,SQ,30-34 Years,227
+2025,Feb,SQ,35-39 Years,301
+2025,Feb,SQ,40-44 Years,362
+2025,Feb,SQ,45-49 Years,333
+2025,Feb,SQ,50-54 Years,267
+2025,Feb,SQ,55-59 Years,314
+2025,Feb,SQ,60-64 Years,324
+2025,Feb,SQ,65-69 Years,265
+2025,Feb,SQ,70-74 Years,165
+2025,Feb,SQ,75-79 Years,69
+2025,Feb,SQ,80-84 Years,26
+2025,Feb,SQ,85-89 Years,*
+2025,Feb,SQ,90-94 Years,(Blank)
+2025,Feb,SQ,95 and Older,(Blank)
+2025,Feb,SVSP,18-24 Years,67
+2025,Feb,SVSP,25-29 Years,320
+2025,Feb,SVSP,30-34 Years,513
+2025,Feb,SVSP,35-39 Years,405
+2025,Feb,SVSP,40-44 Years,341
+2025,Feb,SVSP,45-49 Years,231
+2025,Feb,SVSP,50-54 Years,179
+2025,Feb,SVSP,55-59 Years,130
+2025,Feb,SVSP,60-64 Years,102
+2025,Feb,SVSP,65-69 Years,62
+2025,Feb,SVSP,70-74 Years,14
+2025,Feb,SVSP,75-79 Years,*
+2025,Feb,SVSP,80-84 Years,*
+2025,Feb,SVSP,85-89 Years,(Blank)
+2025,Feb,SVSP,90-94 Years,(Blank)
+2025,Feb,SVSP,95 and Older,(Blank)
+2025,Feb,VSP,18-24 Years,286
+2025,Feb,VSP,25-29 Years,336
+2025,Feb,VSP,30-34 Years,149
+2025,Feb,VSP,35-39 Years,196
+2025,Feb,VSP,40-44 Years,281
+2025,Feb,VSP,45-49 Years,332
+2025,Feb,VSP,50-54 Years,290
+2025,Feb,VSP,55-59 Years,365
+2025,Feb,VSP,60-64 Years,371
+2025,Feb,VSP,65-69 Years,286
+2025,Feb,VSP,70-74 Years,119
+2025,Feb,VSP,75-79 Years,49
+2025,Feb,VSP,80-84 Years,20
+2025,Feb,VSP,85-89 Years,*
+2025,Feb,VSP,90-94 Years,*
+2025,Feb,VSP,95 and Older,(Blank)
+2025,Feb,WSP,18-24 Years,328
+2025,Feb,WSP,25-29 Years,587
+2025,Feb,WSP,30-34 Years,890
+2025,Feb,WSP,35-39 Years,710
+2025,Feb,WSP,40-44 Years,526
+2025,Feb,WSP,45-49 Years,335
+2025,Feb,WSP,50-54 Years,188
+2025,Feb,WSP,55-59 Years,122
+2025,Feb,WSP,60-64 Years,84
+2025,Feb,WSP,65-69 Years,35
+2025,Feb,WSP,70-74 Years,11
+2025,Feb,WSP,75-79 Years,*
+2025,Feb,WSP,80-84 Years,(Blank)
+2025,Feb,WSP,85-89 Years,(Blank)
+2025,Feb,WSP,90-94 Years,(Blank)
+2025,Feb,WSP,95 and Older,(Blank)
+2025,Feb,CPMP,18-24 Years,*
+2025,Feb,CPMP,25-29 Years,*
+2025,Feb,CPMP,30-34 Years,*
+2025,Feb,CPMP,35-39 Years,(Blank)
+2025,Feb,CPMP,40-44 Years,*
+2025,Feb,CPMP,45-49 Years,(Blank)
+2025,Feb,CPMP,50-54 Years,(Blank)
+2025,Feb,CPMP,55-59 Years,(Blank)
+2025,Feb,CPMP,60-64 Years,(Blank)
+2025,Feb,CPMP,65-69 Years,(Blank)
+2025,Feb,CPMP,70-74 Years,(Blank)
+2025,Feb,CPMP,75-79 Years,(Blank)
+2025,Feb,CPMP,80-84 Years,(Blank)
+2025,Feb,CPMP,85-89 Years,(Blank)
+2025,Feb,CPMP,90-94 Years,(Blank)
+2025,Feb,CPMP,95 and Older,(Blank)
+2025,Feb,FCRF,18-24 Years,17
+2025,Feb,FCRF,25-29 Years,53
+2025,Feb,FCRF,30-34 Years,81
+2025,Feb,FCRF,35-39 Years,61
+2025,Feb,FCRF,40-44 Years,76
+2025,Feb,FCRF,45-49 Years,35
+2025,Feb,FCRF,50-54 Years,18
+2025,Feb,FCRF,55-59 Years,20
+2025,Feb,FCRF,60-64 Years,12
+2025,Feb,FCRF,65-69 Years,*
+2025,Feb,FCRF,70-74 Years,(Blank)
+2025,Feb,FCRF,75-79 Years,*
+2025,Feb,FCRF,80-84 Years,(Blank)
+2025,Feb,FCRF,85-89 Years,(Blank)
+2025,Feb,FCRF,90-94 Years,(Blank)
+2025,Feb,FCRF,95 and Older,(Blank)
+2025,Feb,Alternative Custody Program,18-24 Years,(Blank)
+2025,Feb,Alternative Custody Program,25-29 Years,(Blank)
+2025,Feb,Alternative Custody Program,30-34 Years,(Blank)
+2025,Feb,Alternative Custody Program,35-39 Years,*
+2025,Feb,Alternative Custody Program,40-44 Years,*
+2025,Feb,Alternative Custody Program,45-49 Years,*
+2025,Feb,Alternative Custody Program,50-54 Years,(Blank)
+2025,Feb,Alternative Custody Program,55-59 Years,(Blank)
+2025,Feb,Alternative Custody Program,60-64 Years,(Blank)
+2025,Feb,Alternative Custody Program,65-69 Years,(Blank)
+2025,Feb,Alternative Custody Program,70-74 Years,(Blank)
+2025,Feb,Alternative Custody Program,75-79 Years,(Blank)
+2025,Feb,Alternative Custody Program,80-84 Years,(Blank)
+2025,Feb,Alternative Custody Program,85-89 Years,(Blank)
+2025,Feb,Alternative Custody Program,90-94 Years,(Blank)
+2025,Feb,Alternative Custody Program,95 and Older,(Blank)
+2025,Feb,Department of State Hospitals,18-24 Years,*
+2025,Feb,Department of State Hospitals,25-29 Years,12
+2025,Feb,Department of State Hospitals,30-34 Years,23
+2025,Feb,Department of State Hospitals,35-39 Years,40
+2025,Feb,Department of State Hospitals,40-44 Years,33
+2025,Feb,Department of State Hospitals,45-49 Years,23
+2025,Feb,Department of State Hospitals,50-54 Years,17
+2025,Feb,Department of State Hospitals,55-59 Years,16
+2025,Feb,Department of State Hospitals,60-64 Years,13
+2025,Feb,Department of State Hospitals,65-69 Years,*
+2025,Feb,Department of State Hospitals,70-74 Years,*
+2025,Feb,Department of State Hospitals,75-79 Years,*
+2025,Feb,Department of State Hospitals,80-84 Years,*
+2025,Feb,Department of State Hospitals,85-89 Years,(Blank)
+2025,Feb,Department of State Hospitals,90-94 Years,(Blank)
+2025,Feb,Department of State Hospitals,95 and Older,(Blank)
+2025,Feb,Male Community Reentry Facility,18-24 Years,25
+2025,Feb,Male Community Reentry Facility,25-29 Years,66
+2025,Feb,Male Community Reentry Facility,30-34 Years,136
+2025,Feb,Male Community Reentry Facility,35-39 Years,123
+2025,Feb,Male Community Reentry Facility,40-44 Years,104
+2025,Feb,Male Community Reentry Facility,45-49 Years,84
+2025,Feb,Male Community Reentry Facility,50-54 Years,50
+2025,Feb,Male Community Reentry Facility,55-59 Years,34
+2025,Feb,Male Community Reentry Facility,60-64 Years,33
+2025,Feb,Male Community Reentry Facility,65-69 Years,13
+2025,Feb,Male Community Reentry Facility,70-74 Years,*
+2025,Feb,Male Community Reentry Facility,75-79 Years,(Blank)
+2025,Feb,Male Community Reentry Facility,80-84 Years,(Blank)
+2025,Feb,Male Community Reentry Facility,85-89 Years,(Blank)
+2025,Feb,Male Community Reentry Facility,90-94 Years,(Blank)
+2025,Feb,Male Community Reentry Facility,95 and Older,(Blank)
+2025,Feb,Medical Reprieve Program,18-24 Years,(Blank)
+2025,Feb,Medical Reprieve Program,25-29 Years,(Blank)
+2025,Feb,Medical Reprieve Program,30-34 Years,(Blank)
+2025,Feb,Medical Reprieve Program,35-39 Years,(Blank)
+2025,Feb,Medical Reprieve Program,40-44 Years,(Blank)
+2025,Feb,Medical Reprieve Program,45-49 Years,(Blank)
+2025,Feb,Medical Reprieve Program,50-54 Years,(Blank)
+2025,Feb,Medical Reprieve Program,55-59 Years,*
+2025,Feb,Medical Reprieve Program,60-64 Years,*
+2025,Feb,Medical Reprieve Program,65-69 Years,(Blank)
+2025,Feb,Medical Reprieve Program,70-74 Years,(Blank)
+2025,Feb,Medical Reprieve Program,75-79 Years,*
+2025,Feb,Medical Reprieve Program,80-84 Years,(Blank)
+2025,Feb,Medical Reprieve Program,85-89 Years,*
+2025,Feb,Medical Reprieve Program,90-94 Years,(Blank)
+2025,Feb,Medical Reprieve Program,95 and Older,(Blank)
+2025,Feb,CCI,18-24 Years,181
+2025,Feb,CCI,25-29 Years,342
+2025,Feb,CCI,30-34 Years,405
+2025,Feb,CCI,35-39 Years,398
+2025,Feb,CCI,40-44 Years,379
+2025,Feb,CCI,45-49 Years,282
+2025,Feb,CCI,50-54 Years,180
+2025,Feb,CCI,55-59 Years,121
+2025,Feb,CCI,60-64 Years,79
+2025,Feb,CCI,65-69 Years,39
+2025,Feb,CCI,70-74 Years,*
+2025,Feb,CCI,75-79 Years,*
+2025,Feb,CCI,80-84 Years,*
+2025,Feb,CCI,85-89 Years,(Blank)
+2025,Feb,CCI,90-94 Years,(Blank)
+2025,Feb,CCI,95 and Older,(Blank)
+2025,Feb,CCWF,18-24 Years,94
+2025,Feb,CCWF,25-29 Years,260
+2025,Feb,CCWF,30-34 Years,387
+2025,Feb,CCWF,35-39 Years,373
+2025,Feb,CCWF,40-44 Years,290
+2025,Feb,CCWF,45-49 Years,201
+2025,Feb,CCWF,50-54 Years,138
+2025,Feb,CCWF,55-59 Years,107
+2025,Feb,CCWF,60-64 Years,75
+2025,Feb,CCWF,65-69 Years,53
+2025,Feb,CCWF,70-74 Years,32
+2025,Feb,CCWF,75-79 Years,*
+2025,Feb,CCWF,80-84 Years,*
+2025,Feb,CCWF,85-89 Years,(Blank)
+2025,Feb,CCWF,90-94 Years,*
+2025,Feb,CCWF,95 and Older,(Blank)
+2025,Feb,CEN,18-24 Years,78
+2025,Feb,CEN,25-29 Years,436
+2025,Feb,CEN,30-34 Years,678
+2025,Feb,CEN,35-39 Years,541
+2025,Feb,CEN,40-44 Years,420
+2025,Feb,CEN,45-49 Years,297
+2025,Feb,CEN,50-54 Years,175
+2025,Feb,CEN,55-59 Years,101
+2025,Feb,CEN,60-64 Years,55
+2025,Feb,CEN,65-69 Years,13
+2025,Feb,CEN,70-74 Years,*
+2025,Feb,CEN,75-79 Years,(Blank)
+2025,Feb,CEN,80-84 Years,*
+2025,Feb,CEN,85-89 Years,(Blank)
+2025,Feb,CEN,90-94 Years,(Blank)
+2025,Feb,CEN,95 and Older,(Blank)
+2025,Feb,CHCF,18-24 Years,15
+2025,Feb,CHCF,25-29 Years,53
+2025,Feb,CHCF,30-34 Years,125
+2025,Feb,CHCF,35-39 Years,135
+2025,Feb,CHCF,40-44 Years,155
+2025,Feb,CHCF,45-49 Years,177
+2025,Feb,CHCF,50-54 Years,210
+2025,Feb,CHCF,55-59 Years,234
+2025,Feb,CHCF,60-64 Years,240
+2025,Feb,CHCF,65-69 Years,243
+2025,Feb,CHCF,70-74 Years,222
+2025,Feb,CHCF,75-79 Years,159
+2025,Feb,CHCF,80-84 Years,68
+2025,Feb,CHCF,85-89 Years,30
+2025,Feb,CHCF,90-94 Years,12
+2025,Feb,CHCF,95 and Older,*
+2025,Feb,CIM,18-24 Years,28
+2025,Feb,CIM,25-29 Years,80
+2025,Feb,CIM,30-34 Years,168
+2025,Feb,CIM,35-39 Years,245
+2025,Feb,CIM,40-44 Years,251
+2025,Feb,CIM,45-49 Years,236
+2025,Feb,CIM,50-54 Years,227
+2025,Feb,CIM,55-59 Years,258
+2025,Feb,CIM,60-64 Years,253
+2025,Feb,CIM,65-69 Years,216
+2025,Feb,CIM,70-74 Years,190
+2025,Feb,CIM,75-79 Years,108
+2025,Feb,CIM,80-84 Years,40
+2025,Feb,CIM,85-89 Years,10
+2025,Feb,CIM,90-94 Years,(Blank)
+2025,Feb,CIM,95 and Older,(Blank)
+2025,Mar,ASP,18-24 Years,139
+2025,Mar,ASP,25-29 Years,276
+2025,Mar,ASP,30-34 Years,400
+2025,Mar,ASP,35-39 Years,614
+2025,Mar,ASP,40-44 Years,679
+2025,Mar,ASP,45-49 Years,565
+2025,Mar,ASP,50-54 Years,480
+2025,Mar,ASP,55-59 Years,376
+2025,Mar,ASP,60-64 Years,276
+2025,Mar,ASP,65-69 Years,*
+2025,Mar,ASP,70-74 Years,*
+2025,Mar,ASP,75-79 Years,(Blank)
+2025,Mar,ASP,80-84 Years,(Blank)
+2025,Mar,ASP,85-89 Years,(Blank)
+2025,Mar,ASP,90-94 Years,(Blank)
+2025,Mar,ASP,95 and Older,(Blank)
+2025,Mar,CIW,18-24 Years,64
+2025,Mar,CIW,25-29 Years,145
+2025,Mar,CIW,30-34 Years,217
+2025,Mar,CIW,35-39 Years,236
+2025,Mar,CIW,40-44 Years,177
+2025,Mar,CIW,45-49 Years,125
+2025,Mar,CIW,50-54 Years,65
+2025,Mar,CIW,55-59 Years,62
+2025,Mar,CIW,60-64 Years,64
+2025,Mar,CIW,65-69 Years,37
+2025,Mar,CIW,70-74 Years,16
+2025,Mar,CIW,75-79 Years,14
+2025,Mar,CIW,80-84 Years,*
+2025,Mar,CIW,85-89 Years,(Blank)
+2025,Mar,CIW,90-94 Years,*
+2025,Mar,CIW,95 and Older,(Blank)
+2025,Mar,CMC,18-24 Years,50
+2025,Mar,CMC,25-29 Years,196
+2025,Mar,CMC,30-34 Years,379
+2025,Mar,CMC,35-39 Years,373
+2025,Mar,CMC,40-44 Years,323
+2025,Mar,CMC,45-49 Years,238
+2025,Mar,CMC,50-54 Years,187
+2025,Mar,CMC,55-59 Years,151
+2025,Mar,CMC,60-64 Years,137
+2025,Mar,CMC,65-69 Years,92
+2025,Mar,CMC,70-74 Years,43
+2025,Mar,CMC,75-79 Years,12
+2025,Mar,CMC,80-84 Years,*
+2025,Mar,CMC,85-89 Years,*
+2025,Mar,CMC,90-94 Years,(Blank)
+2025,Mar,CMC,95 and Older,(Blank)
+2025,Mar,CMF,18-24 Years,13
+2025,Mar,CMF,25-29 Years,86
+2025,Mar,CMF,30-34 Years,185
+2025,Mar,CMF,35-39 Years,199
+2025,Mar,CMF,40-44 Years,171
+2025,Mar,CMF,45-49 Years,203
+2025,Mar,CMF,50-54 Years,171
+2025,Mar,CMF,55-59 Years,205
+2025,Mar,CMF,60-64 Years,195
+2025,Mar,CMF,65-69 Years,193
+2025,Mar,CMF,70-74 Years,141
+2025,Mar,CMF,75-79 Years,92
+2025,Mar,CMF,80-84 Years,39
+2025,Mar,CMF,85-89 Years,11
+2025,Mar,CMF,90-94 Years,*
+2025,Mar,CMF,95 and Older,(Blank)
+2025,Mar,COR,18-24 Years,35
+2025,Mar,COR,25-29 Years,153
+2025,Mar,COR,30-34 Years,289
+2025,Mar,COR,35-39 Years,358
+2025,Mar,COR,40-44 Years,370
+2025,Mar,COR,45-49 Years,342
+2025,Mar,COR,50-54 Years,294
+2025,Mar,COR,55-59 Years,286
+2025,Mar,COR,60-64 Years,216
+2025,Mar,COR,65-69 Years,164
+2025,Mar,COR,70-74 Years,64
+2025,Mar,COR,75-79 Years,35
+2025,Mar,COR,80-84 Years,11
+2025,Mar,COR,85-89 Years,*
+2025,Mar,COR,90-94 Years,(Blank)
+2025,Mar,COR,95 and Older,(Blank)
+2025,Mar,CRC,18-24 Years,160
+2025,Mar,CRC,25-29 Years,273
+2025,Mar,CRC,30-34 Years,396
+2025,Mar,CRC,35-39 Years,439
+2025,Mar,CRC,40-44 Years,450
+2025,Mar,CRC,45-49 Years,305
+2025,Mar,CRC,50-54 Years,212
+2025,Mar,CRC,55-59 Years,191
+2025,Mar,CRC,60-64 Years,141
+2025,Mar,CRC,65-69 Years,96
+2025,Mar,CRC,70-74 Years,28
+2025,Mar,CRC,75-79 Years,*
+2025,Mar,CRC,80-84 Years,*
+2025,Mar,CRC,85-89 Years,(Blank)
+2025,Mar,CRC,90-94 Years,(Blank)
+2025,Mar,CRC,95 and Older,(Blank)
+2025,Mar,CTF,18-24 Years,29
+2025,Mar,CTF,25-29 Years,163
+2025,Mar,CTF,30-34 Years,403
+2025,Mar,CTF,35-39 Years,496
+2025,Mar,CTF,40-44 Years,566
+2025,Mar,CTF,45-49 Years,586
+2025,Mar,CTF,50-54 Years,613
+2025,Mar,CTF,55-59 Years,554
+2025,Mar,CTF,60-64 Years,476
+2025,Mar,CTF,65-69 Years,308
+2025,Mar,CTF,70-74 Years,88
+2025,Mar,CTF,75-79 Years,15
+2025,Mar,CTF,80-84 Years,*
+2025,Mar,CTF,85-89 Years,*
+2025,Mar,CTF,90-94 Years,(Blank)
+2025,Mar,CTF,95 and Older,(Blank)
+2025,Mar,FOL,18-24 Years,88
+2025,Mar,FOL,25-29 Years,335
+2025,Mar,FOL,30-34 Years,480
+2025,Mar,FOL,35-39 Years,458
+2025,Mar,FOL,40-44 Years,386
+2025,Mar,FOL,45-49 Years,321
+2025,Mar,FOL,50-54 Years,238
+2025,Mar,FOL,55-59 Years,204
+2025,Mar,FOL,60-64 Years,163
+2025,Mar,FOL,65-69 Years,89
+2025,Mar,FOL,70-74 Years,51
+2025,Mar,FOL,75-79 Years,12
+2025,Mar,FOL,80-84 Years,*
+2025,Mar,FOL,85-89 Years,*
+2025,Mar,FOL,90-94 Years,(Blank)
+2025,Mar,FOL,95 and Older,(Blank)
+2025,Mar,HDSP,18-24 Years,96
+2025,Mar,HDSP,25-29 Years,414
+2025,Mar,HDSP,30-34 Years,578
+2025,Mar,HDSP,35-39 Years,512
+2025,Mar,HDSP,40-44 Years,400
+2025,Mar,HDSP,45-49 Years,323
+2025,Mar,HDSP,50-54 Years,207
+2025,Mar,HDSP,55-59 Years,148
+2025,Mar,HDSP,60-64 Years,125
+2025,Mar,HDSP,65-69 Years,70
+2025,Mar,HDSP,70-74 Years,18
+2025,Mar,HDSP,75-79 Years,*
+2025,Mar,HDSP,80-84 Years,*
+2025,Mar,HDSP,85-89 Years,*
+2025,Mar,HDSP,90-94 Years,(Blank)
+2025,Mar,HDSP,95 and Older,(Blank)
+2025,Mar,ISP,18-24 Years,70
+2025,Mar,ISP,25-29 Years,172
+2025,Mar,ISP,30-34 Years,283
+2025,Mar,ISP,35-39 Years,366
+2025,Mar,ISP,40-44 Years,378
+2025,Mar,ISP,45-49 Years,348
+2025,Mar,ISP,50-54 Years,318
+2025,Mar,ISP,55-59 Years,249
+2025,Mar,ISP,60-64 Years,207
+2025,Mar,ISP,65-69 Years,103
+2025,Mar,ISP,70-74 Years,15
+2025,Mar,ISP,75-79 Years,*
+2025,Mar,ISP,80-84 Years,*
+2025,Mar,ISP,85-89 Years,(Blank)
+2025,Mar,ISP,90-94 Years,(Blank)
+2025,Mar,ISP,95 and Older,(Blank)
+2025,Mar,KVSP,18-24 Years,92
+2025,Mar,KVSP,25-29 Years,411
+2025,Mar,KVSP,30-34 Years,710
+2025,Mar,KVSP,35-39 Years,610
+2025,Mar,KVSP,40-44 Years,465
+2025,Mar,KVSP,45-49 Years,330
+2025,Mar,KVSP,50-54 Years,192
+2025,Mar,KVSP,55-59 Years,133
+2025,Mar,KVSP,60-64 Years,95
+2025,Mar,KVSP,65-69 Years,23
+2025,Mar,KVSP,70-74 Years,*
+2025,Mar,KVSP,75-79 Years,*
+2025,Mar,KVSP,80-84 Years,*
+2025,Mar,KVSP,85-89 Years,(Blank)
+2025,Mar,KVSP,90-94 Years,(Blank)
+2025,Mar,KVSP,95 and Older,(Blank)
+2025,Mar,LAC,18-24 Years,201
+2025,Mar,LAC,25-29 Years,346
+2025,Mar,LAC,30-34 Years,516
+2025,Mar,LAC,35-39 Years,499
+2025,Mar,LAC,40-44 Years,441
+2025,Mar,LAC,45-49 Years,336
+2025,Mar,LAC,50-54 Years,250
+2025,Mar,LAC,55-59 Years,208
+2025,Mar,LAC,60-64 Years,156
+2025,Mar,LAC,65-69 Years,83
+2025,Mar,LAC,70-74 Years,28
+2025,Mar,LAC,75-79 Years,13
+2025,Mar,LAC,80-84 Years,*
+2025,Mar,LAC,85-89 Years,*
+2025,Mar,LAC,90-94 Years,(Blank)
+2025,Mar,LAC,95 and Older,(Blank)
+2025,Mar,MCSP,18-24 Years,88
+2025,Mar,MCSP,25-29 Years,344
+2025,Mar,MCSP,30-34 Years,492
+2025,Mar,MCSP,35-39 Years,494
+2025,Mar,MCSP,40-44 Years,477
+2025,Mar,MCSP,45-49 Years,444
+2025,Mar,MCSP,50-54 Years,340
+2025,Mar,MCSP,55-59 Years,336
+2025,Mar,MCSP,60-64 Years,285
+2025,Mar,MCSP,65-69 Years,209
+2025,Mar,MCSP,70-74 Years,151
+2025,Mar,MCSP,75-79 Years,97
+2025,Mar,MCSP,80-84 Years,36
+2025,Mar,MCSP,85-89 Years,*
+2025,Mar,MCSP,90-94 Years,*
+2025,Mar,MCSP,95 and Older,(Blank)
+2025,Mar,NKSP,18-24 Years,200
+2025,Mar,NKSP,25-29 Years,437
+2025,Mar,NKSP,30-34 Years,525
+2025,Mar,NKSP,35-39 Years,491
+2025,Mar,NKSP,40-44 Years,379
+2025,Mar,NKSP,45-49 Years,231
+2025,Mar,NKSP,50-54 Years,155
+2025,Mar,NKSP,55-59 Years,101
+2025,Mar,NKSP,60-64 Years,49
+2025,Mar,NKSP,65-69 Years,20
+2025,Mar,NKSP,70-74 Years,*
+2025,Mar,NKSP,75-79 Years,*
+2025,Mar,NKSP,80-84 Years,*
+2025,Mar,NKSP,85-89 Years,(Blank)
+2025,Mar,NKSP,90-94 Years,*
+2025,Mar,NKSP,95 and Older,(Blank)
+2025,Mar,PBSP,18-24 Years,44
+2025,Mar,PBSP,25-29 Years,190
+2025,Mar,PBSP,30-34 Years,357
+2025,Mar,PBSP,35-39 Years,372
+2025,Mar,PBSP,40-44 Years,287
+2025,Mar,PBSP,45-49 Years,229
+2025,Mar,PBSP,50-54 Years,187
+2025,Mar,PBSP,55-59 Years,153
+2025,Mar,PBSP,60-64 Years,113
+2025,Mar,PBSP,65-69 Years,49
+2025,Mar,PBSP,70-74 Years,22
+2025,Mar,PBSP,75-79 Years,*
+2025,Mar,PBSP,80-84 Years,*
+2025,Mar,PBSP,85-89 Years,(Blank)
+2025,Mar,PBSP,90-94 Years,(Blank)
+2025,Mar,PBSP,95 and Older,(Blank)
+2025,Mar,PVSP,18-24 Years,239
+2025,Mar,PVSP,25-29 Years,521
+2025,Mar,PVSP,30-34 Years,601
+2025,Mar,PVSP,35-39 Years,504
+2025,Mar,PVSP,40-44 Years,396
+2025,Mar,PVSP,45-49 Years,270
+2025,Mar,PVSP,50-54 Years,163
+2025,Mar,PVSP,55-59 Years,91
+2025,Mar,PVSP,60-64 Years,59
+2025,Mar,PVSP,65-69 Years,(Blank)
+2025,Mar,PVSP,70-74 Years,(Blank)
+2025,Mar,PVSP,75-79 Years,(Blank)
+2025,Mar,PVSP,80-84 Years,(Blank)
+2025,Mar,PVSP,85-89 Years,(Blank)
+2025,Mar,PVSP,90-94 Years,(Blank)
+2025,Mar,PVSP,95 and Older,(Blank)
+2025,Mar,RJD,18-24 Years,36
+2025,Mar,RJD,25-29 Years,239
+2025,Mar,RJD,30-34 Years,395
+2025,Mar,RJD,35-39 Years,407
+2025,Mar,RJD,40-44 Years,410
+2025,Mar,RJD,45-49 Years,382
+2025,Mar,RJD,50-54 Years,384
+2025,Mar,RJD,55-59 Years,366
+2025,Mar,RJD,60-64 Years,307
+2025,Mar,RJD,65-69 Years,256
+2025,Mar,RJD,70-74 Years,145
+2025,Mar,RJD,75-79 Years,73
+2025,Mar,RJD,80-84 Years,27
+2025,Mar,RJD,85-89 Years,*
+2025,Mar,RJD,90-94 Years,(Blank)
+2025,Mar,RJD,95 and Older,(Blank)
+2025,Mar,SAC,18-24 Years,44
+2025,Mar,SAC,25-29 Years,244
+2025,Mar,SAC,30-34 Years,380
+2025,Mar,SAC,35-39 Years,348
+2025,Mar,SAC,40-44 Years,312
+2025,Mar,SAC,45-49 Years,221
+2025,Mar,SAC,50-54 Years,157
+2025,Mar,SAC,55-59 Years,114
+2025,Mar,SAC,60-64 Years,95
+2025,Mar,SAC,65-69 Years,97
+2025,Mar,SAC,70-74 Years,35
+2025,Mar,SAC,75-79 Years,27
+2025,Mar,SAC,80-84 Years,*
+2025,Mar,SAC,85-89 Years,(Blank)
+2025,Mar,SAC,90-94 Years,(Blank)
+2025,Mar,SAC,95 and Older,(Blank)
+2025,Mar,CAL,18-24 Years,95
+2025,Mar,CAL,25-29 Years,419
+2025,Mar,CAL,30-34 Years,638
+2025,Mar,CAL,35-39 Years,510
+2025,Mar,CAL,40-44 Years,383
+2025,Mar,CAL,45-49 Years,258
+2025,Mar,CAL,50-54 Years,136
+2025,Mar,CAL,55-59 Years,58
+2025,Mar,CAL,60-64 Years,47
+2025,Mar,CAL,65-69 Years,*
+2025,Mar,CAL,70-74 Years,(Blank)
+2025,Mar,CAL,75-79 Years,*
+2025,Mar,CAL,80-84 Years,(Blank)
+2025,Mar,CAL,85-89 Years,(Blank)
+2025,Mar,CAL,90-94 Years,(Blank)
+2025,Mar,CAL,95 and Older,(Blank)
+2025,Mar,SATF,18-24 Years,201
+2025,Mar,SATF,25-29 Years,485
+2025,Mar,SATF,30-34 Years,748
+2025,Mar,SATF,35-39 Years,721
+2025,Mar,SATF,40-44 Years,703
+2025,Mar,SATF,45-49 Years,639
+2025,Mar,SATF,50-54 Years,508
+2025,Mar,SATF,55-59 Years,463
+2025,Mar,SATF,60-64 Years,435
+2025,Mar,SATF,65-69 Years,270
+2025,Mar,SATF,70-74 Years,116
+2025,Mar,SATF,75-79 Years,30
+2025,Mar,SATF,80-84 Years,15
+2025,Mar,SATF,85-89 Years,*
+2025,Mar,SATF,90-94 Years,(Blank)
+2025,Mar,SATF,95 and Older,(Blank)
+2025,Mar,SCC,18-24 Years,440
+2025,Mar,SCC,25-29 Years,753
+2025,Mar,SCC,30-34 Years,863
+2025,Mar,SCC,35-39 Years,722
+2025,Mar,SCC,40-44 Years,541
+2025,Mar,SCC,45-49 Years,378
+2025,Mar,SCC,50-54 Years,202
+2025,Mar,SCC,55-59 Years,129
+2025,Mar,SCC,60-64 Years,58
+2025,Mar,SCC,65-69 Years,19
+2025,Mar,SCC,70-74 Years,*
+2025,Mar,SCC,75-79 Years,*
+2025,Mar,SCC,80-84 Years,(Blank)
+2025,Mar,SCC,85-89 Years,(Blank)
+2025,Mar,SCC,90-94 Years,(Blank)
+2025,Mar,SCC,95 and Older,(Blank)
+2025,Mar,SOL,18-24 Years,646
+2025,Mar,SOL,25-29 Years,627
+2025,Mar,SOL,30-34 Years,412
+2025,Mar,SOL,35-39 Years,374
+2025,Mar,SOL,40-44 Years,358
+2025,Mar,SOL,45-49 Years,361
+2025,Mar,SOL,50-54 Years,317
+2025,Mar,SOL,55-59 Years,247
+2025,Mar,SOL,60-64 Years,203
+2025,Mar,SOL,65-69 Years,164
+2025,Mar,SOL,70-74 Years,106
+2025,Mar,SOL,75-79 Years,50
+2025,Mar,SOL,80-84 Years,12
+2025,Mar,SOL,85-89 Years,*
+2025,Mar,SOL,90-94 Years,*
+2025,Mar,SOL,95 and Older,(Blank)
+2025,Mar,SQ,18-24 Years,74
+2025,Mar,SQ,25-29 Years,152
+2025,Mar,SQ,30-34 Years,225
+2025,Mar,SQ,35-39 Years,300
+2025,Mar,SQ,40-44 Years,356
+2025,Mar,SQ,45-49 Years,341
+2025,Mar,SQ,50-54 Years,260
+2025,Mar,SQ,55-59 Years,313
+2025,Mar,SQ,60-64 Years,319
+2025,Mar,SQ,65-69 Years,265
+2025,Mar,SQ,70-74 Years,162
+2025,Mar,SQ,75-79 Years,70
+2025,Mar,SQ,80-84 Years,26
+2025,Mar,SQ,85-89 Years,*
+2025,Mar,SQ,90-94 Years,(Blank)
+2025,Mar,SQ,95 and Older,(Blank)
+2025,Mar,SVSP,18-24 Years,62
+2025,Mar,SVSP,25-29 Years,324
+2025,Mar,SVSP,30-34 Years,521
+2025,Mar,SVSP,35-39 Years,415
+2025,Mar,SVSP,40-44 Years,340
+2025,Mar,SVSP,45-49 Years,243
+2025,Mar,SVSP,50-54 Years,177
+2025,Mar,SVSP,55-59 Years,132
+2025,Mar,SVSP,60-64 Years,106
+2025,Mar,SVSP,65-69 Years,62
+2025,Mar,SVSP,70-74 Years,14
+2025,Mar,SVSP,75-79 Years,*
+2025,Mar,SVSP,80-84 Years,*
+2025,Mar,SVSP,85-89 Years,*
+2025,Mar,SVSP,90-94 Years,(Blank)
+2025,Mar,SVSP,95 and Older,(Blank)
+2025,Mar,VSP,18-24 Years,282
+2025,Mar,VSP,25-29 Years,334
+2025,Mar,VSP,30-34 Years,140
+2025,Mar,VSP,35-39 Years,198
+2025,Mar,VSP,40-44 Years,272
+2025,Mar,VSP,45-49 Years,323
+2025,Mar,VSP,50-54 Years,277
+2025,Mar,VSP,55-59 Years,355
+2025,Mar,VSP,60-64 Years,361
+2025,Mar,VSP,65-69 Years,287
+2025,Mar,VSP,70-74 Years,119
+2025,Mar,VSP,75-79 Years,50
+2025,Mar,VSP,80-84 Years,20
+2025,Mar,VSP,85-89 Years,*
+2025,Mar,VSP,90-94 Years,*
+2025,Mar,VSP,95 and Older,(Blank)
+2025,Mar,WSP,18-24 Years,305
+2025,Mar,WSP,25-29 Years,551
+2025,Mar,WSP,30-34 Years,884
+2025,Mar,WSP,35-39 Years,659
+2025,Mar,WSP,40-44 Years,482
+2025,Mar,WSP,45-49 Years,338
+2025,Mar,WSP,50-54 Years,181
+2025,Mar,WSP,55-59 Years,123
+2025,Mar,WSP,60-64 Years,76
+2025,Mar,WSP,65-69 Years,27
+2025,Mar,WSP,70-74 Years,13
+2025,Mar,WSP,75-79 Years,*
+2025,Mar,WSP,80-84 Years,*
+2025,Mar,WSP,85-89 Years,(Blank)
+2025,Mar,WSP,90-94 Years,(Blank)
+2025,Mar,WSP,95 and Older,(Blank)
+2025,Mar,CPMP,18-24 Years,*
+2025,Mar,CPMP,25-29 Years,*
+2025,Mar,CPMP,30-34 Years,*
+2025,Mar,CPMP,35-39 Years,(Blank)
+2025,Mar,CPMP,40-44 Years,*
+2025,Mar,CPMP,45-49 Years,(Blank)
+2025,Mar,CPMP,50-54 Years,(Blank)
+2025,Mar,CPMP,55-59 Years,(Blank)
+2025,Mar,CPMP,60-64 Years,(Blank)
+2025,Mar,CPMP,65-69 Years,(Blank)
+2025,Mar,CPMP,70-74 Years,(Blank)
+2025,Mar,CPMP,75-79 Years,(Blank)
+2025,Mar,CPMP,80-84 Years,(Blank)
+2025,Mar,CPMP,85-89 Years,(Blank)
+2025,Mar,CPMP,90-94 Years,(Blank)
+2025,Mar,CPMP,95 and Older,(Blank)
+2025,Mar,FCRF,18-24 Years,18
+2025,Mar,FCRF,25-29 Years,59
+2025,Mar,FCRF,30-34 Years,79
+2025,Mar,FCRF,35-39 Years,69
+2025,Mar,FCRF,40-44 Years,79
+2025,Mar,FCRF,45-49 Years,42
+2025,Mar,FCRF,50-54 Years,20
+2025,Mar,FCRF,55-59 Years,19
+2025,Mar,FCRF,60-64 Years,14
+2025,Mar,FCRF,65-69 Years,*
+2025,Mar,FCRF,70-74 Years,(Blank)
+2025,Mar,FCRF,75-79 Years,*
+2025,Mar,FCRF,80-84 Years,(Blank)
+2025,Mar,FCRF,85-89 Years,(Blank)
+2025,Mar,FCRF,90-94 Years,(Blank)
+2025,Mar,FCRF,95 and Older,(Blank)
+2025,Mar,Alternative Custody Program,18-24 Years,(Blank)
+2025,Mar,Alternative Custody Program,25-29 Years,(Blank)
+2025,Mar,Alternative Custody Program,30-34 Years,(Blank)
+2025,Mar,Alternative Custody Program,35-39 Years,*
+2025,Mar,Alternative Custody Program,40-44 Years,*
+2025,Mar,Alternative Custody Program,45-49 Years,*
+2025,Mar,Alternative Custody Program,50-54 Years,(Blank)
+2025,Mar,Alternative Custody Program,55-59 Years,(Blank)
+2025,Mar,Alternative Custody Program,60-64 Years,(Blank)
+2025,Mar,Alternative Custody Program,65-69 Years,(Blank)
+2025,Mar,Alternative Custody Program,70-74 Years,(Blank)
+2025,Mar,Alternative Custody Program,75-79 Years,(Blank)
+2025,Mar,Alternative Custody Program,80-84 Years,(Blank)
+2025,Mar,Alternative Custody Program,85-89 Years,(Blank)
+2025,Mar,Alternative Custody Program,90-94 Years,(Blank)
+2025,Mar,Alternative Custody Program,95 and Older,(Blank)
+2025,Mar,Department of State Hospitals,18-24 Years,*
+2025,Mar,Department of State Hospitals,25-29 Years,12
+2025,Mar,Department of State Hospitals,30-34 Years,24
+2025,Mar,Department of State Hospitals,35-39 Years,38
+2025,Mar,Department of State Hospitals,40-44 Years,33
+2025,Mar,Department of State Hospitals,45-49 Years,26
+2025,Mar,Department of State Hospitals,50-54 Years,17
+2025,Mar,Department of State Hospitals,55-59 Years,18
+2025,Mar,Department of State Hospitals,60-64 Years,12
+2025,Mar,Department of State Hospitals,65-69 Years,10
+2025,Mar,Department of State Hospitals,70-74 Years,(Blank)
+2025,Mar,Department of State Hospitals,75-79 Years,*
+2025,Mar,Department of State Hospitals,80-84 Years,*
+2025,Mar,Department of State Hospitals,85-89 Years,(Blank)
+2025,Mar,Department of State Hospitals,90-94 Years,(Blank)
+2025,Mar,Department of State Hospitals,95 and Older,(Blank)
+2025,Mar,Male Community Reentry Facility,18-24 Years,23
+2025,Mar,Male Community Reentry Facility,25-29 Years,65
+2025,Mar,Male Community Reentry Facility,30-34 Years,145
+2025,Mar,Male Community Reentry Facility,35-39 Years,126
+2025,Mar,Male Community Reentry Facility,40-44 Years,104
+2025,Mar,Male Community Reentry Facility,45-49 Years,86
+2025,Mar,Male Community Reentry Facility,50-54 Years,44
+2025,Mar,Male Community Reentry Facility,55-59 Years,34
+2025,Mar,Male Community Reentry Facility,60-64 Years,33
+2025,Mar,Male Community Reentry Facility,65-69 Years,14
+2025,Mar,Male Community Reentry Facility,70-74 Years,*
+2025,Mar,Male Community Reentry Facility,75-79 Years,*
+2025,Mar,Male Community Reentry Facility,80-84 Years,(Blank)
+2025,Mar,Male Community Reentry Facility,85-89 Years,(Blank)
+2025,Mar,Male Community Reentry Facility,90-94 Years,(Blank)
+2025,Mar,Male Community Reentry Facility,95 and Older,(Blank)
+2025,Mar,Medical Reprieve Program,18-24 Years,(Blank)
+2025,Mar,Medical Reprieve Program,25-29 Years,(Blank)
+2025,Mar,Medical Reprieve Program,30-34 Years,(Blank)
+2025,Mar,Medical Reprieve Program,35-39 Years,(Blank)
+2025,Mar,Medical Reprieve Program,40-44 Years,(Blank)
+2025,Mar,Medical Reprieve Program,45-49 Years,(Blank)
+2025,Mar,Medical Reprieve Program,50-54 Years,(Blank)
+2025,Mar,Medical Reprieve Program,55-59 Years,*
+2025,Mar,Medical Reprieve Program,60-64 Years,*
+2025,Mar,Medical Reprieve Program,65-69 Years,(Blank)
+2025,Mar,Medical Reprieve Program,70-74 Years,(Blank)
+2025,Mar,Medical Reprieve Program,75-79 Years,*
+2025,Mar,Medical Reprieve Program,80-84 Years,(Blank)
+2025,Mar,Medical Reprieve Program,85-89 Years,*
+2025,Mar,Medical Reprieve Program,90-94 Years,(Blank)
+2025,Mar,Medical Reprieve Program,95 and Older,(Blank)
+2025,Mar,CCI,18-24 Years,181
+2025,Mar,CCI,25-29 Years,344
+2025,Mar,CCI,30-34 Years,403
+2025,Mar,CCI,35-39 Years,396
+2025,Mar,CCI,40-44 Years,374
+2025,Mar,CCI,45-49 Years,277
+2025,Mar,CCI,50-54 Years,182
+2025,Mar,CCI,55-59 Years,124
+2025,Mar,CCI,60-64 Years,81
+2025,Mar,CCI,65-69 Years,38
+2025,Mar,CCI,70-74 Years,*
+2025,Mar,CCI,75-79 Years,*
+2025,Mar,CCI,80-84 Years,*
+2025,Mar,CCI,85-89 Years,(Blank)
+2025,Mar,CCI,90-94 Years,(Blank)
+2025,Mar,CCI,95 and Older,(Blank)
+2025,Mar,CCWF,18-24 Years,92
+2025,Mar,CCWF,25-29 Years,254
+2025,Mar,CCWF,30-34 Years,389
+2025,Mar,CCWF,35-39 Years,360
+2025,Mar,CCWF,40-44 Years,297
+2025,Mar,CCWF,45-49 Years,192
+2025,Mar,CCWF,50-54 Years,139
+2025,Mar,CCWF,55-59 Years,104
+2025,Mar,CCWF,60-64 Years,78
+2025,Mar,CCWF,65-69 Years,54
+2025,Mar,CCWF,70-74 Years,32
+2025,Mar,CCWF,75-79 Years,10
+2025,Mar,CCWF,80-84 Years,*
+2025,Mar,CCWF,85-89 Years,(Blank)
+2025,Mar,CCWF,90-94 Years,*
+2025,Mar,CCWF,95 and Older,(Blank)
+2025,Mar,CEN,18-24 Years,83
+2025,Mar,CEN,25-29 Years,420
+2025,Mar,CEN,30-34 Years,689
+2025,Mar,CEN,35-39 Years,555
+2025,Mar,CEN,40-44 Years,412
+2025,Mar,CEN,45-49 Years,310
+2025,Mar,CEN,50-54 Years,176
+2025,Mar,CEN,55-59 Years,101
+2025,Mar,CEN,60-64 Years,55
+2025,Mar,CEN,65-69 Years,13
+2025,Mar,CEN,70-74 Years,*
+2025,Mar,CEN,75-79 Years,*
+2025,Mar,CEN,80-84 Years,*
+2025,Mar,CEN,85-89 Years,(Blank)
+2025,Mar,CEN,90-94 Years,(Blank)
+2025,Mar,CEN,95 and Older,(Blank)
+2025,Mar,CHCF,18-24 Years,12
+2025,Mar,CHCF,25-29 Years,53
+2025,Mar,CHCF,30-34 Years,131
+2025,Mar,CHCF,35-39 Years,139
+2025,Mar,CHCF,40-44 Years,161
+2025,Mar,CHCF,45-49 Years,179
+2025,Mar,CHCF,50-54 Years,207
+2025,Mar,CHCF,55-59 Years,231
+2025,Mar,CHCF,60-64 Years,246
+2025,Mar,CHCF,65-69 Years,243
+2025,Mar,CHCF,70-74 Years,225
+2025,Mar,CHCF,75-79 Years,155
+2025,Mar,CHCF,80-84 Years,73
+2025,Mar,CHCF,85-89 Years,25
+2025,Mar,CHCF,90-94 Years,13
+2025,Mar,CHCF,95 and Older,*
+2025,Mar,CIM,18-24 Years,32
+2025,Mar,CIM,25-29 Years,84
+2025,Mar,CIM,30-34 Years,174
+2025,Mar,CIM,35-39 Years,247
+2025,Mar,CIM,40-44 Years,255
+2025,Mar,CIM,45-49 Years,241
+2025,Mar,CIM,50-54 Years,234
+2025,Mar,CIM,55-59 Years,256
+2025,Mar,CIM,60-64 Years,258
+2025,Mar,CIM,65-69 Years,218
+2025,Mar,CIM,70-74 Years,188
+2025,Mar,CIM,75-79 Years,109
+2025,Mar,CIM,80-84 Years,41
+2025,Mar,CIM,85-89 Years,*
+2025,Mar,CIM,90-94 Years,*
+2025,Mar,CIM,95 and Older,(Blank)
+2025,Apr,ASP,18-24 Years,161
+2025,Apr,ASP,25-29 Years,317
+2025,Apr,ASP,30-34 Years,430
+2025,Apr,ASP,35-39 Years,632
+2025,Apr,ASP,40-44 Years,701
+2025,Apr,ASP,45-49 Years,574
+2025,Apr,ASP,50-54 Years,477
+2025,Apr,ASP,55-59 Years,371
+2025,Apr,ASP,60-64 Years,279
+2025,Apr,ASP,65-69 Years,*
+2025,Apr,ASP,70-74 Years,(Blank)
+2025,Apr,ASP,75-79 Years,(Blank)
+2025,Apr,ASP,80-84 Years,(Blank)
+2025,Apr,ASP,85-89 Years,(Blank)
+2025,Apr,ASP,90-94 Years,(Blank)
+2025,Apr,ASP,95 and Older,(Blank)
+2025,Apr,CIW,18-24 Years,60
+2025,Apr,CIW,25-29 Years,138
+2025,Apr,CIW,30-34 Years,217
+2025,Apr,CIW,35-39 Years,228
+2025,Apr,CIW,40-44 Years,181
+2025,Apr,CIW,45-49 Years,121
+2025,Apr,CIW,50-54 Years,72
+2025,Apr,CIW,55-59 Years,60
+2025,Apr,CIW,60-64 Years,63
+2025,Apr,CIW,65-69 Years,39
+2025,Apr,CIW,70-74 Years,18
+2025,Apr,CIW,75-79 Years,14
+2025,Apr,CIW,80-84 Years,*
+2025,Apr,CIW,85-89 Years,(Blank)
+2025,Apr,CIW,90-94 Years,*
+2025,Apr,CIW,95 and Older,(Blank)
+2025,Apr,CMC,18-24 Years,59
+2025,Apr,CMC,25-29 Years,201
+2025,Apr,CMC,30-34 Years,388
+2025,Apr,CMC,35-39 Years,381
+2025,Apr,CMC,40-44 Years,320
+2025,Apr,CMC,45-49 Years,243
+2025,Apr,CMC,50-54 Years,183
+2025,Apr,CMC,55-59 Years,160
+2025,Apr,CMC,60-64 Years,142
+2025,Apr,CMC,65-69 Years,90
+2025,Apr,CMC,70-74 Years,42
+2025,Apr,CMC,75-79 Years,12
+2025,Apr,CMC,80-84 Years,*
+2025,Apr,CMC,85-89 Years,*
+2025,Apr,CMC,90-94 Years,(Blank)
+2025,Apr,CMC,95 and Older,(Blank)
+2025,Apr,CMF,18-24 Years,22
+2025,Apr,CMF,25-29 Years,89
+2025,Apr,CMF,30-34 Years,191
+2025,Apr,CMF,35-39 Years,207
+2025,Apr,CMF,40-44 Years,184
+2025,Apr,CMF,45-49 Years,207
+2025,Apr,CMF,50-54 Years,167
+2025,Apr,CMF,55-59 Years,204
+2025,Apr,CMF,60-64 Years,196
+2025,Apr,CMF,65-69 Years,199
+2025,Apr,CMF,70-74 Years,148
+2025,Apr,CMF,75-79 Years,96
+2025,Apr,CMF,80-84 Years,39
+2025,Apr,CMF,85-89 Years,12
+2025,Apr,CMF,90-94 Years,*
+2025,Apr,CMF,95 and Older,(Blank)
+2025,Apr,COR,18-24 Years,42
+2025,Apr,COR,25-29 Years,163
+2025,Apr,COR,30-34 Years,308
+2025,Apr,COR,35-39 Years,353
+2025,Apr,COR,40-44 Years,382
+2025,Apr,COR,45-49 Years,333
+2025,Apr,COR,50-54 Years,290
+2025,Apr,COR,55-59 Years,291
+2025,Apr,COR,60-64 Years,215
+2025,Apr,COR,65-69 Years,158
+2025,Apr,COR,70-74 Years,65
+2025,Apr,COR,75-79 Years,36
+2025,Apr,COR,80-84 Years,11
+2025,Apr,COR,85-89 Years,*
+2025,Apr,COR,90-94 Years,(Blank)
+2025,Apr,COR,95 and Older,(Blank)
+2025,Apr,CRC,18-24 Years,172
+2025,Apr,CRC,25-29 Years,285
+2025,Apr,CRC,30-34 Years,420
+2025,Apr,CRC,35-39 Years,445
+2025,Apr,CRC,40-44 Years,447
+2025,Apr,CRC,45-49 Years,312
+2025,Apr,CRC,50-54 Years,209
+2025,Apr,CRC,55-59 Years,197
+2025,Apr,CRC,60-64 Years,141
+2025,Apr,CRC,65-69 Years,98
+2025,Apr,CRC,70-74 Years,29
+2025,Apr,CRC,75-79 Years,*
+2025,Apr,CRC,80-84 Years,*
+2025,Apr,CRC,85-89 Years,(Blank)
+2025,Apr,CRC,90-94 Years,(Blank)
+2025,Apr,CRC,95 and Older,(Blank)
+2025,Apr,CTF,18-24 Years,27
+2025,Apr,CTF,25-29 Years,157
+2025,Apr,CTF,30-34 Years,398
+2025,Apr,CTF,35-39 Years,497
+2025,Apr,CTF,40-44 Years,566
+2025,Apr,CTF,45-49 Years,584
+2025,Apr,CTF,50-54 Years,610
+2025,Apr,CTF,55-59 Years,547
+2025,Apr,CTF,60-64 Years,476
+2025,Apr,CTF,65-69 Years,322
+2025,Apr,CTF,70-74 Years,85
+2025,Apr,CTF,75-79 Years,15
+2025,Apr,CTF,80-84 Years,*
+2025,Apr,CTF,85-89 Years,*
+2025,Apr,CTF,90-94 Years,(Blank)
+2025,Apr,CTF,95 and Older,(Blank)
+2025,Apr,FOL,18-24 Years,90
+2025,Apr,FOL,25-29 Years,334
+2025,Apr,FOL,30-34 Years,492
+2025,Apr,FOL,35-39 Years,462
+2025,Apr,FOL,40-44 Years,404
+2025,Apr,FOL,45-49 Years,325
+2025,Apr,FOL,50-54 Years,233
+2025,Apr,FOL,55-59 Years,200
+2025,Apr,FOL,60-64 Years,163
+2025,Apr,FOL,65-69 Years,88
+2025,Apr,FOL,70-74 Years,49
+2025,Apr,FOL,75-79 Years,11
+2025,Apr,FOL,80-84 Years,*
+2025,Apr,FOL,85-89 Years,*
+2025,Apr,FOL,90-94 Years,(Blank)
+2025,Apr,FOL,95 and Older,(Blank)
+2025,Apr,HDSP,18-24 Years,97
+2025,Apr,HDSP,25-29 Years,397
+2025,Apr,HDSP,30-34 Years,558
+2025,Apr,HDSP,35-39 Years,507
+2025,Apr,HDSP,40-44 Years,390
+2025,Apr,HDSP,45-49 Years,308
+2025,Apr,HDSP,50-54 Years,193
+2025,Apr,HDSP,55-59 Years,156
+2025,Apr,HDSP,60-64 Years,118
+2025,Apr,HDSP,65-69 Years,69
+2025,Apr,HDSP,70-74 Years,18
+2025,Apr,HDSP,75-79 Years,*
+2025,Apr,HDSP,80-84 Years,*
+2025,Apr,HDSP,85-89 Years,*
+2025,Apr,HDSP,90-94 Years,(Blank)
+2025,Apr,HDSP,95 and Older,(Blank)
+2025,Apr,ISP,18-24 Years,81
+2025,Apr,ISP,25-29 Years,171
+2025,Apr,ISP,30-34 Years,298
+2025,Apr,ISP,35-39 Years,378
+2025,Apr,ISP,40-44 Years,396
+2025,Apr,ISP,45-49 Years,358
+2025,Apr,ISP,50-54 Years,328
+2025,Apr,ISP,55-59 Years,266
+2025,Apr,ISP,60-64 Years,222
+2025,Apr,ISP,65-69 Years,105
+2025,Apr,ISP,70-74 Years,16
+2025,Apr,ISP,75-79 Years,*
+2025,Apr,ISP,80-84 Years,*
+2025,Apr,ISP,85-89 Years,(Blank)
+2025,Apr,ISP,90-94 Years,(Blank)
+2025,Apr,ISP,95 and Older,(Blank)
+2025,Apr,KVSP,18-24 Years,89
+2025,Apr,KVSP,25-29 Years,422
+2025,Apr,KVSP,30-34 Years,719
+2025,Apr,KVSP,35-39 Years,615
+2025,Apr,KVSP,40-44 Years,478
+2025,Apr,KVSP,45-49 Years,339
+2025,Apr,KVSP,50-54 Years,188
+2025,Apr,KVSP,55-59 Years,135
+2025,Apr,KVSP,60-64 Years,90
+2025,Apr,KVSP,65-69 Years,24
+2025,Apr,KVSP,70-74 Years,*
+2025,Apr,KVSP,75-79 Years,*
+2025,Apr,KVSP,80-84 Years,*
+2025,Apr,KVSP,85-89 Years,(Blank)
+2025,Apr,KVSP,90-94 Years,(Blank)
+2025,Apr,KVSP,95 and Older,(Blank)
+2025,Apr,LAC,18-24 Years,195
+2025,Apr,LAC,25-29 Years,325
+2025,Apr,LAC,30-34 Years,448
+2025,Apr,LAC,35-39 Years,447
+2025,Apr,LAC,40-44 Years,403
+2025,Apr,LAC,45-49 Years,330
+2025,Apr,LAC,50-54 Years,232
+2025,Apr,LAC,55-59 Years,200
+2025,Apr,LAC,60-64 Years,149
+2025,Apr,LAC,65-69 Years,80
+2025,Apr,LAC,70-74 Years,29
+2025,Apr,LAC,75-79 Years,12
+2025,Apr,LAC,80-84 Years,*
+2025,Apr,LAC,85-89 Years,*
+2025,Apr,LAC,90-94 Years,(Blank)
+2025,Apr,LAC,95 and Older,(Blank)
+2025,Apr,MCSP,18-24 Years,91
+2025,Apr,MCSP,25-29 Years,327
+2025,Apr,MCSP,30-34 Years,490
+2025,Apr,MCSP,35-39 Years,502
+2025,Apr,MCSP,40-44 Years,471
+2025,Apr,MCSP,45-49 Years,442
+2025,Apr,MCSP,50-54 Years,334
+2025,Apr,MCSP,55-59 Years,336
+2025,Apr,MCSP,60-64 Years,286
+2025,Apr,MCSP,65-69 Years,209
+2025,Apr,MCSP,70-74 Years,146
+2025,Apr,MCSP,75-79 Years,94
+2025,Apr,MCSP,80-84 Years,37
+2025,Apr,MCSP,85-89 Years,*
+2025,Apr,MCSP,90-94 Years,*
+2025,Apr,MCSP,95 and Older,(Blank)
+2025,Apr,NKSP,18-24 Years,225
+2025,Apr,NKSP,25-29 Years,418
+2025,Apr,NKSP,30-34 Years,513
+2025,Apr,NKSP,35-39 Years,457
+2025,Apr,NKSP,40-44 Years,351
+2025,Apr,NKSP,45-49 Years,229
+2025,Apr,NKSP,50-54 Years,154
+2025,Apr,NKSP,55-59 Years,83
+2025,Apr,NKSP,60-64 Years,50
+2025,Apr,NKSP,65-69 Years,22
+2025,Apr,NKSP,70-74 Years,11
+2025,Apr,NKSP,75-79 Years,*
+2025,Apr,NKSP,80-84 Years,*
+2025,Apr,NKSP,85-89 Years,*
+2025,Apr,NKSP,90-94 Years,*
+2025,Apr,NKSP,95 and Older,(Blank)

@@ -1,0 +1,3109 @@
+Year,Month,Location,Country of Birth,Population
+2025,Jan,ASP,El Salvador,72
+2025,Jan,ASP,Guatemala,68
+2025,Jan,ASP,Mexico,832
+2025,Jan,ASP,Others,812
+2025,Jan,ASP,Philippines,*
+2025,Jan,ASP,United States,"1,975"
+2025,Jan,ASP,Vietnam,22
+2025,Jan,CIW,El Salvador,*
+2025,Jan,CIW,Guatemala,*
+2025,Jan,CIW,Mexico,43
+2025,Jan,CIW,Others,124
+2025,Jan,CIW,Philippines,*
+2025,Jan,CIW,United States,"1,098"
+2025,Jan,CIW,Vietnam,*
+2025,Jan,CMC,El Salvador,16
+2025,Jan,CMC,Guatemala,15
+2025,Jan,CMC,Mexico,128
+2025,Jan,CMC,Others,212
+2025,Jan,CMC,Philippines,*
+2025,Jan,CMC,United States,"1,815"
+2025,Jan,CMC,Vietnam,*
+2025,Jan,CMF,El Salvador,*
+2025,Jan,CMF,Guatemala,*
+2025,Jan,CMF,Mexico,134
+2025,Jan,CMF,Others,168
+2025,Jan,CMF,Philippines,*
+2025,Jan,CMF,United States,"1,537"
+2025,Jan,CMF,Vietnam,*
+2025,Jan,COR,El Salvador,32
+2025,Jan,COR,Guatemala,15
+2025,Jan,COR,Mexico,316
+2025,Jan,COR,Others,277
+2025,Jan,COR,Philippines,15
+2025,Jan,COR,United States,"2,001"
+2025,Jan,COR,Vietnam,*
+2025,Jan,CRC,El Salvador,41
+2025,Jan,CRC,Guatemala,37
+2025,Jan,CRC,Mexico,337
+2025,Jan,CRC,Others,463
+2025,Jan,CRC,Philippines,*
+2025,Jan,CRC,United States,"1,841"
+2025,Jan,CRC,Vietnam,10
+2025,Jan,CTF,El Salvador,72
+2025,Jan,CTF,Guatemala,33
+2025,Jan,CTF,Mexico,782
+2025,Jan,CTF,Others,384
+2025,Jan,CTF,Philippines,33
+2025,Jan,CTF,United States,"3,016"
+2025,Jan,CTF,Vietnam,26
+2025,Jan,FOL,El Salvador,18
+2025,Jan,FOL,Guatemala,14
+2025,Jan,FOL,Mexico,240
+2025,Jan,FOL,Others,299
+2025,Jan,FOL,Philippines,*
+2025,Jan,FOL,United States,"2,174"
+2025,Jan,FOL,Vietnam,11
+2025,Jan,HDSP,El Salvador,23
+2025,Jan,HDSP,Guatemala,11
+2025,Jan,HDSP,Mexico,148
+2025,Jan,HDSP,Others,307
+2025,Jan,HDSP,Philippines,*
+2025,Jan,HDSP,United States,"2,300"
+2025,Jan,HDSP,Vietnam,*
+2025,Jan,ISP,El Salvador,47
+2025,Jan,ISP,Guatemala,50
+2025,Jan,ISP,Mexico,518
+2025,Jan,ISP,Others,450
+2025,Jan,ISP,Philippines,19
+2025,Jan,ISP,United States,"1,732"
+2025,Jan,ISP,Vietnam,*
+2025,Jan,KVSP,El Salvador,20
+2025,Jan,KVSP,Guatemala,*
+2025,Jan,KVSP,Mexico,181
+2025,Jan,KVSP,Others,220
+2025,Jan,KVSP,Philippines,*
+2025,Jan,KVSP,United States,"2,752"
+2025,Jan,KVSP,Vietnam,*
+2025,Jan,LAC,El Salvador,15
+2025,Jan,LAC,Guatemala,*
+2025,Jan,LAC,Mexico,142
+2025,Jan,LAC,Others,232
+2025,Jan,LAC,Philippines,*
+2025,Jan,LAC,United States,"2,702"
+2025,Jan,LAC,Vietnam,*
+2025,Jan,MCSP,El Salvador,24
+2025,Jan,MCSP,Guatemala,16
+2025,Jan,MCSP,Mexico,246
+2025,Jan,MCSP,Others,364
+2025,Jan,MCSP,Philippines,14
+2025,Jan,MCSP,United States,"3,183"
+2025,Jan,MCSP,Vietnam,*
+2025,Jan,NKSP,El Salvador,11
+2025,Jan,NKSP,Guatemala,13
+2025,Jan,NKSP,Mexico,93
+2025,Jan,NKSP,Others,561
+2025,Jan,NKSP,Philippines,*
+2025,Jan,NKSP,United States,"2,014"
+2025,Jan,NKSP,Vietnam,*
+2025,Jan,PBSP,El Salvador,18
+2025,Jan,PBSP,Guatemala,11
+2025,Jan,PBSP,Mexico,129
+2025,Jan,PBSP,Others,252
+2025,Jan,PBSP,Philippines,*
+2025,Jan,PBSP,United States,"1,608"
+2025,Jan,PBSP,Vietnam,*
+2025,Jan,PVSP,El Salvador,28
+2025,Jan,PVSP,Guatemala,19
+2025,Jan,PVSP,Mexico,248
+2025,Jan,PVSP,Others,567
+2025,Jan,PVSP,Philippines,*
+2025,Jan,PVSP,United States,"2,034"
+2025,Jan,PVSP,Vietnam,*
+2025,Jan,RJD,El Salvador,25
+2025,Jan,RJD,Guatemala,13
+2025,Jan,RJD,Mexico,257
+2025,Jan,RJD,Others,308
+2025,Jan,RJD,Philippines,12
+2025,Jan,RJD,United States,"2,642"
+2025,Jan,RJD,Vietnam,16
+2025,Jan,SAC,El Salvador,16
+2025,Jan,SAC,Guatemala,*
+2025,Jan,SAC,Mexico,117
+2025,Jan,SAC,Others,212
+2025,Jan,SAC,Philippines,*
+2025,Jan,SAC,United States,"1,754"
+2025,Jan,SAC,Vietnam,*
+2025,Jan,CAL,El Salvador,13
+2025,Jan,CAL,Guatemala,13
+2025,Jan,CAL,Mexico,150
+2025,Jan,CAL,Others,211
+2025,Jan,CAL,Philippines,(Blank)
+2025,Jan,CAL,United States,"2,087"
+2025,Jan,CAL,Vietnam,11
+2025,Jan,SATF,El Salvador,52
+2025,Jan,SATF,Guatemala,37
+2025,Jan,SATF,Mexico,463
+2025,Jan,SATF,Others,533
+2025,Jan,SATF,Philippines,18
+2025,Jan,SATF,United States,"4,030"
+2025,Jan,SATF,Vietnam,13
+2025,Jan,SCC,El Salvador,19
+2025,Jan,SCC,Guatemala,*
+2025,Jan,SCC,Mexico,191
+2025,Jan,SCC,Others,760
+2025,Jan,SCC,Philippines,*
+2025,Jan,SCC,United States,"3,175"
+2025,Jan,SCC,Vietnam,*
+2025,Jan,SOL,El Salvador,16
+2025,Jan,SOL,Guatemala,14
+2025,Jan,SOL,Mexico,258
+2025,Jan,SOL,Others,498
+2025,Jan,SOL,Philippines,11
+2025,Jan,SOL,United States,"3,063"
+2025,Jan,SOL,Vietnam,22
+2025,Jan,SQ,El Salvador,45
+2025,Jan,SQ,Guatemala,27
+2025,Jan,SQ,Mexico,384
+2025,Jan,SQ,Others,173
+2025,Jan,SQ,Philippines,19
+2025,Jan,SQ,United States,"2,260"
+2025,Jan,SQ,Vietnam,23
+2025,Jan,SVSP,El Salvador,*
+2025,Jan,SVSP,Guatemala,*
+2025,Jan,SVSP,Mexico,110
+2025,Jan,SVSP,Others,159
+2025,Jan,SVSP,Philippines,(Blank)
+2025,Jan,SVSP,United States,"2,067"
+2025,Jan,SVSP,Vietnam,*
+2025,Jan,VSP,El Salvador,41
+2025,Jan,VSP,Guatemala,24
+2025,Jan,VSP,Mexico,337
+2025,Jan,VSP,Others,388
+2025,Jan,VSP,Philippines,15
+2025,Jan,VSP,United States,"2,313"
+2025,Jan,VSP,Vietnam,14
+2025,Jan,WSP,El Salvador,12
+2025,Jan,WSP,Guatemala,12
+2025,Jan,WSP,Mexico,173
+2025,Jan,WSP,Others,518
+2025,Jan,WSP,Philippines,*
+2025,Jan,WSP,United States,"3,112"
+2025,Jan,WSP,Vietnam,*
+2025,Jan,CPMP,El Salvador,(Blank)
+2025,Jan,CPMP,Guatemala,(Blank)
+2025,Jan,CPMP,Mexico,(Blank)
+2025,Jan,CPMP,Others,*
+2025,Jan,CPMP,Philippines,(Blank)
+2025,Jan,CPMP,United States,*
+2025,Jan,CPMP,Vietnam,(Blank)
+2025,Jan,FCRF,El Salvador,*
+2025,Jan,FCRF,Guatemala,*
+2025,Jan,FCRF,Mexico,11
+2025,Jan,FCRF,Others,52
+2025,Jan,FCRF,Philippines,*
+2025,Jan,FCRF,United States,292
+2025,Jan,FCRF,Vietnam,(Blank)
+2025,Jan,Alternative Custody Program,El Salvador,(Blank)
+2025,Jan,Alternative Custody Program,Guatemala,(Blank)
+2025,Jan,Alternative Custody Program,Mexico,(Blank)
+2025,Jan,Alternative Custody Program,Others,*
+2025,Jan,Alternative Custody Program,Philippines,(Blank)
+2025,Jan,Alternative Custody Program,United States,10
+2025,Jan,Alternative Custody Program,Vietnam,(Blank)
+2025,Jan,Department of State Hospitals,El Salvador,(Blank)
+2025,Jan,Department of State Hospitals,Guatemala,*
+2025,Jan,Department of State Hospitals,Mexico,15
+2025,Jan,Department of State Hospitals,Others,14
+2025,Jan,Department of State Hospitals,Philippines,*
+2025,Jan,Department of State Hospitals,United States,148
+2025,Jan,Department of State Hospitals,Vietnam,(Blank)
+2025,Jan,Male Community Reentry Facility,El Salvador,*
+2025,Jan,Male Community Reentry Facility,Guatemala,*
+2025,Jan,Male Community Reentry Facility,Mexico,20
+2025,Jan,Male Community Reentry Facility,Others,66
+2025,Jan,Male Community Reentry Facility,Philippines,*
+2025,Jan,Male Community Reentry Facility,United States,558
+2025,Jan,Male Community Reentry Facility,Vietnam,*
+2025,Jan,Medical Reprieve Program,El Salvador,(Blank)
+2025,Jan,Medical Reprieve Program,Guatemala,(Blank)
+2025,Jan,Medical Reprieve Program,Mexico,(Blank)
+2025,Jan,Medical Reprieve Program,Others,(Blank)
+2025,Jan,Medical Reprieve Program,Philippines,(Blank)
+2025,Jan,Medical Reprieve Program,United States,*
+2025,Jan,Medical Reprieve Program,Vietnam,(Blank)
+2025,Jan,CCI,El Salvador,19
+2025,Jan,CCI,Guatemala,10
+2025,Jan,CCI,Mexico,170
+2025,Jan,CCI,Others,321
+2025,Jan,CCI,Philippines,*
+2025,Jan,CCI,United States,"1,839"
+2025,Jan,CCI,Vietnam,*
+2025,Jan,CCWF,El Salvador,12
+2025,Jan,CCWF,Guatemala,*
+2025,Jan,CCWF,Mexico,85
+2025,Jan,CCWF,Others,236
+2025,Jan,CCWF,Philippines,*
+2025,Jan,CCWF,United States,"1,650"
+2025,Jan,CCWF,Vietnam,*
+2025,Jan,CEN,El Salvador,25
+2025,Jan,CEN,Guatemala,*
+2025,Jan,CEN,Mexico,174
+2025,Jan,CEN,Others,249
+2025,Jan,CEN,Philippines,*
+2025,Jan,CEN,United States,"2,332"
+2025,Jan,CEN,Vietnam,*
+2025,Jan,CHCF,El Salvador,12
+2025,Jan,CHCF,Guatemala,10
+2025,Jan,CHCF,Mexico,164
+2025,Jan,CHCF,Others,171
+2025,Jan,CHCF,Philippines,13
+2025,Jan,CHCF,United States,"1,718"
+2025,Jan,CHCF,Vietnam,*
+2025,Jan,CIM,El Salvador,27
+2025,Jan,CIM,Guatemala,23
+2025,Jan,CIM,Mexico,296
+2025,Jan,CIM,Others,230
+2025,Jan,CIM,Philippines,14
+2025,Jan,CIM,United States,"1,635"
+2025,Jan,CIM,Vietnam,13
+2025,Feb,ASP,El Salvador,72
+2025,Feb,ASP,Guatemala,67
+2025,Feb,ASP,Mexico,825
+2025,Feb,ASP,Others,826
+2025,Feb,ASP,Philippines,*
+2025,Feb,ASP,United States,"1,952"
+2025,Feb,ASP,Vietnam,21
+2025,Feb,CIW,El Salvador,*
+2025,Feb,CIW,Guatemala,*
+2025,Feb,CIW,Mexico,40
+2025,Feb,CIW,Others,110
+2025,Feb,CIW,Philippines,*
+2025,Feb,CIW,United States,"1,076"
+2025,Feb,CIW,Vietnam,*
+2025,Feb,CMC,El Salvador,15
+2025,Feb,CMC,Guatemala,14
+2025,Feb,CMC,Mexico,124
+2025,Feb,CMC,Others,217
+2025,Feb,CMC,Philippines,*
+2025,Feb,CMC,United States,"1,821"
+2025,Feb,CMC,Vietnam,*
+2025,Feb,CMF,El Salvador,*
+2025,Feb,CMF,Guatemala,*
+2025,Feb,CMF,Mexico,135
+2025,Feb,CMF,Others,174
+2025,Feb,CMF,Philippines,*
+2025,Feb,CMF,United States,"1,551"
+2025,Feb,CMF,Vietnam,*
+2025,Feb,COR,El Salvador,32
+2025,Feb,COR,Guatemala,16
+2025,Feb,COR,Mexico,308
+2025,Feb,COR,Others,281
+2025,Feb,COR,Philippines,15
+2025,Feb,COR,United States,"1,972"
+2025,Feb,COR,Vietnam,*
+2025,Feb,CRC,El Salvador,39
+2025,Feb,CRC,Guatemala,38
+2025,Feb,CRC,Mexico,336
+2025,Feb,CRC,Others,471
+2025,Feb,CRC,Philippines,*
+2025,Feb,CRC,United States,"1,855"
+2025,Feb,CRC,Vietnam,*
+2025,Feb,CTF,El Salvador,69
+2025,Feb,CTF,Guatemala,32
+2025,Feb,CTF,Mexico,782
+2025,Feb,CTF,Others,376
+2025,Feb,CTF,Philippines,33
+2025,Feb,CTF,United States,"3,006"
+2025,Feb,CTF,Vietnam,26
+2025,Feb,FOL,El Salvador,18
+2025,Feb,FOL,Guatemala,17
+2025,Feb,FOL,Mexico,248
+2025,Feb,FOL,Others,323
+2025,Feb,FOL,Philippines,*
+2025,Feb,FOL,United States,"2,192"
+2025,Feb,FOL,Vietnam,11
+2025,Feb,HDSP,El Salvador,22
+2025,Feb,HDSP,Guatemala,*
+2025,Feb,HDSP,Mexico,147
+2025,Feb,HDSP,Others,321
+2025,Feb,HDSP,Philippines,*
+2025,Feb,HDSP,United States,"2,282"
+2025,Feb,HDSP,Vietnam,*
+2025,Feb,ISP,El Salvador,47
+2025,Feb,ISP,Guatemala,49
+2025,Feb,ISP,Mexico,508
+2025,Feb,ISP,Others,426
+2025,Feb,ISP,Philippines,19
+2025,Feb,ISP,United States,"1,555"
+2025,Feb,ISP,Vietnam,*
+2025,Feb,KVSP,El Salvador,22
+2025,Feb,KVSP,Guatemala,*
+2025,Feb,KVSP,Mexico,173
+2025,Feb,KVSP,Others,220
+2025,Feb,KVSP,Philippines,*
+2025,Feb,KVSP,United States,"2,730"
+2025,Feb,KVSP,Vietnam,*
+2025,Feb,LAC,El Salvador,14
+2025,Feb,LAC,Guatemala,10
+2025,Feb,LAC,Mexico,138
+2025,Feb,LAC,Others,244
+2025,Feb,LAC,Philippines,*
+2025,Feb,LAC,United States,"2,725"
+2025,Feb,LAC,Vietnam,*
+2025,Feb,MCSP,El Salvador,24
+2025,Feb,MCSP,Guatemala,16
+2025,Feb,MCSP,Mexico,242
+2025,Feb,MCSP,Others,358
+2025,Feb,MCSP,Philippines,14
+2025,Feb,MCSP,United States,"3,146"
+2025,Feb,MCSP,Vietnam,*
+2025,Feb,NKSP,El Salvador,14
+2025,Feb,NKSP,Guatemala,10
+2025,Feb,NKSP,Mexico,86
+2025,Feb,NKSP,Others,565
+2025,Feb,NKSP,Philippines,*
+2025,Feb,NKSP,United States,"1,971"
+2025,Feb,NKSP,Vietnam,*
+2025,Feb,PBSP,El Salvador,17
+2025,Feb,PBSP,Guatemala,11
+2025,Feb,PBSP,Mexico,129
+2025,Feb,PBSP,Others,269
+2025,Feb,PBSP,Philippines,*
+2025,Feb,PBSP,United States,"1,580"
+2025,Feb,PBSP,Vietnam,*
+2025,Feb,PVSP,El Salvador,27
+2025,Feb,PVSP,Guatemala,15
+2025,Feb,PVSP,Mexico,235
+2025,Feb,PVSP,Others,571
+2025,Feb,PVSP,Philippines,*
+2025,Feb,PVSP,United States,"1,983"
+2025,Feb,PVSP,Vietnam,*
+2025,Feb,RJD,El Salvador,26
+2025,Feb,RJD,Guatemala,12
+2025,Feb,RJD,Mexico,261
+2025,Feb,RJD,Others,328
+2025,Feb,RJD,Philippines,12
+2025,Feb,RJD,United States,"2,709"
+2025,Feb,RJD,Vietnam,18
+2025,Feb,SAC,El Salvador,15
+2025,Feb,SAC,Guatemala,*
+2025,Feb,SAC,Mexico,114
+2025,Feb,SAC,Others,204
+2025,Feb,SAC,Philippines,*
+2025,Feb,SAC,United States,"1,712"
+2025,Feb,SAC,Vietnam,*
+2025,Feb,CAL,El Salvador,13
+2025,Feb,CAL,Guatemala,13
+2025,Feb,CAL,Mexico,147
+2025,Feb,CAL,Others,232
+2025,Feb,CAL,Philippines,(Blank)
+2025,Feb,CAL,United States,"2,123"
+2025,Feb,CAL,Vietnam,11
+2025,Feb,SATF,El Salvador,53
+2025,Feb,SATF,Guatemala,38
+2025,Feb,SATF,Mexico,474
+2025,Feb,SATF,Others,547
+2025,Feb,SATF,Philippines,18
+2025,Feb,SATF,United States,"4,093"
+2025,Feb,SATF,Vietnam,11
+2025,Feb,SCC,El Salvador,18
+2025,Feb,SCC,Guatemala,*
+2025,Feb,SCC,Mexico,184
+2025,Feb,SCC,Others,790
+2025,Feb,SCC,Philippines,*
+2025,Feb,SCC,United States,"3,163"
+2025,Feb,SCC,Vietnam,*
+2025,Feb,SOL,El Salvador,16
+2025,Feb,SOL,Guatemala,15
+2025,Feb,SOL,Mexico,256
+2025,Feb,SOL,Others,502
+2025,Feb,SOL,Philippines,11
+2025,Feb,SOL,United States,"3,053"
+2025,Feb,SOL,Vietnam,22
+2025,Feb,SQ,El Salvador,48
+2025,Feb,SQ,Guatemala,28
+2025,Feb,SQ,Mexico,385
+2025,Feb,SQ,Others,169
+2025,Feb,SQ,Philippines,19
+2025,Feb,SQ,United States,"2,207"
+2025,Feb,SQ,Vietnam,23
+2025,Feb,SVSP,El Salvador,*
+2025,Feb,SVSP,Guatemala,*
+2025,Feb,SVSP,Mexico,112
+2025,Feb,SVSP,Others,168
+2025,Feb,SVSP,Philippines,(Blank)
+2025,Feb,SVSP,United States,"2,069"
+2025,Feb,SVSP,Vietnam,*
+2025,Feb,VSP,El Salvador,41
+2025,Feb,VSP,Guatemala,26
+2025,Feb,VSP,Mexico,335
+2025,Feb,VSP,Others,373
+2025,Feb,VSP,Philippines,15
+2025,Feb,VSP,United States,"2,278"
+2025,Feb,VSP,Vietnam,15
+2025,Feb,WSP,El Salvador,14
+2025,Feb,WSP,Guatemala,14
+2025,Feb,WSP,Mexico,195
+2025,Feb,WSP,Others,351
+2025,Feb,WSP,Philippines,*
+2025,Feb,WSP,United States,"3,233"
+2025,Feb,WSP,Vietnam,*
+2025,Feb,CPMP,El Salvador,(Blank)
+2025,Feb,CPMP,Guatemala,(Blank)
+2025,Feb,CPMP,Mexico,(Blank)
+2025,Feb,CPMP,Others,*
+2025,Feb,CPMP,Philippines,(Blank)
+2025,Feb,CPMP,United States,*
+2025,Feb,CPMP,Vietnam,(Blank)
+2025,Feb,FCRF,El Salvador,*
+2025,Feb,FCRF,Guatemala,*
+2025,Feb,FCRF,Mexico,14
+2025,Feb,FCRF,Others,57
+2025,Feb,FCRF,Philippines,*
+2025,Feb,FCRF,United States,309
+2025,Feb,FCRF,Vietnam,(Blank)
+2025,Feb,Alternative Custody Program,El Salvador,(Blank)
+2025,Feb,Alternative Custody Program,Guatemala,(Blank)
+2025,Feb,Alternative Custody Program,Mexico,(Blank)
+2025,Feb,Alternative Custody Program,Others,*
+2025,Feb,Alternative Custody Program,Philippines,(Blank)
+2025,Feb,Alternative Custody Program,United States,*
+2025,Feb,Alternative Custody Program,Vietnam,(Blank)
+2025,Feb,Department of State Hospitals,El Salvador,(Blank)
+2025,Feb,Department of State Hospitals,Guatemala,*
+2025,Feb,Department of State Hospitals,Mexico,15
+2025,Feb,Department of State Hospitals,Others,16
+2025,Feb,Department of State Hospitals,Philippines,*
+2025,Feb,Department of State Hospitals,United States,157
+2025,Feb,Department of State Hospitals,Vietnam,(Blank)
+2025,Feb,Male Community Reentry Facility,El Salvador,*
+2025,Feb,Male Community Reentry Facility,Guatemala,*
+2025,Feb,Male Community Reentry Facility,Mexico,21
+2025,Feb,Male Community Reentry Facility,Others,67
+2025,Feb,Male Community Reentry Facility,Philippines,*
+2025,Feb,Male Community Reentry Facility,United States,573
+2025,Feb,Male Community Reentry Facility,Vietnam,*
+2025,Feb,Medical Reprieve Program,El Salvador,(Blank)
+2025,Feb,Medical Reprieve Program,Guatemala,(Blank)
+2025,Feb,Medical Reprieve Program,Mexico,(Blank)
+2025,Feb,Medical Reprieve Program,Others,(Blank)
+2025,Feb,Medical Reprieve Program,Philippines,(Blank)
+2025,Feb,Medical Reprieve Program,United States,*
+2025,Feb,Medical Reprieve Program,Vietnam,(Blank)
+2025,Feb,CCI,El Salvador,22
+2025,Feb,CCI,Guatemala,11
+2025,Feb,CCI,Mexico,170
+2025,Feb,CCI,Others,328
+2025,Feb,CCI,Philippines,*
+2025,Feb,CCI,United States,"1,876"
+2025,Feb,CCI,Vietnam,*
+2025,Feb,CCWF,El Salvador,11
+2025,Feb,CCWF,Guatemala,*
+2025,Feb,CCWF,Mexico,86
+2025,Feb,CCWF,Others,231
+2025,Feb,CCWF,Philippines,*
+2025,Feb,CCWF,United States,"1,678"
+2025,Feb,CCWF,Vietnam,*
+2025,Feb,CEN,El Salvador,25
+2025,Feb,CEN,Guatemala,*
+2025,Feb,CEN,Mexico,174
+2025,Feb,CEN,Others,251
+2025,Feb,CEN,Philippines,*
+2025,Feb,CEN,United States,"2,331"
+2025,Feb,CEN,Vietnam,*
+2025,Feb,CHCF,El Salvador,12
+2025,Feb,CHCF,Guatemala,10
+2025,Feb,CHCF,Mexico,165
+2025,Feb,CHCF,Others,171
+2025,Feb,CHCF,Philippines,11
+2025,Feb,CHCF,United States,"1,705"
+2025,Feb,CHCF,Vietnam,*
+2025,Feb,CIM,El Salvador,25
+2025,Feb,CIM,Guatemala,22
+2025,Feb,CIM,Mexico,298
+2025,Feb,CIM,Others,246
+2025,Feb,CIM,Philippines,14
+2025,Feb,CIM,United States,"1,693"
+2025,Feb,CIM,Vietnam,12
+2025,Mar,ASP,El Salvador,74
+2025,Mar,ASP,Guatemala,67
+2025,Mar,ASP,Mexico,827
+2025,Mar,ASP,Others,836
+2025,Mar,ASP,Philippines,*
+2025,Mar,ASP,United States,"1,983"
+2025,Mar,ASP,Vietnam,20
+2025,Mar,CIW,El Salvador,*
+2025,Mar,CIW,Guatemala,*
+2025,Mar,CIW,Mexico,46
+2025,Mar,CIW,Others,108
+2025,Mar,CIW,Philippines,*
+2025,Mar,CIW,United States,"1,059"
+2025,Mar,CIW,Vietnam,*
+2025,Mar,CMC,El Salvador,13
+2025,Mar,CMC,Guatemala,15
+2025,Mar,CMC,Mexico,128
+2025,Mar,CMC,Others,220
+2025,Mar,CMC,Philippines,*
+2025,Mar,CMC,United States,"1,795"
+2025,Mar,CMC,Vietnam,*
+2025,Mar,CMF,El Salvador,*
+2025,Mar,CMF,Guatemala,*
+2025,Mar,CMF,Mexico,135
+2025,Mar,CMF,Others,176
+2025,Mar,CMF,Philippines,10
+2025,Mar,CMF,United States,"1,566"
+2025,Mar,CMF,Vietnam,*
+2025,Mar,COR,El Salvador,31
+2025,Mar,COR,Guatemala,16
+2025,Mar,COR,Mexico,307
+2025,Mar,COR,Others,280
+2025,Mar,COR,Philippines,14
+2025,Mar,COR,United States,"1,961"
+2025,Mar,COR,Vietnam,*
+2025,Mar,CRC,El Salvador,39
+2025,Mar,CRC,Guatemala,38
+2025,Mar,CRC,Mexico,333
+2025,Mar,CRC,Others,462
+2025,Mar,CRC,Philippines,*
+2025,Mar,CRC,United States,"1,809"
+2025,Mar,CRC,Vietnam,*
+2025,Mar,CTF,El Salvador,68
+2025,Mar,CTF,Guatemala,33
+2025,Mar,CTF,Mexico,783
+2025,Mar,CTF,Others,381
+2025,Mar,CTF,Philippines,32
+2025,Mar,CTF,United States,"2,982"
+2025,Mar,CTF,Vietnam,25
+2025,Mar,FOL,El Salvador,19
+2025,Mar,FOL,Guatemala,17
+2025,Mar,FOL,Mexico,247
+2025,Mar,FOL,Others,337
+2025,Mar,FOL,Philippines,*
+2025,Mar,FOL,United States,"2,190"
+2025,Mar,FOL,Vietnam,11
+2025,Mar,HDSP,El Salvador,22
+2025,Mar,HDSP,Guatemala,*
+2025,Mar,HDSP,Mexico,154
+2025,Mar,HDSP,Others,339
+2025,Mar,HDSP,Philippines,*
+2025,Mar,HDSP,United States,"2,368"
+2025,Mar,HDSP,Vietnam,*
+2025,Mar,ISP,El Salvador,46
+2025,Mar,ISP,Guatemala,48
+2025,Mar,ISP,Mexico,509
+2025,Mar,ISP,Others,403
+2025,Mar,ISP,Philippines,20
+2025,Mar,ISP,United States,"1,482"
+2025,Mar,ISP,Vietnam,*
+2025,Mar,KVSP,El Salvador,21
+2025,Mar,KVSP,Guatemala,*
+2025,Mar,KVSP,Mexico,168
+2025,Mar,KVSP,Others,215
+2025,Mar,KVSP,Philippines,*
+2025,Mar,KVSP,United States,"2,659"
+2025,Mar,KVSP,Vietnam,*
+2025,Mar,LAC,El Salvador,14
+2025,Mar,LAC,Guatemala,*
+2025,Mar,LAC,Mexico,139
+2025,Mar,LAC,Others,245
+2025,Mar,LAC,Philippines,*
+2025,Mar,LAC,United States,"2,662"
+2025,Mar,LAC,Vietnam,*
+2025,Mar,MCSP,El Salvador,25
+2025,Mar,MCSP,Guatemala,16
+2025,Mar,MCSP,Mexico,243
+2025,Mar,MCSP,Others,354
+2025,Mar,MCSP,Philippines,14
+2025,Mar,MCSP,United States,"3,145"
+2025,Mar,MCSP,Vietnam,*
+2025,Mar,NKSP,El Salvador,16
+2025,Mar,NKSP,Guatemala,11
+2025,Mar,NKSP,Mexico,85
+2025,Mar,NKSP,Others,567
+2025,Mar,NKSP,Philippines,*
+2025,Mar,NKSP,United States,"1,906"
+2025,Mar,NKSP,Vietnam,*
+2025,Mar,PBSP,El Salvador,15
+2025,Mar,PBSP,Guatemala,10
+2025,Mar,PBSP,Mexico,128
+2025,Mar,PBSP,Others,267
+2025,Mar,PBSP,Philippines,*
+2025,Mar,PBSP,United States,"1,573"
+2025,Mar,PBSP,Vietnam,*
+2025,Mar,PVSP,El Salvador,28
+2025,Mar,PVSP,Guatemala,16
+2025,Mar,PVSP,Mexico,231
+2025,Mar,PVSP,Others,565
+2025,Mar,PVSP,Philippines,*
+2025,Mar,PVSP,United States,"2,001"
+2025,Mar,PVSP,Vietnam,*
+2025,Mar,RJD,El Salvador,26
+2025,Mar,RJD,Guatemala,12
+2025,Mar,RJD,Mexico,264
+2025,Mar,RJD,Others,340
+2025,Mar,RJD,Philippines,12
+2025,Mar,RJD,United States,"2,760"
+2025,Mar,RJD,Vietnam,19
+2025,Mar,SAC,El Salvador,15
+2025,Mar,SAC,Guatemala,*
+2025,Mar,SAC,Mexico,116
+2025,Mar,SAC,Others,204
+2025,Mar,SAC,Philippines,*
+2025,Mar,SAC,United States,"1,727"
+2025,Mar,SAC,Vietnam,*
+2025,Mar,CAL,El Salvador,15
+2025,Mar,CAL,Guatemala,14
+2025,Mar,CAL,Mexico,149
+2025,Mar,CAL,Others,229
+2025,Mar,CAL,Philippines,(Blank)
+2025,Mar,CAL,United States,"2,138"
+2025,Mar,CAL,Vietnam,10
+2025,Mar,SATF,El Salvador,54
+2025,Mar,SATF,Guatemala,40
+2025,Mar,SATF,Mexico,481
+2025,Mar,SATF,Others,571
+2025,Mar,SATF,Philippines,18
+2025,Mar,SATF,United States,"4,163"
+2025,Mar,SATF,Vietnam,10
+2025,Mar,SCC,El Salvador,15
+2025,Mar,SCC,Guatemala,*
+2025,Mar,SCC,Mexico,181
+2025,Mar,SCC,Others,778
+2025,Mar,SCC,Philippines,10
+2025,Mar,SCC,United States,"3,109"
+2025,Mar,SCC,Vietnam,*
+2025,Mar,SOL,El Salvador,17
+2025,Mar,SOL,Guatemala,15
+2025,Mar,SOL,Mexico,253
+2025,Mar,SOL,Others,518
+2025,Mar,SOL,Philippines,11
+2025,Mar,SOL,United States,"3,046"
+2025,Mar,SOL,Vietnam,22
+2025,Mar,SQ,El Salvador,47
+2025,Mar,SQ,Guatemala,28
+2025,Mar,SQ,Mexico,382
+2025,Mar,SQ,Others,172
+2025,Mar,SQ,Philippines,21
+2025,Mar,SQ,United States,"2,191"
+2025,Mar,SQ,Vietnam,24
+2025,Mar,SVSP,El Salvador,*
+2025,Mar,SVSP,Guatemala,*
+2025,Mar,SVSP,Mexico,111
+2025,Mar,SVSP,Others,167
+2025,Mar,SVSP,Philippines,(Blank)
+2025,Mar,SVSP,United States,"2,105"
+2025,Mar,SVSP,Vietnam,*
+2025,Mar,VSP,El Salvador,41
+2025,Mar,VSP,Guatemala,26
+2025,Mar,VSP,Mexico,333
+2025,Mar,VSP,Others,370
+2025,Mar,VSP,Philippines,15
+2025,Mar,VSP,United States,"2,223"
+2025,Mar,VSP,Vietnam,14
+2025,Mar,WSP,El Salvador,16
+2025,Mar,WSP,Guatemala,20
+2025,Mar,WSP,Mexico,192
+2025,Mar,WSP,Others,265
+2025,Mar,WSP,Philippines,*
+2025,Mar,WSP,United States,"3,140"
+2025,Mar,WSP,Vietnam,*
+2025,Mar,CPMP,El Salvador,(Blank)
+2025,Mar,CPMP,Guatemala,(Blank)
+2025,Mar,CPMP,Mexico,(Blank)
+2025,Mar,CPMP,Others,*
+2025,Mar,CPMP,Philippines,(Blank)
+2025,Mar,CPMP,United States,*
+2025,Mar,CPMP,Vietnam,(Blank)
+2025,Mar,FCRF,El Salvador,*
+2025,Mar,FCRF,Guatemala,*
+2025,Mar,FCRF,Mexico,14
+2025,Mar,FCRF,Others,56
+2025,Mar,FCRF,Philippines,*
+2025,Mar,FCRF,United States,334
+2025,Mar,FCRF,Vietnam,(Blank)
+2025,Mar,Alternative Custody Program,El Salvador,(Blank)
+2025,Mar,Alternative Custody Program,Guatemala,(Blank)
+2025,Mar,Alternative Custody Program,Mexico,(Blank)
+2025,Mar,Alternative Custody Program,Others,*
+2025,Mar,Alternative Custody Program,Philippines,(Blank)
+2025,Mar,Alternative Custody Program,United States,*
+2025,Mar,Alternative Custody Program,Vietnam,(Blank)
+2025,Mar,Department of State Hospitals,El Salvador,(Blank)
+2025,Mar,Department of State Hospitals,Guatemala,*
+2025,Mar,Department of State Hospitals,Mexico,16
+2025,Mar,Department of State Hospitals,Others,17
+2025,Mar,Department of State Hospitals,Philippines,*
+2025,Mar,Department of State Hospitals,United States,156
+2025,Mar,Department of State Hospitals,Vietnam,*
+2025,Mar,Male Community Reentry Facility,El Salvador,*
+2025,Mar,Male Community Reentry Facility,Guatemala,*
+2025,Mar,Male Community Reentry Facility,Mexico,17
+2025,Mar,Male Community Reentry Facility,Others,70
+2025,Mar,Male Community Reentry Facility,Philippines,*
+2025,Mar,Male Community Reentry Facility,United States,579
+2025,Mar,Male Community Reentry Facility,Vietnam,*
+2025,Mar,Medical Reprieve Program,El Salvador,(Blank)
+2025,Mar,Medical Reprieve Program,Guatemala,(Blank)
+2025,Mar,Medical Reprieve Program,Mexico,(Blank)
+2025,Mar,Medical Reprieve Program,Others,(Blank)
+2025,Mar,Medical Reprieve Program,Philippines,(Blank)
+2025,Mar,Medical Reprieve Program,United States,*
+2025,Mar,Medical Reprieve Program,Vietnam,(Blank)
+2025,Mar,CCI,El Salvador,21
+2025,Mar,CCI,Guatemala,12
+2025,Mar,CCI,Mexico,170
+2025,Mar,CCI,Others,328
+2025,Mar,CCI,Philippines,*
+2025,Mar,CCI,United States,"1,869"
+2025,Mar,CCI,Vietnam,*
+2025,Mar,CCWF,El Salvador,11
+2025,Mar,CCWF,Guatemala,*
+2025,Mar,CCWF,Mexico,79
+2025,Mar,CCWF,Others,225
+2025,Mar,CCWF,Philippines,*
+2025,Mar,CCWF,United States,"1,674"
+2025,Mar,CCWF,Vietnam,*
+2025,Mar,CEN,El Salvador,27
+2025,Mar,CEN,Guatemala,*
+2025,Mar,CEN,Mexico,175
+2025,Mar,CEN,Others,250
+2025,Mar,CEN,Philippines,*
+2025,Mar,CEN,United States,"2,352"
+2025,Mar,CEN,Vietnam,*
+2025,Mar,CHCF,El Salvador,11
+2025,Mar,CHCF,Guatemala,11
+2025,Mar,CHCF,Mexico,165
+2025,Mar,CHCF,Others,177
+2025,Mar,CHCF,Philippines,11
+2025,Mar,CHCF,United States,"1,715"
+2025,Mar,CHCF,Vietnam,*
+2025,Mar,CIM,El Salvador,25
+2025,Mar,CIM,Guatemala,21
+2025,Mar,CIM,Mexico,302
+2025,Mar,CIM,Others,263
+2025,Mar,CIM,Philippines,13
+2025,Mar,CIM,United States,"1,710"
+2025,Mar,CIM,Vietnam,13
+2025,Apr,ASP,El Salvador,78
+2025,Apr,ASP,Guatemala,70
+2025,Apr,ASP,Mexico,831
+2025,Apr,ASP,Others,869
+2025,Apr,ASP,Philippines,*
+2025,Apr,ASP,United States,"2,075"
+2025,Apr,ASP,Vietnam,20
+2025,Apr,CIW,El Salvador,*
+2025,Apr,CIW,Guatemala,*
+2025,Apr,CIW,Mexico,48
+2025,Apr,CIW,Others,107
+2025,Apr,CIW,Philippines,*
+2025,Apr,CIW,United States,"1,045"
+2025,Apr,CIW,Vietnam,*
+2025,Apr,CMC,El Salvador,13
+2025,Apr,CMC,Guatemala,15
+2025,Apr,CMC,Mexico,127
+2025,Apr,CMC,Others,225
+2025,Apr,CMC,Philippines,*
+2025,Apr,CMC,United States,"1,831"
+2025,Apr,CMC,Vietnam,*
+2025,Apr,CMF,El Salvador,*
+2025,Apr,CMF,Guatemala,*
+2025,Apr,CMF,Mexico,142
+2025,Apr,CMF,Others,180
+2025,Apr,CMF,Philippines,10
+2025,Apr,CMF,United States,"1,610"
+2025,Apr,CMF,Vietnam,*
+2025,Apr,COR,El Salvador,30
+2025,Apr,COR,Guatemala,15
+2025,Apr,COR,Mexico,305
+2025,Apr,COR,Others,281
+2025,Apr,COR,Philippines,14
+2025,Apr,COR,United States,"1,995"
+2025,Apr,COR,Vietnam,*
+2025,Apr,CRC,El Salvador,40
+2025,Apr,CRC,Guatemala,38
+2025,Apr,CRC,Mexico,335
+2025,Apr,CRC,Others,485
+2025,Apr,CRC,Philippines,*
+2025,Apr,CRC,United States,"1,844"
+2025,Apr,CRC,Vietnam,11
+2025,Apr,CTF,El Salvador,67
+2025,Apr,CTF,Guatemala,34
+2025,Apr,CTF,Mexico,786
+2025,Apr,CTF,Others,384
+2025,Apr,CTF,Philippines,32
+2025,Apr,CTF,United States,"2,963"
+2025,Apr,CTF,Vietnam,24
+2025,Apr,FOL,El Salvador,19
+2025,Apr,FOL,Guatemala,17
+2025,Apr,FOL,Mexico,246
+2025,Apr,FOL,Others,343
+2025,Apr,FOL,Philippines,*
+2025,Apr,FOL,United States,"2,211"
+2025,Apr,FOL,Vietnam,11
+2025,Apr,HDSP,El Salvador,22
+2025,Apr,HDSP,Guatemala,*
+2025,Apr,HDSP,Mexico,149
+2025,Apr,HDSP,Others,323
+2025,Apr,HDSP,Philippines,*
+2025,Apr,HDSP,United States,"2,310"
+2025,Apr,HDSP,Vietnam,*
+2025,Apr,ISP,El Salvador,46
+2025,Apr,ISP,Guatemala,50
+2025,Apr,ISP,Mexico,519
+2025,Apr,ISP,Others,424
+2025,Apr,ISP,Philippines,20
+2025,Apr,ISP,United States,"1,558"
+2025,Apr,ISP,Vietnam,*
+2025,Apr,KVSP,El Salvador,20
+2025,Apr,KVSP,Guatemala,*
+2025,Apr,KVSP,Mexico,166
+2025,Apr,KVSP,Others,224
+2025,Apr,KVSP,Philippines,*
+2025,Apr,KVSP,United States,"2,691"
+2025,Apr,KVSP,Vietnam,*
+2025,Apr,LAC,El Salvador,13
+2025,Apr,LAC,Guatemala,10
+2025,Apr,LAC,Mexico,122
+2025,Apr,LAC,Others,237
+2025,Apr,LAC,Philippines,*
+2025,Apr,LAC,United States,"2,460"
+2025,Apr,LAC,Vietnam,*
+2025,Apr,MCSP,El Salvador,25
+2025,Apr,MCSP,Guatemala,15
+2025,Apr,MCSP,Mexico,240
+2025,Apr,MCSP,Others,356
+2025,Apr,MCSP,Philippines,13
+2025,Apr,MCSP,United States,"3,120"
+2025,Apr,MCSP,Vietnam,*
+2025,Apr,NKSP,El Salvador,14
+2025,Apr,NKSP,Guatemala,13
+2025,Apr,NKSP,Mexico,83
+2025,Apr,NKSP,Others,545
+2025,Apr,NKSP,Philippines,*
+2025,Apr,NKSP,United States,"1,856"
+2025,Apr,NKSP,Vietnam,*
+2025,Apr,PBSP,El Salvador,13
+2025,Apr,PBSP,Guatemala,*
+2025,Apr,PBSP,Mexico,127
+2025,Apr,PBSP,Others,272
+2025,Apr,PBSP,Philippines,*
+2025,Apr,PBSP,United States,"1,574"
+2025,Apr,PBSP,Vietnam,*
+2025,Apr,PVSP,El Salvador,27
+2025,Apr,PVSP,Guatemala,18
+2025,Apr,PVSP,Mexico,243
+2025,Apr,PVSP,Others,593
+2025,Apr,PVSP,Philippines,*
+2025,Apr,PVSP,United States,"2,097"
+2025,Apr,PVSP,Vietnam,*
+2025,Apr,RJD,El Salvador,26
+2025,Apr,RJD,Guatemala,12
+2025,Apr,RJD,Mexico,263
+2025,Apr,RJD,Others,330
+2025,Apr,RJD,Philippines,12
+2025,Apr,RJD,United States,"2,809"
+2025,Apr,RJD,Vietnam,19
+2025,Apr,SAC,El Salvador,15
+2025,Apr,SAC,Guatemala,*
+2025,Apr,SAC,Mexico,113
+2025,Apr,SAC,Others,190
+2025,Apr,SAC,Philippines,*
+2025,Apr,SAC,United States,"1,733"
+2025,Apr,SAC,Vietnam,*
+2025,Apr,CAL,El Salvador,14
+2025,Apr,CAL,Guatemala,12
+2025,Apr,CAL,Mexico,146
+2025,Apr,CAL,Others,219
+2025,Apr,CAL,Philippines,(Blank)
+2025,Apr,CAL,United States,"2,081"
+2025,Apr,CAL,Vietnam,10
+2025,Apr,SATF,El Salvador,55
+2025,Apr,SATF,Guatemala,39
+2025,Apr,SATF,Mexico,498
+2025,Apr,SATF,Others,583
+2025,Apr,SATF,Philippines,17
+2025,Apr,SATF,United States,"4,207"
+2025,Apr,SATF,Vietnam,11
+2025,Apr,SCC,El Salvador,16
+2025,Apr,SCC,Guatemala,*
+2025,Apr,SCC,Mexico,168
+2025,Apr,SCC,Others,759
+2025,Apr,SCC,Philippines,10
+2025,Apr,SCC,United States,"3,055"
+2025,Apr,SCC,Vietnam,*
+2025,Apr,SOL,El Salvador,17
+2025,Apr,SOL,Guatemala,14
+2025,Apr,SOL,Mexico,249
+2025,Apr,SOL,Others,509
+2025,Apr,SOL,Philippines,11
+2025,Apr,SOL,United States,"2,967"
+2025,Apr,SOL,Vietnam,22
+2025,Apr,SQ,El Salvador,45
+2025,Apr,SQ,Guatemala,28
+2025,Apr,SQ,Mexico,377
+2025,Apr,SQ,Others,170
+2025,Apr,SQ,Philippines,20
+2025,Apr,SQ,United States,"2,141"
+2025,Apr,SQ,Vietnam,24
+2025,Apr,SVSP,El Salvador,*
+2025,Apr,SVSP,Guatemala,*
+2025,Apr,SVSP,Mexico,106
+2025,Apr,SVSP,Others,163
+2025,Apr,SVSP,Philippines,(Blank)
+2025,Apr,SVSP,United States,"2,037"
+2025,Apr,SVSP,Vietnam,*
+2025,Apr,VSP,El Salvador,42
+2025,Apr,VSP,Guatemala,26
+2025,Apr,VSP,Mexico,327
+2025,Apr,VSP,Others,364
+2025,Apr,VSP,Philippines,15
+2025,Apr,VSP,United States,"2,226"
+2025,Apr,VSP,Vietnam,13
+2025,Apr,WSP,El Salvador,21
+2025,Apr,WSP,Guatemala,17
+2025,Apr,WSP,Mexico,207
+2025,Apr,WSP,Others,244
+2025,Apr,WSP,Philippines,*
+2025,Apr,WSP,United States,"3,102"
+2025,Apr,WSP,Vietnam,*
+2025,Apr,CPMP,El Salvador,(Blank)
+2025,Apr,CPMP,Guatemala,(Blank)
+2025,Apr,CPMP,Mexico,(Blank)
+2025,Apr,CPMP,Others,*
+2025,Apr,CPMP,Philippines,(Blank)
+2025,Apr,CPMP,United States,*
+2025,Apr,CPMP,Vietnam,(Blank)
+2025,Apr,FCRF,El Salvador,*
+2025,Apr,FCRF,Guatemala,*
+2025,Apr,FCRF,Mexico,11
+2025,Apr,FCRF,Others,49
+2025,Apr,FCRF,Philippines,(Blank)
+2025,Apr,FCRF,United States,342
+2025,Apr,FCRF,Vietnam,(Blank)
+2025,Apr,Alternative Custody Program,El Salvador,(Blank)
+2025,Apr,Alternative Custody Program,Guatemala,(Blank)
+2025,Apr,Alternative Custody Program,Mexico,(Blank)
+2025,Apr,Alternative Custody Program,Others,(Blank)
+2025,Apr,Alternative Custody Program,Philippines,(Blank)
+2025,Apr,Alternative Custody Program,United States,*
+2025,Apr,Alternative Custody Program,Vietnam,(Blank)
+2025,Apr,Department of State Hospitals,El Salvador,(Blank)
+2025,Apr,Department of State Hospitals,Guatemala,*
+2025,Apr,Department of State Hospitals,Mexico,13
+2025,Apr,Department of State Hospitals,Others,21
+2025,Apr,Department of State Hospitals,Philippines,*
+2025,Apr,Department of State Hospitals,United States,158
+2025,Apr,Department of State Hospitals,Vietnam,*
+2025,Apr,Male Community Reentry Facility,El Salvador,*
+2025,Apr,Male Community Reentry Facility,Guatemala,*
+2025,Apr,Male Community Reentry Facility,Mexico,17
+2025,Apr,Male Community Reentry Facility,Others,66
+2025,Apr,Male Community Reentry Facility,Philippines,*
+2025,Apr,Male Community Reentry Facility,United States,588
+2025,Apr,Male Community Reentry Facility,Vietnam,*
+2025,Apr,Medical Reprieve Program,El Salvador,(Blank)
+2025,Apr,Medical Reprieve Program,Guatemala,(Blank)
+2025,Apr,Medical Reprieve Program,Mexico,(Blank)
+2025,Apr,Medical Reprieve Program,Others,(Blank)
+2025,Apr,Medical Reprieve Program,Philippines,(Blank)
+2025,Apr,Medical Reprieve Program,United States,*
+2025,Apr,Medical Reprieve Program,Vietnam,(Blank)
+2025,Apr,CCI,El Salvador,20
+2025,Apr,CCI,Guatemala,12
+2025,Apr,CCI,Mexico,177
+2025,Apr,CCI,Others,333
+2025,Apr,CCI,Philippines,*
+2025,Apr,CCI,United States,"1,924"
+2025,Apr,CCI,Vietnam,*
+2025,Apr,CCWF,El Salvador,13
+2025,Apr,CCWF,Guatemala,*
+2025,Apr,CCWF,Mexico,77
+2025,Apr,CCWF,Others,222
+2025,Apr,CCWF,Philippines,*
+2025,Apr,CCWF,United States,"1,663"
+2025,Apr,CCWF,Vietnam,*
+2025,Apr,CEN,El Salvador,27
+2025,Apr,CEN,Guatemala,*
+2025,Apr,CEN,Mexico,178
+2025,Apr,CEN,Others,255
+2025,Apr,CEN,Philippines,*
+2025,Apr,CEN,United States,"2,427"
+2025,Apr,CEN,Vietnam,*
+2025,Apr,CHCF,El Salvador,11
+2025,Apr,CHCF,Guatemala,13
+2025,Apr,CHCF,Mexico,174
+2025,Apr,CHCF,Others,206
+2025,Apr,CHCF,Philippines,11
+2025,Apr,CHCF,United States,"1,791"
+2025,Apr,CHCF,Vietnam,*
+2025,Apr,CIM,El Salvador,25
+2025,Apr,CIM,Guatemala,22
+2025,Apr,CIM,Mexico,298
+2025,Apr,CIM,Others,256
+2025,Apr,CIM,Philippines,14
+2025,Apr,CIM,United States,"1,685"
+2025,Apr,CIM,Vietnam,12
+2025,May,ASP,El Salvador,78
+2025,May,ASP,Guatemala,67
+2025,May,ASP,Mexico,819
+2025,May,ASP,Others,885
+2025,May,ASP,Philippines,*
+2025,May,ASP,United States,"2,122"
+2025,May,ASP,Vietnam,19
+2025,May,CIW,El Salvador,*
+2025,May,CIW,Guatemala,*
+2025,May,CIW,Mexico,47
+2025,May,CIW,Others,110
+2025,May,CIW,Philippines,*
+2025,May,CIW,United States,"1,025"
+2025,May,CIW,Vietnam,*
+2025,May,CMC,El Salvador,11
+2025,May,CMC,Guatemala,16
+2025,May,CMC,Mexico,122
+2025,May,CMC,Others,228
+2025,May,CMC,Philippines,*
+2025,May,CMC,United States,"1,861"
+2025,May,CMC,Vietnam,*
+2025,May,CMF,El Salvador,*
+2025,May,CMF,Guatemala,*
+2025,May,CMF,Mexico,134
+2025,May,CMF,Others,187
+2025,May,CMF,Philippines,10
+2025,May,CMF,United States,"1,668"
+2025,May,CMF,Vietnam,*
+2025,May,COR,El Salvador,28
+2025,May,COR,Guatemala,16
+2025,May,COR,Mexico,311
+2025,May,COR,Others,274
+2025,May,COR,Philippines,14
+2025,May,COR,United States,"1,974"
+2025,May,COR,Vietnam,*
+2025,May,CRC,El Salvador,39
+2025,May,CRC,Guatemala,41
+2025,May,CRC,Mexico,342
+2025,May,CRC,Others,494
+2025,May,CRC,Philippines,*
+2025,May,CRC,United States,"1,810"
+2025,May,CRC,Vietnam,10
+2025,May,CTF,El Salvador,66
+2025,May,CTF,Guatemala,33
+2025,May,CTF,Mexico,778
+2025,May,CTF,Others,375
+2025,May,CTF,Philippines,32
+2025,May,CTF,United States,"2,938"
+2025,May,CTF,Vietnam,24
+2025,May,FOL,El Salvador,21
+2025,May,FOL,Guatemala,18
+2025,May,FOL,Mexico,249
+2025,May,FOL,Others,352
+2025,May,FOL,Philippines,*
+2025,May,FOL,United States,"2,207"
+2025,May,FOL,Vietnam,12
+2025,May,HDSP,El Salvador,22
+2025,May,HDSP,Guatemala,*
+2025,May,HDSP,Mexico,144
+2025,May,HDSP,Others,313
+2025,May,HDSP,Philippines,*
+2025,May,HDSP,United States,"2,217"
+2025,May,HDSP,Vietnam,*
+2025,May,ISP,El Salvador,47
+2025,May,ISP,Guatemala,49
+2025,May,ISP,Mexico,521
+2025,May,ISP,Others,418
+2025,May,ISP,Philippines,20
+2025,May,ISP,United States,"1,559"
+2025,May,ISP,Vietnam,*
+2025,May,KVSP,El Salvador,21
+2025,May,KVSP,Guatemala,*
+2025,May,KVSP,Mexico,167
+2025,May,KVSP,Others,218
+2025,May,KVSP,Philippines,*
+2025,May,KVSP,United States,"2,697"
+2025,May,KVSP,Vietnam,*
+2025,May,LAC,El Salvador,12
+2025,May,LAC,Guatemala,*
+2025,May,LAC,Mexico,119
+2025,May,LAC,Others,217
+2025,May,LAC,Philippines,*
+2025,May,LAC,United States,"2,319"
+2025,May,LAC,Vietnam,*
+2025,May,MCSP,El Salvador,26
+2025,May,MCSP,Guatemala,15
+2025,May,MCSP,Mexico,242
+2025,May,MCSP,Others,350
+2025,May,MCSP,Philippines,13
+2025,May,MCSP,United States,"3,130"
+2025,May,MCSP,Vietnam,*
+2025,May,NKSP,El Salvador,15
+2025,May,NKSP,Guatemala,*
+2025,May,NKSP,Mexico,78
+2025,May,NKSP,Others,511
+2025,May,NKSP,Philippines,*
+2025,May,NKSP,United States,"1,792"
+2025,May,NKSP,Vietnam,*
+2025,May,PBSP,El Salvador,11
+2025,May,PBSP,Guatemala,*
+2025,May,PBSP,Mexico,123
+2025,May,PBSP,Others,281
+2025,May,PBSP,Philippines,*
+2025,May,PBSP,United States,"1,570"
+2025,May,PBSP,Vietnam,*
+2025,May,PVSP,El Salvador,26
+2025,May,PVSP,Guatemala,19
+2025,May,PVSP,Mexico,238
+2025,May,PVSP,Others,588
+2025,May,PVSP,Philippines,(Blank)
+2025,May,PVSP,United States,"2,086"
+2025,May,PVSP,Vietnam,*
+2025,May,RJD,El Salvador,26
+2025,May,RJD,Guatemala,12
+2025,May,RJD,Mexico,271
+2025,May,RJD,Others,345
+2025,May,RJD,Philippines,12
+2025,May,RJD,United States,"2,870"
+2025,May,RJD,Vietnam,19
+2025,May,SAC,El Salvador,15
+2025,May,SAC,Guatemala,*
+2025,May,SAC,Mexico,126
+2025,May,SAC,Others,192
+2025,May,SAC,Philippines,*
+2025,May,SAC,United States,"1,798"
+2025,May,SAC,Vietnam,*
+2025,May,CAL,El Salvador,14
+2025,May,CAL,Guatemala,12
+2025,May,CAL,Mexico,142
+2025,May,CAL,Others,215
+2025,May,CAL,Philippines,(Blank)
+2025,May,CAL,United States,"2,036"
+2025,May,CAL,Vietnam,10
+2025,May,SATF,El Salvador,55
+2025,May,SATF,Guatemala,40
+2025,May,SATF,Mexico,504
+2025,May,SATF,Others,593
+2025,May,SATF,Philippines,19
+2025,May,SATF,United States,"4,184"
+2025,May,SATF,Vietnam,11
+2025,May,SCC,El Salvador,15
+2025,May,SCC,Guatemala,*
+2025,May,SCC,Mexico,174
+2025,May,SCC,Others,742
+2025,May,SCC,Philippines,11
+2025,May,SCC,United States,"3,021"
+2025,May,SCC,Vietnam,*
+2025,May,SOL,El Salvador,18
+2025,May,SOL,Guatemala,14
+2025,May,SOL,Mexico,250
+2025,May,SOL,Others,513
+2025,May,SOL,Philippines,10
+2025,May,SOL,United States,"2,880"
+2025,May,SOL,Vietnam,21
+2025,May,SQ,El Salvador,46
+2025,May,SQ,Guatemala,28
+2025,May,SQ,Mexico,374
+2025,May,SQ,Others,166
+2025,May,SQ,Philippines,19
+2025,May,SQ,United States,"2,065"
+2025,May,SQ,Vietnam,24
+2025,May,SVSP,El Salvador,*
+2025,May,SVSP,Guatemala,*
+2025,May,SVSP,Mexico,109
+2025,May,SVSP,Others,166
+2025,May,SVSP,Philippines,(Blank)
+2025,May,SVSP,United States,"2,077"
+2025,May,SVSP,Vietnam,*
+2025,May,VSP,El Salvador,43
+2025,May,VSP,Guatemala,27
+2025,May,VSP,Mexico,322
+2025,May,VSP,Others,367
+2025,May,VSP,Philippines,16
+2025,May,VSP,United States,"2,258"
+2025,May,VSP,Vietnam,12
+2025,May,WSP,El Salvador,25
+2025,May,WSP,Guatemala,14
+2025,May,WSP,Mexico,215
+2025,May,WSP,Others,233
+2025,May,WSP,Philippines,*
+2025,May,WSP,United States,"3,316"
+2025,May,WSP,Vietnam,*
+2025,May,CPMP,El Salvador,(Blank)
+2025,May,CPMP,Guatemala,(Blank)
+2025,May,CPMP,Mexico,(Blank)
+2025,May,CPMP,Others,*
+2025,May,CPMP,Philippines,(Blank)
+2025,May,CPMP,United States,*
+2025,May,CPMP,Vietnam,(Blank)
+2025,May,FCRF,El Salvador,*
+2025,May,FCRF,Guatemala,*
+2025,May,FCRF,Mexico,13
+2025,May,FCRF,Others,48
+2025,May,FCRF,Philippines,(Blank)
+2025,May,FCRF,United States,348
+2025,May,FCRF,Vietnam,(Blank)
+2025,May,Alternative Custody Program,El Salvador,(Blank)
+2025,May,Alternative Custody Program,Guatemala,(Blank)
+2025,May,Alternative Custody Program,Mexico,(Blank)
+2025,May,Alternative Custody Program,Others,(Blank)
+2025,May,Alternative Custody Program,Philippines,(Blank)
+2025,May,Alternative Custody Program,United States,*
+2025,May,Alternative Custody Program,Vietnam,(Blank)
+2025,May,Department of State Hospitals,El Salvador,(Blank)
+2025,May,Department of State Hospitals,Guatemala,*
+2025,May,Department of State Hospitals,Mexico,14
+2025,May,Department of State Hospitals,Others,21
+2025,May,Department of State Hospitals,Philippines,(Blank)
+2025,May,Department of State Hospitals,United States,155
+2025,May,Department of State Hospitals,Vietnam,(Blank)
+2025,May,Male Community Reentry Facility,El Salvador,*
+2025,May,Male Community Reentry Facility,Guatemala,*
+2025,May,Male Community Reentry Facility,Mexico,18
+2025,May,Male Community Reentry Facility,Others,66
+2025,May,Male Community Reentry Facility,Philippines,*
+2025,May,Male Community Reentry Facility,United States,594
+2025,May,Male Community Reentry Facility,Vietnam,*
+2025,May,Medical Reprieve Program,El Salvador,(Blank)
+2025,May,Medical Reprieve Program,Guatemala,(Blank)
+2025,May,Medical Reprieve Program,Mexico,(Blank)
+2025,May,Medical Reprieve Program,Others,(Blank)
+2025,May,Medical Reprieve Program,Philippines,(Blank)
+2025,May,Medical Reprieve Program,United States,*
+2025,May,Medical Reprieve Program,Vietnam,(Blank)
+2025,May,CCI,El Salvador,19
+2025,May,CCI,Guatemala,12
+2025,May,CCI,Mexico,176
+2025,May,CCI,Others,329
+2025,May,CCI,Philippines,*
+2025,May,CCI,United States,"1,923"
+2025,May,CCI,Vietnam,*
+2025,May,CCWF,El Salvador,15
+2025,May,CCWF,Guatemala,*
+2025,May,CCWF,Mexico,78
+2025,May,CCWF,Others,216
+2025,May,CCWF,Philippines,*
+2025,May,CCWF,United States,"1,706"
+2025,May,CCWF,Vietnam,*
+2025,May,CEN,El Salvador,27
+2025,May,CEN,Guatemala,*
+2025,May,CEN,Mexico,185
+2025,May,CEN,Others,251
+2025,May,CEN,Philippines,*
+2025,May,CEN,United States,"2,474"
+2025,May,CEN,Vietnam,*
+2025,May,CHCF,El Salvador,13
+2025,May,CHCF,Guatemala,12
+2025,May,CHCF,Mexico,171
+2025,May,CHCF,Others,236
+2025,May,CHCF,Philippines,11
+2025,May,CHCF,United States,"1,859"
+2025,May,CHCF,Vietnam,*
+2025,May,CIM,El Salvador,25
+2025,May,CIM,Guatemala,20
+2025,May,CIM,Mexico,301
+2025,May,CIM,Others,259
+2025,May,CIM,Philippines,13
+2025,May,CIM,United States,"1,633"
+2025,May,CIM,Vietnam,11
+2025,Jun,ASP,El Salvador,76
+2025,Jun,ASP,Guatemala,68
+2025,Jun,ASP,Mexico,828
+2025,Jun,ASP,Others,881
+2025,Jun,ASP,Philippines,*
+2025,Jun,ASP,United States,"2,153"
+2025,Jun,ASP,Vietnam,18
+2025,Jun,CIW,El Salvador,*
+2025,Jun,CIW,Guatemala,*
+2025,Jun,CIW,Mexico,45
+2025,Jun,CIW,Others,100
+2025,Jun,CIW,Philippines,*
+2025,Jun,CIW,United States,"1,072"
+2025,Jun,CIW,Vietnam,*
+2025,Jun,CMC,El Salvador,10
+2025,Jun,CMC,Guatemala,18
+2025,Jun,CMC,Mexico,121
+2025,Jun,CMC,Others,219
+2025,Jun,CMC,Philippines,*
+2025,Jun,CMC,United States,"1,826"
+2025,Jun,CMC,Vietnam,*
+2025,Jun,CMF,El Salvador,*
+2025,Jun,CMF,Guatemala,*
+2025,Jun,CMF,Mexico,138
+2025,Jun,CMF,Others,193
+2025,Jun,CMF,Philippines,10
+2025,Jun,CMF,United States,"1,706"
+2025,Jun,CMF,Vietnam,*
+2025,Jun,COR,El Salvador,30
+2025,Jun,COR,Guatemala,16
+2025,Jun,COR,Mexico,306
+2025,Jun,COR,Others,265
+2025,Jun,COR,Philippines,12
+2025,Jun,COR,United States,"1,951"
+2025,Jun,COR,Vietnam,*
+2025,Jun,CRC,El Salvador,39
+2025,Jun,CRC,Guatemala,41
+2025,Jun,CRC,Mexico,334
+2025,Jun,CRC,Others,477
+2025,Jun,CRC,Philippines,*
+2025,Jun,CRC,United States,"1,828"
+2025,Jun,CRC,Vietnam,*
+2025,Jun,CTF,El Salvador,66
+2025,Jun,CTF,Guatemala,33
+2025,Jun,CTF,Mexico,783
+2025,Jun,CTF,Others,367
+2025,Jun,CTF,Philippines,31
+2025,Jun,CTF,United States,"2,924"
+2025,Jun,CTF,Vietnam,23
+2025,Jun,FOL,El Salvador,20
+2025,Jun,FOL,Guatemala,18
+2025,Jun,FOL,Mexico,250
+2025,Jun,FOL,Others,338
+2025,Jun,FOL,Philippines,*
+2025,Jun,FOL,United States,"2,185"
+2025,Jun,FOL,Vietnam,12
+2025,Jun,HDSP,El Salvador,22
+2025,Jun,HDSP,Guatemala,*
+2025,Jun,HDSP,Mexico,146
+2025,Jun,HDSP,Others,306
+2025,Jun,HDSP,Philippines,*
+2025,Jun,HDSP,United States,"2,142"
+2025,Jun,HDSP,Vietnam,*
+2025,Jun,ISP,El Salvador,47
+2025,Jun,ISP,Guatemala,51
+2025,Jun,ISP,Mexico,531
+2025,Jun,ISP,Others,423
+2025,Jun,ISP,Philippines,21
+2025,Jun,ISP,United States,"1,569"
+2025,Jun,ISP,Vietnam,*
+2025,Jun,KVSP,El Salvador,20
+2025,Jun,KVSP,Guatemala,*
+2025,Jun,KVSP,Mexico,168
+2025,Jun,KVSP,Others,228
+2025,Jun,KVSP,Philippines,*
+2025,Jun,KVSP,United States,"2,734"
+2025,Jun,KVSP,Vietnam,*
+2025,Jun,LAC,El Salvador,12
+2025,Jun,LAC,Guatemala,*
+2025,Jun,LAC,Mexico,123
+2025,Jun,LAC,Others,214
+2025,Jun,LAC,Philippines,*
+2025,Jun,LAC,United States,"2,381"
+2025,Jun,LAC,Vietnam,*
+2025,Jun,MCSP,El Salvador,26
+2025,Jun,MCSP,Guatemala,15
+2025,Jun,MCSP,Mexico,238
+2025,Jun,MCSP,Others,356
+2025,Jun,MCSP,Philippines,13
+2025,Jun,MCSP,United States,"3,142"
+2025,Jun,MCSP,Vietnam,*
+2025,Jun,NKSP,El Salvador,17
+2025,Jun,NKSP,Guatemala,*
+2025,Jun,NKSP,Mexico,74
+2025,Jun,NKSP,Others,534
+2025,Jun,NKSP,Philippines,*
+2025,Jun,NKSP,United States,"1,744"
+2025,Jun,NKSP,Vietnam,*
+2025,Jun,PBSP,El Salvador,13
+2025,Jun,PBSP,Guatemala,*
+2025,Jun,PBSP,Mexico,128
+2025,Jun,PBSP,Others,285
+2025,Jun,PBSP,Philippines,*
+2025,Jun,PBSP,United States,"1,585"
+2025,Jun,PBSP,Vietnam,*
+2025,Jun,PVSP,El Salvador,26
+2025,Jun,PVSP,Guatemala,19
+2025,Jun,PVSP,Mexico,233
+2025,Jun,PVSP,Others,581
+2025,Jun,PVSP,Philippines,(Blank)
+2025,Jun,PVSP,United States,"2,040"
+2025,Jun,PVSP,Vietnam,*
+2025,Jun,RJD,El Salvador,26
+2025,Jun,RJD,Guatemala,12
+2025,Jun,RJD,Mexico,276
+2025,Jun,RJD,Others,351
+2025,Jun,RJD,Philippines,13
+2025,Jun,RJD,United States,"2,887"
+2025,Jun,RJD,Vietnam,20
+2025,Jun,SAC,El Salvador,15
+2025,Jun,SAC,Guatemala,*
+2025,Jun,SAC,Mexico,123
+2025,Jun,SAC,Others,182
+2025,Jun,SAC,Philippines,*
+2025,Jun,SAC,United States,"1,840"
+2025,Jun,SAC,Vietnam,*
+2025,Jun,CAL,El Salvador,17
+2025,Jun,CAL,Guatemala,11
+2025,Jun,CAL,Mexico,138
+2025,Jun,CAL,Others,210
+2025,Jun,CAL,Philippines,(Blank)
+2025,Jun,CAL,United States,"1,979"
+2025,Jun,CAL,Vietnam,10
+2025,Jun,SATF,El Salvador,53
+2025,Jun,SATF,Guatemala,39
+2025,Jun,SATF,Mexico,509
+2025,Jun,SATF,Others,591
+2025,Jun,SATF,Philippines,20
+2025,Jun,SATF,United States,"4,176"
+2025,Jun,SATF,Vietnam,11
+2025,Jun,SCC,El Salvador,19
+2025,Jun,SCC,Guatemala,10
+2025,Jun,SCC,Mexico,176
+2025,Jun,SCC,Others,720
+2025,Jun,SCC,Philippines,10
+2025,Jun,SCC,United States,"3,006"
+2025,Jun,SCC,Vietnam,*
+2025,Jun,SOL,El Salvador,20
+2025,Jun,SOL,Guatemala,14
+2025,Jun,SOL,Mexico,247
+2025,Jun,SOL,Others,500
+2025,Jun,SOL,Philippines,10
+2025,Jun,SOL,United States,"2,783"
+2025,Jun,SOL,Vietnam,21
+2025,Jun,SQ,El Salvador,45
+2025,Jun,SQ,Guatemala,28
+2025,Jun,SQ,Mexico,372
+2025,Jun,SQ,Others,173
+2025,Jun,SQ,Philippines,18
+2025,Jun,SQ,United States,"2,042"
+2025,Jun,SQ,Vietnam,24
+2025,Jun,SVSP,El Salvador,*
+2025,Jun,SVSP,Guatemala,*
+2025,Jun,SVSP,Mexico,105
+2025,Jun,SVSP,Others,171
+2025,Jun,SVSP,Philippines,(Blank)
+2025,Jun,SVSP,United States,"2,067"
+2025,Jun,SVSP,Vietnam,*
+2025,Jun,VSP,El Salvador,42
+2025,Jun,VSP,Guatemala,27
+2025,Jun,VSP,Mexico,327
+2025,Jun,VSP,Others,369
+2025,Jun,VSP,Philippines,17
+2025,Jun,VSP,United States,"2,264"
+2025,Jun,VSP,Vietnam,11
+2025,Jun,WSP,El Salvador,24
+2025,Jun,WSP,Guatemala,13
+2025,Jun,WSP,Mexico,207
+2025,Jun,WSP,Others,226
+2025,Jun,WSP,Philippines,*
+2025,Jun,WSP,United States,"3,457"
+2025,Jun,WSP,Vietnam,*
+2025,Jun,CPMP,El Salvador,(Blank)
+2025,Jun,CPMP,Guatemala,(Blank)
+2025,Jun,CPMP,Mexico,(Blank)
+2025,Jun,CPMP,Others,*
+2025,Jun,CPMP,Philippines,(Blank)
+2025,Jun,CPMP,United States,*
+2025,Jun,CPMP,Vietnam,(Blank)
+2025,Jun,FCRF,El Salvador,*
+2025,Jun,FCRF,Guatemala,*
+2025,Jun,FCRF,Mexico,13
+2025,Jun,FCRF,Others,47
+2025,Jun,FCRF,Philippines,(Blank)
+2025,Jun,FCRF,United States,348
+2025,Jun,FCRF,Vietnam,(Blank)
+2025,Jun,Alternative Custody Program,El Salvador,(Blank)
+2025,Jun,Alternative Custody Program,Guatemala,(Blank)
+2025,Jun,Alternative Custody Program,Mexico,(Blank)
+2025,Jun,Alternative Custody Program,Others,(Blank)
+2025,Jun,Alternative Custody Program,Philippines,(Blank)
+2025,Jun,Alternative Custody Program,United States,*
+2025,Jun,Alternative Custody Program,Vietnam,(Blank)
+2025,Jun,Department of State Hospitals,El Salvador,(Blank)
+2025,Jun,Department of State Hospitals,Guatemala,*
+2025,Jun,Department of State Hospitals,Mexico,10
+2025,Jun,Department of State Hospitals,Others,22
+2025,Jun,Department of State Hospitals,Philippines,(Blank)
+2025,Jun,Department of State Hospitals,United States,158
+2025,Jun,Department of State Hospitals,Vietnam,(Blank)
+2025,Jun,Male Community Reentry Facility,El Salvador,*
+2025,Jun,Male Community Reentry Facility,Guatemala,*
+2025,Jun,Male Community Reentry Facility,Mexico,16
+2025,Jun,Male Community Reentry Facility,Others,68
+2025,Jun,Male Community Reentry Facility,Philippines,*
+2025,Jun,Male Community Reentry Facility,United States,602
+2025,Jun,Male Community Reentry Facility,Vietnam,*
+2025,Jun,Medical Reprieve Program,El Salvador,(Blank)
+2025,Jun,Medical Reprieve Program,Guatemala,(Blank)
+2025,Jun,Medical Reprieve Program,Mexico,(Blank)
+2025,Jun,Medical Reprieve Program,Others,(Blank)
+2025,Jun,Medical Reprieve Program,Philippines,(Blank)
+2025,Jun,Medical Reprieve Program,United States,*
+2025,Jun,Medical Reprieve Program,Vietnam,(Blank)
+2025,Jun,CCI,El Salvador,19
+2025,Jun,CCI,Guatemala,12
+2025,Jun,CCI,Mexico,178
+2025,Jun,CCI,Others,322
+2025,Jun,CCI,Philippines,*
+2025,Jun,CCI,United States,"1,879"
+2025,Jun,CCI,Vietnam,*
+2025,Jun,CCWF,El Salvador,14
+2025,Jun,CCWF,Guatemala,*
+2025,Jun,CCWF,Mexico,79
+2025,Jun,CCWF,Others,210
+2025,Jun,CCWF,Philippines,*
+2025,Jun,CCWF,United States,"1,647"
+2025,Jun,CCWF,Vietnam,*
+2025,Jun,CEN,El Salvador,26
+2025,Jun,CEN,Guatemala,*
+2025,Jun,CEN,Mexico,181
+2025,Jun,CEN,Others,257
+2025,Jun,CEN,Philippines,*
+2025,Jun,CEN,United States,"2,504"
+2025,Jun,CEN,Vietnam,*
+2025,Jun,CHCF,El Salvador,12
+2025,Jun,CHCF,Guatemala,14
+2025,Jun,CHCF,Mexico,171
+2025,Jun,CHCF,Others,231
+2025,Jun,CHCF,Philippines,12
+2025,Jun,CHCF,United States,"1,831"
+2025,Jun,CHCF,Vietnam,*
+2025,Jun,CIM,El Salvador,25
+2025,Jun,CIM,Guatemala,20
+2025,Jun,CIM,Mexico,300
+2025,Jun,CIM,Others,267
+2025,Jun,CIM,Philippines,13
+2025,Jun,CIM,United States,"1,632"
+2025,Jun,CIM,Vietnam,11
+2025,Jul,ASP,El Salvador,75
+2025,Jul,ASP,Guatemala,70
+2025,Jul,ASP,Mexico,819
+2025,Jul,ASP,Others,874
+2025,Jul,ASP,Philippines,*
+2025,Jul,ASP,United States,"2,179"
+2025,Jul,ASP,Vietnam,17
+2025,Jul,CIW,El Salvador,*
+2025,Jul,CIW,Guatemala,*
+2025,Jul,CIW,Mexico,43
+2025,Jul,CIW,Others,92
+2025,Jul,CIW,Philippines,*
+2025,Jul,CIW,United States,"1,059"
+2025,Jul,CIW,Vietnam,*
+2025,Jul,CMC,El Salvador,11
+2025,Jul,CMC,Guatemala,20
+2025,Jul,CMC,Mexico,119
+2025,Jul,CMC,Others,216
+2025,Jul,CMC,Philippines,*
+2025,Jul,CMC,United States,"1,772"
+2025,Jul,CMC,Vietnam,11
+2025,Jul,CMF,El Salvador,*
+2025,Jul,CMF,Guatemala,*
+2025,Jul,CMF,Mexico,138
+2025,Jul,CMF,Others,195
+2025,Jul,CMF,Philippines,11
+2025,Jul,CMF,United States,"1,722"
+2025,Jul,CMF,Vietnam,*
+2025,Jul,COR,El Salvador,31
+2025,Jul,COR,Guatemala,14
+2025,Jul,COR,Mexico,302
+2025,Jul,COR,Others,267
+2025,Jul,COR,Philippines,12
+2025,Jul,COR,United States,"1,935"
+2025,Jul,COR,Vietnam,*
+2025,Jul,CRC,El Salvador,40
+2025,Jul,CRC,Guatemala,42
+2025,Jul,CRC,Mexico,331
+2025,Jul,CRC,Others,484
+2025,Jul,CRC,Philippines,*
+2025,Jul,CRC,United States,"1,882"
+2025,Jul,CRC,Vietnam,*
+2025,Jul,CTF,El Salvador,64
+2025,Jul,CTF,Guatemala,32
+2025,Jul,CTF,Mexico,783
+2025,Jul,CTF,Others,361
+2025,Jul,CTF,Philippines,33
+2025,Jul,CTF,United States,"2,878"
+2025,Jul,CTF,Vietnam,21
+2025,Jul,FOL,El Salvador,20
+2025,Jul,FOL,Guatemala,19
+2025,Jul,FOL,Mexico,245
+2025,Jul,FOL,Others,327
+2025,Jul,FOL,Philippines,*
+2025,Jul,FOL,United States,"2,154"
+2025,Jul,FOL,Vietnam,10
+2025,Jul,HDSP,El Salvador,22
+2025,Jul,HDSP,Guatemala,*
+2025,Jul,HDSP,Mexico,141
+2025,Jul,HDSP,Others,301
+2025,Jul,HDSP,Philippines,*
+2025,Jul,HDSP,United States,"2,047"
+2025,Jul,HDSP,Vietnam,*
+2025,Jul,ISP,El Salvador,49
+2025,Jul,ISP,Guatemala,53
+2025,Jul,ISP,Mexico,536
+2025,Jul,ISP,Others,426
+2025,Jul,ISP,Philippines,22
+2025,Jul,ISP,United States,"1,605"
+2025,Jul,ISP,Vietnam,*
+2025,Jul,KVSP,El Salvador,20
+2025,Jul,KVSP,Guatemala,*
+2025,Jul,KVSP,Mexico,167
+2025,Jul,KVSP,Others,233
+2025,Jul,KVSP,Philippines,*
+2025,Jul,KVSP,United States,"2,697"
+2025,Jul,KVSP,Vietnam,*
+2025,Jul,LAC,El Salvador,17
+2025,Jul,LAC,Guatemala,*
+2025,Jul,LAC,Mexico,125
+2025,Jul,LAC,Others,236
+2025,Jul,LAC,Philippines,*
+2025,Jul,LAC,United States,"2,480"
+2025,Jul,LAC,Vietnam,*
+2025,Jul,MCSP,El Salvador,24
+2025,Jul,MCSP,Guatemala,15
+2025,Jul,MCSP,Mexico,239
+2025,Jul,MCSP,Others,361
+2025,Jul,MCSP,Philippines,13
+2025,Jul,MCSP,United States,"3,139"
+2025,Jul,MCSP,Vietnam,*
+2025,Jul,NKSP,El Salvador,*
+2025,Jul,NKSP,Guatemala,*
+2025,Jul,NKSP,Mexico,75
+2025,Jul,NKSP,Others,533
+2025,Jul,NKSP,Philippines,*
+2025,Jul,NKSP,United States,"1,637"
+2025,Jul,NKSP,Vietnam,*
+2025,Jul,PBSP,El Salvador,14
+2025,Jul,PBSP,Guatemala,*
+2025,Jul,PBSP,Mexico,130
+2025,Jul,PBSP,Others,293
+2025,Jul,PBSP,Philippines,*
+2025,Jul,PBSP,United States,"1,643"
+2025,Jul,PBSP,Vietnam,*
+2025,Jul,PVSP,El Salvador,26
+2025,Jul,PVSP,Guatemala,19
+2025,Jul,PVSP,Mexico,238
+2025,Jul,PVSP,Others,587
+2025,Jul,PVSP,Philippines,(Blank)
+2025,Jul,PVSP,United States,"2,126"
+2025,Jul,PVSP,Vietnam,*
+2025,Jul,RJD,El Salvador,26
+2025,Jul,RJD,Guatemala,13
+2025,Jul,RJD,Mexico,283
+2025,Jul,RJD,Others,367
+2025,Jul,RJD,Philippines,13
+2025,Jul,RJD,United States,"2,932"
+2025,Jul,RJD,Vietnam,19
+2025,Jul,SAC,El Salvador,16
+2025,Jul,SAC,Guatemala,*
+2025,Jul,SAC,Mexico,121
+2025,Jul,SAC,Others,178
+2025,Jul,SAC,Philippines,*
+2025,Jul,SAC,United States,"1,848"
+2025,Jul,SAC,Vietnam,*
+2025,Jul,CAL,El Salvador,17
+2025,Jul,CAL,Guatemala,11
+2025,Jul,CAL,Mexico,134
+2025,Jul,CAL,Others,217
+2025,Jul,CAL,Philippines,(Blank)
+2025,Jul,CAL,United States,"1,985"
+2025,Jul,CAL,Vietnam,*
+2025,Jul,SATF,El Salvador,52
+2025,Jul,SATF,Guatemala,38
+2025,Jul,SATF,Mexico,516
+2025,Jul,SATF,Others,586
+2025,Jul,SATF,Philippines,19
+2025,Jul,SATF,United States,"4,163"
+2025,Jul,SATF,Vietnam,11
+2025,Jul,SCC,El Salvador,18
+2025,Jul,SCC,Guatemala,10
+2025,Jul,SCC,Mexico,180
+2025,Jul,SCC,Others,715
+2025,Jul,SCC,Philippines,*
+2025,Jul,SCC,United States,"2,970"
+2025,Jul,SCC,Vietnam,*
+2025,Jul,SOL,El Salvador,20
+2025,Jul,SOL,Guatemala,13
+2025,Jul,SOL,Mexico,247
+2025,Jul,SOL,Others,506
+2025,Jul,SOL,Philippines,10
+2025,Jul,SOL,United States,"2,741"
+2025,Jul,SOL,Vietnam,21
+2025,Jul,SQ,El Salvador,46
+2025,Jul,SQ,Guatemala,28
+2025,Jul,SQ,Mexico,368
+2025,Jul,SQ,Others,163
+2025,Jul,SQ,Philippines,17
+2025,Jul,SQ,United States,"1,981"
+2025,Jul,SQ,Vietnam,23
+2025,Jul,SVSP,El Salvador,*
+2025,Jul,SVSP,Guatemala,*
+2025,Jul,SVSP,Mexico,105
+2025,Jul,SVSP,Others,169
+2025,Jul,SVSP,Philippines,(Blank)
+2025,Jul,SVSP,United States,"2,082"
+2025,Jul,SVSP,Vietnam,*
+2025,Jul,VSP,El Salvador,42
+2025,Jul,VSP,Guatemala,27
+2025,Jul,VSP,Mexico,335
+2025,Jul,VSP,Others,381
+2025,Jul,VSP,Philippines,18
+2025,Jul,VSP,United States,"2,319"
+2025,Jul,VSP,Vietnam,12
+2025,Jul,WSP,El Salvador,21
+2025,Jul,WSP,Guatemala,10
+2025,Jul,WSP,Mexico,213
+2025,Jul,WSP,Others,202
+2025,Jul,WSP,Philippines,*
+2025,Jul,WSP,United States,"3,509"
+2025,Jul,WSP,Vietnam,*
+2025,Jul,CPMP,El Salvador,(Blank)
+2025,Jul,CPMP,Guatemala,(Blank)
+2025,Jul,CPMP,Mexico,(Blank)
+2025,Jul,CPMP,Others,(Blank)
+2025,Jul,CPMP,Philippines,(Blank)
+2025,Jul,CPMP,United States,*
+2025,Jul,CPMP,Vietnam,(Blank)
+2025,Jul,FCRF,El Salvador,*
+2025,Jul,FCRF,Guatemala,*
+2025,Jul,FCRF,Mexico,15
+2025,Jul,FCRF,Others,50
+2025,Jul,FCRF,Philippines,(Blank)
+2025,Jul,FCRF,United States,341
+2025,Jul,FCRF,Vietnam,(Blank)
+2025,Jul,Alternative Custody Program,El Salvador,(Blank)
+2025,Jul,Alternative Custody Program,Guatemala,(Blank)
+2025,Jul,Alternative Custody Program,Mexico,(Blank)
+2025,Jul,Alternative Custody Program,Others,(Blank)
+2025,Jul,Alternative Custody Program,Philippines,(Blank)
+2025,Jul,Alternative Custody Program,United States,*
+2025,Jul,Alternative Custody Program,Vietnam,(Blank)
+2025,Jul,Department of State Hospitals,El Salvador,(Blank)
+2025,Jul,Department of State Hospitals,Guatemala,*
+2025,Jul,Department of State Hospitals,Mexico,10
+2025,Jul,Department of State Hospitals,Others,22
+2025,Jul,Department of State Hospitals,Philippines,(Blank)
+2025,Jul,Department of State Hospitals,United States,162
+2025,Jul,Department of State Hospitals,Vietnam,(Blank)
+2025,Jul,Male Community Reentry Facility,El Salvador,10
+2025,Jul,Male Community Reentry Facility,Guatemala,*
+2025,Jul,Male Community Reentry Facility,Mexico,21
+2025,Jul,Male Community Reentry Facility,Others,70
+2025,Jul,Male Community Reentry Facility,Philippines,*
+2025,Jul,Male Community Reentry Facility,United States,603
+2025,Jul,Male Community Reentry Facility,Vietnam,*
+2025,Jul,Medical Reprieve Program,El Salvador,(Blank)
+2025,Jul,Medical Reprieve Program,Guatemala,(Blank)
+2025,Jul,Medical Reprieve Program,Mexico,(Blank)
+2025,Jul,Medical Reprieve Program,Others,(Blank)
+2025,Jul,Medical Reprieve Program,Philippines,(Blank)
+2025,Jul,Medical Reprieve Program,United States,*
+2025,Jul,Medical Reprieve Program,Vietnam,(Blank)
+2025,Jul,CCI,El Salvador,18
+2025,Jul,CCI,Guatemala,13
+2025,Jul,CCI,Mexico,174
+2025,Jul,CCI,Others,322
+2025,Jul,CCI,Philippines,*
+2025,Jul,CCI,United States,"1,854"
+2025,Jul,CCI,Vietnam,*
+2025,Jul,CCWF,El Salvador,13
+2025,Jul,CCWF,Guatemala,*
+2025,Jul,CCWF,Mexico,79
+2025,Jul,CCWF,Others,212
+2025,Jul,CCWF,Philippines,*
+2025,Jul,CCWF,United States,"1,667"
+2025,Jul,CCWF,Vietnam,*
+2025,Jul,CEN,El Salvador,27
+2025,Jul,CEN,Guatemala,*
+2025,Jul,CEN,Mexico,172
+2025,Jul,CEN,Others,256
+2025,Jul,CEN,Philippines,*
+2025,Jul,CEN,United States,"2,481"
+2025,Jul,CEN,Vietnam,*
+2025,Jul,CHCF,El Salvador,13
+2025,Jul,CHCF,Guatemala,11
+2025,Jul,CHCF,Mexico,176
+2025,Jul,CHCF,Others,229
+2025,Jul,CHCF,Philippines,12
+2025,Jul,CHCF,United States,"1,832"
+2025,Jul,CHCF,Vietnam,*
+2025,Jul,CIM,El Salvador,24
+2025,Jul,CIM,Guatemala,20
+2025,Jul,CIM,Mexico,300
+2025,Jul,CIM,Others,268
+2025,Jul,CIM,Philippines,13
+2025,Jul,CIM,United States,"1,608"
+2025,Jul,CIM,Vietnam,11
+2025,Aug,ASP,El Salvador,73
+2025,Aug,ASP,Guatemala,68
+2025,Aug,ASP,Mexico,813
+2025,Aug,ASP,Others,835
+2025,Aug,ASP,Philippines,*
+2025,Aug,ASP,United States,"2,121"
+2025,Aug,ASP,Vietnam,16
+2025,Aug,CIW,El Salvador,*
+2025,Aug,CIW,Guatemala,*
+2025,Aug,CIW,Mexico,41
+2025,Aug,CIW,Others,97
+2025,Aug,CIW,Philippines,*
+2025,Aug,CIW,United States,997
+2025,Aug,CIW,Vietnam,*
+2025,Aug,CMC,El Salvador,10
+2025,Aug,CMC,Guatemala,16
+2025,Aug,CMC,Mexico,114
+2025,Aug,CMC,Others,210
+2025,Aug,CMC,Philippines,*
+2025,Aug,CMC,United States,"1,720"
+2025,Aug,CMC,Vietnam,11
+2025,Aug,CMF,El Salvador,*
+2025,Aug,CMF,Guatemala,*
+2025,Aug,CMF,Mexico,141
+2025,Aug,CMF,Others,207
+2025,Aug,CMF,Philippines,12
+2025,Aug,CMF,United States,"1,711"
+2025,Aug,CMF,Vietnam,*
+2025,Aug,COR,El Salvador,29
+2025,Aug,COR,Guatemala,14
+2025,Aug,COR,Mexico,307
+2025,Aug,COR,Others,270
+2025,Aug,COR,Philippines,12
+2025,Aug,COR,United States,"1,940"
+2025,Aug,COR,Vietnam,*
+2025,Aug,CRC,El Salvador,39
+2025,Aug,CRC,Guatemala,42
+2025,Aug,CRC,Mexico,316
+2025,Aug,CRC,Others,472
+2025,Aug,CRC,Philippines,*
+2025,Aug,CRC,United States,"1,725"
+2025,Aug,CRC,Vietnam,*
+2025,Aug,CTF,El Salvador,66
+2025,Aug,CTF,Guatemala,31
+2025,Aug,CTF,Mexico,777
+2025,Aug,CTF,Others,360
+2025,Aug,CTF,Philippines,32
+2025,Aug,CTF,United States,"2,878"
+2025,Aug,CTF,Vietnam,22
+2025,Aug,FOL,El Salvador,21
+2025,Aug,FOL,Guatemala,18
+2025,Aug,FOL,Mexico,242
+2025,Aug,FOL,Others,302
+2025,Aug,FOL,Philippines,*
+2025,Aug,FOL,United States,"2,124"
+2025,Aug,FOL,Vietnam,11
+2025,Aug,HDSP,El Salvador,23
+2025,Aug,HDSP,Guatemala,*
+2025,Aug,HDSP,Mexico,134
+2025,Aug,HDSP,Others,290
+2025,Aug,HDSP,Philippines,*
+2025,Aug,HDSP,United States,"1,919"
+2025,Aug,HDSP,Vietnam,*
+2025,Aug,ISP,El Salvador,50
+2025,Aug,ISP,Guatemala,50
+2025,Aug,ISP,Mexico,534
+2025,Aug,ISP,Others,418
+2025,Aug,ISP,Philippines,23
+2025,Aug,ISP,United States,"1,639"
+2025,Aug,ISP,Vietnam,*
+2025,Aug,KVSP,El Salvador,19
+2025,Aug,KVSP,Guatemala,*
+2025,Aug,KVSP,Mexico,166
+2025,Aug,KVSP,Others,224
+2025,Aug,KVSP,Philippines,*
+2025,Aug,KVSP,United States,"2,640"
+2025,Aug,KVSP,Vietnam,*
+2025,Aug,LAC,El Salvador,19
+2025,Aug,LAC,Guatemala,*
+2025,Aug,LAC,Mexico,137
+2025,Aug,LAC,Others,251
+2025,Aug,LAC,Philippines,*
+2025,Aug,LAC,United States,"2,601"
+2025,Aug,LAC,Vietnam,*
+2025,Aug,MCSP,El Salvador,25
+2025,Aug,MCSP,Guatemala,14
+2025,Aug,MCSP,Mexico,232
+2025,Aug,MCSP,Others,353
+2025,Aug,MCSP,Philippines,13
+2025,Aug,MCSP,United States,"3,166"
+2025,Aug,MCSP,Vietnam,*
+2025,Aug,NKSP,El Salvador,*
+2025,Aug,NKSP,Guatemala,18
+2025,Aug,NKSP,Mexico,93
+2025,Aug,NKSP,Others,533
+2025,Aug,NKSP,Philippines,*
+2025,Aug,NKSP,United States,"1,750"
+2025,Aug,NKSP,Vietnam,*
+2025,Aug,PBSP,El Salvador,14
+2025,Aug,PBSP,Guatemala,*
+2025,Aug,PBSP,Mexico,130
+2025,Aug,PBSP,Others,302
+2025,Aug,PBSP,Philippines,*
+2025,Aug,PBSP,United States,"1,709"
+2025,Aug,PBSP,Vietnam,*
+2025,Aug,PVSP,El Salvador,26
+2025,Aug,PVSP,Guatemala,19
+2025,Aug,PVSP,Mexico,247
+2025,Aug,PVSP,Others,579
+2025,Aug,PVSP,Philippines,(Blank)
+2025,Aug,PVSP,United States,"2,207"
+2025,Aug,PVSP,Vietnam,*
+2025,Aug,RJD,El Salvador,27
+2025,Aug,RJD,Guatemala,15
+2025,Aug,RJD,Mexico,288
+2025,Aug,RJD,Others,373
+2025,Aug,RJD,Philippines,16
+2025,Aug,RJD,United States,"2,975"
+2025,Aug,RJD,Vietnam,18
+2025,Aug,SAC,El Salvador,16
+2025,Aug,SAC,Guatemala,*
+2025,Aug,SAC,Mexico,120
+2025,Aug,SAC,Others,181
+2025,Aug,SAC,Philippines,*
+2025,Aug,SAC,United States,"1,827"
+2025,Aug,SAC,Vietnam,*
+2025,Aug,CAL,El Salvador,17
+2025,Aug,CAL,Guatemala,12
+2025,Aug,CAL,Mexico,130
+2025,Aug,CAL,Others,214
+2025,Aug,CAL,Philippines,(Blank)
+2025,Aug,CAL,United States,"1,998"
+2025,Aug,CAL,Vietnam,*
+2025,Aug,SATF,El Salvador,50
+2025,Aug,SATF,Guatemala,38
+2025,Aug,SATF,Mexico,512
+2025,Aug,SATF,Others,582
+2025,Aug,SATF,Philippines,19
+2025,Aug,SATF,United States,"4,165"
+2025,Aug,SATF,Vietnam,11
+2025,Aug,SCC,El Salvador,20
+2025,Aug,SCC,Guatemala,*
+2025,Aug,SCC,Mexico,186
+2025,Aug,SCC,Others,710
+2025,Aug,SCC,Philippines,*
+2025,Aug,SCC,United States,"2,960"
+2025,Aug,SCC,Vietnam,*
+2025,Aug,SOL,El Salvador,19
+2025,Aug,SOL,Guatemala,13
+2025,Aug,SOL,Mexico,245
+2025,Aug,SOL,Others,520
+2025,Aug,SOL,Philippines,10
+2025,Aug,SOL,United States,"2,740"
+2025,Aug,SOL,Vietnam,21
+2025,Aug,SQ,El Salvador,47
+2025,Aug,SQ,Guatemala,28
+2025,Aug,SQ,Mexico,362
+2025,Aug,SQ,Others,161
+2025,Aug,SQ,Philippines,18
+2025,Aug,SQ,United States,"1,958"
+2025,Aug,SQ,Vietnam,22
+2025,Aug,SVSP,El Salvador,*
+2025,Aug,SVSP,Guatemala,*
+2025,Aug,SVSP,Mexico,109
+2025,Aug,SVSP,Others,168
+2025,Aug,SVSP,Philippines,(Blank)
+2025,Aug,SVSP,United States,"2,096"
+2025,Aug,SVSP,Vietnam,*
+2025,Aug,VSP,El Salvador,42
+2025,Aug,VSP,Guatemala,30
+2025,Aug,VSP,Mexico,340
+2025,Aug,VSP,Others,398
+2025,Aug,VSP,Philippines,17
+2025,Aug,VSP,United States,"2,438"
+2025,Aug,VSP,Vietnam,13
+2025,Aug,WSP,El Salvador,23
+2025,Aug,WSP,Guatemala,10
+2025,Aug,WSP,Mexico,217
+2025,Aug,WSP,Others,186
+2025,Aug,WSP,Philippines,*
+2025,Aug,WSP,United States,"3,353"
+2025,Aug,WSP,Vietnam,*
+2025,Aug,CPMP,El Salvador,(Blank)
+2025,Aug,CPMP,Guatemala,(Blank)
+2025,Aug,CPMP,Mexico,(Blank)
+2025,Aug,CPMP,Others,(Blank)
+2025,Aug,CPMP,Philippines,(Blank)
+2025,Aug,CPMP,United States,*
+2025,Aug,CPMP,Vietnam,(Blank)
+2025,Aug,FCRF,El Salvador,*
+2025,Aug,FCRF,Guatemala,*
+2025,Aug,FCRF,Mexico,13
+2025,Aug,FCRF,Others,48
+2025,Aug,FCRF,Philippines,(Blank)
+2025,Aug,FCRF,United States,336
+2025,Aug,FCRF,Vietnam,(Blank)
+2025,Aug,Alternative Custody Program,El Salvador,(Blank)
+2025,Aug,Alternative Custody Program,Guatemala,(Blank)
+2025,Aug,Alternative Custody Program,Mexico,*
+2025,Aug,Alternative Custody Program,Others,*
+2025,Aug,Alternative Custody Program,Philippines,(Blank)
+2025,Aug,Alternative Custody Program,United States,*
+2025,Aug,Alternative Custody Program,Vietnam,(Blank)
+2025,Aug,Department of State Hospitals,El Salvador,(Blank)
+2025,Aug,Department of State Hospitals,Guatemala,*
+2025,Aug,Department of State Hospitals,Mexico,10
+2025,Aug,Department of State Hospitals,Others,19
+2025,Aug,Department of State Hospitals,Philippines,(Blank)
+2025,Aug,Department of State Hospitals,United States,159
+2025,Aug,Department of State Hospitals,Vietnam,(Blank)
+2025,Aug,Male Community Reentry Facility,El Salvador,10
+2025,Aug,Male Community Reentry Facility,Guatemala,*
+2025,Aug,Male Community Reentry Facility,Mexico,29
+2025,Aug,Male Community Reentry Facility,Others,75
+2025,Aug,Male Community Reentry Facility,Philippines,*
+2025,Aug,Male Community Reentry Facility,United States,622
+2025,Aug,Male Community Reentry Facility,Vietnam,*
+2025,Aug,Medical Reprieve Program,El Salvador,(Blank)
+2025,Aug,Medical Reprieve Program,Guatemala,(Blank)
+2025,Aug,Medical Reprieve Program,Mexico,(Blank)
+2025,Aug,Medical Reprieve Program,Others,(Blank)
+2025,Aug,Medical Reprieve Program,Philippines,(Blank)
+2025,Aug,Medical Reprieve Program,United States,*
+2025,Aug,Medical Reprieve Program,Vietnam,(Blank)
+2025,Aug,CCI,El Salvador,20
+2025,Aug,CCI,Guatemala,12
+2025,Aug,CCI,Mexico,176
+2025,Aug,CCI,Others,341
+2025,Aug,CCI,Philippines,*
+2025,Aug,CCI,United States,"1,927"
+2025,Aug,CCI,Vietnam,*
+2025,Aug,CCWF,El Salvador,13
+2025,Aug,CCWF,Guatemala,*
+2025,Aug,CCWF,Mexico,83
+2025,Aug,CCWF,Others,207
+2025,Aug,CCWF,Philippines,*
+2025,Aug,CCWF,United States,"1,719"
+2025,Aug,CCWF,Vietnam,*
+2025,Aug,CEN,El Salvador,28
+2025,Aug,CEN,Guatemala,10
+2025,Aug,CEN,Mexico,176
+2025,Aug,CEN,Others,256
+2025,Aug,CEN,Philippines,*
+2025,Aug,CEN,United States,"2,540"
+2025,Aug,CEN,Vietnam,*
+2025,Aug,CHCF,El Salvador,13
+2025,Aug,CHCF,Guatemala,12
+2025,Aug,CHCF,Mexico,175
+2025,Aug,CHCF,Others,243
+2025,Aug,CHCF,Philippines,12
+2025,Aug,CHCF,United States,"1,837"
+2025,Aug,CHCF,Vietnam,*
+2025,Aug,CIM,El Salvador,25
+2025,Aug,CIM,Guatemala,20
+2025,Aug,CIM,Mexico,300
+2025,Aug,CIM,Others,269
+2025,Aug,CIM,Philippines,11
+2025,Aug,CIM,United States,"1,593"
+2025,Aug,CIM,Vietnam,11
+2025,Sep,ASP,El Salvador,73
+2025,Sep,ASP,Guatemala,65
+2025,Sep,ASP,Mexico,818
+2025,Sep,ASP,Others,830
+2025,Sep,ASP,Philippines,*
+2025,Sep,ASP,United States,"2,124"
+2025,Sep,ASP,Vietnam,17
+2025,Sep,CIW,El Salvador,*
+2025,Sep,CIW,Guatemala,*
+2025,Sep,CIW,Mexico,44
+2025,Sep,CIW,Others,93
+2025,Sep,CIW,Philippines,*
+2025,Sep,CIW,United States,983
+2025,Sep,CIW,Vietnam,*
+2025,Sep,CMC,El Salvador,10
+2025,Sep,CMC,Guatemala,14
+2025,Sep,CMC,Mexico,117
+2025,Sep,CMC,Others,209
+2025,Sep,CMC,Philippines,*
+2025,Sep,CMC,United States,"1,734"
+2025,Sep,CMC,Vietnam,11
+2025,Sep,CMF,El Salvador,*
+2025,Sep,CMF,Guatemala,10
+2025,Sep,CMF,Mexico,145
+2025,Sep,CMF,Others,203
+2025,Sep,CMF,Philippines,12
+2025,Sep,CMF,United States,"1,748"
+2025,Sep,CMF,Vietnam,*
+2025,Sep,COR,El Salvador,32
+2025,Sep,COR,Guatemala,13
+2025,Sep,COR,Mexico,312
+2025,Sep,COR,Others,275
+2025,Sep,COR,Philippines,12
+2025,Sep,COR,United States,"1,963"
+2025,Sep,COR,Vietnam,*
+2025,Sep,CRC,El Salvador,34
+2025,Sep,CRC,Guatemala,34
+2025,Sep,CRC,Mexico,280
+2025,Sep,CRC,Others,404
+2025,Sep,CRC,Philippines,*
+2025,Sep,CRC,United States,"1,386"
+2025,Sep,CRC,Vietnam,*
+2025,Sep,CTF,El Salvador,66
+2025,Sep,CTF,Guatemala,32
+2025,Sep,CTF,Mexico,776
+2025,Sep,CTF,Others,352
+2025,Sep,CTF,Philippines,32
+2025,Sep,CTF,United States,"2,897"
+2025,Sep,CTF,Vietnam,21
+2025,Sep,FOL,El Salvador,23
+2025,Sep,FOL,Guatemala,18
+2025,Sep,FOL,Mexico,237
+2025,Sep,FOL,Others,313
+2025,Sep,FOL,Philippines,*
+2025,Sep,FOL,United States,"2,121"
+2025,Sep,FOL,Vietnam,11
+2025,Sep,HDSP,El Salvador,26
+2025,Sep,HDSP,Guatemala,*
+2025,Sep,HDSP,Mexico,147
+2025,Sep,HDSP,Others,312
+2025,Sep,HDSP,Philippines,*
+2025,Sep,HDSP,United States,"2,091"
+2025,Sep,HDSP,Vietnam,*
+2025,Sep,ISP,El Salvador,52
+2025,Sep,ISP,Guatemala,53
+2025,Sep,ISP,Mexico,555
+2025,Sep,ISP,Others,422
+2025,Sep,ISP,Philippines,24
+2025,Sep,ISP,United States,"1,730"
+2025,Sep,ISP,Vietnam,*
+2025,Sep,KVSP,El Salvador,17
+2025,Sep,KVSP,Guatemala,*
+2025,Sep,KVSP,Mexico,148
+2025,Sep,KVSP,Others,206
+2025,Sep,KVSP,Philippines,*
+2025,Sep,KVSP,United States,"2,503"
+2025,Sep,KVSP,Vietnam,*
+2025,Sep,LAC,El Salvador,20
+2025,Sep,LAC,Guatemala,*
+2025,Sep,LAC,Mexico,149
+2025,Sep,LAC,Others,253
+2025,Sep,LAC,Philippines,*
+2025,Sep,LAC,United States,"2,641"
+2025,Sep,LAC,Vietnam,*
+2025,Sep,MCSP,El Salvador,25
+2025,Sep,MCSP,Guatemala,15
+2025,Sep,MCSP,Mexico,223
+2025,Sep,MCSP,Others,350
+2025,Sep,MCSP,Philippines,13
+2025,Sep,MCSP,United States,"3,107"
+2025,Sep,MCSP,Vietnam,*
+2025,Sep,NKSP,El Salvador,14
+2025,Sep,NKSP,Guatemala,21
+2025,Sep,NKSP,Mexico,99
+2025,Sep,NKSP,Others,505
+2025,Sep,NKSP,Philippines,*
+2025,Sep,NKSP,United States,"1,912"
+2025,Sep,NKSP,Vietnam,*
+2025,Sep,PBSP,El Salvador,14
+2025,Sep,PBSP,Guatemala,*
+2025,Sep,PBSP,Mexico,129
+2025,Sep,PBSP,Others,295
+2025,Sep,PBSP,Philippines,*
+2025,Sep,PBSP,United States,"1,729"
+2025,Sep,PBSP,Vietnam,*
+2025,Sep,PVSP,El Salvador,28
+2025,Sep,PVSP,Guatemala,19
+2025,Sep,PVSP,Mexico,246
+2025,Sep,PVSP,Others,566
+2025,Sep,PVSP,Philippines,(Blank)
+2025,Sep,PVSP,United States,"2,205"
+2025,Sep,PVSP,Vietnam,*
+2025,Sep,RJD,El Salvador,27
+2025,Sep,RJD,Guatemala,17
+2025,Sep,RJD,Mexico,289
+2025,Sep,RJD,Others,377
+2025,Sep,RJD,Philippines,15
+2025,Sep,RJD,United States,"2,988"
+2025,Sep,RJD,Vietnam,18
+2025,Sep,SAC,El Salvador,14
+2025,Sep,SAC,Guatemala,*
+2025,Sep,SAC,Mexico,129
+2025,Sep,SAC,Others,178
+2025,Sep,SAC,Philippines,*
+2025,Sep,SAC,United States,"1,838"
+2025,Sep,SAC,Vietnam,*
+2025,Sep,CAL,El Salvador,16
+2025,Sep,CAL,Guatemala,12
+2025,Sep,CAL,Mexico,130
+2025,Sep,CAL,Others,227
+2025,Sep,CAL,Philippines,(Blank)
+2025,Sep,CAL,United States,"2,010"
+2025,Sep,CAL,Vietnam,10
+2025,Sep,SATF,El Salvador,49
+2025,Sep,SATF,Guatemala,37
+2025,Sep,SATF,Mexico,508
+2025,Sep,SATF,Others,582
+2025,Sep,SATF,Philippines,20
+2025,Sep,SATF,United States,"4,196"
+2025,Sep,SATF,Vietnam,11
+2025,Sep,SCC,El Salvador,20
+2025,Sep,SCC,Guatemala,11
+2025,Sep,SCC,Mexico,207
+2025,Sep,SCC,Others,714
+2025,Sep,SCC,Philippines,*
+2025,Sep,SCC,United States,"2,997"
+2025,Sep,SCC,Vietnam,*
+2025,Sep,SOL,El Salvador,19
+2025,Sep,SOL,Guatemala,13
+2025,Sep,SOL,Mexico,243
+2025,Sep,SOL,Others,523
+2025,Sep,SOL,Philippines,10
+2025,Sep,SOL,United States,"2,847"
+2025,Sep,SOL,Vietnam,21
+2025,Sep,SQ,El Salvador,45
+2025,Sep,SQ,Guatemala,29
+2025,Sep,SQ,Mexico,354
+2025,Sep,SQ,Others,161
+2025,Sep,SQ,Philippines,17
+2025,Sep,SQ,United States,"1,953"
+2025,Sep,SQ,Vietnam,22
+2025,Sep,SVSP,El Salvador,11
+2025,Sep,SVSP,Guatemala,*
+2025,Sep,SVSP,Mexico,114
+2025,Sep,SVSP,Others,169
+2025,Sep,SVSP,Philippines,(Blank)
+2025,Sep,SVSP,United States,"2,131"
+2025,Sep,SVSP,Vietnam,*
+2025,Sep,VSP,El Salvador,42
+2025,Sep,VSP,Guatemala,28
+2025,Sep,VSP,Mexico,341
+2025,Sep,VSP,Others,404
+2025,Sep,VSP,Philippines,17
+2025,Sep,VSP,United States,"2,452"
+2025,Sep,VSP,Vietnam,13
+2025,Sep,WSP,El Salvador,17
+2025,Sep,WSP,Guatemala,15
+2025,Sep,WSP,Mexico,205
+2025,Sep,WSP,Others,164
+2025,Sep,WSP,Philippines,*
+2025,Sep,WSP,United States,"3,026"
+2025,Sep,WSP,Vietnam,10
+2025,Sep,CPMP,El Salvador,(Blank)
+2025,Sep,CPMP,Guatemala,(Blank)
+2025,Sep,CPMP,Mexico,(Blank)
+2025,Sep,CPMP,Others,(Blank)
+2025,Sep,CPMP,Philippines,(Blank)
+2025,Sep,CPMP,United States,*
+2025,Sep,CPMP,Vietnam,(Blank)
+2025,Sep,FCRF,El Salvador,*
+2025,Sep,FCRF,Guatemala,*
+2025,Sep,FCRF,Mexico,14
+2025,Sep,FCRF,Others,46
+2025,Sep,FCRF,Philippines,(Blank)
+2025,Sep,FCRF,United States,339
+2025,Sep,FCRF,Vietnam,(Blank)
+2025,Sep,Alternative Custody Program,El Salvador,(Blank)
+2025,Sep,Alternative Custody Program,Guatemala,(Blank)
+2025,Sep,Alternative Custody Program,Mexico,*
+2025,Sep,Alternative Custody Program,Others,*
+2025,Sep,Alternative Custody Program,Philippines,(Blank)
+2025,Sep,Alternative Custody Program,United States,*
+2025,Sep,Alternative Custody Program,Vietnam,(Blank)
+2025,Sep,Department of State Hospitals,El Salvador,(Blank)
+2025,Sep,Department of State Hospitals,Guatemala,*
+2025,Sep,Department of State Hospitals,Mexico,10
+2025,Sep,Department of State Hospitals,Others,21
+2025,Sep,Department of State Hospitals,Philippines,(Blank)
+2025,Sep,Department of State Hospitals,United States,163
+2025,Sep,Department of State Hospitals,Vietnam,(Blank)
+2025,Sep,Male Community Reentry Facility,El Salvador,*
+2025,Sep,Male Community Reentry Facility,Guatemala,*
+2025,Sep,Male Community Reentry Facility,Mexico,38
+2025,Sep,Male Community Reentry Facility,Others,78
+2025,Sep,Male Community Reentry Facility,Philippines,*
+2025,Sep,Male Community Reentry Facility,United States,636
+2025,Sep,Male Community Reentry Facility,Vietnam,*
+2025,Sep,Medical Reprieve Program,El Salvador,(Blank)
+2025,Sep,Medical Reprieve Program,Guatemala,(Blank)
+2025,Sep,Medical Reprieve Program,Mexico,(Blank)
+2025,Sep,Medical Reprieve Program,Others,(Blank)
+2025,Sep,Medical Reprieve Program,Philippines,(Blank)
+2025,Sep,Medical Reprieve Program,United States,*
+2025,Sep,Medical Reprieve Program,Vietnam,(Blank)
+2025,Sep,CCI,El Salvador,21
+2025,Sep,CCI,Guatemala,14
+2025,Sep,CCI,Mexico,180
+2025,Sep,CCI,Others,340
+2025,Sep,CCI,Philippines,*
+2025,Sep,CCI,United States,"1,952"
+2025,Sep,CCI,Vietnam,*
+2025,Sep,CCWF,El Salvador,13
+2025,Sep,CCWF,Guatemala,*
+2025,Sep,CCWF,Mexico,80
+2025,Sep,CCWF,Others,209
+2025,Sep,CCWF,Philippines,*
+2025,Sep,CCWF,United States,"1,749"
+2025,Sep,CCWF,Vietnam,*
+2025,Sep,CEN,El Salvador,30
+2025,Sep,CEN,Guatemala,10
+2025,Sep,CEN,Mexico,180
+2025,Sep,CEN,Others,260
+2025,Sep,CEN,Philippines,*
+2025,Sep,CEN,United States,"2,596"
+2025,Sep,CEN,Vietnam,*
+2025,Sep,CHCF,El Salvador,13
+2025,Sep,CHCF,Guatemala,14
+2025,Sep,CHCF,Mexico,181
+2025,Sep,CHCF,Others,252
+2025,Sep,CHCF,Philippines,12
+2025,Sep,CHCF,United States,"1,856"
+2025,Sep,CHCF,Vietnam,*
+2025,Sep,CIM,El Salvador,26
+2025,Sep,CIM,Guatemala,22
+2025,Sep,CIM,Mexico,304
+2025,Sep,CIM,Others,281
+2025,Sep,CIM,Philippines,11
+2025,Sep,CIM,United States,"1,623"
+2025,Sep,CIM,Vietnam,11
+2025,Oct,ASP,El Salvador,75
+2025,Oct,ASP,Guatemala,70
+2025,Oct,ASP,Mexico,819
+2025,Oct,ASP,Others,812
+2025,Oct,ASP,Philippines,*
+2025,Oct,ASP,United States,"2,054"
+2025,Oct,ASP,Vietnam,17
+2025,Oct,CIW,El Salvador,*
+2025,Oct,CIW,Guatemala,*
+2025,Oct,CIW,Mexico,46
+2025,Oct,CIW,Others,97
+2025,Oct,CIW,Philippines,*
+2025,Oct,CIW,United States,969
+2025,Oct,CIW,Vietnam,*
+2025,Oct,CMC,El Salvador,10
+2025,Oct,CMC,Guatemala,12
+2025,Oct,CMC,Mexico,121
+2025,Oct,CMC,Others,205
+2025,Oct,CMC,Philippines,*
+2025,Oct,CMC,United States,"1,745"
+2025,Oct,CMC,Vietnam,12
+2025,Oct,CMF,El Salvador,*
+2025,Oct,CMF,Guatemala,10
+2025,Oct,CMF,Mexico,148
+2025,Oct,CMF,Others,204
+2025,Oct,CMF,Philippines,12
+2025,Oct,CMF,United States,"1,760"
+2025,Oct,CMF,Vietnam,*
+2025,Oct,COR,El Salvador,33
+2025,Oct,COR,Guatemala,14
+2025,Oct,COR,Mexico,317
+2025,Oct,COR,Others,288
+2025,Oct,COR,Philippines,12
+2025,Oct,COR,United States,"2,034"
+2025,Oct,COR,Vietnam,*
+2025,Oct,CRC,El Salvador,22
+2025,Oct,CRC,Guatemala,26
+2025,Oct,CRC,Mexico,209
+2025,Oct,CRC,Others,309
+2025,Oct,CRC,Philippines,*
+2025,Oct,CRC,United States,"1,055"
+2025,Oct,CRC,Vietnam,*
+2025,Oct,CTF,El Salvador,66
+2025,Oct,CTF,Guatemala,30
+2025,Oct,CTF,Mexico,770
+2025,Oct,CTF,Others,355
+2025,Oct,CTF,Philippines,32
+2025,Oct,CTF,United States,"2,879"
+2025,Oct,CTF,Vietnam,22
+2025,Oct,FOL,El Salvador,24
+2025,Oct,FOL,Guatemala,19
+2025,Oct,FOL,Mexico,237
+2025,Oct,FOL,Others,313
+2025,Oct,FOL,Philippines,*
+2025,Oct,FOL,United States,"2,125"
+2025,Oct,FOL,Vietnam,11
+2025,Oct,HDSP,El Salvador,27
+2025,Oct,HDSP,Guatemala,*
+2025,Oct,HDSP,Mexico,156
+2025,Oct,HDSP,Others,320
+2025,Oct,HDSP,Philippines,*
+2025,Oct,HDSP,United States,"2,216"
+2025,Oct,HDSP,Vietnam,*
+2025,Oct,ISP,El Salvador,56
+2025,Oct,ISP,Guatemala,54
+2025,Oct,ISP,Mexico,575
+2025,Oct,ISP,Others,432
+2025,Oct,ISP,Philippines,24
+2025,Oct,ISP,United States,"1,764"
+2025,Oct,ISP,Vietnam,*
+2025,Oct,KVSP,El Salvador,16
+2025,Oct,KVSP,Guatemala,*
+2025,Oct,KVSP,Mexico,149
+2025,Oct,KVSP,Others,212
+2025,Oct,KVSP,Philippines,*
+2025,Oct,KVSP,United States,"2,530"
+2025,Oct,KVSP,Vietnam,*
+2025,Oct,LAC,El Salvador,22
+2025,Oct,LAC,Guatemala,*
+2025,Oct,LAC,Mexico,141
+2025,Oct,LAC,Others,211
+2025,Oct,LAC,Philippines,*
+2025,Oct,LAC,United States,"2,389"
+2025,Oct,LAC,Vietnam,*
+2025,Oct,MCSP,El Salvador,24
+2025,Oct,MCSP,Guatemala,15
+2025,Oct,MCSP,Mexico,218
+2025,Oct,MCSP,Others,363
+2025,Oct,MCSP,Philippines,12
+2025,Oct,MCSP,United States,"3,094"
+2025,Oct,MCSP,Vietnam,*
+2025,Oct,NKSP,El Salvador,18
+2025,Oct,NKSP,Guatemala,20
+2025,Oct,NKSP,Mexico,109
+2025,Oct,NKSP,Others,523
+2025,Oct,NKSP,Philippines,*
+2025,Oct,NKSP,United States,"2,048"
+2025,Oct,NKSP,Vietnam,*
+2025,Oct,PBSP,El Salvador,14
+2025,Oct,PBSP,Guatemala,*
+2025,Oct,PBSP,Mexico,131
+2025,Oct,PBSP,Others,295
+2025,Oct,PBSP,Philippines,*
+2025,Oct,PBSP,United States,"1,766"
+2025,Oct,PBSP,Vietnam,*
+2025,Oct,PVSP,El Salvador,32
+2025,Oct,PVSP,Guatemala,22
+2025,Oct,PVSP,Mexico,262
+2025,Oct,PVSP,Others,572
+2025,Oct,PVSP,Philippines,(Blank)
+2025,Oct,PVSP,United States,"2,253"
+2025,Oct,PVSP,Vietnam,*
+2025,Oct,RJD,El Salvador,26
+2025,Oct,RJD,Guatemala,17
+2025,Oct,RJD,Mexico,290
+2025,Oct,RJD,Others,379
+2025,Oct,RJD,Philippines,15
+2025,Oct,RJD,United States,"3,042"
+2025,Oct,RJD,Vietnam,19
+2025,Oct,SAC,El Salvador,14
+2025,Oct,SAC,Guatemala,*
+2025,Oct,SAC,Mexico,127
+2025,Oct,SAC,Others,190
+2025,Oct,SAC,Philippines,*
+2025,Oct,SAC,United States,"1,797"
+2025,Oct,SAC,Vietnam,*
+2025,Oct,CAL,El Salvador,19
+2025,Oct,CAL,Guatemala,12
+2025,Oct,CAL,Mexico,139
+2025,Oct,CAL,Others,238
+2025,Oct,CAL,Philippines,*
+2025,Oct,CAL,United States,"2,098"
+2025,Oct,CAL,Vietnam,*
+2025,Oct,SATF,El Salvador,48
+2025,Oct,SATF,Guatemala,38
+2025,Oct,SATF,Mexico,510
+2025,Oct,SATF,Others,587
+2025,Oct,SATF,Philippines,19
+2025,Oct,SATF,United States,"4,259"
+2025,Oct,SATF,Vietnam,11
+2025,Oct,SCC,El Salvador,18
+2025,Oct,SCC,Guatemala,15
+2025,Oct,SCC,Mexico,217
+2025,Oct,SCC,Others,712
+2025,Oct,SCC,Philippines,*
+2025,Oct,SCC,United States,"3,095"
+2025,Oct,SCC,Vietnam,10
+2025,Oct,SOL,El Salvador,18
+2025,Oct,SOL,Guatemala,13
+2025,Oct,SOL,Mexico,240
+2025,Oct,SOL,Others,547
+2025,Oct,SOL,Philippines,10
+2025,Oct,SOL,United States,"2,892"
+2025,Oct,SOL,Vietnam,21
+2025,Oct,SQ,El Salvador,44
+2025,Oct,SQ,Guatemala,29
+2025,Oct,SQ,Mexico,353
+2025,Oct,SQ,Others,155
+2025,Oct,SQ,Philippines,17
+2025,Oct,SQ,United States,"1,912"
+2025,Oct,SQ,Vietnam,22
+2025,Oct,SVSP,El Salvador,11
+2025,Oct,SVSP,Guatemala,*
+2025,Oct,SVSP,Mexico,114
+2025,Oct,SVSP,Others,166
+2025,Oct,SVSP,Philippines,(Blank)
+2025,Oct,SVSP,United States,"2,150"
+2025,Oct,SVSP,Vietnam,*
+2025,Oct,VSP,El Salvador,41
+2025,Oct,VSP,Guatemala,27
+2025,Oct,VSP,Mexico,342
+2025,Oct,VSP,Others,394
+2025,Oct,VSP,Philippines,17
+2025,Oct,VSP,United States,"2,436"
+2025,Oct,VSP,Vietnam,13
+2025,Oct,WSP,El Salvador,17
+2025,Oct,WSP,Guatemala,16
+2025,Oct,WSP,Mexico,200
+2025,Oct,WSP,Others,162
+2025,Oct,WSP,Philippines,*
+2025,Oct,WSP,United States,"2,998"
+2025,Oct,WSP,Vietnam,*
+2025,Oct,CPMP,El Salvador,(Blank)
+2025,Oct,CPMP,Guatemala,(Blank)
+2025,Oct,CPMP,Mexico,(Blank)
+2025,Oct,CPMP,Others,(Blank)
+2025,Oct,CPMP,Philippines,(Blank)
+2025,Oct,CPMP,United States,*
+2025,Oct,CPMP,Vietnam,(Blank)
+2025,Oct,FCRF,El Salvador,*
+2025,Oct,FCRF,Guatemala,*
+2025,Oct,FCRF,Mexico,11
+2025,Oct,FCRF,Others,43
+2025,Oct,FCRF,Philippines,(Blank)
+2025,Oct,FCRF,United States,339
+2025,Oct,FCRF,Vietnam,(Blank)
+2025,Oct,Alternative Custody Program,El Salvador,(Blank)
+2025,Oct,Alternative Custody Program,Guatemala,(Blank)
+2025,Oct,Alternative Custody Program,Mexico,*
+2025,Oct,Alternative Custody Program,Others,*
+2025,Oct,Alternative Custody Program,Philippines,(Blank)
+2025,Oct,Alternative Custody Program,United States,*
+2025,Oct,Alternative Custody Program,Vietnam,(Blank)
+2025,Oct,Department of State Hospitals,El Salvador,(Blank)
+2025,Oct,Department of State Hospitals,Guatemala,*
+2025,Oct,Department of State Hospitals,Mexico,10
+2025,Oct,Department of State Hospitals,Others,17
+2025,Oct,Department of State Hospitals,Philippines,(Blank)
+2025,Oct,Department of State Hospitals,United States,164
+2025,Oct,Department of State Hospitals,Vietnam,*
+2025,Oct,Male Community Reentry Facility,El Salvador,*
+2025,Oct,Male Community Reentry Facility,Guatemala,*
+2025,Oct,Male Community Reentry Facility,Mexico,40
+2025,Oct,Male Community Reentry Facility,Others,80
+2025,Oct,Male Community Reentry Facility,Philippines,*
+2025,Oct,Male Community Reentry Facility,United States,647
+2025,Oct,Male Community Reentry Facility,Vietnam,*
+2025,Oct,Medical Reprieve Program,El Salvador,(Blank)
+2025,Oct,Medical Reprieve Program,Guatemala,(Blank)
+2025,Oct,Medical Reprieve Program,Mexico,(Blank)
+2025,Oct,Medical Reprieve Program,Others,(Blank)
+2025,Oct,Medical Reprieve Program,Philippines,(Blank)
+2025,Oct,Medical Reprieve Program,United States,*
+2025,Oct,Medical Reprieve Program,Vietnam,(Blank)
+2025,Oct,CCI,El Salvador,23
+2025,Oct,CCI,Guatemala,14
+2025,Oct,CCI,Mexico,169
+2025,Oct,CCI,Others,342
+2025,Oct,CCI,Philippines,*
+2025,Oct,CCI,United States,"1,897"
+2025,Oct,CCI,Vietnam,*
+2025,Oct,CCWF,El Salvador,13
+2025,Oct,CCWF,Guatemala,*
+2025,Oct,CCWF,Mexico,88
+2025,Oct,CCWF,Others,206
+2025,Oct,CCWF,Philippines,*
+2025,Oct,CCWF,United States,"1,786"
+2025,Oct,CCWF,Vietnam,*
+2025,Oct,CEN,El Salvador,30
+2025,Oct,CEN,Guatemala,13
+2025,Oct,CEN,Mexico,177
+2025,Oct,CEN,Others,275
+2025,Oct,CEN,Philippines,*
+2025,Oct,CEN,United States,"2,686"
+2025,Oct,CEN,Vietnam,*
+2025,Oct,CHCF,El Salvador,14
+2025,Oct,CHCF,Guatemala,12
+2025,Oct,CHCF,Mexico,180
+2025,Oct,CHCF,Others,255
+2025,Oct,CHCF,Philippines,13
+2025,Oct,CHCF,United States,"1,870"
+2025,Oct,CHCF,Vietnam,*
+2025,Oct,CIM,El Salvador,26
+2025,Oct,CIM,Guatemala,20
+2025,Oct,CIM,Mexico,308
+2025,Oct,CIM,Others,278
+2025,Oct,CIM,Philippines,11
+2025,Oct,CIM,United States,"1,622"
+2025,Oct,CIM,Vietnam,11
+2025,Nov,ASP,El Salvador,74
+2025,Nov,ASP,Guatemala,69
+2025,Nov,ASP,Mexico,818
+2025,Nov,ASP,Others,803
+2025,Nov,ASP,Philippines,*
+2025,Nov,ASP,United States,"2,010"
+2025,Nov,ASP,Vietnam,17
+2025,Nov,CIW,El Salvador,*
+2025,Nov,CIW,Guatemala,*
+2025,Nov,CIW,Mexico,49
+2025,Nov,CIW,Others,97
+2025,Nov,CIW,Philippines,*
+2025,Nov,CIW,United States,961
+2025,Nov,CIW,Vietnam,*
+2025,Nov,CMC,El Salvador,11
+2025,Nov,CMC,Guatemala,11
+2025,Nov,CMC,Mexico,121
+2025,Nov,CMC,Others,207
+2025,Nov,CMC,Philippines,*
+2025,Nov,CMC,United States,"1,768"
+2025,Nov,CMC,Vietnam,12
+2025,Nov,CMF,El Salvador,*
+2025,Nov,CMF,Guatemala,10
+2025,Nov,CMF,Mexico,149
+2025,Nov,CMF,Others,208
+2025,Nov,CMF,Philippines,12
+2025,Nov,CMF,United States,"1,759"
+2025,Nov,CMF,Vietnam,*
+2025,Nov,COR,El Salvador,32
+2025,Nov,COR,Guatemala,14
+2025,Nov,COR,Mexico,308
+2025,Nov,COR,Others,290
+2025,Nov,COR,Philippines,12
+2025,Nov,COR,United States,"1,985"
+2025,Nov,COR,Vietnam,*
+2025,Nov,CRC,El Salvador,17
+2025,Nov,CRC,Guatemala,20
+2025,Nov,CRC,Mexico,170
+2025,Nov,CRC,Others,267
+2025,Nov,CRC,Philippines,*
+2025,Nov,CRC,United States,855
+2025,Nov,CRC,Vietnam,*
+2025,Nov,CTF,El Salvador,70
+2025,Nov,CTF,Guatemala,30
+2025,Nov,CTF,Mexico,767
+2025,Nov,CTF,Others,353
+2025,Nov,CTF,Philippines,32
+2025,Nov,CTF,United States,"2,889"
+2025,Nov,CTF,Vietnam,23
+2025,Nov,FOL,El Salvador,25
+2025,Nov,FOL,Guatemala,18
+2025,Nov,FOL,Mexico,233
+2025,Nov,FOL,Others,302
+2025,Nov,FOL,Philippines,*
+2025,Nov,FOL,United States,"2,083"
+2025,Nov,FOL,Vietnam,11
+2025,Nov,HDSP,El Salvador,26
+2025,Nov,HDSP,Guatemala,*
+2025,Nov,HDSP,Mexico,158
+2025,Nov,HDSP,Others,330
+2025,Nov,HDSP,Philippines,*
+2025,Nov,HDSP,United States,"2,279"
+2025,Nov,HDSP,Vietnam,*
+2025,Nov,ISP,El Salvador,58
+2025,Nov,ISP,Guatemala,60
+2025,Nov,ISP,Mexico,591
+2025,Nov,ISP,Others,441
+2025,Nov,ISP,Philippines,24
+2025,Nov,ISP,United States,"1,801"
+2025,Nov,ISP,Vietnam,*
+2025,Nov,KVSP,El Salvador,18
+2025,Nov,KVSP,Guatemala,*
+2025,Nov,KVSP,Mexico,157
+2025,Nov,KVSP,Others,226
+2025,Nov,KVSP,Philippines,*
+2025,Nov,KVSP,United States,"2,657"
+2025,Nov,KVSP,Vietnam,*
+2025,Nov,LAC,El Salvador,25
+2025,Nov,LAC,Guatemala,12
+2025,Nov,LAC,Mexico,156
+2025,Nov,LAC,Others,242
+2025,Nov,LAC,Philippines,*
+2025,Nov,LAC,United States,"2,464"
+2025,Nov,LAC,Vietnam,10
+2025,Nov,MCSP,El Salvador,24
+2025,Nov,MCSP,Guatemala,15
+2025,Nov,MCSP,Mexico,218
+2025,Nov,MCSP,Others,358
+2025,Nov,MCSP,Philippines,12
+2025,Nov,MCSP,United States,"3,067"
+2025,Nov,MCSP,Vietnam,*
+2025,Nov,NKSP,El Salvador,17
+2025,Nov,NKSP,Guatemala,20
+2025,Nov,NKSP,Mexico,123
+2025,Nov,NKSP,Others,494
+2025,Nov,NKSP,Philippines,*
+2025,Nov,NKSP,United States,"2,122"
+2025,Nov,NKSP,Vietnam,*
+2025,Nov,PBSP,El Salvador,15
+2025,Nov,PBSP,Guatemala,*
+2025,Nov,PBSP,Mexico,135
+2025,Nov,PBSP,Others,287
+2025,Nov,PBSP,Philippines,*
+2025,Nov,PBSP,United States,"1,739"
+2025,Nov,PBSP,Vietnam,*
+2025,Nov,PVSP,El Salvador,31
+2025,Nov,PVSP,Guatemala,21
+2025,Nov,PVSP,Mexico,266
+2025,Nov,PVSP,Others,567
+2025,Nov,PVSP,Philippines,(Blank)
+2025,Nov,PVSP,United States,"2,227"
+2025,Nov,PVSP,Vietnam,*
+2025,Nov,RJD,El Salvador,26
+2025,Nov,RJD,Guatemala,16
+2025,Nov,RJD,Mexico,292
+2025,Nov,RJD,Others,367
+2025,Nov,RJD,Philippines,14
+2025,Nov,RJD,United States,"3,024"
+2025,Nov,RJD,Vietnam,19
+2025,Nov,SAC,El Salvador,14
+2025,Nov,SAC,Guatemala,*
+2025,Nov,SAC,Mexico,126
+2025,Nov,SAC,Others,190
+2025,Nov,SAC,Philippines,*
+2025,Nov,SAC,United States,"1,790"
+2025,Nov,SAC,Vietnam,*
+2025,Nov,CAL,El Salvador,19
+2025,Nov,CAL,Guatemala,12
+2025,Nov,CAL,Mexico,143
+2025,Nov,CAL,Others,237
+2025,Nov,CAL,Philippines,*
+2025,Nov,CAL,United States,"2,081"
+2025,Nov,CAL,Vietnam,*
+2025,Nov,SATF,El Salvador,48
+2025,Nov,SATF,Guatemala,36
+2025,Nov,SATF,Mexico,505
+2025,Nov,SATF,Others,588
+2025,Nov,SATF,Philippines,19
+2025,Nov,SATF,United States,"4,206"
+2025,Nov,SATF,Vietnam,10
+2025,Nov,SCC,El Salvador,17
+2025,Nov,SCC,Guatemala,17
+2025,Nov,SCC,Mexico,224
+2025,Nov,SCC,Others,687
+2025,Nov,SCC,Philippines,*
+2025,Nov,SCC,United States,"3,102"
+2025,Nov,SCC,Vietnam,10
+2025,Nov,SOL,El Salvador,18
+2025,Nov,SOL,Guatemala,14
+2025,Nov,SOL,Mexico,239
+2025,Nov,SOL,Others,542
+2025,Nov,SOL,Philippines,10
+2025,Nov,SOL,United States,"2,923"
+2025,Nov,SOL,Vietnam,22
+2025,Nov,SQ,El Salvador,43
+2025,Nov,SQ,Guatemala,28
+2025,Nov,SQ,Mexico,346
+2025,Nov,SQ,Others,153
+2025,Nov,SQ,Philippines,17
+2025,Nov,SQ,United States,"1,896"
+2025,Nov,SQ,Vietnam,24
+2025,Nov,SVSP,El Salvador,11
+2025,Nov,SVSP,Guatemala,*
+2025,Nov,SVSP,Mexico,116
+2025,Nov,SVSP,Others,163
+2025,Nov,SVSP,Philippines,(Blank)
+2025,Nov,SVSP,United States,"2,125"
+2025,Nov,SVSP,Vietnam,*
+2025,Nov,VSP,El Salvador,41
+2025,Nov,VSP,Guatemala,27
+2025,Nov,VSP,Mexico,343
+2025,Nov,VSP,Others,395
+2025,Nov,VSP,Philippines,17
+2025,Nov,VSP,United States,"2,410"
+2025,Nov,VSP,Vietnam,12
+2025,Nov,WSP,El Salvador,15
+2025,Nov,WSP,Guatemala,17
+2025,Nov,WSP,Mexico,198
+2025,Nov,WSP,Others,154
+2025,Nov,WSP,Philippines,*
+2025,Nov,WSP,United States,"3,071"
+2025,Nov,WSP,Vietnam,10
+2025,Nov,CPMP,El Salvador,(Blank)
+2025,Nov,CPMP,Guatemala,(Blank)
+2025,Nov,CPMP,Mexico,(Blank)
+2025,Nov,CPMP,Others,(Blank)
+2025,Nov,CPMP,Philippines,(Blank)
+2025,Nov,CPMP,United States,*
+2025,Nov,CPMP,Vietnam,(Blank)
+2025,Nov,FCRF,El Salvador,*
+2025,Nov,FCRF,Guatemala,*
+2025,Nov,FCRF,Mexico,12
+2025,Nov,FCRF,Others,37
+2025,Nov,FCRF,Philippines,(Blank)
+2025,Nov,FCRF,United States,326
+2025,Nov,FCRF,Vietnam,(Blank)
+2025,Nov,Alternative Custody Program,El Salvador,(Blank)
+2025,Nov,Alternative Custody Program,Guatemala,(Blank)
+2025,Nov,Alternative Custody Program,Mexico,*
+2025,Nov,Alternative Custody Program,Others,*
+2025,Nov,Alternative Custody Program,Philippines,(Blank)
+2025,Nov,Alternative Custody Program,United States,*
+2025,Nov,Alternative Custody Program,Vietnam,(Blank)
+2025,Nov,Department of State Hospitals,El Salvador,(Blank)
+2025,Nov,Department of State Hospitals,Guatemala,*
+2025,Nov,Department of State Hospitals,Mexico,*
+2025,Nov,Department of State Hospitals,Others,15
+2025,Nov,Department of State Hospitals,Philippines,(Blank)
+2025,Nov,Department of State Hospitals,United States,165
+2025,Nov,Department of State Hospitals,Vietnam,*
+2025,Nov,Male Community Reentry Facility,El Salvador,*
+2025,Nov,Male Community Reentry Facility,Guatemala,*
+2025,Nov,Male Community Reentry Facility,Mexico,41
+2025,Nov,Male Community Reentry Facility,Others,79
+2025,Nov,Male Community Reentry Facility,Philippines,*
+2025,Nov,Male Community Reentry Facility,United States,655
+2025,Nov,Male Community Reentry Facility,Vietnam,(Blank)
+2025,Nov,Medical Reprieve Program,El Salvador,(Blank)
+2025,Nov,Medical Reprieve Program,Guatemala,(Blank)
+2025,Nov,Medical Reprieve Program,Mexico,(Blank)
+2025,Nov,Medical Reprieve Program,Others,(Blank)
+2025,Nov,Medical Reprieve Program,Philippines,(Blank)
+2025,Nov,Medical Reprieve Program,United States,*
+2025,Nov,Medical Reprieve Program,Vietnam,(Blank)
+2025,Nov,CCI,El Salvador,21
+2025,Nov,CCI,Guatemala,14
+2025,Nov,CCI,Mexico,172
+2025,Nov,CCI,Others,333
+2025,Nov,CCI,Philippines,*
+2025,Nov,CCI,United States,"1,839"
+2025,Nov,CCI,Vietnam,*
+2025,Nov,CCWF,El Salvador,14
+2025,Nov,CCWF,Guatemala,*
+2025,Nov,CCWF,Mexico,89
+2025,Nov,CCWF,Others,211
+2025,Nov,CCWF,Philippines,*
+2025,Nov,CCWF,United States,"1,804"
+2025,Nov,CCWF,Vietnam,*
+2025,Nov,CEN,El Salvador,30
+2025,Nov,CEN,Guatemala,12
+2025,Nov,CEN,Mexico,188
+2025,Nov,CEN,Others,269
+2025,Nov,CEN,Philippines,*
+2025,Nov,CEN,United States,"2,675"
+2025,Nov,CEN,Vietnam,*
+2025,Nov,CHCF,El Salvador,15
+2025,Nov,CHCF,Guatemala,12
+2025,Nov,CHCF,Mexico,183
+2025,Nov,CHCF,Others,255
+2025,Nov,CHCF,Philippines,12
+2025,Nov,CHCF,United States,"1,852"
+2025,Nov,CHCF,Vietnam,*
+2025,Nov,CIM,El Salvador,27
+2025,Nov,CIM,Guatemala,20
+2025,Nov,CIM,Mexico,301
+2025,Nov,CIM,Others,279
+2025,Nov,CIM,Philippines,11
+2025,Nov,CIM,United States,"1,581"
+2025,Nov,CIM,Vietnam,13
+2025,Dec,ASP,El Salvador,75
+2025,Dec,ASP,Guatemala,67
+2025,Dec,ASP,Mexico,817
+2025,Dec,ASP,Others,804
+2025,Dec,ASP,Philippines,*
+2025,Dec,ASP,United States,"2,034"
+2025,Dec,ASP,Vietnam,17
+2025,Dec,CIW,El Salvador,*
+2025,Dec,CIW,Guatemala,*
+2025,Dec,CIW,Mexico,50
+2025,Dec,CIW,Others,95
+2025,Dec,CIW,Philippines,*
+2025,Dec,CIW,United States,938
+2025,Dec,CIW,Vietnam,*
+2025,Dec,CMC,El Salvador,13
+2025,Dec,CMC,Guatemala,14
+2025,Dec,CMC,Mexico,127
+2025,Dec,CMC,Others,213
+2025,Dec,CMC,Philippines,*
+2025,Dec,CMC,United States,"1,814"
+2025,Dec,CMC,Vietnam,14
+2025,Dec,CMF,El Salvador,*
+2025,Dec,CMF,Guatemala,10
+2025,Dec,CMF,Mexico,154
+2025,Dec,CMF,Others,210
+2025,Dec,CMF,Philippines,13
+2025,Dec,CMF,United States,"1,782"
+2025,Dec,CMF,Vietnam,*
+2025,Dec,COR,El Salvador,32
+2025,Dec,COR,Guatemala,14
+2025,Dec,COR,Mexico,308
+2025,Dec,COR,Others,290
+2025,Dec,COR,Philippines,11
+2025,Dec,COR,United States,"1,995"
+2025,Dec,COR,Vietnam,*
+2025,Dec,CRC,El Salvador,14
+2025,Dec,CRC,Guatemala,17
+2025,Dec,CRC,Mexico,132
+2025,Dec,CRC,Others,206
+2025,Dec,CRC,Philippines,(Blank)
+2025,Dec,CRC,United States,627
+2025,Dec,CRC,Vietnam,*
+2025,Dec,CTF,El Salvador,70
+2025,Dec,CTF,Guatemala,30
+2025,Dec,CTF,Mexico,764
+2025,Dec,CTF,Others,349
+2025,Dec,CTF,Philippines,31
+2025,Dec,CTF,United States,"2,864"
+2025,Dec,CTF,Vietnam,23
+2025,Dec,FOL,El Salvador,26
+2025,Dec,FOL,Guatemala,18
+2025,Dec,FOL,Mexico,236
+2025,Dec,FOL,Others,299
+2025,Dec,FOL,Philippines,*
+2025,Dec,FOL,United States,"2,110"
+2025,Dec,FOL,Vietnam,10
+2025,Dec,HDSP,El Salvador,26
+2025,Dec,HDSP,Guatemala,*
+2025,Dec,HDSP,Mexico,159
+2025,Dec,HDSP,Others,343
+2025,Dec,HDSP,Philippines,*
+2025,Dec,HDSP,United States,"2,347"
+2025,Dec,HDSP,Vietnam,*
+2025,Dec,ISP,El Salvador,59
+2025,Dec,ISP,Guatemala,63
+2025,Dec,ISP,Mexico,611
+2025,Dec,ISP,Others,460
+2025,Dec,ISP,Philippines,23
+2025,Dec,ISP,United States,"1,947"
+2025,Dec,ISP,Vietnam,*
+2025,Dec,KVSP,El Salvador,21
+2025,Dec,KVSP,Guatemala,*
+2025,Dec,KVSP,Mexico,166
+2025,Dec,KVSP,Others,240
+2025,Dec,KVSP,Philippines,*
+2025,Dec,KVSP,United States,"2,811"
+2025,Dec,KVSP,Vietnam,*
+2025,Dec,LAC,El Salvador,25
+2025,Dec,LAC,Guatemala,16
+2025,Dec,LAC,Mexico,164
+2025,Dec,LAC,Others,268
+2025,Dec,LAC,Philippines,*
+2025,Dec,LAC,United States,"2,577"
+2025,Dec,LAC,Vietnam,10
+2025,Dec,MCSP,El Salvador,22
+2025,Dec,MCSP,Guatemala,16
+2025,Dec,MCSP,Mexico,214
+2025,Dec,MCSP,Others,343
+2025,Dec,MCSP,Philippines,12
+2025,Dec,MCSP,United States,"2,936"
+2025,Dec,MCSP,Vietnam,*
+2025,Dec,NKSP,El Salvador,18
+2025,Dec,NKSP,Guatemala,21
+2025,Dec,NKSP,Mexico,120
+2025,Dec,NKSP,Others,514
+2025,Dec,NKSP,Philippines,*
+2025,Dec,NKSP,United States,"2,155"
+2025,Dec,NKSP,Vietnam,*
+2025,Dec,PBSP,El Salvador,14
+2025,Dec,PBSP,Guatemala,10
+2025,Dec,PBSP,Mexico,134
+2025,Dec,PBSP,Others,269
+2025,Dec,PBSP,Philippines,*
+2025,Dec,PBSP,United States,"1,732"
+2025,Dec,PBSP,Vietnam,*
+2025,Dec,PVSP,El Salvador,32
+2025,Dec,PVSP,Guatemala,19
+2025,Dec,PVSP,Mexico,262
+2025,Dec,PVSP,Others,548
+2025,Dec,PVSP,Philippines,(Blank)
+2025,Dec,PVSP,United States,"2,221"
+2025,Dec,PVSP,Vietnam,*
+2025,Dec,RJD,El Salvador,27
+2025,Dec,RJD,Guatemala,16
+2025,Dec,RJD,Mexico,293
+2025,Dec,RJD,Others,367
+2025,Dec,RJD,Philippines,15
+2025,Dec,RJD,United States,"3,035"
+2025,Dec,RJD,Vietnam,20
+2025,Dec,SAC,El Salvador,14
+2025,Dec,SAC,Guatemala,*
+2025,Dec,SAC,Mexico,125
+2025,Dec,SAC,Others,197
+2025,Dec,SAC,Philippines,*
+2025,Dec,SAC,United States,"1,798"
+2025,Dec,SAC,Vietnam,*
+2025,Dec,CAL,El Salvador,20
+2025,Dec,CAL,Guatemala,12
+2025,Dec,CAL,Mexico,144
+2025,Dec,CAL,Others,236
+2025,Dec,CAL,Philippines,*
+2025,Dec,CAL,United States,"2,087"
+2025,Dec,CAL,Vietnam,*
+2025,Dec,SATF,El Salvador,48
+2025,Dec,SATF,Guatemala,35
+2025,Dec,SATF,Mexico,498
+2025,Dec,SATF,Others,578
+2025,Dec,SATF,Philippines,19
+2025,Dec,SATF,United States,"4,131"
+2025,Dec,SATF,Vietnam,10
+2025,Dec,SCC,El Salvador,17
+2025,Dec,SCC,Guatemala,17
+2025,Dec,SCC,Mexico,222
+2025,Dec,SCC,Others,688
+2025,Dec,SCC,Philippines,*
+2025,Dec,SCC,United States,"3,140"
+2025,Dec,SCC,Vietnam,11
+2025,Dec,SOL,El Salvador,19
+2025,Dec,SOL,Guatemala,14
+2025,Dec,SOL,Mexico,246
+2025,Dec,SOL,Others,539
+2025,Dec,SOL,Philippines,10
+2025,Dec,SOL,United States,"2,933"
+2025,Dec,SOL,Vietnam,22
+2025,Dec,SQ,El Salvador,43
+2025,Dec,SQ,Guatemala,28
+2025,Dec,SQ,Mexico,343
+2025,Dec,SQ,Others,153
+2025,Dec,SQ,Philippines,17
+2025,Dec,SQ,United States,"1,900"
+2025,Dec,SQ,Vietnam,22
+2025,Dec,SVSP,El Salvador,11
+2025,Dec,SVSP,Guatemala,*
+2025,Dec,SVSP,Mexico,115
+2025,Dec,SVSP,Others,164
+2025,Dec,SVSP,Philippines,*
+2025,Dec,SVSP,United States,"2,065"
+2025,Dec,SVSP,Vietnam,*
+2025,Dec,VSP,El Salvador,42
+2025,Dec,VSP,Guatemala,27
+2025,Dec,VSP,Mexico,339
+2025,Dec,VSP,Others,387
+2025,Dec,VSP,Philippines,16
+2025,Dec,VSP,United States,"2,377"
+2025,Dec,VSP,Vietnam,12
+2025,Dec,WSP,El Salvador,18
+2025,Dec,WSP,Guatemala,10
+2025,Dec,WSP,Mexico,210
+2025,Dec,WSP,Others,149
+2025,Dec,WSP,Philippines,*
+2025,Dec,WSP,United States,"2,965"
+2025,Dec,WSP,Vietnam,10
+2025,Dec,CPMP,El Salvador,(Blank)
+2025,Dec,CPMP,Guatemala,(Blank)
+2025,Dec,CPMP,Mexico,(Blank)
+2025,Dec,CPMP,Others,(Blank)
+2025,Dec,CPMP,Philippines,(Blank)
+2025,Dec,CPMP,United States,*
+2025,Dec,CPMP,Vietnam,(Blank)
+2025,Dec,FCRF,El Salvador,*
+2025,Dec,FCRF,Guatemala,*
+2025,Dec,FCRF,Mexico,11
+2025,Dec,FCRF,Others,35
+2025,Dec,FCRF,Philippines,(Blank)
+2025,Dec,FCRF,United States,328
+2025,Dec,FCRF,Vietnam,(Blank)
+2025,Dec,Alternative Custody Program,El Salvador,(Blank)
+2025,Dec,Alternative Custody Program,Guatemala,(Blank)
+2025,Dec,Alternative Custody Program,Mexico,*
+2025,Dec,Alternative Custody Program,Others,*
+2025,Dec,Alternative Custody Program,Philippines,(Blank)
+2025,Dec,Alternative Custody Program,United States,*
+2025,Dec,Alternative Custody Program,Vietnam,(Blank)
+2025,Dec,Department of State Hospitals,El Salvador,(Blank)
+2025,Dec,Department of State Hospitals,Guatemala,*
+2025,Dec,Department of State Hospitals,Mexico,*
+2025,Dec,Department of State Hospitals,Others,17
+2025,Dec,Department of State Hospitals,Philippines,(Blank)
+2025,Dec,Department of State Hospitals,United States,159
+2025,Dec,Department of State Hospitals,Vietnam,*
+2025,Dec,Male Community Reentry Facility,El Salvador,*
+2025,Dec,Male Community Reentry Facility,Guatemala,*
+2025,Dec,Male Community Reentry Facility,Mexico,41
+2025,Dec,Male Community Reentry Facility,Others,88
+2025,Dec,Male Community Reentry Facility,Philippines,*
+2025,Dec,Male Community Reentry Facility,United States,637
+2025,Dec,Male Community Reentry Facility,Vietnam,(Blank)
+2025,Dec,Medical Reprieve Program,El Salvador,(Blank)
+2025,Dec,Medical Reprieve Program,Guatemala,(Blank)
+2025,Dec,Medical Reprieve Program,Mexico,(Blank)
+2025,Dec,Medical Reprieve Program,Others,(Blank)
+2025,Dec,Medical Reprieve Program,Philippines,(Blank)
+2025,Dec,Medical Reprieve Program,United States,*
+2025,Dec,Medical Reprieve Program,Vietnam,(Blank)
+2025,Dec,CCI,El Salvador,19
+2025,Dec,CCI,Guatemala,13
+2025,Dec,CCI,Mexico,175
+2025,Dec,CCI,Others,338
+2025,Dec,CCI,Philippines,*
+2025,Dec,CCI,United States,"1,819"
+2025,Dec,CCI,Vietnam,*
+2025,Dec,CCWF,El Salvador,14
+2025,Dec,CCWF,Guatemala,*
+2025,Dec,CCWF,Mexico,83
+2025,Dec,CCWF,Others,212
+2025,Dec,CCWF,Philippines,*
+2025,Dec,CCWF,United States,"1,847"
+2025,Dec,CCWF,Vietnam,*
+2025,Dec,CEN,El Salvador,30
+2025,Dec,CEN,Guatemala,13
+2025,Dec,CEN,Mexico,188
+2025,Dec,CEN,Others,261
+2025,Dec,CEN,Philippines,*
+2025,Dec,CEN,United States,"2,651"
+2025,Dec,CEN,Vietnam,*
+2025,Dec,CHCF,El Salvador,14
+2025,Dec,CHCF,Guatemala,11
+2025,Dec,CHCF,Mexico,193
+2025,Dec,CHCF,Others,252
+2025,Dec,CHCF,Philippines,12
+2025,Dec,CHCF,United States,"1,860"
+2025,Dec,CHCF,Vietnam,*
+2025,Dec,CIM,El Salvador,29
+2025,Dec,CIM,Guatemala,20
+2025,Dec,CIM,Mexico,307
+2025,Dec,CIM,Others,287
+2025,Dec,CIM,Philippines,11
+2025,Dec,CIM,United States,"1,626"
+2025,Dec,CIM,Vietnam,13

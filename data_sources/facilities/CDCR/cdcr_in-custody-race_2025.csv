@@ -1,0 +1,4441 @@
+Year,Month,Location,Race,Population
+2025,Jan,ASP,American Indian/Alaskan Native,52
+2025,Jan,ASP,Asian,51
+2025,Jan,ASP,Black,**
+2025,Jan,ASP,Cuban,(Blank)
+2025,Jan,ASP,Hispanic,"2,055"
+2025,Jan,ASP,Mexican,497
+2025,Jan,ASP,N/A,(Blank)
+2025,Jan,ASP,Other,167
+2025,Jan,ASP,Pacific Islander,**
+2025,Jan,ASP,White,915
+2025,Jan,CIW,American Indian/Alaskan Native,**
+2025,Jan,CIW,Asian,**
+2025,Jan,CIW,Black,283
+2025,Jan,CIW,Cuban,(Blank)
+2025,Jan,CIW,Hispanic,404
+2025,Jan,CIW,Mexican,51
+2025,Jan,CIW,N/A,(Blank)
+2025,Jan,CIW,Other,**
+2025,Jan,CIW,Pacific Islander,**
+2025,Jan,CIW,White,435
+2025,Jan,CMC,American Indian/Alaskan Native,**
+2025,Jan,CMC,Asian,**
+2025,Jan,CMC,Black,739
+2025,Jan,CMC,Cuban,**
+2025,Jan,CMC,Hispanic,666
+2025,Jan,CMC,Mexican,172
+2025,Jan,CMC,N/A,(Blank)
+2025,Jan,CMC,Other,94
+2025,Jan,CMC,Pacific Islander,**
+2025,Jan,CMC,White,453
+2025,Jan,CMF,American Indian/Alaskan Native,**
+2025,Jan,CMF,Asian,**
+2025,Jan,CMF,Black,643
+2025,Jan,CMF,Cuban,(Blank)
+2025,Jan,CMF,Hispanic,372
+2025,Jan,CMF,Mexican,186
+2025,Jan,CMF,N/A,(Blank)
+2025,Jan,CMF,Other,82
+2025,Jan,CMF,Pacific Islander,**
+2025,Jan,CMF,White,541
+2025,Jan,COR,American Indian/Alaskan Native,**
+2025,Jan,COR,Asian,**
+2025,Jan,COR,Black,666
+2025,Jan,COR,Cuban,**
+2025,Jan,COR,Hispanic,880
+2025,Jan,COR,Mexican,376
+2025,Jan,COR,N/A,(Blank)
+2025,Jan,COR,Other,85
+2025,Jan,COR,Pacific Islander,**
+2025,Jan,COR,White,571
+2025,Jan,CRC,American Indian/Alaskan Native,**
+2025,Jan,CRC,Asian,51
+2025,Jan,CRC,Black,767
+2025,Jan,CRC,Cuban,(Blank)
+2025,Jan,CRC,Hispanic,"1,163"
+2025,Jan,CRC,Mexican,138
+2025,Jan,CRC,N/A,(Blank)
+2025,Jan,CRC,Other,86
+2025,Jan,CRC,Pacific Islander,**
+2025,Jan,CRC,White,498
+2025,Jan,CTF,American Indian/Alaskan Native,**
+2025,Jan,CTF,Asian,60
+2025,Jan,CTF,Black,"1,054"
+2025,Jan,CTF,Cuban,**
+2025,Jan,CTF,Hispanic,"1,494"
+2025,Jan,CTF,Mexican,700
+2025,Jan,CTF,N/A,(Blank)
+2025,Jan,CTF,Other,212
+2025,Jan,CTF,Pacific Islander,**
+2025,Jan,CTF,White,770
+2025,Jan,FOL,American Indian/Alaskan Native,**
+2025,Jan,FOL,Asian,**
+2025,Jan,FOL,Black,759
+2025,Jan,FOL,Cuban,**
+2025,Jan,FOL,Hispanic,"1,043"
+2025,Jan,FOL,Mexican,396
+2025,Jan,FOL,N/A,(Blank)
+2025,Jan,FOL,Other,127
+2025,Jan,FOL,Pacific Islander,**
+2025,Jan,FOL,White,350
+2025,Jan,HDSP,American Indian/Alaskan Native,**
+2025,Jan,HDSP,Asian,**
+2025,Jan,HDSP,Black,955
+2025,Jan,HDSP,Cuban,(Blank)
+2025,Jan,HDSP,Hispanic,943
+2025,Jan,HDSP,Mexican,214
+2025,Jan,HDSP,N/A,(Blank)
+2025,Jan,HDSP,Other,86
+2025,Jan,HDSP,Pacific Islander,**
+2025,Jan,HDSP,White,524
+2025,Jan,ISP,American Indian/Alaskan Native,**
+2025,Jan,ISP,Asian,54
+2025,Jan,ISP,Black,553
+2025,Jan,ISP,Cuban,(Blank)
+2025,Jan,ISP,Hispanic,"1,427"
+2025,Jan,ISP,Mexican,317
+2025,Jan,ISP,N/A,(Blank)
+2025,Jan,ISP,Other,91
+2025,Jan,ISP,Pacific Islander,**
+2025,Jan,ISP,White,353
+2025,Jan,KVSP,American Indian/Alaskan Native,**
+2025,Jan,KVSP,Asian,**
+2025,Jan,KVSP,Black,"1,099"
+2025,Jan,KVSP,Cuban,**
+2025,Jan,KVSP,Hispanic,"1,141"
+2025,Jan,KVSP,Mexican,465
+2025,Jan,KVSP,N/A,(Blank)
+2025,Jan,KVSP,Other,90
+2025,Jan,KVSP,Pacific Islander,**
+2025,Jan,KVSP,White,323
+2025,Jan,LAC,American Indian/Alaskan Native,**
+2025,Jan,LAC,Asian,**
+2025,Jan,LAC,Black,"1,392"
+2025,Jan,LAC,Cuban,(Blank)
+2025,Jan,LAC,Hispanic,807
+2025,Jan,LAC,Mexican,397
+2025,Jan,LAC,N/A,(Blank)
+2025,Jan,LAC,Other,93
+2025,Jan,LAC,Pacific Islander,**
+2025,Jan,LAC,White,371
+2025,Jan,MCSP,American Indian/Alaskan Native,75
+2025,Jan,MCSP,Asian,**
+2025,Jan,MCSP,Black,986
+2025,Jan,MCSP,Cuban,**
+2025,Jan,MCSP,Hispanic,955
+2025,Jan,MCSP,Mexican,444
+2025,Jan,MCSP,N/A,(Blank)
+2025,Jan,MCSP,Other,176
+2025,Jan,MCSP,Pacific Islander,**
+2025,Jan,MCSP,White,"1,166"
+2025,Jan,NKSP,American Indian/Alaskan Native,**
+2025,Jan,NKSP,Asian,**
+2025,Jan,NKSP,Black,781
+2025,Jan,NKSP,Cuban,(Blank)
+2025,Jan,NKSP,Hispanic,"1,151"
+2025,Jan,NKSP,Mexican,149
+2025,Jan,NKSP,N/A,(Blank)
+2025,Jan,NKSP,Other,62
+2025,Jan,NKSP,Pacific Islander,**
+2025,Jan,NKSP,White,497
+2025,Jan,PBSP,American Indian/Alaskan Native,**
+2025,Jan,PBSP,Asian,**
+2025,Jan,PBSP,Black,632
+2025,Jan,PBSP,Cuban,**
+2025,Jan,PBSP,Hispanic,640
+2025,Jan,PBSP,Mexican,179
+2025,Jan,PBSP,N/A,(Blank)
+2025,Jan,PBSP,Other,77
+2025,Jan,PBSP,Pacific Islander,**
+2025,Jan,PBSP,White,416
+2025,Jan,PVSP,American Indian/Alaskan Native,**
+2025,Jan,PVSP,Asian,**
+2025,Jan,PVSP,Black,**
+2025,Jan,PVSP,Cuban,**
+2025,Jan,PVSP,Hispanic,"1,795"
+2025,Jan,PVSP,Mexican,276
+2025,Jan,PVSP,N/A,(Blank)
+2025,Jan,PVSP,Other,92
+2025,Jan,PVSP,Pacific Islander,**
+2025,Jan,PVSP,White,642
+2025,Jan,RJD,American Indian/Alaskan Native,**
+2025,Jan,RJD,Asian,**
+2025,Jan,RJD,Black,"1,003"
+2025,Jan,RJD,Cuban,**
+2025,Jan,RJD,Hispanic,837
+2025,Jan,RJD,Mexican,396
+2025,Jan,RJD,N/A,(Blank)
+2025,Jan,RJD,Other,153
+2025,Jan,RJD,Pacific Islander,**
+2025,Jan,RJD,White,789
+2025,Jan,SAC,American Indian/Alaskan Native,**
+2025,Jan,SAC,Asian,**
+2025,Jan,SAC,Black,784
+2025,Jan,SAC,Cuban,**
+2025,Jan,SAC,Hispanic,603
+2025,Jan,SAC,Mexican,221
+2025,Jan,SAC,N/A,(Blank)
+2025,Jan,SAC,Other,67
+2025,Jan,SAC,Pacific Islander,**
+2025,Jan,SAC,White,375
+2025,Jan,CAL,American Indian/Alaskan Native,**
+2025,Jan,CAL,Asian,**
+2025,Jan,CAL,Black,617
+2025,Jan,CAL,Cuban,(Blank)
+2025,Jan,CAL,Hispanic,"1,175"
+2025,Jan,CAL,Mexican,337
+2025,Jan,CAL,N/A,(Blank)
+2025,Jan,CAL,Other,57
+2025,Jan,CAL,Pacific Islander,**
+2025,Jan,CAL,White,258
+2025,Jan,SATF,American Indian/Alaskan Native,67
+2025,Jan,SATF,Asian,64
+2025,Jan,SATF,Black,"1,421"
+2025,Jan,SATF,Cuban,**
+2025,Jan,SATF,Hispanic,"1,730"
+2025,Jan,SATF,Mexican,610
+2025,Jan,SATF,N/A,(Blank)
+2025,Jan,SATF,Other,188
+2025,Jan,SATF,Pacific Islander,**
+2025,Jan,SATF,White,"1,055"
+2025,Jan,SCC,American Indian/Alaskan Native,**
+2025,Jan,SCC,Asian,66
+2025,Jan,SCC,Black,"1,204"
+2025,Jan,SCC,Cuban,(Blank)
+2025,Jan,SCC,Hispanic,"1,694"
+2025,Jan,SCC,Mexican,151
+2025,Jan,SCC,N/A,(Blank)
+2025,Jan,SCC,Other,136
+2025,Jan,SCC,Pacific Islander,**
+2025,Jan,SCC,White,861
+2025,Jan,SOL,American Indian/Alaskan Native,**
+2025,Jan,SOL,Asian,57
+2025,Jan,SOL,Black,"1,461"
+2025,Jan,SOL,Cuban,(Blank)
+2025,Jan,SOL,Hispanic,"1,470"
+2025,Jan,SOL,Mexican,392
+2025,Jan,SOL,N/A,(Blank)
+2025,Jan,SOL,Other,158
+2025,Jan,SOL,Pacific Islander,**
+2025,Jan,SOL,White,298
+2025,Jan,SQ,American Indian/Alaskan Native,**
+2025,Jan,SQ,Asian,59
+2025,Jan,SQ,Black,899
+2025,Jan,SQ,Cuban,**
+2025,Jan,SQ,Hispanic,785
+2025,Jan,SQ,Mexican,221
+2025,Jan,SQ,N/A,(Blank)
+2025,Jan,SQ,Other,150
+2025,Jan,SQ,Pacific Islander,**
+2025,Jan,SQ,White,772
+2025,Jan,SVSP,American Indian/Alaskan Native,**
+2025,Jan,SVSP,Asian,**
+2025,Jan,SVSP,Black,958
+2025,Jan,SVSP,Cuban,**
+2025,Jan,SVSP,Hispanic,682
+2025,Jan,SVSP,Mexican,270
+2025,Jan,SVSP,N/A,(Blank)
+2025,Jan,SVSP,Other,72
+2025,Jan,SVSP,Pacific Islander,**
+2025,Jan,SVSP,White,316
+2025,Jan,VSP,American Indian/Alaskan Native,**
+2025,Jan,VSP,Asian,56
+2025,Jan,VSP,Black,822
+2025,Jan,VSP,Cuban,**
+2025,Jan,VSP,Hispanic,842
+2025,Jan,VSP,Mexican,355
+2025,Jan,VSP,N/A,(Blank)
+2025,Jan,VSP,Other,149
+2025,Jan,VSP,Pacific Islander,**
+2025,Jan,VSP,White,865
+2025,Jan,WSP,American Indian/Alaskan Native,**
+2025,Jan,WSP,Asian,56
+2025,Jan,WSP,Black,907
+2025,Jan,WSP,Cuban,(Blank)
+2025,Jan,WSP,Hispanic,"1,754"
+2025,Jan,WSP,Mexican,243
+2025,Jan,WSP,N/A,(Blank)
+2025,Jan,WSP,Other,89
+2025,Jan,WSP,Pacific Islander,**
+2025,Jan,WSP,White,744
+2025,Jan,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Jan,CPMP,Asian,(Blank)
+2025,Jan,CPMP,Black,**
+2025,Jan,CPMP,Cuban,(Blank)
+2025,Jan,CPMP,Hispanic,**
+2025,Jan,CPMP,Mexican,(Blank)
+2025,Jan,CPMP,N/A,(Blank)
+2025,Jan,CPMP,Other,**
+2025,Jan,CPMP,Pacific Islander,(Blank)
+2025,Jan,CPMP,White,**
+2025,Jan,FCRF,American Indian/Alaskan Native,**
+2025,Jan,FCRF,Asian,**
+2025,Jan,FCRF,Black,71
+2025,Jan,FCRF,Cuban,(Blank)
+2025,Jan,FCRF,Hispanic,117
+2025,Jan,FCRF,Mexican,**
+2025,Jan,FCRF,N/A,(Blank)
+2025,Jan,FCRF,Other,**
+2025,Jan,FCRF,Pacific Islander,**
+2025,Jan,FCRF,White,137
+2025,Jan,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Jan,Alternative Custody Program,Asian,**
+2025,Jan,Alternative Custody Program,Black,**
+2025,Jan,Alternative Custody Program,Cuban,(Blank)
+2025,Jan,Alternative Custody Program,Hispanic,**
+2025,Jan,Alternative Custody Program,Mexican,(Blank)
+2025,Jan,Alternative Custody Program,N/A,(Blank)
+2025,Jan,Alternative Custody Program,Other,(Blank)
+2025,Jan,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Jan,Alternative Custody Program,White,**
+2025,Jan,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Jan,Department of State Hospitals,Asian,**
+2025,Jan,Department of State Hospitals,Black,**
+2025,Jan,Department of State Hospitals,Cuban,(Blank)
+2025,Jan,Department of State Hospitals,Hispanic,**
+2025,Jan,Department of State Hospitals,Mexican,**
+2025,Jan,Department of State Hospitals,N/A,(Blank)
+2025,Jan,Department of State Hospitals,Other,**
+2025,Jan,Department of State Hospitals,Pacific Islander,**
+2025,Jan,Department of State Hospitals,White,59
+2025,Jan,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Jan,Male Community Reentry Facility,Asian,**
+2025,Jan,Male Community Reentry Facility,Black,224
+2025,Jan,Male Community Reentry Facility,Cuban,(Blank)
+2025,Jan,Male Community Reentry Facility,Hispanic,248
+2025,Jan,Male Community Reentry Facility,Mexican,61
+2025,Jan,Male Community Reentry Facility,N/A,(Blank)
+2025,Jan,Male Community Reentry Facility,Other,**
+2025,Jan,Male Community Reentry Facility,Pacific Islander,**
+2025,Jan,Male Community Reentry Facility,White,92
+2025,Jan,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Jan,Medical Reprieve Program,Asian,(Blank)
+2025,Jan,Medical Reprieve Program,Black,**
+2025,Jan,Medical Reprieve Program,Cuban,(Blank)
+2025,Jan,Medical Reprieve Program,Hispanic,(Blank)
+2025,Jan,Medical Reprieve Program,Mexican,(Blank)
+2025,Jan,Medical Reprieve Program,N/A,(Blank)
+2025,Jan,Medical Reprieve Program,Other,(Blank)
+2025,Jan,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Jan,Medical Reprieve Program,White,**
+2025,Jan,CCI,American Indian/Alaskan Native,**
+2025,Jan,CCI,Asian,**
+2025,Jan,CCI,Black,612
+2025,Jan,CCI,Cuban,**
+2025,Jan,CCI,Hispanic,939
+2025,Jan,CCI,Mexican,246
+2025,Jan,CCI,N/A,(Blank)
+2025,Jan,CCI,Other,71
+2025,Jan,CCI,Pacific Islander,**
+2025,Jan,CCI,White,439
+2025,Jan,CCWF,American Indian/Alaskan Native,**
+2025,Jan,CCWF,Asian,**
+2025,Jan,CCWF,Black,526
+2025,Jan,CCWF,Cuban,**
+2025,Jan,CCWF,Hispanic,646
+2025,Jan,CCWF,Mexican,78
+2025,Jan,CCWF,N/A,(Blank)
+2025,Jan,CCWF,Other,68
+2025,Jan,CCWF,Pacific Islander,**
+2025,Jan,CCWF,White,586
+2025,Jan,CEN,American Indian/Alaskan Native,**
+2025,Jan,CEN,Asian,**
+2025,Jan,CEN,Black,692
+2025,Jan,CEN,Cuban,**
+2025,Jan,CEN,Hispanic,"1,344"
+2025,Jan,CEN,Mexican,442
+2025,Jan,CEN,N/A,(Blank)
+2025,Jan,CEN,Other,58
+2025,Jan,CEN,Pacific Islander,**
+2025,Jan,CEN,White,203
+2025,Jan,CHCF,American Indian/Alaskan Native,**
+2025,Jan,CHCF,Asian,**
+2025,Jan,CHCF,Black,658
+2025,Jan,CHCF,Cuban,(Blank)
+2025,Jan,CHCF,Hispanic,340
+2025,Jan,CHCF,Mexican,246
+2025,Jan,CHCF,N/A,(Blank)
+2025,Jan,CHCF,Other,114
+2025,Jan,CHCF,Pacific Islander,**
+2025,Jan,CHCF,White,680
+2025,Jan,CIM,American Indian/Alaskan Native,**
+2025,Jan,CIM,Asian,**
+2025,Jan,CIM,Black,608
+2025,Jan,CIM,Cuban,(Blank)
+2025,Jan,CIM,Hispanic,592
+2025,Jan,CIM,Mexican,332
+2025,Jan,CIM,N/A,(Blank)
+2025,Jan,CIM,Other,87
+2025,Jan,CIM,Pacific Islander,**
+2025,Jan,CIM,White,551
+2025,Feb,ASP,American Indian/Alaskan Native,53
+2025,Feb,ASP,Asian,**
+2025,Feb,ASP,Black,**
+2025,Feb,ASP,Cuban,(Blank)
+2025,Feb,ASP,Hispanic,"2,035"
+2025,Feb,ASP,Mexican,492
+2025,Feb,ASP,N/A,(Blank)
+2025,Feb,ASP,Other,162
+2025,Feb,ASP,Pacific Islander,**
+2025,Feb,ASP,White,924
+2025,Feb,CIW,American Indian/Alaskan Native,**
+2025,Feb,CIW,Asian,**
+2025,Feb,CIW,Black,275
+2025,Feb,CIW,Cuban,(Blank)
+2025,Feb,CIW,Hispanic,395
+2025,Feb,CIW,Mexican,**
+2025,Feb,CIW,N/A,(Blank)
+2025,Feb,CIW,Other,51
+2025,Feb,CIW,Pacific Islander,**
+2025,Feb,CIW,White,412
+2025,Feb,CMC,American Indian/Alaskan Native,**
+2025,Feb,CMC,Asian,**
+2025,Feb,CMC,Black,745
+2025,Feb,CMC,Cuban,**
+2025,Feb,CMC,Hispanic,666
+2025,Feb,CMC,Mexican,168
+2025,Feb,CMC,N/A,(Blank)
+2025,Feb,CMC,Other,93
+2025,Feb,CMC,Pacific Islander,**
+2025,Feb,CMC,White,459
+2025,Feb,CMF,American Indian/Alaskan Native,**
+2025,Feb,CMF,Asian,**
+2025,Feb,CMF,Black,644
+2025,Feb,CMF,Cuban,(Blank)
+2025,Feb,CMF,Hispanic,389
+2025,Feb,CMF,Mexican,187
+2025,Feb,CMF,N/A,(Blank)
+2025,Feb,CMF,Other,82
+2025,Feb,CMF,Pacific Islander,**
+2025,Feb,CMF,White,543
+2025,Feb,COR,American Indian/Alaskan Native,**
+2025,Feb,COR,Asian,**
+2025,Feb,COR,Black,656
+2025,Feb,COR,Cuban,**
+2025,Feb,COR,Hispanic,879
+2025,Feb,COR,Mexican,371
+2025,Feb,COR,N/A,(Blank)
+2025,Feb,COR,Other,87
+2025,Feb,COR,Pacific Islander,**
+2025,Feb,COR,White,554
+2025,Feb,CRC,American Indian/Alaskan Native,**
+2025,Feb,CRC,Asian,**
+2025,Feb,CRC,Black,771
+2025,Feb,CRC,Cuban,(Blank)
+2025,Feb,CRC,Hispanic,"1,192"
+2025,Feb,CRC,Mexican,145
+2025,Feb,CRC,N/A,(Blank)
+2025,Feb,CRC,Other,86
+2025,Feb,CRC,Pacific Islander,**
+2025,Feb,CRC,White,483
+2025,Feb,CTF,American Indian/Alaskan Native,**
+2025,Feb,CTF,Asian,50
+2025,Feb,CTF,Black,"1,049"
+2025,Feb,CTF,Cuban,**
+2025,Feb,CTF,Hispanic,"1,492"
+2025,Feb,CTF,Mexican,695
+2025,Feb,CTF,N/A,(Blank)
+2025,Feb,CTF,Other,207
+2025,Feb,CTF,Pacific Islander,**
+2025,Feb,CTF,White,769
+2025,Feb,FOL,American Indian/Alaskan Native,**
+2025,Feb,FOL,Asian,**
+2025,Feb,FOL,Black,770
+2025,Feb,FOL,Cuban,**
+2025,Feb,FOL,Hispanic,"1,067"
+2025,Feb,FOL,Mexican,399
+2025,Feb,FOL,N/A,(Blank)
+2025,Feb,FOL,Other,124
+2025,Feb,FOL,Pacific Islander,**
+2025,Feb,FOL,White,365
+2025,Feb,HDSP,American Indian/Alaskan Native,**
+2025,Feb,HDSP,Asian,**
+2025,Feb,HDSP,Black,957
+2025,Feb,HDSP,Cuban,(Blank)
+2025,Feb,HDSP,Hispanic,930
+2025,Feb,HDSP,Mexican,213
+2025,Feb,HDSP,N/A,(Blank)
+2025,Feb,HDSP,Other,85
+2025,Feb,HDSP,Pacific Islander,**
+2025,Feb,HDSP,White,527
+2025,Feb,ISP,American Indian/Alaskan Native,**
+2025,Feb,ISP,Asian,**
+2025,Feb,ISP,Black,496
+2025,Feb,ISP,Cuban,(Blank)
+2025,Feb,ISP,Hispanic,"1,304"
+2025,Feb,ISP,Mexican,300
+2025,Feb,ISP,N/A,(Blank)
+2025,Feb,ISP,Other,92
+2025,Feb,ISP,Pacific Islander,**
+2025,Feb,ISP,White,340
+2025,Feb,KVSP,American Indian/Alaskan Native,**
+2025,Feb,KVSP,Asian,**
+2025,Feb,KVSP,Black,"1,094"
+2025,Feb,KVSP,Cuban,**
+2025,Feb,KVSP,Hispanic,"1,123"
+2025,Feb,KVSP,Mexican,457
+2025,Feb,KVSP,N/A,(Blank)
+2025,Feb,KVSP,Other,87
+2025,Feb,KVSP,Pacific Islander,**
+2025,Feb,KVSP,White,324
+2025,Feb,LAC,American Indian/Alaskan Native,**
+2025,Feb,LAC,Asian,**
+2025,Feb,LAC,Black,"1,406"
+2025,Feb,LAC,Cuban,(Blank)
+2025,Feb,LAC,Hispanic,843
+2025,Feb,LAC,Mexican,394
+2025,Feb,LAC,N/A,(Blank)
+2025,Feb,LAC,Other,92
+2025,Feb,LAC,Pacific Islander,**
+2025,Feb,LAC,White,359
+2025,Feb,MCSP,American Indian/Alaskan Native,73
+2025,Feb,MCSP,Asian,**
+2025,Feb,MCSP,Black,982
+2025,Feb,MCSP,Cuban,**
+2025,Feb,MCSP,Hispanic,941
+2025,Feb,MCSP,Mexican,436
+2025,Feb,MCSP,N/A,(Blank)
+2025,Feb,MCSP,Other,172
+2025,Feb,MCSP,Pacific Islander,**
+2025,Feb,MCSP,White,"1,149"
+2025,Feb,NKSP,American Indian/Alaskan Native,**
+2025,Feb,NKSP,Asian,**
+2025,Feb,NKSP,Black,743
+2025,Feb,NKSP,Cuban,(Blank)
+2025,Feb,NKSP,Hispanic,"1,155"
+2025,Feb,NKSP,Mexican,147
+2025,Feb,NKSP,N/A,(Blank)
+2025,Feb,NKSP,Other,67
+2025,Feb,NKSP,Pacific Islander,**
+2025,Feb,NKSP,White,486
+2025,Feb,PBSP,American Indian/Alaskan Native,**
+2025,Feb,PBSP,Asian,**
+2025,Feb,PBSP,Black,620
+2025,Feb,PBSP,Cuban,**
+2025,Feb,PBSP,Hispanic,657
+2025,Feb,PBSP,Mexican,178
+2025,Feb,PBSP,N/A,(Blank)
+2025,Feb,PBSP,Other,73
+2025,Feb,PBSP,Pacific Islander,**
+2025,Feb,PBSP,White,401
+2025,Feb,PVSP,American Indian/Alaskan Native,**
+2025,Feb,PVSP,Asian,**
+2025,Feb,PVSP,Black,**
+2025,Feb,PVSP,Cuban,**
+2025,Feb,PVSP,Hispanic,"1,762"
+2025,Feb,PVSP,Mexican,272
+2025,Feb,PVSP,N/A,(Blank)
+2025,Feb,PVSP,Other,88
+2025,Feb,PVSP,Pacific Islander,**
+2025,Feb,PVSP,White,618
+2025,Feb,RJD,American Indian/Alaskan Native,51
+2025,Feb,RJD,Asian,**
+2025,Feb,RJD,Black,"1,037"
+2025,Feb,RJD,Cuban,**
+2025,Feb,RJD,Hispanic,862
+2025,Feb,RJD,Mexican,407
+2025,Feb,RJD,N/A,(Blank)
+2025,Feb,RJD,Other,154
+2025,Feb,RJD,Pacific Islander,**
+2025,Feb,RJD,White,806
+2025,Feb,SAC,American Indian/Alaskan Native,**
+2025,Feb,SAC,Asian,**
+2025,Feb,SAC,Black,771
+2025,Feb,SAC,Cuban,**
+2025,Feb,SAC,Hispanic,584
+2025,Feb,SAC,Mexican,219
+2025,Feb,SAC,N/A,(Blank)
+2025,Feb,SAC,Other,72
+2025,Feb,SAC,Pacific Islander,**
+2025,Feb,SAC,White,352
+2025,Feb,CAL,American Indian/Alaskan Native,**
+2025,Feb,CAL,Asian,**
+2025,Feb,CAL,Black,629
+2025,Feb,CAL,Cuban,(Blank)
+2025,Feb,CAL,Hispanic,"1,200"
+2025,Feb,CAL,Mexican,336
+2025,Feb,CAL,N/A,(Blank)
+2025,Feb,CAL,Other,58
+2025,Feb,CAL,Pacific Islander,**
+2025,Feb,CAL,White,276
+2025,Feb,SATF,American Indian/Alaskan Native,63
+2025,Feb,SATF,Asian,58
+2025,Feb,SATF,Black,"1,448"
+2025,Feb,SATF,Cuban,**
+2025,Feb,SATF,Hispanic,"1,777"
+2025,Feb,SATF,Mexican,618
+2025,Feb,SATF,N/A,(Blank)
+2025,Feb,SATF,Other,191
+2025,Feb,SATF,Pacific Islander,**
+2025,Feb,SATF,White,"1,065"
+2025,Feb,SCC,American Indian/Alaskan Native,**
+2025,Feb,SCC,Asian,67
+2025,Feb,SCC,Black,"1,210"
+2025,Feb,SCC,Cuban,(Blank)
+2025,Feb,SCC,Hispanic,"1,696"
+2025,Feb,SCC,Mexican,143
+2025,Feb,SCC,N/A,(Blank)
+2025,Feb,SCC,Other,136
+2025,Feb,SCC,Pacific Islander,**
+2025,Feb,SCC,White,864
+2025,Feb,SOL,American Indian/Alaskan Native,**
+2025,Feb,SOL,Asian,52
+2025,Feb,SOL,Black,"1,462"
+2025,Feb,SOL,Cuban,(Blank)
+2025,Feb,SOL,Hispanic,"1,477"
+2025,Feb,SOL,Mexican,389
+2025,Feb,SOL,N/A,(Blank)
+2025,Feb,SOL,Other,156
+2025,Feb,SOL,Pacific Islander,**
+2025,Feb,SOL,White,287
+2025,Feb,SQ,American Indian/Alaskan Native,**
+2025,Feb,SQ,Asian,52
+2025,Feb,SQ,Black,878
+2025,Feb,SQ,Cuban,**
+2025,Feb,SQ,Hispanic,777
+2025,Feb,SQ,Mexican,218
+2025,Feb,SQ,N/A,(Blank)
+2025,Feb,SQ,Other,157
+2025,Feb,SQ,Pacific Islander,**
+2025,Feb,SQ,White,747
+2025,Feb,SVSP,American Indian/Alaskan Native,**
+2025,Feb,SVSP,Asian,**
+2025,Feb,SVSP,Black,964
+2025,Feb,SVSP,Cuban,**
+2025,Feb,SVSP,Hispanic,705
+2025,Feb,SVSP,Mexican,273
+2025,Feb,SVSP,N/A,(Blank)
+2025,Feb,SVSP,Other,68
+2025,Feb,SVSP,Pacific Islander,**
+2025,Feb,SVSP,White,305
+2025,Feb,VSP,American Indian/Alaskan Native,**
+2025,Feb,VSP,Asian,54
+2025,Feb,VSP,Black,813
+2025,Feb,VSP,Cuban,**
+2025,Feb,VSP,Hispanic,816
+2025,Feb,VSP,Mexican,353
+2025,Feb,VSP,N/A,(Blank)
+2025,Feb,VSP,Other,146
+2025,Feb,VSP,Pacific Islander,**
+2025,Feb,VSP,White,855
+2025,Feb,WSP,American Indian/Alaskan Native,**
+2025,Feb,WSP,Asian,**
+2025,Feb,WSP,Black,921
+2025,Feb,WSP,Cuban,(Blank)
+2025,Feb,WSP,Hispanic,"1,731"
+2025,Feb,WSP,Mexican,237
+2025,Feb,WSP,N/A,(Blank)
+2025,Feb,WSP,Other,86
+2025,Feb,WSP,Pacific Islander,**
+2025,Feb,WSP,White,751
+2025,Feb,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Feb,CPMP,Asian,(Blank)
+2025,Feb,CPMP,Black,**
+2025,Feb,CPMP,Cuban,(Blank)
+2025,Feb,CPMP,Hispanic,**
+2025,Feb,CPMP,Mexican,(Blank)
+2025,Feb,CPMP,N/A,(Blank)
+2025,Feb,CPMP,Other,(Blank)
+2025,Feb,CPMP,Pacific Islander,(Blank)
+2025,Feb,CPMP,White,**
+2025,Feb,FCRF,American Indian/Alaskan Native,**
+2025,Feb,FCRF,Asian,**
+2025,Feb,FCRF,Black,75
+2025,Feb,FCRF,Cuban,(Blank)
+2025,Feb,FCRF,Hispanic,131
+2025,Feb,FCRF,Mexican,**
+2025,Feb,FCRF,N/A,(Blank)
+2025,Feb,FCRF,Other,**
+2025,Feb,FCRF,Pacific Islander,**
+2025,Feb,FCRF,White,144
+2025,Feb,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Feb,Alternative Custody Program,Asian,**
+2025,Feb,Alternative Custody Program,Black,**
+2025,Feb,Alternative Custody Program,Cuban,(Blank)
+2025,Feb,Alternative Custody Program,Hispanic,**
+2025,Feb,Alternative Custody Program,Mexican,(Blank)
+2025,Feb,Alternative Custody Program,N/A,(Blank)
+2025,Feb,Alternative Custody Program,Other,(Blank)
+2025,Feb,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Feb,Alternative Custody Program,White,**
+2025,Feb,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Feb,Department of State Hospitals,Asian,**
+2025,Feb,Department of State Hospitals,Black,**
+2025,Feb,Department of State Hospitals,Cuban,(Blank)
+2025,Feb,Department of State Hospitals,Hispanic,51
+2025,Feb,Department of State Hospitals,Mexican,**
+2025,Feb,Department of State Hospitals,N/A,(Blank)
+2025,Feb,Department of State Hospitals,Other,**
+2025,Feb,Department of State Hospitals,Pacific Islander,**
+2025,Feb,Department of State Hospitals,White,64
+2025,Feb,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Feb,Male Community Reentry Facility,Asian,**
+2025,Feb,Male Community Reentry Facility,Black,226
+2025,Feb,Male Community Reentry Facility,Cuban,(Blank)
+2025,Feb,Male Community Reentry Facility,Hispanic,256
+2025,Feb,Male Community Reentry Facility,Mexican,63
+2025,Feb,Male Community Reentry Facility,N/A,(Blank)
+2025,Feb,Male Community Reentry Facility,Other,**
+2025,Feb,Male Community Reentry Facility,Pacific Islander,**
+2025,Feb,Male Community Reentry Facility,White,98
+2025,Feb,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Feb,Medical Reprieve Program,Asian,(Blank)
+2025,Feb,Medical Reprieve Program,Black,**
+2025,Feb,Medical Reprieve Program,Cuban,(Blank)
+2025,Feb,Medical Reprieve Program,Hispanic,(Blank)
+2025,Feb,Medical Reprieve Program,Mexican,(Blank)
+2025,Feb,Medical Reprieve Program,N/A,(Blank)
+2025,Feb,Medical Reprieve Program,Other,(Blank)
+2025,Feb,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Feb,Medical Reprieve Program,White,**
+2025,Feb,CCI,American Indian/Alaskan Native,**
+2025,Feb,CCI,Asian,**
+2025,Feb,CCI,Black,624
+2025,Feb,CCI,Cuban,**
+2025,Feb,CCI,Hispanic,957
+2025,Feb,CCI,Mexican,244
+2025,Feb,CCI,N/A,(Blank)
+2025,Feb,CCI,Other,72
+2025,Feb,CCI,Pacific Islander,**
+2025,Feb,CCI,White,454
+2025,Feb,CCWF,American Indian/Alaskan Native,**
+2025,Feb,CCWF,Asian,**
+2025,Feb,CCWF,Black,549
+2025,Feb,CCWF,Cuban,**
+2025,Feb,CCWF,Hispanic,636
+2025,Feb,CCWF,Mexican,79
+2025,Feb,CCWF,N/A,(Blank)
+2025,Feb,CCWF,Other,66
+2025,Feb,CCWF,Pacific Islander,**
+2025,Feb,CCWF,White,599
+2025,Feb,CEN,American Indian/Alaskan Native,**
+2025,Feb,CEN,Asian,**
+2025,Feb,CEN,Black,696
+2025,Feb,CEN,Cuban,**
+2025,Feb,CEN,Hispanic,"1,350"
+2025,Feb,CEN,Mexican,441
+2025,Feb,CEN,N/A,(Blank)
+2025,Feb,CEN,Other,57
+2025,Feb,CEN,Pacific Islander,**
+2025,Feb,CEN,White,194
+2025,Feb,CHCF,American Indian/Alaskan Native,**
+2025,Feb,CHCF,Asian,**
+2025,Feb,CHCF,Black,651
+2025,Feb,CHCF,Cuban,**
+2025,Feb,CHCF,Hispanic,330
+2025,Feb,CHCF,Mexican,248
+2025,Feb,CHCF,N/A,(Blank)
+2025,Feb,CHCF,Other,112
+2025,Feb,CHCF,Pacific Islander,**
+2025,Feb,CHCF,White,676
+2025,Feb,CIM,American Indian/Alaskan Native,**
+2025,Feb,CIM,Asian,**
+2025,Feb,CIM,Black,612
+2025,Feb,CIM,Cuban,(Blank)
+2025,Feb,CIM,Hispanic,634
+2025,Feb,CIM,Mexican,336
+2025,Feb,CIM,N/A,(Blank)
+2025,Feb,CIM,Other,85
+2025,Feb,CIM,Pacific Islander,**
+2025,Feb,CIM,White,575
+2025,Mar,ASP,American Indian/Alaskan Native,55
+2025,Mar,ASP,Asian,52
+2025,Mar,ASP,Black,**
+2025,Mar,ASP,Cuban,(Blank)
+2025,Mar,ASP,Hispanic,"2,060"
+2025,Mar,ASP,Mexican,487
+2025,Mar,ASP,N/A,(Blank)
+2025,Mar,ASP,Other,159
+2025,Mar,ASP,Pacific Islander,**
+2025,Mar,ASP,White,948
+2025,Mar,CIW,American Indian/Alaskan Native,**
+2025,Mar,CIW,Asian,**
+2025,Mar,CIW,Black,273
+2025,Mar,CIW,Cuban,(Blank)
+2025,Mar,CIW,Hispanic,387
+2025,Mar,CIW,Mexican,50
+2025,Mar,CIW,N/A,(Blank)
+2025,Mar,CIW,Other,51
+2025,Mar,CIW,Pacific Islander,**
+2025,Mar,CIW,White,415
+2025,Mar,CMC,American Indian/Alaskan Native,**
+2025,Mar,CMC,Asian,**
+2025,Mar,CMC,Black,750
+2025,Mar,CMC,Cuban,**
+2025,Mar,CMC,Hispanic,663
+2025,Mar,CMC,Mexican,166
+2025,Mar,CMC,N/A,(Blank)
+2025,Mar,CMC,Other,92
+2025,Mar,CMC,Pacific Islander,**
+2025,Mar,CMC,White,444
+2025,Mar,CMF,American Indian/Alaskan Native,**
+2025,Mar,CMF,Asian,**
+2025,Mar,CMF,Black,635
+2025,Mar,CMF,Cuban,(Blank)
+2025,Mar,CMF,Hispanic,398
+2025,Mar,CMF,Mexican,189
+2025,Mar,CMF,N/A,(Blank)
+2025,Mar,CMF,Other,85
+2025,Mar,CMF,Pacific Islander,**
+2025,Mar,CMF,White,557
+2025,Mar,COR,American Indian/Alaskan Native,**
+2025,Mar,COR,Asian,**
+2025,Mar,COR,Black,652
+2025,Mar,COR,Cuban,**
+2025,Mar,COR,Hispanic,863
+2025,Mar,COR,Mexican,373
+2025,Mar,COR,N/A,(Blank)
+2025,Mar,COR,Other,94
+2025,Mar,COR,Pacific Islander,**
+2025,Mar,COR,White,547
+2025,Mar,CRC,American Indian/Alaskan Native,**
+2025,Mar,CRC,Asian,**
+2025,Mar,CRC,Black,753
+2025,Mar,CRC,Cuban,(Blank)
+2025,Mar,CRC,Hispanic,"1,180"
+2025,Mar,CRC,Mexican,144
+2025,Mar,CRC,N/A,(Blank)
+2025,Mar,CRC,Other,80
+2025,Mar,CRC,Pacific Islander,**
+2025,Mar,CRC,White,467
+2025,Mar,CTF,American Indian/Alaskan Native,**
+2025,Mar,CTF,Asian,**
+2025,Mar,CTF,Black,"1,051"
+2025,Mar,CTF,Cuban,**
+2025,Mar,CTF,Hispanic,"1,481"
+2025,Mar,CTF,Mexican,687
+2025,Mar,CTF,N/A,(Blank)
+2025,Mar,CTF,Other,202
+2025,Mar,CTF,Pacific Islander,**
+2025,Mar,CTF,White,774
+2025,Mar,FOL,American Indian/Alaskan Native,**
+2025,Mar,FOL,Asian,**
+2025,Mar,FOL,Black,769
+2025,Mar,FOL,Cuban,**
+2025,Mar,FOL,Hispanic,"1,093"
+2025,Mar,FOL,Mexican,396
+2025,Mar,FOL,N/A,(Blank)
+2025,Mar,FOL,Other,122
+2025,Mar,FOL,Pacific Islander,**
+2025,Mar,FOL,White,355
+2025,Mar,HDSP,American Indian/Alaskan Native,**
+2025,Mar,HDSP,Asian,**
+2025,Mar,HDSP,Black,982
+2025,Mar,HDSP,Cuban,(Blank)
+2025,Mar,HDSP,Hispanic,983
+2025,Mar,HDSP,Mexican,214
+2025,Mar,HDSP,N/A,(Blank)
+2025,Mar,HDSP,Other,92
+2025,Mar,HDSP,Pacific Islander,**
+2025,Mar,HDSP,White,551
+2025,Mar,ISP,American Indian/Alaskan Native,**
+2025,Mar,ISP,Asian,**
+2025,Mar,ISP,Black,488
+2025,Mar,ISP,Cuban,(Blank)
+2025,Mar,ISP,Hispanic,"1,226"
+2025,Mar,ISP,Mexican,295
+2025,Mar,ISP,N/A,(Blank)
+2025,Mar,ISP,Other,94
+2025,Mar,ISP,Pacific Islander,**
+2025,Mar,ISP,White,335
+2025,Mar,KVSP,American Indian/Alaskan Native,**
+2025,Mar,KVSP,Asian,**
+2025,Mar,KVSP,Black,"1,083"
+2025,Mar,KVSP,Cuban,**
+2025,Mar,KVSP,Hispanic,"1,098"
+2025,Mar,KVSP,Mexican,447
+2025,Mar,KVSP,N/A,(Blank)
+2025,Mar,KVSP,Other,73
+2025,Mar,KVSP,Pacific Islander,**
+2025,Mar,KVSP,White,306
+2025,Mar,LAC,American Indian/Alaskan Native,**
+2025,Mar,LAC,Asian,**
+2025,Mar,LAC,Black,"1,372"
+2025,Mar,LAC,Cuban,(Blank)
+2025,Mar,LAC,Hispanic,832
+2025,Mar,LAC,Mexican,391
+2025,Mar,LAC,N/A,(Blank)
+2025,Mar,LAC,Other,90
+2025,Mar,LAC,Pacific Islander,**
+2025,Mar,LAC,White,345
+2025,Mar,MCSP,American Indian/Alaskan Native,72
+2025,Mar,MCSP,Asian,**
+2025,Mar,MCSP,Black,987
+2025,Mar,MCSP,Cuban,**
+2025,Mar,MCSP,Hispanic,936
+2025,Mar,MCSP,Mexican,436
+2025,Mar,MCSP,N/A,(Blank)
+2025,Mar,MCSP,Other,175
+2025,Mar,MCSP,Pacific Islander,**
+2025,Mar,MCSP,White,"1,143"
+2025,Mar,NKSP,American Indian/Alaskan Native,**
+2025,Mar,NKSP,Asian,**
+2025,Mar,NKSP,Black,683
+2025,Mar,NKSP,Cuban,(Blank)
+2025,Mar,NKSP,Hispanic,"1,173"
+2025,Mar,NKSP,Mexican,146
+2025,Mar,NKSP,N/A,(Blank)
+2025,Mar,NKSP,Other,74
+2025,Mar,NKSP,Pacific Islander,**
+2025,Mar,NKSP,White,462
+2025,Mar,PBSP,American Indian/Alaskan Native,**
+2025,Mar,PBSP,Asian,**
+2025,Mar,PBSP,Black,632
+2025,Mar,PBSP,Cuban,**
+2025,Mar,PBSP,Hispanic,655
+2025,Mar,PBSP,Mexican,174
+2025,Mar,PBSP,N/A,(Blank)
+2025,Mar,PBSP,Other,71
+2025,Mar,PBSP,Pacific Islander,**
+2025,Mar,PBSP,White,390
+2025,Mar,PVSP,American Indian/Alaskan Native,**
+2025,Mar,PVSP,Asian,**
+2025,Mar,PVSP,Black,**
+2025,Mar,PVSP,Cuban,**
+2025,Mar,PVSP,Hispanic,"1,766"
+2025,Mar,PVSP,Mexican,274
+2025,Mar,PVSP,N/A,(Blank)
+2025,Mar,PVSP,Other,91
+2025,Mar,PVSP,Pacific Islander,**
+2025,Mar,PVSP,White,613
+2025,Mar,RJD,American Indian/Alaskan Native,50
+2025,Mar,RJD,Asian,**
+2025,Mar,RJD,Black,"1,051"
+2025,Mar,RJD,Cuban,**
+2025,Mar,RJD,Hispanic,898
+2025,Mar,RJD,Mexican,402
+2025,Mar,RJD,N/A,(Blank)
+2025,Mar,RJD,Other,156
+2025,Mar,RJD,Pacific Islander,**
+2025,Mar,RJD,White,829
+2025,Mar,SAC,American Indian/Alaskan Native,**
+2025,Mar,SAC,Asian,**
+2025,Mar,SAC,Black,794
+2025,Mar,SAC,Cuban,**
+2025,Mar,SAC,Hispanic,591
+2025,Mar,SAC,Mexican,218
+2025,Mar,SAC,N/A,(Blank)
+2025,Mar,SAC,Other,71
+2025,Mar,SAC,Pacific Islander,**
+2025,Mar,SAC,White,342
+2025,Mar,CAL,American Indian/Alaskan Native,**
+2025,Mar,CAL,Asian,**
+2025,Mar,CAL,Black,644
+2025,Mar,CAL,Cuban,(Blank)
+2025,Mar,CAL,Hispanic,"1,202"
+2025,Mar,CAL,Mexican,331
+2025,Mar,CAL,N/A,(Blank)
+2025,Mar,CAL,Other,55
+2025,Mar,CAL,Pacific Islander,**
+2025,Mar,CAL,White,283
+2025,Mar,SATF,American Indian/Alaskan Native,67
+2025,Mar,SATF,Asian,60
+2025,Mar,SATF,Black,"1,472"
+2025,Mar,SATF,Cuban,**
+2025,Mar,SATF,Hispanic,"1,802"
+2025,Mar,SATF,Mexican,624
+2025,Mar,SATF,N/A,(Blank)
+2025,Mar,SATF,Other,193
+2025,Mar,SATF,Pacific Islander,**
+2025,Mar,SATF,White,"1,104"
+2025,Mar,SCC,American Indian/Alaskan Native,52
+2025,Mar,SCC,Asian,71
+2025,Mar,SCC,Black,"1,200"
+2025,Mar,SCC,Cuban,(Blank)
+2025,Mar,SCC,Hispanic,"1,649"
+2025,Mar,SCC,Mexican,133
+2025,Mar,SCC,N/A,(Blank)
+2025,Mar,SCC,Other,129
+2025,Mar,SCC,Pacific Islander,**
+2025,Mar,SCC,White,861
+2025,Mar,SOL,American Indian/Alaskan Native,**
+2025,Mar,SOL,Asian,52
+2025,Mar,SOL,Black,"1,442"
+2025,Mar,SOL,Cuban,(Blank)
+2025,Mar,SOL,Hispanic,"1,510"
+2025,Mar,SOL,Mexican,391
+2025,Mar,SOL,N/A,(Blank)
+2025,Mar,SOL,Other,152
+2025,Mar,SOL,Pacific Islander,**
+2025,Mar,SOL,White,283
+2025,Mar,SQ,American Indian/Alaskan Native,**
+2025,Mar,SQ,Asian,56
+2025,Mar,SQ,Black,868
+2025,Mar,SQ,Cuban,**
+2025,Mar,SQ,Hispanic,784
+2025,Mar,SQ,Mexican,216
+2025,Mar,SQ,N/A,(Blank)
+2025,Mar,SQ,Other,156
+2025,Mar,SQ,Pacific Islander,**
+2025,Mar,SQ,White,734
+2025,Mar,SVSP,American Indian/Alaskan Native,**
+2025,Mar,SVSP,Asian,**
+2025,Mar,SVSP,Black,965
+2025,Mar,SVSP,Cuban,**
+2025,Mar,SVSP,Hispanic,718
+2025,Mar,SVSP,Mexican,278
+2025,Mar,SVSP,N/A,(Blank)
+2025,Mar,SVSP,Other,69
+2025,Mar,SVSP,Pacific Islander,**
+2025,Mar,SVSP,White,318
+2025,Mar,VSP,American Indian/Alaskan Native,**
+2025,Mar,VSP,Asian,54
+2025,Mar,VSP,Black,798
+2025,Mar,VSP,Cuban,**
+2025,Mar,VSP,Hispanic,804
+2025,Mar,VSP,Mexican,344
+2025,Mar,VSP,N/A,(Blank)
+2025,Mar,VSP,Other,145
+2025,Mar,VSP,Pacific Islander,**
+2025,Mar,VSP,White,830
+2025,Mar,WSP,American Indian/Alaskan Native,**
+2025,Mar,WSP,Asian,53
+2025,Mar,WSP,Black,864
+2025,Mar,WSP,Cuban,(Blank)
+2025,Mar,WSP,Hispanic,"1,677"
+2025,Mar,WSP,Mexican,230
+2025,Mar,WSP,N/A,(Blank)
+2025,Mar,WSP,Other,85
+2025,Mar,WSP,Pacific Islander,**
+2025,Mar,WSP,White,697
+2025,Mar,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Mar,CPMP,Asian,(Blank)
+2025,Mar,CPMP,Black,**
+2025,Mar,CPMP,Cuban,(Blank)
+2025,Mar,CPMP,Hispanic,**
+2025,Mar,CPMP,Mexican,(Blank)
+2025,Mar,CPMP,N/A,(Blank)
+2025,Mar,CPMP,Other,(Blank)
+2025,Mar,CPMP,Pacific Islander,(Blank)
+2025,Mar,CPMP,White,**
+2025,Mar,FCRF,American Indian/Alaskan Native,**
+2025,Mar,FCRF,Asian,**
+2025,Mar,FCRF,Black,73
+2025,Mar,FCRF,Cuban,(Blank)
+2025,Mar,FCRF,Hispanic,149
+2025,Mar,FCRF,Mexican,**
+2025,Mar,FCRF,N/A,(Blank)
+2025,Mar,FCRF,Other,**
+2025,Mar,FCRF,Pacific Islander,**
+2025,Mar,FCRF,White,150
+2025,Mar,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Mar,Alternative Custody Program,Asian,**
+2025,Mar,Alternative Custody Program,Black,**
+2025,Mar,Alternative Custody Program,Cuban,(Blank)
+2025,Mar,Alternative Custody Program,Hispanic,**
+2025,Mar,Alternative Custody Program,Mexican,(Blank)
+2025,Mar,Alternative Custody Program,N/A,(Blank)
+2025,Mar,Alternative Custody Program,Other,(Blank)
+2025,Mar,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Mar,Alternative Custody Program,White,**
+2025,Mar,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Mar,Department of State Hospitals,Asian,**
+2025,Mar,Department of State Hospitals,Black,**
+2025,Mar,Department of State Hospitals,Cuban,(Blank)
+2025,Mar,Department of State Hospitals,Hispanic,56
+2025,Mar,Department of State Hospitals,Mexican,**
+2025,Mar,Department of State Hospitals,N/A,(Blank)
+2025,Mar,Department of State Hospitals,Other,**
+2025,Mar,Department of State Hospitals,Pacific Islander,**
+2025,Mar,Department of State Hospitals,White,56
+2025,Mar,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Mar,Male Community Reentry Facility,Asian,**
+2025,Mar,Male Community Reentry Facility,Black,222
+2025,Mar,Male Community Reentry Facility,Cuban,(Blank)
+2025,Mar,Male Community Reentry Facility,Hispanic,257
+2025,Mar,Male Community Reentry Facility,Mexican,66
+2025,Mar,Male Community Reentry Facility,N/A,(Blank)
+2025,Mar,Male Community Reentry Facility,Other,**
+2025,Mar,Male Community Reentry Facility,Pacific Islander,**
+2025,Mar,Male Community Reentry Facility,White,101
+2025,Mar,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Mar,Medical Reprieve Program,Asian,(Blank)
+2025,Mar,Medical Reprieve Program,Black,**
+2025,Mar,Medical Reprieve Program,Cuban,(Blank)
+2025,Mar,Medical Reprieve Program,Hispanic,(Blank)
+2025,Mar,Medical Reprieve Program,Mexican,(Blank)
+2025,Mar,Medical Reprieve Program,N/A,(Blank)
+2025,Mar,Medical Reprieve Program,Other,(Blank)
+2025,Mar,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Mar,Medical Reprieve Program,White,**
+2025,Mar,CCI,American Indian/Alaskan Native,**
+2025,Mar,CCI,Asian,**
+2025,Mar,CCI,Black,624
+2025,Mar,CCI,Cuban,**
+2025,Mar,CCI,Hispanic,949
+2025,Mar,CCI,Mexican,246
+2025,Mar,CCI,N/A,(Blank)
+2025,Mar,CCI,Other,75
+2025,Mar,CCI,Pacific Islander,**
+2025,Mar,CCI,White,455
+2025,Mar,CCWF,American Indian/Alaskan Native,50
+2025,Mar,CCWF,Asian,**
+2025,Mar,CCWF,Black,554
+2025,Mar,CCWF,Cuban,**
+2025,Mar,CCWF,Hispanic,625
+2025,Mar,CCWF,Mexican,77
+2025,Mar,CCWF,N/A,(Blank)
+2025,Mar,CCWF,Other,66
+2025,Mar,CCWF,Pacific Islander,**
+2025,Mar,CCWF,White,588
+2025,Mar,CEN,American Indian/Alaskan Native,**
+2025,Mar,CEN,Asian,**
+2025,Mar,CEN,Black,696
+2025,Mar,CEN,Cuban,**
+2025,Mar,CEN,Hispanic,"1,371"
+2025,Mar,CEN,Mexican,444
+2025,Mar,CEN,N/A,(Blank)
+2025,Mar,CEN,Other,59
+2025,Mar,CEN,Pacific Islander,**
+2025,Mar,CEN,White,190
+2025,Mar,CHCF,American Indian/Alaskan Native,**
+2025,Mar,CHCF,Asian,**
+2025,Mar,CHCF,Black,663
+2025,Mar,CHCF,Cuban,**
+2025,Mar,CHCF,Hispanic,337
+2025,Mar,CHCF,Mexican,247
+2025,Mar,CHCF,N/A,(Blank)
+2025,Mar,CHCF,Other,112
+2025,Mar,CHCF,Pacific Islander,**
+2025,Mar,CHCF,White,675
+2025,Mar,CIM,American Indian/Alaskan Native,**
+2025,Mar,CIM,Asian,**
+2025,Mar,CIM,Black,625
+2025,Mar,CIM,Cuban,(Blank)
+2025,Mar,CIM,Hispanic,648
+2025,Mar,CIM,Mexican,339
+2025,Mar,CIM,N/A,(Blank)
+2025,Mar,CIM,Other,86
+2025,Mar,CIM,Pacific Islander,**
+2025,Mar,CIM,White,582
+2025,Apr,ASP,American Indian/Alaskan Native,56
+2025,Apr,ASP,Asian,53
+2025,Apr,ASP,Black,**
+2025,Apr,ASP,Cuban,(Blank)
+2025,Apr,ASP,Hispanic,"2,162"
+2025,Apr,ASP,Mexican,483
+2025,Apr,ASP,N/A,(Blank)
+2025,Apr,ASP,Other,160
+2025,Apr,ASP,Pacific Islander,**
+2025,Apr,ASP,White,984
+2025,Apr,CIW,American Indian/Alaskan Native,**
+2025,Apr,CIW,Asian,**
+2025,Apr,CIW,Black,276
+2025,Apr,CIW,Cuban,(Blank)
+2025,Apr,CIW,Hispanic,378
+2025,Apr,CIW,Mexican,51
+2025,Apr,CIW,N/A,(Blank)
+2025,Apr,CIW,Other,53
+2025,Apr,CIW,Pacific Islander,**
+2025,Apr,CIW,White,405
+2025,Apr,CMC,American Indian/Alaskan Native,**
+2025,Apr,CMC,Asian,**
+2025,Apr,CMC,Black,761
+2025,Apr,CMC,Cuban,**
+2025,Apr,CMC,Hispanic,671
+2025,Apr,CMC,Mexican,170
+2025,Apr,CMC,N/A,(Blank)
+2025,Apr,CMC,Other,97
+2025,Apr,CMC,Pacific Islander,**
+2025,Apr,CMC,White,456
+2025,Apr,CMF,American Indian/Alaskan Native,**
+2025,Apr,CMF,Asian,**
+2025,Apr,CMF,Black,657
+2025,Apr,CMF,Cuban,(Blank)
+2025,Apr,CMF,Hispanic,423
+2025,Apr,CMF,Mexican,185
+2025,Apr,CMF,N/A,(Blank)
+2025,Apr,CMF,Other,86
+2025,Apr,CMF,Pacific Islander,**
+2025,Apr,CMF,White,568
+2025,Apr,COR,American Indian/Alaskan Native,**
+2025,Apr,COR,Asian,**
+2025,Apr,COR,Black,666
+2025,Apr,COR,Cuban,**
+2025,Apr,COR,Hispanic,873
+2025,Apr,COR,Mexican,377
+2025,Apr,COR,N/A,(Blank)
+2025,Apr,COR,Other,95
+2025,Apr,COR,Pacific Islander,**
+2025,Apr,COR,White,546
+2025,Apr,CRC,American Indian/Alaskan Native,**
+2025,Apr,CRC,Asian,**
+2025,Apr,CRC,Black,777
+2025,Apr,CRC,Cuban,(Blank)
+2025,Apr,CRC,Hispanic,"1,210"
+2025,Apr,CRC,Mexican,145
+2025,Apr,CRC,N/A,(Blank)
+2025,Apr,CRC,Other,80
+2025,Apr,CRC,Pacific Islander,**
+2025,Apr,CRC,White,472
+2025,Apr,CTF,American Indian/Alaskan Native,**
+2025,Apr,CTF,Asian,**
+2025,Apr,CTF,Black,"1,035"
+2025,Apr,CTF,Cuban,**
+2025,Apr,CTF,Hispanic,"1,476"
+2025,Apr,CTF,Mexican,694
+2025,Apr,CTF,N/A,(Blank)
+2025,Apr,CTF,Other,198
+2025,Apr,CTF,Pacific Islander,**
+2025,Apr,CTF,White,777
+2025,Apr,FOL,American Indian/Alaskan Native,**
+2025,Apr,FOL,Asian,**
+2025,Apr,FOL,Black,766
+2025,Apr,FOL,Cuban,**
+2025,Apr,FOL,Hispanic,"1,135"
+2025,Apr,FOL,Mexican,396
+2025,Apr,FOL,N/A,(Blank)
+2025,Apr,FOL,Other,118
+2025,Apr,FOL,Pacific Islander,**
+2025,Apr,FOL,White,348
+2025,Apr,HDSP,American Indian/Alaskan Native,**
+2025,Apr,HDSP,Asian,**
+2025,Apr,HDSP,Black,948
+2025,Apr,HDSP,Cuban,(Blank)
+2025,Apr,HDSP,Hispanic,957
+2025,Apr,HDSP,Mexican,211
+2025,Apr,HDSP,N/A,(Blank)
+2025,Apr,HDSP,Other,89
+2025,Apr,HDSP,Pacific Islander,**
+2025,Apr,HDSP,White,538
+2025,Apr,ISP,American Indian/Alaskan Native,**
+2025,Apr,ISP,Asian,**
+2025,Apr,ISP,Black,541
+2025,Apr,ISP,Cuban,(Blank)
+2025,Apr,ISP,Hispanic,"1,242"
+2025,Apr,ISP,Mexican,297
+2025,Apr,ISP,N/A,(Blank)
+2025,Apr,ISP,Other,102
+2025,Apr,ISP,Pacific Islander,**
+2025,Apr,ISP,White,358
+2025,Apr,KVSP,American Indian/Alaskan Native,**
+2025,Apr,KVSP,Asian,**
+2025,Apr,KVSP,Black,"1,112"
+2025,Apr,KVSP,Cuban,**
+2025,Apr,KVSP,Hispanic,"1,110"
+2025,Apr,KVSP,Mexican,449
+2025,Apr,KVSP,N/A,(Blank)
+2025,Apr,KVSP,Other,73
+2025,Apr,KVSP,Pacific Islander,**
+2025,Apr,KVSP,White,302
+2025,Apr,LAC,American Indian/Alaskan Native,**
+2025,Apr,LAC,Asian,**
+2025,Apr,LAC,Black,"1,290"
+2025,Apr,LAC,Cuban,(Blank)
+2025,Apr,LAC,Hispanic,766
+2025,Apr,LAC,Mexican,361
+2025,Apr,LAC,N/A,(Blank)
+2025,Apr,LAC,Other,86
+2025,Apr,LAC,Pacific Islander,**
+2025,Apr,LAC,White,298
+2025,Apr,MCSP,American Indian/Alaskan Native,73
+2025,Apr,MCSP,Asian,**
+2025,Apr,MCSP,Black,970
+2025,Apr,MCSP,Cuban,**
+2025,Apr,MCSP,Hispanic,933
+2025,Apr,MCSP,Mexican,433
+2025,Apr,MCSP,N/A,(Blank)
+2025,Apr,MCSP,Other,173
+2025,Apr,MCSP,Pacific Islander,**
+2025,Apr,MCSP,White,"1,140"
+2025,Apr,NKSP,American Indian/Alaskan Native,**
+2025,Apr,NKSP,Asian,**
+2025,Apr,NKSP,Black,711
+2025,Apr,NKSP,Cuban,(Blank)
+2025,Apr,NKSP,Hispanic,"1,108"
+2025,Apr,NKSP,Mexican,136
+2025,Apr,NKSP,N/A,(Blank)
+2025,Apr,NKSP,Other,75
+2025,Apr,NKSP,Pacific Islander,**
+2025,Apr,NKSP,White,436
+2025,Apr,PBSP,American Indian/Alaskan Native,**
+2025,Apr,PBSP,Asian,**
+2025,Apr,PBSP,Black,638
+2025,Apr,PBSP,Cuban,**
+2025,Apr,PBSP,Hispanic,645
+2025,Apr,PBSP,Mexican,177
+2025,Apr,PBSP,N/A,(Blank)
+2025,Apr,PBSP,Other,68
+2025,Apr,PBSP,Pacific Islander,**
+2025,Apr,PBSP,White,393
+2025,Apr,PVSP,American Indian/Alaskan Native,**
+2025,Apr,PVSP,Asian,**
+2025,Apr,PVSP,Black,**
+2025,Apr,PVSP,Cuban,**
+2025,Apr,PVSP,Hispanic,"1,854"
+2025,Apr,PVSP,Mexican,287
+2025,Apr,PVSP,N/A,(Blank)
+2025,Apr,PVSP,Other,97
+2025,Apr,PVSP,Pacific Islander,**
+2025,Apr,PVSP,White,645
+2025,Apr,RJD,American Indian/Alaskan Native,**
+2025,Apr,RJD,Asian,**
+2025,Apr,RJD,Black,"1,078"
+2025,Apr,RJD,Cuban,**
+2025,Apr,RJD,Hispanic,913
+2025,Apr,RJD,Mexican,409
+2025,Apr,RJD,N/A,(Blank)
+2025,Apr,RJD,Other,156
+2025,Apr,RJD,Pacific Islander,**
+2025,Apr,RJD,White,821
+2025,Apr,SAC,American Indian/Alaskan Native,**
+2025,Apr,SAC,Asian,**
+2025,Apr,SAC,Black,808
+2025,Apr,SAC,Cuban,**
+2025,Apr,SAC,Hispanic,585
+2025,Apr,SAC,Mexican,226
+2025,Apr,SAC,N/A,(Blank)
+2025,Apr,SAC,Other,68
+2025,Apr,SAC,Pacific Islander,**
+2025,Apr,SAC,White,322
+2025,Apr,CAL,American Indian/Alaskan Native,**
+2025,Apr,CAL,Asian,**
+2025,Apr,CAL,Black,624
+2025,Apr,CAL,Cuban,(Blank)
+2025,Apr,CAL,Hispanic,"1,162"
+2025,Apr,CAL,Mexican,331
+2025,Apr,CAL,N/A,(Blank)
+2025,Apr,CAL,Other,56
+2025,Apr,CAL,Pacific Islander,**
+2025,Apr,CAL,White,271
+2025,Apr,SATF,American Indian/Alaskan Native,73
+2025,Apr,SATF,Asian,64
+2025,Apr,SATF,Black,"1,510"
+2025,Apr,SATF,Cuban,**
+2025,Apr,SATF,Hispanic,"1,812"
+2025,Apr,SATF,Mexican,634
+2025,Apr,SATF,N/A,(Blank)
+2025,Apr,SATF,Other,198
+2025,Apr,SATF,Pacific Islander,**
+2025,Apr,SATF,White,"1,104"
+2025,Apr,SCC,American Indian/Alaskan Native,52
+2025,Apr,SCC,Asian,74
+2025,Apr,SCC,Black,"1,168"
+2025,Apr,SCC,Cuban,(Blank)
+2025,Apr,SCC,Hispanic,"1,613"
+2025,Apr,SCC,Mexican,127
+2025,Apr,SCC,N/A,(Blank)
+2025,Apr,SCC,Other,126
+2025,Apr,SCC,Pacific Islander,**
+2025,Apr,SCC,White,851
+2025,Apr,SOL,American Indian/Alaskan Native,**
+2025,Apr,SOL,Asian,52
+2025,Apr,SOL,Black,"1,410"
+2025,Apr,SOL,Cuban,(Blank)
+2025,Apr,SOL,Hispanic,"1,477"
+2025,Apr,SOL,Mexican,377
+2025,Apr,SOL,N/A,(Blank)
+2025,Apr,SOL,Other,150
+2025,Apr,SOL,Pacific Islander,**
+2025,Apr,SOL,White,273
+2025,Apr,SQ,American Indian/Alaskan Native,**
+2025,Apr,SQ,Asian,54
+2025,Apr,SQ,Black,842
+2025,Apr,SQ,Cuban,**
+2025,Apr,SQ,Hispanic,777
+2025,Apr,SQ,Mexican,210
+2025,Apr,SQ,N/A,(Blank)
+2025,Apr,SQ,Other,154
+2025,Apr,SQ,Pacific Islander,**
+2025,Apr,SQ,White,717
+2025,Apr,SVSP,American Indian/Alaskan Native,**
+2025,Apr,SVSP,Asian,**
+2025,Apr,SVSP,Black,937
+2025,Apr,SVSP,Cuban,**
+2025,Apr,SVSP,Hispanic,697
+2025,Apr,SVSP,Mexican,269
+2025,Apr,SVSP,N/A,(Blank)
+2025,Apr,SVSP,Other,66
+2025,Apr,SVSP,Pacific Islander,**
+2025,Apr,SVSP,White,302
+2025,Apr,VSP,American Indian/Alaskan Native,**
+2025,Apr,VSP,Asian,52
+2025,Apr,VSP,Black,796
+2025,Apr,VSP,Cuban,**
+2025,Apr,VSP,Hispanic,806
+2025,Apr,VSP,Mexican,339
+2025,Apr,VSP,N/A,(Blank)
+2025,Apr,VSP,Other,143
+2025,Apr,VSP,Pacific Islander,**
+2025,Apr,VSP,White,829
+2025,Apr,WSP,American Indian/Alaskan Native,**
+2025,Apr,WSP,Asian,59
+2025,Apr,WSP,Black,831
+2025,Apr,WSP,Cuban,(Blank)
+2025,Apr,WSP,Hispanic,"1,638"
+2025,Apr,WSP,Mexican,218
+2025,Apr,WSP,N/A,(Blank)
+2025,Apr,WSP,Other,76
+2025,Apr,WSP,Pacific Islander,**
+2025,Apr,WSP,White,739
+2025,Apr,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Apr,CPMP,Asian,(Blank)
+2025,Apr,CPMP,Black,**
+2025,Apr,CPMP,Cuban,(Blank)
+2025,Apr,CPMP,Hispanic,**
+2025,Apr,CPMP,Mexican,(Blank)
+2025,Apr,CPMP,N/A,(Blank)
+2025,Apr,CPMP,Other,(Blank)
+2025,Apr,CPMP,Pacific Islander,(Blank)
+2025,Apr,CPMP,White,**
+2025,Apr,FCRF,American Indian/Alaskan Native,**
+2025,Apr,FCRF,Asian,**
+2025,Apr,FCRF,Black,72
+2025,Apr,FCRF,Cuban,(Blank)
+2025,Apr,FCRF,Hispanic,148
+2025,Apr,FCRF,Mexican,**
+2025,Apr,FCRF,N/A,(Blank)
+2025,Apr,FCRF,Other,**
+2025,Apr,FCRF,Pacific Islander,**
+2025,Apr,FCRF,White,155
+2025,Apr,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Apr,Alternative Custody Program,Asian,(Blank)
+2025,Apr,Alternative Custody Program,Black,(Blank)
+2025,Apr,Alternative Custody Program,Cuban,(Blank)
+2025,Apr,Alternative Custody Program,Hispanic,(Blank)
+2025,Apr,Alternative Custody Program,Mexican,(Blank)
+2025,Apr,Alternative Custody Program,N/A,(Blank)
+2025,Apr,Alternative Custody Program,Other,(Blank)
+2025,Apr,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Apr,Alternative Custody Program,White,**
+2025,Apr,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Apr,Department of State Hospitals,Asian,**
+2025,Apr,Department of State Hospitals,Black,50
+2025,Apr,Department of State Hospitals,Cuban,(Blank)
+2025,Apr,Department of State Hospitals,Hispanic,56
+2025,Apr,Department of State Hospitals,Mexican,**
+2025,Apr,Department of State Hospitals,N/A,(Blank)
+2025,Apr,Department of State Hospitals,Other,**
+2025,Apr,Department of State Hospitals,Pacific Islander,**
+2025,Apr,Department of State Hospitals,White,54
+2025,Apr,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Apr,Male Community Reentry Facility,Asian,**
+2025,Apr,Male Community Reentry Facility,Black,234
+2025,Apr,Male Community Reentry Facility,Cuban,(Blank)
+2025,Apr,Male Community Reentry Facility,Hispanic,252
+2025,Apr,Male Community Reentry Facility,Mexican,65
+2025,Apr,Male Community Reentry Facility,N/A,(Blank)
+2025,Apr,Male Community Reentry Facility,Other,**
+2025,Apr,Male Community Reentry Facility,Pacific Islander,**
+2025,Apr,Male Community Reentry Facility,White,99
+2025,Apr,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Apr,Medical Reprieve Program,Asian,(Blank)
+2025,Apr,Medical Reprieve Program,Black,**
+2025,Apr,Medical Reprieve Program,Cuban,(Blank)
+2025,Apr,Medical Reprieve Program,Hispanic,(Blank)
+2025,Apr,Medical Reprieve Program,Mexican,(Blank)
+2025,Apr,Medical Reprieve Program,N/A,(Blank)
+2025,Apr,Medical Reprieve Program,Other,(Blank)
+2025,Apr,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Apr,Medical Reprieve Program,White,**
+2025,Apr,CCI,American Indian/Alaskan Native,**
+2025,Apr,CCI,Asian,**
+2025,Apr,CCI,Black,648
+2025,Apr,CCI,Cuban,**
+2025,Apr,CCI,Hispanic,973
+2025,Apr,CCI,Mexican,257
+2025,Apr,CCI,N/A,(Blank)
+2025,Apr,CCI,Other,71
+2025,Apr,CCI,Pacific Islander,**
+2025,Apr,CCI,White,461
+2025,Apr,CCWF,American Indian/Alaskan Native,**
+2025,Apr,CCWF,Asian,**
+2025,Apr,CCWF,Black,541
+2025,Apr,CCWF,Cuban,(Blank)
+2025,Apr,CCWF,Hispanic,624
+2025,Apr,CCWF,Mexican,78
+2025,Apr,CCWF,N/A,(Blank)
+2025,Apr,CCWF,Other,65
+2025,Apr,CCWF,Pacific Islander,**
+2025,Apr,CCWF,White,588
+2025,Apr,CEN,American Indian/Alaskan Native,**
+2025,Apr,CEN,Asian,**
+2025,Apr,CEN,Black,703
+2025,Apr,CEN,Cuban,**
+2025,Apr,CEN,Hispanic,"1,432"
+2025,Apr,CEN,Mexican,443
+2025,Apr,CEN,N/A,(Blank)
+2025,Apr,CEN,Other,60
+2025,Apr,CEN,Pacific Islander,**
+2025,Apr,CEN,White,205
+2025,Apr,CHCF,American Indian/Alaskan Native,**
+2025,Apr,CHCF,Asian,**
+2025,Apr,CHCF,Black,694
+2025,Apr,CHCF,Cuban,**
+2025,Apr,CHCF,Hispanic,383
+2025,Apr,CHCF,Mexican,246
+2025,Apr,CHCF,N/A,(Blank)
+2025,Apr,CHCF,Other,121
+2025,Apr,CHCF,Pacific Islander,**
+2025,Apr,CHCF,White,704
+2025,Apr,CIM,American Indian/Alaskan Native,**
+2025,Apr,CIM,Asian,**
+2025,Apr,CIM,Black,614
+2025,Apr,CIM,Cuban,(Blank)
+2025,Apr,CIM,Hispanic,638
+2025,Apr,CIM,Mexican,333
+2025,Apr,CIM,N/A,(Blank)
+2025,Apr,CIM,Other,91
+2025,Apr,CIM,Pacific Islander,**
+2025,Apr,CIM,White,568
+2025,May,ASP,American Indian/Alaskan Native,57
+2025,May,ASP,Asian,53
+2025,May,ASP,Black,**
+2025,May,ASP,Cuban,(Blank)
+2025,May,ASP,Hispanic,"2,178"
+2025,May,ASP,Mexican,480
+2025,May,ASP,N/A,(Blank)
+2025,May,ASP,Other,165
+2025,May,ASP,Pacific Islander,**
+2025,May,ASP,White,"1,012"
+2025,May,CIW,American Indian/Alaskan Native,**
+2025,May,CIW,Asian,**
+2025,May,CIW,Black,273
+2025,May,CIW,Cuban,(Blank)
+2025,May,CIW,Hispanic,380
+2025,May,CIW,Mexican,**
+2025,May,CIW,N/A,(Blank)
+2025,May,CIW,Other,52
+2025,May,CIW,Pacific Islander,**
+2025,May,CIW,White,396
+2025,May,CMC,American Indian/Alaskan Native,**
+2025,May,CMC,Asian,**
+2025,May,CMC,Black,765
+2025,May,CMC,Cuban,**
+2025,May,CMC,Hispanic,690
+2025,May,CMC,Mexican,158
+2025,May,CMC,N/A,(Blank)
+2025,May,CMC,Other,97
+2025,May,CMC,Pacific Islander,**
+2025,May,CMC,White,471
+2025,May,CMF,American Indian/Alaskan Native,**
+2025,May,CMF,Asian,**
+2025,May,CMF,Black,687
+2025,May,CMF,Cuban,(Blank)
+2025,May,CMF,Hispanic,434
+2025,May,CMF,Mexican,189
+2025,May,CMF,N/A,(Blank)
+2025,May,CMF,Other,85
+2025,May,CMF,Pacific Islander,**
+2025,May,CMF,White,578
+2025,May,COR,American Indian/Alaskan Native,**
+2025,May,COR,Asian,**
+2025,May,COR,Black,649
+2025,May,COR,Cuban,**
+2025,May,COR,Hispanic,880
+2025,May,COR,Mexican,371
+2025,May,COR,N/A,(Blank)
+2025,May,COR,Other,98
+2025,May,COR,Pacific Islander,**
+2025,May,COR,White,533
+2025,May,CRC,American Indian/Alaskan Native,**
+2025,May,CRC,Asian,**
+2025,May,CRC,Black,769
+2025,May,CRC,Cuban,(Blank)
+2025,May,CRC,Hispanic,"1,223"
+2025,May,CRC,Mexican,139
+2025,May,CRC,N/A,(Blank)
+2025,May,CRC,Other,76
+2025,May,CRC,Pacific Islander,**
+2025,May,CRC,White,462
+2025,May,CTF,American Indian/Alaskan Native,**
+2025,May,CTF,Asian,50
+2025,May,CTF,Black,"1,024"
+2025,May,CTF,Cuban,**
+2025,May,CTF,Hispanic,"1,464"
+2025,May,CTF,Mexican,696
+2025,May,CTF,N/A,(Blank)
+2025,May,CTF,Other,192
+2025,May,CTF,Pacific Islander,**
+2025,May,CTF,White,761
+2025,May,FOL,American Indian/Alaskan Native,**
+2025,May,FOL,Asian,**
+2025,May,FOL,Black,772
+2025,May,FOL,Cuban,**
+2025,May,FOL,Hispanic,"1,139"
+2025,May,FOL,Mexican,400
+2025,May,FOL,N/A,(Blank)
+2025,May,FOL,Other,119
+2025,May,FOL,Pacific Islander,**
+2025,May,FOL,White,348
+2025,May,HDSP,American Indian/Alaskan Native,**
+2025,May,HDSP,Asian,**
+2025,May,HDSP,Black,912
+2025,May,HDSP,Cuban,(Blank)
+2025,May,HDSP,Hispanic,916
+2025,May,HDSP,Mexican,204
+2025,May,HDSP,N/A,(Blank)
+2025,May,HDSP,Other,89
+2025,May,HDSP,Pacific Islander,**
+2025,May,HDSP,White,518
+2025,May,ISP,American Indian/Alaskan Native,**
+2025,May,ISP,Asian,**
+2025,May,ISP,Black,543
+2025,May,ISP,Cuban,(Blank)
+2025,May,ISP,Hispanic,"1,230"
+2025,May,ISP,Mexican,298
+2025,May,ISP,N/A,(Blank)
+2025,May,ISP,Other,99
+2025,May,ISP,Pacific Islander,**
+2025,May,ISP,White,361
+2025,May,KVSP,American Indian/Alaskan Native,**
+2025,May,KVSP,Asian,**
+2025,May,KVSP,Black,"1,124"
+2025,May,KVSP,Cuban,(Blank)
+2025,May,KVSP,Hispanic,"1,109"
+2025,May,KVSP,Mexican,450
+2025,May,KVSP,N/A,(Blank)
+2025,May,KVSP,Other,75
+2025,May,KVSP,Pacific Islander,**
+2025,May,KVSP,White,295
+2025,May,LAC,American Indian/Alaskan Native,**
+2025,May,LAC,Asian,**
+2025,May,LAC,Black,"1,233"
+2025,May,LAC,Cuban,(Blank)
+2025,May,LAC,Hispanic,722
+2025,May,LAC,Mexican,338
+2025,May,LAC,N/A,(Blank)
+2025,May,LAC,Other,81
+2025,May,LAC,Pacific Islander,**
+2025,May,LAC,White,267
+2025,May,MCSP,American Indian/Alaskan Native,72
+2025,May,MCSP,Asian,**
+2025,May,MCSP,Black,986
+2025,May,MCSP,Cuban,**
+2025,May,MCSP,Hispanic,934
+2025,May,MCSP,Mexican,443
+2025,May,MCSP,N/A,(Blank)
+2025,May,MCSP,Other,163
+2025,May,MCSP,Pacific Islander,**
+2025,May,MCSP,White,"1,128"
+2025,May,NKSP,American Indian/Alaskan Native,**
+2025,May,NKSP,Asian,**
+2025,May,NKSP,Black,689
+2025,May,NKSP,Cuban,**
+2025,May,NKSP,Hispanic,"1,028"
+2025,May,NKSP,Mexican,150
+2025,May,NKSP,N/A,(Blank)
+2025,May,NKSP,Other,62
+2025,May,NKSP,Pacific Islander,**
+2025,May,NKSP,White,417
+2025,May,PBSP,American Indian/Alaskan Native,**
+2025,May,PBSP,Asian,**
+2025,May,PBSP,Black,635
+2025,May,PBSP,Cuban,**
+2025,May,PBSP,Hispanic,633
+2025,May,PBSP,Mexican,174
+2025,May,PBSP,N/A,(Blank)
+2025,May,PBSP,Other,69
+2025,May,PBSP,Pacific Islander,**
+2025,May,PBSP,White,406
+2025,May,PVSP,American Indian/Alaskan Native,**
+2025,May,PVSP,Asian,**
+2025,May,PVSP,Black,**
+2025,May,PVSP,Cuban,(Blank)
+2025,May,PVSP,Hispanic,"1,850"
+2025,May,PVSP,Mexican,293
+2025,May,PVSP,N/A,(Blank)
+2025,May,PVSP,Other,101
+2025,May,PVSP,Pacific Islander,**
+2025,May,PVSP,White,619
+2025,May,RJD,American Indian/Alaskan Native,51
+2025,May,RJD,Asian,**
+2025,May,RJD,Black,"1,087"
+2025,May,RJD,Cuban,**
+2025,May,RJD,Hispanic,957
+2025,May,RJD,Mexican,417
+2025,May,RJD,N/A,(Blank)
+2025,May,RJD,Other,157
+2025,May,RJD,Pacific Islander,**
+2025,May,RJD,White,840
+2025,May,SAC,American Indian/Alaskan Native,**
+2025,May,SAC,Asian,**
+2025,May,SAC,Black,837
+2025,May,SAC,Cuban,**
+2025,May,SAC,Hispanic,620
+2025,May,SAC,Mexican,225
+2025,May,SAC,N/A,(Blank)
+2025,May,SAC,Other,69
+2025,May,SAC,Pacific Islander,**
+2025,May,SAC,White,335
+2025,May,CAL,American Indian/Alaskan Native,**
+2025,May,CAL,Asian,**
+2025,May,CAL,Black,622
+2025,May,CAL,Cuban,(Blank)
+2025,May,CAL,Hispanic,"1,126"
+2025,May,CAL,Mexican,330
+2025,May,CAL,N/A,(Blank)
+2025,May,CAL,Other,51
+2025,May,CAL,Pacific Islander,**
+2025,May,CAL,White,262
+2025,May,SATF,American Indian/Alaskan Native,74
+2025,May,SATF,Asian,68
+2025,May,SATF,Black,"1,517"
+2025,May,SATF,Cuban,**
+2025,May,SATF,Hispanic,"1,805"
+2025,May,SATF,Mexican,636
+2025,May,SATF,N/A,(Blank)
+2025,May,SATF,Other,199
+2025,May,SATF,Pacific Islander,**
+2025,May,SATF,White,"1,090"
+2025,May,SCC,American Indian/Alaskan Native,50
+2025,May,SCC,Asian,68
+2025,May,SCC,Black,"1,165"
+2025,May,SCC,Cuban,(Blank)
+2025,May,SCC,Hispanic,"1,608"
+2025,May,SCC,Mexican,124
+2025,May,SCC,N/A,(Blank)
+2025,May,SCC,Other,129
+2025,May,SCC,Pacific Islander,**
+2025,May,SCC,White,819
+2025,May,SOL,American Indian/Alaskan Native,**
+2025,May,SOL,Asian,**
+2025,May,SOL,Black,"1,377"
+2025,May,SOL,Cuban,(Blank)
+2025,May,SOL,Hispanic,"1,457"
+2025,May,SOL,Mexican,363
+2025,May,SOL,N/A,(Blank)
+2025,May,SOL,Other,148
+2025,May,SOL,Pacific Islander,**
+2025,May,SOL,White,265
+2025,May,SQ,American Indian/Alaskan Native,**
+2025,May,SQ,Asian,54
+2025,May,SQ,Black,813
+2025,May,SQ,Cuban,**
+2025,May,SQ,Hispanic,757
+2025,May,SQ,Mexican,204
+2025,May,SQ,N/A,(Blank)
+2025,May,SQ,Other,147
+2025,May,SQ,Pacific Islander,**
+2025,May,SQ,White,698
+2025,May,SVSP,American Indian/Alaskan Native,**
+2025,May,SVSP,Asian,**
+2025,May,SVSP,Black,956
+2025,May,SVSP,Cuban,**
+2025,May,SVSP,Hispanic,710
+2025,May,SVSP,Mexican,273
+2025,May,SVSP,N/A,(Blank)
+2025,May,SVSP,Other,69
+2025,May,SVSP,Pacific Islander,**
+2025,May,SVSP,White,307
+2025,May,VSP,American Indian/Alaskan Native,**
+2025,May,VSP,Asian,51
+2025,May,VSP,Black,812
+2025,May,VSP,Cuban,**
+2025,May,VSP,Hispanic,816
+2025,May,VSP,Mexican,338
+2025,May,VSP,N/A,(Blank)
+2025,May,VSP,Other,146
+2025,May,VSP,Pacific Islander,**
+2025,May,VSP,White,834
+2025,May,WSP,American Indian/Alaskan Native,**
+2025,May,WSP,Asian,60
+2025,May,WSP,Black,862
+2025,May,WSP,Cuban,(Blank)
+2025,May,WSP,Hispanic,"1,703"
+2025,May,WSP,Mexican,231
+2025,May,WSP,N/A,(Blank)
+2025,May,WSP,Other,82
+2025,May,WSP,Pacific Islander,**
+2025,May,WSP,White,831
+2025,May,CPMP,American Indian/Alaskan Native,(Blank)
+2025,May,CPMP,Asian,(Blank)
+2025,May,CPMP,Black,**
+2025,May,CPMP,Cuban,(Blank)
+2025,May,CPMP,Hispanic,**
+2025,May,CPMP,Mexican,(Blank)
+2025,May,CPMP,N/A,(Blank)
+2025,May,CPMP,Other,(Blank)
+2025,May,CPMP,Pacific Islander,(Blank)
+2025,May,CPMP,White,**
+2025,May,FCRF,American Indian/Alaskan Native,**
+2025,May,FCRF,Asian,**
+2025,May,FCRF,Black,75
+2025,May,FCRF,Cuban,(Blank)
+2025,May,FCRF,Hispanic,153
+2025,May,FCRF,Mexican,**
+2025,May,FCRF,N/A,(Blank)
+2025,May,FCRF,Other,**
+2025,May,FCRF,Pacific Islander,**
+2025,May,FCRF,White,156
+2025,May,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,May,Alternative Custody Program,Asian,(Blank)
+2025,May,Alternative Custody Program,Black,(Blank)
+2025,May,Alternative Custody Program,Cuban,(Blank)
+2025,May,Alternative Custody Program,Hispanic,**
+2025,May,Alternative Custody Program,Mexican,(Blank)
+2025,May,Alternative Custody Program,N/A,(Blank)
+2025,May,Alternative Custody Program,Other,(Blank)
+2025,May,Alternative Custody Program,Pacific Islander,(Blank)
+2025,May,Alternative Custody Program,White,**
+2025,May,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,May,Department of State Hospitals,Asian,**
+2025,May,Department of State Hospitals,Black,50
+2025,May,Department of State Hospitals,Cuban,(Blank)
+2025,May,Department of State Hospitals,Hispanic,56
+2025,May,Department of State Hospitals,Mexican,**
+2025,May,Department of State Hospitals,N/A,(Blank)
+2025,May,Department of State Hospitals,Other,**
+2025,May,Department of State Hospitals,Pacific Islander,**
+2025,May,Department of State Hospitals,White,51
+2025,May,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,May,Male Community Reentry Facility,Asian,**
+2025,May,Male Community Reentry Facility,Black,218
+2025,May,Male Community Reentry Facility,Cuban,(Blank)
+2025,May,Male Community Reentry Facility,Hispanic,257
+2025,May,Male Community Reentry Facility,Mexican,75
+2025,May,Male Community Reentry Facility,N/A,(Blank)
+2025,May,Male Community Reentry Facility,Other,**
+2025,May,Male Community Reentry Facility,Pacific Islander,**
+2025,May,Male Community Reentry Facility,White,102
+2025,May,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,May,Medical Reprieve Program,Asian,(Blank)
+2025,May,Medical Reprieve Program,Black,**
+2025,May,Medical Reprieve Program,Cuban,(Blank)
+2025,May,Medical Reprieve Program,Hispanic,(Blank)
+2025,May,Medical Reprieve Program,Mexican,(Blank)
+2025,May,Medical Reprieve Program,N/A,(Blank)
+2025,May,Medical Reprieve Program,Other,(Blank)
+2025,May,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,May,Medical Reprieve Program,White,**
+2025,May,CCI,American Indian/Alaskan Native,**
+2025,May,CCI,Asian,**
+2025,May,CCI,Black,662
+2025,May,CCI,Cuban,**
+2025,May,CCI,Hispanic,959
+2025,May,CCI,Mexican,248
+2025,May,CCI,N/A,(Blank)
+2025,May,CCI,Other,69
+2025,May,CCI,Pacific Islander,**
+2025,May,CCI,White,466
+2025,May,CCWF,American Indian/Alaskan Native,51
+2025,May,CCWF,Asian,**
+2025,May,CCWF,Black,565
+2025,May,CCWF,Cuban,(Blank)
+2025,May,CCWF,Hispanic,628
+2025,May,CCWF,Mexican,77
+2025,May,CCWF,N/A,(Blank)
+2025,May,CCWF,Other,63
+2025,May,CCWF,Pacific Islander,**
+2025,May,CCWF,White,596
+2025,May,CEN,American Indian/Alaskan Native,**
+2025,May,CEN,Asian,**
+2025,May,CEN,Black,720
+2025,May,CEN,Cuban,**
+2025,May,CEN,Hispanic,"1,456"
+2025,May,CEN,Mexican,450
+2025,May,CEN,N/A,(Blank)
+2025,May,CEN,Other,61
+2025,May,CEN,Pacific Islander,**
+2025,May,CEN,White,209
+2025,May,CHCF,American Indian/Alaskan Native,**
+2025,May,CHCF,Asian,**
+2025,May,CHCF,Black,719
+2025,May,CHCF,Cuban,**
+2025,May,CHCF,Hispanic,423
+2025,May,CHCF,Mexican,252
+2025,May,CHCF,N/A,(Blank)
+2025,May,CHCF,Other,123
+2025,May,CHCF,Pacific Islander,**
+2025,May,CHCF,White,725
+2025,May,CIM,American Indian/Alaskan Native,**
+2025,May,CIM,Asian,**
+2025,May,CIM,Black,596
+2025,May,CIM,Cuban,(Blank)
+2025,May,CIM,Hispanic,623
+2025,May,CIM,Mexican,334
+2025,May,CIM,N/A,(Blank)
+2025,May,CIM,Other,90
+2025,May,CIM,Pacific Islander,**
+2025,May,CIM,White,554
+2025,Jun,ASP,American Indian/Alaskan Native,54
+2025,Jun,ASP,Asian,54
+2025,Jun,ASP,Black,**
+2025,Jun,ASP,Cuban,(Blank)
+2025,Jun,ASP,Hispanic,"2,192"
+2025,Jun,ASP,Mexican,476
+2025,Jun,ASP,N/A,(Blank)
+2025,Jun,ASP,Other,166
+2025,Jun,ASP,Pacific Islander,**
+2025,Jun,ASP,White,"1,039"
+2025,Jun,CIW,American Indian/Alaskan Native,**
+2025,Jun,CIW,Asian,**
+2025,Jun,CIW,Black,293
+2025,Jun,CIW,Cuban,(Blank)
+2025,Jun,CIW,Hispanic,388
+2025,Jun,CIW,Mexican,**
+2025,Jun,CIW,N/A,(Blank)
+2025,Jun,CIW,Other,55
+2025,Jun,CIW,Pacific Islander,**
+2025,Jun,CIW,White,399
+2025,Jun,CMC,American Indian/Alaskan Native,**
+2025,Jun,CMC,Asian,**
+2025,Jun,CMC,Black,747
+2025,Jun,CMC,Cuban,**
+2025,Jun,CMC,Hispanic,679
+2025,Jun,CMC,Mexican,159
+2025,Jun,CMC,N/A,(Blank)
+2025,Jun,CMC,Other,93
+2025,Jun,CMC,Pacific Islander,**
+2025,Jun,CMC,White,463
+2025,Jun,CMF,American Indian/Alaskan Native,**
+2025,Jun,CMF,Asian,**
+2025,Jun,CMF,Black,699
+2025,Jun,CMF,Cuban,(Blank)
+2025,Jun,CMF,Hispanic,442
+2025,Jun,CMF,Mexican,188
+2025,Jun,CMF,N/A,(Blank)
+2025,Jun,CMF,Other,89
+2025,Jun,CMF,Pacific Islander,**
+2025,Jun,CMF,White,603
+2025,Jun,COR,American Indian/Alaskan Native,**
+2025,Jun,COR,Asian,**
+2025,Jun,COR,Black,646
+2025,Jun,COR,Cuban,**
+2025,Jun,COR,Hispanic,860
+2025,Jun,COR,Mexican,368
+2025,Jun,COR,N/A,(Blank)
+2025,Jun,COR,Other,92
+2025,Jun,COR,Pacific Islander,**
+2025,Jun,COR,White,538
+2025,Jun,CRC,American Indian/Alaskan Native,**
+2025,Jun,CRC,Asian,**
+2025,Jun,CRC,Black,767
+2025,Jun,CRC,Cuban,(Blank)
+2025,Jun,CRC,Hispanic,"1,227"
+2025,Jun,CRC,Mexican,134
+2025,Jun,CRC,N/A,(Blank)
+2025,Jun,CRC,Other,75
+2025,Jun,CRC,Pacific Islander,**
+2025,Jun,CRC,White,459
+2025,Jun,CTF,American Indian/Alaskan Native,**
+2025,Jun,CTF,Asian,**
+2025,Jun,CTF,Black,"1,022"
+2025,Jun,CTF,Cuban,**
+2025,Jun,CTF,Hispanic,"1,470"
+2025,Jun,CTF,Mexican,700
+2025,Jun,CTF,N/A,(Blank)
+2025,Jun,CTF,Other,189
+2025,Jun,CTF,Pacific Islander,**
+2025,Jun,CTF,White,740
+2025,Jun,FOL,American Indian/Alaskan Native,**
+2025,Jun,FOL,Asian,**
+2025,Jun,FOL,Black,755
+2025,Jun,FOL,Cuban,**
+2025,Jun,FOL,Hispanic,"1,137"
+2025,Jun,FOL,Mexican,398
+2025,Jun,FOL,N/A,(Blank)
+2025,Jun,FOL,Other,116
+2025,Jun,FOL,Pacific Islander,**
+2025,Jun,FOL,White,330
+2025,Jun,HDSP,American Indian/Alaskan Native,**
+2025,Jun,HDSP,Asian,**
+2025,Jun,HDSP,Black,877
+2025,Jun,HDSP,Cuban,(Blank)
+2025,Jun,HDSP,Hispanic,892
+2025,Jun,HDSP,Mexican,194
+2025,Jun,HDSP,N/A,(Blank)
+2025,Jun,HDSP,Other,87
+2025,Jun,HDSP,Pacific Islander,**
+2025,Jun,HDSP,White,505
+2025,Jun,ISP,American Indian/Alaskan Native,**
+2025,Jun,ISP,Asian,**
+2025,Jun,ISP,Black,558
+2025,Jun,ISP,Cuban,(Blank)
+2025,Jun,ISP,Hispanic,"1,247"
+2025,Jun,ISP,Mexican,299
+2025,Jun,ISP,N/A,(Blank)
+2025,Jun,ISP,Other,99
+2025,Jun,ISP,Pacific Islander,**
+2025,Jun,ISP,White,354
+2025,Jun,KVSP,American Indian/Alaskan Native,**
+2025,Jun,KVSP,Asian,**
+2025,Jun,KVSP,Black,"1,136"
+2025,Jun,KVSP,Cuban,(Blank)
+2025,Jun,KVSP,Hispanic,"1,138"
+2025,Jun,KVSP,Mexican,456
+2025,Jun,KVSP,N/A,(Blank)
+2025,Jun,KVSP,Other,80
+2025,Jun,KVSP,Pacific Islander,**
+2025,Jun,KVSP,White,290
+2025,Jun,LAC,American Indian/Alaskan Native,**
+2025,Jun,LAC,Asian,**
+2025,Jun,LAC,Black,"1,278"
+2025,Jun,LAC,Cuban,(Blank)
+2025,Jun,LAC,Hispanic,738
+2025,Jun,LAC,Mexican,333
+2025,Jun,LAC,N/A,(Blank)
+2025,Jun,LAC,Other,78
+2025,Jun,LAC,Pacific Islander,**
+2025,Jun,LAC,White,276
+2025,Jun,MCSP,American Indian/Alaskan Native,72
+2025,Jun,MCSP,Asian,**
+2025,Jun,MCSP,Black,980
+2025,Jun,MCSP,Cuban,**
+2025,Jun,MCSP,Hispanic,941
+2025,Jun,MCSP,Mexican,446
+2025,Jun,MCSP,N/A,(Blank)
+2025,Jun,MCSP,Other,162
+2025,Jun,MCSP,Pacific Islander,**
+2025,Jun,MCSP,White,"1,136"
+2025,Jun,NKSP,American Indian/Alaskan Native,**
+2025,Jun,NKSP,Asian,**
+2025,Jun,NKSP,Black,646
+2025,Jun,NKSP,Cuban,**
+2025,Jun,NKSP,Hispanic,"1,032"
+2025,Jun,NKSP,Mexican,142
+2025,Jun,NKSP,N/A,(Blank)
+2025,Jun,NKSP,Other,65
+2025,Jun,NKSP,Pacific Islander,**
+2025,Jun,NKSP,White,435
+2025,Jun,PBSP,American Indian/Alaskan Native,**
+2025,Jun,PBSP,Asian,**
+2025,Jun,PBSP,Black,661
+2025,Jun,PBSP,Cuban,**
+2025,Jun,PBSP,Hispanic,622
+2025,Jun,PBSP,Mexican,178
+2025,Jun,PBSP,N/A,(Blank)
+2025,Jun,PBSP,Other,71
+2025,Jun,PBSP,Pacific Islander,**
+2025,Jun,PBSP,White,409
+2025,Jun,PVSP,American Indian/Alaskan Native,**
+2025,Jun,PVSP,Asian,**
+2025,Jun,PVSP,Black,**
+2025,Jun,PVSP,Cuban,(Blank)
+2025,Jun,PVSP,Hispanic,"1,838"
+2025,Jun,PVSP,Mexican,288
+2025,Jun,PVSP,N/A,(Blank)
+2025,Jun,PVSP,Other,96
+2025,Jun,PVSP,Pacific Islander,**
+2025,Jun,PVSP,White,581
+2025,Jun,RJD,American Indian/Alaskan Native,53
+2025,Jun,RJD,Asian,**
+2025,Jun,RJD,Black,"1,081"
+2025,Jun,RJD,Cuban,**
+2025,Jun,RJD,Hispanic,984
+2025,Jun,RJD,Mexican,424
+2025,Jun,RJD,N/A,(Blank)
+2025,Jun,RJD,Other,158
+2025,Jun,RJD,Pacific Islander,**
+2025,Jun,RJD,White,837
+2025,Jun,SAC,American Indian/Alaskan Native,**
+2025,Jun,SAC,Asian,**
+2025,Jun,SAC,Black,845
+2025,Jun,SAC,Cuban,(Blank)
+2025,Jun,SAC,Hispanic,634
+2025,Jun,SAC,Mexican,233
+2025,Jun,SAC,N/A,(Blank)
+2025,Jun,SAC,Other,69
+2025,Jun,SAC,Pacific Islander,**
+2025,Jun,SAC,White,340
+2025,Jun,CAL,American Indian/Alaskan Native,**
+2025,Jun,CAL,Asian,**
+2025,Jun,CAL,Black,609
+2025,Jun,CAL,Cuban,**
+2025,Jun,CAL,Hispanic,"1,101"
+2025,Jun,CAL,Mexican,327
+2025,Jun,CAL,N/A,(Blank)
+2025,Jun,CAL,Other,52
+2025,Jun,CAL,Pacific Islander,**
+2025,Jun,CAL,White,239
+2025,Jun,SATF,American Indian/Alaskan Native,72
+2025,Jun,SATF,Asian,71
+2025,Jun,SATF,Black,"1,524"
+2025,Jun,SATF,Cuban,**
+2025,Jun,SATF,Hispanic,"1,792"
+2025,Jun,SATF,Mexican,639
+2025,Jun,SATF,N/A,(Blank)
+2025,Jun,SATF,Other,196
+2025,Jun,SATF,Pacific Islander,**
+2025,Jun,SATF,White,"1,087"
+2025,Jun,SCC,American Indian/Alaskan Native,50
+2025,Jun,SCC,Asian,72
+2025,Jun,SCC,Black,"1,152"
+2025,Jun,SCC,Cuban,(Blank)
+2025,Jun,SCC,Hispanic,"1,607"
+2025,Jun,SCC,Mexican,121
+2025,Jun,SCC,N/A,(Blank)
+2025,Jun,SCC,Other,125
+2025,Jun,SCC,Pacific Islander,**
+2025,Jun,SCC,White,804
+2025,Jun,SOL,American Indian/Alaskan Native,**
+2025,Jun,SOL,Asian,**
+2025,Jun,SOL,Black,"1,327"
+2025,Jun,SOL,Cuban,(Blank)
+2025,Jun,SOL,Hispanic,"1,408"
+2025,Jun,SOL,Mexican,352
+2025,Jun,SOL,N/A,(Blank)
+2025,Jun,SOL,Other,144
+2025,Jun,SOL,Pacific Islander,**
+2025,Jun,SOL,White,264
+2025,Jun,SQ,American Indian/Alaskan Native,**
+2025,Jun,SQ,Asian,51
+2025,Jun,SQ,Black,820
+2025,Jun,SQ,Cuban,**
+2025,Jun,SQ,Hispanic,756
+2025,Jun,SQ,Mexican,199
+2025,Jun,SQ,N/A,(Blank)
+2025,Jun,SQ,Other,146
+2025,Jun,SQ,Pacific Islander,**
+2025,Jun,SQ,White,684
+2025,Jun,SVSP,American Indian/Alaskan Native,**
+2025,Jun,SVSP,Asian,**
+2025,Jun,SVSP,Black,954
+2025,Jun,SVSP,Cuban,**
+2025,Jun,SVSP,Hispanic,694
+2025,Jun,SVSP,Mexican,270
+2025,Jun,SVSP,N/A,(Blank)
+2025,Jun,SVSP,Other,71
+2025,Jun,SVSP,Pacific Islander,**
+2025,Jun,SVSP,White,312
+2025,Jun,VSP,American Indian/Alaskan Native,**
+2025,Jun,VSP,Asian,52
+2025,Jun,VSP,Black,802
+2025,Jun,VSP,Cuban,**
+2025,Jun,VSP,Hispanic,814
+2025,Jun,VSP,Mexican,343
+2025,Jun,VSP,N/A,(Blank)
+2025,Jun,VSP,Other,149
+2025,Jun,VSP,Pacific Islander,**
+2025,Jun,VSP,White,850
+2025,Jun,WSP,American Indian/Alaskan Native,**
+2025,Jun,WSP,Asian,52
+2025,Jun,WSP,Black,913
+2025,Jun,WSP,Cuban,(Blank)
+2025,Jun,WSP,Hispanic,"1,747"
+2025,Jun,WSP,Mexican,236
+2025,Jun,WSP,N/A,(Blank)
+2025,Jun,WSP,Other,88
+2025,Jun,WSP,Pacific Islander,**
+2025,Jun,WSP,White,851
+2025,Jun,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Jun,CPMP,Asian,(Blank)
+2025,Jun,CPMP,Black,**
+2025,Jun,CPMP,Cuban,(Blank)
+2025,Jun,CPMP,Hispanic,**
+2025,Jun,CPMP,Mexican,(Blank)
+2025,Jun,CPMP,N/A,(Blank)
+2025,Jun,CPMP,Other,(Blank)
+2025,Jun,CPMP,Pacific Islander,(Blank)
+2025,Jun,CPMP,White,**
+2025,Jun,FCRF,American Indian/Alaskan Native,**
+2025,Jun,FCRF,Asian,**
+2025,Jun,FCRF,Black,77
+2025,Jun,FCRF,Cuban,(Blank)
+2025,Jun,FCRF,Hispanic,156
+2025,Jun,FCRF,Mexican,**
+2025,Jun,FCRF,N/A,(Blank)
+2025,Jun,FCRF,Other,**
+2025,Jun,FCRF,Pacific Islander,**
+2025,Jun,FCRF,White,148
+2025,Jun,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Jun,Alternative Custody Program,Asian,(Blank)
+2025,Jun,Alternative Custody Program,Black,(Blank)
+2025,Jun,Alternative Custody Program,Cuban,(Blank)
+2025,Jun,Alternative Custody Program,Hispanic,**
+2025,Jun,Alternative Custody Program,Mexican,(Blank)
+2025,Jun,Alternative Custody Program,N/A,(Blank)
+2025,Jun,Alternative Custody Program,Other,(Blank)
+2025,Jun,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Jun,Alternative Custody Program,White,**
+2025,Jun,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Jun,Department of State Hospitals,Asian,**
+2025,Jun,Department of State Hospitals,Black,51
+2025,Jun,Department of State Hospitals,Cuban,(Blank)
+2025,Jun,Department of State Hospitals,Hispanic,53
+2025,Jun,Department of State Hospitals,Mexican,**
+2025,Jun,Department of State Hospitals,N/A,(Blank)
+2025,Jun,Department of State Hospitals,Other,**
+2025,Jun,Department of State Hospitals,Pacific Islander,**
+2025,Jun,Department of State Hospitals,White,54
+2025,Jun,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Jun,Male Community Reentry Facility,Asian,**
+2025,Jun,Male Community Reentry Facility,Black,218
+2025,Jun,Male Community Reentry Facility,Cuban,(Blank)
+2025,Jun,Male Community Reentry Facility,Hispanic,262
+2025,Jun,Male Community Reentry Facility,Mexican,72
+2025,Jun,Male Community Reentry Facility,N/A,(Blank)
+2025,Jun,Male Community Reentry Facility,Other,**
+2025,Jun,Male Community Reentry Facility,Pacific Islander,**
+2025,Jun,Male Community Reentry Facility,White,109
+2025,Jun,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Jun,Medical Reprieve Program,Asian,(Blank)
+2025,Jun,Medical Reprieve Program,Black,**
+2025,Jun,Medical Reprieve Program,Cuban,(Blank)
+2025,Jun,Medical Reprieve Program,Hispanic,(Blank)
+2025,Jun,Medical Reprieve Program,Mexican,(Blank)
+2025,Jun,Medical Reprieve Program,N/A,(Blank)
+2025,Jun,Medical Reprieve Program,Other,(Blank)
+2025,Jun,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Jun,Medical Reprieve Program,White,**
+2025,Jun,CCI,American Indian/Alaskan Native,**
+2025,Jun,CCI,Asian,**
+2025,Jun,CCI,Black,646
+2025,Jun,CCI,Cuban,**
+2025,Jun,CCI,Hispanic,951
+2025,Jun,CCI,Mexican,240
+2025,Jun,CCI,N/A,(Blank)
+2025,Jun,CCI,Other,69
+2025,Jun,CCI,Pacific Islander,**
+2025,Jun,CCI,White,448
+2025,Jun,CCWF,American Indian/Alaskan Native,**
+2025,Jun,CCWF,Asian,**
+2025,Jun,CCWF,Black,541
+2025,Jun,CCWF,Cuban,(Blank)
+2025,Jun,CCWF,Hispanic,611
+2025,Jun,CCWF,Mexican,75
+2025,Jun,CCWF,N/A,(Blank)
+2025,Jun,CCWF,Other,61
+2025,Jun,CCWF,Pacific Islander,**
+2025,Jun,CCWF,White,578
+2025,Jun,CEN,American Indian/Alaskan Native,**
+2025,Jun,CEN,Asian,**
+2025,Jun,CEN,Black,720
+2025,Jun,CEN,Cuban,**
+2025,Jun,CEN,Hispanic,"1,474"
+2025,Jun,CEN,Mexican,445
+2025,Jun,CEN,N/A,(Blank)
+2025,Jun,CEN,Other,63
+2025,Jun,CEN,Pacific Islander,**
+2025,Jun,CEN,White,224
+2025,Jun,CHCF,American Indian/Alaskan Native,**
+2025,Jun,CHCF,Asian,**
+2025,Jun,CHCF,Black,713
+2025,Jun,CHCF,Cuban,**
+2025,Jun,CHCF,Hispanic,418
+2025,Jun,CHCF,Mexican,241
+2025,Jun,CHCF,N/A,(Blank)
+2025,Jun,CHCF,Other,125
+2025,Jun,CHCF,Pacific Islander,**
+2025,Jun,CHCF,White,710
+2025,Jun,CIM,American Indian/Alaskan Native,**
+2025,Jun,CIM,Asian,**
+2025,Jun,CIM,Black,590
+2025,Jun,CIM,Cuban,(Blank)
+2025,Jun,CIM,Hispanic,619
+2025,Jun,CIM,Mexican,338
+2025,Jun,CIM,N/A,(Blank)
+2025,Jun,CIM,Other,88
+2025,Jun,CIM,Pacific Islander,**
+2025,Jun,CIM,White,566
+2025,Jul,ASP,American Indian/Alaskan Native,53
+2025,Jul,ASP,Asian,56
+2025,Jul,ASP,Black,**
+2025,Jul,ASP,Cuban,(Blank)
+2025,Jul,ASP,Hispanic,"2,189"
+2025,Jul,ASP,Mexican,465
+2025,Jul,ASP,N/A,(Blank)
+2025,Jul,ASP,Other,161
+2025,Jul,ASP,Pacific Islander,**
+2025,Jul,ASP,White,"1,072"
+2025,Jul,CIW,American Indian/Alaskan Native,**
+2025,Jul,CIW,Asian,**
+2025,Jul,CIW,Black,298
+2025,Jul,CIW,Cuban,(Blank)
+2025,Jul,CIW,Hispanic,368
+2025,Jul,CIW,Mexican,**
+2025,Jul,CIW,N/A,(Blank)
+2025,Jul,CIW,Other,51
+2025,Jul,CIW,Pacific Islander,**
+2025,Jul,CIW,White,392
+2025,Jul,CMC,American Indian/Alaskan Native,**
+2025,Jul,CMC,Asian,**
+2025,Jul,CMC,Black,732
+2025,Jul,CMC,Cuban,**
+2025,Jul,CMC,Hispanic,655
+2025,Jul,CMC,Mexican,158
+2025,Jul,CMC,N/A,(Blank)
+2025,Jul,CMC,Other,98
+2025,Jul,CMC,Pacific Islander,**
+2025,Jul,CMC,White,440
+2025,Jul,CMF,American Indian/Alaskan Native,**
+2025,Jul,CMF,Asian,**
+2025,Jul,CMF,Black,708
+2025,Jul,CMF,Cuban,(Blank)
+2025,Jul,CMF,Hispanic,448
+2025,Jul,CMF,Mexican,185
+2025,Jul,CMF,N/A,(Blank)
+2025,Jul,CMF,Other,87
+2025,Jul,CMF,Pacific Islander,**
+2025,Jul,CMF,White,610
+2025,Jul,COR,American Indian/Alaskan Native,**
+2025,Jul,COR,Asian,**
+2025,Jul,COR,Black,638
+2025,Jul,COR,Cuban,**
+2025,Jul,COR,Hispanic,847
+2025,Jul,COR,Mexican,363
+2025,Jul,COR,N/A,(Blank)
+2025,Jul,COR,Other,95
+2025,Jul,COR,Pacific Islander,**
+2025,Jul,COR,White,540
+2025,Jul,CRC,American Indian/Alaskan Native,**
+2025,Jul,CRC,Asian,**
+2025,Jul,CRC,Black,786
+2025,Jul,CRC,Cuban,(Blank)
+2025,Jul,CRC,Hispanic,"1,248"
+2025,Jul,CRC,Mexican,142
+2025,Jul,CRC,N/A,(Blank)
+2025,Jul,CRC,Other,79
+2025,Jul,CRC,Pacific Islander,**
+2025,Jul,CRC,White,464
+2025,Jul,CTF,American Indian/Alaskan Native,**
+2025,Jul,CTF,Asian,**
+2025,Jul,CTF,Black,"1,002"
+2025,Jul,CTF,Cuban,**
+2025,Jul,CTF,Hispanic,"1,461"
+2025,Jul,CTF,Mexican,691
+2025,Jul,CTF,N/A,(Blank)
+2025,Jul,CTF,Other,182
+2025,Jul,CTF,Pacific Islander,**
+2025,Jul,CTF,White,729
+2025,Jul,FOL,American Indian/Alaskan Native,**
+2025,Jul,FOL,Asian,**
+2025,Jul,FOL,Black,746
+2025,Jul,FOL,Cuban,**
+2025,Jul,FOL,Hispanic,"1,125"
+2025,Jul,FOL,Mexican,393
+2025,Jul,FOL,N/A,(Blank)
+2025,Jul,FOL,Other,111
+2025,Jul,FOL,Pacific Islander,**
+2025,Jul,FOL,White,315
+2025,Jul,HDSP,American Indian/Alaskan Native,**
+2025,Jul,HDSP,Asian,**
+2025,Jul,HDSP,Black,817
+2025,Jul,HDSP,Cuban,(Blank)
+2025,Jul,HDSP,Hispanic,857
+2025,Jul,HDSP,Mexican,184
+2025,Jul,HDSP,N/A,(Blank)
+2025,Jul,HDSP,Other,80
+2025,Jul,HDSP,Pacific Islander,**
+2025,Jul,HDSP,White,517
+2025,Jul,ISP,American Indian/Alaskan Native,**
+2025,Jul,ISP,Asian,**
+2025,Jul,ISP,Black,570
+2025,Jul,ISP,Cuban,(Blank)
+2025,Jul,ISP,Hispanic,"1,268"
+2025,Jul,ISP,Mexican,294
+2025,Jul,ISP,N/A,(Blank)
+2025,Jul,ISP,Other,105
+2025,Jul,ISP,Pacific Islander,**
+2025,Jul,ISP,White,367
+2025,Jul,KVSP,American Indian/Alaskan Native,**
+2025,Jul,KVSP,Asian,**
+2025,Jul,KVSP,Black,"1,137"
+2025,Jul,KVSP,Cuban,(Blank)
+2025,Jul,KVSP,Hispanic,"1,122"
+2025,Jul,KVSP,Mexican,446
+2025,Jul,KVSP,N/A,(Blank)
+2025,Jul,KVSP,Other,76
+2025,Jul,KVSP,Pacific Islander,**
+2025,Jul,KVSP,White,286
+2025,Jul,LAC,American Indian/Alaskan Native,**
+2025,Jul,LAC,Asian,**
+2025,Jul,LAC,Black,"1,326"
+2025,Jul,LAC,Cuban,(Blank)
+2025,Jul,LAC,Hispanic,799
+2025,Jul,LAC,Mexican,342
+2025,Jul,LAC,N/A,(Blank)
+2025,Jul,LAC,Other,80
+2025,Jul,LAC,Pacific Islander,**
+2025,Jul,LAC,White,285
+2025,Jul,MCSP,American Indian/Alaskan Native,72
+2025,Jul,MCSP,Asian,**
+2025,Jul,MCSP,Black,988
+2025,Jul,MCSP,Cuban,**
+2025,Jul,MCSP,Hispanic,938
+2025,Jul,MCSP,Mexican,443
+2025,Jul,MCSP,N/A,(Blank)
+2025,Jul,MCSP,Other,164
+2025,Jul,MCSP,Pacific Islander,**
+2025,Jul,MCSP,White,"1,133"
+2025,Jul,NKSP,American Indian/Alaskan Native,**
+2025,Jul,NKSP,Asian,**
+2025,Jul,NKSP,Black,625
+2025,Jul,NKSP,Cuban,**
+2025,Jul,NKSP,Hispanic,941
+2025,Jul,NKSP,Mexican,117
+2025,Jul,NKSP,N/A,(Blank)
+2025,Jul,NKSP,Other,60
+2025,Jul,NKSP,Pacific Islander,**
+2025,Jul,NKSP,White,454
+2025,Jul,PBSP,American Indian/Alaskan Native,**
+2025,Jul,PBSP,Asian,**
+2025,Jul,PBSP,Black,704
+2025,Jul,PBSP,Cuban,**
+2025,Jul,PBSP,Hispanic,630
+2025,Jul,PBSP,Mexican,179
+2025,Jul,PBSP,N/A,(Blank)
+2025,Jul,PBSP,Other,73
+2025,Jul,PBSP,Pacific Islander,**
+2025,Jul,PBSP,White,418
+2025,Jul,PVSP,American Indian/Alaskan Native,**
+2025,Jul,PVSP,Asian,**
+2025,Jul,PVSP,Black,**
+2025,Jul,PVSP,Cuban,**
+2025,Jul,PVSP,Hispanic,"1,889"
+2025,Jul,PVSP,Mexican,287
+2025,Jul,PVSP,N/A,(Blank)
+2025,Jul,PVSP,Other,97
+2025,Jul,PVSP,Pacific Islander,**
+2025,Jul,PVSP,White,623
+2025,Jul,RJD,American Indian/Alaskan Native,52
+2025,Jul,RJD,Asian,**
+2025,Jul,RJD,Black,"1,096"
+2025,Jul,RJD,Cuban,**
+2025,Jul,RJD,Hispanic,"1,009"
+2025,Jul,RJD,Mexican,429
+2025,Jul,RJD,N/A,(Blank)
+2025,Jul,RJD,Other,162
+2025,Jul,RJD,Pacific Islander,**
+2025,Jul,RJD,White,852
+2025,Jul,SAC,American Indian/Alaskan Native,**
+2025,Jul,SAC,Asian,**
+2025,Jul,SAC,Black,856
+2025,Jul,SAC,Cuban,**
+2025,Jul,SAC,Hispanic,625
+2025,Jul,SAC,Mexican,237
+2025,Jul,SAC,N/A,(Blank)
+2025,Jul,SAC,Other,69
+2025,Jul,SAC,Pacific Islander,**
+2025,Jul,SAC,White,338
+2025,Jul,CAL,American Indian/Alaskan Native,**
+2025,Jul,CAL,Asian,**
+2025,Jul,CAL,Black,613
+2025,Jul,CAL,Cuban,**
+2025,Jul,CAL,Hispanic,"1,111"
+2025,Jul,CAL,Mexican,321
+2025,Jul,CAL,N/A,(Blank)
+2025,Jul,CAL,Other,53
+2025,Jul,CAL,Pacific Islander,**
+2025,Jul,CAL,White,238
+2025,Jul,SATF,American Indian/Alaskan Native,71
+2025,Jul,SATF,Asian,68
+2025,Jul,SATF,Black,"1,516"
+2025,Jul,SATF,Cuban,**
+2025,Jul,SATF,Hispanic,"1,797"
+2025,Jul,SATF,Mexican,634
+2025,Jul,SATF,N/A,(Blank)
+2025,Jul,SATF,Other,197
+2025,Jul,SATF,Pacific Islander,**
+2025,Jul,SATF,White,"1,084"
+2025,Jul,SCC,American Indian/Alaskan Native,**
+2025,Jul,SCC,Asian,70
+2025,Jul,SCC,Black,"1,142"
+2025,Jul,SCC,Cuban,(Blank)
+2025,Jul,SCC,Hispanic,"1,609"
+2025,Jul,SCC,Mexican,123
+2025,Jul,SCC,N/A,(Blank)
+2025,Jul,SCC,Other,121
+2025,Jul,SCC,Pacific Islander,**
+2025,Jul,SCC,White,777
+2025,Jul,SOL,American Indian/Alaskan Native,**
+2025,Jul,SOL,Asian,**
+2025,Jul,SOL,Black,"1,312"
+2025,Jul,SOL,Cuban,(Blank)
+2025,Jul,SOL,Hispanic,"1,390"
+2025,Jul,SOL,Mexican,350
+2025,Jul,SOL,N/A,(Blank)
+2025,Jul,SOL,Other,150
+2025,Jul,SOL,Pacific Islander,**
+2025,Jul,SOL,White,259
+2025,Jul,SQ,American Indian/Alaskan Native,**
+2025,Jul,SQ,Asian,**
+2025,Jul,SQ,Black,792
+2025,Jul,SQ,Cuban,**
+2025,Jul,SQ,Hispanic,742
+2025,Jul,SQ,Mexican,193
+2025,Jul,SQ,N/A,(Blank)
+2025,Jul,SQ,Other,141
+2025,Jul,SQ,Pacific Islander,**
+2025,Jul,SQ,White,664
+2025,Jul,SVSP,American Indian/Alaskan Native,**
+2025,Jul,SVSP,Asian,**
+2025,Jul,SVSP,Black,950
+2025,Jul,SVSP,Cuban,**
+2025,Jul,SVSP,Hispanic,702
+2025,Jul,SVSP,Mexican,271
+2025,Jul,SVSP,N/A,(Blank)
+2025,Jul,SVSP,Other,69
+2025,Jul,SVSP,Pacific Islander,**
+2025,Jul,SVSP,White,328
+2025,Jul,VSP,American Indian/Alaskan Native,**
+2025,Jul,VSP,Asian,52
+2025,Jul,VSP,Black,812
+2025,Jul,VSP,Cuban,**
+2025,Jul,VSP,Hispanic,838
+2025,Jul,VSP,Mexican,351
+2025,Jul,VSP,N/A,(Blank)
+2025,Jul,VSP,Other,154
+2025,Jul,VSP,Pacific Islander,**
+2025,Jul,VSP,White,877
+2025,Jul,WSP,American Indian/Alaskan Native,**
+2025,Jul,WSP,Asian,53
+2025,Jul,WSP,Black,934
+2025,Jul,WSP,Cuban,(Blank)
+2025,Jul,WSP,Hispanic,"1,761"
+2025,Jul,WSP,Mexican,274
+2025,Jul,WSP,N/A,(Blank)
+2025,Jul,WSP,Other,91
+2025,Jul,WSP,Pacific Islander,**
+2025,Jul,WSP,White,805
+2025,Jul,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Jul,CPMP,Asian,(Blank)
+2025,Jul,CPMP,Black,**
+2025,Jul,CPMP,Cuban,(Blank)
+2025,Jul,CPMP,Hispanic,**
+2025,Jul,CPMP,Mexican,(Blank)
+2025,Jul,CPMP,N/A,(Blank)
+2025,Jul,CPMP,Other,(Blank)
+2025,Jul,CPMP,Pacific Islander,(Blank)
+2025,Jul,CPMP,White,**
+2025,Jul,FCRF,American Indian/Alaskan Native,**
+2025,Jul,FCRF,Asian,**
+2025,Jul,FCRF,Black,80
+2025,Jul,FCRF,Cuban,(Blank)
+2025,Jul,FCRF,Hispanic,156
+2025,Jul,FCRF,Mexican,**
+2025,Jul,FCRF,N/A,(Blank)
+2025,Jul,FCRF,Other,**
+2025,Jul,FCRF,Pacific Islander,**
+2025,Jul,FCRF,White,145
+2025,Jul,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Jul,Alternative Custody Program,Asian,(Blank)
+2025,Jul,Alternative Custody Program,Black,(Blank)
+2025,Jul,Alternative Custody Program,Cuban,(Blank)
+2025,Jul,Alternative Custody Program,Hispanic,**
+2025,Jul,Alternative Custody Program,Mexican,(Blank)
+2025,Jul,Alternative Custody Program,N/A,(Blank)
+2025,Jul,Alternative Custody Program,Other,(Blank)
+2025,Jul,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Jul,Alternative Custody Program,White,**
+2025,Jul,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Jul,Department of State Hospitals,Asian,**
+2025,Jul,Department of State Hospitals,Black,**
+2025,Jul,Department of State Hospitals,Cuban,(Blank)
+2025,Jul,Department of State Hospitals,Hispanic,54
+2025,Jul,Department of State Hospitals,Mexican,**
+2025,Jul,Department of State Hospitals,N/A,(Blank)
+2025,Jul,Department of State Hospitals,Other,**
+2025,Jul,Department of State Hospitals,Pacific Islander,**
+2025,Jul,Department of State Hospitals,White,56
+2025,Jul,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Jul,Male Community Reentry Facility,Asian,**
+2025,Jul,Male Community Reentry Facility,Black,207
+2025,Jul,Male Community Reentry Facility,Cuban,(Blank)
+2025,Jul,Male Community Reentry Facility,Hispanic,279
+2025,Jul,Male Community Reentry Facility,Mexican,72
+2025,Jul,Male Community Reentry Facility,N/A,(Blank)
+2025,Jul,Male Community Reentry Facility,Other,**
+2025,Jul,Male Community Reentry Facility,Pacific Islander,**
+2025,Jul,Male Community Reentry Facility,White,109
+2025,Jul,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Jul,Medical Reprieve Program,Asian,(Blank)
+2025,Jul,Medical Reprieve Program,Black,**
+2025,Jul,Medical Reprieve Program,Cuban,(Blank)
+2025,Jul,Medical Reprieve Program,Hispanic,(Blank)
+2025,Jul,Medical Reprieve Program,Mexican,(Blank)
+2025,Jul,Medical Reprieve Program,N/A,(Blank)
+2025,Jul,Medical Reprieve Program,Other,(Blank)
+2025,Jul,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Jul,Medical Reprieve Program,White,**
+2025,Jul,CCI,American Indian/Alaskan Native,**
+2025,Jul,CCI,Asian,**
+2025,Jul,CCI,Black,647
+2025,Jul,CCI,Cuban,**
+2025,Jul,CCI,Hispanic,946
+2025,Jul,CCI,Mexican,237
+2025,Jul,CCI,N/A,(Blank)
+2025,Jul,CCI,Other,71
+2025,Jul,CCI,Pacific Islander,**
+2025,Jul,CCI,White,426
+2025,Jul,CCWF,American Indian/Alaskan Native,51
+2025,Jul,CCWF,Asian,**
+2025,Jul,CCWF,Black,544
+2025,Jul,CCWF,Cuban,(Blank)
+2025,Jul,CCWF,Hispanic,630
+2025,Jul,CCWF,Mexican,74
+2025,Jul,CCWF,N/A,(Blank)
+2025,Jul,CCWF,Other,71
+2025,Jul,CCWF,Pacific Islander,**
+2025,Jul,CCWF,White,567
+2025,Jul,CEN,American Indian/Alaskan Native,**
+2025,Jul,CEN,Asian,**
+2025,Jul,CEN,Black,696
+2025,Jul,CEN,Cuban,**
+2025,Jul,CEN,Hispanic,"1,471"
+2025,Jul,CEN,Mexican,445
+2025,Jul,CEN,N/A,(Blank)
+2025,Jul,CEN,Other,64
+2025,Jul,CEN,Pacific Islander,**
+2025,Jul,CEN,White,220
+2025,Jul,CHCF,American Indian/Alaskan Native,**
+2025,Jul,CHCF,Asian,**
+2025,Jul,CHCF,Black,720
+2025,Jul,CHCF,Cuban,**
+2025,Jul,CHCF,Hispanic,410
+2025,Jul,CHCF,Mexican,242
+2025,Jul,CHCF,N/A,(Blank)
+2025,Jul,CHCF,Other,121
+2025,Jul,CHCF,Pacific Islander,**
+2025,Jul,CHCF,White,716
+2025,Jul,CIM,American Indian/Alaskan Native,**
+2025,Jul,CIM,Asian,**
+2025,Jul,CIM,Black,590
+2025,Jul,CIM,Cuban,(Blank)
+2025,Jul,CIM,Hispanic,616
+2025,Jul,CIM,Mexican,334
+2025,Jul,CIM,N/A,(Blank)
+2025,Jul,CIM,Other,87
+2025,Jul,CIM,Pacific Islander,**
+2025,Jul,CIM,White,553
+2025,Aug,ASP,American Indian/Alaskan Native,52
+2025,Aug,ASP,Asian,54
+2025,Aug,ASP,Black,**
+2025,Aug,ASP,Cuban,(Blank)
+2025,Aug,ASP,Hispanic,"2,144"
+2025,Aug,ASP,Mexican,455
+2025,Aug,ASP,N/A,(Blank)
+2025,Aug,ASP,Other,156
+2025,Aug,ASP,Pacific Islander,**
+2025,Aug,ASP,White,"1,025"
+2025,Aug,CIW,American Indian/Alaskan Native,**
+2025,Aug,CIW,Asian,**
+2025,Aug,CIW,Black,281
+2025,Aug,CIW,Cuban,(Blank)
+2025,Aug,CIW,Hispanic,346
+2025,Aug,CIW,Mexican,**
+2025,Aug,CIW,N/A,(Blank)
+2025,Aug,CIW,Other,52
+2025,Aug,CIW,Pacific Islander,**
+2025,Aug,CIW,White,372
+2025,Aug,CMC,American Indian/Alaskan Native,**
+2025,Aug,CMC,Asian,**
+2025,Aug,CMC,Black,712
+2025,Aug,CMC,Cuban,**
+2025,Aug,CMC,Hispanic,625
+2025,Aug,CMC,Mexican,152
+2025,Aug,CMC,N/A,(Blank)
+2025,Aug,CMC,Other,91
+2025,Aug,CMC,Pacific Islander,**
+2025,Aug,CMC,White,436
+2025,Aug,CMF,American Indian/Alaskan Native,**
+2025,Aug,CMF,Asian,**
+2025,Aug,CMF,Black,702
+2025,Aug,CMF,Cuban,(Blank)
+2025,Aug,CMF,Hispanic,452
+2025,Aug,CMF,Mexican,181
+2025,Aug,CMF,N/A,(Blank)
+2025,Aug,CMF,Other,91
+2025,Aug,CMF,Pacific Islander,**
+2025,Aug,CMF,White,611
+2025,Aug,COR,American Indian/Alaskan Native,**
+2025,Aug,COR,Asian,**
+2025,Aug,COR,Black,629
+2025,Aug,COR,Cuban,**
+2025,Aug,COR,Hispanic,857
+2025,Aug,COR,Mexican,365
+2025,Aug,COR,N/A,(Blank)
+2025,Aug,COR,Other,95
+2025,Aug,COR,Pacific Islander,**
+2025,Aug,COR,White,549
+2025,Aug,CRC,American Indian/Alaskan Native,**
+2025,Aug,CRC,Asian,**
+2025,Aug,CRC,Black,724
+2025,Aug,CRC,Cuban,(Blank)
+2025,Aug,CRC,Hispanic,"1,186"
+2025,Aug,CRC,Mexican,131
+2025,Aug,CRC,N/A,(Blank)
+2025,Aug,CRC,Other,75
+2025,Aug,CRC,Pacific Islander,**
+2025,Aug,CRC,White,420
+2025,Aug,CTF,American Indian/Alaskan Native,**
+2025,Aug,CTF,Asian,**
+2025,Aug,CTF,Black,"1,003"
+2025,Aug,CTF,Cuban,**
+2025,Aug,CTF,Hispanic,"1,474"
+2025,Aug,CTF,Mexican,688
+2025,Aug,CTF,N/A,(Blank)
+2025,Aug,CTF,Other,181
+2025,Aug,CTF,Pacific Islander,**
+2025,Aug,CTF,White,715
+2025,Aug,FOL,American Indian/Alaskan Native,**
+2025,Aug,FOL,Asian,52
+2025,Aug,FOL,Black,700
+2025,Aug,FOL,Cuban,**
+2025,Aug,FOL,Hispanic,"1,128"
+2025,Aug,FOL,Mexican,395
+2025,Aug,FOL,N/A,(Blank)
+2025,Aug,FOL,Other,107
+2025,Aug,FOL,Pacific Islander,**
+2025,Aug,FOL,White,301
+2025,Aug,HDSP,American Indian/Alaskan Native,**
+2025,Aug,HDSP,Asian,**
+2025,Aug,HDSP,Black,725
+2025,Aug,HDSP,Cuban,(Blank)
+2025,Aug,HDSP,Hispanic,810
+2025,Aug,HDSP,Mexican,176
+2025,Aug,HDSP,N/A,(Blank)
+2025,Aug,HDSP,Other,81
+2025,Aug,HDSP,Pacific Islander,**
+2025,Aug,HDSP,White,514
+2025,Aug,ISP,American Indian/Alaskan Native,**
+2025,Aug,ISP,Asian,**
+2025,Aug,ISP,Black,582
+2025,Aug,ISP,Cuban,(Blank)
+2025,Aug,ISP,Hispanic,"1,268"
+2025,Aug,ISP,Mexican,296
+2025,Aug,ISP,N/A,(Blank)
+2025,Aug,ISP,Other,105
+2025,Aug,ISP,Pacific Islander,**
+2025,Aug,ISP,White,378
+2025,Aug,KVSP,American Indian/Alaskan Native,**
+2025,Aug,KVSP,Asian,**
+2025,Aug,KVSP,Black,"1,121"
+2025,Aug,KVSP,Cuban,(Blank)
+2025,Aug,KVSP,Hispanic,"1,100"
+2025,Aug,KVSP,Mexican,435
+2025,Aug,KVSP,N/A,(Blank)
+2025,Aug,KVSP,Other,78
+2025,Aug,KVSP,Pacific Islander,**
+2025,Aug,KVSP,White,272
+2025,Aug,LAC,American Indian/Alaskan Native,**
+2025,Aug,LAC,Asian,**
+2025,Aug,LAC,Black,"1,394"
+2025,Aug,LAC,Cuban,(Blank)
+2025,Aug,LAC,Hispanic,847
+2025,Aug,LAC,Mexican,352
+2025,Aug,LAC,N/A,(Blank)
+2025,Aug,LAC,Other,94
+2025,Aug,LAC,Pacific Islander,**
+2025,Aug,LAC,White,297
+2025,Aug,MCSP,American Indian/Alaskan Native,72
+2025,Aug,MCSP,Asian,**
+2025,Aug,MCSP,Black,989
+2025,Aug,MCSP,Cuban,**
+2025,Aug,MCSP,Hispanic,956
+2025,Aug,MCSP,Mexican,438
+2025,Aug,MCSP,N/A,(Blank)
+2025,Aug,MCSP,Other,161
+2025,Aug,MCSP,Pacific Islander,**
+2025,Aug,MCSP,White,"1,135"
+2025,Aug,NKSP,American Indian/Alaskan Native,**
+2025,Aug,NKSP,Asian,**
+2025,Aug,NKSP,Black,644
+2025,Aug,NKSP,Cuban,(Blank)
+2025,Aug,NKSP,Hispanic,"1,026"
+2025,Aug,NKSP,Mexican,103
+2025,Aug,NKSP,N/A,(Blank)
+2025,Aug,NKSP,Other,57
+2025,Aug,NKSP,Pacific Islander,**
+2025,Aug,NKSP,White,511
+2025,Aug,PBSP,American Indian/Alaskan Native,**
+2025,Aug,PBSP,Asian,**
+2025,Aug,PBSP,Black,737
+2025,Aug,PBSP,Cuban,**
+2025,Aug,PBSP,Hispanic,647
+2025,Aug,PBSP,Mexican,180
+2025,Aug,PBSP,N/A,(Blank)
+2025,Aug,PBSP,Other,77
+2025,Aug,PBSP,Pacific Islander,**
+2025,Aug,PBSP,White,436
+2025,Aug,PVSP,American Indian/Alaskan Native,**
+2025,Aug,PVSP,Asian,**
+2025,Aug,PVSP,Black,**
+2025,Aug,PVSP,Cuban,**
+2025,Aug,PVSP,Hispanic,"1,926"
+2025,Aug,PVSP,Mexican,302
+2025,Aug,PVSP,N/A,(Blank)
+2025,Aug,PVSP,Other,100
+2025,Aug,PVSP,Pacific Islander,**
+2025,Aug,PVSP,White,644
+2025,Aug,RJD,American Indian/Alaskan Native,56
+2025,Aug,RJD,Asian,**
+2025,Aug,RJD,Black,"1,134"
+2025,Aug,RJD,Cuban,**
+2025,Aug,RJD,Hispanic,"1,007"
+2025,Aug,RJD,Mexican,440
+2025,Aug,RJD,N/A,(Blank)
+2025,Aug,RJD,Other,163
+2025,Aug,RJD,Pacific Islander,**
+2025,Aug,RJD,White,856
+2025,Aug,SAC,American Indian/Alaskan Native,**
+2025,Aug,SAC,Asian,**
+2025,Aug,SAC,Black,853
+2025,Aug,SAC,Cuban,**
+2025,Aug,SAC,Hispanic,626
+2025,Aug,SAC,Mexican,232
+2025,Aug,SAC,N/A,(Blank)
+2025,Aug,SAC,Other,65
+2025,Aug,SAC,Pacific Islander,**
+2025,Aug,SAC,White,327
+2025,Aug,CAL,American Indian/Alaskan Native,**
+2025,Aug,CAL,Asian,**
+2025,Aug,CAL,Black,614
+2025,Aug,CAL,Cuban,**
+2025,Aug,CAL,Hispanic,"1,131"
+2025,Aug,CAL,Mexican,314
+2025,Aug,CAL,N/A,(Blank)
+2025,Aug,CAL,Other,57
+2025,Aug,CAL,Pacific Islander,**
+2025,Aug,CAL,White,228
+2025,Aug,SATF,American Indian/Alaskan Native,74
+2025,Aug,SATF,Asian,69
+2025,Aug,SATF,Black,"1,525"
+2025,Aug,SATF,Cuban,**
+2025,Aug,SATF,Hispanic,"1,790"
+2025,Aug,SATF,Mexican,628
+2025,Aug,SATF,N/A,(Blank)
+2025,Aug,SATF,Other,193
+2025,Aug,SATF,Pacific Islander,**
+2025,Aug,SATF,White,"1,078"
+2025,Aug,SCC,American Indian/Alaskan Native,**
+2025,Aug,SCC,Asian,66
+2025,Aug,SCC,Black,"1,143"
+2025,Aug,SCC,Cuban,(Blank)
+2025,Aug,SCC,Hispanic,"1,605"
+2025,Aug,SCC,Mexican,127
+2025,Aug,SCC,N/A,(Blank)
+2025,Aug,SCC,Other,127
+2025,Aug,SCC,Pacific Islander,**
+2025,Aug,SCC,White,763
+2025,Aug,SOL,American Indian/Alaskan Native,**
+2025,Aug,SOL,Asian,**
+2025,Aug,SOL,Black,"1,334"
+2025,Aug,SOL,Cuban,(Blank)
+2025,Aug,SOL,Hispanic,"1,389"
+2025,Aug,SOL,Mexican,348
+2025,Aug,SOL,N/A,(Blank)
+2025,Aug,SOL,Other,151
+2025,Aug,SOL,Pacific Islander,**
+2025,Aug,SOL,White,248
+2025,Aug,SQ,American Indian/Alaskan Native,**
+2025,Aug,SQ,Asian,**
+2025,Aug,SQ,Black,782
+2025,Aug,SQ,Cuban,**
+2025,Aug,SQ,Hispanic,727
+2025,Aug,SQ,Mexican,191
+2025,Aug,SQ,N/A,(Blank)
+2025,Aug,SQ,Other,136
+2025,Aug,SQ,Pacific Islander,**
+2025,Aug,SQ,White,665
+2025,Aug,SVSP,American Indian/Alaskan Native,**
+2025,Aug,SVSP,Asian,**
+2025,Aug,SVSP,Black,948
+2025,Aug,SVSP,Cuban,**
+2025,Aug,SVSP,Hispanic,714
+2025,Aug,SVSP,Mexican,279
+2025,Aug,SVSP,N/A,(Blank)
+2025,Aug,SVSP,Other,62
+2025,Aug,SVSP,Pacific Islander,**
+2025,Aug,SVSP,White,331
+2025,Aug,VSP,American Indian/Alaskan Native,**
+2025,Aug,VSP,Asian,55
+2025,Aug,VSP,Black,851
+2025,Aug,VSP,Cuban,**
+2025,Aug,VSP,Hispanic,874
+2025,Aug,VSP,Mexican,364
+2025,Aug,VSP,N/A,(Blank)
+2025,Aug,VSP,Other,159
+2025,Aug,VSP,Pacific Islander,**
+2025,Aug,VSP,White,923
+2025,Aug,WSP,American Indian/Alaskan Native,**
+2025,Aug,WSP,Asian,**
+2025,Aug,WSP,Black,904
+2025,Aug,WSP,Cuban,(Blank)
+2025,Aug,WSP,Hispanic,"1,737"
+2025,Aug,WSP,Mexican,264
+2025,Aug,WSP,N/A,(Blank)
+2025,Aug,WSP,Other,71
+2025,Aug,WSP,Pacific Islander,**
+2025,Aug,WSP,White,740
+2025,Aug,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Aug,CPMP,Asian,(Blank)
+2025,Aug,CPMP,Black,**
+2025,Aug,CPMP,Cuban,(Blank)
+2025,Aug,CPMP,Hispanic,**
+2025,Aug,CPMP,Mexican,(Blank)
+2025,Aug,CPMP,N/A,(Blank)
+2025,Aug,CPMP,Other,(Blank)
+2025,Aug,CPMP,Pacific Islander,(Blank)
+2025,Aug,CPMP,White,**
+2025,Aug,FCRF,American Indian/Alaskan Native,**
+2025,Aug,FCRF,Asian,**
+2025,Aug,FCRF,Black,83
+2025,Aug,FCRF,Cuban,(Blank)
+2025,Aug,FCRF,Hispanic,149
+2025,Aug,FCRF,Mexican,**
+2025,Aug,FCRF,N/A,(Blank)
+2025,Aug,FCRF,Other,**
+2025,Aug,FCRF,Pacific Islander,**
+2025,Aug,FCRF,White,139
+2025,Aug,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Aug,Alternative Custody Program,Asian,(Blank)
+2025,Aug,Alternative Custody Program,Black,**
+2025,Aug,Alternative Custody Program,Cuban,(Blank)
+2025,Aug,Alternative Custody Program,Hispanic,**
+2025,Aug,Alternative Custody Program,Mexican,(Blank)
+2025,Aug,Alternative Custody Program,N/A,(Blank)
+2025,Aug,Alternative Custody Program,Other,**
+2025,Aug,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Aug,Alternative Custody Program,White,**
+2025,Aug,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Aug,Department of State Hospitals,Asian,**
+2025,Aug,Department of State Hospitals,Black,52
+2025,Aug,Department of State Hospitals,Cuban,(Blank)
+2025,Aug,Department of State Hospitals,Hispanic,52
+2025,Aug,Department of State Hospitals,Mexican,**
+2025,Aug,Department of State Hospitals,N/A,(Blank)
+2025,Aug,Department of State Hospitals,Other,**
+2025,Aug,Department of State Hospitals,Pacific Islander,**
+2025,Aug,Department of State Hospitals,White,52
+2025,Aug,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Aug,Male Community Reentry Facility,Asian,**
+2025,Aug,Male Community Reentry Facility,Black,213
+2025,Aug,Male Community Reentry Facility,Cuban,(Blank)
+2025,Aug,Male Community Reentry Facility,Hispanic,286
+2025,Aug,Male Community Reentry Facility,Mexican,80
+2025,Aug,Male Community Reentry Facility,N/A,(Blank)
+2025,Aug,Male Community Reentry Facility,Other,**
+2025,Aug,Male Community Reentry Facility,Pacific Islander,**
+2025,Aug,Male Community Reentry Facility,White,113
+2025,Aug,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Aug,Medical Reprieve Program,Asian,(Blank)
+2025,Aug,Medical Reprieve Program,Black,**
+2025,Aug,Medical Reprieve Program,Cuban,(Blank)
+2025,Aug,Medical Reprieve Program,Hispanic,(Blank)
+2025,Aug,Medical Reprieve Program,Mexican,(Blank)
+2025,Aug,Medical Reprieve Program,N/A,(Blank)
+2025,Aug,Medical Reprieve Program,Other,(Blank)
+2025,Aug,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Aug,Medical Reprieve Program,White,**
+2025,Aug,CCI,American Indian/Alaskan Native,**
+2025,Aug,CCI,Asian,**
+2025,Aug,CCI,Black,704
+2025,Aug,CCI,Cuban,(Blank)
+2025,Aug,CCI,Hispanic,968
+2025,Aug,CCI,Mexican,239
+2025,Aug,CCI,N/A,(Blank)
+2025,Aug,CCI,Other,73
+2025,Aug,CCI,Pacific Islander,**
+2025,Aug,CCI,White,436
+2025,Aug,CCWF,American Indian/Alaskan Native,52
+2025,Aug,CCWF,Asian,**
+2025,Aug,CCWF,Black,537
+2025,Aug,CCWF,Cuban,(Blank)
+2025,Aug,CCWF,Hispanic,670
+2025,Aug,CCWF,Mexican,75
+2025,Aug,CCWF,N/A,(Blank)
+2025,Aug,CCWF,Other,73
+2025,Aug,CCWF,Pacific Islander,**
+2025,Aug,CCWF,White,582
+2025,Aug,CEN,American Indian/Alaskan Native,**
+2025,Aug,CEN,Asian,**
+2025,Aug,CEN,Black,712
+2025,Aug,CEN,Cuban,**
+2025,Aug,CEN,Hispanic,"1,492"
+2025,Aug,CEN,Mexican,453
+2025,Aug,CEN,N/A,(Blank)
+2025,Aug,CEN,Other,63
+2025,Aug,CEN,Pacific Islander,**
+2025,Aug,CEN,White,238
+2025,Aug,CHCF,American Indian/Alaskan Native,**
+2025,Aug,CHCF,Asian,**
+2025,Aug,CHCF,Black,719
+2025,Aug,CHCF,Cuban,**
+2025,Aug,CHCF,Hispanic,431
+2025,Aug,CHCF,Mexican,244
+2025,Aug,CHCF,N/A,(Blank)
+2025,Aug,CHCF,Other,127
+2025,Aug,CHCF,Pacific Islander,**
+2025,Aug,CHCF,White,708
+2025,Aug,CIM,American Indian/Alaskan Native,**
+2025,Aug,CIM,Asian,**
+2025,Aug,CIM,Black,585
+2025,Aug,CIM,Cuban,(Blank)
+2025,Aug,CIM,Hispanic,614
+2025,Aug,CIM,Mexican,326
+2025,Aug,CIM,N/A,(Blank)
+2025,Aug,CIM,Other,87
+2025,Aug,CIM,Pacific Islander,**
+2025,Aug,CIM,White,554
+2025,Sep,ASP,American Indian/Alaskan Native,51
+2025,Sep,ASP,Asian,52
+2025,Sep,ASP,Black,**
+2025,Sep,ASP,Cuban,(Blank)
+2025,Sep,ASP,Hispanic,"2,160"
+2025,Sep,ASP,Mexican,456
+2025,Sep,ASP,N/A,(Blank)
+2025,Sep,ASP,Other,153
+2025,Sep,ASP,Pacific Islander,**
+2025,Sep,ASP,White,"1,013"
+2025,Sep,CIW,American Indian/Alaskan Native,**
+2025,Sep,CIW,Asian,**
+2025,Sep,CIW,Black,277
+2025,Sep,CIW,Cuban,(Blank)
+2025,Sep,CIW,Hispanic,345
+2025,Sep,CIW,Mexican,**
+2025,Sep,CIW,N/A,(Blank)
+2025,Sep,CIW,Other,50
+2025,Sep,CIW,Pacific Islander,**
+2025,Sep,CIW,White,370
+2025,Sep,CMC,American Indian/Alaskan Native,**
+2025,Sep,CMC,Asian,**
+2025,Sep,CMC,Black,719
+2025,Sep,CMC,Cuban,**
+2025,Sep,CMC,Hispanic,629
+2025,Sep,CMC,Mexican,156
+2025,Sep,CMC,N/A,(Blank)
+2025,Sep,CMC,Other,92
+2025,Sep,CMC,Pacific Islander,**
+2025,Sep,CMC,White,436
+2025,Sep,CMF,American Indian/Alaskan Native,**
+2025,Sep,CMF,Asian,**
+2025,Sep,CMF,Black,720
+2025,Sep,CMF,Cuban,(Blank)
+2025,Sep,CMF,Hispanic,456
+2025,Sep,CMF,Mexican,184
+2025,Sep,CMF,N/A,(Blank)
+2025,Sep,CMF,Other,94
+2025,Sep,CMF,Pacific Islander,**
+2025,Sep,CMF,White,619
+2025,Sep,COR,American Indian/Alaskan Native,**
+2025,Sep,COR,Asian,**
+2025,Sep,COR,Black,643
+2025,Sep,COR,Cuban,**
+2025,Sep,COR,Hispanic,867
+2025,Sep,COR,Mexican,363
+2025,Sep,COR,N/A,(Blank)
+2025,Sep,COR,Other,101
+2025,Sep,COR,Pacific Islander,**
+2025,Sep,COR,White,560
+2025,Sep,CRC,American Indian/Alaskan Native,**
+2025,Sep,CRC,Asian,**
+2025,Sep,CRC,Black,576
+2025,Sep,CRC,Cuban,(Blank)
+2025,Sep,CRC,Hispanic,998
+2025,Sep,CRC,Mexican,112
+2025,Sep,CRC,N/A,(Blank)
+2025,Sep,CRC,Other,63
+2025,Sep,CRC,Pacific Islander,**
+2025,Sep,CRC,White,345
+2025,Sep,CTF,American Indian/Alaskan Native,**
+2025,Sep,CTF,Asian,**
+2025,Sep,CTF,Black,"1,002"
+2025,Sep,CTF,Cuban,**
+2025,Sep,CTF,Hispanic,"1,481"
+2025,Sep,CTF,Mexican,691
+2025,Sep,CTF,N/A,(Blank)
+2025,Sep,CTF,Other,183
+2025,Sep,CTF,Pacific Islander,**
+2025,Sep,CTF,White,714
+2025,Sep,FOL,American Indian/Alaskan Native,**
+2025,Sep,FOL,Asian,51
+2025,Sep,FOL,Black,686
+2025,Sep,FOL,Cuban,**
+2025,Sep,FOL,Hispanic,"1,139"
+2025,Sep,FOL,Mexican,388
+2025,Sep,FOL,N/A,(Blank)
+2025,Sep,FOL,Other,106
+2025,Sep,FOL,Pacific Islander,**
+2025,Sep,FOL,White,322
+2025,Sep,HDSP,American Indian/Alaskan Native,**
+2025,Sep,HDSP,Asian,**
+2025,Sep,HDSP,Black,776
+2025,Sep,HDSP,Cuban,(Blank)
+2025,Sep,HDSP,Hispanic,896
+2025,Sep,HDSP,Mexican,211
+2025,Sep,HDSP,N/A,(Blank)
+2025,Sep,HDSP,Other,85
+2025,Sep,HDSP,Pacific Islander,**
+2025,Sep,HDSP,White,541
+2025,Sep,ISP,American Indian/Alaskan Native,**
+2025,Sep,ISP,Asian,**
+2025,Sep,ISP,Black,625
+2025,Sep,ISP,Cuban,(Blank)
+2025,Sep,ISP,Hispanic,"1,314"
+2025,Sep,ISP,Mexican,309
+2025,Sep,ISP,N/A,(Blank)
+2025,Sep,ISP,Other,106
+2025,Sep,ISP,Pacific Islander,**
+2025,Sep,ISP,White,396
+2025,Sep,KVSP,American Indian/Alaskan Native,**
+2025,Sep,KVSP,Asian,**
+2025,Sep,KVSP,Black,"1,074"
+2025,Sep,KVSP,Cuban,(Blank)
+2025,Sep,KVSP,Hispanic,"1,039"
+2025,Sep,KVSP,Mexican,394
+2025,Sep,KVSP,N/A,(Blank)
+2025,Sep,KVSP,Other,74
+2025,Sep,KVSP,Pacific Islander,**
+2025,Sep,KVSP,White,248
+2025,Sep,LAC,American Indian/Alaskan Native,**
+2025,Sep,LAC,Asian,**
+2025,Sep,LAC,Black,"1,397"
+2025,Sep,LAC,Cuban,(Blank)
+2025,Sep,LAC,Hispanic,895
+2025,Sep,LAC,Mexican,344
+2025,Sep,LAC,N/A,(Blank)
+2025,Sep,LAC,Other,97
+2025,Sep,LAC,Pacific Islander,**
+2025,Sep,LAC,White,306
+2025,Sep,MCSP,American Indian/Alaskan Native,71
+2025,Sep,MCSP,Asian,**
+2025,Sep,MCSP,Black,967
+2025,Sep,MCSP,Cuban,**
+2025,Sep,MCSP,Hispanic,935
+2025,Sep,MCSP,Mexican,422
+2025,Sep,MCSP,N/A,(Blank)
+2025,Sep,MCSP,Other,163
+2025,Sep,MCSP,Pacific Islander,**
+2025,Sep,MCSP,White,"1,122"
+2025,Sep,NKSP,American Indian/Alaskan Native,**
+2025,Sep,NKSP,Asian,**
+2025,Sep,NKSP,Black,726
+2025,Sep,NKSP,Cuban,(Blank)
+2025,Sep,NKSP,Hispanic,"1,051"
+2025,Sep,NKSP,Mexican,112
+2025,Sep,NKSP,N/A,(Blank)
+2025,Sep,NKSP,Other,71
+2025,Sep,NKSP,Pacific Islander,**
+2025,Sep,NKSP,White,542
+2025,Sep,PBSP,American Indian/Alaskan Native,**
+2025,Sep,PBSP,Asian,**
+2025,Sep,PBSP,Black,752
+2025,Sep,PBSP,Cuban,**
+2025,Sep,PBSP,Hispanic,647
+2025,Sep,PBSP,Mexican,179
+2025,Sep,PBSP,N/A,(Blank)
+2025,Sep,PBSP,Other,75
+2025,Sep,PBSP,Pacific Islander,**
+2025,Sep,PBSP,White,434
+2025,Sep,PVSP,American Indian/Alaskan Native,**
+2025,Sep,PVSP,Asian,**
+2025,Sep,PVSP,Black,**
+2025,Sep,PVSP,Cuban,**
+2025,Sep,PVSP,Hispanic,"1,922"
+2025,Sep,PVSP,Mexican,289
+2025,Sep,PVSP,N/A,(Blank)
+2025,Sep,PVSP,Other,99
+2025,Sep,PVSP,Pacific Islander,**
+2025,Sep,PVSP,White,645
+2025,Sep,RJD,American Indian/Alaskan Native,61
+2025,Sep,RJD,Asian,**
+2025,Sep,RJD,Black,"1,136"
+2025,Sep,RJD,Cuban,**
+2025,Sep,RJD,Hispanic,"1,008"
+2025,Sep,RJD,Mexican,450
+2025,Sep,RJD,N/A,(Blank)
+2025,Sep,RJD,Other,165
+2025,Sep,RJD,Pacific Islander,**
+2025,Sep,RJD,White,856
+2025,Sep,SAC,American Indian/Alaskan Native,**
+2025,Sep,SAC,Asian,**
+2025,Sep,SAC,Black,845
+2025,Sep,SAC,Cuban,**
+2025,Sep,SAC,Hispanic,631
+2025,Sep,SAC,Mexican,229
+2025,Sep,SAC,N/A,(Blank)
+2025,Sep,SAC,Other,65
+2025,Sep,SAC,Pacific Islander,**
+2025,Sep,SAC,White,344
+2025,Sep,CAL,American Indian/Alaskan Native,**
+2025,Sep,CAL,Asian,**
+2025,Sep,CAL,Black,613
+2025,Sep,CAL,Cuban,**
+2025,Sep,CAL,Hispanic,"1,146"
+2025,Sep,CAL,Mexican,316
+2025,Sep,CAL,N/A,(Blank)
+2025,Sep,CAL,Other,62
+2025,Sep,CAL,Pacific Islander,**
+2025,Sep,CAL,White,229
+2025,Sep,SATF,American Indian/Alaskan Native,75
+2025,Sep,SATF,Asian,72
+2025,Sep,SATF,Black,"1,529"
+2025,Sep,SATF,Cuban,**
+2025,Sep,SATF,Hispanic,"1,805"
+2025,Sep,SATF,Mexican,632
+2025,Sep,SATF,N/A,(Blank)
+2025,Sep,SATF,Other,191
+2025,Sep,SATF,Pacific Islander,**
+2025,Sep,SATF,White,"1,080"
+2025,Sep,SCC,American Indian/Alaskan Native,53
+2025,Sep,SCC,Asian,66
+2025,Sep,SCC,Black,"1,156"
+2025,Sep,SCC,Cuban,(Blank)
+2025,Sep,SCC,Hispanic,"1,639"
+2025,Sep,SCC,Mexican,124
+2025,Sep,SCC,N/A,(Blank)
+2025,Sep,SCC,Other,125
+2025,Sep,SCC,Pacific Islander,**
+2025,Sep,SCC,White,783
+2025,Sep,SOL,American Indian/Alaskan Native,**
+2025,Sep,SOL,Asian,**
+2025,Sep,SOL,Black,"1,343"
+2025,Sep,SOL,Cuban,(Blank)
+2025,Sep,SOL,Hispanic,"1,465"
+2025,Sep,SOL,Mexican,361
+2025,Sep,SOL,N/A,(Blank)
+2025,Sep,SOL,Other,150
+2025,Sep,SOL,Pacific Islander,**
+2025,Sep,SOL,White,256
+2025,Sep,SQ,American Indian/Alaskan Native,**
+2025,Sep,SQ,Asian,**
+2025,Sep,SQ,Black,786
+2025,Sep,SQ,Cuban,**
+2025,Sep,SQ,Hispanic,714
+2025,Sep,SQ,Mexican,189
+2025,Sep,SQ,N/A,(Blank)
+2025,Sep,SQ,Other,133
+2025,Sep,SQ,Pacific Islander,**
+2025,Sep,SQ,White,666
+2025,Sep,SVSP,American Indian/Alaskan Native,**
+2025,Sep,SVSP,Asian,**
+2025,Sep,SVSP,Black,972
+2025,Sep,SVSP,Cuban,**
+2025,Sep,SVSP,Hispanic,723
+2025,Sep,SVSP,Mexican,282
+2025,Sep,SVSP,N/A,(Blank)
+2025,Sep,SVSP,Other,63
+2025,Sep,SVSP,Pacific Islander,**
+2025,Sep,SVSP,White,336
+2025,Sep,VSP,American Indian/Alaskan Native,**
+2025,Sep,VSP,Asian,57
+2025,Sep,VSP,Black,872
+2025,Sep,VSP,Cuban,**
+2025,Sep,VSP,Hispanic,878
+2025,Sep,VSP,Mexican,365
+2025,Sep,VSP,N/A,(Blank)
+2025,Sep,VSP,Other,163
+2025,Sep,VSP,Pacific Islander,**
+2025,Sep,VSP,White,909
+2025,Sep,WSP,American Indian/Alaskan Native,**
+2025,Sep,WSP,Asian,**
+2025,Sep,WSP,Black,781
+2025,Sep,WSP,Cuban,(Blank)
+2025,Sep,WSP,Hispanic,"1,601"
+2025,Sep,WSP,Mexican,234
+2025,Sep,WSP,N/A,(Blank)
+2025,Sep,WSP,Other,72
+2025,Sep,WSP,Pacific Islander,**
+2025,Sep,WSP,White,672
+2025,Sep,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Sep,CPMP,Asian,(Blank)
+2025,Sep,CPMP,Black,**
+2025,Sep,CPMP,Cuban,(Blank)
+2025,Sep,CPMP,Hispanic,**
+2025,Sep,CPMP,Mexican,(Blank)
+2025,Sep,CPMP,N/A,(Blank)
+2025,Sep,CPMP,Other,(Blank)
+2025,Sep,CPMP,Pacific Islander,(Blank)
+2025,Sep,CPMP,White,(Blank)
+2025,Sep,FCRF,American Indian/Alaskan Native,**
+2025,Sep,FCRF,Asian,**
+2025,Sep,FCRF,Black,82
+2025,Sep,FCRF,Cuban,(Blank)
+2025,Sep,FCRF,Hispanic,154
+2025,Sep,FCRF,Mexican,**
+2025,Sep,FCRF,N/A,(Blank)
+2025,Sep,FCRF,Other,**
+2025,Sep,FCRF,Pacific Islander,**
+2025,Sep,FCRF,White,132
+2025,Sep,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Sep,Alternative Custody Program,Asian,(Blank)
+2025,Sep,Alternative Custody Program,Black,**
+2025,Sep,Alternative Custody Program,Cuban,(Blank)
+2025,Sep,Alternative Custody Program,Hispanic,**
+2025,Sep,Alternative Custody Program,Mexican,(Blank)
+2025,Sep,Alternative Custody Program,N/A,(Blank)
+2025,Sep,Alternative Custody Program,Other,**
+2025,Sep,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Sep,Alternative Custody Program,White,(Blank)
+2025,Sep,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Sep,Department of State Hospitals,Asian,**
+2025,Sep,Department of State Hospitals,Black,52
+2025,Sep,Department of State Hospitals,Cuban,(Blank)
+2025,Sep,Department of State Hospitals,Hispanic,57
+2025,Sep,Department of State Hospitals,Mexican,**
+2025,Sep,Department of State Hospitals,N/A,(Blank)
+2025,Sep,Department of State Hospitals,Other,**
+2025,Sep,Department of State Hospitals,Pacific Islander,**
+2025,Sep,Department of State Hospitals,White,54
+2025,Sep,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Sep,Male Community Reentry Facility,Asian,**
+2025,Sep,Male Community Reentry Facility,Black,222
+2025,Sep,Male Community Reentry Facility,Cuban,(Blank)
+2025,Sep,Male Community Reentry Facility,Hispanic,297
+2025,Sep,Male Community Reentry Facility,Mexican,80
+2025,Sep,Male Community Reentry Facility,N/A,(Blank)
+2025,Sep,Male Community Reentry Facility,Other,**
+2025,Sep,Male Community Reentry Facility,Pacific Islander,**
+2025,Sep,Male Community Reentry Facility,White,116
+2025,Sep,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Sep,Medical Reprieve Program,Asian,(Blank)
+2025,Sep,Medical Reprieve Program,Black,**
+2025,Sep,Medical Reprieve Program,Cuban,(Blank)
+2025,Sep,Medical Reprieve Program,Hispanic,(Blank)
+2025,Sep,Medical Reprieve Program,Mexican,(Blank)
+2025,Sep,Medical Reprieve Program,N/A,(Blank)
+2025,Sep,Medical Reprieve Program,Other,(Blank)
+2025,Sep,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Sep,Medical Reprieve Program,White,**
+2025,Sep,CCI,American Indian/Alaskan Native,**
+2025,Sep,CCI,Asian,**
+2025,Sep,CCI,Black,712
+2025,Sep,CCI,Cuban,(Blank)
+2025,Sep,CCI,Hispanic,981
+2025,Sep,CCI,Mexican,246
+2025,Sep,CCI,N/A,(Blank)
+2025,Sep,CCI,Other,67
+2025,Sep,CCI,Pacific Islander,**
+2025,Sep,CCI,White,447
+2025,Sep,CCWF,American Indian/Alaskan Native,**
+2025,Sep,CCWF,Asian,**
+2025,Sep,CCWF,Black,550
+2025,Sep,CCWF,Cuban,(Blank)
+2025,Sep,CCWF,Hispanic,677
+2025,Sep,CCWF,Mexican,75
+2025,Sep,CCWF,N/A,(Blank)
+2025,Sep,CCWF,Other,72
+2025,Sep,CCWF,Pacific Islander,**
+2025,Sep,CCWF,White,595
+2025,Sep,CEN,American Indian/Alaskan Native,**
+2025,Sep,CEN,Asian,**
+2025,Sep,CEN,Black,723
+2025,Sep,CEN,Cuban,**
+2025,Sep,CEN,Hispanic,"1,541"
+2025,Sep,CEN,Mexican,455
+2025,Sep,CEN,N/A,(Blank)
+2025,Sep,CEN,Other,63
+2025,Sep,CEN,Pacific Islander,**
+2025,Sep,CEN,White,241
+2025,Sep,CHCF,American Indian/Alaskan Native,**
+2025,Sep,CHCF,Asian,**
+2025,Sep,CHCF,Black,730
+2025,Sep,CHCF,Cuban,**
+2025,Sep,CHCF,Hispanic,444
+2025,Sep,CHCF,Mexican,245
+2025,Sep,CHCF,N/A,(Blank)
+2025,Sep,CHCF,Other,128
+2025,Sep,CHCF,Pacific Islander,**
+2025,Sep,CHCF,White,716
+2025,Sep,CIM,American Indian/Alaskan Native,**
+2025,Sep,CIM,Asian,**
+2025,Sep,CIM,Black,599
+2025,Sep,CIM,Cuban,(Blank)
+2025,Sep,CIM,Hispanic,640
+2025,Sep,CIM,Mexican,328
+2025,Sep,CIM,N/A,(Blank)
+2025,Sep,CIM,Other,85
+2025,Sep,CIM,Pacific Islander,**
+2025,Sep,CIM,White,560
+2025,Oct,ASP,American Indian/Alaskan Native,51
+2025,Oct,ASP,Asian,**
+2025,Oct,ASP,Black,**
+2025,Oct,ASP,Cuban,(Blank)
+2025,Oct,ASP,Hispanic,"2,149"
+2025,Oct,ASP,Mexican,447
+2025,Oct,ASP,N/A,(Blank)
+2025,Oct,ASP,Other,145
+2025,Oct,ASP,Pacific Islander,**
+2025,Oct,ASP,White,965
+2025,Oct,CIW,American Indian/Alaskan Native,**
+2025,Oct,CIW,Asian,**
+2025,Oct,CIW,Black,276
+2025,Oct,CIW,Cuban,(Blank)
+2025,Oct,CIW,Hispanic,343
+2025,Oct,CIW,Mexican,**
+2025,Oct,CIW,N/A,(Blank)
+2025,Oct,CIW,Other,55
+2025,Oct,CIW,Pacific Islander,**
+2025,Oct,CIW,White,360
+2025,Oct,CMC,American Indian/Alaskan Native,**
+2025,Oct,CMC,Asian,**
+2025,Oct,CMC,Black,710
+2025,Oct,CMC,Cuban,**
+2025,Oct,CMC,Hispanic,626
+2025,Oct,CMC,Mexican,162
+2025,Oct,CMC,N/A,(Blank)
+2025,Oct,CMC,Other,96
+2025,Oct,CMC,Pacific Islander,**
+2025,Oct,CMC,White,452
+2025,Oct,CMF,American Indian/Alaskan Native,**
+2025,Oct,CMF,Asian,**
+2025,Oct,CMF,Black,724
+2025,Oct,CMF,Cuban,(Blank)
+2025,Oct,CMF,Hispanic,466
+2025,Oct,CMF,Mexican,192
+2025,Oct,CMF,N/A,(Blank)
+2025,Oct,CMF,Other,92
+2025,Oct,CMF,Pacific Islander,**
+2025,Oct,CMF,White,618
+2025,Oct,COR,American Indian/Alaskan Native,**
+2025,Oct,COR,Asian,**
+2025,Oct,COR,Black,657
+2025,Oct,COR,Cuban,**
+2025,Oct,COR,Hispanic,908
+2025,Oct,COR,Mexican,374
+2025,Oct,COR,N/A,(Blank)
+2025,Oct,COR,Other,108
+2025,Oct,COR,Pacific Islander,**
+2025,Oct,COR,White,574
+2025,Oct,CRC,American Indian/Alaskan Native,**
+2025,Oct,CRC,Asian,**
+2025,Oct,CRC,Black,429
+2025,Oct,CRC,Cuban,(Blank)
+2025,Oct,CRC,Hispanic,745
+2025,Oct,CRC,Mexican,89
+2025,Oct,CRC,N/A,(Blank)
+2025,Oct,CRC,Other,**
+2025,Oct,CRC,Pacific Islander,**
+2025,Oct,CRC,White,270
+2025,Oct,CTF,American Indian/Alaskan Native,**
+2025,Oct,CTF,Asian,**
+2025,Oct,CTF,Black,"1,008"
+2025,Oct,CTF,Cuban,**
+2025,Oct,CTF,Hispanic,"1,454"
+2025,Oct,CTF,Mexican,680
+2025,Oct,CTF,N/A,(Blank)
+2025,Oct,CTF,Other,181
+2025,Oct,CTF,Pacific Islander,**
+2025,Oct,CTF,White,726
+2025,Oct,FOL,American Indian/Alaskan Native,**
+2025,Oct,FOL,Asian,50
+2025,Oct,FOL,Black,686
+2025,Oct,FOL,Cuban,**
+2025,Oct,FOL,Hispanic,"1,130"
+2025,Oct,FOL,Mexican,386
+2025,Oct,FOL,N/A,(Blank)
+2025,Oct,FOL,Other,109
+2025,Oct,FOL,Pacific Islander,**
+2025,Oct,FOL,White,338
+2025,Oct,HDSP,American Indian/Alaskan Native,**
+2025,Oct,HDSP,Asian,**
+2025,Oct,HDSP,Black,815
+2025,Oct,HDSP,Cuban,(Blank)
+2025,Oct,HDSP,Hispanic,967
+2025,Oct,HDSP,Mexican,217
+2025,Oct,HDSP,N/A,(Blank)
+2025,Oct,HDSP,Other,90
+2025,Oct,HDSP,Pacific Islander,**
+2025,Oct,HDSP,White,561
+2025,Oct,ISP,American Indian/Alaskan Native,**
+2025,Oct,ISP,Asian,**
+2025,Oct,ISP,Black,651
+2025,Oct,ISP,Cuban,(Blank)
+2025,Oct,ISP,Hispanic,"1,358"
+2025,Oct,ISP,Mexican,309
+2025,Oct,ISP,N/A,(Blank)
+2025,Oct,ISP,Other,111
+2025,Oct,ISP,Pacific Islander,**
+2025,Oct,ISP,White,390
+2025,Oct,KVSP,American Indian/Alaskan Native,**
+2025,Oct,KVSP,Asian,**
+2025,Oct,KVSP,Black,"1,078"
+2025,Oct,KVSP,Cuban,(Blank)
+2025,Oct,KVSP,Hispanic,"1,059"
+2025,Oct,KVSP,Mexican,389
+2025,Oct,KVSP,N/A,(Blank)
+2025,Oct,KVSP,Other,71
+2025,Oct,KVSP,Pacific Islander,**
+2025,Oct,KVSP,White,265
+2025,Oct,LAC,American Indian/Alaskan Native,**
+2025,Oct,LAC,Asian,**
+2025,Oct,LAC,Black,"1,277"
+2025,Oct,LAC,Cuban,(Blank)
+2025,Oct,LAC,Hispanic,794
+2025,Oct,LAC,Mexican,299
+2025,Oct,LAC,N/A,(Blank)
+2025,Oct,LAC,Other,89
+2025,Oct,LAC,Pacific Islander,**
+2025,Oct,LAC,White,281
+2025,Oct,MCSP,American Indian/Alaskan Native,73
+2025,Oct,MCSP,Asian,**
+2025,Oct,MCSP,Black,959
+2025,Oct,MCSP,Cuban,**
+2025,Oct,MCSP,Hispanic,950
+2025,Oct,MCSP,Mexican,410
+2025,Oct,MCSP,N/A,(Blank)
+2025,Oct,MCSP,Other,167
+2025,Oct,MCSP,Pacific Islander,**
+2025,Oct,MCSP,White,"1,113"
+2025,Oct,NKSP,American Indian/Alaskan Native,**
+2025,Oct,NKSP,Asian,**
+2025,Oct,NKSP,Black,801
+2025,Oct,NKSP,Cuban,**
+2025,Oct,NKSP,Hispanic,"1,118"
+2025,Oct,NKSP,Mexican,119
+2025,Oct,NKSP,N/A,(Blank)
+2025,Oct,NKSP,Other,78
+2025,Oct,NKSP,Pacific Islander,**
+2025,Oct,NKSP,White,549
+2025,Oct,PBSP,American Indian/Alaskan Native,**
+2025,Oct,PBSP,Asian,**
+2025,Oct,PBSP,Black,780
+2025,Oct,PBSP,Cuban,**
+2025,Oct,PBSP,Hispanic,651
+2025,Oct,PBSP,Mexican,181
+2025,Oct,PBSP,N/A,(Blank)
+2025,Oct,PBSP,Other,75
+2025,Oct,PBSP,Pacific Islander,**
+2025,Oct,PBSP,White,443
+2025,Oct,PVSP,American Indian/Alaskan Native,**
+2025,Oct,PVSP,Asian,**
+2025,Oct,PVSP,Black,**
+2025,Oct,PVSP,Cuban,**
+2025,Oct,PVSP,Hispanic,"1,989"
+2025,Oct,PVSP,Mexican,295
+2025,Oct,PVSP,N/A,(Blank)
+2025,Oct,PVSP,Other,103
+2025,Oct,PVSP,Pacific Islander,**
+2025,Oct,PVSP,White,651
+2025,Oct,RJD,American Indian/Alaskan Native,59
+2025,Oct,RJD,Asian,**
+2025,Oct,RJD,Black,"1,158"
+2025,Oct,RJD,Cuban,**
+2025,Oct,RJD,Hispanic,"1,037"
+2025,Oct,RJD,Mexican,448
+2025,Oct,RJD,N/A,(Blank)
+2025,Oct,RJD,Other,166
+2025,Oct,RJD,Pacific Islander,**
+2025,Oct,RJD,White,863
+2025,Oct,SAC,American Indian/Alaskan Native,**
+2025,Oct,SAC,Asian,**
+2025,Oct,SAC,Black,835
+2025,Oct,SAC,Cuban,**
+2025,Oct,SAC,Hispanic,618
+2025,Oct,SAC,Mexican,219
+2025,Oct,SAC,N/A,(Blank)
+2025,Oct,SAC,Other,65
+2025,Oct,SAC,Pacific Islander,**
+2025,Oct,SAC,White,345
+2025,Oct,CAL,American Indian/Alaskan Native,**
+2025,Oct,CAL,Asian,**
+2025,Oct,CAL,Black,668
+2025,Oct,CAL,Cuban,**
+2025,Oct,CAL,Hispanic,"1,185"
+2025,Oct,CAL,Mexican,332
+2025,Oct,CAL,N/A,(Blank)
+2025,Oct,CAL,Other,64
+2025,Oct,CAL,Pacific Islander,**
+2025,Oct,CAL,White,228
+2025,Oct,SATF,American Indian/Alaskan Native,78
+2025,Oct,SATF,Asian,68
+2025,Oct,SATF,Black,"1,541"
+2025,Oct,SATF,Cuban,**
+2025,Oct,SATF,Hispanic,"1,837"
+2025,Oct,SATF,Mexican,639
+2025,Oct,SATF,N/A,(Blank)
+2025,Oct,SATF,Other,191
+2025,Oct,SATF,Pacific Islander,**
+2025,Oct,SATF,White,"1,099"
+2025,Oct,SCC,American Indian/Alaskan Native,54
+2025,Oct,SCC,Asian,69
+2025,Oct,SCC,Black,"1,166"
+2025,Oct,SCC,Cuban,(Blank)
+2025,Oct,SCC,Hispanic,"1,706"
+2025,Oct,SCC,Mexican,129
+2025,Oct,SCC,N/A,(Blank)
+2025,Oct,SCC,Other,123
+2025,Oct,SCC,Pacific Islander,**
+2025,Oct,SCC,White,808
+2025,Oct,SOL,American Indian/Alaskan Native,**
+2025,Oct,SOL,Asian,**
+2025,Oct,SOL,Black,"1,355"
+2025,Oct,SOL,Cuban,(Blank)
+2025,Oct,SOL,Hispanic,"1,510"
+2025,Oct,SOL,Mexican,370
+2025,Oct,SOL,N/A,(Blank)
+2025,Oct,SOL,Other,151
+2025,Oct,SOL,Pacific Islander,**
+2025,Oct,SOL,White,253
+2025,Oct,SQ,American Indian/Alaskan Native,**
+2025,Oct,SQ,Asian,**
+2025,Oct,SQ,Black,765
+2025,Oct,SQ,Cuban,**
+2025,Oct,SQ,Hispanic,702
+2025,Oct,SQ,Mexican,181
+2025,Oct,SQ,N/A,(Blank)
+2025,Oct,SQ,Other,128
+2025,Oct,SQ,Pacific Islander,**
+2025,Oct,SQ,White,662
+2025,Oct,SVSP,American Indian/Alaskan Native,**
+2025,Oct,SVSP,Asian,**
+2025,Oct,SVSP,Black,968
+2025,Oct,SVSP,Cuban,**
+2025,Oct,SVSP,Hispanic,733
+2025,Oct,SVSP,Mexican,281
+2025,Oct,SVSP,N/A,(Blank)
+2025,Oct,SVSP,Other,62
+2025,Oct,SVSP,Pacific Islander,**
+2025,Oct,SVSP,White,345
+2025,Oct,VSP,American Indian/Alaskan Native,**
+2025,Oct,VSP,Asian,53
+2025,Oct,VSP,Black,869
+2025,Oct,VSP,Cuban,**
+2025,Oct,VSP,Hispanic,877
+2025,Oct,VSP,Mexican,359
+2025,Oct,VSP,N/A,(Blank)
+2025,Oct,VSP,Other,156
+2025,Oct,VSP,Pacific Islander,**
+2025,Oct,VSP,White,904
+2025,Oct,WSP,American Indian/Alaskan Native,**
+2025,Oct,WSP,Asian,**
+2025,Oct,WSP,Black,792
+2025,Oct,WSP,Cuban,(Blank)
+2025,Oct,WSP,Hispanic,"1,585"
+2025,Oct,WSP,Mexican,233
+2025,Oct,WSP,N/A,(Blank)
+2025,Oct,WSP,Other,72
+2025,Oct,WSP,Pacific Islander,**
+2025,Oct,WSP,White,647
+2025,Oct,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Oct,CPMP,Asian,(Blank)
+2025,Oct,CPMP,Black,**
+2025,Oct,CPMP,Cuban,(Blank)
+2025,Oct,CPMP,Hispanic,**
+2025,Oct,CPMP,Mexican,(Blank)
+2025,Oct,CPMP,N/A,(Blank)
+2025,Oct,CPMP,Other,(Blank)
+2025,Oct,CPMP,Pacific Islander,(Blank)
+2025,Oct,CPMP,White,(Blank)
+2025,Oct,FCRF,American Indian/Alaskan Native,**
+2025,Oct,FCRF,Asian,**
+2025,Oct,FCRF,Black,81
+2025,Oct,FCRF,Cuban,(Blank)
+2025,Oct,FCRF,Hispanic,158
+2025,Oct,FCRF,Mexican,**
+2025,Oct,FCRF,N/A,(Blank)
+2025,Oct,FCRF,Other,**
+2025,Oct,FCRF,Pacific Islander,**
+2025,Oct,FCRF,White,128
+2025,Oct,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Oct,Alternative Custody Program,Asian,(Blank)
+2025,Oct,Alternative Custody Program,Black,(Blank)
+2025,Oct,Alternative Custody Program,Cuban,(Blank)
+2025,Oct,Alternative Custody Program,Hispanic,**
+2025,Oct,Alternative Custody Program,Mexican,(Blank)
+2025,Oct,Alternative Custody Program,N/A,(Blank)
+2025,Oct,Alternative Custody Program,Other,**
+2025,Oct,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Oct,Alternative Custody Program,White,**
+2025,Oct,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Oct,Department of State Hospitals,Asian,**
+2025,Oct,Department of State Hospitals,Black,54
+2025,Oct,Department of State Hospitals,Cuban,(Blank)
+2025,Oct,Department of State Hospitals,Hispanic,56
+2025,Oct,Department of State Hospitals,Mexican,**
+2025,Oct,Department of State Hospitals,N/A,(Blank)
+2025,Oct,Department of State Hospitals,Other,**
+2025,Oct,Department of State Hospitals,Pacific Islander,**
+2025,Oct,Department of State Hospitals,White,50
+2025,Oct,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Oct,Male Community Reentry Facility,Asian,**
+2025,Oct,Male Community Reentry Facility,Black,232
+2025,Oct,Male Community Reentry Facility,Cuban,(Blank)
+2025,Oct,Male Community Reentry Facility,Hispanic,292
+2025,Oct,Male Community Reentry Facility,Mexican,79
+2025,Oct,Male Community Reentry Facility,N/A,(Blank)
+2025,Oct,Male Community Reentry Facility,Other,**
+2025,Oct,Male Community Reentry Facility,Pacific Islander,**
+2025,Oct,Male Community Reentry Facility,White,121
+2025,Oct,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Oct,Medical Reprieve Program,Asian,(Blank)
+2025,Oct,Medical Reprieve Program,Black,**
+2025,Oct,Medical Reprieve Program,Cuban,(Blank)
+2025,Oct,Medical Reprieve Program,Hispanic,(Blank)
+2025,Oct,Medical Reprieve Program,Mexican,(Blank)
+2025,Oct,Medical Reprieve Program,N/A,(Blank)
+2025,Oct,Medical Reprieve Program,Other,(Blank)
+2025,Oct,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Oct,Medical Reprieve Program,White,**
+2025,Oct,CCI,American Indian/Alaskan Native,**
+2025,Oct,CCI,Asian,**
+2025,Oct,CCI,Black,710
+2025,Oct,CCI,Cuban,(Blank)
+2025,Oct,CCI,Hispanic,946
+2025,Oct,CCI,Mexican,239
+2025,Oct,CCI,N/A,(Blank)
+2025,Oct,CCI,Other,68
+2025,Oct,CCI,Pacific Islander,**
+2025,Oct,CCI,White,427
+2025,Oct,CCWF,American Indian/Alaskan Native,50
+2025,Oct,CCWF,Asian,**
+2025,Oct,CCWF,Black,552
+2025,Oct,CCWF,Cuban,(Blank)
+2025,Oct,CCWF,Hispanic,704
+2025,Oct,CCWF,Mexican,75
+2025,Oct,CCWF,N/A,(Blank)
+2025,Oct,CCWF,Other,67
+2025,Oct,CCWF,Pacific Islander,**
+2025,Oct,CCWF,White,606
+2025,Oct,CEN,American Indian/Alaskan Native,**
+2025,Oct,CEN,Asian,**
+2025,Oct,CEN,Black,759
+2025,Oct,CEN,Cuban,**
+2025,Oct,CEN,Hispanic,"1,574"
+2025,Oct,CEN,Mexican,471
+2025,Oct,CEN,N/A,(Blank)
+2025,Oct,CEN,Other,72
+2025,Oct,CEN,Pacific Islander,**
+2025,Oct,CEN,White,251
+2025,Oct,CHCF,American Indian/Alaskan Native,**
+2025,Oct,CHCF,Asian,**
+2025,Oct,CHCF,Black,743
+2025,Oct,CHCF,Cuban,**
+2025,Oct,CHCF,Hispanic,445
+2025,Oct,CHCF,Mexican,246
+2025,Oct,CHCF,N/A,(Blank)
+2025,Oct,CHCF,Other,117
+2025,Oct,CHCF,Pacific Islander,**
+2025,Oct,CHCF,White,720
+2025,Oct,CIM,American Indian/Alaskan Native,**
+2025,Oct,CIM,Asian,**
+2025,Oct,CIM,Black,600
+2025,Oct,CIM,Cuban,(Blank)
+2025,Oct,CIM,Hispanic,643
+2025,Oct,CIM,Mexican,324
+2025,Oct,CIM,N/A,(Blank)
+2025,Oct,CIM,Other,87
+2025,Oct,CIM,Pacific Islander,**
+2025,Oct,CIM,White,558
+2025,Nov,ASP,American Indian/Alaskan Native,**
+2025,Nov,ASP,Asian,**
+2025,Nov,ASP,Black,**
+2025,Nov,ASP,Cuban,(Blank)
+2025,Nov,ASP,Hispanic,"2,126"
+2025,Nov,ASP,Mexican,447
+2025,Nov,ASP,N/A,(Blank)
+2025,Nov,ASP,Other,146
+2025,Nov,ASP,Pacific Islander,**
+2025,Nov,ASP,White,939
+2025,Nov,CIW,American Indian/Alaskan Native,**
+2025,Nov,CIW,Asian,**
+2025,Nov,CIW,Black,275
+2025,Nov,CIW,Cuban,(Blank)
+2025,Nov,CIW,Hispanic,346
+2025,Nov,CIW,Mexican,**
+2025,Nov,CIW,N/A,(Blank)
+2025,Nov,CIW,Other,55
+2025,Nov,CIW,Pacific Islander,**
+2025,Nov,CIW,White,349
+2025,Nov,CMC,American Indian/Alaskan Native,**
+2025,Nov,CMC,Asian,**
+2025,Nov,CMC,Black,726
+2025,Nov,CMC,Cuban,**
+2025,Nov,CMC,Hispanic,624
+2025,Nov,CMC,Mexican,163
+2025,Nov,CMC,N/A,(Blank)
+2025,Nov,CMC,Other,100
+2025,Nov,CMC,Pacific Islander,**
+2025,Nov,CMC,White,458
+2025,Nov,CMF,American Indian/Alaskan Native,**
+2025,Nov,CMF,Asian,**
+2025,Nov,CMF,Black,738
+2025,Nov,CMF,Cuban,(Blank)
+2025,Nov,CMF,Hispanic,467
+2025,Nov,CMF,Mexican,189
+2025,Nov,CMF,N/A,(Blank)
+2025,Nov,CMF,Other,94
+2025,Nov,CMF,Pacific Islander,**
+2025,Nov,CMF,White,608
+2025,Nov,COR,American Indian/Alaskan Native,**
+2025,Nov,COR,Asian,**
+2025,Nov,COR,Black,645
+2025,Nov,COR,Cuban,**
+2025,Nov,COR,Hispanic,882
+2025,Nov,COR,Mexican,367
+2025,Nov,COR,N/A,(Blank)
+2025,Nov,COR,Other,105
+2025,Nov,COR,Pacific Islander,**
+2025,Nov,COR,White,564
+2025,Nov,CRC,American Indian/Alaskan Native,**
+2025,Nov,CRC,Asian,**
+2025,Nov,CRC,Black,345
+2025,Nov,CRC,Cuban,(Blank)
+2025,Nov,CRC,Hispanic,608
+2025,Nov,CRC,Mexican,74
+2025,Nov,CRC,N/A,(Blank)
+2025,Nov,CRC,Other,**
+2025,Nov,CRC,Pacific Islander,**
+2025,Nov,CRC,White,222
+2025,Nov,CTF,American Indian/Alaskan Native,**
+2025,Nov,CTF,Asian,50
+2025,Nov,CTF,Black,"1,015"
+2025,Nov,CTF,Cuban,**
+2025,Nov,CTF,Hispanic,"1,451"
+2025,Nov,CTF,Mexican,685
+2025,Nov,CTF,N/A,(Blank)
+2025,Nov,CTF,Other,182
+2025,Nov,CTF,Pacific Islander,**
+2025,Nov,CTF,White,725
+2025,Nov,FOL,American Indian/Alaskan Native,**
+2025,Nov,FOL,Asian,**
+2025,Nov,FOL,Black,667
+2025,Nov,FOL,Cuban,**
+2025,Nov,FOL,Hispanic,"1,087"
+2025,Nov,FOL,Mexican,390
+2025,Nov,FOL,N/A,(Blank)
+2025,Nov,FOL,Other,109
+2025,Nov,FOL,Pacific Islander,**
+2025,Nov,FOL,White,342
+2025,Nov,HDSP,American Indian/Alaskan Native,53
+2025,Nov,HDSP,Asian,**
+2025,Nov,HDSP,Black,831
+2025,Nov,HDSP,Cuban,(Blank)
+2025,Nov,HDSP,Hispanic,998
+2025,Nov,HDSP,Mexican,214
+2025,Nov,HDSP,N/A,(Blank)
+2025,Nov,HDSP,Other,92
+2025,Nov,HDSP,Pacific Islander,**
+2025,Nov,HDSP,White,583
+2025,Nov,ISP,American Indian/Alaskan Native,**
+2025,Nov,ISP,Asian,**
+2025,Nov,ISP,Black,673
+2025,Nov,ISP,Cuban,(Blank)
+2025,Nov,ISP,Hispanic,"1,404"
+2025,Nov,ISP,Mexican,309
+2025,Nov,ISP,N/A,(Blank)
+2025,Nov,ISP,Other,115
+2025,Nov,ISP,Pacific Islander,**
+2025,Nov,ISP,White,390
+2025,Nov,KVSP,American Indian/Alaskan Native,**
+2025,Nov,KVSP,Asian,**
+2025,Nov,KVSP,Black,"1,135"
+2025,Nov,KVSP,Cuban,(Blank)
+2025,Nov,KVSP,Hispanic,"1,117"
+2025,Nov,KVSP,Mexican,404
+2025,Nov,KVSP,N/A,(Blank)
+2025,Nov,KVSP,Other,75
+2025,Nov,KVSP,Pacific Islander,**
+2025,Nov,KVSP,White,283
+2025,Nov,LAC,American Indian/Alaskan Native,**
+2025,Nov,LAC,Asian,**
+2025,Nov,LAC,Black,"1,330"
+2025,Nov,LAC,Cuban,(Blank)
+2025,Nov,LAC,Hispanic,822
+2025,Nov,LAC,Mexican,288
+2025,Nov,LAC,N/A,(Blank)
+2025,Nov,LAC,Other,92
+2025,Nov,LAC,Pacific Islander,**
+2025,Nov,LAC,White,328
+2025,Nov,MCSP,American Indian/Alaskan Native,71
+2025,Nov,MCSP,Asian,**
+2025,Nov,MCSP,Black,959
+2025,Nov,MCSP,Cuban,**
+2025,Nov,MCSP,Hispanic,929
+2025,Nov,MCSP,Mexican,411
+2025,Nov,MCSP,N/A,(Blank)
+2025,Nov,MCSP,Other,164
+2025,Nov,MCSP,Pacific Islander,**
+2025,Nov,MCSP,White,"1,109"
+2025,Nov,NKSP,American Indian/Alaskan Native,**
+2025,Nov,NKSP,Asian,**
+2025,Nov,NKSP,Black,779
+2025,Nov,NKSP,Cuban,**
+2025,Nov,NKSP,Hispanic,"1,147"
+2025,Nov,NKSP,Mexican,112
+2025,Nov,NKSP,N/A,(Blank)
+2025,Nov,NKSP,Other,73
+2025,Nov,NKSP,Pacific Islander,**
+2025,Nov,NKSP,White,603
+2025,Nov,PBSP,American Indian/Alaskan Native,**
+2025,Nov,PBSP,Asian,**
+2025,Nov,PBSP,Black,772
+2025,Nov,PBSP,Cuban,**
+2025,Nov,PBSP,Hispanic,645
+2025,Nov,PBSP,Mexican,178
+2025,Nov,PBSP,N/A,(Blank)
+2025,Nov,PBSP,Other,72
+2025,Nov,PBSP,Pacific Islander,**
+2025,Nov,PBSP,White,437
+2025,Nov,PVSP,American Indian/Alaskan Native,**
+2025,Nov,PVSP,Asian,**
+2025,Nov,PVSP,Black,**
+2025,Nov,PVSP,Cuban,**
+2025,Nov,PVSP,Hispanic,"1,973"
+2025,Nov,PVSP,Mexican,293
+2025,Nov,PVSP,N/A,(Blank)
+2025,Nov,PVSP,Other,107
+2025,Nov,PVSP,Pacific Islander,**
+2025,Nov,PVSP,White,638
+2025,Nov,RJD,American Indian/Alaskan Native,59
+2025,Nov,RJD,Asian,**
+2025,Nov,RJD,Black,"1,154"
+2025,Nov,RJD,Cuban,**
+2025,Nov,RJD,Hispanic,"1,028"
+2025,Nov,RJD,Mexican,444
+2025,Nov,RJD,N/A,(Blank)
+2025,Nov,RJD,Other,160
+2025,Nov,RJD,Pacific Islander,**
+2025,Nov,RJD,White,857
+2025,Nov,SAC,American Indian/Alaskan Native,**
+2025,Nov,SAC,Asian,**
+2025,Nov,SAC,Black,828
+2025,Nov,SAC,Cuban,**
+2025,Nov,SAC,Hispanic,615
+2025,Nov,SAC,Mexican,212
+2025,Nov,SAC,N/A,(Blank)
+2025,Nov,SAC,Other,68
+2025,Nov,SAC,Pacific Islander,**
+2025,Nov,SAC,White,349
+2025,Nov,CAL,American Indian/Alaskan Native,**
+2025,Nov,CAL,Asian,**
+2025,Nov,CAL,Black,659
+2025,Nov,CAL,Cuban,**
+2025,Nov,CAL,Hispanic,"1,189"
+2025,Nov,CAL,Mexican,331
+2025,Nov,CAL,N/A,(Blank)
+2025,Nov,CAL,Other,60
+2025,Nov,CAL,Pacific Islander,**
+2025,Nov,CAL,White,224
+2025,Nov,SATF,American Indian/Alaskan Native,77
+2025,Nov,SATF,Asian,69
+2025,Nov,SATF,Black,"1,512"
+2025,Nov,SATF,Cuban,**
+2025,Nov,SATF,Hispanic,"1,825"
+2025,Nov,SATF,Mexican,637
+2025,Nov,SATF,N/A,(Blank)
+2025,Nov,SATF,Other,193
+2025,Nov,SATF,Pacific Islander,**
+2025,Nov,SATF,White,"1,081"
+2025,Nov,SCC,American Indian/Alaskan Native,**
+2025,Nov,SCC,Asian,65
+2025,Nov,SCC,Black,"1,154"
+2025,Nov,SCC,Cuban,(Blank)
+2025,Nov,SCC,Hispanic,"1,703"
+2025,Nov,SCC,Mexican,126
+2025,Nov,SCC,N/A,(Blank)
+2025,Nov,SCC,Other,130
+2025,Nov,SCC,Pacific Islander,**
+2025,Nov,SCC,White,820
+2025,Nov,SOL,American Indian/Alaskan Native,**
+2025,Nov,SOL,Asian,**
+2025,Nov,SOL,Black,"1,363"
+2025,Nov,SOL,Cuban,(Blank)
+2025,Nov,SOL,Hispanic,"1,547"
+2025,Nov,SOL,Mexican,364
+2025,Nov,SOL,N/A,(Blank)
+2025,Nov,SOL,Other,149
+2025,Nov,SOL,Pacific Islander,**
+2025,Nov,SOL,White,243
+2025,Nov,SQ,American Indian/Alaskan Native,**
+2025,Nov,SQ,Asian,**
+2025,Nov,SQ,Black,764
+2025,Nov,SQ,Cuban,**
+2025,Nov,SQ,Hispanic,693
+2025,Nov,SQ,Mexican,181
+2025,Nov,SQ,N/A,(Blank)
+2025,Nov,SQ,Other,129
+2025,Nov,SQ,Pacific Islander,**
+2025,Nov,SQ,White,648
+2025,Nov,SVSP,American Indian/Alaskan Native,**
+2025,Nov,SVSP,Asian,**
+2025,Nov,SVSP,Black,958
+2025,Nov,SVSP,Cuban,**
+2025,Nov,SVSP,Hispanic,725
+2025,Nov,SVSP,Mexican,288
+2025,Nov,SVSP,N/A,(Blank)
+2025,Nov,SVSP,Other,61
+2025,Nov,SVSP,Pacific Islander,**
+2025,Nov,SVSP,White,332
+2025,Nov,VSP,American Indian/Alaskan Native,**
+2025,Nov,VSP,Asian,53
+2025,Nov,VSP,Black,873
+2025,Nov,VSP,Cuban,**
+2025,Nov,VSP,Hispanic,868
+2025,Nov,VSP,Mexican,358
+2025,Nov,VSP,N/A,(Blank)
+2025,Nov,VSP,Other,154
+2025,Nov,VSP,Pacific Islander,**
+2025,Nov,VSP,White,885
+2025,Nov,WSP,American Indian/Alaskan Native,**
+2025,Nov,WSP,Asian,**
+2025,Nov,WSP,Black,813
+2025,Nov,WSP,Cuban,(Blank)
+2025,Nov,WSP,Hispanic,"1,634"
+2025,Nov,WSP,Mexican,242
+2025,Nov,WSP,N/A,(Blank)
+2025,Nov,WSP,Other,65
+2025,Nov,WSP,Pacific Islander,**
+2025,Nov,WSP,White,642
+2025,Nov,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Nov,CPMP,Asian,(Blank)
+2025,Nov,CPMP,Black,(Blank)
+2025,Nov,CPMP,Cuban,(Blank)
+2025,Nov,CPMP,Hispanic,**
+2025,Nov,CPMP,Mexican,(Blank)
+2025,Nov,CPMP,N/A,(Blank)
+2025,Nov,CPMP,Other,(Blank)
+2025,Nov,CPMP,Pacific Islander,(Blank)
+2025,Nov,CPMP,White,**
+2025,Nov,FCRF,American Indian/Alaskan Native,**
+2025,Nov,FCRF,Asian,**
+2025,Nov,FCRF,Black,74
+2025,Nov,FCRF,Cuban,(Blank)
+2025,Nov,FCRF,Hispanic,158
+2025,Nov,FCRF,Mexican,**
+2025,Nov,FCRF,N/A,(Blank)
+2025,Nov,FCRF,Other,**
+2025,Nov,FCRF,Pacific Islander,**
+2025,Nov,FCRF,White,119
+2025,Nov,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Nov,Alternative Custody Program,Asian,(Blank)
+2025,Nov,Alternative Custody Program,Black,(Blank)
+2025,Nov,Alternative Custody Program,Cuban,(Blank)
+2025,Nov,Alternative Custody Program,Hispanic,**
+2025,Nov,Alternative Custody Program,Mexican,(Blank)
+2025,Nov,Alternative Custody Program,N/A,(Blank)
+2025,Nov,Alternative Custody Program,Other,**
+2025,Nov,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Nov,Alternative Custody Program,White,**
+2025,Nov,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Nov,Department of State Hospitals,Asian,**
+2025,Nov,Department of State Hospitals,Black,57
+2025,Nov,Department of State Hospitals,Cuban,(Blank)
+2025,Nov,Department of State Hospitals,Hispanic,51
+2025,Nov,Department of State Hospitals,Mexican,**
+2025,Nov,Department of State Hospitals,N/A,(Blank)
+2025,Nov,Department of State Hospitals,Other,**
+2025,Nov,Department of State Hospitals,Pacific Islander,**
+2025,Nov,Department of State Hospitals,White,53
+2025,Nov,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Nov,Male Community Reentry Facility,Asian,**
+2025,Nov,Male Community Reentry Facility,Black,242
+2025,Nov,Male Community Reentry Facility,Cuban,(Blank)
+2025,Nov,Male Community Reentry Facility,Hispanic,293
+2025,Nov,Male Community Reentry Facility,Mexican,75
+2025,Nov,Male Community Reentry Facility,N/A,(Blank)
+2025,Nov,Male Community Reentry Facility,Other,**
+2025,Nov,Male Community Reentry Facility,Pacific Islander,**
+2025,Nov,Male Community Reentry Facility,White,121
+2025,Nov,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Nov,Medical Reprieve Program,Asian,(Blank)
+2025,Nov,Medical Reprieve Program,Black,**
+2025,Nov,Medical Reprieve Program,Cuban,(Blank)
+2025,Nov,Medical Reprieve Program,Hispanic,(Blank)
+2025,Nov,Medical Reprieve Program,Mexican,(Blank)
+2025,Nov,Medical Reprieve Program,N/A,(Blank)
+2025,Nov,Medical Reprieve Program,Other,(Blank)
+2025,Nov,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Nov,Medical Reprieve Program,White,**
+2025,Nov,CCI,American Indian/Alaskan Native,**
+2025,Nov,CCI,Asian,**
+2025,Nov,CCI,Black,695
+2025,Nov,CCI,Cuban,(Blank)
+2025,Nov,CCI,Hispanic,932
+2025,Nov,CCI,Mexican,232
+2025,Nov,CCI,N/A,(Blank)
+2025,Nov,CCI,Other,64
+2025,Nov,CCI,Pacific Islander,**
+2025,Nov,CCI,White,403
+2025,Nov,CCWF,American Indian/Alaskan Native,**
+2025,Nov,CCWF,Asian,**
+2025,Nov,CCWF,Black,549
+2025,Nov,CCWF,Cuban,(Blank)
+2025,Nov,CCWF,Hispanic,719
+2025,Nov,CCWF,Mexican,74
+2025,Nov,CCWF,N/A,(Blank)
+2025,Nov,CCWF,Other,67
+2025,Nov,CCWF,Pacific Islander,**
+2025,Nov,CCWF,White,624
+2025,Nov,CEN,American Indian/Alaskan Native,**
+2025,Nov,CEN,Asian,**
+2025,Nov,CEN,Black,753
+2025,Nov,CEN,Cuban,**
+2025,Nov,CEN,Hispanic,"1,578"
+2025,Nov,CEN,Mexican,479
+2025,Nov,CEN,N/A,(Blank)
+2025,Nov,CEN,Other,72
+2025,Nov,CEN,Pacific Islander,**
+2025,Nov,CEN,White,236
+2025,Nov,CHCF,American Indian/Alaskan Native,**
+2025,Nov,CHCF,Asian,**
+2025,Nov,CHCF,Black,727
+2025,Nov,CHCF,Cuban,**
+2025,Nov,CHCF,Hispanic,445
+2025,Nov,CHCF,Mexican,250
+2025,Nov,CHCF,N/A,(Blank)
+2025,Nov,CHCF,Other,122
+2025,Nov,CHCF,Pacific Islander,**
+2025,Nov,CHCF,White,710
+2025,Nov,CIM,American Indian/Alaskan Native,**
+2025,Nov,CIM,Asian,**
+2025,Nov,CIM,Black,571
+2025,Nov,CIM,Cuban,(Blank)
+2025,Nov,CIM,Hispanic,629
+2025,Nov,CIM,Mexican,318
+2025,Nov,CIM,N/A,(Blank)
+2025,Nov,CIM,Other,91
+2025,Nov,CIM,Pacific Islander,**
+2025,Nov,CIM,White,558
+2025,Dec,ASP,American Indian/Alaskan Native,**
+2025,Dec,ASP,Asian,**
+2025,Dec,ASP,Black,**
+2025,Dec,ASP,Cuban,(Blank)
+2025,Dec,ASP,Hispanic,"2,156"
+2025,Dec,ASP,Mexican,448
+2025,Dec,ASP,N/A,(Blank)
+2025,Dec,ASP,Other,145
+2025,Dec,ASP,Pacific Islander,**
+2025,Dec,ASP,White,937
+2025,Dec,CIW,American Indian/Alaskan Native,**
+2025,Dec,CIW,Asian,**
+2025,Dec,CIW,Black,269
+2025,Dec,CIW,Cuban,(Blank)
+2025,Dec,CIW,Hispanic,328
+2025,Dec,CIW,Mexican,**
+2025,Dec,CIW,N/A,(Blank)
+2025,Dec,CIW,Other,50
+2025,Dec,CIW,Pacific Islander,**
+2025,Dec,CIW,White,355
+2025,Dec,CMC,American Indian/Alaskan Native,**
+2025,Dec,CMC,Asian,**
+2025,Dec,CMC,Black,740
+2025,Dec,CMC,Cuban,**
+2025,Dec,CMC,Hispanic,647
+2025,Dec,CMC,Mexican,165
+2025,Dec,CMC,N/A,(Blank)
+2025,Dec,CMC,Other,103
+2025,Dec,CMC,Pacific Islander,**
+2025,Dec,CMC,White,478
+2025,Dec,CMF,American Indian/Alaskan Native,**
+2025,Dec,CMF,Asian,**
+2025,Dec,CMF,Black,736
+2025,Dec,CMF,Cuban,(Blank)
+2025,Dec,CMF,Hispanic,481
+2025,Dec,CMF,Mexican,189
+2025,Dec,CMF,N/A,(Blank)
+2025,Dec,CMF,Other,95
+2025,Dec,CMF,Pacific Islander,**
+2025,Dec,CMF,White,616
+2025,Dec,COR,American Indian/Alaskan Native,**
+2025,Dec,COR,Asian,**
+2025,Dec,COR,Black,653
+2025,Dec,COR,Cuban,**
+2025,Dec,COR,Hispanic,890
+2025,Dec,COR,Mexican,369
+2025,Dec,COR,N/A,(Blank)
+2025,Dec,COR,Other,103
+2025,Dec,COR,Pacific Islander,**
+2025,Dec,COR,White,565
+2025,Dec,CRC,American Indian/Alaskan Native,**
+2025,Dec,CRC,Asian,**
+2025,Dec,CRC,Black,251
+2025,Dec,CRC,Cuban,(Blank)
+2025,Dec,CRC,Hispanic,455
+2025,Dec,CRC,Mexican,54
+2025,Dec,CRC,N/A,(Blank)
+2025,Dec,CRC,Other,**
+2025,Dec,CRC,Pacific Islander,**
+2025,Dec,CRC,White,175
+2025,Dec,CTF,American Indian/Alaskan Native,**
+2025,Dec,CTF,Asian,**
+2025,Dec,CTF,Black,"1,008"
+2025,Dec,CTF,Cuban,(Blank)
+2025,Dec,CTF,Hispanic,"1,445"
+2025,Dec,CTF,Mexican,682
+2025,Dec,CTF,N/A,(Blank)
+2025,Dec,CTF,Other,177
+2025,Dec,CTF,Pacific Islander,**
+2025,Dec,CTF,White,717
+2025,Dec,FOL,American Indian/Alaskan Native,**
+2025,Dec,FOL,Asian,**
+2025,Dec,FOL,Black,675
+2025,Dec,FOL,Cuban,**
+2025,Dec,FOL,Hispanic,"1,103"
+2025,Dec,FOL,Mexican,388
+2025,Dec,FOL,N/A,(Blank)
+2025,Dec,FOL,Other,108
+2025,Dec,FOL,Pacific Islander,**
+2025,Dec,FOL,White,344
+2025,Dec,HDSP,American Indian/Alaskan Native,52
+2025,Dec,HDSP,Asian,**
+2025,Dec,HDSP,Black,860
+2025,Dec,HDSP,Cuban,(Blank)
+2025,Dec,HDSP,Hispanic,"1,030"
+2025,Dec,HDSP,Mexican,217
+2025,Dec,HDSP,N/A,(Blank)
+2025,Dec,HDSP,Other,91
+2025,Dec,HDSP,Pacific Islander,**
+2025,Dec,HDSP,White,602
+2025,Dec,ISP,American Indian/Alaskan Native,**
+2025,Dec,ISP,Asian,**
+2025,Dec,ISP,Black,720
+2025,Dec,ISP,Cuban,**
+2025,Dec,ISP,Hispanic,"1,505"
+2025,Dec,ISP,Mexican,316
+2025,Dec,ISP,N/A,(Blank)
+2025,Dec,ISP,Other,121
+2025,Dec,ISP,Pacific Islander,**
+2025,Dec,ISP,White,414
+2025,Dec,KVSP,American Indian/Alaskan Native,**
+2025,Dec,KVSP,Asian,**
+2025,Dec,KVSP,Black,"1,211"
+2025,Dec,KVSP,Cuban,(Blank)
+2025,Dec,KVSP,Hispanic,"1,160"
+2025,Dec,KVSP,Mexican,406
+2025,Dec,KVSP,N/A,(Blank)
+2025,Dec,KVSP,Other,83
+2025,Dec,KVSP,Pacific Islander,**
+2025,Dec,KVSP,White,329
+2025,Dec,LAC,American Indian/Alaskan Native,**
+2025,Dec,LAC,Asian,**
+2025,Dec,LAC,Black,"1,379"
+2025,Dec,LAC,Cuban,(Blank)
+2025,Dec,LAC,Hispanic,876
+2025,Dec,LAC,Mexican,292
+2025,Dec,LAC,N/A,(Blank)
+2025,Dec,LAC,Other,95
+2025,Dec,LAC,Pacific Islander,**
+2025,Dec,LAC,White,365
+2025,Dec,MCSP,American Indian/Alaskan Native,65
+2025,Dec,MCSP,Asian,**
+2025,Dec,MCSP,Black,933
+2025,Dec,MCSP,Cuban,**
+2025,Dec,MCSP,Hispanic,884
+2025,Dec,MCSP,Mexican,390
+2025,Dec,MCSP,N/A,(Blank)
+2025,Dec,MCSP,Other,152
+2025,Dec,MCSP,Pacific Islander,**
+2025,Dec,MCSP,White,"1,067"
+2025,Dec,NKSP,American Indian/Alaskan Native,**
+2025,Dec,NKSP,Asian,**
+2025,Dec,NKSP,Black,771
+2025,Dec,NKSP,Cuban,(Blank)
+2025,Dec,NKSP,Hispanic,"1,178"
+2025,Dec,NKSP,Mexican,107
+2025,Dec,NKSP,N/A,(Blank)
+2025,Dec,NKSP,Other,81
+2025,Dec,NKSP,Pacific Islander,**
+2025,Dec,NKSP,White,635
+2025,Dec,PBSP,American Indian/Alaskan Native,**
+2025,Dec,PBSP,Asian,**
+2025,Dec,PBSP,Black,758
+2025,Dec,PBSP,Cuban,**
+2025,Dec,PBSP,Hispanic,639
+2025,Dec,PBSP,Mexican,178
+2025,Dec,PBSP,N/A,(Blank)
+2025,Dec,PBSP,Other,69
+2025,Dec,PBSP,Pacific Islander,**
+2025,Dec,PBSP,White,435
+2025,Dec,PVSP,American Indian/Alaskan Native,**
+2025,Dec,PVSP,Asian,**
+2025,Dec,PVSP,Black,**
+2025,Dec,PVSP,Cuban,**
+2025,Dec,PVSP,Hispanic,"1,961"
+2025,Dec,PVSP,Mexican,288
+2025,Dec,PVSP,N/A,(Blank)
+2025,Dec,PVSP,Other,104
+2025,Dec,PVSP,Pacific Islander,**
+2025,Dec,PVSP,White,628
+2025,Dec,RJD,American Indian/Alaskan Native,61
+2025,Dec,RJD,Asian,**
+2025,Dec,RJD,Black,"1,152"
+2025,Dec,RJD,Cuban,**
+2025,Dec,RJD,Hispanic,"1,046"
+2025,Dec,RJD,Mexican,441
+2025,Dec,RJD,N/A,(Blank)
+2025,Dec,RJD,Other,164
+2025,Dec,RJD,Pacific Islander,**
+2025,Dec,RJD,White,852
+2025,Dec,SAC,American Indian/Alaskan Native,**
+2025,Dec,SAC,Asian,**
+2025,Dec,SAC,Black,841
+2025,Dec,SAC,Cuban,(Blank)
+2025,Dec,SAC,Hispanic,618
+2025,Dec,SAC,Mexican,212
+2025,Dec,SAC,N/A,(Blank)
+2025,Dec,SAC,Other,68
+2025,Dec,SAC,Pacific Islander,**
+2025,Dec,SAC,White,349
+2025,Dec,CAL,American Indian/Alaskan Native,**
+2025,Dec,CAL,Asian,**
+2025,Dec,CAL,Black,661
+2025,Dec,CAL,Cuban,**
+2025,Dec,CAL,Hispanic,"1,191"
+2025,Dec,CAL,Mexican,336
+2025,Dec,CAL,N/A,(Blank)
+2025,Dec,CAL,Other,61
+2025,Dec,CAL,Pacific Islander,**
+2025,Dec,CAL,White,222
+2025,Dec,SATF,American Indian/Alaskan Native,76
+2025,Dec,SATF,Asian,67
+2025,Dec,SATF,Black,"1,483"
+2025,Dec,SATF,Cuban,**
+2025,Dec,SATF,Hispanic,"1,787"
+2025,Dec,SATF,Mexican,629
+2025,Dec,SATF,N/A,(Blank)
+2025,Dec,SATF,Other,189
+2025,Dec,SATF,Pacific Islander,**
+2025,Dec,SATF,White,"1,069"
+2025,Dec,SCC,American Indian/Alaskan Native,50
+2025,Dec,SCC,Asian,64
+2025,Dec,SCC,Black,"1,179"
+2025,Dec,SCC,Cuban,(Blank)
+2025,Dec,SCC,Hispanic,"1,706"
+2025,Dec,SCC,Mexican,123
+2025,Dec,SCC,N/A,(Blank)
+2025,Dec,SCC,Other,130
+2025,Dec,SCC,Pacific Islander,**
+2025,Dec,SCC,White,834
+2025,Dec,SOL,American Indian/Alaskan Native,**
+2025,Dec,SOL,Asian,**
+2025,Dec,SOL,Black,"1,340"
+2025,Dec,SOL,Cuban,(Blank)
+2025,Dec,SOL,Hispanic,"1,591"
+2025,Dec,SOL,Mexican,364
+2025,Dec,SOL,N/A,(Blank)
+2025,Dec,SOL,Other,149
+2025,Dec,SOL,Pacific Islander,**
+2025,Dec,SOL,White,238
+2025,Dec,SQ,American Indian/Alaskan Native,**
+2025,Dec,SQ,Asian,**
+2025,Dec,SQ,Black,758
+2025,Dec,SQ,Cuban,**
+2025,Dec,SQ,Hispanic,701
+2025,Dec,SQ,Mexican,185
+2025,Dec,SQ,N/A,(Blank)
+2025,Dec,SQ,Other,124
+2025,Dec,SQ,Pacific Islander,**
+2025,Dec,SQ,White,649
+2025,Dec,SVSP,American Indian/Alaskan Native,**
+2025,Dec,SVSP,Asian,**
+2025,Dec,SVSP,Black,938
+2025,Dec,SVSP,Cuban,**
+2025,Dec,SVSP,Hispanic,704
+2025,Dec,SVSP,Mexican,283
+2025,Dec,SVSP,N/A,(Blank)
+2025,Dec,SVSP,Other,63
+2025,Dec,SVSP,Pacific Islander,**
+2025,Dec,SVSP,White,318
+2025,Dec,VSP,American Indian/Alaskan Native,**
+2025,Dec,VSP,Asian,**
+2025,Dec,VSP,Black,863
+2025,Dec,VSP,Cuban,**
+2025,Dec,VSP,Hispanic,849
+2025,Dec,VSP,Mexican,352
+2025,Dec,VSP,N/A,(Blank)
+2025,Dec,VSP,Other,153
+2025,Dec,VSP,Pacific Islander,**
+2025,Dec,VSP,White,879
+2025,Dec,WSP,American Indian/Alaskan Native,**
+2025,Dec,WSP,Asian,**
+2025,Dec,WSP,Black,764
+2025,Dec,WSP,Cuban,**
+2025,Dec,WSP,Hispanic,"1,601"
+2025,Dec,WSP,Mexican,230
+2025,Dec,WSP,N/A,(Blank)
+2025,Dec,WSP,Other,70
+2025,Dec,WSP,Pacific Islander,**
+2025,Dec,WSP,White,622
+2025,Dec,CPMP,American Indian/Alaskan Native,(Blank)
+2025,Dec,CPMP,Asian,(Blank)
+2025,Dec,CPMP,Black,**
+2025,Dec,CPMP,Cuban,(Blank)
+2025,Dec,CPMP,Hispanic,**
+2025,Dec,CPMP,Mexican,(Blank)
+2025,Dec,CPMP,N/A,(Blank)
+2025,Dec,CPMP,Other,(Blank)
+2025,Dec,CPMP,Pacific Islander,(Blank)
+2025,Dec,CPMP,White,**
+2025,Dec,FCRF,American Indian/Alaskan Native,**
+2025,Dec,FCRF,Asian,**
+2025,Dec,FCRF,Black,72
+2025,Dec,FCRF,Cuban,(Blank)
+2025,Dec,FCRF,Hispanic,163
+2025,Dec,FCRF,Mexican,**
+2025,Dec,FCRF,N/A,(Blank)
+2025,Dec,FCRF,Other,**
+2025,Dec,FCRF,Pacific Islander,**
+2025,Dec,FCRF,White,114
+2025,Dec,Alternative Custody Program,American Indian/Alaskan Native,(Blank)
+2025,Dec,Alternative Custody Program,Asian,(Blank)
+2025,Dec,Alternative Custody Program,Black,(Blank)
+2025,Dec,Alternative Custody Program,Cuban,(Blank)
+2025,Dec,Alternative Custody Program,Hispanic,**
+2025,Dec,Alternative Custody Program,Mexican,(Blank)
+2025,Dec,Alternative Custody Program,N/A,(Blank)
+2025,Dec,Alternative Custody Program,Other,**
+2025,Dec,Alternative Custody Program,Pacific Islander,(Blank)
+2025,Dec,Alternative Custody Program,White,**
+2025,Dec,Department of State Hospitals,American Indian/Alaskan Native,**
+2025,Dec,Department of State Hospitals,Asian,**
+2025,Dec,Department of State Hospitals,Black,54
+2025,Dec,Department of State Hospitals,Cuban,(Blank)
+2025,Dec,Department of State Hospitals,Hispanic,**
+2025,Dec,Department of State Hospitals,Mexican,**
+2025,Dec,Department of State Hospitals,N/A,(Blank)
+2025,Dec,Department of State Hospitals,Other,**
+2025,Dec,Department of State Hospitals,Pacific Islander,**
+2025,Dec,Department of State Hospitals,White,58
+2025,Dec,Male Community Reentry Facility,American Indian/Alaskan Native,**
+2025,Dec,Male Community Reentry Facility,Asian,**
+2025,Dec,Male Community Reentry Facility,Black,237
+2025,Dec,Male Community Reentry Facility,Cuban,(Blank)
+2025,Dec,Male Community Reentry Facility,Hispanic,292
+2025,Dec,Male Community Reentry Facility,Mexican,74
+2025,Dec,Male Community Reentry Facility,N/A,(Blank)
+2025,Dec,Male Community Reentry Facility,Other,**
+2025,Dec,Male Community Reentry Facility,Pacific Islander,**
+2025,Dec,Male Community Reentry Facility,White,118
+2025,Dec,Medical Reprieve Program,American Indian/Alaskan Native,(Blank)
+2025,Dec,Medical Reprieve Program,Asian,(Blank)
+2025,Dec,Medical Reprieve Program,Black,**
+2025,Dec,Medical Reprieve Program,Cuban,(Blank)
+2025,Dec,Medical Reprieve Program,Hispanic,(Blank)
+2025,Dec,Medical Reprieve Program,Mexican,(Blank)
+2025,Dec,Medical Reprieve Program,N/A,(Blank)
+2025,Dec,Medical Reprieve Program,Other,(Blank)
+2025,Dec,Medical Reprieve Program,Pacific Islander,(Blank)
+2025,Dec,Medical Reprieve Program,White,**
+2025,Dec,CCI,American Indian/Alaskan Native,**
+2025,Dec,CCI,Asian,**
+2025,Dec,CCI,Black,686
+2025,Dec,CCI,Cuban,(Blank)
+2025,Dec,CCI,Hispanic,930
+2025,Dec,CCI,Mexican,240
+2025,Dec,CCI,N/A,(Blank)
+2025,Dec,CCI,Other,64
+2025,Dec,CCI,Pacific Islander,**
+2025,Dec,CCI,White,390
+2025,Dec,CCWF,American Indian/Alaskan Native,**
+2025,Dec,CCWF,Asian,**
+2025,Dec,CCWF,Black,547
+2025,Dec,CCWF,Cuban,(Blank)
+2025,Dec,CCWF,Hispanic,748
+2025,Dec,CCWF,Mexican,74
+2025,Dec,CCWF,N/A,(Blank)
+2025,Dec,CCWF,Other,73
+2025,Dec,CCWF,Pacific Islander,**
+2025,Dec,CCWF,White,635
+2025,Dec,CEN,American Indian/Alaskan Native,**
+2025,Dec,CEN,Asian,**
+2025,Dec,CEN,Black,741
+2025,Dec,CEN,Cuban,(Blank)
+2025,Dec,CEN,Hispanic,"1,554"
+2025,Dec,CEN,Mexican,471
+2025,Dec,CEN,N/A,(Blank)
+2025,Dec,CEN,Other,78
+2025,Dec,CEN,Pacific Islander,**
+2025,Dec,CEN,White,242
+2025,Dec,CHCF,American Indian/Alaskan Native,**
+2025,Dec,CHCF,Asian,**
+2025,Dec,CHCF,Black,726
+2025,Dec,CHCF,Cuban,**
+2025,Dec,CHCF,Hispanic,468
+2025,Dec,CHCF,Mexican,248
+2025,Dec,CHCF,N/A,(Blank)
+2025,Dec,CHCF,Other,123
+2025,Dec,CHCF,Pacific Islander,**
+2025,Dec,CHCF,White,702
+2025,Dec,CIM,American Indian/Alaskan Native,**
+2025,Dec,CIM,Asian,**
+2025,Dec,CIM,Black,588
+2025,Dec,CIM,Cuban,(Blank)
+2025,Dec,CIM,Hispanic,653
+2025,Dec,CIM,Mexican,328
+2025,Dec,CIM,N/A,(Blank)
+2025,Dec,CIM,Other,92
+2025,Dec,CIM,Pacific Islander,**
+2025,Dec,CIM,White,566
