@@ -1,6 +1,8 @@
 # California Prison Climate Justice
 This is a working repository for collecting climate hazard data for California prison facilities.
 
+This project is in support of Climate Justice Coalition 4 California Prisons and a masters capstone report at UC Berkeley. It is inspired by and continues the work of the Toxic Prisons Project and Hidden Hazards (2023).
+
 # Data Sources
 
 ## Facilities
@@ -11,7 +13,7 @@ The FEMA prison data set was "Downloaded from HiFLD Open on July 22, 2025"
 
 CDCR 2025 Monthly Total Population (TPOP1) Archive. (2025). [Dataset]. CDCR Office of Research. https://www.cdcr.ca.gov/research/2025-monthly-total-population-tpop1-archive/
 
-The Toxic Prisons Mapping Project. (2025). List of Facilities (CA). https://www.toxicprisons.com/hazards
+CDCR Population Data Set. (2025). [Dataset]. CDCR Office of Research.
 
 ## Climate Hazards
 
