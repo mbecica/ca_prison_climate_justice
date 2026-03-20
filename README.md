@@ -24,7 +24,10 @@ All facilities include their name, address, telephone and website information (F
 CDCR facilities have additional variables:
 | Variable | Description | Source | 
 | :--- | :--- | :--- | 
-| `average_2025_population` | Annual monthly average of total daily population in 2025. | CDCR TPOP1 PDF Reports, 2025 | 
+| `cdcr_code` | Facility acronym used by CDCR to identify state prisons. | Derived from FEMA, 2025 facility name |
+| `cdcr_firecamp` | `Boolean` True or False if the facility is a fire camp. | Derived from FEMA, 2025 facility name | 
+| `average_2025_population` | Annual monthly average of total daily population in 2025. | CDCR TPOP1 PDF Reports, 2025 |
+| `capacity_percent_2025` | A 0-1 value calculated from 2025 `average_2025_population` / `capacity`. Values over 1 indicate the facility is over capacity. | Derived from CDCR TPOP1 PDF Reports, 2025 | 
 | `age_over_50_pct` | % of population aged 50 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 | 
 | `age_over_55_pct` | % of population aged 55 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 | 
 | `age_over_60_pct` | % of population aged 60 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 | 
