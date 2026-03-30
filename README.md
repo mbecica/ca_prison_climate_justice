@@ -46,7 +46,6 @@ CDCR facilities have additional variables:
 | `pct_buildings_ventilation` | Proportion of housing buildings with at least one ventilation-without-cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
 | `year_opened` | The year the facility was opened as a state facility. | Collected from online documentation. |
 | `year_opened_notes` | Notes on the year opened, e.g. if the facility was previously a different institution. | Collected from online documentation. |
-| `reentry_hub` | If the facility is designated as a reentry hub, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `planned_closure` | If the facility is marked for closure, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `california_model_facility` | If the facility is included in The California Model plan, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. | 
