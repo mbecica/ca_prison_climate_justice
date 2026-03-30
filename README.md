@@ -52,6 +52,10 @@ CDCR facilities have additional variables:
 | `cognitive_behavioral_interventions` | Semicolon-separated list of Cognitive Behavioral Intervention programs the facility had operational capacity for during 2024-2025. Programs include Life Skills and Outpatient. Blank if the facility reported no CBI capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
 | `rehabilitative_programs` | Semicolon-separated list of Rehabilitative Programs the facility had operational capacity for during 2024-2025. Programs include Academic Education, Career Technical Education, Cognitive Behavioral Intervention - Sex Offender, and Transitions. Blank if the facility reported no rehabilitative program capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
 
+### Additional CDCR Operations Data
+
+`data_sources/facilities/CDCR/sb601_operations_2021-2025.csv` contains monthly operational metrics for all 32–35 CDCR institutions across fiscal years 2021-2022 through 2024-2025, scraped from the same SB 601 dashboard. Columns are `institution` (CDCR code), `fiscal_year`, `category`, `metric`, and one column per month (`Jul` through `Apr`). Three categories are included: Lockdowns and Modified Programs (e.g. lockdown counts, incarcerated person-days on modified program), Number of Deaths (expected, unexpected, suicide, homicide, etc.), and Overtime Hours (custody and clinical staff). Source: CDCR SB 601 Programs Dashboard, 2024-2025.
+
 ## Climate Hazard Data
 
 ### Heat and Air Quality Index
