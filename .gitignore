@@ -1,6 +1,11 @@
 # Ignore where files get large
 data_sources/facilities/cdcr_population_pdfs
 
+# Node
+node_modules/
+package-lock.json
+package.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
