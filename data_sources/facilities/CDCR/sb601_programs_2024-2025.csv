@@ -1,0 +1,1602 @@
+,,Quarter,Q1,Q1,Q1,Q2,Q2,Q2,Q3,Q3,Q3,Q4
+Institution,Category,Metric,Jul-24,Aug-24,Sep-24,Oct-24,Nov-24,Dec-24,Jan-25,Feb-25,Mar-25,Apr-25
+ASP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,321.75,295.00,314.50,330.60,340.25,365.25,373.00,370.50,412.25,443.25
+ASP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,375.00,360.00,363.00,363.00,381.00,399.00,427.20,432.00,498.00,427.20
+ASP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,315.25,367.20,313.00,346.40,282.00,225.25,216.60,179.25,186.75,207.75
+ASP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,354.00,408.60,357.75,372.00,352.50,306.75,295.20,239.25,234.00,295.20
+ASP,Contraband,Cellular Telephone Seizure Events,,,,,,,2.00,,,8.00
+ASP,Contraband,Fentanyl Seizure Events,,,,,,,4.00,,,
+ASP,Contraband,Marijuana Seizure Events,,,,6.00,2.00,2.00,,,,2.00
+ASP,Contraband,Methamphetamine Seizure Events,,,,6.00,8.00,16.00,14.00,8.00,4.00,4.00
+ASP,Contraband,Quantity of Cellular Telephones Seized,,,,,,,2.00,,,8.00
+ASP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,,,,59.76,,,
+ASP,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,11.12,,4.20,,,,6.00
+ASP,Contraband,Quantity of Marijuana Seized (grams),,,,7.12,56.44,,,,,
+ASP,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,1.00,,407.86,738.66,67.56,13.94,1.94
+ASP,Contraband,Quantity of Methamphetamine Seized (grams),,,,106.96,274.18,,,,,
+ASP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,12.62,0.90,813.56,61.72,105.18,584.82,95.80
+ASP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,49.88,94.80,,,,,
+ASP,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,12.00,6.00,12.00,10.00,6.00,10.00,4.00
+ASP,Fiscal,Actual Expenditures ($),"18,498,763.86","38,890,014.05","57,572,095.78","75,970,500.36","95,450,239.11","115,041,310.53","133,226,931.07","151,235,371.41","169,737,570.38","187,358,124.58"
+ASP,Fiscal,Institution Budget ($),"238,104,051.00","238,182,006.00","238,401,029.00","237,306,201.00","238,679,601.00","223,523,934.00","223,616,636.00","225,095,915.69","224,816,815.69","225,176,554.69"
+ASP,Incarcerated Persons Grievances and Appeals,Appeals Denied,36.00,33.00,20.00,17.00,21.00,24.00,17.00,22.00,17.00,
+ASP,Incarcerated Persons Grievances and Appeals,Appeals Granted,11.00,2.00,3.00,3.00,7.00,4.00,2.00,4.00,2.00,
+ASP,Incarcerated Persons Grievances and Appeals,Appeals Received,60.00,47.00,44.00,26.00,38.00,48.00,46.00,49.00,45.00,
+ASP,Number and Housing Level of Incarcerated Persons,Level I,8.00,9.00,8.00,7.00,6.00,5.00,6.00,5.00,6.00,5.00
+ASP,Number and Housing Level of Incarcerated Persons,Level II,"4,538.00","4,410.00","4,214.00","4,041.00","3,877.00","3,768.00","3,764.00","3,749.00","3,792.00","3,930.00"
+ASP,Number and Housing Level of Incarcerated Persons,Level III,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ASP,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ASP,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+ASP,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,14.00,12.00,8.00,8.00,12.00,10.00,14.00,11.00,11.00,10.00
+ASP,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ASP,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"4,560.00","4,431.00","4,230.00","4,056.00","3,895.00","3,783.00","3,784.00","3,765.00","3,809.00","3,945.00"
+ASP,Number of Deaths,Expected,,,1.00,,,,,,,
+ASP,Overtime Hours,Custody (Overtime),"8,239.35","5,537.35","4,923.81","5,045.89","3,963.39","4,195.91","3,660.72","4,122.03","5,967.39","6,588.40"
+ASP,Overtime Hours,Dental + Mental Health (Overtime),70.00,60.00,77.25,57.75,71.50,74.25,70.75,50.00,114.75,82.50
+ASP,Overtime Hours,Non-Custody (Overtime),"1,974.50","4,042.75","1,905.25","1,536.25","1,641.25","2,018.50","1,780.50","1,611.75","2,484.50","1,834.00"
+ASP,Overtime Hours,Total Overtime Hours,"10,283.85","9,640.10","6,906.31","6,639.89","5,676.14","6,288.66","5,511.97","5,783.78","8,566.64","8,504.90"
+ASP,Positions - Authorized and Vacant,Authorized,"1,079.60","1,079.60","1,079.60","1,079.60","1,079.60","1,079.60","1,079.60","1,079.60","1,079.60","1,079.60"
+ASP,Positions - Authorized and Vacant,Vacant,58.60,98.60,95.60,102.60,108.60,112.60,109.60,119.60,120.60,124.60
+ASP,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,670.25","1,545.60","1,761.75","2,372.80","2,430.00","2,386.75","2,134.40","2,037.00","2,018.25","2,134.40"
+ASP,Rehabilitative Programs,Academic Education - Operational Capacity,"1,918.50","1,946.40","1,999.50","1,989.60","1,972.50","1,950.00","1,888.80","1,900.50","1,954.50","1,888.80"
+ASP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,286.50,262.00,259.00,209.40,180.25,191.50,249.00,258.75,308.50,249.00
+ASP,Rehabilitative Programs,Career Technical Education - Operational Capacity,290.25,270.00,270.00,216.00,249.75,283.50,291.60,270.00,310.50,291.60
+ASP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ASP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ASP,Rehabilitative Programs,Number of Associate Degrees,1.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ASP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAC,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,,,,,,,0.00,0.00,0.00,
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,,,,,,1.00,,,
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,0.00,,,,,,1.00,,,
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,1.00,,,,,,3.00,,,
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,0.00,,,,,,1.00,,,
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAC,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+CAC,Positions - Authorized and Vacant,Authorized,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,
+CAC,Positions - Authorized and Vacant,Vacant,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,
+CAL,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,235.00,194.60,144.50,117.20,89.50,69.50,106.60,152.75,159.25,171.75
+CAL,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,321.00,264.00,204.00,204.00,147.00,117.00,127.20,180.00,186.00,127.20
+CAL,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,308.50,330.80,355.50,334.40,346.00,330.00,261.80,220.00,212.50,231.00
+CAL,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,363.00,408.20,435.00,421.80,445.75,443.75,400.40,340.25,290.50,400.40
+CAL,Contraband,Cellular Telephone Seizure Events,,,,10.00,4.00,40.00,10.00,16.00,98.00,10.00
+CAL,Contraband,Controlled Medication Seizure Events,,,,,,,,1.00,,
+CAL,Contraband,Fentanyl Seizure Events,,,,2.00,,,,2.00,,
+CAL,Contraband,Heroin Seizure Events,,,,10.00,4.00,,8.00,6.00,6.00,2.00
+CAL,Contraband,Marijuana Seizure Events,,,,2.00,4.00,14.00,,12.00,2.00,2.00
+CAL,Contraband,Methamphetamine Seizure Events,,,,22.00,10.00,10.00,30.00,14.00,14.00,
+CAL,Contraband,Quantity of Cellular Telephones Seized,,,,10.00,14.00,60.00,10.00,18.00,132.00,12.00
+CAL,Contraband,Quantity of Controlled Medication Seized (number of strips),,,,,,,,4.00,,
+CAL,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,0.02,,,,3.40,,
+CAL,Contraband,Quantity of Fentanyl Seized (grams),,,,,,,,,,
+CAL,Contraband,Quantity of Heroin Seized (grams with packaging),,,,537.20,408.00,,57.58,38.90,5.42,0.40
+CAL,Contraband,Quantity of Heroin Seized (grams),,,,,96.00,,0.80,,,
+CAL,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,4.00,278.00,28.36,,136.70,0.30,18.00
+CAL,Contraband,Quantity of Marijuana Seized (grams),,,,,,114.54,,,,
+CAL,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,117.00,366.00,206.00,45.38,57.28,148.44,
+CAL,Contraband,Quantity of Methamphetamine Seized (grams),,,,456.00,158.00,9.00,412.98,190.00,,
+CAL,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,12.00,,,
+CAL,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,,,,,
+CAL,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,,,,408.00,2.00,
+CAL,Contraband,Quantity of Tobacco Seized (grams),,,,,24.00,,,,,
+CAL,Contraband,Suboxone Seizure Events,,,,,,,2.00,,,
+CAL,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,,,,,,
+CAL,Contraband,Tobacco Seizure Events,,,,,2.00,,,6.00,2.00,
+CAL,Fiscal,Actual Expenditures ($),"15,660,971.98","33,669,655.41","52,122,046.43","70,870,186.32","89,195,637.36","107,839,979.12","125,408,231.35","141,569,069.26","158,470,873.51","174,693,000.95"
+CAL,Fiscal,Institution Budget ($),"213,081,437.00","213,099,304.00","213,315,721.00","213,482,092.00","214,434,849.00","205,609,464.00","206,385,757.00","207,352,221.69","208,014,650.69","209,110,624.69"
+CAL,Incarcerated Persons Grievances and Appeals,Appeals Denied,24.00,24.00,20.00,42.00,26.00,30.00,20.00,27.00,12.00,
+CAL,Incarcerated Persons Grievances and Appeals,Appeals Granted,8.00,8.00,11.00,7.00,4.00,7.00,14.00,5.00,7.00,
+CAL,Incarcerated Persons Grievances and Appeals,Appeals Received,38.00,48.00,46.00,61.00,45.00,67.00,72.00,52.00,65.00,
+CAL,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,3.00,11.00,10.00,7.00,13.00,25.00,33.00,18.00,43.00,
+CAL,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,121.00,199.00,97.00,117.00,94.00,0.00,196.00,117.00,195.00,212.00
+CAL,Number and Housing Level of Incarcerated Persons,Level IV,"1,989.00","1,983.00","1,963.00","2,009.00","2,045.00","2,106.00","2,196.00","2,221.00","2,184.00","2,129.00"
+CAL,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+CAL,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,89.00,74.00,98.00,91.00,114.00,110.00,105.00,118.00,134.00,9.00
+CAL,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,122.00
+CAL,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,894.00","2,792.00","2,613.00","2,523.00","2,466.00","2,390.00","2,485.00","2,539.00","2,555.00","2,482.00"
+CAL,Number of Deaths,Expected,,,,,,,,10.00,,
+CAL,Number of Deaths,Homicide,,,1.00,,,,,,,
+CAL,Number of Deaths,Unexpected,,,,,1.00,,,,,1.00
+CAL,Overtime Hours,Custody (Overtime),"23,236.82","22,647.76","27,401.27","19,335.26","31,270.12","16,923.11","8,682.54","9,002.62","12,651.49","10,667.20"
+CAL,Overtime Hours,Dental + Mental Health (Overtime),0.50,0.00,0.00,0.00,0.00,0.00,0.00,2.50,0.00,0.00
+CAL,Overtime Hours,Non-Custody (Overtime),"2,021.00","3,611.00","1,665.00","1,500.75","1,397.50","1,576.75","2,827.00","1,014.75","1,329.00","1,283.50"
+CAL,Overtime Hours,Total Overtime Hours,"25,258.32","26,258.76","29,066.27","20,836.01","32,667.62","18,499.86","11,509.54","10,019.87","13,980.49","11,950.80"
+CAL,Positions - Authorized and Vacant,Authorized,"1,019.50","1,019.50","1,019.50","1,019.50","1,019.50","1,019.50","1,019.50","1,019.50","1,019.50","1,018.20"
+CAL,Positions - Authorized and Vacant,Vacant,126.90,117.10,130.10,119.90,122.90,194.30,201.50,211.50,219.50,235.20
+CAL,Rehabilitative Programs,Academic Education - Actual Enrollment,849.50,811.40,785.75,812.60,871.50,796.75,769.40,805.50,"1,297.25",769.40
+CAL,Rehabilitative Programs,Academic Education - Operational Capacity,738.00,702.00,628.50,654.20,742.50,738.00,788.40,792.00,792.00,788.40
+CAL,Rehabilitative Programs,Career Technical Education - Actual Enrollment,241.25,241.80,243.00,234.00,201.75,189.00,188.20,189.00,215.00,188.20
+CAL,Rehabilitative Programs,Career Technical Education - Operational Capacity,243.00,243.00,243.00,234.80,202.50,189.00,189.00,189.00,216.00,189.00
+CAL,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAL,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAL,Rehabilitative Programs,Number of Associate Degrees,0.00,1.00,0.00,0.00,0.00,1.00,0.00,1.00,0.00,0.00
+CAL,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CAL,Rehabilitative Programs,Number of GED Certificates,8.00,0.00,4.00,3.00,4.00,3.00,2.00,4.00,4.00,2.00
+CCC,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,,,,,,,,,,0.00
+CCC,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCC,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCC,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+CCI,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,149.00,127.60,84.75,66.60,36.75,37.75,38.80,75.50,136.75,157.25
+CCI,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,450.00,420.00,420.00,420.00,420.00,390.00,360.00,360.00,243.75,360.00
+CCI,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,107.25,150.00,90.00,87.00,188.50,224.75,248.20,324.50,411.50,410.50
+CCI,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,441.00,468.00,468.00,468.00,468.00,468.00,468.00,508.50,580.50,468.00
+CCI,Contraband,Cellular Telephone Seizure Events,,,,10.00,8.00,2.00,14.00,16.00,18.00,4.00
+CCI,Contraband,Fentanyl Seizure Events,,,,2.00,,,,2.00,,
+CCI,Contraband,Heroin Seizure Events,,,,2.00,2.00,2.00,,,4.00,
+CCI,Contraband,Marijuana Seizure Events,,,,2.00,2.00,,,4.00,4.00,4.00
+CCI,Contraband,Methamphetamine Seizure Events,,,,4.00,,4.00,4.00,8.00,6.00,
+CCI,Contraband,Quantity of Cellular Telephones Seized,,,,12.00,8.00,2.00,22.00,16.00,28.00,4.00
+CCI,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,0.02,,,,1.20,,
+CCI,Contraband,Quantity of Heroin Seized (grams with packaging),,,,2.00,3.20,2.20,,,30.40,
+CCI,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,0.40,1.80,,,8.20,20.00,37.20
+CCI,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,144.00,,36.80,5.00,25.80,10.00,
+CCI,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,84.00,,,
+CCI,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,4.20,,1.20,2.00,,8.82
+CCI,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,2.00,,,,,,
+CCI,Contraband,Suboxone Seizure Events,,,,,,,2.00,,,
+CCI,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,36.00,20.00,30.00,28.00,20.00,30.00,50.00,44.00,74.00,60.00
+CCI,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,11.00,15.00,15.00,30.00,15.00,30.00,18.00,21.00,21.00,21.00
+CCI,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,1.00,0.00,0.00,0.00
+CCI,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,2.27,2.73,0.83,1.21,0.32,0.15,0.10,2.34,7.50,1.07
+CCI,Lockdowns and Modified Programs,Lockdowns,1.00,0.00,0.00,0.00,0.00,0.00,1.00,1.00,0.00,0.00
+CCI,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCI,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCI,Number and Housing Level of Incarcerated Persons,Level I,2.00,4.00,4.00,3.00,3.00,3.00,4.00,4.00,3.00,5.00
+CCI,Number and Housing Level of Incarcerated Persons,Level II,178.00,175.00,173.00,163.00,413.00,642.00,827.00,863.00,855.00,860.00
+CCI,Number and Housing Level of Incarcerated Persons,Level III,730.00,721.00,681.00,816.00,681.00,709.00,726.00,742.00,743.00,686.00
+CCI,Number and Housing Level of Incarcerated Persons,Level IV,705.00,721.00,651.00,557.00,573.00,595.00,706.00,721.00,739.00,835.00
+CCI,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+CCI,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,95.00,88.00,85.00,92.00,70.00,95.00,108.00,90.00,73.00,19.00
+CCI,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,74.00
+CCI,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"1,710.00","1,709.00","1,594.00","1,631.00","1,740.00","2,044.00","2,371.00","2,420.00","2,413.00","2,479.00"
+CCI,Number of Deaths,Expected,,,10.00,,,,1.00,,,
+CCI,Number of Deaths,Homicide,,,,,,,,,,1.00
+CCI,Number of Deaths,Suicide,,,1.00,,,1.00,,,,
+CCI,Number of Deaths,Unexpected,,,2.00,,,,1.00,,,
+CCI,Overtime Hours,Custody (Overtime),"6,442.96","8,889.51","13,836.14","12,744.86","13,763.54","22,783.59","20,354.55","18,236.88","20,192.02","17,604.00"
+CCI,Overtime Hours,Dental + Mental Health (Overtime),55.00,85.50,75.25,101.25,95.25,81.00,19.75,82.25,90.25,152.30
+CCI,Overtime Hours,Non-Custody (Overtime),"1,170.75","1,989.75","1,442.50","1,310.50","1,227.40","1,288.90","2,901.75","1,034.00","1,222.25","1,095.50"
+CCI,Overtime Hours,Total Overtime Hours,"7,668.71","10,964.76","15,353.89","14,156.61","15,086.19","24,153.49","23,276.05","19,353.13","21,504.52","1,851.80"
+CCI,Positions - Authorized and Vacant,Authorized,"1,052.20","1,052.20","1,052.20","1,052.20","1,052.20","1,052.20","1,052.20","1,052.20","1,052.20","1,052.40"
+CCI,Rehabilitative Programs,Transitions - Operational Capacity,90.00,90.00,90.00,90.00,90.00,90.00,90.00,90.00,90.00,90.00
+CCI,Sick Leave Hours,Custody (Sick Leave),"3,954.50","4,432.50","4,612.75","4,489.25","4,128.75","5,280.50","3,472.12","3,971.50","5,088.50","5,504.50"
+CCI,Sick Leave Hours,Dental + Mental Health (Sick Leave),404.75,312.00,221.25,431.75,231.25,349.00,385.25,254.00,237.00,355.50
+CCI,Sick Leave Hours,Non-Custody (Sick Leave),"1,348.25","2,301.25","2,113.75","2,123.75","1,534.50","2,241.75","2,068.00","2,060.50","1,844.50","1,723.30"
+CCI,Sick Leave Hours,Total Sick Leave Hours,"5,707.50","7,045.75","6,947.75","7,044.75","5,894.50","7,871.25","5,925.37","6,286.00","7,170.00","7,583.30"
+CCI,Use of Force (UOF),Total UOF Incidents,34.00,39.00,44.00,39.00,40.00,37.00,58.00,49.00,38.00,38.00
+CCWF,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,140.25,162.00,194.75,168.80,158.50,194.75,229.60,247.25,238.00,216.75
+CCWF,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,224.25,227.80,262.00,262.00,246.50,273.00,310.20,331.75,316.00,310.20
+CCWF,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,112.75,143.60,129.75,135.60,146.25,141.75,132.20,118.50,130.00,117.25
+CCWF,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,226.50,180.20,160.00,180.60,193.00,183.00,173.00,161.00,176.50,173.00
+CCWF,Contraband,Cellular Telephone Seizure Events,,,,4.00,8.00,12.00,14.00,8.00,24.00,20.00
+CCWF,Contraband,Controlled Medication Seizure Events,,,,,,,1.00,,,
+CCWF,Contraband,Fentanyl Seizure Events,,,,,,,4.00,,,2.00
+CCWF,Contraband,Heroin Seizure Events,,,,2.00,,2.00,2.00,,2.00,
+CCWF,Contraband,Honey Oil Seizure Events,,,,,,,12.00,,,
+CCWF,Contraband,Marijuana Seizure Events,,,,2.00,4.00,8.00,8.00,,,2.00
+CCWF,Contraband,MDMA / Ecstasy Seizure Events,,,,,,,,,,2.00
+CCWF,Contraband,Methamphetamine Seizure Events,,,,34.00,14.00,14.00,14.00,10.00,16.00,10.00
+CCWF,Contraband,Quantity of Cellular Telephones Seized,,,,4.00,8.00,12.00,18.00,10.00,38.00,36.00
+CCWF,Contraband,Quantity of Controlled Medication Seized (pills),,,,,,,2.00,,,
+CCWF,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,,,,19.40,,,29.00
+CCWF,Contraband,Quantity of Fentanyl Seized (grams),,,,,,,1.80,,,
+CCWF,Contraband,Quantity of Heroin Seized (grams with packaging),,,,5.00,,0.60,3.00,,54.00,
+CCWF,Contraband,Quantity of Honey Oil Seized (grams with packaging),,,,,,,"4,204.60",,,
+CCWF,Contraband,Suboxone Seizure Events,,,,2.00,2.00,2.00,2.00,2.00,,2.00
+CCWF,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,2.00,4.00,4.00,16.00,,2.00
+CCWF,Contraband,Tobacco Seizure Events,,,,2.00,,,2.00,2.00,,2.00
+CCWF,Fiscal,Actual Expenditures ($),"16,101,488.57","30,066,969.94","46,026,116.16","60,018,458.25","76,446,140.81","91,984,104.52","107,095,297.47","121,697,879.08","138,024,168.84","153,129,710.68"
+CCWF,Fiscal,Institution Budget ($),"183,856,159.00","183,871,031.00","184,321,828.00","184,983,160.00","185,770,383.00","179,187,621.00","179,737,395.00","180,559,583.00","180,686,292.00","185,272,121.00"
+CCWF,Incarcerated Persons Grievances and Appeals,Appeals Denied,44.00,24.00,20.00,29.00,16.00,21.00,20.00,15.00,25.00,
+CCWF,Incarcerated Persons Grievances and Appeals,Appeals Granted,12.00,8.00,7.00,7.00,2.00,4.00,4.00,2.00,2.00,
+CCWF,Incarcerated Persons Grievances and Appeals,Appeals Received,69.00,57.00,51.00,53.00,24.00,52.00,43.00,32.00,58.00,
+CCWF,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,5.00,19.00,20.00,13.00,5.00,24.00,17.00,14.00,27.00,
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,418.00,295.00,226.00,215.00,196.00,252.00,237.00,190.00,233.00,204.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,28.00,72.00,67.00,63.00,71.00,62.00,68.00,61.00,66.00,68.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,11.00,6.00,2.00,8.00,11.00,2.00,6.00,2.00,8.00,5.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,4.00,2.00,2.00,3.00,10.00,5.00,1.00,2.00,21.00,5.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,758.00,667.00,532.00,559.00,539.00,620.00,562.00,443.00,579.00,
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,109.00,92.00,104.00,100.00,118.00,124.00,112.00,117.00,134.00,126.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,73.00,63.00,80.00,100.00,98.00,124.00,103.00,55.00,101.00,76.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,62.00,136.00,51.00,53.00,35.00,51.00,34.00,15.00,13.00,20.00
+CCWF,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,3.00,1.00,0.00,1.00,0.00,0.00,1.00,1.00,3.00,7.00
+CCWF,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.37,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+CCWF,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Number and Housing Level of Incarcerated Persons,Level I,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,4.00
+CCWF,Number and Housing Level of Incarcerated Persons,Level II,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Rehabilitative Programs,Academic Education - Actual Enrollment,977.75,"1,201.60","1,518.75","1,473.00","1,413.25","1,166.50","1,184.00","1,415.50","1,363.75","1,184.00"
+CCWF,Rehabilitative Programs,Academic Education - Operational Capacity,"1,582.75","1,713.20","1,710.75","1,667.40","1,656.00","1,656.00","1,627.20","1,584.00","1,584.00","1,627.20"
+CCWF,Rehabilitative Programs,Career Technical Education - Actual Enrollment,104.25,101.60,105.25,175.40,185.50,184.00,181.40,184.50,227.25,181.40
+CCWF,Rehabilitative Programs,Career Technical Education - Operational Capacity,108.00,108.00,108.00,185.60,189.00,189.00,189.00,189.00,236.25,189.00
+CCWF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Rehabilitative Programs,Number of Associate Degrees,1.00,2.00,0.00,0.00,0.00,0.00,1.00,0.00,0.00,1.00
+CCWF,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Rehabilitative Programs,Number of GED Certificates,3.00,5.00,2.00,4.00,0.00,3.00,4.00,1.00,4.00,4.00
+CCWF,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,1.00,1.00,0.00,0.00,4.00,1.00,0.00,4.00
+CCWF,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CCWF,Rehabilitative Programs,Transitions - Actual Enrollment,189.50,170.40,140.00,137.20,136.00,139.50,146.20,153.75,149.75,146.20
+CCWF,Rehabilitative Programs,Transitions - Operational Capacity,198.00,187.20,144.00,144.00,144.00,144.00,154.80,162.00,162.00,154.80
+CCWF,Sick Leave Hours,Custody (Sick Leave),"4,556.25","4,477.25","4,884.00","4,496.50","4,646.75","4,778.25","2,245.75","4,158.75","4,142.25","4,096.80"
+CCWF,Sick Leave Hours,Dental + Mental Health (Sick Leave),362.50,416.25,536.50,545.75,476.50,452.50,486.50,547.07,418.75,592.10
+CCWF,Sick Leave Hours,Non-Custody (Sick Leave),"1,802.00","1,394.00","1,724.75","1,648.11","1,450.25","1,475.75","1,792.33","1,736.50","1,416.75","1,676.00"
+CCWF,Sick Leave Hours,Total Sick Leave Hours,"6,720.75","6,287.50","7,145.25","6,690.36","6,573.50","6,706.50","4,524.58","6,442.32","5,977.75","6,364.90"
+CCWF,Use of Force (UOF),Total UOF Incidents,56.00,60.00,56.00,62.00,38.00,52.00,44.00,51.00,93.00,61.00
+CEN,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,331.00,286.40,241.25,211.80,190.50,150.75,167.60,264.00,352.50,363.75
+CEN,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,396.00,396.00,387.00,387.00,276.00,282.00,316.80,384.00,426.00,316.80
+CEN,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,199.25,212.40,197.50,228.60,238.50,192.50,158.60,156.50,148.00,172.75
+CEN,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,280.50,362.40,391.50,309.60,288.00,288.00,306.00,331.50,287.25,306.00
+CEN,Contraband,Cellular Telephone Seizure Events,,,,84.00,44.00,12.00,26.00,16.00,56.00,16.00
+CEN,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,14.00,,,2.00
+CEN,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,1.60,,,,,,
+CEN,Contraband,Quantity of Tobacco Seized (grams),,,,11.60,,,,,,
+CEN,Contraband,Suboxone Seizure Events,,,,,2.00,2.00,2.00,,2.00,2.00
+CEN,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,2.00,,2.00,,,2.00
+CEN,Contraband,Tobacco Seizure Events,,,,4.00,,,,,,
+CEN,Fiscal,Actual Expenditures ($),"17,818,597.89","36,106,990.64","54,488,477.08","72,173,353.30","90,548,525.63","110,974,080.37","129,581,889.46","148,200,087.14","165,908,163.92","183,923,008.56"
+CEN,Fiscal,Institution Budget ($),"218,921,124.00","218,909,814.00","219,093,124.00","219,161,132.00","220,168,106.00","217,344,192.00","218,139,351.00","219,228,985.69","219,235,897.69","222,581,843.69"
+CEN,Incarcerated Persons Grievances and Appeals,Appeals Denied,21.00,19.00,25.00,23.00,26.00,18.00,23.00,14.00,11.00,
+CEN,Incarcerated Persons Grievances and Appeals,Appeals Granted,8.00,3.00,6.00,1.00,4.00,7.00,7.00,3.00,8.00,
+CEN,Incarcerated Persons Grievances and Appeals,Appeals Received,42.00,48.00,41.00,37.00,41.00,40.00,44.00,38.00,45.00,
+CEN,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,7.00,18.00,9.00,10.00,9.00,14.00,10.00,20.00,22.00,
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,95.00,93.00,131.00,125.00,87.00,95.00,98.00,83.00,128.00,119.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,54.00,54.00,40.00,18.00,29.00,31.00,29.00,15.00,11.00,18.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,0.00,0.00,1.00,1.00,1.00,0.00,0.00,1.00,0.00,0.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,1.00,,,1.00,,,,,,
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,11.00,15.00,9.00,10.00,8.00,13.00,10.00,7.00,13.00,14.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,215.00,220.00,224.00,213.00,169.00,189.00,181.00,143.00,204.00,
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,15.00,18.00,9.00,20.00,13.00,24.00,15.00,17.00,23.00,18.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,26.00,33.00,23.00,20.00,18.00,24.00,20.00,13.00,20.00,17.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,13.00,6.00,11.00,27.00,13.00,3.00,9.00,7.00,9.00,5.00
+CEN,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,1.00,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00
+CEN,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.04,0.05,0.03,0.01,0.02,0.24,0.08,0.06,0.01,0.04
+CEN,Overtime Hours,Dental + Mental Health (Overtime),49.75,35.00,55.00,43.50,84.00,79.00,88.00,93.75,73.00,60.00
+CEN,Overtime Hours,Non-Custody (Overtime),"2,319.25","2,002.50","2,375.75","2,024.00","1,531.00","1,632.00","2,563.50","1,441.25","1,860.25","1,542.00"
+CEN,Overtime Hours,Total Overtime Hours,"12,968.42","9,528.74","13,830.12","11,754.31","21,810.29","18,979.09","16,733.07","16,911.69","21,114.74","18,025.00"
+CEN,Positions - Authorized and Vacant,Authorized,"1,043.70","1,043.70","1,043.70","1,043.70","1,043.70","1,043.70","1,043.70","1,043.70","1,043.70","1,043.00"
+CEN,Positions - Authorized and Vacant,Vacant,60.90,67.90,80.90,77.90,88.70,96.70,97.70,98.70,109.70,102.00
+CEN,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,112.00","1,064.20","1,443.25","1,570.00","1,570.75","1,541.50","1,507.40","1,586.25","1,844.50","1,507.40"
+CEN,Rehabilitative Programs,Academic Education - Operational Capacity,"1,329.00","1,302.00","1,342.50","1,410.00","1,315.50","1,302.00","1,269.60","1,275.00","1,302.00","1,269.60"
+CEN,Rehabilitative Programs,Career Technical Education - Actual Enrollment,380.00,402.00,401.50,402.20,403.50,401.50,400.60,402.00,398.75,400.60
+CEN,Rehabilitative Programs,Career Technical Education - Operational Capacity,384.75,405.00,405.00,405.00,405.00,405.00,405.00,405.00,405.00,405.00
+CEN,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CEN,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CEN,Rehabilitative Programs,Number of Associate Degrees,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CEN,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CEN,Rehabilitative Programs,Number of GED Certificates,6.00,9.00,10.00,3.00,6.00,3.00,18.00,5.00,10.00,18.00
+CEN,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.00,1.00,0.00
+CEN,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CEN,Rehabilitative Programs,Transitions - Actual Enrollment,53.50,55.40,52.75,49.20,45.25,49.25,50.80,49.50,33.50,50.80
+CEN,Rehabilitative Programs,Transitions - Operational Capacity,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00
+CEN,Sick Leave Hours,Custody (Sick Leave),"6,047.50","5,698.00","5,999.25","5,985.50","6,167.25","7,416.25","2,582.50","4,292.00","5,439.00","5,849.80"
+CEN,Sick Leave Hours,Dental + Mental Health (Sick Leave),213.00,204.25,235.50,288.75,189.50,295.75,268.75,156.75,203.75,192.30
+CEN,Sick Leave Hours,Non-Custody (Sick Leave),"1,954.50","2,038.00","2,205.00","2,013.25","1,809.25","1,971.50","2,084.50","1,755.75","1,637.75","1,739.00"
+CEN,Sick Leave Hours,Total Sick Leave Hours,"8,215.00","7,940.25","8,439.75","8,287.50","8,166.00","9,683.50","4,935.75","6,204.50","7,280.50","7,781.00"
+CHCF,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,,2.00,2.00,
+CHCF,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,0.08,,,12.42,,
+CHCF,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,2.00,,,
+CHCF,Contraband,Quantity of Tobacco Seized (grams),,,,,,,2.00,,2.00,
+CHCF,Contraband,Suboxone Seizure Events,,,,,,,,2.00,2.00,
+CHCF,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,2.00,,2.00,2.00,,
+CHCF,Contraband,Tobacco Seizure Events,,,,,,,2.00,,2.00,
+CHCF,Fiscal,Actual Expenditures ($),"37,459,007.47","69,134,941.32","97,244,882.93","126,587,795.11","156,156,810.24","186,461,452.95","215,691,944.09","244,082,704.46","272,482,443.80","301,349,352.06"
+CHCF,Fiscal,Institution Budget ($),"367,105,918.00","367,219,521.00","367,488,144.00","366,193,415.00","367,626,551.00","353,916,227.00","355,048,889.00","372,482,295.69","372,204,636.69","376,572,690.69"
+CHCF,Incarcerated Persons Grievances and Appeals,Appeals Denied,148.00,175.00,73.00,90.00,78.00,51.00,69.00,54.00,69.00,
+CHCF,Incarcerated Persons Grievances and Appeals,Appeals Granted,23.00,30.00,22.00,25.00,33.00,22.00,10.00,12.00,16.00,
+CHCF,Incarcerated Persons Grievances and Appeals,Appeals Received,231.00,278.00,147.00,162.00,155.00,178.00,177.00,174.00,177.00,
+CHCF,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,36.00,52.00,36.00,29.00,30.00,84.00,94.00,97.00,92.00,
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,536.00,493.00,345.00,331.00,303.00,366.00,399.00,312.00,388.00,428.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,140.00,106.00,131.00,139.00,85.00,129.00,113.00,118.00,119.00,170.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,9.00,7.00,4.00,3.00,1.00,0.00,1.00,1.00,6.00,3.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,89.00,81.00,59.00,57.00,53.00,82.00,82.00,89.00,99.00,84.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,"1,013.00",975.00,898.00,805.00,640.00,851.00,829.00,758.00,848.00,
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,90.00,117.00,155.00,63.00,101.00,48.00,148.00,121.00,134.00,220.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,56.00,87.00,124.00,63.00,40.00,48.00,43.00,68.00,61.00,49.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,81.00,84.00,79.00,76.00,56.00,85.00,43.00,49.00,41.00,35.00
+CHCF,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,12.00,0.00,1.00,3.00,1.00,0.00,0.00,0.00,0.00,0.00
+CHCF,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,2.04,0.09,0.04,0.00,0.00,0.45,0.61,0.10,3.45
+CHCF,Overtime Hours,Dental + Mental Health (Overtime),310.00,226.00,265.50,325.75,422.75,262.00,447.00,398.00,508.25,455.30
+CHCF,Overtime Hours,Non-Custody (Overtime),"3,818.25","3,451.03","4,615.50","3,832.25","3,559.25","3,698.75","2,725.25","3,080.75","3,535.00","3,239.80"
+CHCF,Overtime Hours,Total Overtime Hours,"32,298.64","31,118.02","22,940.10","24,010.55","19,606.70","24,302.28","20,183.04","21,362.46","28,969.99","24,728.90"
+CHCF,Positions - Authorized and Vacant,Authorized,"1,559.20","1,559.20","1,559.20","1,559.20","1,559.20","1,559.20","1,559.20","1,559.20","1,559.20","1,567.00"
+CHCF,Positions - Authorized and Vacant,Vacant,156.00,163.20,167.20,176.20,156.20,160.20,162.20,147.20,148.20,154.00
+CHCF,Rehabilitative Programs,Academic Education - Actual Enrollment,316.25,337.40,447.25,438.80,400.25,303.25,267.80,453.25,433.50,267.80
+CHCF,Rehabilitative Programs,Academic Education - Operational Capacity,644.00,639.40,621.00,621.00,608.75,578.00,603.40,668.00,628.25,603.40
+CHCF,Rehabilitative Programs,Career Technical Education - Actual Enrollment,49.50,53.60,53.25,50.40,44.25,46.25,50.00,52.75,51.00,50.00
+CHCF,Rehabilitative Programs,Career Technical Education - Operational Capacity,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00
+CHCF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Number of Associate Degrees,1.00,0.00,0.00,0.00,0.00,1.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Number of GED Certificates,0.00,0.00,2.00,2.00,0.00,1.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Number of High School Diplomas,0.00,2.00,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CHCF,Rehabilitative Programs,Transitions - Actual Enrollment,44.25,45.40,43.75,39.20,19.75,20.25,18.20,16.75,3.25,18.20
+CHCF,Rehabilitative Programs,Transitions - Operational Capacity,54.00,54.00,54.00,54.00,50.00,32.00,30.00,0.00,0.00,30.00
+CHCF,Sick Leave Hours,Custody (Sick Leave),"7,230.50","7,764.42","7,668.25","8,205.50","7,817.25","8,751.25","5,676.50","7,587.50","7,651.00","8,244.80"
+CHCF,Sick Leave Hours,Dental + Mental Health (Sick Leave),623.20,924.50,943.25,964.75,700.75,632.50,670.75,539.50,421.50,587.80
+CHCF,Sick Leave Hours,Non-Custody (Sick Leave),"2,910.38","3,042.00","2,468.00","2,529.58","2,822.75","3,624.00","3,203.00","3,012.86","2,740.25","3,197.60"
+CHCF,Sick Leave Hours,Total Sick Leave Hours,"10,764.08","11,730.92","11,079.50","11,699.83","11,340.75","13,007.75","9,550.25","11,139.86","10,812.75","12,030.10"
+CIM,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,1.00,15.40,158.00,33.20,27.40,39.40,11.80
+CIM,Contraband,Quantity of Methamphetamine Seized (grams),,,,2.40,,,,,,
+CIM,Contraband,Quantity of Suboxone Seized (grams with packaging),,,,,0.80,,,,,
+CIM,Contraband,Quantity of Suboxone Seized (grams),,,,,0.20,,,,0.80,
+CIM,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,,,,5.20
+CIM,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,2.80,,,,,
+CIM,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,4.00,,,,
+CIM,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,,1.60,111.00,,,
+CIM,Contraband,Quantity of Tobacco Seized (grams),,,,66.80,,,,,,
+CIM,Contraband,Suboxone Seizure Events,,,,,4.00,,,,2.00,
+CIM,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,2.00,2.00,,,,4.00
+CIM,Contraband,Tobacco Seizure Events,,,,4.00,,2.00,2.00,,,
+CIM,Fiscal,Actual Expenditures ($),"20,877,687.35","40,793,621.90","59,923,223.83","79,925,025.08","100,815,039.70","120,918,799.44","141,136,376.51","162,508,646.01","182,942,345.62","202,062,410.27"
+CIM,Fiscal,Institution Budget ($),"243,948,348.00","243,948,009.00","244,132,440.00","244,104,958.00","244,872,454.00","230,720,614.00","230,814,817.00","233,078,771.69","232,315,319.69","243,258,318.69"
+CIM,Incarcerated Persons Grievances and Appeals,Appeals Denied,50.00,46.00,21.00,38.00,29.00,19.00,16.00,15.00,10.00,
+CIM,Incarcerated Persons Grievances and Appeals,Appeals Granted,8.00,14.00,9.00,11.00,4.00,7.00,6.00,1.00,5.00,
+CIM,Incarcerated Persons Grievances and Appeals,Appeals Received,69.00,81.00,52.00,73.00,54.00,60.00,65.00,61.00,49.00,
+CIM,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,4.00,18.00,19.00,19.00,14.00,28.00,41.00,41.00,31.00,
+CIM,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,235.00,237.00,131.00,132.00,141.00,143.00,169.00,137.00,134.00,143.00
+CIM,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,20.00,28.00,69.00,68.00,73.00,71.00,59.00,38.00,60.00,44.00
+CIM,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,4.00,5.00,5.00,5.00,3.00,7.00,6.00,6.00,3.00,0.00
+CIM,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+CIM,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,141.00,140.00,174.00,134.00,142.00,145.00,139.00,139.00,160.00,69.00
+CIM,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,83.00
+CIM,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,250.00","2,233.00","2,283.00","2,218.00","2,183.00","2,205.00","2,238.00","2,310.00","2,347.00","2,312.00"
+CIM,Number of Deaths,Expected,2.00,,,,1.00,1.00,2.00,,,1.00
+CIM,Number of Deaths,Missing,,,,,1.00,,,,,1.00
+CIM,Overtime Hours,Custody (Overtime),"16,265.29","21,289.70","26,825.89","18,060.28","16,515.04","22,331.95","18,363.60","22,960.06","26,789.95","15,916.10"
+CIM,Overtime Hours,Dental + Mental Health (Overtime),662.00,576.00,618.00,299.00,171.50,138.00,163.50,92.00,49.50,45.00
+CIM,Overtime Hours,Non-Custody (Overtime),"3,347.00","3,815.25","4,365.25","3,464.25","2,986.25","3,180.25","2,717.00","3,672.95","3,860.25","2,359.80"
+CIM,Overtime Hours,Total Overtime Hours,"20,274.29","25,680.95","31,809.14","21,823.53","19,672.79","25,650.20","21,244.10","26,725.01","30,699.70","18,320.80"
+CIM,Positions - Authorized and Vacant,Authorized,"1,100.20","1,100.20","1,100.20","1,100.20","1,100.20","1,100.20","1,100.20","1,100.20","1,100.20","1,100.20"
+CIM,Positions - Authorized and Vacant,Vacant,91.20,94.20,93.60,118.20,126.20,118.20,122.20,96.20,110.20,113.20
+CIM,Rehabilitative Programs,Academic Education - Actual Enrollment,769.25,808.00,905.00,976.60,"1,158.25","1,138.25",961.20,626.50,765.75,961.20
+CIM,Rehabilitative Programs,Academic Education - Operational Capacity,858.00,890.40,934.50,942.00,942.00,942.00,941.40,942.00,942.25,941.40
+CIM,Rehabilitative Programs,Career Technical Education - Actual Enrollment,136.50,131.60,131.00,131.00,132.25,131.75,138.80,140.50,139.50,133.80
+CIM,Rehabilitative Programs,Career Technical Education - Operational Capacity,155.00,154.60,154.00,154.00,154.00,154.00,159.00,159.00,154.00,154.00
+CIM,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIM,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIM,Rehabilitative Programs,Number of Associate Degrees,0.00,2.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIM,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIM,Rehabilitative Programs,Number of GED Certificates,2.00,1.00,10.00,2.00,3.00,0.00,4.00,2.00,1.00,4.00
+CIM,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.00,0.00
+CIW,Contraband,Quantity of Cellular Telephones Seized,,,,,20.00,10.00,4.00,14.00,8.00,
+CIW,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,,2.00,,,12.80,,
+CIW,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,584.00,134.00,,,80.80,,
+CIW,Contraband,Quantity of Methamphetamine Seized (grams),,,,25.00,2.00,145.40,32.00,18.80,,3.00
+CIW,Contraband,Quantity of Suboxone Seized (number of strips),,,,6.00,12.00,,,2.00,,2.00
+CIW,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,,,1.20,
+CIW,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,,,,,2.00
+CIW,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,7.20,,,89.20,,
+CIW,Contraband,Quantity of Tobacco Seized (number of strips),,,,,,,,2.00,,
+CIW,Contraband,Suboxone Seizure Events,,,,2.00,2.00,,,2.00,,2.00
+CIW,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,,,,,2.00,2.00
+CIW,Contraband,Tobacco Seizure Events,,,,,2.00,,,10.00,,
+CIW,Fiscal,Actual Expenditures ($),"12,472,785.40","26,170,471.86","39,205,840.58","52,610,706.11","66,440,185.99","80,287,973.33","93,360,874.35","106,733,376.11","120,622,130.84","134,371,450.41"
+CIW,Fiscal,Institution Budget ($),"169,573,472.00","169,577,189.00","169,834,491.00","169,502,897.00","170,122,101.00","157,633,009.00","158,152,234.00","158,711,829.32","159,126,190.32","166,752,043.32"
+CIW,Incarcerated Persons Grievances and Appeals,Appeals Denied,23.00,39.00,11.00,11.00,16.00,24.00,25.00,17.00,14.00,
+CIW,Incarcerated Persons Grievances and Appeals,Appeals Granted,7.00,8.00,2.00,3.00,7.00,3.00,7.00,8.00,5.00,
+CIW,Incarcerated Persons Grievances and Appeals,Appeals Received,37.00,58.00,25.00,22.00,33.00,68.00,64.00,57.00,51.00,
+CIW,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,3.00,7.00,10.00,5.00,6.00,28.00,28.00,22.00,32.00,
+CIW,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,166.00,141.00,103.00,134.00,121.00,137.00,241.00,208.00,175.00,233.00
+CIW,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,123.00,93.00,92.00,155.00,95.00,91.00,77.00,49.00,37.00,79.00
+CIW,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,1.00,4.00,2.00,5.00,0.00,1.00,2.00,2.00,2.00,0.00
+CIW,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,2.00,,,,,,,,
+CIW,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,10.00,"1,149.00"
+CIW,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,20.00
+CIW,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"1,258.00","1,286.00","1,249.00","1,208.00","1,204.00","1,270.00","1,281.00","1,241.00","1,228.00","1,217.00"
+CIW,Number of Deaths,Expected,,1.00,,1.00,,,,,4.00,
+CIW,Number of Deaths,Unexpected,,,,,,1.00,,,1.00,
+CIW,Overtime Hours,Custody (Overtime),"8,647.11","10,062.67","13,988.26","13,060.39","7,450.45","10,480.65","10,134.61","12,552.28","13,313.67","10,622.40"
+CIW,Overtime Hours,Dental + Mental Health (Overtime),164.00,186.50,324.00,220.25,272.75,279.50,262.00,321.75,324.50,222.30
+CIW,Overtime Hours,Non-Custody (Overtime),"1,822.13","5,898.25","2,354.25","2,076.50","1,921.25","2,107.50","3,828.50","2,062.50","2,508.75","1,459.00"
+CIW,Overtime Hours,Total Overtime Hours,"10,633.24","16,147.42","16,666.51","15,357.14","9,644.45","12,867.65","14,225.11","14,936.53","16,146.92","12,303.70"
+CIW,Positions - Authorized and Vacant,Authorized,745.20,745.20,745.20,745.20,745.20,745.20,745.20,745.20,745.20,745.20
+CIW,Positions - Authorized and Vacant,Vacant,73.20,74.20,82.20,86.20,88.20,96.20,97.20,93.20,95.20,99.20
+CIW,Rehabilitative Programs,Academic Education - Actual Enrollment,442.50,544.80,569.25,589.60,623.50,642.50,699.80,898.50,816.25,699.80
+CIW,Rehabilitative Programs,Academic Education - Operational Capacity,881.25,917.60,897.00,870.00,910.50,924.00,924.00,883.50,870.00,924.00
+CIW,Rehabilitative Programs,Career Technical Education - Actual Enrollment,132.75,126.60,129.00,136.00,141.25,151.50,157.00,161.25,158.75,149.00
+CIW,Rehabilitative Programs,Career Technical Education - Operational Capacity,162.00,162.00,182.25,189.00,189.00,189.00,189.00,189.00,202.50,189.00
+CIW,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIW,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIW,Rehabilitative Programs,Number of Associate Degrees,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIW,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CIW,Rehabilitative Programs,Number of GED Certificates,1.00,2.00,5.00,2.00,3.00,5.00,2.00,3.00,5.00,2.00
+CIW,Rehabilitative Programs,Number of High School Diplomas,0.00,1.00,1.00,0.00,0.00,0.00,1.00,0.00,1.00,1.00
+CIW,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMC,Contraband,Marijuana Seizure Events,,,,,2.00,,,,,
+CMC,Contraband,Methamphetamine Seizure Events,,,,2.00,2.00,2.00,,,,
+CMC,Contraband,Quantity of Cellular Telephones Seized,,,,8.00,2.00,2.00,,,,
+CMC,Contraband,Quantity of Controlled Medication Seized (grams),,,,,6.00,,,,,
+CMC,Contraband,Quantity of Controlled Medication Seized (pills),,,,,,6.00,,,,
+CMC,Contraband,Quantity of Heroin Seized (grams),,,,,,0.16,,,,
+CMC,Contraband,Quantity of Honey Oil Seized (grams),,,,,,17.40,,,,
+CMC,Contraband,Quantity of Marijuana Seized (grams),,,,,2.00,,,,,
+CMC,Contraband,Quantity of Methamphetamine Seized (grams),,,,2.00,15.20,6.76,,,,
+CMC,Contraband,Quantity of Suboxone Seized (grams),,,,,,0.08,,,,
+CMC,Contraband,Quantity of Suboxone Seized (number of strips),,,,4.00,4.00,6.00,2.00,,,
+CMC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,0.22,,,,
+CMC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,4.00,2.00,,,,,
+CMC,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,6.00,,,,,,
+CMC,Contraband,Suboxone Seizure Events,,,,4.00,2.00,4.00,2.00,,,
+CMC,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,2.00,2.00,,,,
+CMC,Contraband,Tobacco Seizure Events,,,,2.00,,,,,,
+CMC,Fiscal,Actual Expenditures ($),"16,313,294.69","35,150,160.89","51,932,746.68","70,067,934.36","89,265,836.91","106,601,789.15","124,844,967.02","142,820,088.68","160,068,396.80","176,184,404.19"
+CMC,Fiscal,Institution Budget ($),"222,624,626.00","222,607,223.00","222,799,308.00","224,850,995.00","225,700,355.00","213,827,868.00","213,964,576.00","214,790,634.00","215,207,161.00","214,867,933.00"
+CMC,Incarcerated Persons Grievances and Appeals,Appeals Denied,46.00,36.00,47.00,47.00,33.00,30.00,16.00,32.00,29.00,
+CMC,Incarcerated Persons Grievances and Appeals,Appeals Granted,9.00,8.00,6.00,10.00,7.00,7.00,6.00,12.00,11.00,
+CMC,Incarcerated Persons Grievances and Appeals,Appeals Received,69.00,63.00,88.00,116.00,72.00,71.00,68.00,91.00,95.00,
+CMC,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,8.00,12.00,19.00,30.00,24.00,28.00,38.00,44.00,49.00,
+CMC,Number and Housing Level of Incarcerated Persons,Level II,246.00,246.00,248.00,250.00,248.00,249.00,247.00,250.00,248.00,248.00
+CMC,Number and Housing Level of Incarcerated Persons,Level III,"1,519.00","1,487.00","1,439.00","1,565.00","1,640.00","1,619.00","1,590.00","1,604.00","1,584.00","1,623.00"
+CMC,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMC,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+CMC,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,182.00,176.00,192.00,180.00,183.00,185.00,192.00,186.00,198.00,52.00
+CMC,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,140.00
+CMC,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,120.00","2,087.00","2,044.00","2,163.00","2,236.00","2,227.00","2,200.00","2,205.00","2,185.00","2,225.00"
+CMC,Number of Deaths,Expected,1.00,,,1.00,,1.00,,,,1.00
+CMC,Number of Deaths,Missing,1.00,,1.00,,,,,,,
+CMC,Number of Deaths,Suicide,1.00,,,,,,,,,
+CMC,Number of Deaths,Unexpected,,,,,1.00,,,,,
+CMC,Overtime Hours,Custody (Overtime),"14,313.12","13,525.59","16,502.21","9,425.85","10,038.12","14,720.01","12,426.11","8,731.96","9,709.43","10,024.40"
+CMC,Overtime Hours,Dental + Mental Health (Overtime),84.00,40.00,148.00,84.00,238.00,131.00,164.00,184.00,127.00,90.00
+CMC,Overtime Hours,Non-Custody (Overtime),959.75,"1,175.50","1,372.63","1,000.25",726.50,748.25,"1,108.75",769.75,848.25,"1,012.50"
+CMC,Overtime Hours,Total Overtime Hours,"15,356.87","14,741.09","18,022.84","10,510.10","11,002.62","15,599.26","13,698.86","9,685.71","10,684.68","11,132.90"
+CMC,Positions - Authorized and Vacant,Authorized,956.00,956.00,956.00,956.00,956.00,956.00,956.00,956.00,956.00,952.00
+CMC,Positions - Authorized and Vacant,Vacant,87.20,90.20,82.80,79.80,79.80,89.80,96.80,92.80,99.00,84.00
+CMC,Rehabilitative Programs,Academic Education - Actual Enrollment,831.00,924.60,"1,117.75","1,011.40","1,157.75","1,104.00",922.80,"1,008.25",942.75,922.80
+CMC,Rehabilitative Programs,Academic Education - Operational Capacity,"1,557.00","1,516.80","1,458.00","1,404.00","1,503.25","1,477.00","1,498.00","1,471.00","1,390.50","1,498.00"
+CMC,Rehabilitative Programs,Career Technical Education - Actual Enrollment,139.50,138.00,176.25,189.80,192.00,192.00,192.00,191.75,188.50,192.00
+CMC,Rehabilitative Programs,Career Technical Education - Operational Capacity,143.00,143.00,183.50,197.00,197.00,196.25,196.80,197.00,197.00,196.80
+CMC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,95.00,164.80,179.75,162.20,124.50,66.25,50.60,45.50,46.50,56.00
+CMF,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,243.00,320.20,355.50,318.60,273.00,280.50,101.60,89.50,82.00,101.60
+CMF,Contraband,Cellular Telephone Seizure Events,,,,18.00,4.00,2.00,4.00,18.00,10.00,12.00
+CMF,Contraband,Controlled Medication Seizure Events,,,,,,,,,,
+CMF,Contraband,Heroin Seizure Events,,,,2.00,,2.00,,,,
+CMF,Contraband,Honey Oil Seizure Events,,,,2.00,,,,,,
+CMF,Contraband,Marijuana Seizure Events,,,,6.00,2.00,,,8.00,6.00,2.00
+CMF,Contraband,Methamphetamine Seizure Events,,,,4.00,10.00,8.00,,4.00,6.00,6.00
+CMF,Contraband,Quantity of Cellular Telephones Seized,,,,18.00,4.00,2.00,6.00,20.00,10.00,14.00
+CMF,Contraband,Quantity of Controlled Medication Seized (grams),,,,,,,,,,
+CMF,Contraband,Quantity of Controlled Medication Seized (pills),,,,,,,,,,
+CMF,Contraband,Quantity of Heroin Seized (grams with packaging),,,,,,9.38,,,,
+CMF,Contraband,Quantity of Heroin Seized (grams),,,,0.66,,,,,,
+CMF,Contraband,Quantity of Honey Oil Seized (grams with packaging),,,,1.72,,,,,,
+CMF,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,10.26,92.00,,,109.04,8.66,146.00
+CMF,Contraband,Quantity of Marijuana Seized (grams),,,,26.00,,,,,6.48,
+CMF,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,48.44,"1,482.52",205.98,,488.00,128.32,2.22
+CMF,Contraband,Quantity of Methamphetamine Seized (grams),,,,134.00,0.02,0.18,,24.00,,20.00
+CMF,Contraband,Quantity of Methamphetamine Seized (number of strips),,,,,,,,,,
+CMF,Contraband,Quantity of Suboxone Seized (grams),,,,0.86,0.56,2.06,1.76,2.50,2.66,
+CMF,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,,2.00,,16.00
+CMF,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,25.62,,130.00,50.72
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,24.00,18.00,22.00,4.00,4.00,6.00,8.00,4.00,5.00,5.00
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,51.00,49.00,20.00,33.00,17.00,36.00,26.00,32.00,31.00,45.00
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,720.00,653.00,450.00,455.00,382.00,442.00,475.00,521.00,418.00,
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,118.00,122.00,111.00,47.00,88.00,62.00,97.00,123.00,75.00,133.00
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,82.00,64.00,48.00,47.00,48.00,62.00,51.00,51.00,55.00,76.00
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,74.00,62.00,34.00,33.00,26.00,29.00,33.00,41.00,29.00,29.00
+CMF,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Incarcerated Persons Grievances and Appeals,Grievances Pending Legal Matter,,,1.00,,,,,,,2.00
+CMF,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+CMF,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Number and Housing Level of Incarcerated Persons,Level I,7.00,6.00,7.00,7.00,6.00,4.00,4.00,4.00,3.00,5.00
+CMF,Number and Housing Level of Incarcerated Persons,Level II,"1,026.00","1,044.00","1,060.00","1,043.00","1,022.00","1,013.00","1,017.00","1,040.00","1,048.00","1,070.00"
+CMF,Number and Housing Level of Incarcerated Persons,Level III,575.00,548.00,515.00,504.00,523.00,513.00,508.00,510.00,516.00,520.00
+CMF,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+CMF,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,434.00,417.00,408.00,381.00,363.00,343.00,339.00,335.00,340.00,317.00
+CMF,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,54.00
+CMF,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,044.00","2,017.00","1,992.00","1,937.00","1,916.00","1,875.00","1,870.00","1,891.00","1,909.00","1,966.00"
+CMF,Number of Deaths,Expected,8.00,,,6.00,5.00,10.00,7.00,,,8.00
+CMF,Number of Deaths,Homicide,,,,,,,,,,
+CMF,Number of Deaths,Missing,,,5.00,2.00,2.00,1.00,,,,
+CMF,Number of Deaths,Unexpected,1.00,,,1.00,,,2.00,,,
+CMF,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Rehabilitative Programs,Number of GED Certificates,0.00,0.00,1.00,0.00,1.00,3.00,2.00,0.00,2.00,2.00
+CMF,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,2.00,0.00,0.00,0.00,1.00,1.00,0.00,1.00
+CMF,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CMF,Rehabilitative Programs,Transitions - Actual Enrollment,0.00,36.00,33.75,31.00,28.50,34.00,33.00,29.50,14.00,33.00
+CMF,Rehabilitative Programs,Transitions - Operational Capacity,0.00,36.00,36.00,36.00,36.00,36.00,36.00,36.00,36.00,36.00
+CMF,Sick Leave Hours,Custody (Sick Leave),"5,735.25","6,067.00","5,472.75","5,798.50","5,216.50","6,862.25","4,946.75","5,363.00","5,544.50","5,405.80"
+CMF,Sick Leave Hours,Dental + Mental Health (Sick Leave),352.00,438.00,754.75,630.50,629.50,911.75,822.75,741.75,566.00,613.80
+CMF,Sick Leave Hours,Non-Custody (Sick Leave),912.00,"1,023.00",808.25,"1,057.25",840.75,"1,256.15","1,185.50","1,765.50","1,394.50","1,334.70"
+CMF,Sick Leave Hours,Total Sick Leave Hours,"6,999.25","7,528.00","7,035.75","7,486.25","6,686.75","9,030.15","6,955.00","7,870.25","7,505.00","7,354.20"
+CMF,Use of Force (UOF),Total UOF Incidents,29.00,36.00,27.00,37.00,23.00,26.00,23.00,26.00,24.00,34.00
+COR,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,119.50,100.60,92.00,87.00,76.25,89.25,83.80,135.25,142.75,152.25
+COR,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,161.00,128.40,96.75,96.75,85.50,92.25,97.20,150.75,150.25,97.20
+COR,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,107.25,140.00,158.00,154.60,140.50,147.25,145.60,158.75,129.00,116.75
+COR,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,161.50,188.40,178.75,202.80,186.25,170.00,166.00,175.50,149.75,166.00
+COR,Contraband,Cellular Telephone Seizure Events,,,,18.00,4.00,4.00,10.00,16.00,2.00,4.00
+COR,Contraband,Cocaine Seizure Events,,,,,,,,2.00,,
+COR,Contraband,Heroin Seizure Events,,,,2.00,,,,,,
+COR,Contraband,Honey Oil Seizure Events,,,,2.00,,2.00,12.00,,2.00,
+COR,Contraband,Marijuana Seizure Events,,,,2.00,,,,2.00,4.00,10.00
+COR,Contraband,Methamphetamine Seizure Events,,,,16.00,28.00,28.00,10.00,26.00,8.00,8.00
+COR,Contraband,Quantity of Cellular Telephones Seized,,,,24.00,4.00,4.00,10.00,16.00,2.00,4.00
+COR,Contraband,Quantity of Cocaine Seized (grams with packaging),,,,,,,,3.00,,
+COR,Contraband,Quantity of Heroin Seized (grams with packaging),,,,7.60,,,,,,
+COR,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,4.00,,10.00,12.00,4.00,4.00
+COR,Contraband,Tobacco Seizure Events,,,,,,2.00,4.00,2.00,,2.00
+COR,Fiscal,Actual Expenditures ($),"26,119,595.22","49,760,888.60","74,040,237.51","97,818,913.71","124,387,202.21","149,275,876.34","173,203,847.89","195,564,558.25","220,145,933.35","245,134,991.48"
+COR,Fiscal,Institution Budget ($),"302,822,592.00","302,847,851.00","303,389,711.00","303,993,058.00","304,929,052.00","285,279,697.00","285,486,734.00","286,536,027.69","287,164,973.69","294,080,315.69"
+COR,Incarcerated Persons Grievances and Appeals,Appeals Denied,114.00,129.00,117.00,60.00,57.00,47.00,47.00,31.00,32.00,
+COR,Incarcerated Persons Grievances and Appeals,Appeals Granted,19.00,22.00,35.00,14.00,10.00,13.00,20.00,11.00,9.00,
+COR,Incarcerated Persons Grievances and Appeals,Appeals Received,185.00,230.00,207.00,124.00,121.00,133.00,194.00,126.00,127.00,
+COR,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,37.00,53.00,37.00,39.00,39.00,57.00,118.00,74.00,81.00,
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,376.00,395.00,301.00,284.00,302.00,326.00,424.00,313.00,281.00,341.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,104.00,86.00,98.00,68.00,85.00,87.00,61.00,55.00,35.00,56.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,7.00,15.00,10.00,10.00,5.00,3.00,4.00,2.00,8.00,6.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,,,,,,2.00,,,
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,60.00,95.00,94.00,80.00,78.00,85.00,99.00,100.00,86.00,108.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,778.00,840.00,749.00,686.00,681.00,723.00,839.00,687.00,594.00,
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,116.00,127.00,114.00,52.00,111.00,64.00,135.00,121.00,107.00,112.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,66.00,59.00,91.00,52.00,47.00,64.00,78.00,55.00,52.00,69.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,49.00,63.00,41.00,32.00,51.00,49.00,36.00,41.00,25.00,50.00
+COR,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,2.00,0.00,0.00,0.00,0.00,1.00
+COR,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,3.38,0.00,0.00,0.00,0.00,0.00,3.45,0.00,1.23,2.45
+COR,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,1.00,0.00,2.00,
+COR,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Number and Housing Level of Incarcerated Persons,Level I,5.00,6.00,5.00,4.00,3.00,3.00,3.00,4.00,4.00,4.00
+COR,Number and Housing Level of Incarcerated Persons,Level II,"1,620.00","1,587.00","1,567.00","1,688.00","1,828.00","1,809.00","1,796.00","1,753.00","1,727.00","1,714.00"
+COR,Positions - Authorized and Vacant,Authorized,"1,304.10","1,304.10","1,304.10","1,304.10","1,304.10","1,304.10","1,304.10","1,304.10","1,304.10","1,304.60"
+COR,Positions - Authorized and Vacant,Vacant,62.70,91.70,85.70,107.10,110.10,124.10,111.10,116.10,129.10,138.60
+COR,Rehabilitative Programs,Academic Education - Actual Enrollment,878.00,938.80,"1,078.75","1,004.80","1,004.75",839.50,937.80,"1,161.50","1,108.00",937.80
+COR,Rehabilitative Programs,Academic Education - Operational Capacity,"1,590.00","1,590.00","1,590.00","1,590.00","1,594.50","1,590.00","1,580.80","1,580.00","1,595.75","1,580.80"
+COR,Rehabilitative Programs,Career Technical Education - Actual Enrollment,218.50,206.40,207.25,210.80,215.00,190.00,201.60,230.75,231.00,201.60
+COR,Rehabilitative Programs,Career Technical Education - Operational Capacity,243.00,243.00,243.00,243.00,243.00,216.00,232.20,243.00,256.50,232.20
+COR,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Rehabilitative Programs,Number of Associate Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Rehabilitative Programs,Number of GED Certificates,3.00,5.00,2.00,3.00,0.00,3.00,4.00,0.00,4.00,4.00
+COR,Rehabilitative Programs,Number of High School Diplomas,1.00,1.00,0.00,1.00,0.00,2.00,0.00,2.00,1.00,0.00
+COR,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+COR,Rehabilitative Programs,Transitions - Actual Enrollment,76.25,71.20,63.50,61.60,75.00,76.50,94.80,98.50,88.75,94.80
+COR,Rehabilitative Programs,Transitions - Operational Capacity,90.00,90.00,90.00,90.00,90.00,90.00,102.00,108.00,108.00,102.00
+COR,Sick Leave Hours,Custody (Sick Leave),"6,461.88","7,650.25","7,626.83","7,427.49","7,852.00","10,193.25","4,681.65","7,732.25","7,495.25","9,455.50"
+COR,Sick Leave Hours,Dental + Mental Health (Sick Leave),541.25,460.00,675.00,464.25,433.00,555.75,434.75,568.70,467.00,627.30
+COR,Sick Leave Hours,Non-Custody (Sick Leave),"1,842.50","2,608.00","1,956.67","1,965.25","1,854.00","1,950.00","1,725.00","1,969.35","1,944.75","1,534.30"
+COR,Sick Leave Hours,Total Sick Leave Hours,"8,845.63","10,718.25","10,258.50","9,856.99","10,139.00","12,699.00","6,841.40","10,270.30","9,907.00","11,617.00"
+COR,Use of Force (UOF),Total UOF Incidents,33.00,50.00,37.00,42.00,35.00,33.00,34.00,39.00,55.00,94.00
+CRC,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,322.25,311.20,305.00,311.20,297.00,260.75,240.20,281.75,358.75,416.25
+CRC,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,340.00,344.20,349.00,349.00,384.00,354.00,346.80,375.00,429.00,346.80
+CRC,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,318.50,275.80,325.25,305.40,301.00,275.00,281.00,246.25,270.00,260.50
+CRC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,,12.00,,
+CRC,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,,,11.00,,,1.88
+CRC,Contraband,Suboxone Seizure Events,,,,,,,,2.00,2.00,
+CRC,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,18.00,20.00,12.00,4.00,2.00,20.00,8.00
+CRC,Contraband,Tobacco Seizure Events,,,,,,,2.00,,,2.00
+CRC,Fiscal,Actual Expenditures ($),"15,936,087.42","32,940,868.87","49,644,591.50","66,377,522.07","84,556,193.55","102,055,569.55","119,154,029.85","136,275,876.60","153,290,976.10","171,111,124.51"
+CRC,Fiscal,Institution Budget ($),"215,958,518.00","215,981,898.00","216,147,760.00","216,132,094.00","217,131,738.00","207,686,771.00","207,750,944.00","208,816,345.69","209,357,016.69","207,936,475.69"
+CRC,Incarcerated Persons Grievances and Appeals,Appeals Denied,20.00,28.00,21.00,30.00,24.00,23.00,12.00,8.00,19.00,
+CRC,Incarcerated Persons Grievances and Appeals,Appeals Granted,7.00,1.00,5.00,5.00,6.00,5.00,2.00,3.00,1.00,
+CRC,Incarcerated Persons Grievances and Appeals,Appeals Received,35.00,38.00,50.00,46.00,34.00,44.00,31.00,32.00,40.00,
+CRC,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,3.00,9.00,21.00,7.00,4.00,13.00,15.00,18.00,19.00,
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,127.00,113.00,152.00,162.00,124.00,119.00,159.00,131.00,131.00,150.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,34.00,38.00,33.00,48.00,26.00,34.00,7.00,9.00,8.00,10.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,4.00,3.00,0.00,3.00,7.00,10.00,3.00,3.00,1.00,0.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,16.00,4.00,10.00,17.00,7.00,8.00,9.00,16.00,5.00,13.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,249.00,200.00,242.00,314.00,232.00,213.00,224.00,207.00,186.00,
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,17.00,12.00,21.00,30.00,29.00,14.00,16.00,12.00,6.00,25.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,28.00,21.00,15.00,30.00,20.00,14.00,19.00,24.00,25.00,21.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,22.00,9.00,11.00,23.00,19.00,15.00,11.00,12.00,10.00,8.00
+CRC,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CRC,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.00,0.00,0.00,0.72,0.57,0.82,1.78,0.00,0.00
+CRC,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,1.00,0.00,3.00,1.00,0.00,
+CRC,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CRC,Positions - Authorized and Vacant,Authorized,941.40,941.40,941.40,941.40,941.40,941.40,941.40,941.40,941.40,941.40
+CRC,Positions - Authorized and Vacant,Vacant,69.40,76.40,74.40,75.40,70.40,75.40,81.40,78.40,86.40,96.40
+CRC,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,237.00","1,683.80","2,635.50","2,658.00","2,550.25","2,178.25","1,622.40","2,357.00","2,731.25","1,622.40"
+CRC,Rehabilitative Programs,Academic Education - Operational Capacity,"1,386.00","1,382.00","1,399.50","1,443.80","1,440.00","1,440.50","1,441.00","1,441.00","1,441.00","1,441.00"
+CRC,Rehabilitative Programs,Career Technical Education - Actual Enrollment,242.00,238.60,235.50,239.40,240.00,241.00,239.40,240.75,240.25,239.40
+CRC,Rehabilitative Programs,Career Technical Education - Operational Capacity,243.00,243.00,243.00,210.60,216.00,243.00,243.00,243.00,243.00,243.00
+CRC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CRC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CRC,Rehabilitative Programs,Number of Associate Degrees,19.00,1.00,0.00,0.00,0.00,18.00,0.00,18.00,0.00,0.00
+CRC,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,4.00,0.00,0.00
+CRC,Rehabilitative Programs,Number of GED Certificates,6.00,3.00,12.00,7.00,4.00,5.00,11.00,8.00,11.00,11.00
+CRC,Rehabilitative Programs,Number of High School Diplomas,0.00,2.00,3.00,3.00,0.00,0.00,0.00,0.00,0.00,0.00
+CRC,Rehabilitative Programs,Number of Masters Degrees,2.00,0.00,0.00,0.00,0.00,2.00,0.00,0.00,0.00,0.00
+CRC,Rehabilitative Programs,Transitions - Actual Enrollment,155.00,159.60,161.50,160.60,158.75,158.75,159.00,156.50,155.25,159.00
+CRC,Rehabilitative Programs,Transitions - Operational Capacity,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00
+CRC,Sick Leave Hours,Custody (Sick Leave),"4,973.75","4,321.25","5,013.75","4,219.25","4,467.75","5,192.25","4,221.25","3,965.25","3,571.00","4,371.80"
+CRC,Sick Leave Hours,Dental + Mental Health (Sick Leave),334.75,420.00,245.75,266.00,287.75,489.75,484.00,441.50,396.50,308.00
+CRC,Sick Leave Hours,Non-Custody (Sick Leave),"1,742.50","2,093.75","1,798.25","1,682.43","1,697.25","1,961.50","2,106.75","1,806.25","1,791.25","1,741.80"
+CRC,Sick Leave Hours,Total Sick Leave Hours,"7,051.00","6,835.00","7,057.75","6,167.68","6,452.75","7,643.50","6,812.00","6,213.00","5,758.75","6,421.50"
+CRC,Use of Force (UOF),Total UOF Incidents,11.00,7.00,24.00,15.00,9.00,7.00,7.00,9.00,15.00,15.00
+CTF,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,456.00,407.60,355.00,343.80,370.25,326.00,349.60,387.50,461.25,476.00
+CTF,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,543.00,504.00,504.00,504.00,504.00,504.00,506.40,540.00,582.00,506.40
+CTF,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,114.50,158.00,164.75,218.40,204.25,161.00,163.20,142.00,148.75,140.75
+CTF,Contraband,Quantity of Methamphetamine Seized (grams),,,,,314.40,,192.00,,,
+CTF,Contraband,Quantity of Suboxone Seized (grams with packaging),,,,,,,0.40,,,
+CTF,Contraband,Quantity of Suboxone Seized (number of strips),,,,,4.00,,,,,4.00
+CTF,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,271.98,4.86,22.16,,,,0.36
+CTF,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,0.26,111.96,0.12,,,,2.84
+CTF,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,12.00,,,24.00
+CTF,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,378.00,,157.76,,,
+CTF,Contraband,Suboxone Seizure Events,,,,,2.00,,2.00,,,2.00
+CTF,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,10.00,10.00,4.00,4.00,,,16.00
+CTF,Contraband,Tobacco Seizure Events,,,,,4.00,,4.00,,,
+CTF,Fiscal,Actual Expenditures ($),"16,590,300.56","33,565,457.75","51,338,734.54","68,394,825.04","86,283,150.47","104,492,254.19","121,897,960.70","138,965,915.57","157,172,206.15","175,041,090.71"
+CTF,Fiscal,Institution Budget ($),"214,208,789.00","214,313,174.00","214,658,201.00","215,119,038.00","216,725,008.00","205,168,249.00","205,396,124.00","207,089,499.38","207,694,108.38","211,315,203.38"
+CTF,Incarcerated Persons Grievances and Appeals,Appeals Denied,51.00,44.00,29.00,31.00,36.00,44.00,40.00,26.00,25.00,
+CTF,Incarcerated Persons Grievances and Appeals,Appeals Granted,12.00,5.00,7.00,3.00,8.00,4.00,7.00,10.00,7.00,
+CTF,Incarcerated Persons Grievances and Appeals,Appeals Received,76.00,69.00,72.00,50.00,60.00,72.00,86.00,63.00,66.00,
+CTF,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,10.00,15.00,33.00,14.00,14.00,20.00,36.00,25.00,34.00,
+CTF,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,156.00,121.00,123.00,128.00,136.00,135.00,150.00,119.00,105.00,117.00
+CTF,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,27.00,28.00,34.00,29.00,14.00,24.00,25.00,15.00,9.00,12.00
+CTF,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,2.00,2.00,5.00,5.00,1.00,3.00,1.00,4.00,0.00,3.00
+CTF,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,16.00,20.00,20.00,27.00,27.00,12.00,18.00,15.00,12.00,17.00
+CTF,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,263.00,233.00,244.00,248.00,233.00,235.00,278.00,232.00,210.00,
+CTF,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,14.00,12.00,16.00,27.00,15.00,35.00,27.00,30.00,40.00,44.00
+CTF,Number of Deaths,Expected,1.00,,,,,,,,2.00,1.00
+CTF,Number of Deaths,Suicide,,,,1.00,,,,,1.00,
+CTF,Number of Deaths,Unexpected,,,,,,,,,1.00,
+CTF,Overtime Hours,Custody (Overtime),"14,425.71","12,003.98","14,607.94","11,803.02","23,385.47","13,131.77","11,762.47","7,954.21","11,490.01","9,642.90"
+CTF,Overtime Hours,Dental + Mental Health (Overtime),2.00,7.25,1.25,8.25,11.50,16.00,15.00,14.75,1.00,3.50
+CTF,Overtime Hours,Non-Custody (Overtime),"1,572.50","2,509.75","1,638.25","1,375.50","1,277.20","2,200.75","2,352.15","1,268.25","2,113.25","1,453.00"
+CTF,Overtime Hours,Total Overtime Hours,"16,000.21","14,520.98","16,247.44","13,186.77","24,674.17","15,348.52","14,129.62","9,237.21","13,604.26","11,099.40"
+CTF,Positions - Authorized and Vacant,Authorized,"1,029.20","1,029.20","1,029.20","1,029.20","1,029.20","1,029.20","1,029.20","1,029.20","1,029.20","1,029.00"
+CTF,Positions - Authorized and Vacant,Vacant,107.20,106.20,100.20,106.20,113.20,109.20,100.20,99.20,100.20,96.00
+CTF,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,085.00","1,339.60","1,612.50","1,593.80","1,644.50","1,551.25","1,405.40","1,682.25","1,749.75","1,405.40"
+CTF,Rehabilitative Programs,Academic Education - Operational Capacity,"1,179.00","1,177.20","1,179.00","1,234.80","1,500.00","1,506.00","1,524.00","1,524.00","1,510.50","1,524.00"
+CTF,Rehabilitative Programs,Career Technical Education - Actual Enrollment,287.25,282.80,277.00,297.80,301.00,298.75,295.00,244.25,248.00,295.00
+CTF,Rehabilitative Programs,Career Technical Education - Operational Capacity,297.00,297.00,297.00,305.00,305.00,305.00,305.00,251.00,251.00,305.00
+CTF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CTF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CTF,Rehabilitative Programs,Number of Associate Degrees,1.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CTF,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CTF,Rehabilitative Programs,Number of GED Certificates,5.00,3.00,7.00,1.00,3.00,2.00,5.00,0.00,0.00,5.00
+CTF,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,0.00,0.00,0.00,2.00,1.00,1.00,1.00,1.00
+CTF,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CTF,Rehabilitative Programs,Transitions - Actual Enrollment,150.50,137.80,146.75,149.80,153.25,151.75,148.80,143.75,154.25,148.80
+CTF,Rehabilitative Programs,Transitions - Operational Capacity,171.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00
+CVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,4.00,1.00,,,,,,1.00,,
+CVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,0.00,0.00,,,,,,0.00,,
+CVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+CVSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+CVSP,Overtime Hours,Custody (Overtime),"2,565.92",148.00,,0.00,,,,,,
+CVSP,Overtime Hours,Dental + Mental Health (Overtime),0.00,0.00,,0.00,,,,,,
+CVSP,Overtime Hours,Non-Custody (Overtime),412.00,240.50,,207.50,,,,,,
+CVSP,Overtime Hours,Total Overtime Hours,"2,977.92",388.50,,207.50,,,,,,
+CVSP,Positions - Authorized and Vacant,Authorized,9.90,9.90,9.90,9.90,9.90,9.90,9.90,9.90,9.90,0.00
+CVSP,Positions - Authorized and Vacant,Vacant,-295.90,-108.10,-49.10,-41.10,8.90,9.90,9.90,9.90,9.90,0.00
+DVI,Fiscal,Actual Expenditures ($),"-102,624.25","119,716.58","339,002.57","550,270.69","787,149.70","1,137,700.91","1,375,462.04","1,582,447.26","1,818,700.87","2,061,185.99"
+DVI,Fiscal,Institution Budget ($),"3,180,795.00","3,180,795.00","3,180,795.00","3,180,795.00","3,180,795.00","3,180,795.00","3,180,795.00","3,180,795.00","3,180,795.00","2,717,735.00"
+DVI,Incarcerated Persons Grievances and Appeals,Appeals Denied,0.00,,,,,,0.00,,,
+DVI,Incarcerated Persons Grievances and Appeals,Appeals Received,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+DVI,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+DVI,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+DVI,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+DVI,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+FOL,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,282.75,296.60,299.50,256.00,226.75,232.25,201.60,147.75,163.00,184.75
+FOL,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,333.00,342.00,342.00,342.00,260.50,265.00,234.60,191.00,197.00,234.60
+FOL,Contraband,Quantity of Fentanyl Seized (grams),,,,,,,2.00,4.00,,
+FOL,Contraband,Quantity of Heroin Seized (grams with packaging),,,,16.00,,,,2.00,,
+FOL,Contraband,Quantity of Heroin Seized (grams),,,,,,,16.00,14.00,,
+FOL,Contraband,Quantity of Honey Oil Seized (grams with packaging),,,,4.00,,,4.00,6.00,,
+FOL,Contraband,Quantity of Honey Oil Seized (grams),,,,,,,6.00,2.00,,
+FOL,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,34.56,,,,,,
+FOL,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,14.34,,,16.00,6.00,,
+FOL,Contraband,Quantity of Methamphetamine Seized (grams),,,,,,,6.00,2.00,,
+FOL,Contraband,Quantity of Suboxone Seized (grams with packaging),,,,10.64,,,,,,
+FOL,Contraband,Quantity of Suboxone Seized (grams),,,,0.30,,,2.00,,,
+FOL,Contraband,Quantity of Suboxone Seized (number of strips),,,,30.00,,,24.00,12.00,,
+FOL,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,3.20,,,4.00,6.00,,
+FOL,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,1.50,,,124.00,136.00,,
+FOL,Contraband,Quantity of Tobacco Seized (grams),,,,,,,,2.00,,
+FOL,Contraband,Suboxone Seizure Events,,,,16.00,,,16.00,8.00,,
+FOL,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,10.00,,,22.00,16.00,,
+FOL,Contraband,Tobacco Seizure Events,,,,,,,,2.00,,
+FOL,Fiscal,Actual Expenditures ($),"12,834,546.31","25,852,957.16","38,370,551.17","51,240,573.38","65,477,972.57","78,912,599.09","92,760,721.19","106,321,031.92","119,037,303.37","132,100,219.25"
+FOL,Fiscal,Institution Budget ($),"166,451,178.00","166,581,564.00","166,735,333.00","166,726,712.00","166,639,970.00","160,490,012.00","160,569,927.00","160,636,388.00","160,828,414.00","162,250,298.00"
+FOL,Incarcerated Persons Grievances and Appeals,Appeals Denied,13.00,21.00,16.00,16.00,16.00,22.00,20.00,19.00,7.00,
+FOL,Incarcerated Persons Grievances and Appeals,Appeals Granted,1.00,7.00,5.00,4.00,2.00,3.00,2.00,6.00,5.00,
+FOL,Incarcerated Persons Grievances and Appeals,Appeals Received,17.00,39.00,32.00,28.00,24.00,46.00,39.00,39.00,25.00,
+FOL,Number and Housing Level of Incarcerated Persons,Level II,"1,956.00","1,964.00","1,958.00","1,944.00","1,980.00","1,867.00","1,864.00","1,908.00","1,922.00","1,910.00"
+FOL,Number and Housing Level of Incarcerated Persons,Level III,394.00,394.00,385.00,395.00,402.00,480.00,496.00,497.00,495.00,489.00
+FOL,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+FOL,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+FOL,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,98.00,123.00,120.00,109.00,121.00,114.00,117.00,128.00,114.00,0.00
+FOL,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,129.00
+FOL,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,731.00","2,797.00","2,784.00","2,746.00","2,846.00","2,797.00","2,765.00","2,817.00","2,829.00","2,855.00"
+FOL,Number of Deaths,Expected,,,1.00,,,,,,,
+FOL,Number of Deaths,Homicide,,,1.00,,,,,,,
+FOL,Number of Deaths,Suicide,,,2.00,,,,,,,
+FOL,Number of Deaths,Unexpected,,,1.00,,,,,1.00,,
+FOL,Overtime Hours,Custody (Overtime),"9,917.73","8,801.40","11,870.10","8,160.17","8,190.58","5,193.82","3,887.60","3,701.14","6,271.37","3,956.40"
+FOL,Overtime Hours,Dental + Mental Health (Overtime),35.00,20.00,38.00,15.00,23.00,10.00,23.00,23.00,33.00,5.00
+FOL,Overtime Hours,Non-Custody (Overtime),"1,775.50","2,919.50","1,886.50","1,400.75","1,496.75","1,603.50","1,188.33",960.00,"1,423.25","1,038.30"
+FOL,Overtime Hours,Total Overtime Hours,"11,728.23","11,740.90","13,794.60","9,575.92","9,710.33","6,807.32","5,098.93","4,684.14","7,727.62","4,999.70"
+FOL,Positions - Authorized and Vacant,Authorized,830.60,830.60,830.60,830.60,830.60,830.60,830.60,830.60,830.60,831.60
+FOL,Positions - Authorized and Vacant,Vacant,67.10,66.10,60.10,72.10,71.10,53.10,54.10,52.10,61.10,57.10
+FOL,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,174.75","1,028.20","1,086.75","1,343.20","1,350.75","1,217.50","1,073.20","1,440.75","1,455.50","1,073.20"
+FOL,Rehabilitative Programs,Academic Education - Operational Capacity,"1,266.00","1,273.20","1,302.00","1,302.00","1,302.00","1,311.00","1,319.20","1,319.25","1,266.75","1,319.20"
+FOL,Rehabilitative Programs,Career Technical Education - Actual Enrollment,340.00,350.40,354.25,328.20,358.00,364.25,337.40,305.25,298.00,272.40
+FOL,Rehabilitative Programs,Career Technical Education - Operational Capacity,355.50,369.00,369.00,349.00,369.00,369.00,347.40,315.00,315.00,275.40
+FOL,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+FOL,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+HDSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,136.50,184.60,234.00,272.20,275.25,299.00,291.00,312.75,295.00,304.00
+HDSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,459.00,494.40,541.50,583.80,594.00,603.00,612.60,615.75,619.50,612.60
+HDSP,Contraband,Cellular Telephone Seizure Events,,,,2.00,,,8.00,,,
+HDSP,Contraband,Fentanyl Seizure Events,,,,12.00,,,10.00,,,
+HDSP,Contraband,Heroin Seizure Events,,,,2.00,4.00,2.00,,2.00,,2.00
+HDSP,Contraband,Honey Oil Seizure Events,,,,12.00,,,2.00,,,
+HDSP,Contraband,Marijuana Seizure Events,,,,,2.00,,,,,
+HDSP,Contraband,Methamphetamine Seizure Events,,,,6.00,,16.00,34.00,4.00,10.00,
+HDSP,Contraband,Quantity of Cellular Telephones Seized,,,,2.00,,,8.00,,,
+HDSP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,46.00,,,12.28,,,
+HDSP,Contraband,Quantity of Fentanyl Seized (grams),,,,28.40,,,374.00,,,
+HDSP,Contraband,Quantity of Heroin Seized (grams with packaging),,,,,22.20,,,,,
+HDSP,Contraband,Quantity of Heroin Seized (grams),,,,31.80,,2.00,,2.00,,0.80
+HDSP,Contraband,Quantity of Honey Oil Seized (grams with packaging),,,,,,,70.98,,,
+HDSP,Contraband,Quantity of Honey Oil Seized (grams),,,,14.00,,,,,,
+HDSP,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,,2.00,,,,,
+HDSP,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,,,23.80,149.90,26.20,,
+HDSP,Contraband,Quantity of Methamphetamine Seized (grams),,,,59.40,,477.00,265.40,2.20,222.00,
+HDSP,Contraband,Quantity of Suboxone Seized (number of strips),,,,32.00,,2.00,,68.00,,
+HDSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,4.00,,,
+HDSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,98.20,31.60,,,
+HDSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,6.00,36.00,12.00,,,
+HDSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,105.00,93.00,144.00,251.00,146.00,213.00,180.00,117.00,94.00,96.00
+HDSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,19.00,63.00,75.00,134.00,105.00,175.00,86.00,50.00,55.00,39.00
+HDSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,1.00,1.00,0.00,0.00,2.00,2.00,1.00,0.00,0.00
+HDSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.00,0.24,0.00,6.51,3.83,0.00,0.90,10.13,0.02
+HDSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,1.00,0.00,0.00,0.00,0.00,2.00,3.00,
+HDSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+HDSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+HDSP,Number and Housing Level of Incarcerated Persons,Level I,227.00,260.00,291.00,276.00,266.00,244.00,241.00,219.00,199.00,247.00
+HDSP,Number and Housing Level of Incarcerated Persons,Level II,805.00,799.00,757.00,704.00,690.00,731.00,730.00,744.00,846.00,766.00
+HDSP,Number and Housing Level of Incarcerated Persons,Level III,382.00,511.00,639.00,716.00,764.00,787.00,798.00,786.00,782.00,767.00
+HDSP,Number and Housing Level of Incarcerated Persons,Level IV,"1,029.00","1,014.00","1,020.00","1,066.00","1,015.00",949.00,905.00,914.00,957.00,922.00
+HDSP,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+HDSP,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,113.00,134.00,133.00,125.00,130.00,126.00,127.00,130.00,118.00,26.00
+HDSP,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,95.00
+HDSP,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,556.00","2,718.00","2,840.00","2,887.00","2,865.00","2,837.00","2,801.00","2,793.00","2,903.00","2,823.00"
+HDSP,Number of Deaths,Expected,1.00,,,1.00,,,,,,
+HDSP,Number of Deaths,Homicide,,,,,,,,,,1.00
+HDSP,Number of Deaths,Unexpected,,,,,,,,,,
+HDSP,Overtime Hours,Custody (Overtime),"23,498.59","22,284.71","26,866.97","23,014.27","21,357.99","21,543.21","15,911.99","16,370.77","19,045.68","13,984.70"
+HDSP,Overtime Hours,Dental + Mental Health (Overtime),"1,121.00",237.25,274.75,255.75,293.75,183.50,270.75,250.75,263.00,265.50
+HDSP,Overtime Hours,Non-Custody (Overtime),"1,723.50","1,941.75","2,622.50","1,699.00","1,566.25","2,083.75","1,400.57","1,751.00","2,023.50","1,632.30"
+HDSP,Overtime Hours,Total Overtime Hours,"26,343.09","24,463.71","29,764.22","24,969.02","23,217.99","23,810.46","17,583.31","18,372.52","21,332.18","15,882.50"
+HDSP,Positions - Authorized and Vacant,Authorized,"1,199.60","1,199.60","1,199.60","1,199.60","1,199.60","1,199.60","1,199.60","1,199.60","1,199.60","1,199.30"
+HDSP,Positions - Authorized and Vacant,Vacant,151.60,162.60,159.60,163.20,164.60,178.60,172.60,167.60,160.60,166.30
+HDSP,Sick Leave Hours,Custody (Sick Leave),"6,080.00","5,820.75","5,683.75","5,870.50","4,717.88","5,428.00","4,603.75","4,811.25","4,961.75","5,710.50"
+HDSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),225.00,302.50,348.25,308.50,419.50,545.75,507.00,414.25,339.50,423.50
+HDSP,Sick Leave Hours,Non-Custody (Sick Leave),"1,767.25","1,925.00","1,734.25","2,032.50","1,624.00","1,882.25","1,918.50","1,810.25","1,641.25","1,971.00"
+HDSP,Sick Leave Hours,Total Sick Leave Hours,"8,072.25","8,048.25","7,766.25","8,211.50","6,761.38","7,856.00","7,029.25","7,035.75","6,942.50","8,105.00"
+HDSP,Use of Force (UOF),Total UOF Incidents,32.00,35.00,33.00,36.00,35.00,39.00,33.00,40.00,23.00,38.00
+ISP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,268.50,254.00,273.00,285.80,274.75,279.25,271.20,224.75,268.75,310.75
+ISP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,327.00,316.80,327.00,327.00,330.00,351.00,348.80,299.50,302.75,348.80
+ISP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,123.75,139.60,139.00,133.60,128.50,120.25,137.00,105.25,67.00,66.50
+ISP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,162.00,182.40,196.00,173.80,172.00,168.25,176.20,146.50,103.00,176.20
+ISP,Contraband,Cellular Telephone Seizure Events,,,,12.00,,,6.00,,,
+ISP,Contraband,Controlled Medication Seizure Events,,,,,,,1.00,,,
+ISP,Contraband,Fentanyl Seizure Events,,,,,,,,,2.00,2.00
+ISP,Contraband,Heroin Seizure Events,,,,4.00,2.00,6.00,2.00,,,
+ISP,Contraband,Honey Oil Seizure Events,,,,4.00,,2.00,4.00,4.00,,4.00
+ISP,Contraband,Marijuana Seizure Events,,,,,,2.00,,,,
+ISP,Contraband,Methamphetamine Seizure Events,,,,4.00,2.00,4.00,2.00,,,6.00
+ISP,Contraband,PCP Seizure Events,,,,,,,,,,
+ISP,Contraband,Quantity of Cellular Telephones Seized,,,,12.00,,,6.00,,,
+ISP,Contraband,Quantity of Controlled Medication Seized (grams with packaging),,,,,,,2.00,,,
+ISP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,,,,,,,32.72
+ISP,Contraband,Quantity of Fentanyl Seized (grams),,,,,,,,,31.44,
+ISP,Contraband,Quantity of Heroin Seized (grams with packaging),,,,0.64,4.00,1.08,,,,
+ISP,Contraband,Quantity of Heroin Seized (grams),,,,0.50,,,0.02,,,
+ISP,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,2.00,,4.00,8.00,16.00,14.00
+ISP,Fiscal,Actual Expenditures ($),"14,994,125.17","31,135,584.77","48,513,556.50","64,927,668.15","82,220,922.12","100,357,282.41","116,729,167.42","133,202,540.49","150,357,392.63","166,668,213.75"
+ISP,Fiscal,Institution Budget ($),"184,660,329.00","184,756,945.00","184,990,168.00","185,362,482.00","186,482,667.00","193,953,811.00","194,717,455.00","195,870,926.69","196,137,049.91","198,925,868.91"
+ISP,Incarcerated Persons Grievances and Appeals,Appeals Denied,16.00,48.00,28.00,27.00,24.00,16.00,20.00,17.00,11.00,
+ISP,Incarcerated Persons Grievances and Appeals,Appeals Granted,5.00,3.00,7.00,4.00,8.00,2.00,5.00,5.00,4.00,
+ISP,Incarcerated Persons Grievances and Appeals,Appeals Received,36.00,69.00,60.00,44.00,47.00,38.00,49.00,40.00,33.00,
+ISP,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,12.00,15.00,20.00,10.00,9.00,12.00,24.00,18.00,17.00,
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,136.00,160.00,197.00,127.00,127.00,160.00,183.00,89.00,119.00,103.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,31.00,25.00,54.00,17.00,22.00,17.00,14.00,12.00,13.00,13.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,0.00,18.00,5.00,0.00,1.00,0.00,0.00,2.00,1.00,4.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,,,1.00,1.00,,,,,
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,9.00,6.00,2.00,5.00,16.00,0.00,2.00,10.00,3.00,19.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,207.00,266.00,309.00,173.00,207.00,160.00,240.00,144.00,171.00,
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,17.00,12.00,20.00,7.00,16.00,23.00,13.00,10.00,11.00,19.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,17.00,34.00,25.00,7.00,14.00,23.00,23.00,17.00,18.00,22.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,7.00,11.00,6.00,3.00,10.00,18.00,5.00,4.00,6.00,4.00
+ISP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+ISP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Number and Housing Level of Incarcerated Persons,Level I,91.00,84.00,96.00,121.00,166.00,185.00,206.00,220.00,239.00,232.00
+ISP,Number and Housing Level of Incarcerated Persons,Level II,"2,430.00","2,368.00","2,347.00","2,285.00","2,257.00","2,220.00","2,199.00","2,208.00","2,194.00","2,308.00"
+ISP,Number and Housing Level of Incarcerated Persons,Level III,461.00,422.00,429.00,437.00,465.00,457.00,347.00,97.00,0.00,0.00
+ISP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,279.25,278.40,278.50,283.60,285.25,293.00,290.80,254.25,245.25,290.80
+ISP,Rehabilitative Programs,Career Technical Education - Operational Capacity,270.00,270.00,270.00,275.40,303.75,312.50,309.80,297.00,297.00,309.80
+ISP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Rehabilitative Programs,Number of Associate Degrees,4.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Rehabilitative Programs,Number of GED Certificates,8.00,8.00,12.00,6.00,6.00,11.00,5.00,5.00,5.00,5.00
+ISP,Rehabilitative Programs,Number of High School Diplomas,1.00,0.00,2.00,2.00,1.00,0.00,2.00,1.00,0.00,2.00
+ISP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+ISP,Rehabilitative Programs,Transitions - Actual Enrollment,70.50,69.00,55.50,83.20,95.50,113.25,109.40,111.25,104.00,109.40
+ISP,Rehabilitative Programs,Transitions - Operational Capacity,72.00,72.00,27.00,79.20,99.00,126.00,133.20,144.00,135.00,133.20
+ISP,Sick Leave Hours,Custody (Sick Leave),"5,499.25","5,638.25","5,603.25","5,047.75","5,553.75","6,372.00","2,669.50","4,666.00","5,322.00","5,869.00"
+ISP,Sick Leave Hours,Dental + Mental Health (Sick Leave),353.50,319.50,493.50,269.75,272.75,391.00,393.25,292.50,372.00,392.00
+ISP,Sick Leave Hours,Non-Custody (Sick Leave),"2,284.75","2,162.75","2,967.25","3,030.00","2,501.00","3,149.75","2,964.50","2,885.75","3,141.50","2,890.00"
+ISP,Sick Leave Hours,Total Sick Leave Hours,"8,137.50","8,120.50","9,064.00","8,347.50","8,327.50","9,912.75","6,027.25","7,844.25","8,835.50","9,151.00"
+ISP,Use of Force (UOF),Total UOF Incidents,6.00,2.00,10.00,5.00,10.00,7.00,6.00,11.00,2.00,11.00
+KVSP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,221.00,173.60,155.00,177.40,186.75,174.50,170.00,196.25,221.75,239.00
+KVSP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,276.00,252.00,234.00,234.00,252.00,240.00,225.60,267.00,291.50,225.60
+KVSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,191.25,221.00,210.75,198.20,197.75,255.75,267.60,236.00,184.50,193.75
+KVSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,283.50,308.40,276.00,240.00,279.00,303.75,327.80,310.75,268.00,327.80
+KVSP,Contraband,Cellular Telephone Seizure Events,,,,26.00,40.00,4.00,,,8.00,6.00
+KVSP,Contraband,Heroin Seizure Events,,,,4.00,,,8.00,6.00,10.00,
+KVSP,Contraband,Tobacco Seizure Events,,,,2.00,,,,,,
+KVSP,Fiscal,Actual Expenditures ($),"21,583,954.05","44,584,950.95","65,518,315.71","87,254,253.56","110,489,640.78","133,978,120.53","156,487,357.31","178,223,989.91","201,365,336.62","223,916,173.45"
+KVSP,Fiscal,Institution Budget ($),"268,942,238.00","268,932,834.00","269,345,201.00","269,307,850.00","270,450,718.00","253,431,184.00","254,406,352.00","255,631,032.69","256,571,495.69","266,764,821.69"
+KVSP,Incarcerated Persons Grievances and Appeals,Appeals Denied,121.00,114.00,68.00,76.00,77.00,67.00,40.00,49.00,35.00,
+KVSP,Incarcerated Persons Grievances and Appeals,Appeals Granted,21.00,25.00,17.00,29.00,28.00,21.00,20.00,19.00,9.00,
+KVSP,Incarcerated Persons Grievances and Appeals,Appeals Received,194.00,194.00,143.00,181.00,173.00,224.00,156.00,173.00,132.00,
+KVSP,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,32.00,38.00,42.00,59.00,51.00,96.00,86.00,84.00,77.00,
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,431.00,403.00,309.00,353.00,320.00,344.00,338.00,292.00,358.00,288.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,98.00,116.00,59.00,83.00,53.00,70.00,54.00,57.00,111.00,57.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,8.00,11.00,6.00,9.00,6.00,10.00,18.00,16.00,13.00,7.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,60.00,34.00,39.00,46.00,49.00,66.00,40.00,50.00,52.00,26.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,934.00,799.00,619.00,776.00,674.00,913.00,748.00,816.00,909.00,
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,136.00,54.00,92.00,135.00,110.00,105.00,164.00,223.00,214.00,203.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,136.00,99.00,63.00,73.00,69.00,105.00,87.00,101.00,114.00,67.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,111.00,82.00,51.00,77.00,67.00,116.00,47.00,67.00,47.00,42.00
+KVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,10.00,0.00,0.00
+KVSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,1.44,0.00,2.90,3.08,5.25,1.74,5.66,1.55,20.13,5.67
+KVSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,2.00,2.00,1.00,1.00,
+KVSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Number and Housing Level of Incarcerated Persons,Level I,130.00,111.00,100.00,103.00,117.00,122.00,115.00,117.00,114.00,106.00
+KVSP,Number and Housing Level of Incarcerated Persons,Level II,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Number and Housing Level of Incarcerated Persons,Level III,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Number and Housing Level of Incarcerated Persons,Level IV,"2,863.00","2,828.00","2,814.00","2,826.00","2,860.00","2,918.00","2,851.00","2,819.00","2,740.00","2,777.00"
+KVSP,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,022.75","1,280.60","1,318.00","1,279.40","1,242.75","1,360.00","1,267.20","1,248.00","1,233.00","1,267.20"
+KVSP,Rehabilitative Programs,Academic Education - Operational Capacity,"1,413.00","1,357.20","1,400.00","1,417.00","1,417.00","1,417.00","1,417.20","1,449.50","1,463.00","1,417.20"
+KVSP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,151.25,178.40,180.75,208.20,225.00,227.00,215.00,216.50,219.25,215.00
+KVSP,Rehabilitative Programs,Career Technical Education - Operational Capacity,202.50,216.00,216.00,253.80,270.00,270.00,270.00,270.00,270.00,270.00
+KVSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Rehabilitative Programs,Number of Associate Degrees,0.00,2.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Rehabilitative Programs,Number of GED Certificates,3.00,4.00,3.00,9.00,2.00,1.00,2.00,3.00,0.00,2.00
+KVSP,Rehabilitative Programs,Number of High School Diplomas,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+KVSP,Rehabilitative Programs,Transitions - Actual Enrollment,88.75,89.60,91.00,73.00,41.25,20.75,33.00,33.00,28.00,33.00
+KVSP,Rehabilitative Programs,Transitions - Operational Capacity,108.00,108.00,108.00,108.00,108.00,108.00,107.60,106.00,106.00,107.60
+KVSP,Sick Leave Hours,Custody (Sick Leave),"5,399.00","5,336.00","5,788.25","5,781.75","5,908.25","8,156.68","3,128.00","5,406.00","5,395.50","6,108.80"
+KVSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),586.00,557.00,500.25,453.98,386.50,600.50,529.75,665.75,543.00,636.00
+KVSP,Sick Leave Hours,Non-Custody (Sick Leave),"2,070.75","2,263.50","1,880.00","1,919.25","1,860.25","1,999.75","2,053.50","2,046.21","1,640.50","1,760.30"
+KVSP,Sick Leave Hours,Total Sick Leave Hours,"8,055.75","8,156.50","8,168.50","8,154.98","8,155.00","10,756.93","5,711.25","8,117.96","7,579.00","8,505.00"
+KVSP,Use of Force (UOF),Total UOF Incidents,68.00,71.00,55.00,81.00,45.00,60.00,57.00,72.00,55.00,135.00
+LAC,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,141.75,124.20,114.50,110.40,96.25,86.25,72.80,110.50,105.75,108.75
+LAC,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,204.00,168.00,168.00,168.00,156.00,144.00,148.80,165.00,156.00,148.80
+LAC,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,190.50,202.40,223.00,204.00,208.50,215.00,209.80,207.00,175.75,153.25
+LAC,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,247.50,263.40,286.50,291.00,279.00,267.00,265.20,255.00,255.00,265.20
+LAC,Contraband,Quantity of Heroin Seized (grams),,,,10.80,0.20,,,,14.40,20.80
+LAC,Contraband,Quantity of Heroin Seized (pills),,,,,,,,,,
+LAC,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,633.74,350.34,590.14,468.80,950.72,788.64,"1,561.06"
+LAC,Contraband,Quantity of Marijuana Seized (grams),,,,,0.20,,,,,
+LAC,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,555.78,330.04,641.96,385.80,"1,398.60",500.80,744.10
+LAC,Contraband,Quantity of Suboxone Seized (number of strips),,,,,54.00,,,,114.00,20.00
+LAC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,1.60,475.22,0.20,,62.60,0.20,
+LAC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,,2.00,,
+LAC,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,136.42,257.20,"1,889.26","3,335.46","3,804.68",609.80,619.20
+LAC,Contraband,Quantity of Tobacco Seized (grams),,,,,,,0.20,,,
+LAC,Contraband,Quantity of Tobacco Seized (number of strips),,,,,,,,,,
+LAC,Contraband,Suboxone Seizure Events,,,,,4.00,,,,2.00,6.00
+LAC,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,4.00,2.00,,4.00,2.00,
+LAC,Contraband,Tobacco Seizure Events,,,,8.00,10.00,18.00,20.00,28.00,6.00,12.00
+LAC,Fiscal,Actual Expenditures ($),"18,687,262.60","41,252,952.66","63,394,266.41","84,945,507.80","107,325,098.52","131,584,101.70","153,523,079.72","175,421,476.88","196,895,789.69","218,914,391.69"
+LAC,Fiscal,Institution Budget ($),"258,944,025.00","258,961,821.00","259,145,733.00","263,340,567.00","264,473,887.00","245,462,865.00","246,483,078.00","247,694,585.00","247,751,863.00","263,737,035.00"
+LAC,Incarcerated Persons Grievances and Appeals,Appeals Denied,135.00,129.00,103.00,101.00,62.00,64.00,54.00,46.00,65.00,
+LAC,Incarcerated Persons Grievances and Appeals,Appeals Granted,48.00,43.00,31.00,54.00,41.00,28.00,39.00,24.00,42.00,
+LAC,Incarcerated Persons Grievances and Appeals,Appeals Received,246.00,247.00,236.00,210.00,156.00,208.00,242.00,189.00,279.00,
+LAC,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,42.00,58.00,72.00,31.00,37.00,92.00,128.00,103.00,159.00,
+LAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,580.00,465.00,369.00,483.00,311.00,417.00,414.00,389.00,468.00,343.00
+LAC,Number and Housing Level of Incarcerated Persons,Level IV,"2,227.00","2,222.00","2,250.00","2,264.00","2,247.00","2,136.00","2,078.00","2,040.00","2,000.00","1,776.00"
+LAC,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+LAC,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,227.00,233.00,235.00,220.00,227.00,223.00,206.00,231.00,220.00,8.00
+LAC,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,214.00
+LAC,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"3,227.00","3,221.00","3,270.00","3,317.00","3,289.00","3,189.00","3,113.00","3,144.00","3,081.00","2,854.00"
+LAC,Number of Deaths,Expected,,,,1.00,,,1.00,,,
+LAC,Number of Deaths,Homicide,,,,,,,,,,1.00
+LAC,Number of Deaths,Missing,1.00,,,1.00,,,,,,
+LAC,Number of Deaths,Suicide,,,,,1.00,,,,,
+LAC,Number of Deaths,Unexpected,2.00,,,,,,,,,2.00
+LAC,Overtime Hours,Custody (Overtime),"32,954.35","33,457.60","40,581.23","34,329.78","33,768.62","34,587.22","28,948.27","31,344.24","34,705.16","24,220.70"
+LAC,Overtime Hours,Dental + Mental Health (Overtime),"1,130.75",953.52,"1,262.00",535.25,805.75,737.75,701.50,591.25,556.25,538.50
+LAC,Overtime Hours,Non-Custody (Overtime),"2,392.75","5,306.20","2,512.25","1,762.50","1,524.25","1,701.50","4,466.50","2,314.00","1,910.00","1,751.50"
+LAC,Overtime Hours,Total Overtime Hours,"36,477.85","39,717.32","44,355.48","36,627.53","36,098.62","37,026.47","34,116.27","34,249.49","37,171.41","26,510.70"
+LAC,Positions - Authorized and Vacant,Authorized,"1,151.50","1,151.50","1,151.50","1,151.50","1,151.50","1,151.50","1,151.50","1,151.50","1,151.50","1,152.00"
+LAC,Positions - Authorized and Vacant,Vacant,88.10,96.10,125.10,133.10,124.10,138.10,128.10,124.10,144.50,146.00
+LAC,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,195.25","1,064.60","1,154.75","1,274.00","1,289.25","1,134.25",937.20,"1,328.50","1,391.75",937.20
+LAC,Rehabilitative Programs,Academic Education - Operational Capacity,"1,064.25","1,140.00","1,104.00","1,122.60","1,121.25","1,123.00","1,123.00","1,122.00","1,122.00","1,123.00"
+LAC,Rehabilitative Programs,Career Technical Education - Actual Enrollment,95.50,86.60,79.25,68.80,83.50,88.00,62.60,72.75,75.25,62.60
+LAC,Rehabilitative Programs,Career Technical Education - Operational Capacity,130.50,117.00,117.00,117.00,117.00,117.00,88.20,81.00,81.00,88.20
+LAC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+LAC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+MCSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,24.00,46.20,75.00,75.00,78.00,78.75,188.40,218.25,232.50,188.40
+MCSP,Contraband,Cellular Telephone Seizure Events,,,,8.00,2.00,,8.00,4.00,8.00,4.00
+MCSP,Contraband,Fentanyl Seizure Events,,,,,,,4.00,4.00,,
+MCSP,Contraband,Heroin Seizure Events,,,,4.00,2.00,,10.00,2.00,2.00,8.00
+MCSP,Contraband,Honey Oil Seizure Events,,,,,,,4.00,,2.00,
+MCSP,Contraband,Marijuana Seizure Events,,,,,,,2.00,2.00,2.00,2.00
+MCSP,Contraband,Methamphetamine Seizure Events,,,,10.00,,,6.00,18.00,6.00,8.00
+MCSP,Contraband,PCP Seizure Events,,,,,,,,,,1.00
+MCSP,Contraband,Quantity of Cellular Telephones Seized,,,,8.00,2.00,,8.00,8.00,8.00,4.00
+MCSP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,,,,,18.40,,
+MCSP,Contraband,Quantity of Fentanyl Seized (grams),,,,,,,2.40,,,
+MCSP,Contraband,Quantity of Heroin Seized (grams with packaging),,,,30.40,3.40,,,,,
+MCSP,Contraband,Quantity of Heroin Seized (grams),,,,,,,61.20,14.40,97.40,4.20
+MCSP,Contraband,Quantity of Honey Oil Seized (grams),,,,,,,9.20,,2.60,
+MCSP,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,,,,,,,
+MCSP,Contraband,Quantity of Marijuana Seized (grams),,,,,,,47.60,2.00,43.00,1.00
+MCSP,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,135.60,,,,71.60,,
+MCSP,Contraband,Quantity of Methamphetamine Seized (grams),,,,149.80,,,218.80,87.40,69.40,136.80
+MCSP,Contraband,Quantity of PCP Seized (grams),,,,,,,,,,6.20
+MCSP,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,,,,
+MCSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,17.20,52.40,,,,,18.60
+MCSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,,2.40,1.20,,29.40
+MCSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,195.00,158.00,154.00,190.00,109.00,116.00,162.00,162.00,161.00,242.00
+MCSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,195.00,182.00,135.00,214.00,128.00,116.00,173.00,164.00,190.00,257.00
+MCSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,84.00,92.00,73.00,118.00,76.00,86.00,63.00,56.00,79.00,68.00
+MCSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,19.00,13.00
+MCSP,Incarcerated Persons Grievances and Appeals,Grievances Pending Legal Matter,,,,,,,,,1.00,
+MCSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.85,7.83,8.77,4.37,8.98,0.00,6.29,5.12,1.41
+MCSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.00,
+MCSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+MCSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+MCSP,Number and Housing Level of Incarcerated Persons,Level I,136.00,122.00,119.00,110.00,99.00,96.00,90.00,94.00,81.00,85.00
+MCSP,Number and Housing Level of Incarcerated Persons,Level II,"1,564.00","1,564.00","1,551.00","1,566.00","1,550.00","1,551.00","1,563.00","1,549.00","1,565.00","1,566.00"
+MCSP,Number and Housing Level of Incarcerated Persons,Level III,"1,353.00","1,355.00","1,355.00","1,292.00","1,270.00","1,289.00","1,266.00","1,219.00","1,220.00","1,190.00"
+MCSP,Number and Housing Level of Incarcerated Persons,Level IV,787.00,857.00,840.00,857.00,846.00,813.00,826.00,822.00,812.00,812.00
+MCSP,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+MCSP,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,130.00,117.00,127.00,115.00,121.00,125.00,106.00,121.00,125.00,11.00
+MCSP,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,111.00
+MCSP,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"3,970.00","4,015.00","3,992.00","3,940.00","3,886.00","3,874.00","3,852.00","3,805.00","3,803.00","3,775.00"
+MCSP,Number of Deaths,Expected,,,,,1.00,,,1.00,,
+MCSP,Number of Deaths,Missing,1.00,,1.00,,1.00,,,,,
+MCSP,Number of Deaths,Suicide,,,1.00,1.00,,,,,,
+MCSP,Number of Deaths,Unexpected,,,,1.00,,,,,,1.00
+MCSP,Overtime Hours,Custody (Overtime),"22,980.35","24,084.57","30,642.58","28,952.09","22,754.79","26,616.08","23,795.01","24,679.05","32,141.85","22,265.70"
+MCSP,Overtime Hours,Dental + Mental Health (Overtime),18.50,2.00,30.00,0.00,16.00,47.00,43.25,16.75,8.00,10.00
+MCSP,Overtime Hours,Non-Custody (Overtime),"1,452.75","3,740.50","1,378.75","1,458.50","1,104.25","1,364.25","2,784.13","1,211.92","1,868.13","1,347.50"
+MCSP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+MCSP,Rehabilitative Programs,Transitions - Actual Enrollment,119.50,163.80,175.00,162.00,165.75,145.25,140.00,120.00,83.00,140.00
+MCSP,Rehabilitative Programs,Transitions - Operational Capacity,180.00,198.00,198.00,198.00,198.00,184.50,180.00,162.00,112.50,180.00
+MCSP,Sick Leave Hours,Custody (Sick Leave),"6,329.50","6,191.50","7,131.75","6,548.75","5,825.75","6,076.00","3,067.75","4,637.50","5,060.75","5,335.50"
+MCSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),744.25,841.75,723.00,"1,003.00",645.50,858.75,768.25,589.00,681.50,564.50
+MCSP,Sick Leave Hours,Non-Custody (Sick Leave),"1,783.29","1,774.25","2,205.50","2,024.25","1,913.75","1,628.25","2,672.75","1,799.25","1,978.75","1,795.30"
+MCSP,Sick Leave Hours,Total Sick Leave Hours,"8,857.04","8,807.50","10,060.25","9,576.00","8,385.00","8,563.00","6,508.75","7,025.75","7,721.00","7,695.30"
+MCSP,Use of Force (UOF),Total UOF Incidents,49.00,71.00,53.00,53.00,57.00,57.00,50.00,47.00,57.00,69.00
+NKSP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,107.50,107.60,147.00,128.40,109.25,113.75,117.60,119.75,115.25,128.00
+NKSP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,126.00,122.40,162.00,162.00,135.00,144.00,156.00,171.00,150.00,156.00
+NKSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,77.75,80.20,88.25,95.60,99.50,72.50,59.40,60.50,70.00,51.75
+NKSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,97.50,99.00,101.25,123.00,133.50,132.75,81.00,84.75,99.00,81.00
+NKSP,Contraband,Cellular Telephone Seizure Events,,,,4.00,,10.00,10.00,2.00,8.00,6.00
+NKSP,Contraband,Heroin Seizure Events,,,,2.00,,,,,,
+NKSP,Contraband,Marijuana Seizure Events,,,,,,2.00,2.00,,,
+NKSP,Contraband,Methamphetamine Seizure Events,,,,2.00,,2.00,,,,
+NKSP,Contraband,Quantity of Cellular Telephones Seized,,,,4.00,,14.00,14.00,2.00,8.00,6.00
+NKSP,Contraband,Quantity of Heroin Seized (grams with packaging),,,,33.80,,,,,,
+NKSP,Contraband,Quantity of Heroin Seized (grams),,,,,,,,,,
+NKSP,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,,,,1.00,,,
+NKSP,Contraband,Quantity of Marijuana Seized (grams),,,,,,2.60,,,,
+NKSP,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,174.00,,50.00,,,,
+NKSP,Fiscal,Actual Expenditures ($),"17,659,397.22","36,784,687.21","54,663,133.51","73,185,394.65","92,272,534.54","110,848,313.75","128,275,475.13","145,934,824.59","164,121,991.94","180,464,724.01"
+NKSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+NKSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+NKSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+NKSP,Number and Housing Level of Incarcerated Persons,Level I,165.00,160.00,150.00,152.00,207.00,274.00,259.00,223.00,178.00,174.00
+NKSP,Number and Housing Level of Incarcerated Persons,Level II,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+NKSP,Number and Housing Level of Incarcerated Persons,Level III,700.00,676.00,642.00,612.00,577.00,558.00,551.00,551.00,537.00,510.00
+NKSP,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+NKSP,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+NKSP,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,"2,254.00","2,303.00","2,312.00","2,307.00","2,230.00","2,166.00","1,887.00","1,876.00","1,881.00","1,737.00"
+NKSP,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,96.00
+NKSP,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"3,119.00","3,139.00","3,104.00","3,071.00","3,014.00","2,998.00","2,697.00","2,650.00","2,596.00","2,517.00"
+NKSP,Number of Deaths,Missing,,,,,,,1.00,,,
+NKSP,Number of Deaths,Unexpected,,,,,,,,,,
+NKSP,Overtime Hours,Custody (Overtime),"10,060.33","7,972.43","8,186.47","6,921.10","10,630.26","8,878.07","3,192.81","1,733.01","2,978.98","2,538.80"
+NKSP,Overtime Hours,Dental + Mental Health (Overtime),121.50,71.50,95.50,81.00,238.50,90.25,73.50,129.00,116.00,103.00
+NKSP,Overtime Hours,Non-Custody (Overtime),"2,154.00","2,033.75","1,976.75","1,435.50",957.25,"1,173.50","1,371.00","1,056.50","1,170.50",989.30
+NKSP,Overtime Hours,Total Overtime Hours,"12,335.83","10,077.68","10,258.72","8,437.60","11,826.01","10,141.82","4,637.31","2,918.51","4,265.48","3,631.00"
+NKSP,Positions - Authorized and Vacant,Authorized,"1,137.30","1,137.30","1,137.30","1,137.30","1,137.30","1,137.30","1,137.30","1,137.30","1,137.30","1,097.40"
+NKSP,Positions - Authorized and Vacant,Vacant,86.90,88.90,85.90,82.90,85.90,95.90,165.30,161.30,211.30,168.40
+NKSP,Rehabilitative Programs,Academic Education - Actual Enrollment,332.50,333.60,386.50,374.60,374.50,341.50,354.60,419.25,390.50,354.60
+NKSP,Rehabilitative Programs,Academic Education - Operational Capacity,"1,009.00","1,009.00","1,009.00","1,009.00","1,009.00","1,009.00","1,009.00","1,009.00","1,009.00","1,009.00"
+NKSP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,25.25,26.00,23.25,24.40,23.50,21.25,23.20,26.50,27.00,23.20
+NKSP,Rehabilitative Programs,Career Technical Education - Operational Capacity,27.00,27.00,27.00,27.00,27.00,27.00,27.00,27.00,27.00,27.00
+NKSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PBSP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,99.00,100.40,74.50,41.40,16.00,42.25,67.40,65.25,62.00,60.75
+PBSP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,130.50,124.80,105.00,105.00,51.00,62.50,74.20,73.00,73.00,74.20
+PBSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,76.75,81.40,117.75,122.60,129.00,132.50,136.80,151.00,137.25,121.75
+PBSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,119.25,123.60,138.75,138.20,202.25,175.50,162.60,158.50,160.50,162.60
+PBSP,Contraband,Cellular Telephone Seizure Events,,,,2.00,,6.00,,,,4.00
+PBSP,Contraband,Fentanyl Seizure Events,,,,,4.00,8.00,12.00,18.00,24.00,16.00
+PBSP,Contraband,Heroin Seizure Events,,,,4.00,2.00,6.00,6.00,2.00,4.00,4.00
+PBSP,Contraband,Marijuana Seizure Events,,,,,,,,,,2.00
+PBSP,Contraband,Methamphetamine Seizure Events,,,,24.00,18.00,30.00,22.00,8.00,6.00,34.00
+PBSP,Contraband,Quantity of Cellular Telephones Seized,,,,2.00,,8.00,,,,8.00
+PBSP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,,,34.00,,,,
+PBSP,Contraband,Quantity of Fentanyl Seized (grams),,,,,9.00,65.00,144.20,674.40,894.20,152.20
+PBSP,Contraband,Quantity of Heroin Seized (grams with packaging),,,,0.60,,8.00,,,,
+PBSP,Contraband,Quantity of Heroin Seized (grams),,,,74.40,37.00,105.20,111.00,27.40,535.40,90.00
+PBSP,Contraband,Quantity of Heroin Seized (number of strips),,,,,,,,,,
+PBSP,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,,,,,,,
+PBSP,Contraband,Quantity of Marijuana Seized (grams),,,,,,,,,,66.00
+PBSP,Contraband,Quantity of Marijuana Seized (number of strips),,,,,,,,,,
+PBSP,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,12.80,21.40,10.00,6.00,30.00,,128.80
+PBSP,Contraband,Quantity of Methamphetamine Seized (grams),,,,633.00,238.80,510.82,735.20,131.40,106.00,745.00
+PBSP,Contraband,Quantity of Methamphetamine Seized (number of strips),,,,,,,,,,
+PBSP,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,14.00,36.00,,,
+PBSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,105.00,,,6.00,,,
+PBSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,28.00,23.00,26.00,36.00,36.00,24.00,16.00,28.00,21.00,46.00
+PBSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,913.00,619.00,623.00,565.00,286.00,509.00,581.00,441.00,425.00,
+PBSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,109.00,150.00,98.00,86.00,46.00,84.00,96.00,73.00,53.00,44.00
+PBSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,109.00,111.00,81.00,67.00,54.00,84.00,80.00,75.00,66.00,99.00
+PBSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,50.00,15.00,24.00,33.00,30.00,43.00,18.00,15.00,24.00,19.00
+PBSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PBSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.00,0.00,0.00,0.00,2.23,3.00,3.13,7.34,5.72
+PBSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,2.00,1.00,1.00,
+PBSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PBSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PBSP,Number and Housing Level of Incarcerated Persons,Level I,188.00,195.00,241.00,241.00,204.00,177.00,180.00,206.00,200.00,216.00
+PBSP,Number and Housing Level of Incarcerated Persons,Level II,"1,325.00","1,311.00","1,284.00","1,206.00","1,177.00","1,131.00","1,132.00","1,111.00","1,074.00","1,074.00"
+PBSP,Number and Housing Level of Incarcerated Persons,Level III,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PBSP,Number and Housing Level of Incarcerated Persons,Level IV,576.00,566.00,572.00,579.00,583.00,585.00,592.00,589.00,625.00,596.00
+PBSP,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+PBSP,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,162.00,139.00,98.00,128.00,165.00,127.00,126.00,112.00,106.00,13.00
+PBSP,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,107.00
+PBSP,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"2,251.00","2,211.00","2,195.00","2,154.00","2,129.00","2,020.00","2,030.00","2,018.00","2,005.00","2,006.00"
+PBSP,Overtime Hours,Custody (Overtime),"14,918.17","12,943.76","11,816.02","10,443.83","8,605.59","8,987.45","6,110.02","8,348.97","11,147.05","9,103.50"
+PBSP,Overtime Hours,Dental + Mental Health (Overtime),12.25,7.75,28.25,11.50,28.00,21.00,21.75,13.00,13.00,0.00
+PBSP,Overtime Hours,Non-Custody (Overtime),906.25,"1,059.25","1,492.08",868.50,821.75,905.00,493.50,959.25,"1,116.25",953.50
+PBSP,Overtime Hours,Total Overtime Hours,"15,836.67","14,010.76","13,336.35","11,323.83","9,455.34","9,913.45","6,625.27","9,321.22","12,276.30","10,057.00"
+PBSP,Positions - Authorized and Vacant,Authorized,943.00,943.00,943.00,943.00,943.00,943.00,943.00,943.00,943.00,942.10
+PBSP,Positions - Authorized and Vacant,Vacant,120.60,120.60,125.20,134.60,133.60,134.60,125.20,146.00,153.00,155.10
+PBSP,Sick Leave Hours,Custody (Sick Leave),"4,660.00","4,341.75","4,056.00","4,066.24","4,151.50","3,853.00","2,435.75","3,563.75","4,257.00","3,752.00"
+PBSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),329.00,414.00,411.00,294.50,283.00,346.50,302.50,413.00,389.75,399.80
+PBSP,Sick Leave Hours,Non-Custody (Sick Leave),"1,624.75","1,430.50","1,477.50","1,666.25","1,404.00","1,297.50","1,225.50","1,439.25","1,522.75","1,304.00"
+PBSP,Sick Leave Hours,Total Sick Leave Hours,"6,613.75","6,186.25","5,944.50","6,026.99","5,838.50","5,497.00","3,963.75","5,416.00","6,169.50","5,458.80"
+PBSP,Use of Force (UOF),Total UOF Incidents,17.00,25.00,11.00,13.00,22.00,40.00,29.00,35.00,21.00,32.00
+PVSP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,211.25,173.40,154.25,131.20,109.50,125.50,122.60,123.00,165.75,174.50
+PVSP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,288.00,271.20,252.00,252.00,141.00,150.00,153.60,174.00,216.00,153.60
+PVSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,202.00,218.00,258.25,314.20,304.25,289.75,309.80,296.25,302.75,352.25
+PVSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,223.50,264.60,324.00,377.80,383.25,370.50,400.00,453.00,458.25,400.00
+PVSP,Contraband,Cellular Telephone Seizure Events,,,,12.00,36.00,18.00,8.00,28.00,28.00,18.00
+PVSP,Contraband,Cocaine Seizure Events,,,,,2.00,2.00,,,,2.00
+PVSP,Contraband,Controlled Medication Seizure Events,,,,,,,,1.00,,
+PVSP,Contraband,Fentanyl Seizure Events,,,,2.00,,2.00,,2.00,2.00,2.00
+PVSP,Contraband,Heroin Seizure Events,,,,4.00,2.00,4.00,,2.00,4.00,10.00
+PVSP,Contraband,Marijuana Seizure Events,,,,,4.00,8.00,6.00,2.00,14.00,14.00
+PVSP,Contraband,Methamphetamine Seizure Events,,,,6.00,6.00,14.00,4.00,6.00,8.00,6.00
+PVSP,Contraband,Quantity of Cellular Telephones Seized,,,,12.00,38.00,18.00,8.00,38.00,28.00,18.00
+PVSP,Contraband,Quantity of Cocaine Seized (grams with packaging),,,,,,0.30,,,,4.56
+PVSP,Contraband,Quantity of Cocaine Seized (grams),,,,,37.04,,,,,
+PVSP,Contraband,Quantity of Controlled Medication Seized (number of strips),,,,,,,,34.00,,
+PVSP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,,,28.00,,1.80,2.00,26.50
+PVSP,Contraband,Quantity of Fentanyl Seized (grams),,,,8.92,,,,,,
+PVSP,Contraband,Quantity of Heroin Seized (grams with packaging),,,,,,27.68,,6.00,179.46,15.30
+PVSP,Fiscal,Institution Budget ($),"230,003,999.00","230,024,692.00","230,287,856.00","230,509,293.00","231,583,808.00","218,970,159.00","219,034,785.00","220,147,402.69","220,852,497.69","225,717,175.69"
+PVSP,Incarcerated Persons Grievances and Appeals,Appeals Denied,15.00,17.00,12.00,14.00,21.00,9.00,5.00,17.00,16.00,
+PVSP,Incarcerated Persons Grievances and Appeals,Appeals Granted,,3.00,3.00,4.00,3.00,5.00,1.00,1.00,5.00,
+PVSP,Incarcerated Persons Grievances and Appeals,Appeals Received,25.00,35.00,18.00,28.00,35.00,36.00,15.00,31.00,40.00,
+PVSP,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,8.00,13.00,2.00,7.00,8.00,18.00,8.00,13.00,18.00,
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,54.00,53.00,59.00,112.00,161.00,122.00,85.00,100.00,108.00,120.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,61.00,40.00,59.00,72.00,59.00,52.00,31.00,34.00,32.00,37.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,3.00,1.00,10.00,4.00,5.00,3.00,3.00,5.00,2.00,13.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,12.00,27.00,28.00,18.00,27.00,18.00,25.00,22.00,15.00,26.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,167.00,151.00,194.00,268.00,323.00,266.00,201.00,220.00,225.00,
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,22.00,7.00,18.00,20.00,21.00,40.00,23.00,20.00,28.00,33.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,22.00,15.00,17.00,30.00,40.00,40.00,31.00,32.00,35.00,47.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,8.00,8.00,3.00,12.00,10.00,11.00,3.00,7.00,5.00,8.00
+PVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,8.68,7.75,6.84,6.73,8.20,10.08,6.84,5.77,6.34,5.96
+PVSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+PVSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Number and Housing Level of Incarcerated Persons,Level I,135.00,183.00,241.00,269.00,230.00,210.00,216.00,187.00,164.00,173.00
+PVSP,Number and Housing Level of Incarcerated Persons,Level II,0.00,494.00,656.00,752.00,795.00,810.00,781.00,721.00,741.00,814.00
+PVSP,Number and Housing Level of Incarcerated Persons,Level III,"2,111.00","1,807.00","1,855.00","1,830.00","1,774.00","1,774.00","1,790.00","1,814.00","1,846.00","1,880.00"
+PVSP,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+PVSP,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,118.00,114.00,119.00,112.00,120.00,96.00,112.00,112.00,93.00,3.00
+PVSP,Rehabilitative Programs,Career Technical Education - Operational Capacity,283.50,243.00,222.75,216.00,236.25,243.00,253.80,297.00,297.00,253.80
+PVSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Rehabilitative Programs,Number of Associate Degrees,0.00,2.00,1.00,0.00,0.00,1.00,0.00,1.00,0.00,0.00
+PVSP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Rehabilitative Programs,Number of GED Certificates,1.00,4.00,3.00,7.00,3.00,3.00,16.00,9.00,11.00,14.00
+PVSP,Rehabilitative Programs,Number of High School Diplomas,3.00,6.00,1.00,5.00,6.00,2.00,4.00,3.00,3.00,4.00
+PVSP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+PVSP,Rehabilitative Programs,Transitions - Actual Enrollment,81.75,79.00,87.75,50.60,52.50,97.50,74.60,53.25,69.00,74.60
+PVSP,Rehabilitative Programs,Transitions - Operational Capacity,108.00,108.00,94.50,54.00,54.00,108.00,86.40,58.50,72.00,86.40
+PVSP,Sick Leave Hours,Custody (Sick Leave),"4,614.00","4,962.75","5,128.75","5,297.75","4,971.25","6,453.75","2,460.75","4,281.25","4,700.00","5,964.50"
+PVSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),238.25,429.25,350.00,286.50,498.50,436.75,448.25,343.25,341.50,349.50
+PVSP,Sick Leave Hours,Non-Custody (Sick Leave),"1,625.24","1,906.25","1,909.25","1,344.50","1,152.50","1,524.25","1,989.75","1,583.50","1,425.25","1,622.00"
+PVSP,Sick Leave Hours,Total Sick Leave Hours,"6,477.49","7,298.25","7,388.00","6,928.75","6,622.25","8,414.75","4,898.75","6,208.00","6,466.75","7,936.00"
+PVSP,Use of Force (UOF),Total UOF Incidents,21.00,29.00,23.00,22.00,7.00,13.00,26.00,14.00,14.00,34.00
+RJD,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,135.75,110.40,76.75,61.20,60.75,79.25,138.00,161.75,146.75,145.25
+RJD,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,143.00,110.80,79.75,79.75,80.00,124.00,184.60,192.00,195.00,184.60
+RJD,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,86.50,119.60,129.00,136.60,141.25,157.00,196.80,190.50,224.75,240.25
+RJD,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,160.75,133.00,173.00,176.20,207.25,209.00,225.60,235.00,253.00,225.60
+RJD,Contraband,Cellular Telephone Seizure Events,,,,6.00,20.00,10.00,16.00,10.00,14.00,18.00
+RJD,Contraband,Cocaine Seizure Events,,,,2.00,,,,,,
+RJD,Contraband,Commercial Ammunition,,,,,,,,,,
+RJD,Contraband,Quantity of Suboxone Seized (grams with packaging),,,,,,,,,,
+RJD,Contraband,Quantity of Suboxone Seized (number of strips),,,,12.00,8.00,66.00,90.00,8.00,,26.00
+RJD,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,2.00,0.20,,458.40
+RJD,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,6.00,,10.00,252.00,8.00,28.00,20.00
+RJD,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,108.00,2.00,,,,"4,378.94",
+RJD,Contraband,Suboxone Seizure Events,,,,4.00,4.00,20.00,6.00,6.00,,8.00
+RJD,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,,2.00,8.00,6.00,4.00,16.00
+RJD,Contraband,Tobacco Seizure Events,,,,4.00,2.00,,,,4.00,
+RJD,Fiscal,Actual Expenditures ($),"30,642,488.81","55,583,880.28","81,492,860.76","107,893,357.45","135,933,875.51","162,365,678.64","188,718,036.58","216,281,747.98","246,455,085.19","272,865,364.04"
+RJD,Fiscal,Institution Budget ($),"322,781,152.00","322,811,301.00","323,021,577.00","324,890,054.00","326,119,415.00","316,203,678.00","316,296,157.00","317,467,126.00","315,282,934.00","325,625,667.00"
+RJD,Incarcerated Persons Grievances and Appeals,Appeals Denied,165.00,114.00,116.00,137.00,121.00,114.00,104.00,89.00,79.00,
+RJD,Incarcerated Persons Grievances and Appeals,Appeals Granted,42.00,27.00,37.00,39.00,29.00,37.00,48.00,27.00,40.00,
+RJD,Incarcerated Persons Grievances and Appeals,Appeals Received,283.00,211.00,241.00,256.00,224.00,297.00,336.00,280.00,272.00,
+RJD,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,52.00,58.00,62.00,41.00,58.00,125.00,170.00,150.00,143.00,
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,689.00,616.00,530.00,618.00,462.00,734.00,764.00,573.00,687.00,722.00
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,269.00,238.00,200.00,247.00,223.00,253.00,194.00,131.00,147.00,195.00
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,30.00,25.00,14.00,13.00,14.00,19.00,16.00,13.00,12.00,15.00
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,54.00,36.00,31.00,58.00,91.00,105.00,81.00,57.00,57.00,62.00
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,"1,425.00","1,206.00","1,097.00","1,293.00","1,064.00","1,505.00","1,438.00","1,198.00","1,252.00",
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,124.00,79.00,94.00,109.00,76.00,121.00,157.00,189.00,163.00,233.00
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,124.00,101.00,120.00,135.00,111.00,121.00,166.00,167.00,130.00,186.00
+RJD,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,138.00,108.00,97.00,102.00,80.00,122.00,60.00,68.00,56.00,68.00
+RJD,Number of Deaths,Suicide,,,,,,,1.00,,,
+RJD,Number of Deaths,Unexpected,,,,,,1.00,,,,
+RJD,Overtime Hours,Custody (Overtime),"24,488.41","27,386.85","29,751.88","24,276.39","14,686.85","25,090.51","18,299.65","20,092.55","30,714.24","18,154.50"
+RJD,Overtime Hours,Dental + Mental Health (Overtime),"1,274.00",893.00,318.75,88.25,171.00,127.25,106.00,153.00,128.50,104.30
+RJD,Overtime Hours,Non-Custody (Overtime),"3,701.48","3,512.75","3,839.75","3,258.25","2,882.00","3,332.00","4,227.25","3,971.25","4,883.75","3,537.50"
+RJD,Overtime Hours,Total Overtime Hours,"29,463.89","31,792.60","33,910.38","27,622.89","17,739.85","28,549.76","22,632.90","24,216.80","35,726.49","21,796.20"
+RJD,Positions - Authorized and Vacant,Authorized,"1,433.50","1,433.50","1,433.50","1,433.50","1,433.50","1,433.50","1,433.50","1,433.50","1,433.50","1,431.90"
+RJD,Positions - Authorized and Vacant,Vacant,207.70,223.70,227.10,229.10,233.10,237.10,237.10,210.10,223.10,207.90
+RJD,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,205.75","1,540.80","1,643.25","1,540.40","1,545.00","1,442.00","1,597.80","1,895.25","1,918.75","1,597.80"
+RJD,Rehabilitative Programs,Academic Education - Operational Capacity,"1,624.00","1,624.80","1,625.00","1,654.80","1,669.50","1,624.00","1,621.20","1,702.50","1,716.00","1,621.20"
+RJD,Rehabilitative Programs,Career Technical Education - Actual Enrollment,159.75,159.60,159.25,160.00,161.25,158.25,160.00,161.00,161.25,160.00
+RJD,Rehabilitative Programs,Career Technical Education - Operational Capacity,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00
+RJD,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+RJD,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+RJD,Rehabilitative Programs,Number of Associate Degrees,0.00,2.00,0.00,0.00,0.00,1.00,3.00,0.00,1.00,3.00
+RJD,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+RJD,Rehabilitative Programs,Number of GED Certificates,4.00,3.00,2.00,4.00,0.00,3.00,0.00,0.00,2.00,0.00
+RJD,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,1.00,1.00,0.00,0.00,1.00,0.00,0.00,1.00
+RJD,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+RJD,Rehabilitative Programs,Transitions - Actual Enrollment,25.50,12.40,20.25,20.80,25.50,48.25,61.40,84.00,79.25,61.40
+RJD,Rehabilitative Programs,Transitions - Operational Capacity,54.00,64.80,108.00,54.00,54.00,54.00,72.00,103.50,108.00,72.00
+RJD,Sick Leave Hours,Custody (Sick Leave),"8,480.00","8,156.42","8,484.63","7,829.85","7,137.00","9,057.25","8,167.25","8,048.25","7,303.75","8,726.00"
+SAC,Contraband,Quantity of Fentanyl Seized (grams),,,,,,10.00,,,,
+SAC,Contraband,Quantity of Heroin Seized (grams with packaging),,,,16.00,,0.68,,0.32,,3.82
+SAC,Contraband,Quantity of Heroin Seized (grams),,,,,10.00,9.56,,,,
+SAC,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,33.00,,,21.06,125.52,,2.14
+SAC,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,,,,72.00,161.46,,8.40
+SAC,Contraband,Quantity of Methamphetamine Seized (grams),,,,,,,90.00,,,
+SAC,Contraband,Quantity of Suboxone Seized (number of strips),,,,10.00,,,,,12.00,10.00
+SAC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,,,98.00,
+SAC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,,,11.68,,
+SAC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,,,,8.00
+SAC,Contraband,Suboxone Seizure Events,,,,4.00,,,,,2.00,2.00
+SAC,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,,,,2.00,2.00,2.00
+SAC,Fiscal,Actual Expenditures ($),"24,760,174.43","45,189,614.16","66,882,877.48","88,369,771.35","112,272,957.96","133,331,171.52","154,498,420.37","174,639,127.85","196,165,466.37","217,131,685.11"
+SAC,Fiscal,Institution Budget ($),"266,001,575.00","265,972,475.00","266,617,181.00","266,532,485.00","268,613,856.00","261,393,866.00","261,676,195.00","263,491,942.38","263,788,001.38","266,141,197.38"
+SAC,Incarcerated Persons Grievances and Appeals,Appeals Denied,94.00,67.00,46.00,90.00,41.00,30.00,41.00,50.00,31.00,
+SAC,Incarcerated Persons Grievances and Appeals,Appeals Granted,25.00,21.00,22.00,29.00,9.00,9.00,13.00,17.00,12.00,
+SAC,Incarcerated Persons Grievances and Appeals,Appeals Received,161.00,131.00,103.00,157.00,98.00,191.00,193.00,209.00,157.00,
+SAC,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,33.00,36.00,19.00,30.00,30.00,73.00,87.00,98.00,102.00,
+SAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,498.00,391.00,305.00,322.00,320.00,558.00,560.00,432.00,450.00,427.00
+SAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,19.00,26.00,51.00,45.00,43.00,69.00,62.00,75.00,99.00,94.00
+SAC,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,3.00,5.00,3.00,1.00,3.00,9.00,7.00,15.00,15.00,17.00
+SAC,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,,1.00,,,,,,,
+SAC,Number and Housing Level of Incarcerated Persons,Level IV,"1,162.00","1,191.00","1,234.00","1,237.00","1,231.00","1,234.00","1,218.00","1,205.00","1,206.00","1,376.00"
+SAC,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+SAC,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,287.00,325.00,319.00,302.00,311.00,299.00,303.00,266.00,276.00,11.00
+SAC,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,285.00
+SAC,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"1,929.00","2,032.00","2,147.00","2,182.00","2,244.00","2,248.00","2,113.00","2,058.00","2,075.00","2,063.00"
+SAC,Number of Deaths,Homicide,1.00,,,,,,,,,
+SAC,Number of Deaths,Unexpected,,,,,,,,,,
+SAC,Overtime Hours,Custody (Overtime),"18,875.34","22,883.11","30,184.46","24,165.15","39,049.31","20,778.26","18,658.95","19,942.33","25,834.28","17,617.10"
+SAC,Overtime Hours,Dental + Mental Health (Overtime),286.00,244.00,287.00,226.50,115.00,142.00,140.00,135.50,207.00,137.00
+SAC,Overtime Hours,Non-Custody (Overtime),"2,045.67","2,137.50","2,299.50","1,259.40","1,158.00","1,498.40","1,192.50","1,284.42","1,250.75",996.50
+SAC,Overtime Hours,Total Overtime Hours,"21,207.01","25,264.61","32,770.96","25,651.05","40,322.31","22,418.66","19,991.45","21,362.25","27,292.03","18,750.50"
+SAC,Positions - Authorized and Vacant,Authorized,"1,120.60","1,120.60","1,120.60","1,120.60","1,120.60","1,120.60","1,120.60","1,120.60","1,120.60","1,119.40"
+SAC,Positions - Authorized and Vacant,Vacant,33.30,80.10,77.90,94.10,99.10,95.10,86.10,93.10,94.10,97.90
+SAC,Rehabilitative Programs,Academic Education - Actual Enrollment,459.25,523.60,590.00,635.20,639.50,632.25,686.80,662.25,747.50,686.80
+SAC,Rehabilitative Programs,Academic Education - Operational Capacity,"1,050.75","1,062.40","1,063.00","1,057.60","1,044.00","1,044.00","1,044.00","1,044.00","1,044.00","1,044.00"
+SAC,Rehabilitative Programs,Career Technical Education - Actual Enrollment,82.75,88.60,80.25,99.40,121.25,119.75,122.80,118.00,119.50,122.80
+SAC,Rehabilitative Programs,Career Technical Education - Operational Capacity,171.00,156.60,135.00,135.00,135.00,135.00,135.00,135.00,135.00,135.00
+SAC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SAC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SAC,Rehabilitative Programs,Number of Associate Degrees,0.00,0.00,0.00,0.00,1.00,0.00,0.00,0.00,3.00,0.00
+SAC,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SAC,Rehabilitative Programs,Number of GED Certificates,0.00,4.00,3.00,4.00,4.00,2.00,4.00,3.00,5.00,4.00
+SAC,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Contraband,Commercial Ammunition,,,,,,,,,,
+SATF,Contraband,Controlled Medication Seizure Events,,,,,,,,2.00,1.00,
+SATF,Contraband,Fentanyl Seizure Events,,,,2.00,8.00,18.00,2.00,20.00,8.00,30.00
+SATF,Contraband,Heroin Seizure Events,,,,8.00,6.00,2.00,6.00,,,6.00
+SATF,Contraband,Honey Oil Seizure Events,,,,4.00,4.00,2.00,4.00,2.00,,
+SATF,Contraband,Marijuana Seizure Events,,,,,4.00,,,2.00,,2.00
+SATF,Contraband,Methamphetamine Seizure Events,,,,34.00,46.00,28.00,26.00,54.00,12.00,38.00
+SATF,Contraband,PCP Seizure Events,,,,,,,,1.00,,
+SATF,Contraband,Quantity of Cellular Telephones Seized,,,,24.00,74.00,14.00,20.00,28.00,6.00,32.00
+SATF,Contraband,Quantity of Cocaine Seized (grams with packaging),,,,,63.80,,9.80,,,
+SATF,Contraband,Quantity of Cocaine Seized (grams),,,,,,,27.60,,,
+SATF,Contraband,Quantity of Controlled Medication Seized (grams with packaging),,,,,,,,25.80,,
+SATF,Contraband,Quantity of Controlled Medication Seized (pills),,,,,,,,2.00,4.00,
+SATF,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,2.00,23.60,178.20,,111.60,318.20,210.80
+SATF,Contraband,Quantity of Fentanyl Seized (grams),,,,,6.60,,16.60,,,192.80
+SATF,Contraband,Quantity of Heroin Seized (grams with packaging),,,,126.20,167.20,55.20,23.00,,,105.40
+SATF,Contraband,Quantity of Heroin Seized (number of strips),,,,2.00,,,,,,
+SATF,Contraband,Quantity of Honey Oil Seized (grams with packaging),,,,283.80,44.00,,5.20,1.20,,
+SATF,Contraband,Quantity of Honey Oil Seized (number of strips),,,,,,0.60,,,,
+SATF,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,,14.80,,,1.00,,0.40
+SATF,Contraband,Quantity of Marijuana Seized (grams),,,,,,,,,,
+SATF,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,496.60,985.80,573.00,293.20,676.00,129.80,690.60
+SATF,Contraband,Quantity of Methamphetamine Seized (grams),,,,50.20,,,,0.20,,0.80
+SATF,Incarcerated Persons Grievances and Appeals,Appeals Denied,218.00,172.00,132.00,127.00,110.00,113.00,73.00,99.00,87.00,
+SATF,Incarcerated Persons Grievances and Appeals,Appeals Granted,56.00,52.00,44.00,43.00,35.00,34.00,35.00,34.00,26.00,
+SATF,Incarcerated Persons Grievances and Appeals,Appeals Received,354.00,316.00,261.00,246.00,239.00,298.00,300.00,327.00,336.00,
+SATF,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,50.00,62.00,59.00,68.00,81.00,134.00,173.00,173.00,213.00,
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,969.00,781.00,692.00,837.00,564.00,806.00,677.00,734.00,811.00,968.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,175.00,166.00,211.00,237.00,162.00,219.00,166.00,152.00,152.00,166.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,3.00,9.00,4.00,11.00,4.00,12.00,6.00,11.00,12.00,17.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,1.00,1.00,,,,,,,
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,76.00,69.00,52.00,77.00,64.00,71.00,56.00,78.00,78.00,81.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,"1,940.00","1,792.00","1,458.00","1,675.00","1,139.00","1,596.00","1,368.00","1,467.00","1,552.00",
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,146.00,490.00,261.00,246.00,123.00,151.00,274.00,277.00,312.00,261.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,146.00,142.00,136.00,191.00,167.00,151.00,141.00,152.00,142.00,150.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,108.00,133.00,101.00,76.00,55.00,123.00,48.00,63.00,45.00,65.00
+SATF,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,1.50,1.86,3.92,0.98,2.42,0.32,3.27,4.86,0.08
+SATF,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,4.00,2.00,
+SATF,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Number and Housing Level of Incarcerated Persons,Level I,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Number and Housing Level of Incarcerated Persons,Level II,"3,682.00","3,641.00","3,660.00","3,602.00","3,566.00","3,527.00","3,613.00","3,595.00","3,653.00","3,637.00"
+SATF,Number and Housing Level of Incarcerated Persons,Level III,849.00,879.00,883.00,885.00,876.00,843.00,627.00,735.00,742.00,783.00
+SATF,Number and Housing Level of Incarcerated Persons,Level IV,808.00,816.00,800.00,777.00,760.00,753.00,775.00,775.00,807.00,846.00
+SATF,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+SATF,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,147.00,124.00,128.00,132.00,132.00,138.00,131.00,129.00,135.00,36.00
+SATF,Rehabilitative Programs,Academic Education - Operational Capacity,"1,913.00","1,902.00","1,902.00","1,902.00","1,942.25","1,901.00","1,901.00","1,928.00","1,989.50","1,901.00"
+SATF,Rehabilitative Programs,Career Technical Education - Actual Enrollment,158.75,178.80,202.25,207.60,212.75,226.00,220.60,180.50,198.25,220.60
+SATF,Rehabilitative Programs,Career Technical Education - Operational Capacity,216.00,216.00,216.00,230.40,229.50,243.00,243.00,243.00,243.00,243.00
+SATF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,27.50,24.40,35.00,35.00,33.25,35.50,38.60,44.25,53.25,38.60
+SATF,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,37.50,32.00,37.50,37.50,40.00,40.00,40.00,47.50,57.50,40.00
+SATF,Rehabilitative Programs,Number of Associate Degrees,0.00,1.00,0.00,0.00,0.00,1.00,0.00,0.00,0.00,0.00
+SATF,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Rehabilitative Programs,Number of GED Certificates,5.00,6.00,0.00,6.00,11.00,2.00,1.00,0.00,4.00,1.00
+SATF,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SATF,Rehabilitative Programs,Transitions - Actual Enrollment,108.75,135.80,129.00,128.60,116.75,137.75,146.80,111.75,102.00,146.80
+SATF,Rehabilitative Programs,Transitions - Operational Capacity,135.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00,162.00
+SATF,Sick Leave Hours,Custody (Sick Leave),"6,285.25","6,813.75","5,969.25","6,194.12","5,731.50","7,777.25","3,566.00","6,098.80","6,427.75","6,400.80"
+SATF,Sick Leave Hours,Dental + Mental Health (Sick Leave),888.00,"1,149.50",953.75,960.75,746.00,949.00,785.77,839.25,835.50,965.30
+SATF,Sick Leave Hours,Non-Custody (Sick Leave),"1,899.25","1,898.00","2,141.25","1,858.25","2,181.25","2,331.75","2,267.75","1,885.00","2,534.00","2,264.00"
+SATF,Sick Leave Hours,Total Sick Leave Hours,"9,072.50","9,861.25","9,064.25","9,013.12","8,658.75","11,058.00","6,619.52","8,823.05","9,797.25","9,630.00"
+SATF,Use of Force (UOF),Total UOF Incidents,74.00,59.00,53.00,49.00,50.00,62.00,47.00,36.00,50.00,167.00
+SCC,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,58.50,49.40,39.25,20.60,25.00,30.50,30.80,79.25,126.00,118.50
+SCC,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,72.00,72.00,69.00,69.00,36.00,45.00,48.00,87.00,144.00,48.00
+SCC,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,119.75,121.40,128.00,156.20,162.25,162.75,160.80,148.50,137.00,129.75
+SCC,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,159.00,133.20,148.50,181.80,196.50,186.00,186.00,180.75,183.00,186.00
+SCC,Contraband,Cellular Telephone Seizure Events,,,,72.00,120.00,158.00,72.00,94.00,174.00,124.00
+SCC,Contraband,Cocaine Seizure Events,,,,,,,,2.00,,
+SCC,Contraband,Quantity of Honey Oil Seized (grams),,,,,,,4.80,,0.20,10.78
+SCC,Contraband,Quantity of Honey Oil Seized (number of strips),,,,,12.00,,,,,
+SCC,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,16.12,72.20,415.60,219.40,89.20,,
+SCC,Contraband,Quantity of Marijuana Seized (grams),,,,43.60,7.00,35.20,,,6.00,21.00
+SCC,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,59.00,204.02,329.40,15.18,232.60,90.40,325.40
+SCC,Contraband,Quantity of Methamphetamine Seized (grams),,,,176.60,10.84,17.90,304.20,320.40,293.00,402.60
+SCC,Contraband,Quantity of Methamphetamine Seized (number of strips),,,,,2.00,,,,,
+SCC,Contraband,Quantity of Suboxone Seized (grams),,,,94.00,,,6.00,,1.40,
+SCC,Contraband,Quantity of Suboxone Seized (number of strips),,,,40.00,28.20,22.00,18.00,32.00,132.00,28.00
+SCC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,4.40,192.60,18.80,,12.60,0.20
+SCC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,596.20,549.20,173.00,104.00,181.80,93.80,80.60
+SCC,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,22.00,56.00,8.00,32.00,52.00,18.00,26.00
+SCC,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,739.60,"1,324.20","1,817.00",9.00,228.20,"7,081.60",947.00
+SCC,Contraband,Quantity of Tobacco Seized (grams),,,,"15,729.78",7.60,338.60,15.80,4.00,"1,368.20",23.40
+SCC,Contraband,Suboxone Seizure Events,,,,14.00,18.00,10.00,8.00,8.00,20.00,16.00
+SCC,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,22.00,40.00,24.00,28.00,32.00,16.00,14.00
+SCC,Contraband,Tobacco Seizure Events,,,,40.00,18.00,10.00,16.00,12.00,26.00,14.00
+SCC,Fiscal,Actual Expenditures ($),"34,818,212.68","61,445,827.95","86,400,628.85","111,669,390.91","134,253,384.84","156,404,363.92","177,947,276.14","202,700,133.27","222,166,662.36","239,043,068.07"
+SCC,Fiscal,Institution Budget ($),"263,122,694.00","263,139,011.00","263,648,387.00","263,832,792.00","265,170,204.00","251,580,250.00","251,668,322.00","253,541,723.69","253,024,689.69","260,349,581.69"
+SCC,Incarcerated Persons Grievances and Appeals,Appeals Denied,25.00,21.00,21.00,34.00,24.00,34.00,15.00,23.00,22.00,
+SCC,Incarcerated Persons Grievances and Appeals,Appeals Granted,11.00,4.00,6.00,6.00,4.00,5.00,7.00,9.00,9.00,
+SCC,Incarcerated Persons Grievances and Appeals,Appeals Received,50.00,38.00,48.00,55.00,37.00,61.00,38.00,53.00,55.00,
+SCC,Number and Housing Level of Incarcerated Persons,Level II,826.00,757.00,772.00,746.00,846.00,842.00,878.00,836.00,776.00,702.00
+SCC,Number and Housing Level of Incarcerated Persons,Level III,720.00,690.00,662.00,635.00,629.00,644.00,667.00,669.00,657.00,631.00
+SCC,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SCC,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+SCC,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,114.00,96.00,92.00,102.00,92.00,96.00,100.00,130.00,122.00,0.00
+SCC,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,112.00
+SCC,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"4,048.00","3,965.00","4,004.00","4,031.00","4,142.00","4,164.00","4,170.00","4,180.00","4,110.00","4,026.00"
+SCC,Number of Deaths,Expected,,,,,,,,,,
+SCC,Overtime Hours,Custody (Overtime),"81,260.61","78,040.18","70,734.30","33,286.85","27,457.29","33,284.49","73,415.67","32,758.73","28,090.98","23,655.10"
+SCC,Overtime Hours,Dental + Mental Health (Overtime),51.00,215.00,15.00,46.00,38.00,45.00,44.00,29.50,24.00,25.00
+SCC,Overtime Hours,Non-Custody (Overtime),"6,764.25","3,635.75","3,111.25","3,291.50","2,487.25","4,155.75","3,956.25","3,301.00","5,019.50","2,609.80"
+SCC,Overtime Hours,Total Overtime Hours,"88,075.86","81,890.93","73,860.55","36,624.35","29,982.54","37,485.24","77,415.92","36,089.23","33,134.48","26,289.90"
+SCC,Positions - Authorized and Vacant,Authorized,"1,185.70","1,185.70","1,185.70","1,185.70","1,185.70","1,185.70","1,185.70","1,185.70","1,185.70","1,182.20"
+SCC,Positions - Authorized and Vacant,Vacant,133.40,124.40,124.40,155.20,146.20,148.20,132.20,139.20,148.20,142.20
+SCC,Rehabilitative Programs,Academic Education - Actual Enrollment,951.75,858.20,707.75,890.80,917.75,961.75,734.60,667.75,896.25,734.60
+SCC,Rehabilitative Programs,Academic Education - Operational Capacity,"1,183.50","1,224.00","1,278.00","1,278.00","1,278.00","1,278.00","1,278.00","1,314.00","1,305.00","1,278.00"
+SCC,Rehabilitative Programs,Career Technical Education - Actual Enrollment,56.25,34.40,31.00,33.20,42.50,61.50,82.80,91.25,115.75,82.80
+SCC,Rehabilitative Programs,Career Technical Education - Operational Capacity,81.00,81.00,74.25,54.00,74.25,94.50,118.80,135.00,135.00,118.80
+SCC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SCC,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SCC,Rehabilitative Programs,Number of Associate Degrees,0.00,0.00,0.00,0.00,1.00,0.00,0.00,0.00,0.00,0.00
+SCC,Rehabilitative Programs,Number of Bachelors Degrees,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SOL,Contraband,Fentanyl Seizure Events,,,,2.00,,,,,,
+SOL,Contraband,Heroin Seizure Events,,,,10.00,,2.00,,2.00,,2.00
+SOL,Contraband,Marijuana Seizure Events,,,,48.00,6.00,18.00,18.00,24.00,6.00,8.00
+SOL,Contraband,Methamphetamine Seizure Events,,,,20.00,4.00,,6.00,8.00,,10.00
+SOL,Contraband,Quantity of Cellular Telephones Seized,,,,78.00,36.00,70.00,70.00,106.00,40.00,156.00
+SOL,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,9.00,,,,,,
+SOL,Contraband,Quantity of Heroin Seized (grams with packaging),,,,11.20,,11.00,,1.40,,28.20
+SOL,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,328.60,3.60,566.40,411.80,123.20,7.00,"1,076.60"
+SOL,Contraband,Quantity of Marijuana Seized (grams),,,,6.00,0.04,,,,,
+SOL,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,13.98,"1,142.20",,20.80,10.80,,696.80
+SOL,Contraband,Quantity of Methamphetamine Seized (grams),,,,2.00,,,,,,2.00
+SOL,Contraband,Quantity of Methamphetamine Seized (number of strips),,,,,,,,,,
+SOL,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,,2.00,,126.00
+SOL,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,,,,14.00
+SOL,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,1.60,,,,,,
+SOL,Contraband,Suboxone Seizure Events,,,,,,,,2.00,,10.00
+SOL,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,,,,,,,2.00
+SOL,Contraband,Tobacco Seizure Events,,,,2.00,,,,,,
+SOL,Fiscal,Actual Expenditures ($),"21,161,764.63","37,710,476.29","55,114,268.85","71,676,772.55","89,763,629.14","107,945,598.49","123,610,312.83","139,122,085.33","155,891,298.84","171,662,238.71"
+SOL,Fiscal,Institution Budget ($),"217,130,598.00","217,130,624.00","217,304,936.00","217,432,210.00","218,984,532.00","205,440,334.00","205,488,732.00","206,971,799.25","207,145,067.25","206,563,573.25"
+SOL,Incarcerated Persons Grievances and Appeals,Appeals Denied,50.00,35.00,59.00,35.00,29.00,31.00,21.00,24.00,17.00,
+SOL,Incarcerated Persons Grievances and Appeals,Appeals Granted,4.00,5.00,14.00,8.00,11.00,9.00,10.00,8.00,8.00,
+SOL,Number and Housing Level of Incarcerated Persons,Level I,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SOL,Number and Housing Level of Incarcerated Persons,Level II,"2,463.00","2,390.00","2,319.00","2,239.00","2,184.00","2,245.00","2,214.00","2,193.00","2,198.00","2,160.00"
+SOL,Number and Housing Level of Incarcerated Persons,Level III,"1,513.00","1,520.00","1,550.00","1,553.00","1,566.00","1,545.00","1,547.00","1,556.00","1,548.00","1,518.00"
+SOL,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SOL,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+SOL,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,110.00,134.00,135.00,110.00,133.00,134.00,121.00,126.00,136.00,6.00
+SOL,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,105.00
+SOL,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"4,086.00","4,044.00","4,004.00","3,902.00","3,883.00","3,924.00","3,882.00","3,875.00","3,882.00","3,789.00"
+SOL,Number of Deaths,Unexpected,,1.00,,,1.00,,,,,
+SOL,Overtime Hours,Custody (Overtime),"19,529.45","18,798.58","18,892.25","18,162.75","15,395.48","20,772.34","12,905.27","15,352.81","20,027.08","14,340.70"
+SOL,Overtime Hours,Dental + Mental Health (Overtime),54.00,83.25,73.25,5.00,0.00,29.00,278.54,18.25,0.00,0.00
+SOL,Overtime Hours,Non-Custody (Overtime),"2,585.00","4,622.50","3,034.92","1,950.70","1,763.25","2,205.50","4,459.00","2,203.25","2,923.75","2,299.50"
+SOL,Overtime Hours,Total Overtime Hours,"22,168.45","23,504.33","22,000.42","20,118.45","17,158.73","23,006.84","17,642.81","17,574.31","22,950.83","16,640.20"
+SOL,Positions - Authorized and Vacant,Authorized,"1,075.50","1,075.50","1,075.50","1,075.50","1,075.50","1,075.50","1,075.50","1,075.50","1,075.50","1,074.40"
+SOL,Positions - Authorized and Vacant,Vacant,114.10,121.10,120.10,124.50,124.50,129.50,115.50,128.50,122.50,128.40
+SOL,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,057.25","1,041.60","1,232.25","1,192.40","1,162.00",939.25,"1,182.80","1,297.25","1,319.75","1,182.80"
+SOL,Rehabilitative Programs,Academic Education - Operational Capacity,"1,326.00","1,326.00","1,326.00","1,272.00","1,272.00","1,272.00","1,272.00","1,272.00","1,326.00","1,272.00"
+SOL,Rehabilitative Programs,Career Technical Education - Actual Enrollment,125.00,122.60,127.25,143.20,140.25,113.75,77.60,78.00,81.00,77.60
+SOL,Rehabilitative Programs,Career Technical Education - Operational Capacity,135.00,135.00,137.50,151.60,148.50,121.50,81.00,81.00,83.25,81.00
+SOL,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SOL,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SOL,Rehabilitative Programs,Number of Associate Degrees,3.00,4.00,2.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SQ,Contraband,Cellular Telephone Seizure Events,,,,8.00,14.00,,6.00,,,18.00
+SQ,Contraband,Cocaine Seizure Events,,,,,,,,,,
+SQ,Contraband,Controlled Medication Seizure Events,,,,,,,,,,1.00
+SQ,Contraband,Heroin Seizure Events,,,,,4.00,,,,,4.00
+SQ,Contraband,Marijuana Seizure Events,,,,4.00,,,,,,6.00
+SQ,Contraband,Methamphetamine Seizure Events,,,,4.00,4.00,,2.00,,,4.00
+SQ,Contraband,Quantity of Cellular Telephones Seized,,,,8.00,18.00,,6.00,,,18.00
+SQ,Contraband,Quantity of Cocaine Seized (grams with packaging),,,,,,,,,,
+SQ,Contraband,Quantity of Controlled Medication Seized (grams),,,,,,,,,,0.80
+SQ,Contraband,Quantity of Heroin Seized (grams with packaging),,,,,8.46,,,,,45.68
+SQ,Contraband,Quantity of Marijuana Seized (grams with packaging),,,,82.48,,,,,,25.44
+SQ,Contraband,Quantity of Methamphetamine Seized (grams with packaging),,,,15.60,226.12,,0.58,,,2.48
+SQ,Contraband,Quantity of Methamphetamine Seized (grams),,,,,2.00,,,,,
+SQ,Contraband,Quantity of Suboxone Seized (grams with packaging),,,,,,,,,,7.34
+SQ,Contraband,Quantity of Suboxone Seized (number of strips),,,,16.00,19.00,,8.00,,,4.00
+SQ,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,,,,1.82
+SQ,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,,,,,,,
+SQ,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (number of strips),,,,,,,,,,
+SQ,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,1.46,,,,,
+SQ,Contraband,Quantity of Tobacco Seized (grams),,,,,236.22,,,,,
+SQ,Contraband,Suboxone Seizure Events,,,,6.00,14.00,,4.00,,,6.00
+SQ,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,19.00,19.00,20.00,19.00,25.00,13.00,14.00,11.00,4.00,4.00
+SQ,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,3.00,0.00,0.00,2.00,4.00,0.00,3.00,0.00,1.00,0.00
+SQ,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,4.89,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SQ,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+SQ,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SQ,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SQ,Number and Housing Level of Incarcerated Persons,Level I,7.00,7.00,7.00,7.00,6.00,5.00,5.00,5.00,4.00,3.00
+SQ,Number and Housing Level of Incarcerated Persons,Level II,"3,178.00","3,103.00","3,053.00","2,958.00","2,892.00","2,844.00","2,828.00","2,773.00","2,740.00","2,683.00"
+SQ,Number and Housing Level of Incarcerated Persons,Level III,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SQ,Number and Housing Level of Incarcerated Persons,Level IV,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SQ,Number and Housing Level of Incarcerated Persons,Level VI,,,,,,,,,,
+SQ,Number and Housing Level of Incarcerated Persons,Non Level - Specific Beds,110.00,111.00,92.00,78.00,94.00,96.00,98.00,101.00,121.00,47.00
+SQ,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,72.00
+SQ,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"3,295.00","3,221.00","3,152.00","3,043.00","2,992.00","2,945.00","2,931.00","2,879.00","2,865.00","2,805.00"
+SQ,Number of Deaths,Expected,,1.00,,,,,,,,
+SQ,Number of Deaths,Missing,,,1.00,,,1.00,,,,
+SQ,Number of Deaths,Suicide,,,,,,,,,1.00,
+SQ,Number of Deaths,Unexpected,,,,,,1.00,,,1.00,
+SQ,Overtime Hours,Custody (Overtime),"6,966.27","7,104.59","9,284.93","5,399.24","10,283.67","6,082.60","3,764.77","4,147.41","4,353.42","3,171.70"
+SQ,Overtime Hours,Dental + Mental Health (Overtime),110.00,200.00,172.75,23.00,237.00,51.75,99.50,96.50,214.50,62.50
+SQ,Overtime Hours,Non-Custody (Overtime),"2,555.75","5,920.00","2,297.75","2,377.00","2,106.25","2,005.00","6,108.95","3,066.50","2,387.25","1,701.50"
+SQ,Overtime Hours,Total Overtime Hours,"9,632.02","13,224.59","11,755.43","7,799.24","12,626.92","8,139.35","9,973.22","7,310.41","6,955.17","4,935.70"
+SQ,Positions - Authorized and Vacant,Authorized,"1,195.60","1,195.60","1,195.60","1,195.60","1,195.60","1,195.60","1,195.60","1,195.60","1,195.60","1,194.60"
+SQ,Positions - Authorized and Vacant,Vacant,2.00,12.00,22.40,99.60,131.60,137.60,138.60,143.60,147.60,142.60
+SQ,Sick Leave Hours,Custody (Sick Leave),"7,927.00","8,128.75","7,802.25","7,149.00","5,898.00","8,401.50","6,556.00","5,370.25","6,524.50","6,826.30"
+SQ,Sick Leave Hours,Dental + Mental Health (Sick Leave),318.75,343.00,281.50,282.00,196.25,282.50,437.00,463.00,534.00,418.00
+SQ,Sick Leave Hours,Non-Custody (Sick Leave),"1,710.50","1,503.75","1,264.25","1,186.75","1,221.75","2,015.00","1,539.75","1,824.75","1,307.75","1,417.50"
+SQ,Sick Leave Hours,Total Sick Leave Hours,"9,956.25","9,975.50","9,348.00","8,617.75","7,316.00","10,699.00","8,532.75","7,658.00","8,366.25","8,661.80"
+SQ,Use of Force (UOF),Total UOF Incidents,11.00,13.00,11.00,6.00,8.00,6.00,7.00,7.00,4.00,5.00
+SVSP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,134.00,121.20,109.75,117.00,107.00,123.50,150.00,141.25,165.00,151.50
+SVSP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,249.00,185.40,171.00,171.00,202.50,216.00,213.00,240.00,270.00,213.00
+SVSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,154.00,214.00,234.75,214.60,200.75,208.75,191.80,176.25,184.25,198.50
+SVSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,293.75,362.60,365.00,368.00,371.75,383.00,372.40,331.25,344.00,372.40
+SVSP,Contraband,Cellular Telephone Seizure Events,,,,34.00,50.00,38.00,40.00,72.00,108.00,32.00
+SVSP,Contraband,Cocaine Seizure Events,,,,,,2.00,,4.00,,
+SVSP,Contraband,Controlled Medication Seizure Events,,,,1.00,,,,,,
+SVSP,Contraband,Fentanyl Seizure Events,,,,4.00,2.00,6.00,4.00,4.00,2.00,
+SVSP,Contraband,Heroin Seizure Events,,,,20.00,6.00,14.00,16.00,18.00,8.00,2.00
+SVSP,Contraband,Honey Oil Seizure Events,,,,,,,,,,
+SVSP,Contraband,Marijuana Seizure Events,,,,14.00,14.00,2.00,12.00,28.00,20.00,4.00
+SVSP,Contraband,Methamphetamine Seizure Events,,,,12.00,26.00,18.00,50.00,36.00,8.00,18.00
+SVSP,Contraband,Quantity of Cellular Telephones Seized,,,,46.00,56.00,44.00,46.00,72.00,144.00,34.00
+SVSP,Contraband,Quantity of Cocaine Seized (grams with packaging),,,,,,,,24.96,,
+SVSP,Contraband,Quantity of Cocaine Seized (grams),,,,,,618.80,,,,
+SVSP,Contraband,Quantity of Controlled Medication Seized (number of strips),,,,112.00,,,,,,
+SVSP,Contraband,Quantity of Controlled Medication Seized (pills),,,,,,,,,,
+SVSP,Contraband,Quantity of Fentanyl Seized (grams with packaging),,,,1.00,22.96,0.04,166.80,39.64,69.74,
+SVSP,Contraband,Quantity of Tobacco Seized (grams),,,,,72.82,263.40,10.14,725.64,633.72,
+SVSP,Contraband,Suboxone Seizure Events,,,,16.00,22.00,16.00,4.00,18.00,28.00,12.00
+SVSP,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,4.00,,6.00,8.00,,
+SVSP,Contraband,Tobacco Seizure Events,,,,,2.00,2.00,6.00,18.00,16.00,
+SVSP,Fiscal,Actual Expenditures ($),"24,172,001.24","50,919,496.25","73,470,345.51","96,867,185.65","121,207,773.40","143,263,347.29","167,491,896.05","189,617,140.48","212,741,875.97","235,141,860.80"
+SVSP,Fiscal,Institution Budget ($),"266,908,688.00","266,893,351.00","267,300,073.00","283,319,184.00","284,251,754.00","269,463,495.00","268,922,920.00","269,856,610.69","270,595,389.69","282,806,984.69"
+SVSP,Incarcerated Persons Grievances and Appeals,Appeals Denied,153.00,120.00,93.00,131.00,118.00,103.00,99.00,75.00,74.00,
+SVSP,Incarcerated Persons Grievances and Appeals,Appeals Granted,26.00,14.00,27.00,33.00,35.00,24.00,35.00,24.00,14.00,
+SVSP,Incarcerated Persons Grievances and Appeals,Appeals Received,249.00,216.00,173.00,223.00,263.00,293.00,314.00,302.00,240.00,
+SVSP,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,33.00,55.00,33.00,41.00,86.00,136.00,160.00,184.00,135.00,
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,631.00,559.00,480.00,496.00,528.00,621.00,704.00,611.00,598.00,585.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,20.00,26.00,86.00,49.00,38.00,54.00,52.00,50.00,55.00,55.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,22.00,19.00,18.00,11.00,4.00,12.00,15.00,18.00,10.00,24.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,,1.00,,,,,2.00,,
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,61.00,43.00,57.00,80.00,55.00,98.00,60.00,74.00,53.00,61.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,"1,215.00","1,046.00","1,041.00","1,017.00","1,016.00","1,265.00","1,304.00","1,284.00","1,141.00",
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,134.00,133.00,176.00,172.00,179.00,115.00,267.00,279.00,235.00,202.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,134.00,121.00,102.00,97.00,81.00,115.00,128.00,172.00,126.00,124.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,184.00,142.00,120.00,110.00,128.00,140.00,74.00,74.00,63.00,56.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,2.00,3.00,1.00,2.00,3.00,3.00,4.00,4.00,0.00,0.00
+SVSP,Incarcerated Persons Grievances and Appeals,Grievances Pending Legal Matter,,,,,,,,,1.00,
+SVSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,1.60,2.10,2.07,2.24,2.64,3.94,0.52,1.06,16.55,3.57
+SVSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,2.00,
+SVSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Overtime Hours,Dental + Mental Health (Overtime),417.75,467.75,536.00,407.00,409.00,506.25,348.43,336.75,310.75,154.80
+SVSP,Overtime Hours,Non-Custody (Overtime),"3,030.25","6,135.00","3,314.25","2,678.25","2,743.09","3,270.00","6,007.51","2,487.25","3,162.67","2,134.50"
+SVSP,Overtime Hours,Total Overtime Hours,"31,072.66","34,932.59","37,845.72","29,371.00","28,694.64","34,997.82","29,739.62","26,127.74","30,081.46","21,846.80"
+SVSP,Positions - Authorized and Vacant,Authorized,"1,205.40","1,205.40","1,205.40","1,205.40","1,205.40","1,205.40","1,205.40","1,205.40","1,205.40","1,205.40"
+SVSP,Positions - Authorized and Vacant,Vacant,101.90,113.90,129.90,136.90,143.90,152.90,161.90,155.90,154.90,167.70
+SVSP,Rehabilitative Programs,Academic Education - Actual Enrollment,758.75,689.60,"1,075.50","1,090.60","1,094.25","1,097.00","1,062.20",864.00,757.00,"1,062.20"
+SVSP,Rehabilitative Programs,Academic Education - Operational Capacity,"1,110.50","1,083.40","1,105.00","1,137.40","1,168.00","1,195.00","1,169.80","1,105.00","1,105.00","1,169.80"
+SVSP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,70.00,51.80,26.25,23.20,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Career Technical Education - Operational Capacity,83.00,59.40,27.00,27.00,0.00,0.00,0.00,40.50,54.00,0.00
+SVSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Number of Associate Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Number of GED Certificates,0.00,7.00,1.00,0.00,1.00,1.00,4.00,0.00,0.00,4.00
+SVSP,Rehabilitative Programs,Number of High School Diplomas,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+SVSP,Rehabilitative Programs,Transitions - Actual Enrollment,33.75,31.60,33.50,32.00,34.00,34.25,44.80,51.00,35.00,44.80
+SVSP,Rehabilitative Programs,Transitions - Operational Capacity,36.00,36.00,36.00,36.00,36.00,36.00,46.80,54.00,54.00,46.80
+SVSP,Sick Leave Hours,Custody (Sick Leave),"8,504.00","8,634.25","8,089.00","7,226.25","7,514.00","8,453.75","4,517.75","5,732.25","7,005.50","7,032.80"
+SVSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),526.75,737.50,930.25,554.75,565.25,561.50,730.00,589.50,607.50,637.30
+SVSP,Sick Leave Hours,Non-Custody (Sick Leave),"2,268.00","2,388.25","2,303.21","2,679.05","1,916.92","2,235.05","2,408.67","1,945.73","2,171.25","1,701.50"
+SVSP,Sick Leave Hours,Total Sick Leave Hours,"11,298.75","11,760.00","11,322.46","10,460.05","9,996.17","11,250.30","7,656.42","8,267.48","9,784.25","9,371.60"
+VSP,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,49.40,,,,,,
+VSP,Contraband,Tobacco Seizure Events,,,,2.00,,,,,,
+VSP,Fiscal,Actual Expenditures ($),"14,962,656.50","30,514,391.77","45,363,852.82","60,740,635.32","76,851,093.72","92,515,362.83","107,605,816.58","122,085,154.31","137,391,235.15","151,941,704.50"
+VSP,Fiscal,Institution Budget ($),"185,598,691.00","185,644,038.00","185,784,401.00","186,514,989.00","187,833,707.00","183,590,210.00","183,628,300.00","184,792,528.00","185,147,687.00","183,301,341.00"
+VSP,Incarcerated Persons Grievances and Appeals,Appeals Denied,59.00,55.00,36.00,65.00,48.00,45.00,35.00,17.00,14.00,
+VSP,Incarcerated Persons Grievances and Appeals,Appeals Granted,11.00,7.00,8.00,7.00,9.00,7.00,9.00,3.00,5.00,
+VSP,Incarcerated Persons Grievances and Appeals,Appeals Received,83.00,86.00,70.00,86.00,75.00,68.00,79.00,58.00,73.00,
+VSP,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,8.00,18.00,23.00,10.00,15.00,13.00,30.00,37.00,54.00,
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,187.00,204.00,193.00,192.00,131.00,141.00,165.00,161.00,168.00,170.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,124.00,109.00,74.00,78.00,40.00,57.00,61.00,61.00,58.00,64.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,3.00,3.00,4.00,6.00,6.00,7.00,6.00,4.00,3.00,0.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,58.00,42.00,36.00,58.00,41.00,39.00,33.00,37.00,40.00,46.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,546.00,498.00,449.00,536.00,375.00,689.00,468.00,432.00,432.00,
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,82.00,54.00,66.00,95.00,86.00,49.00,126.00,94.00,77.00,82.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Rejected,82.00,67.00,51.00,74.00,54.00,49.00,69.00,63.00,75.00,91.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Staff Misconduct,24.00,19.00,25.00,33.00,17.00,16.00,8.00,12.00,10.00,14.00
+VSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Time Expired,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.00,0.00
+VSP,Lockdowns and Modified Programs,Incarcerated Persons-Days on Modified Programs,0.00,0.00,0.00,11.01,0.00,0.28,0.00,0.00,0.00,0.00
+VSP,Lockdowns and Modified Programs,Lockdowns,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,
+VSP,Number and Housing Level of Incarcerated Persons,Camps,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Number and Housing Level of Incarcerated Persons,Condemned,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Number and Housing Level of Incarcerated Persons,Level I,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Number and Housing Level of Incarcerated Persons,Level II,"3,143.00","3,196.00","3,238.00","3,246.00","3,220.00","3,143.00","3,084.00","3,036.00","2,967.00","2,965.00"
+VSP,Number and Housing Level of Incarcerated Persons,Level III,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Positions - Authorized and Vacant,Vacant,47.50,51.50,51.50,63.70,66.70,71.70,72.70,75.70,69.70,77.50
+VSP,Rehabilitative Programs,Academic Education - Actual Enrollment,"1,487.50","1,611.60","1,877.75","1,896.40","1,927.50","1,914.50","1,692.00","1,779.50","1,774.00","1,692.00"
+VSP,Rehabilitative Programs,Academic Education - Operational Capacity,"1,536.00","1,536.00","1,536.00","1,536.00","1,536.00","1,576.50","1,557.60","1,549.50","1,590.00","1,557.60"
+VSP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,358.00,319.00,332.00,402.00,396.00,396.00,439.40,453.25,452.25,439.40
+VSP,Rehabilitative Programs,Career Technical Education - Operational Capacity,378.00,329.40,337.50,416.60,432.00,452.25,462.20,463.00,463.00,462.20
+VSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Rehabilitative Programs,Number of Associate Degrees,1.00,3.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,2.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Rehabilitative Programs,Number of GED Certificates,4.00,8.00,9.00,4.00,3.00,2.00,0.00,7.00,11.00,0.00
+VSP,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,3.00,0.00,1.00,0.00,0.00,2.00,1.00,0.00
+VSP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+VSP,Rehabilitative Programs,Transitions - Actual Enrollment,117.75,115.20,108.75,107.40,105.50,104.50,98.00,105.75,106.00,98.00
+VSP,Rehabilitative Programs,Transitions - Operational Capacity,118.50,122.00,122.00,113.60,108.00,108.00,108.00,108.00,108.00,108.00
+VSP,Sick Leave Hours,Custody (Sick Leave),"4,496.50","4,583.75","3,909.75","4,545.50","4,294.00","4,339.50","1,847.75","2,783.50","3,577.50","4,134.30"
+VSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),496.50,738.25,589.25,718.75,435.25,487.75,573.25,550.25,639.50,718.30
+VSP,Sick Leave Hours,Non-Custody (Sick Leave),"1,534.75","1,237.25","1,609.25","1,521.25","1,308.75","1,379.25","1,476.75","1,432.75","1,169.50","1,225.80"
+VSP,Sick Leave Hours,Total Sick Leave Hours,"6,527.75","6,559.25","6,108.25","6,785.50","6,038.00","6,206.50","3,897.75","4,766.50","5,386.50","6,078.30"
+VSP,Use of Force (UOF),Total UOF Incidents,15.00,14.00,8.00,10.00,11.00,6.00,4.00,10.00,9.00,12.00
+WSP,Cognitive Behavioral Intervention,Life Skills - Actual Enrollment,87.75,84.80,116.25,131.00,117.50,116.50,126.60,136.00,137.75,133.75
+WSP,Cognitive Behavioral Intervention,Life Skills - Operational Capacity,215.00,235.40,281.00,281.00,147.00,156.00,182.40,213.00,216.00,182.40
+WSP,Cognitive Behavioral Intervention,Outpatient - Actual Enrollment,91.25,98.00,106.50,127.00,147.75,148.75,130.20,137.25,133.50,132.25
+WSP,Cognitive Behavioral Intervention,Outpatient - Operational Capacity,168.00,203.60,247.25,172.20,177.00,186.00,195.60,206.25,210.00,195.60
+WSP,Contraband,Quantity of Methamphetamine Seized (grams),,,,,,,,,,
+WSP,Contraband,Quantity of Suboxone Seized (grams),,,,,,,,,,
+WSP,Contraband,Quantity of Suboxone Seized (number of strips),,,,,,,,,,
+WSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams with packaging),,,,,,,,,,
+WSP,Contraband,Quantity of Synthetic Cannabinoid / Spice Seized (grams),,,,12.00,,,,,,
+WSP,Contraband,Quantity of Tobacco Seized (grams with packaging),,,,,,,,,,
+WSP,Contraband,Quantity of Tobacco Seized (grams),,,,4.00,,,,,,
+WSP,Contraband,Suboxone Seizure Events,,,,,,,,,,
+WSP,Contraband,Synthetic Cannabinoid / Spice Seizure Events,,,,2.00,,,,,,
+WSP,Contraband,Tobacco Seizure Events,,,,2.00,,,,,,
+WSP,Fiscal,Actual Expenditures ($),"21,253,503.13","42,263,293.41","62,669,293.13","83,475,140.15","104,727,354.24","127,713,227.96","148,571,317.26","169,012,385.85","189,837,475.13","209,990,995.24"
+WSP,Fiscal,Institution Budget ($),"251,981,294.00","252,006,507.00","252,191,579.00","253,793,266.00","255,038,882.00","246,118,833.00","247,077,120.00","248,517,474.69","249,272,989.69","249,229,938.69"
+WSP,Incarcerated Persons Grievances and Appeals,Appeals Denied,67.00,63.00,49.00,35.00,50.00,45.00,46.00,43.00,28.00,
+WSP,Incarcerated Persons Grievances and Appeals,Appeals Granted,14.00,7.00,14.00,12.00,14.00,18.00,14.00,12.00,9.00,
+WSP,Incarcerated Persons Grievances and Appeals,Appeals Received,97.00,88.00,94.00,75.00,78.00,101.00,118.00,107.00,66.00,
+WSP,Incarcerated Persons Grievances and Appeals,Appeals Time Expired,13.00,16.00,29.00,25.00,13.00,33.00,52.00,46.00,28.00,
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Denied,545.00,466.00,526.00,527.00,496.00,536.00,556.00,573.00,384.00,579.00
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Granted,333.00,227.00,177.00,149.00,95.00,113.00,148.00,96.00,62.00,73.00
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims No Jurisdiction,3.00,4.00,19.00,11.00,15.00,10.00,7.00,9.00,3.00,10.00
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Pending,,,,,,,,,1.00,
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Reassigned,10.00,15.00,20.00,16.00,15.00,16.00,13.00,28.00,12.00,14.00
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Received,"1,110.00",871.00,"1,039.00",922.00,795.00,853.00,902.00,953.00,630.00,
+WSP,Incarcerated Persons Grievances and Appeals,Grievance Claims Redirected,111.00,54.00,90.00,68.00,60.00,68.00,67.00,93.00,59.00,115.00
+WSP,Number and Housing Level of Incarcerated Persons,Restricted Housing,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,75.00
+WSP,Number and Housing Level of Incarcerated Persons,Total Number of Incarcerated Persons,"3,457.00","3,314.00","3,444.00","3,461.00","3,228.00","3,385.00","3,834.00","3,819.00","3,644.00","3,603.00"
+WSP,Number of Deaths,Unexpected,,,,,,,,,1.00,
+WSP,Overtime Hours,Custody (Overtime),"9,325.20","10,455.29","8,947.24","7,440.37","6,301.48","10,491.53","3,600.40","4,456.70","5,225.36","3,956.10"
+WSP,Overtime Hours,Dental + Mental Health (Overtime),220.25,113.42,166.42,130.25,151.50,129.50,125.75,110.50,122.75,82.30
+WSP,Overtime Hours,Non-Custody (Overtime),"1,605.25","2,361.75","1,647.25","1,408.75","1,154.25","1,386.50",651.25,749.25,887.25,761.30
+WSP,Overtime Hours,Total Overtime Hours,"11,150.70","12,930.46","10,760.91","8,979.37","7,607.23","12,007.53","4,377.40","5,316.45","6,235.36","4,799.60"
+WSP,Positions - Authorized and Vacant,Authorized,"1,179.30","1,179.30","1,179.30","1,179.30","1,179.30","1,179.30","1,179.30","1,179.30","1,179.30","1,178.10"
+WSP,Positions - Authorized and Vacant,Vacant,53.70,49.70,45.70,52.90,52.90,159.30,163.30,160.30,166.30,171.10
+WSP,Rehabilitative Programs,Academic Education - Actual Enrollment,292.25,291.60,343.50,364.00,357.75,401.50,415.40,465.75,447.50,415.40
+WSP,Rehabilitative Programs,Academic Education - Operational Capacity,768.00,768.00,768.00,768.00,768.00,768.00,768.00,768.00,768.00,768.00
+WSP,Rehabilitative Programs,Career Technical Education - Actual Enrollment,25.50,34.00,57.50,46.60,43.50,56.00,70.00,78.75,78.75,70.00
+WSP,Rehabilitative Programs,Career Technical Education - Operational Capacity,27.00,48.60,81.00,81.00,81.00,81.00,81.00,81.00,81.00,81.00
+WSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Actual Enrollment,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+WSP,Rehabilitative Programs,Cognitive Behavioral Intervention - Sex Offender - Operational Capacity,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+WSP,Rehabilitative Programs,Number of Associate Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+WSP,Rehabilitative Programs,Number of Bachelors Degrees,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+WSP,Rehabilitative Programs,Number of GED Certificates,1.00,8.00,1.00,3.00,3.00,4.00,6.00,0.00,4.00,6.00
+WSP,Rehabilitative Programs,Number of High School Diplomas,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+WSP,Rehabilitative Programs,Number of Masters Degrees,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+WSP,Rehabilitative Programs,Transitions - Actual Enrollment,42.50,50.20,48.00,43.00,36.50,47.25,53.20,53.50,53.25,53.20
+WSP,Rehabilitative Programs,Transitions - Operational Capacity,45.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00,54.00
+WSP,Sick Leave Hours,Custody (Sick Leave),"6,250.50","6,361.00","6,199.25","4,909.25","5,310.75","7,387.00","3,792.00","6,302.25","6,699.50","7,583.00"
+WSP,Sick Leave Hours,Dental + Mental Health (Sick Leave),792.00,698.00,687.25,361.75,473.75,673.75,547.00,585.50,496.25,768.80
+WSP,Sick Leave Hours,Non-Custody (Sick Leave),"1,819.75","2,120.50","2,172.75","2,189.65","1,543.00","1,868.50","2,282.00","2,194.00","2,200.75","1,969.80"
+WSP,Sick Leave Hours,Total Sick Leave Hours,"8,862.25","9,179.50","9,059.25","7,460.65","7,327.50","9,929.25","6,621.00","9,081.75","9,396.50","10,321.50"
+WSP,Use of Force (UOF),Total UOF Incidents,31.00,17.00,23.00,24.00,30.00,26.00,36.00,30.00,48.00,44.00

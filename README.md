@@ -48,7 +48,9 @@ CDCR facilities have additional variables:
 | `year_opened_notes` | Notes on the year opened, e.g. if the facility was previously a different institution. | Collected from online documentation. |
 | `planned_closure` | If the facility is marked for closure, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `california_model_facility` | If the facility is included in The California Model plan, indicated by `Yes` or `No`. | Collected from online documentation. |
-| `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. | 
+| `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. |
+| `cognitive_behavioral_interventions` | Semicolon-separated list of Cognitive Behavioral Intervention programs the facility had operational capacity for during 2024-2025. Programs include Life Skills and Outpatient. Blank if the facility reported no CBI capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
+| `rehabilitative_programs` | Semicolon-separated list of Rehabilitative Programs the facility had operational capacity for during 2024-2025. Programs include Academic Education, Career Technical Education, Cognitive Behavioral Intervention - Sex Offender, and Transitions. Blank if the facility reported no rehabilitative program capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
 
 ## Climate Hazard Data
 
@@ -79,6 +81,8 @@ CDCR 2025 Monthly Total Population (TPOP1) Archive. (2025). [Dataset]. CDCR Offi
 CDCR Population Data Set. (2025). [Dataset]. CDCR Office of Research.
 
 Raychaudhuri, D., Farley, C., Hartman, T., & Arranz, A. (2025, July 30). Scorching cells: How heat threatens lives in America's prisons. Reuters. https://www.reuters.com/graphics/USA-TEMPERATURE/PRISONS/jnpwbejwlvw/
+
+CDCR SB 601 Programs Dashboard. (2025). [Interactive dashboard]. California Department of Corrections and Rehabilitation. https://app.powerbigov.us/view?r=eyJrIjoiYzlkM2RiNWEtZDRjMi00ODllLTg2YzEtZjYyM2MwMjA5NmQ0IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9&pageName=5a926528bbf7e48d60c2
 
 ## Climate Hazards
 
