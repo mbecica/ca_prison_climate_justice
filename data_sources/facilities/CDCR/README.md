@@ -1,0 +1,97 @@
+# CDCR Facilities Data
+
+This folder contains source data for California Department of Corrections and Rehabilitation (CDCR) state prisons. Processed output is at `data/cdcr_facilities.csv`.
+
+Data collection scripts are in the `scrapers/` directory.
+
+## `cdcr_facilities.csv` Field Descriptions
+
+### Identification
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `cdcr_code` | Facility acronym used by CDCR to identify state prisons. | Derived from FEMA, 2025 facility name |
+| `cdcr_firecamp` | `Boolean` True or False if the facility is a fire camp. | Derived from FEMA, 2025 facility name |
+
+### Population
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `average_2025_population` | Annual monthly average of total daily population in 2025. | CDCR TPOP1 PDF Reports, 2025 |
+| `capacity_percent_2025` | A 0-1 value calculated from 2025 `average_2025_population` / `capacity`. Values over 1 indicate the facility is over capacity. | Derived from CDCR TPOP1 PDF Reports, 2025 |
+| `age_over_50_pct` | % of population aged 50 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_over_55_pct` | % of population aged 55 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_over_60_pct` | % of population aged 60 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_over_65_pct` | % of population aged 65 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `gender_male_pct` | % of population identifying as Male averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `gender_female_pct` | % of population identifying as Female averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `race_white_pct` | % of population identifying as White averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `race_peopleofcolor_pct` | % of population identifying as any race other than White averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+
+### Housing & Cooling
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `n_housing_buildings` | Number of distinct housing buildings at the facility. | Raychaudhuri et al., Reuters, 2025 |
+| `n_housing_units` | Number of housing HVAC units (air handling units, evaporative coolers, etc.) at the facility. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_units_evaporation` | Proportion of housing HVAC units using evaporation cooling. Sums to 1.0 with refrigeration and ventilation. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_buildings_evaporation` | Proportion of housing buildings with at least one evaporation cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_units_refrigeration` | Proportion of housing HVAC units using refrigeration cooling. Sums to 1.0 with evaporation and ventilation. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_buildings_refrigeration` | Proportion of housing buildings with at least one refrigeration cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_units_ventilation` | Proportion of housing HVAC units providing ventilation without cooling. Sums to 1.0 with evaporation and refrigeration. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_buildings_ventilation` | Proportion of housing buildings with at least one ventilation-without-cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
+
+### Facility Characteristics
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `year_opened` | The year the facility was opened as a state facility. | Collected from online documentation. |
+| `year_opened_notes` | Notes on the year opened, e.g. if the facility was previously a different institution. | Collected from online documentation. |
+| `planned_closure` | If the facility is marked for closure, indicated by `Yes` or `No`. | Collected from online documentation. |
+| `california_model_facility` | If the facility is included in The California Model plan, indicated by `Yes` or `No`. | Collected from online documentation. |
+| `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. |
+
+### Programs (SB 601)
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `cognitive_behavioral_interventions` | Semicolon-separated list of Cognitive Behavioral Intervention programs the facility had operational capacity for during 2024-2025. Programs include Life Skills and Outpatient. Blank if the facility reported no CBI capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
+| `rehabilitative_programs` | Semicolon-separated list of Rehabilitative Programs the facility had operational capacity for during 2024-2025. Programs include Academic Education, Career Technical Education, Cognitive Behavioral Intervention - Sex Offender, and Transitions. Blank if the facility reported no rehabilitative program capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
+
+### Health Care Population (CCHCS)
+
+The denominator for all CCHCS percentage metrics is the total facility population (all people endorsed to that institution), not a subset of active patients. This is confirmed by the fact that the four risk tiers (High Risk Priority 1, High Risk Priority 2, Medium Risk, Low Risk) sum to exactly 100% for every facility-month in the source data. Values are 12-month averages across all available months in 2025 (31 of 34 facilities matched; FWF has no separate CCHCS entry, CCC and DVI are closed).
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `cchcs_high_risk_p1_pct_2025` | % of facility population classified as High Risk Priority 1 (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_high_risk_p2_pct_2025` | % of facility population classified as High Risk Priority 2 (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_medium_risk_pct_2025` | % of facility population classified as Medium Risk (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_low_risk_pct_2025` | % of facility population classified as Low Risk (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_mental_health_eop_pct_2025` | % of facility population in the Mental Health Enhanced Outpatient Program (EOP) (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_dpp_pct_2025` | % of facility population enrolled in the Disability Placement Program (DPP) (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_age_over_50_pct_2025` | % of facility population aged 50 or older (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_specialized_beds_2025` | Number of Specialized Health Care Beds at the facility (12-month average count, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+
+## Additional Source Files
+
+### `sb601_operations_2021-2025.csv`
+Monthly operational metrics for all 32–35 CDCR institutions across fiscal years 2021-2022 through 2024-2025. Columns: `institution` (CDCR code), `fiscal_year`, `category`, `metric`, and one column per month (`Jul` through `Apr`). Three categories: Lockdowns and Modified Programs, Number of Deaths, and Overtime Hours. Source: CDCR SB 601 Programs Dashboard.
+
+### `sb601_programs_2024-2025.csv`
+Program operational capacity by institution for fiscal year 2024-2025. Used to derive the `cognitive_behavioral_interventions` and `rehabilitative_programs` columns. Source: CDCR SB 601 Programs Dashboard.
+
+### `cchcs_ipc_2017-2025.csv`
+Monthly Institution & Population Characteristics for all CDCR institutions, January 2017–December 2025 (108 months), in long format. Columns: `month`, `institution` (CDCR code), `measure`, `value`. Measures include the eight health classification variables above plus Institution Population (total facility headcount). Source: CCHCS Health Care Services Dashboard.
+
+## References
+
+CDCR 2025 Monthly Total Population (TPOP1) Archive. (2025). [Dataset]. CDCR Office of Research. https://www.cdcr.ca.gov/research/2025-monthly-total-population-tpop1-archive/
+
+CDCR Population Data Set. (2025). [Dataset]. CDCR Office of Research.
+
+Raychaudhuri, D., Farley, C., Hartman, T., & Arranz, A. (2025, July 30). Scorching cells: How heat threatens lives in America's prisons. Reuters. https://www.reuters.com/graphics/USA-TEMPERATURE/PRISONS/jnpwbejwlvw/
+
+CDCR SB 601 Programs Dashboard. (2025). [Interactive dashboard]. California Department of Corrections and Rehabilitation. https://app.powerbigov.us/view?r=eyJrIjoiYzlkM2RiNWEtZDRjMi00ODllLTg2YzEtZjYyM2MwMjA5NmQ0IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9&pageName=5a926528bbf7e48d60c2
+
+CCHCS Health Care Services Dashboard. (2025). [Interactive dashboard]. California Correctional Health Care Services. https://cchcs.ca.gov/dashboard/
