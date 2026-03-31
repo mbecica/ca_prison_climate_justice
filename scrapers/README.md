@@ -65,5 +65,20 @@ Output: `data_sources/facilities/CDCR/cchcs_measures_2017-2025.csv`
 
 ---
 
+---
+
+### `extract_sco_staffing.py`
+Extracts total active employee counts at CDCR facilities from State Controller's Office PDF reports stored in `data_sources/facilities/CDCR/cdcr_staffing/`. Uses `pdfplumber`; requires `pip install pdfplumber`.
+
+Handles two PDF encoding variants: older reports (2020–2024) use text extraction; 2025 reports have garbled font encoding and are parsed via table extraction with normalized name lookup. Duplicate PDFs (same "Data as of" date) are automatically skipped.
+
+```
+python3 scrapers/extract_sco_staffing.py
+```
+
+Output: `data_sources/facilities/CDCR/sco_staffing_2020-2026.csv`
+
+---
+
 ### `probe_cchcs.js`
 Exploratory script used to inspect the CCHCS dashboard DOM structure (grid layout, dropdown scroll behavior, institution column headers). Not intended for production use.

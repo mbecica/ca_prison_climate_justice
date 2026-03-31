@@ -1,5 +1,6 @@
 # Ignore where files get large
 data_sources/facilities/cdcr_population_pdfs
+data_sources/facilities/CDCR/cdcr_staffing/
 
 # Node
 node_modules/
