@@ -55,7 +55,8 @@ Data collection scripts are in the `scrapers/` directory.
 
 | Variable | Description | Source |
 | :--- | :--- | :--- |
-| `sco_total_staff_2025` | Average total active employees in 2025 (mean of February, May, and June snapshots). Excludes Prison Industry Authority (PIA) sub-entries. For CHCF, includes both CDCR operational staff and CCHCS healthcare staff, which are reported as separate entries in the SCO data but co-located at the same facility. | California State Controller's Office Active State Employees by Department reports, 2025 |
+| `sco_state_staff_2025` | Average total active state employees in 2025 (mean of February, May, and June snapshots). Excludes Prison Industry Authority (PIA) sub-entries. For CHCF, includes both CDCR operational staff and CCHCS healthcare staff, which are reported as separate entries in the SCO data but co-located at the same facility. | California State Controller's Office Active State Employees by Department reports, 2025 |
+| `sco_incarcerated_staff_2025` | Average total Prison Industry Authority (PIA) workers in 2025 (mean of February, May, and June snapshots). PIA workers are incarcerated people employed through the Prison Industry Authority at each facility. Blank if the facility has no PIA operation. | California State Controller's Office Active State Employees by Department reports, 2025 |
 
 ### Programs (SB 601)
 

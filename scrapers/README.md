@@ -89,7 +89,7 @@ python3 scrapers/build_sco_staffing_2025.py
 
 Output: `data_sources/facilities/CDCR/sco_staffing_2025_avg.csv`
 
-Columns: `cdcr_code`, `sco_facility_name`, `is_pia` (Prison Industry Authority sub-entry), `is_cchcs` (CCHCS healthcare staff at CHCF), `n_snapshots`, `full_time`, `part_time`, `intermittent`, `indeterminate`, `total`.
+Columns: `cdcr_code`, `sco_facility_name`, `is_pia` (Prison Industry Authority sub-entry; workers are incarcerated people), `is_cchcs` (CCHCS healthcare staff at CHCF), `n_snapshots`, `full_time`, `part_time`, `intermittent`, `indeterminate`, `total`.
 
 ---
 
