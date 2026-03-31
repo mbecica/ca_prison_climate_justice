@@ -51,10 +51,24 @@ CDCR facilities have additional variables:
 | `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `cognitive_behavioral_interventions` | Semicolon-separated list of Cognitive Behavioral Intervention programs the facility had operational capacity for during 2024-2025. Programs include Life Skills and Outpatient. Blank if the facility reported no CBI capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
 | `rehabilitative_programs` | Semicolon-separated list of Rehabilitative Programs the facility had operational capacity for during 2024-2025. Programs include Academic Education, Career Technical Education, Cognitive Behavioral Intervention - Sex Offender, and Transitions. Blank if the facility reported no rehabilitative program capacity. | CDCR SB 601 Programs Dashboard, 2024-2025 |
+| `cchcs_high_risk_p1_pct_2025` | % of facility population classified as High Risk Priority 1 (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_high_risk_p2_pct_2025` | % of facility population classified as High Risk Priority 2 (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_medium_risk_pct_2025` | % of facility population classified as Medium Risk (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_low_risk_pct_2025` | % of facility population classified as Low Risk (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_mental_health_eop_pct_2025` | % of facility population in the Mental Health Enhanced Outpatient Program (EOP) (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_dpp_pct_2025` | % of facility population enrolled in the Disability Placement Program (DPP) (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_age_over_50_pct_2025` | % of facility population aged 50 or older (12-month average, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+| `cchcs_specialized_beds_2025` | Number of Specialized Health Care Beds at the facility (12-month average count, 2025). | CCHCS Health Care Services Dashboard, 2025 |
+
+The denominator for the CCHCS percentage metrics is the total facility population (all people endorsed to that institution), not a subset of active patients. This is confirmed by the fact that the four risk tiers (High Risk Priority 1, High Risk Priority 2, Medium Risk, Low Risk) sum to exactly 100% for every facility-month in the dataset.
 
 ### Additional CDCR Operations Data
 
 `data_sources/facilities/CDCR/sb601_operations_2021-2025.csv` contains monthly operational metrics for all 32–35 CDCR institutions across fiscal years 2021-2022 through 2024-2025, scraped from the same SB 601 dashboard. Columns are `institution` (CDCR code), `fiscal_year`, `category`, `metric`, and one column per month (`Jul` through `Apr`). Three categories are included: Lockdowns and Modified Programs (e.g. lockdown counts, incarcerated person-days on modified program), Number of Deaths (expected, unexpected, suicide, homicide, etc.), and Overtime Hours (custody and clinical staff). Source: CDCR SB 601 Programs Dashboard, 2024-2025.
+
+### CCHCS Health Care Population Data
+
+`data_sources/facilities/CDCR/cchcs_ipc_2017-2025.csv` contains monthly Institution & Population Characteristics data for all CDCR institutions from January 2017 through December 2025 (108 months), in long format. Columns are `month`, `institution` (CDCR code), `measure`, and `value`. Measures include High Risk Priority 1, High Risk Priority 2, Medium Risk, Low Risk, Mental Health EOP, Disability Placement Program (DPP) Patients, Patients 50 Years or Older, Specialized Health Care Beds, and Institution Population. Source: CCHCS Health Care Services Dashboard, cchcs.ca.gov/dashboard/.
 
 ## Climate Hazard Data
 
@@ -87,6 +101,8 @@ CDCR Population Data Set. (2025). [Dataset]. CDCR Office of Research.
 Raychaudhuri, D., Farley, C., Hartman, T., & Arranz, A. (2025, July 30). Scorching cells: How heat threatens lives in America's prisons. Reuters. https://www.reuters.com/graphics/USA-TEMPERATURE/PRISONS/jnpwbejwlvw/
 
 CDCR SB 601 Programs Dashboard. (2025). [Interactive dashboard]. California Department of Corrections and Rehabilitation. https://app.powerbigov.us/view?r=eyJrIjoiYzlkM2RiNWEtZDRjMi00ODllLTg2YzEtZjYyM2MwMjA5NmQ0IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9&pageName=5a926528bbf7e48d60c2
+
+CCHCS Health Care Services Dashboard. (2025). [Interactive dashboard]. California Correctional Health Care Services. https://cchcs.ca.gov/dashboard/
 
 ## Climate Hazards
 
