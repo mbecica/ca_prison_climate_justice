@@ -84,6 +84,21 @@ Program operational capacity by institution for fiscal year 2024-2025. Used to d
 ### `cchcs_ipc_2017-2025.csv`
 Monthly Institution & Population Characteristics for all CDCR institutions, January 2017–December 2025 (108 months), in long format. Columns: `month`, `institution` (CDCR code), `measure`, `value`. Measures include the eight health classification variables above plus Institution Population (total facility headcount). Source: CCHCS Health Care Services Dashboard.
 
+### `cchcs_measures_2017-2025.csv`
+Monthly staffing vacancy rates, labor costs, and ED/hospital utilization for all CDCR institutions, January 2017–December 2025 (108 months), in long format. Columns: `month`, `group`, `institution` (CDCR code), `measure`, `value`. Contains 26,302 rows across 7 measures in three groups:
+
+| Group | Measure | Description |
+| :--- | :--- | :--- |
+| Staffing | `Actual Vacancies (All)` | Overall vacancy rate across all health care staff |
+| Staffing | `Medical Vacancies (All)` | Vacancy rate for medical staff |
+| Staffing | `Mental Health Vacancies (All)` | Vacancy rate for mental health staff |
+| Staffing | `Dental Vacancies (All)` | Vacancy rate for dental staff |
+| Major Costs | `Total Labor Cost (All)` | Total labor cost per patient per month (dollars) |
+| Major Costs | `ED & Hospital Stays` | Non-labor cost of ED and hospital stays per patient per month (dollars) |
+| Other Trends | `ED/Hospital Stay*` | ED and hospital send-out rate (encounters per 1,000 patients per month) |
+
+Source: CCHCS Health Care Services Dashboard.
+
 ## References
 
 CDCR 2025 Monthly Total Population (TPOP1) Archive. (2025). [Dataset]. CDCR Office of Research. https://www.cdcr.ca.gov/research/2025-monthly-total-population-tpop1-archive/

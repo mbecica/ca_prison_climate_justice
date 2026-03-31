@@ -46,5 +46,24 @@ Output: `data_sources/facilities/CDCR/sb601_operations_2021-2025.csv`
 
 ---
 
+### `fetch_cchcs_measures.js`
+Scrapes three additional measure groups from the **CCHCS Health Care Services Dashboard** for every available month (Jan 2017–Dec 2025, 108 months):
+
+- **Staffing** — `Actual Vacancies (All)`, `Medical Vacancies (All)`, `Mental Health Vacancies (All)`, `Dental Vacancies (All)`
+- **Major Costs per patient per Month** — `Total Labor Cost (All)`, `ED & Hospital Stays`
+- **Other Trends** — `ED/Hospital Stay*`
+
+Grid orientation for these measures is institutions-as-columns / measures-as-rows. The scraper performs a 2D grid traversal (scrolls both right for institutions and down for measures) to capture all cells. Each measure group gets a fresh page load to avoid multi-select state accumulation.
+
+Supports checkpoint/resume — progress is saved to `/tmp/cchcs_measures_checkpoint.json` after each group-month. Delete that file to start a full re-scrape.
+
+```
+node fetch_cchcs_measures.js
+```
+
+Output: `data_sources/facilities/CDCR/cchcs_measures_2017-2025.csv`
+
+---
+
 ### `probe_cchcs.js`
 Exploratory script used to inspect the CCHCS dashboard DOM structure (grid layout, dropdown scroll behavior, institution column headers). Not intended for production use.
