@@ -80,5 +80,18 @@ Output: `data_sources/facilities/CDCR/sco_staffing_2020-2026.csv`
 
 ---
 
+### `build_sco_staffing_2025.py`
+Reads `sco_staffing_2020-2026.csv`, filters to the three 2025 snapshots (February, May, June), averages staff counts across snapshots, and maps each row to a CDCR institutional code. Applies name corrections for two garbled/truncated entries from the 2025 table-extracted PDFs.
+
+```
+python3 scrapers/build_sco_staffing_2025.py
+```
+
+Output: `data_sources/facilities/CDCR/sco_staffing_2025_avg.csv`
+
+Columns: `cdcr_code`, `sco_facility_name`, `is_pia` (Prison Industry Authority sub-entry), `is_cchcs` (CCHCS healthcare staff at CHCF), `n_snapshots`, `full_time`, `part_time`, `intermittent`, `indeterminate`, `total`.
+
+---
+
 ### `probe_cchcs.js`
 Exploratory script used to inspect the CCHCS dashboard DOM structure (grid layout, dropdown scroll behavior, institution column headers). Not intended for production use.

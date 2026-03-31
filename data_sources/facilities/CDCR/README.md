@@ -51,6 +51,12 @@ Data collection scripts are in the `scrapers/` directory.
 | `california_model_facility` | If the facility is included in The California Model plan, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. |
 
+### Staffing
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `sco_total_staff_2025` | Average total active employees in 2025 (mean of February, May, and June snapshots). Excludes Prison Industry Authority (PIA) sub-entries. For CHCF, includes both CDCR operational staff and CCHCS healthcare staff, which are reported as separate entries in the SCO data but co-located at the same facility. | California State Controller's Office Active State Employees by Department reports, 2025 |
+
 ### Programs (SB 601)
 
 | Variable | Description | Source |
