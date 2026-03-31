@@ -136,3 +136,5 @@ Raychaudhuri, D., Farley, C., Hartman, T., & Arranz, A. (2025, July 30). Scorchi
 CDCR SB 601 Programs Dashboard. (2025). [Interactive dashboard]. California Department of Corrections and Rehabilitation. https://app.powerbigov.us/view?r=eyJrIjoiYzlkM2RiNWEtZDRjMi00ODllLTg2YzEtZjYyM2MwMjA5NmQ0IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9&pageName=5a926528bbf7e48d60c2
 
 CCHCS Health Care Services Dashboard. (2025). [Interactive dashboard]. California Correctional Health Care Services. https://cchcs.ca.gov/dashboard/
+
+California State Controller's Office. (2021–2026). Active State Employees by Department [PDF reports]. California State Controller's Office. Retrieved via Wayback Machine snapshots.
