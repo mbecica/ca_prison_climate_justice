@@ -67,13 +67,15 @@ Data collection scripts are in the `scrapers/` directory.
 
 ### Health Care Population (CCHCS)
 
-The denominator for all CCHCS percentage metrics is the total facility population (all people endorsed to that institution), not a subset of active patients. This is confirmed by the fact that the four risk tiers (High Risk Priority 1, High Risk Priority 2, Medium Risk, Low Risk) sum to exactly 100% for every facility-month in the source data. Values are 12-month averages across all available months in 2025 (31 of 34 facilities matched; FWF has no separate CCHCS entry, CCC and DVI are closed).
+The denominator for all CCHCS percentage metrics is the total facility population. The four risk tiers (High Risk Priority 1, High Risk Priority 2, Medium Risk, Low Risk) sum to exactly 100% of the facility population for every month in the source data. Values are 12-month averages across all available months in 2025 (31 of 34 facilities matched; FWF has no separate CCHCS entry, CCC and DVI are closed).
 
 Risk tier definitions (source: CCHCS Health Care Services Dashboard):
 
-**High Risk Priority 1 / High Risk Priority 2:** Patients triggering 1 or more of the following flags: (1) Sensitive Medical Condition; (2) High hospital, ED, Specialty Care, and Pharmacy costs; (3) Multiple hospitalizations (2 or more)\*; (4) Multiple ED visits (3 or more)\*; (5) High Risk Specialty Consultations; (6) Significant Abnormal Labs; (7) Age 65 or older; (8) Specific High-Risk Diagnoses/Procedures. \*A patient receiving a point for multiple hospitalizations cannot also receive a point for multiple ED visits.
+**High Risk Priority 1:** Patients triggering 2 of the following flags: (1) Sensitive Medical Condition; (2) High hospital, ED, Specialty Care, and Pharmacy costs; (3) Multiple hospitalizations (2 or more)\*; (4) Multiple ED visits (3 or more)\*; (5) High Risk Specialty Consultations; (6) Significant Abnormal Labs; (7) Age 65 or older; (8) Specific High-Risk Diagnoses/Procedures. \*A patient receiving a point for multiple hospitalizations cannot also receive a point for multiple ED visits.
 
-**Medium Risk:** Patients with 1 or more chronic illnesses (based on prescribed medications, lab tests, or MHSDS enrollment), including MH High Utilization and Permanent ADA. Excludes High Risk 1/2 patients and those with well-controlled chronic conditions. Well-controlled conditions include: Asthma (≤4 SABA dispenses in 12 months and not on ICS); Diabetes (all HgA1c <7.7 in last 12 months and not on insulin); Hypertension (monotherapy only); HCV (no criteria for chronic infection or low probability of advanced liver disease by Fib-4); Latent TB (receiving LTBI treatment with ALT <2× normal).
+**High Risk Priority 2:** Patients triggering 1 of the flags listed in High Risk Priority 1.
+
+**Medium Risk:** Patients with 1 or more chronic illnesses (based on prescribed medications, lab tests, or MHSDS enrollment), including MH High Utilization and Permanent ADA. Excludes High Risk 1/2 patients and those with well-controlled chronic conditions. Well-controlled conditions include: Asthma, Diabetes, Hypertension, HCV, Latent TB.
 
 **Low Risk:** Patients with no chronic conditions or with well-controlled chronic conditions (same criteria as Medium Risk exclusions above).
 
@@ -117,7 +119,7 @@ Source: CCHCS Health Care Services Dashboard.
 ### `sco_staffing_2020-2026.csv`
 Total active employees at CDCR facilities from the California State Controller's Office "Active State Employees by Department" reports. Cross-sectional snapshots extracted from PDFs in `cdcr_staffing/`. Long format: one row per facility per snapshot. Columns: `date` (report date as "Month YYYY"), `sco_facility_name` (facility name as it appears in the SCO report), `full_time`, `part_time`, `intermittent`, `indeterminate`, `total`.
 
-**Coverage:** 8 snapshots spanning April 2021 – February 2026. Snapshots are not annual — dates reflect the actual "Data as of:" header in each PDF. Note: the files named `2020_...` and `2022_...` were found to be identical (both dated May 2022); only one is retained. Extraction script: `scrapers/extract_sco_staffing.py`.
+**Coverage:** 8 snapshots spanning April 2021 – February 2026. Extraction script: `scrapers/extract_sco_staffing.py`.
 
 **Rows included:** All CDCR-department rows except: CCHCS regional offices, CTRA training academies, CDCR-CHCF-PIP, Parole & Community Services, Richard A. McGee Correctional Training Center, Corrections/Administration, Youth Authority/Administration, Corr/Inmate Welfare Fund, and CORR/IND Revolving Fund. Prison Industry Authority (PIA) sub-entries are retained as separate rows with names ending in `- PIA`. The row `CDCR/CCHCS CA HEALTH CARE` represents CCHCS healthcare staff co-located at the California Health Care Facility (CHCF); it is separate from the `CA. HEALTH CARE FACILITY` row which covers CDCR operational staff at the same facility.
 
