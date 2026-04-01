@@ -61,6 +61,7 @@ Facilities not within any classified zone are unclassified (considered lowest ri
 | :--- | :--- | :--- |
 | `fhsz` | Fire Hazard Severity Zone classification: `Very High`, `High`, `Moderate`, or blank if the facility is not within a classified zone. | CalFire FHSZ, SRA 2022 / LRA 2025 |
 | `fhsz_responsibility` | Responsibility area type: `SRA` (State) or `LRA` (Local). Blank if the facility is not within a classified zone. | CalFire FHSZ, SRA 2022 / LRA 2025 |
+| `wui_type` | Wildland-Urban Interface classification: `Intermix` (homes interspersed within wildland vegetation), `Interface` (homes adjacent to wildland), or `Influence Zone` (within ~1.5 miles of Interface/Intermix areas). Blank if outside all WUI boundaries. | CalFire Wildland-Urban Interface shapefile |
 
 # References
 
@@ -86,3 +87,5 @@ CalEnviroScreen 5.0. (2026). [Dataset]. California Office of Environmental Healt
 Cal-Adapt. (Forthcoming). [Dataset]. Climate datasets prepared for California's Fifth Climate Change Assessment.
 
 CalFire. (2022, 2025). Fire Hazard Severity Zones [Dataset]. California Department of Forestry and Fire Protection. https://osfm.fire.ca.gov/divisions/community-wildfire-preparedness-and-mitigation/wildland-hazard-and-building-codes/fire-hazard-severity-zones-maps/
+
+CalFire. Wildland-Urban Interface [Dataset]. California Department of Forestry and Fire Protection. https://www.fire.ca.gov/what-we-do/fire-resource-assessment-program/wildland-urban-interface
