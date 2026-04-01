@@ -93,5 +93,18 @@ Columns: `cdcr_code`, `sco_facility_name`, `is_pia` (Prison Industry Authority s
 
 ---
 
+### `fetch_national_map_medical.py`
+Downloads Medical & Emergency Response facilities for California from the USGS National Map Structures layer. Queries three sublayers with pagination: Hospitals/Medical Centers (layer 14), Ambulance Services (layer 15), and Fire Stations/EMS Stations (layer 16). No dependencies beyond the standard library.
+
+```
+python3 scrapers/fetch_national_map_medical.py
+```
+
+Output: `data_sources/national_map_medical_emergency.csv`
+
+Columns: `layer` (sublayer label), `name`, `fcode`, `address`, `city`, `state`, `longitude`, `latitude`. 3,877 features as of April 2026 (490 hospitals, 209 ambulance, 3,178 fire/EMS).
+
+---
+
 ### `probe_cchcs.js`
 Exploratory script used to inspect the CCHCS dashboard DOM structure (grid layout, dropdown scroll behavior, institution column headers). Not intended for production use.

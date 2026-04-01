@@ -21,6 +21,15 @@ All facilities include their name, address, telephone and website information (F
 | `longitude` | Derived from the geographic centerpoint of the facility boundary. |  | 
 | `tract_geoid` | The 11-digit census tract GEOID that the facility centerpoint is within. |  | 
 
+### Isolation
+
+All facilities also include the following isolation variables:
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `dist_nearest_medical_mi` | Great-circle distance in miles to the nearest Medical & Emergency Response facility — the minimum across hospitals/medical centers, ambulance services, and fire/EMS stations in California. Calculated from each facility's centroid. | USGS National Map Structures layer (layers 14–16), April 2026 |
+| `in_urban_area_2020` | `Boolean` True if the facility centroid falls within a 2020 Census Urban Area boundary (Urbanized Areas ≥50,000 population or Urban Clusters 2,500–49,999 population), False otherwise. | U.S. Census Bureau, 2020 Urban Area cartographic boundary file (cb_2020_us_ua20_500k) |
+
 CDCR state prison facilities have additional variables covering population demographics, housing and cooling infrastructure, programs, and health care population characteristics. See [`data_sources/facilities/CDCR/README.md`](data_sources/facilities/CDCR/README.md) for full field descriptions and sources.
 
 ## Climate Hazard Data
@@ -46,6 +55,10 @@ Heat and Air Quality variables include:
 FEMA. (2025). Prison Boundaries RAPT. [Dataset]. https://services.arcgis.com/XG15cJAlne2vxtgt/arcgis/rest/services/Prison_Boundaries_RAPT/FeatureServer
 
 - The FEMA prison data set was "downloaded from HiFLD Open on July 22, 2025"
+
+USGS National Map Structures. (2026). Medical & Emergency Response facilities [Dataset]. U.S. Geological Survey. https://carto.nationalmap.gov/arcgis/rest/services/structures/MapServer
+
+U.S. Census Bureau. (2020). Urban Area cartographic boundary file (cb_2020_us_ua20_500k) [Dataset]. https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_ua20_500k.zip
 
 See [`data_sources/facilities/CDCR/README.md`](data_sources/facilities/CDCR/README.md) for CDCR-specific references.
 
