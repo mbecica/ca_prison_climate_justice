@@ -48,6 +48,20 @@ Heat and Air Quality variables include:
 | `AQI_norm` | Normalized AQI exposure (0-100) per census tract. Calulated from Ozone, PM2.5, and Diesel exposures. | CalEnviroScreen 5.0, 2025 | 
 | `heat_hazard_idx_norm` | Normalized Heat Hazard Index (0-100) per census tract. Calulated from AQI and historic annual days above 90F. | Derived from CalEnviroScreen 5.0, 2025 and Cal-Adapt, 2025 |
 
+### Wildfire Risk
+
+Fire Hazard Severity Zone (FHSZ) classifications from CalFire, assigned to each facility via a point-in-polygon join against two responsibility layers:
+
+- **SRA (State Responsibility Area):** Areas where the state has primary responsibility for fire protection. 2022 FHSZ boundaries.
+- **LRA (Local Responsibility Area):** Areas where local agencies (cities, counties) have primary fire protection responsibility. 2025 FHSZ boundaries.
+
+Facilities not within any classified zone are unclassified (considered lowest risk). The two layers are mutually exclusive — a facility falls in either SRA or LRA jurisdiction.
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `fhsz` | Fire Hazard Severity Zone classification: `Very High`, `High`, `Moderate`, or blank if the facility is not within a classified zone. | CalFire FHSZ, SRA 2022 / LRA 2025 |
+| `fhsz_responsibility` | Responsibility area type: `SRA` (State) or `LRA` (Local). Blank if the facility is not within a classified zone. | CalFire FHSZ, SRA 2022 / LRA 2025 |
+
 # References
 
 ## Facilities
@@ -70,3 +84,5 @@ Vulnerable Communities Platform Methods Report. (2025). Governor’s Office of L
 CalEnviroScreen 5.0. (2026). [Dataset]. California Office of Environmental Health Hazard Assessment. https://data.ca.gov/dataset/draft-calenviroscreen-5-0
 
 Cal-Adapt. (Forthcoming). [Dataset]. Climate datasets prepared for California's Fifth Climate Change Assessment.
+
+CalFire. (2022, 2025). Fire Hazard Severity Zones [Dataset]. California Department of Forestry and Fire Protection. https://osfm.fire.ca.gov/divisions/community-wildfire-preparedness-and-mitigation/wildland-hazard-and-building-codes/fire-hazard-severity-zones-maps/
