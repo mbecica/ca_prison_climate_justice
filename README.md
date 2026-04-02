@@ -53,7 +53,7 @@ Heat and Air Quality variables include:
 The flood hazard index follows the methodology of the Governor's Office of Land Use and Climate Innovation (LCI) Vulnerable Communities Platform (VCP). VCP's composite flood score for census tracts with high group-quarters populations (including state prisons) is excluded from their index, but the underlying raw indicators are available for all tracts and are used directly here.
 
 The index combines two components:
-- **BAM floodplain exposure** (full weight): % of tract within the DWR Best Available Maps floodplain. Already on a 0–1 scale, so not re-normalized prior to summing (per VCP methodology).
+- **BAM floodplain exposure** (full weight): % of tract within the DWR Best Available Maps floodplain.
 - **Very wet days** (half weight): % of years classified as very wet from LOCA 2 CA Hybrid precipitation projections. Normalized min-max across both time periods combined before applying the 0.5 weight reduction.
 
 Current hazard uses the 100-year floodplain and historic very wet day frequency; mid-century hazard uses the 500-year floodplain and projected very wet day frequency (2045–2074). Both are normalized to 0–100 after combining.
