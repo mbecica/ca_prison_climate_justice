@@ -48,6 +48,25 @@ Heat and Air Quality variables include:
 | `AQI_norm` | Normalized AQI exposure (0-100) per census tract. Calulated from Ozone, PM2.5, and Diesel exposures. | CalEnviroScreen 5.0, 2025 | 
 | `heat_hazard_idx_norm` | Normalized Heat Hazard Index (0-100) per census tract. Calulated from AQI and historic annual days above 90F. | Derived from CalEnviroScreen 5.0, 2025 and Cal-Adapt, 2025 |
 
+### Flood Risk
+
+The flood hazard index follows the methodology of the Governor's Office of Land Use and Climate Innovation (LCI) Vulnerable Communities Platform (VCP). VCP's composite flood score for census tracts with high group-quarters populations (including state prisons) is excluded from their index, but the underlying raw indicators are available for all tracts and are used directly here.
+
+The index combines two components:
+- **BAM floodplain exposure** (full weight): % of tract within the DWR Best Available Maps floodplain. Already on a 0–1 scale, so not re-normalized prior to summing (per VCP methodology).
+- **Very wet days** (half weight): % of years classified as very wet from LOCA 2 CA Hybrid precipitation projections. Normalized min-max across both time periods combined before applying the 0.5 weight reduction.
+
+Current hazard uses the 100-year floodplain and historic very wet day frequency; mid-century hazard uses the 500-year floodplain and projected very wet day frequency (2045–2074). Both are normalized to 0–100 after combining.
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `flood_bam_100_pct` | % of census tract area within the DWR BAM 100-year floodplain (current). | LCI VCP, derived from DWR Best Available Maps |
+| `flood_bam_500_pct` | % of census tract area within the DWR BAM 500-year floodplain (future/2050 proxy). | LCI VCP, derived from DWR Best Available Maps |
+| `flood_verywet_pre_pct` | % of years classified as very wet under historic conditions per census tract. | LCI VCP, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| `flood_verywet_fut_pct` | % of years classified as very wet under mid-century conditions (2045–2074) per census tract. | LCI VCP, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| `flood_hazard_idx_norm` | Normalized Flood Hazard Index (0–100), current. Calculated from 100-year BAM floodplain exposure (full weight) and historic very wet day frequency (half weight), following VCP methodology. | Derived from LCI VCP, 2025 |
+| `flood_hazard_fut_idx_norm` | Normalized Flood Hazard Index (0–100), mid-century. Calculated from 500-year BAM floodplain exposure (full weight) and projected very wet day frequency (half weight), following VCP methodology. | Derived from LCI VCP, 2025 |
+
 ### Wildfire Risk
 
 Fire Hazard Severity Zone (FHSZ) classifications from CalFire, assigned to each facility via a point-in-polygon join against two responsibility layers:
@@ -79,7 +98,11 @@ See [`data_sources/facilities/CDCR/README.md`](data_sources/facilities/CDCR/READ
 
 ## Climate Hazards
 
+Governor’s Office of Land Use and Climate Innovation. (2025). Vulnerable Communities Platform [Dataset]. https://opr.ca.gov/planning/vulnerable-communities-platform/
+
 Vulnerable Communities Platform Methods Report. (2025). Governor’s Office of Land Use and Climate Innovation. https://docs.google.com/viewerng/viewer?url=https://gov-opr.maps.arcgis.com/sharing/rest/content/items/ff3579e26cf643e082344b91d3f591d2/data
+
+Department of Water Resources. (2008, updated periodically). Best Available Maps (BAM) Floodplains [Dataset]. California Department of Water Resources.
 
 
 CalEnviroScreen 5.0. (2026). [Dataset]. California Office of Environmental Health Hazard Assessment. https://data.ca.gov/dataset/draft-calenviroscreen-5-0
