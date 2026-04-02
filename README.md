@@ -36,17 +36,19 @@ CDCR state prison facilities have additional variables covering population demog
 
 ### Heat and Air Quality Index
 
-The heat hazard index includes both outside temperatures and air quality
+The heat and air quality index combines daytime heat, nighttime heat recovery failure, and air quality into two comparable indices — current and mid-century. Each temperature indicator is normalized min-max across both time periods combined. Hot nights use VCP's relative definition (% of nights exceeding the 98th percentile of each tract's own historical minimum temperature), which accounts for local acclimatization. AQI is held at historic CalEnviroScreen values for both indices, as tract-level air quality cannot be reliably projected. All three components carry equal weight, giving temperature 2/3 collective weight and AQI 1/3.
 
-Heat and Air Quality variables include:
-| Variable | Description | Source | 
-| :--- | :--- | :--- | 
-| `days_over_90_historic` | Near-historic annual number of days over 90F per census tract. | Cal-Adapt, 2025 | 
-| `days_over_90_midcentury` | Projected annual number of days over 90F per census tract by Mid-Century (2041-2070). | Cal-Adapt, 2025 | 
-| `delta_90` | The change of annual number of days over 90F between Mid-Century (2041-2070) and historic. | Cal-Adapt, 2025 |
-| `PollutionP` | Normalized pollution exposure (0-100) per census tract; includes all pollution types. | CalEnviroScreen 5.0, 2025 | 
-| `AQI_norm` | Normalized AQI exposure (0-100) per census tract. Calulated from Ozone, PM2.5, and Diesel exposures. | CalEnviroScreen 5.0, 2025 | 
-| `heat_hazard_idx_norm` | Normalized Heat Hazard Index (0-100) per census tract. Calulated from AQI and historic annual days above 90F. | Derived from CalEnviroScreen 5.0, 2025 and Cal-Adapt, 2025 |
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `days_over_90_historic` | Near-historic annual number of days over 90°F per census tract. | Cal-Adapt, 2025 |
+| `days_over_90_midcentury` | Projected annual number of days over 90°F per census tract by mid-century (2041–2070). | Cal-Adapt, 2025 |
+| `delta_90` | Change in annual days over 90°F between mid-century and historic. | Cal-Adapt, 2025 |
+| `hotnights_pre_pct` | % of nights exceeding the 98th percentile of each tract's historical minimum temperature, current timescale (2015–2044). | LCI VCP, 2025, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| `hotnights_fut_pct` | % of nights exceeding the 98th percentile of each tract's historical minimum temperature, mid-century timescale (2045–2074). | LCI VCP, 2025, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| `PollutionP` | Normalized pollution exposure (0–100) per census tract; includes all pollution types. | CalEnviroScreen 5.0, 2025 |
+| `AQI_norm` | Normalized AQI exposure (0–100) per census tract. Calculated from Ozone, PM2.5, and Diesel exposure percentiles. | CalEnviroScreen 5.0, 2025 |
+| `heat_hazard_idx_norm` | Normalized Heat and Air Quality Hazard Index (0–100), current. Equal-weight mean of normalized historic days over 90°F, current hot nights frequency, and AQI. | Derived from Cal-Adapt, 2025; LCI VCP, 2025; CalEnviroScreen 5.0, 2025 |
+| `heat_hazard_fut_idx_norm` | Normalized Heat and Air Quality Hazard Index (0–100), mid-century (2041–2070). Equal-weight mean of normalized mid-century days over 90°F, mid-century hot nights frequency, and AQI (held at historic levels). | Derived from Cal-Adapt, 2025; LCI VCP, 2025; CalEnviroScreen 5.0, 2025 |
 
 ### Flood Risk
 
