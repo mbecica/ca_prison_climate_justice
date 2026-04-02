@@ -84,6 +84,27 @@ Facilities not within any classified zone are unclassified (considered lowest ri
 | `fhsz_responsibility` | Responsibility area type: `SRA` (State) or `LRA` (Local). Blank if the facility is not within a classified zone. | CalFire FHSZ, SRA 2022 / LRA 2025 |
 | `wui_type` | Wildland-Urban Interface classification: `Intermix` (homes interspersed within wildland vegetation), `Interface` (homes adjacent to wildland), or `Influence Zone` (within ~1.5 miles of Interface/Intermix areas). Blank if outside all WUI boundaries. | CalFire Wildland-Urban Interface shapefile |
 
+### Drought Risk
+
+The drought hazard index follows VCP's three-indicator methodology. VCP's composite drought score excludes all-group-quarters census tracts (including state prisons), but the underlying raw indicators are available for all tracts and are used directly.
+
+The index combines three equal-weight components:
+- **June–August temperature change** (°C above baseline): captures temperature-driven evapotranspiration demand, a primary driver of drought in the western US. Normalized min-max across both time periods combined.
+- **Water Shortage Vulnerability (WSV)**: DWR physical risk score reflecting overdrafted basins, dry well susceptibility, and declining groundwater levels. Same value used in both timescales.
+- **Precipitation/demand ratio**: ratio of 30-year average precipitation to population and cultivated land per watershed. Higher values indicate lower water stress, so this component is inverted before combining. Same value used in both timescales.
+
+The SPEI-12 delta is included as a standalone variable. SPEI accounts for both precipitation deficit and evapotranspiration together, but a meaningful historic equivalent cannot be derived — the historic baseline is ~5% by construction of the 5th-percentile threshold — so it is not included in the composite. The SPEI data uses SSP 2-4.5 (moderate emissions), methods determined by climatologists in California's Fifth Climate Assessment (2026, forthcoming).
+
+| Variable | Description | Source |
+| :--- | :--- | :--- |
+| `Dr_delta_JA_max_pre` | Change in June–August mean maximum temperature (°C) above baseline, current timescale (2015–2044). | LCI VCP, 2025, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| `Dr_delta_JA_max_fut` | Change in June–August mean maximum temperature (°C) above baseline, mid-century timescale (2045–2074). | LCI VCP, 2025, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| `Dr_WSV_average` | Water Shortage Vulnerability physical risk score per census tract (0–100). | LCI VCP, 2025, derived from DWR Water Shortage Vulnerability Tool (updated 2024) |
+| `Dr_precip_demand_ratio` | Ratio of 30-year average total precipitation to population and cultivated land per watershed. Higher values indicate less water stress. Inverted when computing the drought index. | LCI VCP, 2025, derived from PRISM 30-year normals (1991–2020) and DWR Statewide Crop Mapping |
+| `drought_delta_spei12_midcentury` | % change in SPEI-12 drought frequency from the historic baseline (~5%) to mid-century (2041–2070). SPEI-12 is a 12-month drought index accounting for both precipitation deficit and evapotranspiration. | Cal-Adapt, derived from LOCA2 CA Hybrid (SSP 245) |
+| `drought_hazard_idx_norm` | Normalized Drought Hazard Index (0–100), current. Equal-weight mean of normalized June–August temperature change (current), WSV, and inverted precipitation/demand ratio. | Derived from LCI VCP, 2025 |
+| `drought_hazard_fut_idx_norm` | Normalized Drought Hazard Index (0–100), mid-century (2041–2070). Equal-weight mean of normalized June–August temperature change (mid-century), WSV, and inverted precipitation/demand ratio. | Derived from LCI VCP, 2025 |
+
 # References
 
 ## Facilities
@@ -110,6 +131,8 @@ Department of Water Resources. (2008, updated periodically). Best Available Maps
 CalEnviroScreen 5.0. (2026). [Dataset]. California Office of Environmental Health Hazard Assessment. https://data.ca.gov/dataset/draft-calenviroscreen-5-0
 
 Cal-Adapt. (Forthcoming). [Dataset]. Climate datasets prepared for California's Fifth Climate Change Assessment.
+
+Department of Water Resources. (2024). Water Shortage Vulnerability Tool [Dataset]. California Department of Water Resources.
 
 CalFire. (2022, 2025). Fire Hazard Severity Zones [Dataset]. California Department of Forestry and Fire Protection. https://osfm.fire.ca.gov/divisions/community-wildfire-preparedness-and-mitigation/wildland-hazard-and-building-codes/fire-hazard-severity-zones-maps/
 
