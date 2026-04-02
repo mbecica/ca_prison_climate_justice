@@ -5,8 +5,8 @@
 ## Usage
 
 ```bash
-# From repo root — requires the data_science conda env (pandas, pdfplumber)
-conda run -n data_science python3 scrapers/extract_tpop1.py
+# From repo root — requires the a running conda env with pandas and pdfplumber
+conda run -n [conda environment] python3 scrapers/extract_tpop1.py
 ```
 
 Outputs written to `data_sources/facilities/CDCR/`:
