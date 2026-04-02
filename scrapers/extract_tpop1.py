@@ -85,7 +85,8 @@ def is_page1_format_b(text):
 P1_SKIP_PATTERNS = re.compile(
     r"^(California Department|Division of|Office of Research|"
     r"Monthly Report|Weekly Report|As of Midnight|"
-    r"Felon/|Population Other|Report #|RReport|Note |This report|"
+    r"Felon/|Population Other|Report #|RReport|RReeppoorrtt|Note |This report|"
+    r"beds at|"
     r"Total CDCR Population\s*$)"    # bare header, not the data row
 )
 
@@ -249,6 +250,8 @@ def parse_page1_format_b(page, report_date):
         r"\s*$"
     )
 
+    pending_label = None  # last decoded text-only line, used as label for INSTITUTIONS #5
+
     for top in sorted(line_buckets):
         tokens = _decode_overprint_line(line_buckets[top])
         if not tokens:
@@ -264,9 +267,17 @@ def parse_page1_format_b(page, report_date):
 
         m = P1B_ROW_RE.match(line)
         if not m:
+            # Text-only line — store as pending label for the next data row
+            pending_label = line.strip()
             continue
 
         label = m.group(1).strip()
+        # "INSTITUTIONS #5" is the sub-row label for CYA-W&IC 1731.5(c) institutions;
+        # the actual label appears as a text-only line immediately above it.
+        if label == "INSTITUTIONS #5" and pending_label:
+            label = pending_label
+        pending_label = None
+
         total = m.group(4)
         rows.append({
             "report_date":        report_date,

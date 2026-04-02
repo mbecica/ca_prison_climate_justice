@@ -109,3 +109,4 @@ Institutions per month: 31–40 (varies as facilities opened, closed, or tempora
 
 - **Short institution names 2015–2017:** The older weekly format uses abbreviated names. These are not normalized to the full names used in monthly reports.
 - **`change_last_period` semantics vary:** This column means different things depending on the source file (see format notes above). Do not compare across the 2018/2019 boundary without accounting for this.
+- **CYA/DJJ label change:** The row tracking youth offenders housed in CDCR facilities under Welfare & Institutions Code 1731.5(c) is labeled `CYA-W&IC 1731.5(c)` in 2015–2017 and `DJJ-W&IC 1731.5(c) Institutions` from 2018 onward, reflecting the agency rename from California Youth Authority (CYA) to Division of Juvenile Justice (DJJ).
