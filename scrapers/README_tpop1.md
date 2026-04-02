@@ -38,14 +38,14 @@ Total CDCR Population                 183,103  -367   +340
 ```
 Column order: label | population | change_last_period | change_last_year | [design_capacity | pct_occupied | staffed_capacity]
 
-**Format B** (weekly 2015–2017): older layout with garbled underscored text for section headers and aggregate totals; only clean data rows are parseable
+**Format B** (weekly 2015–2017): older layout with FELON/OTHER + CIVIL ADDICT + TOTAL columns; section headers and aggregate totals use a typewriter overprint underline technique decoded at the character level
 ```
 (MEN, Subtotal)   116,796  1  116,797  -644  -0.5
 INSTITUTIONS      112,821  1  112,822  -641  -0.5  82,707  136.4  123,183
 ```
 Column order: label | felon/other | civil_addict | total | change_no | change_pct | [design | pct | staffed]
 
-> In Format B, `change_last_period` stores the year-over-year absolute change (not week-over-week), and `change_last_year` is null. The `Total CDCR Population` grand total row is garbled and cannot be parsed from these files.
+> In Format B, `change_last_period` stores the year-over-year absolute change (not week-over-week), and `change_last_year` is null.
 
 ### Page 2 — Institution Population Detail
 
@@ -61,7 +61,7 @@ Central California Women's Facility (CCWF)  2,812  2,004  140.3  2,964
 ```
 Column order: name (code) | felon/other | design_capacity | pct_occupied | staffed_capacity
 
-**Format B** (weekly 2015–2017): ACRONYM-first rows, garbled totals; includes Civil Addict column (almost always zero or 1)
+**Format B** (weekly 2015–2017): ACRONYM-first rows, section totals decoded from overprint characters; includes Civil Addict column (almost always zero or 1)
 ```
 MALE
 ASP (Avenal SP)  4,129  4,129  2,920  141.4  4,702
@@ -86,7 +86,7 @@ Institution names differ by format: short names in 2015–2017 (e.g., "Avenal SP
 | `pct_occupied` | Percent occupied; only present for institution/camp aggregate rows |
 | `staffed_capacity` | Staffed capacity; only present for institution/camp aggregate rows |
 
-Rows per month: 18–33 (fewer for 2015–2017 due to unparseable garbled lines).
+Rows per month: 20–33.
 
 ### `tpop1_institutions.csv`
 
@@ -107,6 +107,5 @@ Institutions per month: 31–40 (varies as facilities opened, closed, or tempora
 
 ## Known Limitations
 
-- **2015–2017 summary totals missing:** The `Total CDCR Population` grand total row is garbled in the 2015–2017 weekly PDFs and cannot be recovered.
 - **Short institution names 2015–2017:** The older weekly format uses abbreviated names. These are not normalized to the full names used in monthly reports.
 - **`change_last_period` semantics vary:** This column means different things depending on the source file (see format notes above). Do not compare across the 2018/2019 boundary without accounting for this.

@@ -154,34 +154,118 @@ def _p1_row(report_date, label, pop, chg_period, chg_year, design, pct, staffed)
     }
 
 
-def parse_page1_format_b(text, report_date):
+def _decode_overprint_line(line_chars):
     """
-    Parse 2015–2017 weekly page 1.
-    Format: LABEL  felon [civil] total  change_no  change_pct  [design pct staffed]
-    Garbled underscore lines (category headers / aggregate totals) are skipped.
-    The 'population' stored is the TOTAL column (felon + civil addict).
-    change_last_period = change_no (since last year), change_last_year = None.
+    Decode one line from a 2015–2017 weekly PDF page.
+
+    These PDFs use a typewriter-era overprint technique: every underlined position
+    is printed twice at the same x-coordinate — once with the content character
+    (digit, letter, punctuation) and once with '_'.  Non-underlined positions are
+    printed once with the content character and once with ' '.  The result is that
+    pdfplumber sees two chars at every x-position.
+
+    Decoding rule:
+      • At each x-position, keep the non-underscore character.
+      • Multiple adjacent non-blank chars → one token.
+      • Blank columns between tokens act as word separators.
+
+    Returns a list of string tokens (label words + numbers), e.g.:
+      ['A.', 'TOTAL', 'IN-CUSTODY', '127,291', '1', '127,292', '-4,950', '-3.7']
+    """
+    # Group chars by x-position (Courier pitch ≈ 4.8 pt; bucket to nearest 0.5 pt)
+    by_x = defaultdict(list)
+    for c in line_chars:
+        by_x[round(c["x0"] * 2) / 2].append(c["text"])
+
+    # For each column, the content is the non-underscore char
+    columns = []
+    for x in sorted(by_x):
+        texts = by_x[x]
+        content = next((t for t in texts if t != "_"), " ")
+        columns.append((x, content))
+
+    # Group consecutive non-blank columns into tokens; blank columns are separators
+    tokens = []
+    current = []
+    prev_x = None
+    char_width = 4.8  # Courier 8pt character width in PDF points
+
+    for x, ch in columns:
+        gap = (x - prev_x) if prev_x is not None else 0
+        if ch != " " and gap < char_width * 2:
+            current.append(ch)
+        else:
+            if current:
+                tokens.append("".join(current))
+                current = []
+            if ch != " ":
+                current.append(ch)
+        prev_x = x
+
+    if current:
+        tokens.append("".join(current))
+
+    return tokens
+
+
+def parse_page1_format_b(page, report_date):
+    """
+    Parse 2015–2017 weekly page 1 using character-level decoding.
+
+    The overprint underline technique makes section headers and aggregate total
+    rows unreadable as plain text, but the raw PDF chars are intact.  We decode
+    every line — including the previously garbled totals — by extracting the
+    content character from each overprinted pair.
+
+    Column order (from the column header): FELON/OTHER, CIVIL ADDICT, TOTAL,
+    CHANGE_NO (year-over-year absolute), CHANGE_PCT (year-over-year %).
+    Capacity columns appear only on institution/camp aggregate rows.
+
+    change_last_period = year-over-year absolute change (CHANGE_NO column).
+    change_last_year   = None (not a separate column in this format).
+    population         = TOTAL column (felon/other + civil addict).
     """
     rows = []
+
+    # Group all page chars by line (rounded top coordinate)
+    line_buckets = defaultdict(list)
+    for c in page.chars:
+        line_buckets[round(c["top"])].append(c)
+
+    # Rows to skip: pure header / footer lines
+    SKIP_STARTS = (
+        "DATA", "ESTIMATES", "OFFENDER", "WEEKLY", "CHANGE FROM",
+        "THIS REPORT", "FELON", "CHANGE SINCE",
+    )
+
     P1B_ROW_RE = re.compile(
-        r"^([\w(].+?)\s+"
-        r"([\d,]+)"                                    # felon/other
-        r"(?:\s+([\d,]+))?"                            # civil addict (optional)
-        r"\s+([\d,]+)"                                 # total
-        r"\s+([+\-][\d,]+)"                           # change_no
-        r"\s+([+\-][\d.]+)"                           # change_pct
-        r"(?:\s+([\d,]+)\s+([\d.]+)\s+([\d,]+))?"     # design, pct, staffed
+        r"^([\w(].*?)\s+"
+        r"([\d,]+)"                                 # felon/other
+        r"(?:\s+([\d,]+))?"                         # civil addict (optional)
+        r"\s+([\d,]+)"                              # total
+        r"\s+([+\-][\d,]+)"                        # change_no
+        r"\s+([+\-][\d.]+)"                        # change_pct
+        r"(?:\s+([\d,]+)\s+([\d.]+)\s+([\d,]+))?"  # design, pct, staffed (optional)
         r"\s*$"
     )
-    for line in text.split("\n"):
-        line = line.strip()
-        if not line or "_" in line:
+
+    for top in sorted(line_buckets):
+        tokens = _decode_overprint_line(line_buckets[top])
+        if not tokens:
             continue
-        if re.match(r"^(Data Analysis|Estimates|Offender|WEEKLY|CHANGE FROM|This report)", line):
+
+        # Reconstruct a normalised text line from the decoded tokens
+        line = " ".join(tokens)
+
+        if not line.strip():
             continue
+        if any(line.upper().startswith(s) for s in SKIP_STARTS):
+            continue
+
         m = P1B_ROW_RE.match(line)
         if not m:
             continue
+
         label = m.group(1).strip()
         total = m.group(4)
         rows.append({
@@ -194,6 +278,7 @@ def parse_page1_format_b(text, report_date):
             "pct_occupied":       float(m.group(8)) if m.group(8) else None,
             "staffed_capacity":   _int(m.group(9)),
         })
+
     return rows
 
 
@@ -350,43 +435,45 @@ def main():
     for pdf_path, fmt in files:
         try:
             with pdfplumber.open(pdf_path) as pdf:
-                p1_text = pdf.pages[0].extract_text() or ""
+                p1_page = pdf.pages[0]
+                p1_text = p1_page.extract_text() or ""
                 p2_text = pdf.pages[1].extract_text() if len(pdf.pages) > 1 else ""
+
+                report_date = extract_report_date(p1_text)
+                if not report_date:
+                    errors.append(f"  DATE MISSING {pdf_path.name}")
+                    continue
+
+                # Page 1
+                try:
+                    if is_page1_format_b(p1_text):
+                        p1_rows = parse_page1_format_b(p1_page, report_date)
+                    else:
+                        p1_rows = parse_page1(p1_text, report_date)
+                    summary_rows.extend(p1_rows)
+                except Exception as e:
+                    errors.append(f"  P1 ERROR {pdf_path.name}: {e}")
+                    p1_rows = []
+
+                # Page 2
+                try:
+                    if is_format_b(p2_text):
+                        inst_rows = parse_page2_format_b(p2_text, report_date)
+                    else:
+                        inst_rows = parse_page2_format_a(p2_text, report_date)
+                    institution_rows.extend(inst_rows)
+                except Exception as e:
+                    errors.append(f"  P2 ERROR {pdf_path.name}: {e}")
+                    inst_rows = []
+
+                print(
+                    f"  {pdf_path.name:25s}  {report_date}  "
+                    f"p1={len(p1_rows):2d}  p2={len(inst_rows):2d}  fmt={fmt}"
+                )
+
         except Exception as e:
             errors.append(f"  READ ERROR {pdf_path.name}: {e}")
             continue
-
-        report_date = extract_report_date(p1_text)
-        if not report_date:
-            errors.append(f"  DATE MISSING {pdf_path.name}")
-            continue
-
-        # Page 1
-        try:
-            if is_page1_format_b(p1_text):
-                p1_rows = parse_page1_format_b(p1_text, report_date)
-            else:
-                p1_rows = parse_page1(p1_text, report_date)
-            summary_rows.extend(p1_rows)
-        except Exception as e:
-            errors.append(f"  P1 ERROR {pdf_path.name}: {e}")
-            p1_rows = []
-
-        # Page 2
-        try:
-            if is_format_b(p2_text):
-                inst_rows = parse_page2_format_b(p2_text, report_date)
-            else:
-                inst_rows = parse_page2_format_a(p2_text, report_date)
-            institution_rows.extend(inst_rows)
-        except Exception as e:
-            errors.append(f"  P2 ERROR {pdf_path.name}: {e}")
-            inst_rows = []
-
-        print(
-            f"  {pdf_path.name:25s}  {report_date}  "
-            f"p1={len(p1_rows):2d}  p2={len(inst_rows):2d}  fmt={fmt}"
-        )
 
     # Write outputs
     out_dir = Path("data_sources/facilities/CDCR")
