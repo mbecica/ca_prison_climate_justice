@@ -1,5 +1,6 @@
 # Ignore where files get large
-data_sources/facilities/cdcr_population_pdfs
+data_sources/facilities/CDCR/cdcr_population_pdfs/
+data_sources/facilities/CDCR/cdcr_population_pdfs/tpop_weekly/
 data_sources/facilities/CDCR/cdcr_staffing/
 data_sources/cb_2020_us_ua20_500k.zip
 data_sources/national_map_medical_emergency.csv
