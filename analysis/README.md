@@ -24,10 +24,22 @@ Activation thresholds:
 
 ## Summary Graphs
 
-Print-readable figures produced in `analysis/heat_activation_graphs.ipynb`:
+Interactive, print-readable D3 charts in `analysis/heat_activation_charts.html`:
 
-- Total Stage 1 and Stage 3 heat days across all CDCR facilities, 2016–2025
-- Total Stage 3 days per facility, 2016–2025
+- **Annual line chart** — total Stage 1 and Stage 3 facility-days across all 32 active prisons per year, 2016–2025
+- **Per-facility horizontal bar** — average annual Stage 3 days per facility over the 10-year period
+- **Per-facility line chart** — Stage 3 days per facility per year; color encodes cumulative Stage 3 exposure (light gray = low, dark red = high); labeled facilities sampled by tier and population
+
+Summary statistics shown at the top of the page:
+- Total Stage 1 facility-days: 27,722
+- Total Stage 3 facility-days: 18,684
+- Average annual Stage 1: 2,772
+- Average annual Stage 3: 1,868
+- Facilities with any Stage 3 day: 31 of 32 (PBSP is the only exception)
+
+**Facility coverage notes:**
+- CAC (private facility) and FWF (co-located with FOL) are excluded from all heat analysis
+- CVSP is included for 2016–2023 only (closed mid-2024)
 
 ## Population Impacts
 

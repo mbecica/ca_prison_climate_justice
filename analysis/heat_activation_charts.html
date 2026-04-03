@@ -275,7 +275,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
   // Y label
   svg.append("text")
     .attr("transform", "rotate(-90)")
-    .attr("x", -height / 2).attr("y", -44)
+    .attr("x", -height / 2).attr("y", -52)
     .attr("text-anchor", "middle")
     .attr("font-size", "13px").attr("fill", "#555")
     .text(yLabel);
@@ -312,7 +312,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
 // ── Chart 1: Annual line chart ────────────────────────────────────────────────
 
 (function() {
-  const margin = { top: 18, right: 20, bottom: 36, left: 54 };
+  const margin = { top: 18, right: 20, bottom: 36, left: 64 };
   const width  = 712 - margin.left - margin.right;
   const height = 240 - margin.top  - margin.bottom;
 
