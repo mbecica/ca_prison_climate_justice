@@ -121,64 +121,43 @@
 
 <h1>CDCR Heat Activation Days, 2016–2025</h1>
 <p class="subtitle">
-  Stage 1: outdoor daily maximum temperature ≥ 90°F &nbsp;·&nbsp;
-  Stage 3: outdoor daily maximum temperature ≥ 95°F &nbsp;·&nbsp;
+  Days outdoor daily maximum temperature ≥ 90°F (CDCR Heat Pathology Plan Stage 1 outdoor threshold) &nbsp;·&nbsp;
   32 CDCR state prisons &nbsp;·&nbsp; Source: gridMET 4km daily tmax
 </p>
 
 <div class="summary-stats">
   <div class="stat-block">
-    <div class="stat-label">Total Stage 1 facility-days</div>
+    <div class="stat-label">Total facility-days ≥ 90°F outdoor</div>
     <div class="stat-value stage1">27,722</div>
     <div class="stat-sub">All 32 facilities &nbsp;·&nbsp; 2016–2025</div>
   </div>
   <div class="stat-block">
-    <div class="stat-label">Total Stage 3 facility-days</div>
-    <div class="stat-value stage3">18,684</div>
-    <div class="stat-sub">All 32 facilities &nbsp;·&nbsp; 2016–2025</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-label">Avg annual Stage 1 facility-days</div>
+    <div class="stat-label">Avg annual facility-days ≥ 90°F</div>
     <div class="stat-value stage1">2,772</div>
     <div class="stat-sub">Per year across active facilities</div>
   </div>
   <div class="stat-block">
-    <div class="stat-label">Avg annual Stage 3 facility-days</div>
-    <div class="stat-value stage3">1,868</div>
-    <div class="stat-sub">Per year across active facilities</div>
-  </div>
-  <div class="stat-block">
-    <div class="stat-label">Facilities with any Stage 3 day</div>
-    <div class="stat-value stage1">31 of 32</div>
-    <div class="stat-sub">PBSP (Pelican Bay) is the only exception</div>
+    <div class="stat-label">Facilities with any day ≥ 90°F</div>
+    <div class="stat-value stage1">32 of 32</div>
+    <div class="stat-sub">All active facilities, 2016–2025</div>
   </div>
 </div>
 
 <!-- Chart 1: Annual line chart -->
-<h2>Annual Stage 1 &amp; Stage 3 Days — All CDCR Facilities Combined</h2>
-<p class="chart-note">Sum of facility-days triggering each stage across all 32 prisons per year (CVSP included 2016–2023 only).</p>
+<h2>Annual Days ≥ 90°F Outdoor — All CDCR Facilities Combined</h2>
+<p class="chart-note">Sum of facility-days with outdoor tmax ≥ 90°F across all 32 prisons per year (CVSP included 2016–2023 only).</p>
 <div id="chart-annual"></div>
-<div class="legend">
-  <div class="legend-item">
-    <div class="legend-line" style="background:#444;"></div>
-    Stage 1 (≥ 90°F)
-  </div>
-  <div class="legend-item">
-    <div class="legend-line" style="background:#b03020;"></div>
-    Stage 3 (≥ 95°F)
-  </div>
-</div>
 
 <!-- Chart 2: Per-facility horizontal bar -->
-<h2>Average Annual Stage 3 Days per Facility, 2016–2025</h2>
-<p class="chart-note">Average Stage 3 days per year at each prison across the 10-year period.</p>
+<h2>Average Annual Days ≥ 90°F per Facility, 2016–2025</h2>
+<p class="chart-note">Average days with outdoor tmax ≥ 90°F per year at each prison across the 10-year period.</p>
 <div id="chart-facility"></div>
 
 <!-- Chart 3: Per-facility line chart over time -->
-<h2>Stage 3 Days per Facility per Year, 2016–2025</h2>
+<h2>Days ≥ 90°F Outdoor per Facility per Year, 2016–2025</h2>
 <p class="chart-note">
-  Each line is one facility. Color encodes total Stage 3 days over the decade —
-  darker red indicates higher cumulative heat exposure.
+  Each line is one facility. Color encodes total days ≥ 90°F over the decade —
+  darker red indicates higher cumulative outdoor heat exposure.
 </p>
 <div id="chart-lines"></div>
 
@@ -206,41 +185,41 @@ const annualData = [
 ];
 
 const facilityTotals = [
-  { code: "ISP",  stage3total: 1495, stage3: 149.5 },
-  { code: "CEN",  stage3total: 1487, stage3: 148.7 },
-  { code: "CAL",  stage3total: 1473, stage3: 147.3 },
-  { code: "CVSP", stage3total: 1184, stage3: 148.0 },
-  { code: "WSP",  stage3total: 882,  stage3: 88.2  },
-  { code: "SATF", stage3total: 845,  stage3: 84.5  },
-  { code: "COR",  stage3total: 845,  stage3: 84.5  },
-  { code: "PVSP", stage3total: 827,  stage3: 82.7  },
-  { code: "KVSP", stage3total: 823,  stage3: 82.3  },
-  { code: "NKSP", stage3total: 823,  stage3: 82.3  },
-  { code: "LAC",  stage3total: 806,  stage3: 80.6  },
-  { code: "ASP",  stage3total: 770,  stage3: 77.0  },
-  { code: "VSP",  stage3total: 679,  stage3: 67.9  },
-  { code: "CCWF", stage3total: 679,  stage3: 67.9  },
-  { code: "CHCF", stage3total: 529,  stage3: 52.9  },
-  { code: "SCC",  stage3total: 501,  stage3: 50.1  },
-  { code: "CIW",  stage3total: 489,  stage3: 48.9  },
-  { code: "MCSP", stage3total: 488,  stage3: 48.8  },
-  { code: "FOL",  stage3total: 483,  stage3: 48.3  },
-  { code: "SAC",  stage3total: 461,  stage3: 46.1  },
-  { code: "CMF",  stage3total: 436,  stage3: 43.6  },
-  { code: "SOL",  stage3total: 436,  stage3: 43.6  },
-  { code: "CIM",  stage3total: 435,  stage3: 43.5  },
-  { code: "CRC",  stage3total: 396,  stage3: 39.6  },
-  { code: "HDSP", stage3total: 220,  stage3: 22.0  },
-  { code: "SVSP", stage3total: 42,   stage3: 4.2   },
-  { code: "CTF",  stage3total: 42,   stage3: 4.2   },
-  { code: "CMC",  stage3total: 42,   stage3: 4.2   },
-  { code: "CCI",  stage3total: 26,   stage3: 2.6   },
-  { code: "SQ",   stage3total: 21,   stage3: 2.1   },
-  { code: "RJD",  stage3total: 19,   stage3: 1.9   },
-  { code: "PBSP", stage3total: 0,    stage3: 0.0   },
+  { code: "CEN",  stage1total: 1819, stage1: 181.9 },
+  { code: "CAL",  stage1total: 1812, stage1: 181.2 },
+  { code: "ISP",  stage1total: 1795, stage1: 179.5 },
+  { code: "CVSP", stage1total: 1416, stage1: 177.0 },
+  { code: "WSP",  stage1total: 1195, stage1: 119.5 },
+  { code: "SATF", stage1total: 1156, stage1: 115.6 },
+  { code: "COR",  stage1total: 1156, stage1: 115.6 },
+  { code: "PVSP", stage1total: 1144, stage1: 114.4 },
+  { code: "KVSP", stage1total: 1132, stage1: 113.2 },
+  { code: "NKSP", stage1total: 1132, stage1: 113.2 },
+  { code: "LAC",  stage1total: 1115, stage1: 111.5 },
+  { code: "ASP",  stage1total: 1099, stage1: 109.9 },
+  { code: "VSP",  stage1total: 1018, stage1: 101.8 },
+  { code: "CCWF", stage1total: 1018, stage1: 101.8 },
+  { code: "CIW",  stage1total: 930,  stage1: 93.0  },
+  { code: "CHCF", stage1total: 918,  stage1: 91.8  },
+  { code: "CIM",  stage1total: 887,  stage1: 88.7  },
+  { code: "SCC",  stage1total: 865,  stage1: 86.5  },
+  { code: "CRC",  stage1total: 855,  stage1: 85.5  },
+  { code: "MCSP", stage1total: 832,  stage1: 83.2  },
+  { code: "FOL",  stage1total: 817,  stage1: 81.7  },
+  { code: "SAC",  stage1total: 800,  stage1: 80.0  },
+  { code: "SOL",  stage1total: 783,  stage1: 78.3  },
+  { code: "CMF",  stage1total: 783,  stage1: 78.3  },
+  { code: "HDSP", stage1total: 542,  stage1: 54.2  },
+  { code: "CCI",  stage1total: 203,  stage1: 20.3  },
+  { code: "SVSP", stage1total: 128,  stage1: 12.8  },
+  { code: "CTF",  stage1total: 128,  stage1: 12.8  },
+  { code: "CMC",  stage1total: 112,  stage1: 11.2  },
+  { code: "RJD",  stage1total: 82,   stage1: 8.2   },
+  { code: "SQ",   stage1total: 49,   stage1: 4.9   },
+  { code: "PBSP", stage1total: 1,    stage1: 0.1   },
 ];
 
-const facilityAnnual = [{"code":"ASP","values":[{"year":2016,"stage3":83},{"year":2017,"stage3":87},{"year":2018,"stage3":77},{"year":2019,"stage3":66},{"year":2020,"stage3":76},{"year":2021,"stage3":86},{"year":2022,"stage3":83},{"year":2023,"stage3":57},{"year":2024,"stage3":86},{"year":2025,"stage3":69}]},{"code":"CAL","values":[{"year":2016,"stage3":138},{"year":2017,"stage3":152},{"year":2018,"stage3":148},{"year":2019,"stage3":138},{"year":2020,"stage3":166},{"year":2021,"stage3":148},{"year":2022,"stage3":155},{"year":2023,"stage3":138},{"year":2024,"stage3":158},{"year":2025,"stage3":132}]},{"code":"CCI","values":[{"year":2016,"stage3":2},{"year":2017,"stage3":8},{"year":2018,"stage3":0},{"year":2019,"stage3":0},{"year":2020,"stage3":2},{"year":2021,"stage3":5},{"year":2022,"stage3":3},{"year":2023,"stage3":2},{"year":2024,"stage3":4},{"year":2025,"stage3":0}]},{"code":"CCWF","values":[{"year":2016,"stage3":67},{"year":2017,"stage3":80},{"year":2018,"stage3":76},{"year":2019,"stage3":63},{"year":2020,"stage3":73},{"year":2021,"stage3":78},{"year":2022,"stage3":71},{"year":2023,"stage3":48},{"year":2024,"stage3":71},{"year":2025,"stage3":52}]},{"code":"CEN","values":[{"year":2016,"stage3":138},{"year":2017,"stage3":145},{"year":2018,"stage3":145},{"year":2019,"stage3":131},{"year":2020,"stage3":168},{"year":2021,"stage3":151},{"year":2022,"stage3":157},{"year":2023,"stage3":147},{"year":2024,"stage3":165},{"year":2025,"stage3":140}]},{"code":"CHCF","values":[{"year":2016,"stage3":48},{"year":2017,"stage3":60},{"year":2018,"stage3":55},{"year":2019,"stage3":55},{"year":2020,"stage3":69},{"year":2021,"stage3":50},{"year":2022,"stage3":52},{"year":2023,"stage3":38},{"year":2024,"stage3":65},{"year":2025,"stage3":37}]},{"code":"CIM","values":[{"year":2016,"stage3":47},{"year":2017,"stage3":60},{"year":2018,"stage3":40},{"year":2019,"stage3":31},{"year":2020,"stage3":59},{"year":2021,"stage3":37},{"year":2022,"stage3":45},{"year":2023,"stage3":36},{"year":2024,"stage3":44},{"year":2025,"stage3":36}]},{"code":"CIW","values":[{"year":2016,"stage3":56},{"year":2017,"stage3":69},{"year":2018,"stage3":49},{"year":2019,"stage3":43},{"year":2020,"stage3":64},{"year":2021,"stage3":38},{"year":2022,"stage3":51},{"year":2023,"stage3":39},{"year":2024,"stage3":46},{"year":2025,"stage3":34}]},{"code":"CMC","values":[{"year":2016,"stage3":4},{"year":2017,"stage3":7},{"year":2018,"stage3":1},{"year":2019,"stage3":2},{"year":2020,"stage3":14},{"year":2021,"stage3":1},{"year":2022,"stage3":5},{"year":2023,"stage3":2},{"year":2024,"stage3":5},{"year":2025,"stage3":1}]},{"code":"CMF","values":[{"year":2016,"stage3":36},{"year":2017,"stage3":40},{"year":2018,"stage3":42},{"year":2019,"stage3":42},{"year":2020,"stage3":57},{"year":2021,"stage3":57},{"year":2022,"stage3":53},{"year":2023,"stage3":33},{"year":2024,"stage3":52},{"year":2025,"stage3":24}]},{"code":"COR","values":[{"year":2016,"stage3":96},{"year":2017,"stage3":96},{"year":2018,"stage3":85},{"year":2019,"stage3":77},{"year":2020,"stage3":85},{"year":2021,"stage3":91},{"year":2022,"stage3":87},{"year":2023,"stage3":63},{"year":2024,"stage3":88},{"year":2025,"stage3":77}]},{"code":"CRC","values":[{"year":2016,"stage3":44},{"year":2017,"stage3":53},{"year":2018,"stage3":42},{"year":2019,"stage3":40},{"year":2020,"stage3":51},{"year":2021,"stage3":30},{"year":2022,"stage3":40},{"year":2023,"stage3":28},{"year":2024,"stage3":43},{"year":2025,"stage3":25}]},{"code":"CTF","values":[{"year":2016,"stage3":1},{"year":2017,"stage3":4},{"year":2018,"stage3":1},{"year":2019,"stage3":7},{"year":2020,"stage3":10},{"year":2021,"stage3":3},{"year":2022,"stage3":9},{"year":2023,"stage3":3},{"year":2024,"stage3":4},{"year":2025,"stage3":0}]},{"code":"CVSP","values":[{"year":2016,"stage3":132},{"year":2017,"stage3":138},{"year":2018,"stage3":150},{"year":2019,"stage3":133},{"year":2020,"stage3":169},{"year":2021,"stage3":146},{"year":2022,"stage3":162},{"year":2023,"stage3":154}]},{"code":"FOL","values":[{"year":2016,"stage3":41},{"year":2017,"stage3":59},{"year":2018,"stage3":48},{"year":2019,"stage3":43},{"year":2020,"stage3":52},{"year":2021,"stage3":39},{"year":2022,"stage3":58},{"year":2023,"stage3":36},{"year":2024,"stage3":68},{"year":2025,"stage3":39}]},{"code":"HDSP","values":[{"year":2016,"stage3":18},{"year":2017,"stage3":25},{"year":2018,"stage3":21},{"year":2019,"stage3":5},{"year":2020,"stage3":20},{"year":2021,"stage3":41},{"year":2022,"stage3":31},{"year":2023,"stage3":13},{"year":2024,"stage3":24},{"year":2025,"stage3":22}]},{"code":"ISP","values":[{"year":2016,"stage3":132},{"year":2017,"stage3":139},{"year":2018,"stage3":150},{"year":2019,"stage3":133},{"year":2020,"stage3":169},{"year":2021,"stage3":147},{"year":2022,"stage3":162},{"year":2023,"stage3":153},{"year":2024,"stage3":164},{"year":2025,"stage3":146}]},{"code":"KVSP","values":[{"year":2016,"stage3":94},{"year":2017,"stage3":88},{"year":2018,"stage3":81},{"year":2019,"stage3":68},{"year":2020,"stage3":83},{"year":2021,"stage3":94},{"year":2022,"stage3":85},{"year":2023,"stage3":60},{"year":2024,"stage3":94},{"year":2025,"stage3":76}]},{"code":"LAC","values":[{"year":2016,"stage3":85},{"year":2017,"stage3":92},{"year":2018,"stage3":81},{"year":2019,"stage3":63},{"year":2020,"stage3":91},{"year":2021,"stage3":89},{"year":2022,"stage3":89},{"year":2023,"stage3":55},{"year":2024,"stage3":92},{"year":2025,"stage3":69}]},{"code":"MCSP","values":[{"year":2016,"stage3":45},{"year":2017,"stage3":61},{"year":2018,"stage3":52},{"year":2019,"stage3":45},{"year":2020,"stage3":60},{"year":2021,"stage3":55},{"year":2022,"stage3":49},{"year":2023,"stage3":39},{"year":2024,"stage3":57},{"year":2025,"stage3":25}]},{"code":"NKSP","values":[{"year":2016,"stage3":94},{"year":2017,"stage3":88},{"year":2018,"stage3":81},{"year":2019,"stage3":68},{"year":2020,"stage3":83},{"year":2021,"stage3":94},{"year":2022,"stage3":85},{"year":2023,"stage3":60},{"year":2024,"stage3":94},{"year":2025,"stage3":76}]},{"code":"PBSP","values":[{"year":2016,"stage3":0},{"year":2017,"stage3":0},{"year":2018,"stage3":0},{"year":2019,"stage3":0},{"year":2020,"stage3":0},{"year":2021,"stage3":0},{"year":2022,"stage3":0},{"year":2023,"stage3":0},{"year":2024,"stage3":0},{"year":2025,"stage3":0}]},{"code":"PVSP","values":[{"year":2016,"stage3":93},{"year":2017,"stage3":90},{"year":2018,"stage3":72},{"year":2019,"stage3":68},{"year":2020,"stage3":93},{"year":2021,"stage3":95},{"year":2022,"stage3":93},{"year":2023,"stage3":66},{"year":2024,"stage3":85},{"year":2025,"stage3":72}]},{"code":"RJD","values":[{"year":2016,"stage3":2},{"year":2017,"stage3":5},{"year":2018,"stage3":1},{"year":2019,"stage3":0},{"year":2020,"stage3":8},{"year":2021,"stage3":0},{"year":2022,"stage3":1},{"year":2023,"stage3":0},{"year":2024,"stage3":2},{"year":2025,"stage3":0}]},{"code":"SAC","values":[{"year":2016,"stage3":40},{"year":2017,"stage3":55},{"year":2018,"stage3":48},{"year":2019,"stage3":41},{"year":2020,"stage3":51},{"year":2021,"stage3":39},{"year":2022,"stage3":56},{"year":2023,"stage3":37},{"year":2024,"stage3":62},{"year":2025,"stage3":32}]},{"code":"SATF","values":[{"year":2016,"stage3":96},{"year":2017,"stage3":96},{"year":2018,"stage3":85},{"year":2019,"stage3":77},{"year":2020,"stage3":85},{"year":2021,"stage3":91},{"year":2022,"stage3":87},{"year":2023,"stage3":63},{"year":2024,"stage3":88},{"year":2025,"stage3":77}]},{"code":"SCC","values":[{"year":2016,"stage3":49},{"year":2017,"stage3":61},{"year":2018,"stage3":48},{"year":2019,"stage3":40},{"year":2020,"stage3":53},{"year":2021,"stage3":70},{"year":2022,"stage3":57},{"year":2023,"stage3":30},{"year":2024,"stage3":63},{"year":2025,"stage3":30}]},{"code":"SOL","values":[{"year":2016,"stage3":36},{"year":2017,"stage3":40},{"year":2018,"stage3":42},{"year":2019,"stage3":42},{"year":2020,"stage3":57},{"year":2021,"stage3":57},{"year":2022,"stage3":53},{"year":2023,"stage3":33},{"year":2024,"stage3":52},{"year":2025,"stage3":24}]},{"code":"SQ","values":[{"year":2016,"stage3":0},{"year":2017,"stage3":2},{"year":2018,"stage3":0},{"year":2019,"stage3":5},{"year":2020,"stage3":6},{"year":2021,"stage3":0},{"year":2022,"stage3":3},{"year":2023,"stage3":2},{"year":2024,"stage3":3},{"year":2025,"stage3":0}]},{"code":"SVSP","values":[{"year":2016,"stage3":1},{"year":2017,"stage3":4},{"year":2018,"stage3":1},{"year":2019,"stage3":7},{"year":2020,"stage3":10},{"year":2021,"stage3":3},{"year":2022,"stage3":9},{"year":2023,"stage3":3},{"year":2024,"stage3":4},{"year":2025,"stage3":0}]},{"code":"VSP","values":[{"year":2016,"stage3":67},{"year":2017,"stage3":80},{"year":2018,"stage3":76},{"year":2019,"stage3":63},{"year":2020,"stage3":73},{"year":2021,"stage3":78},{"year":2022,"stage3":71},{"year":2023,"stage3":48},{"year":2024,"stage3":71},{"year":2025,"stage3":52}]},{"code":"WSP","values":[{"year":2016,"stage3":103},{"year":2017,"stage3":93},{"year":2018,"stage3":90},{"year":2019,"stage3":77},{"year":2020,"stage3":92},{"year":2021,"stage3":95},{"year":2022,"stage3":88},{"year":2023,"stage3":75},{"year":2024,"stage3":91},{"year":2025,"stage3":78}]}];
+const facilityAnnual = [{"code":"ASP","values":[{"year":2016,"stage1":117},{"year":2017,"stage1":110},{"year":2018,"stage1":100},{"year":2019,"stage1":101},{"year":2020,"stage1":110},{"year":2021,"stage1":114},{"year":2022,"stage1":118},{"year":2023,"stage1":96},{"year":2024,"stage1":123},{"year":2025,"stage1":110}]},{"code":"CAL","values":[{"year":2016,"stage1":187},{"year":2017,"stage1":195},{"year":2018,"stage1":179},{"year":2019,"stage1":165},{"year":2020,"stage1":185},{"year":2021,"stage1":187},{"year":2022,"stage1":182},{"year":2023,"stage1":167},{"year":2024,"stage1":186},{"year":2025,"stage1":179}]},{"code":"CCI","values":[{"year":2016,"stage1":25},{"year":2017,"stage1":28},{"year":2018,"stage1":25},{"year":2019,"stage1":19},{"year":2020,"stage1":23},{"year":2021,"stage1":26},{"year":2022,"stage1":19},{"year":2023,"stage1":7},{"year":2024,"stage1":27},{"year":2025,"stage1":4}]},{"code":"CCWF","values":[{"year":2016,"stage1":105},{"year":2017,"stage1":102},{"year":2018,"stage1":98},{"year":2019,"stage1":100},{"year":2020,"stage1":109},{"year":2021,"stage1":108},{"year":2022,"stage1":111},{"year":2023,"stage1":86},{"year":2024,"stage1":107},{"year":2025,"stage1":92}]},{"code":"CEN","values":[{"year":2016,"stage1":183},{"year":2017,"stage1":190},{"year":2018,"stage1":179},{"year":2019,"stage1":158},{"year":2020,"stage1":184},{"year":2021,"stage1":188},{"year":2022,"stage1":183},{"year":2023,"stage1":174},{"year":2024,"stage1":186},{"year":2025,"stage1":194}]},{"code":"CHCF","values":[{"year":2016,"stage1":91},{"year":2017,"stage1":101},{"year":2018,"stage1":86},{"year":2019,"stage1":88},{"year":2020,"stage1":120},{"year":2021,"stage1":88},{"year":2022,"stage1":94},{"year":2023,"stage1":75},{"year":2024,"stage1":100},{"year":2025,"stage1":75}]},{"code":"CIM","values":[{"year":2016,"stage1":105},{"year":2017,"stage1":112},{"year":2018,"stage1":82},{"year":2019,"stage1":70},{"year":2020,"stage1":113},{"year":2021,"stage1":90},{"year":2022,"stage1":92},{"year":2023,"stage1":61},{"year":2024,"stage1":88},{"year":2025,"stage1":74}]},{"code":"CIW","values":[{"year":2016,"stage1":112},{"year":2017,"stage1":115},{"year":2018,"stage1":95},{"year":2019,"stage1":82},{"year":2020,"stage1":117},{"year":2021,"stage1":88},{"year":2022,"stage1":92},{"year":2023,"stage1":63},{"year":2024,"stage1":89},{"year":2025,"stage1":77}]},{"code":"CMC","values":[{"year":2016,"stage1":14},{"year":2017,"stage1":19},{"year":2018,"stage1":11},{"year":2019,"stage1":10},{"year":2020,"stage1":22},{"year":2021,"stage1":4},{"year":2022,"stage1":16},{"year":2023,"stage1":7},{"year":2024,"stage1":8},{"year":2025,"stage1":1}]},{"code":"CMF","values":[{"year":2016,"stage1":71},{"year":2017,"stage1":80},{"year":2018,"stage1":71},{"year":2019,"stage1":68},{"year":2020,"stage1":109},{"year":2021,"stage1":92},{"year":2022,"stage1":88},{"year":2023,"stage1":65},{"year":2024,"stage1":85},{"year":2025,"stage1":54}]},{"code":"COR","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":115},{"year":2018,"stage1":110},{"year":2019,"stage1":110},{"year":2020,"stage1":118},{"year":2021,"stage1":123},{"year":2022,"stage1":123},{"year":2023,"stage1":98},{"year":2024,"stage1":126},{"year":2025,"stage1":111}]},{"code":"CRC","values":[{"year":2016,"stage1":97},{"year":2017,"stage1":107},{"year":2018,"stage1":88},{"year":2019,"stage1":80},{"year":2020,"stage1":104},{"year":2021,"stage1":82},{"year":2022,"stage1":85},{"year":2023,"stage1":60},{"year":2024,"stage1":86},{"year":2025,"stage1":66}]},{"code":"CTF","values":[{"year":2016,"stage1":8},{"year":2017,"stage1":25},{"year":2018,"stage1":7},{"year":2019,"stage1":16},{"year":2020,"stage1":24},{"year":2021,"stage1":9},{"year":2022,"stage1":17},{"year":2023,"stage1":8},{"year":2024,"stage1":11},{"year":2025,"stage1":3}]},{"code":"CVSP","values":[{"year":2016,"stage1":174},{"year":2017,"stage1":185},{"year":2018,"stage1":173},{"year":2019,"stage1":155},{"year":2020,"stage1":187},{"year":2021,"stage1":173},{"year":2022,"stage1":188},{"year":2023,"stage1":181}]},{"code":"FOL","values":[{"year":2016,"stage1":81},{"year":2017,"stage1":91},{"year":2018,"stage1":79},{"year":2019,"stage1":72},{"year":2020,"stage1":99},{"year":2021,"stage1":75},{"year":2022,"stage1":92},{"year":2023,"stage1":68},{"year":2024,"stage1":89},{"year":2025,"stage1":71}]},{"code":"HDSP","values":[{"year":2016,"stage1":46},{"year":2017,"stage1":61},{"year":2018,"stage1":52},{"year":2019,"stage1":42},{"year":2020,"stage1":59},{"year":2021,"stage1":66},{"year":2022,"stage1":60},{"year":2023,"stage1":43},{"year":2024,"stage1":54},{"year":2025,"stage1":59}]},{"code":"ISP","values":[{"year":2016,"stage1":175},{"year":2017,"stage1":188},{"year":2018,"stage1":174},{"year":2019,"stage1":155},{"year":2020,"stage1":186},{"year":2021,"stage1":174},{"year":2022,"stage1":188},{"year":2023,"stage1":178},{"year":2024,"stage1":185},{"year":2025,"stage1":192}]},{"code":"KVSP","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":112},{"year":2018,"stage1":106},{"year":2019,"stage1":104},{"year":2020,"stage1":114},{"year":2021,"stage1":114},{"year":2022,"stage1":119},{"year":2023,"stage1":97},{"year":2024,"stage1":130},{"year":2025,"stage1":114}]},{"code":"LAC","values":[{"year":2016,"stage1":109},{"year":2017,"stage1":111},{"year":2018,"stage1":113},{"year":2019,"stage1":100},{"year":2020,"stage1":136},{"year":2021,"stage1":114},{"year":2022,"stage1":117},{"year":2023,"stage1":93},{"year":2024,"stage1":118},{"year":2025,"stage1":104}]},{"code":"MCSP","values":[{"year":2016,"stage1":85},{"year":2017,"stage1":94},{"year":2018,"stage1":82},{"year":2019,"stage1":75},{"year":2020,"stage1":105},{"year":2021,"stage1":87},{"year":2022,"stage1":89},{"year":2023,"stage1":76},{"year":2024,"stage1":83},{"year":2025,"stage1":56}]},{"code":"NKSP","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":112},{"year":2018,"stage1":106},{"year":2019,"stage1":104},{"year":2020,"stage1":114},{"year":2021,"stage1":114},{"year":2022,"stage1":119},{"year":2023,"stage1":97},{"year":2024,"stage1":130},{"year":2025,"stage1":114}]},{"code":"PBSP","values":[{"year":2016,"stage1":0},{"year":2017,"stage1":0},{"year":2018,"stage1":0},{"year":2019,"stage1":0},{"year":2020,"stage1":1},{"year":2021,"stage1":0},{"year":2022,"stage1":0},{"year":2023,"stage1":0},{"year":2024,"stage1":0},{"year":2025,"stage1":0}]},{"code":"PVSP","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":113},{"year":2018,"stage1":99},{"year":2019,"stage1":103},{"year":2020,"stage1":125},{"year":2021,"stage1":124},{"year":2022,"stage1":122},{"year":2023,"stage1":100},{"year":2024,"stage1":125},{"year":2025,"stage1":111}]},{"code":"RJD","values":[{"year":2016,"stage1":14},{"year":2017,"stage1":15},{"year":2018,"stage1":7},{"year":2019,"stage1":5},{"year":2020,"stage1":21},{"year":2021,"stage1":5},{"year":2022,"stage1":7},{"year":2023,"stage1":1},{"year":2024,"stage1":5},{"year":2025,"stage1":2}]},{"code":"SAC","values":[{"year":2016,"stage1":77},{"year":2017,"stage1":89},{"year":2018,"stage1":80},{"year":2019,"stage1":71},{"year":2020,"stage1":96},{"year":2021,"stage1":75},{"year":2022,"stage1":90},{"year":2023,"stage1":68},{"year":2024,"stage1":87},{"year":2025,"stage1":67}]},{"code":"SATF","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":115},{"year":2018,"stage1":110},{"year":2019,"stage1":110},{"year":2020,"stage1":118},{"year":2021,"stage1":123},{"year":2022,"stage1":123},{"year":2023,"stage1":98},{"year":2024,"stage1":126},{"year":2025,"stage1":111}]},{"code":"SCC","values":[{"year":2016,"stage1":88},{"year":2017,"stage1":94},{"year":2018,"stage1":83},{"year":2019,"stage1":77},{"year":2020,"stage1":103},{"year":2021,"stage1":99},{"year":2022,"stage1":98},{"year":2023,"stage1":69},{"year":2024,"stage1":84},{"year":2025,"stage1":70}]},{"code":"SOL","values":[{"year":2016,"stage1":71},{"year":2017,"stage1":80},{"year":2018,"stage1":71},{"year":2019,"stage1":68},{"year":2020,"stage1":109},{"year":2021,"stage1":92},{"year":2022,"stage1":88},{"year":2023,"stage1":65},{"year":2024,"stage1":85},{"year":2025,"stage1":54}]},{"code":"SQ","values":[{"year":2016,"stage1":2},{"year":2017,"stage1":3},{"year":2018,"stage1":0},{"year":2019,"stage1":9},{"year":2020,"stage1":13},{"year":2021,"stage1":4},{"year":2022,"stage1":5},{"year":2023,"stage1":7},{"year":2024,"stage1":5},{"year":2025,"stage1":1}]},{"code":"SVSP","values":[{"year":2016,"stage1":8},{"year":2017,"stage1":25},{"year":2018,"stage1":7},{"year":2019,"stage1":16},{"year":2020,"stage1":24},{"year":2021,"stage1":9},{"year":2022,"stage1":17},{"year":2023,"stage1":8},{"year":2024,"stage1":11},{"year":2025,"stage1":3}]},{"code":"VSP","values":[{"year":2016,"stage1":105},{"year":2017,"stage1":102},{"year":2018,"stage1":98},{"year":2019,"stage1":100},{"year":2020,"stage1":109},{"year":2021,"stage1":108},{"year":2022,"stage1":111},{"year":2023,"stage1":86},{"year":2024,"stage1":107},{"year":2025,"stage1":92}]},{"code":"WSP","values":[{"year":2016,"stage1":130},{"year":2017,"stage1":114},{"year":2018,"stage1":115},{"year":2019,"stage1":108},{"year":2020,"stage1":121},{"year":2021,"stage1":122},{"year":2022,"stage1":122},{"year":2023,"stage1":108},{"year":2024,"stage1":131},{"year":2025,"stage1":124}]}];
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
 
@@ -323,23 +302,15 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
       dotR: 4,
       opacity: 1,
     },
-    {
-      data: annualData.map(d => ({ year: d.year, value: d.stage3 })),
-      strokeWidth: 2,
-      dotR: 4,
-      opacity: 1,
-    },
   ];
-
-  const colors = ["#444", "#b03020"];
 
   const { svg, x, y } = makeLineChart("#chart-annual", {
     width, height, margin,
     series,
     yMax: d3.max(annualData, d => d.stage1) * 1.1,
     yLabel: "Facility-days",
-    lineColor: (s, i) => colors[series.indexOf(s)],
-    dotColor:  (s, i) => colors[series.indexOf(s)],
+    lineColor: () => "#444",
+    dotColor:  () => "#444",
   });
 })();
 
@@ -362,7 +333,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
   const x = d3.scaleLinear()
-    .domain([0, d3.max(facilityTotals, d => d.stage3) * 1.08])
+    .domain([0, d3.max(facilityTotals, d => d.stage1) * 1.08])
     .range([0, width]);
 
   const y = d3.scaleBand()
@@ -385,24 +356,24 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
     .attr("x", width / 2).attr("y", height + 32)
     .attr("text-anchor", "middle")
     .attr("font-size", "13px").attr("fill", "#555")
-    .text("Average annual Stage 3 days, 2016–2025");
+    .text("Average annual days ≥ 90°F outdoor, 2016–2025");
 
   svg.selectAll(".bar")
     .data(facilityTotals)
     .join("rect")
       .attr("x", 0)
       .attr("y",      d => y(d.code))
-      .attr("width",  d => x(d.stage3))
+      .attr("width",  d => x(d.stage1))
       .attr("height", y.bandwidth())
-      .attr("fill",   d => d.stage3 === 0 ? "#ddd" : "#b03020");
+      .attr("fill",   "#444");
 
   svg.selectAll(".bar-label")
     .data(facilityTotals)
     .join("text")
-      .attr("x",     d => x(d.stage3) + 5)
+      .attr("x",     d => x(d.stage1) + 5)
       .attr("y",     d => y(d.code) + y.bandwidth() / 2 + 4)
       .attr("font-size", "12px").attr("fill", "#555")
-      .text(d => d.stage3 > 0 ? d.stage3.toFixed(1) : "0");
+      .text(d => d.stage1.toFixed(1));
 })();
 
 // ── Chart 3: Per-facility lines over time ─────────────────────────────────────
@@ -413,8 +384,8 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
   const height = 420 - margin.top  - margin.bottom;
 
   // Build total per facility for color scale
-  const totalByCode = Object.fromEntries(facilityTotals.map(d => [d.code, d.stage3total]));
-  const maxTotal = d3.max(facilityTotals, d => d.stage3total);
+  const totalByCode = Object.fromEntries(facilityTotals.map(d => [d.code, d.stage1total]));
+  const maxTotal = d3.max(facilityTotals, d => d.stage1total);
 
   // Sequential: low = light gray, high = dark red
   const colorScale = d3.scaleSequential()
@@ -422,7 +393,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
     .interpolator(d3.interpolateRgb("#d0d0d0", "#7a1010"));
 
   const x = d3.scaleLinear().domain(d3.extent(years)).range([0, width]);
-  const yMax = d3.max(facilityAnnual, s => d3.max(s.values, d => d.stage3));
+  const yMax = d3.max(facilityAnnual, s => d3.max(s.values, d => d.stage1));
   const y = d3.scaleLinear().domain([0, yMax * 1.05]).range([height, 0]);
 
   const svgW3 = width  + margin.left + margin.right;
@@ -456,7 +427,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
 
   const line = d3.line()
     .x(d => x(d.year))
-    .y(d => y(d.stage3));
+    .y(d => y(d.stage1));
 
   // Sort so high-exposure facilities draw on top
   const sorted = [...facilityAnnual].sort(
@@ -481,7 +452,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
       .data(s.values)
       .join("circle")
         .attr("cx", d => x(d.year))
-        .attr("cy", d => y(d.stage3))
+        .attr("cy", d => y(d.stage1))
         .attr("r", isTop ? 2.5 : 1.8)
         .attr("fill", color)
         .attr("opacity", isTop ? 0.9 : 0.55);
@@ -489,10 +460,11 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
 
   // End-of-line labels:
   //   Top 4 (stage3total >= 1100): ISP, CEN, CAL, CVSP — always labeled
-  //   Mid sample (800–999): WSP, SATF
-  //   Low sample (< 800): ASP (3891), SCC (4035), MCSP (3761), VSP (3148)
+  //   Top 4 (stage1total >= 1400): CEN, CAL, ISP, CVSP
+  //   Mid sample (1090–1200): WSP, SATF
+  //   Low sample (780–1020): ASP (3891), SCC (4035), MCSP (3761), VSP (3148)
   //   Bottom tier sample: CTF (4225 — largest pop among near-zero facilities)
-  const TOP_THRESHOLD = 1100;
+  const TOP_THRESHOLD = 1400;
   const LABEL_SAMPLE = new Set(["SATF", "WSP", "ASP", "SCC", "MCSP", "VSP", "CTF"]);
 
   const labelCandidates = facilityAnnual
@@ -504,7 +476,7 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
         code: s.code,
         label,
         xPos: x(last.year) + 6,
-        yNatural: y(last.stage3) + 4,
+        yNatural: y(last.stage1) + 4,
         color: colorScale(totalByCode[s.code]),
       };
     });

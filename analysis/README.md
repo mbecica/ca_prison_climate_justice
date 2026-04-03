@@ -10,32 +10,55 @@ Daily maximum temperatures at each CDCR state prison are sourced from gridMET (U
 
 | File | Description |
 | :--- | :--- |
-| `heat_activations_daily.csv` | Daily tmax (°F) and activation flags per facility, 2016–2025 |
-| `heat_activations_annual.csv` | Annual count of Stage 1, Stage 3, and Skarha 10° exceedance days per facility |
-| `heat_activations_monthly.csv` | Monthly count of Stage 1 and Stage 3 days per facility per year |
+| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags per facility, 2016–2025 |
+| `heat_activations_annual.csv` | Annual count of days over 90°F, days over 95°F, and Skarha 10° exceedance days per facility |
+| `heat_activations_monthly.csv` | Monthly count of days over 90°F and days over 95°F per facility per year |
 
-Activation thresholds:
+Outdoor temperature thresholds:
 
-| Metric | Definition | Source |
+| Column | Definition | Note |
 | :--- | :--- | :--- |
-| `stage1` | Outdoor tmax ≥ 90°F | CDCR Heat Pathology Plan Stage I |
-| `stage3` | Outdoor tmax ≥ 95°F | CDCR Heat Pathology Plan Stage III |
-| `skarha10` | Outdoor tmax ≥ facility mean summer tmax + 10°F (baseline: 1991–2020 Jun–Aug mean) | Skarha et al. (2023) marginal mortality metric |
+| `over_90f` / `days_over_90f` | Outdoor tmax ≥ 90°F | Corresponds to CDCR Heat Pathology Plan Stage I outdoor trigger |
+| `over_95f` / `days_over_95f` | Outdoor tmax ≥ 95°F | Corresponds to Stage III outdoor threshold; **Stage III protocol is triggered by indoor temperature**, so this column is an outdoor proxy only |
+| `skarha10` / `days_skarha10` | Outdoor tmax ≥ facility mean summer tmax + 10°F (baseline: 1991–2020 Jun–Aug mean) | Skarha et al. (2023) marginal mortality metric |
+
+### Outdoor vs. Indoor Temperature Gap
+
+The CDCR Heat Pathology Plan Stage I and Stage III thresholds are defined by **indoor** housing unit temperatures (≥ 90°F and ≥ 95°F respectively). Outdoor gridMET data is used here as a proxy for exposure and trend analysis, but outdoor temperatures systematically overstate the number of days that cross indoor thresholds.
+
+Available evidence on the outdoor-to-indoor gap:
+
+**CalMatters CPRA data (one unnamed prison, 2023–2024):**
+
+| Year | Outdoor days ≥ 90°F | Indoor days ≥ 90°F | Indoor days ≥ 95°F |
+| :--- | :--- | :--- | :--- |
+| 2023 | 166 | 59 | 20 |
+| 2024 | 182 | 86 | 46 |
+
+Indoor days at ≥ 90°F were roughly 35–47% of outdoor days at the same threshold in these two years.
+
+**OIG audit, August 2022–October 2023 (Corcoran, High Desert, Lancaster):**
+
+| Prison | Housing units tested | Units with ≥ 1 day over 89°F | Most days over 89°F in a single unit |
+| :--- | :--- | :--- | :--- |
+| High Desert | 27 | 3 | 1 |
+| Lancaster | 29 | 10 | 2 |
+| Corcoran | 33 | 23 | 23 |
+
+Source: California Office of the Inspector General, heat log audit.
 
 ## Summary Graphs
 
 Interactive, print-readable D3 charts in `analysis/heat_activation_charts.html`:
 
-- **Annual line chart** — total Stage 1 and Stage 3 facility-days across all 32 active prisons per year, 2016–2025
-- **Per-facility horizontal bar** — average annual Stage 3 days per facility over the 10-year period
-- **Per-facility line chart** — Stage 3 days per facility per year; color encodes cumulative Stage 3 exposure (light gray = low, dark red = high); labeled facilities sampled by tier and population
+- **Annual line chart** — total facility-days with outdoor tmax ≥ 90°F across all 32 active prisons per year, 2016–2025
+- **Per-facility horizontal bar** — average annual days ≥ 90°F per facility over the 10-year period
+- **Per-facility line chart** — days ≥ 90°F per facility per year; color encodes cumulative outdoor heat exposure (light gray = low, dark red = high); labeled facilities sampled by tier and population
 
 Summary statistics shown at the top of the page:
-- Total Stage 1 facility-days: 27,722
-- Total Stage 3 facility-days: 18,684
-- Average annual Stage 1: 2,772
-- Average annual Stage 3: 1,868
-- Facilities with any Stage 3 day: 31 of 32 (PBSP is the only exception)
+- Total facility-days ≥ 90°F outdoor: 27,722
+- Average annual facility-days ≥ 90°F: 2,772
+- Facilities with any day ≥ 90°F: 32 of 32
 
 **Facility coverage notes:**
 - CAC (private facility) and FWF (co-located with FOL) are excluded from all heat analysis

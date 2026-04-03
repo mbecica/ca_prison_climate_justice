@@ -4,11 +4,12 @@ gridMET daily maximum temperature extraction for CDCR state prisons.
 Outputs:
   data_sources/hazards/heat_activations_daily.csv   — daily tmax + activation flags per facility (2016–2025)
   data_sources/hazards/heat_activations_annual.csv  — annual counts per facility
-  data_sources/hazards/heat_activations_monthly.csv — monthly stage1/stage3 counts per facility per year
+  data_sources/hazards/heat_activations_monthly.csv — monthly counts per facility per year
 
 Metrics:
-  stage1    — outdoor tmax >= 90°F  (CDCR Heat Pathology Plan Stage I threshold)
-  stage3    — outdoor tmax >= 95°F  (CDCR Heat Pathology Plan Stage III threshold)
+  over_90f  — outdoor tmax >= 90°F  (CDCR Heat Pathology Plan Stage I outdoor threshold)
+  over_95f  — outdoor tmax >= 95°F  (CDCR Heat Pathology Plan Stage III outdoor threshold;
+              note: Stage III protocol is triggered by indoor temperature, not outdoor)
   skarha10  — tmax >= facility mean summer (Jun–Aug) tmax + 10°F
               Based on Skarha et al. (2023) marginal mortality metric.
               Baseline: 1991–2020 mean Jun–Aug tmax per facility (WMO 30-year normal period).
@@ -193,12 +194,12 @@ def extract_analysis_years(facilities, skarha_baselines):
     daily = daily.sort_values(["cdcr_code", "date"]).reset_index(drop=True)
 
     # Apply thresholds
-    daily["stage1"] = (daily["tmax_f"] >= STAGE1_F).astype(int)
-    daily["stage3"] = (daily["tmax_f"] >= STAGE3_F).astype(int)
+    daily["over_90f"] = (daily["tmax_f"] >= STAGE1_F).astype(int)
+    daily["over_95f"] = (daily["tmax_f"] >= STAGE3_F).astype(int)
     daily["skarha_threshold_f"] = daily["cdcr_code"].map(
         lambda c: skarha_baselines.get(c, np.nan) + SKARHA_DELTA_F
     )
-    daily["skarha10"] = (daily["tmax_f"] >= daily["skarha_threshold_f"]).astype(int)
+    daily["skarha10"]  = (daily["tmax_f"] >= daily["skarha_threshold_f"]).astype(int)
     daily = daily.drop(columns=["skarha_threshold_f"])
 
     return daily
@@ -216,9 +217,9 @@ def aggregate(daily):
     annual = (
         daily.groupby(["cdcr_code", "year"])
         .agg(
-            stage1_days=("stage1", "sum"),
-            stage3_days=("stage3", "sum"),
-            skarha10_days=("skarha10", "sum"),
+            days_over_90f=("over_90f", "sum"),
+            days_over_95f=("over_95f", "sum"),
+            days_skarha10=("skarha10", "sum"),
         )
         .reset_index()
     )
@@ -226,8 +227,8 @@ def aggregate(daily):
     monthly = (
         daily.groupby(["cdcr_code", "year", "month"])
         .agg(
-            stage1_days=("stage1", "sum"),
-            stage3_days=("stage3", "sum"),
+            days_over_90f=("over_90f", "sum"),
+            days_over_95f=("over_95f", "sum"),
         )
         .reset_index()
     )
@@ -265,8 +266,8 @@ def main():
     print(f"Wrote {len(annual):,} rows  → {annual_path.relative_to(REPO_ROOT)}")
     print(f"Wrote {len(monthly):,} rows  → {monthly_path.relative_to(REPO_ROOT)}")
 
-    print("\nSample annual output (top 10 by skarha10_days):")
-    print(annual.nlargest(10, "skarha10_days").to_string(index=False))
+    print("\nSample annual output (top 10 by days_skarha10):")
+    print(annual.nlargest(10, "days_skarha10").to_string(index=False))
 
 
 if __name__ == "__main__":

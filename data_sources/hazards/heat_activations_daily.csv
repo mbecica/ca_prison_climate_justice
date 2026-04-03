@@ -1,4 +1,4 @@
-cdcr_code,date,tmax_f,stage1,stage3,skarha10
+cdcr_code,date,tmax_f,over_90f,over_95f,skarha10
 ASP,2016-01-01,51.53000000000005,0,0,0
 ASP,2016-01-02,56.93000000000004,0,0,0
 ASP,2016-01-03,60.89000000000002,0,0,0

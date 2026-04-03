@@ -1,4 +1,4 @@
-cdcr_code,year,stage1_days,stage3_days,skarha10_days
+cdcr_code,year,days_over_90f,days_over_95f,days_skarha10
 ASP,2016,117,83,12
 ASP,2017,110,87,13
 ASP,2018,100,77,1
