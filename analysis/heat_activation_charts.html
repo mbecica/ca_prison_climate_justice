@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDCR Heat Activation Days, 2016–2025</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Data last updated: CAC and FWF removed; CVSP included 2016–2023 only (closed mid-2024) -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Georgia", serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 11.5px;
+      color: #555;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 52px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .chart-note {
+      font-size: 11px;
+      color: #555;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .summary-stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 40px;
+      padding: 18px 24px;
+      border: 1px solid #ccc;
+    }
+
+    .stat-block { flex: 1; }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .stat-value {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: -0.01em;
+    }
+
+    .stat-value.stage1 { color: #444; }
+    .stat-value.stage3 { color: #b03020; }
+
+    .stat-sub {
+      font-size: 11px;
+      color: #777;
+      margin-top: 2px;
+    }
+
+    svg text { font-family: "Georgia", serif; }
+
+    .axis path, .axis line { stroke: #bbb; stroke-width: 0.5; }
+    .axis text { fill: #333; font-size: 13px; }
+
+    .grid line { stroke: #ebebeb; stroke-dasharray: 2,3; }
+    .grid path { stroke: none; }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 10px;
+      font-size: 11px;
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+
+    .legend-line {
+      width: 22px;
+      height: 2px;
+      flex-shrink: 0;
+    }
+
+    .source {
+      font-size: 10px;
+      color: #888;
+      margin-top: 52px;
+      border-top: 1px solid #e0e0e0;
+      padding-top: 10px;
+    }
+
+    @media print {
+      body { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>CDCR Heat Activation Days, 2016–2025</h1>
+<p class="subtitle">
+  Stage 1: outdoor daily maximum temperature ≥ 90°F &nbsp;·&nbsp;
+  Stage 3: outdoor daily maximum temperature ≥ 95°F &nbsp;·&nbsp;
+  32 CDCR state prisons &nbsp;·&nbsp; Source: gridMET 4km daily tmax
+</p>
+
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">Total Stage 1 facility-days</div>
+    <div class="stat-value stage1">27,722</div>
+    <div class="stat-sub">All 32 facilities &nbsp;·&nbsp; 2016–2025</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Total Stage 3 facility-days</div>
+    <div class="stat-value stage3">18,684</div>
+    <div class="stat-sub">All 32 facilities &nbsp;·&nbsp; 2016–2025</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Avg annual Stage 1 facility-days</div>
+    <div class="stat-value stage1">2,772</div>
+    <div class="stat-sub">Per year across active facilities</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Avg annual Stage 3 facility-days</div>
+    <div class="stat-value stage3">1,868</div>
+    <div class="stat-sub">Per year across active facilities</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Facilities with any Stage 3 day</div>
+    <div class="stat-value stage1">31 of 32</div>
+    <div class="stat-sub">PBSP (Pelican Bay) is the only exception</div>
+  </div>
+</div>
+
+<!-- Chart 1: Annual line chart -->
+<h2>Annual Stage 1 &amp; Stage 3 Days — All CDCR Facilities Combined</h2>
+<p class="chart-note">Sum of facility-days triggering each stage across all 32 prisons per year (CVSP included 2016–2023 only).</p>
+<div id="chart-annual"></div>
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-line" style="background:#444;"></div>
+    Stage 1 (≥ 90°F)
+  </div>
+  <div class="legend-item">
+    <div class="legend-line" style="background:#b03020;"></div>
+    Stage 3 (≥ 95°F)
+  </div>
+</div>
+
+<!-- Chart 2: Per-facility horizontal bar -->
+<h2>Average Annual Stage 3 Days per Facility, 2016–2025</h2>
+<p class="chart-note">Average Stage 3 days per year at each prison across the 10-year period.</p>
+<div id="chart-facility"></div>
+
+<!-- Chart 3: Per-facility line chart over time -->
+<h2>Stage 3 Days per Facility per Year, 2016–2025</h2>
+<p class="chart-note">
+  Each line is one facility. Color encodes total Stage 3 days over the decade —
+  darker red indicates higher cumulative heat exposure.
+</p>
+<div id="chart-lines"></div>
+
+<p class="source">
+  Data: gridMET daily maximum temperature (tmmx), University of Idaho / Northwest Knowledge Network, 1991–2025.
+  Activation thresholds from CDCR Prevention Plan for Heat Related Pathologies.
+  Analysis: California Prison Climate Justice, UC Berkeley DCRP, 2026.
+  Prepared in support of AB-2499 / Climate Justice Coalition 4 California Prisons.
+</p>
+
+<script>
+// ── Data ─────────────────────────────────────────────────────────────────────
+
+const annualData = [
+  { year: 2016, stage1: 2890, stage3: 1888 },
+  { year: 2017, stage1: 3003, stage3: 2077 },
+  { year: 2018, stage1: 2686, stage3: 1888 },
+  { year: 2019, stage1: 2541, stage3: 1673 },
+  { year: 2020, stage1: 3178, stage3: 2149 },
+  { year: 2021, stage1: 2877, stage3: 2008 },
+  { year: 2022, stage1: 2975, stage3: 2050 },
+  { year: 2023, stage1: 2410, stage3: 1561 },
+  { year: 2024, stage1: 2777, stage3: 1945 },
+  { year: 2025, stage1: 2385, stage3: 1445 },
+];
+
+const facilityTotals = [
+  { code: "ISP",  stage3total: 1495, stage3: 149.5 },
+  { code: "CEN",  stage3total: 1487, stage3: 148.7 },
+  { code: "CAL",  stage3total: 1473, stage3: 147.3 },
+  { code: "CVSP", stage3total: 1184, stage3: 148.0 },
+  { code: "WSP",  stage3total: 882,  stage3: 88.2  },
+  { code: "SATF", stage3total: 845,  stage3: 84.5  },
+  { code: "COR",  stage3total: 845,  stage3: 84.5  },
+  { code: "PVSP", stage3total: 827,  stage3: 82.7  },
+  { code: "KVSP", stage3total: 823,  stage3: 82.3  },
+  { code: "NKSP", stage3total: 823,  stage3: 82.3  },
+  { code: "LAC",  stage3total: 806,  stage3: 80.6  },
+  { code: "ASP",  stage3total: 770,  stage3: 77.0  },
+  { code: "VSP",  stage3total: 679,  stage3: 67.9  },
+  { code: "CCWF", stage3total: 679,  stage3: 67.9  },
+  { code: "CHCF", stage3total: 529,  stage3: 52.9  },
+  { code: "SCC",  stage3total: 501,  stage3: 50.1  },
+  { code: "CIW",  stage3total: 489,  stage3: 48.9  },
+  { code: "MCSP", stage3total: 488,  stage3: 48.8  },
+  { code: "FOL",  stage3total: 483,  stage3: 48.3  },
+  { code: "SAC",  stage3total: 461,  stage3: 46.1  },
+  { code: "CMF",  stage3total: 436,  stage3: 43.6  },
+  { code: "SOL",  stage3total: 436,  stage3: 43.6  },
+  { code: "CIM",  stage3total: 435,  stage3: 43.5  },
+  { code: "CRC",  stage3total: 396,  stage3: 39.6  },
+  { code: "HDSP", stage3total: 220,  stage3: 22.0  },
+  { code: "SVSP", stage3total: 42,   stage3: 4.2   },
+  { code: "CTF",  stage3total: 42,   stage3: 4.2   },
+  { code: "CMC",  stage3total: 42,   stage3: 4.2   },
+  { code: "CCI",  stage3total: 26,   stage3: 2.6   },
+  { code: "SQ",   stage3total: 21,   stage3: 2.1   },
+  { code: "RJD",  stage3total: 19,   stage3: 1.9   },
+  { code: "PBSP", stage3total: 0,    stage3: 0.0   },
+];
+
+const facilityAnnual = [{"code":"ASP","values":[{"year":2016,"stage3":83},{"year":2017,"stage3":87},{"year":2018,"stage3":77},{"year":2019,"stage3":66},{"year":2020,"stage3":76},{"year":2021,"stage3":86},{"year":2022,"stage3":83},{"year":2023,"stage3":57},{"year":2024,"stage3":86},{"year":2025,"stage3":69}]},{"code":"CAL","values":[{"year":2016,"stage3":138},{"year":2017,"stage3":152},{"year":2018,"stage3":148},{"year":2019,"stage3":138},{"year":2020,"stage3":166},{"year":2021,"stage3":148},{"year":2022,"stage3":155},{"year":2023,"stage3":138},{"year":2024,"stage3":158},{"year":2025,"stage3":132}]},{"code":"CCI","values":[{"year":2016,"stage3":2},{"year":2017,"stage3":8},{"year":2018,"stage3":0},{"year":2019,"stage3":0},{"year":2020,"stage3":2},{"year":2021,"stage3":5},{"year":2022,"stage3":3},{"year":2023,"stage3":2},{"year":2024,"stage3":4},{"year":2025,"stage3":0}]},{"code":"CCWF","values":[{"year":2016,"stage3":67},{"year":2017,"stage3":80},{"year":2018,"stage3":76},{"year":2019,"stage3":63},{"year":2020,"stage3":73},{"year":2021,"stage3":78},{"year":2022,"stage3":71},{"year":2023,"stage3":48},{"year":2024,"stage3":71},{"year":2025,"stage3":52}]},{"code":"CEN","values":[{"year":2016,"stage3":138},{"year":2017,"stage3":145},{"year":2018,"stage3":145},{"year":2019,"stage3":131},{"year":2020,"stage3":168},{"year":2021,"stage3":151},{"year":2022,"stage3":157},{"year":2023,"stage3":147},{"year":2024,"stage3":165},{"year":2025,"stage3":140}]},{"code":"CHCF","values":[{"year":2016,"stage3":48},{"year":2017,"stage3":60},{"year":2018,"stage3":55},{"year":2019,"stage3":55},{"year":2020,"stage3":69},{"year":2021,"stage3":50},{"year":2022,"stage3":52},{"year":2023,"stage3":38},{"year":2024,"stage3":65},{"year":2025,"stage3":37}]},{"code":"CIM","values":[{"year":2016,"stage3":47},{"year":2017,"stage3":60},{"year":2018,"stage3":40},{"year":2019,"stage3":31},{"year":2020,"stage3":59},{"year":2021,"stage3":37},{"year":2022,"stage3":45},{"year":2023,"stage3":36},{"year":2024,"stage3":44},{"year":2025,"stage3":36}]},{"code":"CIW","values":[{"year":2016,"stage3":56},{"year":2017,"stage3":69},{"year":2018,"stage3":49},{"year":2019,"stage3":43},{"year":2020,"stage3":64},{"year":2021,"stage3":38},{"year":2022,"stage3":51},{"year":2023,"stage3":39},{"year":2024,"stage3":46},{"year":2025,"stage3":34}]},{"code":"CMC","values":[{"year":2016,"stage3":4},{"year":2017,"stage3":7},{"year":2018,"stage3":1},{"year":2019,"stage3":2},{"year":2020,"stage3":14},{"year":2021,"stage3":1},{"year":2022,"stage3":5},{"year":2023,"stage3":2},{"year":2024,"stage3":5},{"year":2025,"stage3":1}]},{"code":"CMF","values":[{"year":2016,"stage3":36},{"year":2017,"stage3":40},{"year":2018,"stage3":42},{"year":2019,"stage3":42},{"year":2020,"stage3":57},{"year":2021,"stage3":57},{"year":2022,"stage3":53},{"year":2023,"stage3":33},{"year":2024,"stage3":52},{"year":2025,"stage3":24}]},{"code":"COR","values":[{"year":2016,"stage3":96},{"year":2017,"stage3":96},{"year":2018,"stage3":85},{"year":2019,"stage3":77},{"year":2020,"stage3":85},{"year":2021,"stage3":91},{"year":2022,"stage3":87},{"year":2023,"stage3":63},{"year":2024,"stage3":88},{"year":2025,"stage3":77}]},{"code":"CRC","values":[{"year":2016,"stage3":44},{"year":2017,"stage3":53},{"year":2018,"stage3":42},{"year":2019,"stage3":40},{"year":2020,"stage3":51},{"year":2021,"stage3":30},{"year":2022,"stage3":40},{"year":2023,"stage3":28},{"year":2024,"stage3":43},{"year":2025,"stage3":25}]},{"code":"CTF","values":[{"year":2016,"stage3":1},{"year":2017,"stage3":4},{"year":2018,"stage3":1},{"year":2019,"stage3":7},{"year":2020,"stage3":10},{"year":2021,"stage3":3},{"year":2022,"stage3":9},{"year":2023,"stage3":3},{"year":2024,"stage3":4},{"year":2025,"stage3":0}]},{"code":"CVSP","values":[{"year":2016,"stage3":132},{"year":2017,"stage3":138},{"year":2018,"stage3":150},{"year":2019,"stage3":133},{"year":2020,"stage3":169},{"year":2021,"stage3":146},{"year":2022,"stage3":162},{"year":2023,"stage3":154}]},{"code":"FOL","values":[{"year":2016,"stage3":41},{"year":2017,"stage3":59},{"year":2018,"stage3":48},{"year":2019,"stage3":43},{"year":2020,"stage3":52},{"year":2021,"stage3":39},{"year":2022,"stage3":58},{"year":2023,"stage3":36},{"year":2024,"stage3":68},{"year":2025,"stage3":39}]},{"code":"HDSP","values":[{"year":2016,"stage3":18},{"year":2017,"stage3":25},{"year":2018,"stage3":21},{"year":2019,"stage3":5},{"year":2020,"stage3":20},{"year":2021,"stage3":41},{"year":2022,"stage3":31},{"year":2023,"stage3":13},{"year":2024,"stage3":24},{"year":2025,"stage3":22}]},{"code":"ISP","values":[{"year":2016,"stage3":132},{"year":2017,"stage3":139},{"year":2018,"stage3":150},{"year":2019,"stage3":133},{"year":2020,"stage3":169},{"year":2021,"stage3":147},{"year":2022,"stage3":162},{"year":2023,"stage3":153},{"year":2024,"stage3":164},{"year":2025,"stage3":146}]},{"code":"KVSP","values":[{"year":2016,"stage3":94},{"year":2017,"stage3":88},{"year":2018,"stage3":81},{"year":2019,"stage3":68},{"year":2020,"stage3":83},{"year":2021,"stage3":94},{"year":2022,"stage3":85},{"year":2023,"stage3":60},{"year":2024,"stage3":94},{"year":2025,"stage3":76}]},{"code":"LAC","values":[{"year":2016,"stage3":85},{"year":2017,"stage3":92},{"year":2018,"stage3":81},{"year":2019,"stage3":63},{"year":2020,"stage3":91},{"year":2021,"stage3":89},{"year":2022,"stage3":89},{"year":2023,"stage3":55},{"year":2024,"stage3":92},{"year":2025,"stage3":69}]},{"code":"MCSP","values":[{"year":2016,"stage3":45},{"year":2017,"stage3":61},{"year":2018,"stage3":52},{"year":2019,"stage3":45},{"year":2020,"stage3":60},{"year":2021,"stage3":55},{"year":2022,"stage3":49},{"year":2023,"stage3":39},{"year":2024,"stage3":57},{"year":2025,"stage3":25}]},{"code":"NKSP","values":[{"year":2016,"stage3":94},{"year":2017,"stage3":88},{"year":2018,"stage3":81},{"year":2019,"stage3":68},{"year":2020,"stage3":83},{"year":2021,"stage3":94},{"year":2022,"stage3":85},{"year":2023,"stage3":60},{"year":2024,"stage3":94},{"year":2025,"stage3":76}]},{"code":"PBSP","values":[{"year":2016,"stage3":0},{"year":2017,"stage3":0},{"year":2018,"stage3":0},{"year":2019,"stage3":0},{"year":2020,"stage3":0},{"year":2021,"stage3":0},{"year":2022,"stage3":0},{"year":2023,"stage3":0},{"year":2024,"stage3":0},{"year":2025,"stage3":0}]},{"code":"PVSP","values":[{"year":2016,"stage3":93},{"year":2017,"stage3":90},{"year":2018,"stage3":72},{"year":2019,"stage3":68},{"year":2020,"stage3":93},{"year":2021,"stage3":95},{"year":2022,"stage3":93},{"year":2023,"stage3":66},{"year":2024,"stage3":85},{"year":2025,"stage3":72}]},{"code":"RJD","values":[{"year":2016,"stage3":2},{"year":2017,"stage3":5},{"year":2018,"stage3":1},{"year":2019,"stage3":0},{"year":2020,"stage3":8},{"year":2021,"stage3":0},{"year":2022,"stage3":1},{"year":2023,"stage3":0},{"year":2024,"stage3":2},{"year":2025,"stage3":0}]},{"code":"SAC","values":[{"year":2016,"stage3":40},{"year":2017,"stage3":55},{"year":2018,"stage3":48},{"year":2019,"stage3":41},{"year":2020,"stage3":51},{"year":2021,"stage3":39},{"year":2022,"stage3":56},{"year":2023,"stage3":37},{"year":2024,"stage3":62},{"year":2025,"stage3":32}]},{"code":"SATF","values":[{"year":2016,"stage3":96},{"year":2017,"stage3":96},{"year":2018,"stage3":85},{"year":2019,"stage3":77},{"year":2020,"stage3":85},{"year":2021,"stage3":91},{"year":2022,"stage3":87},{"year":2023,"stage3":63},{"year":2024,"stage3":88},{"year":2025,"stage3":77}]},{"code":"SCC","values":[{"year":2016,"stage3":49},{"year":2017,"stage3":61},{"year":2018,"stage3":48},{"year":2019,"stage3":40},{"year":2020,"stage3":53},{"year":2021,"stage3":70},{"year":2022,"stage3":57},{"year":2023,"stage3":30},{"year":2024,"stage3":63},{"year":2025,"stage3":30}]},{"code":"SOL","values":[{"year":2016,"stage3":36},{"year":2017,"stage3":40},{"year":2018,"stage3":42},{"year":2019,"stage3":42},{"year":2020,"stage3":57},{"year":2021,"stage3":57},{"year":2022,"stage3":53},{"year":2023,"stage3":33},{"year":2024,"stage3":52},{"year":2025,"stage3":24}]},{"code":"SQ","values":[{"year":2016,"stage3":0},{"year":2017,"stage3":2},{"year":2018,"stage3":0},{"year":2019,"stage3":5},{"year":2020,"stage3":6},{"year":2021,"stage3":0},{"year":2022,"stage3":3},{"year":2023,"stage3":2},{"year":2024,"stage3":3},{"year":2025,"stage3":0}]},{"code":"SVSP","values":[{"year":2016,"stage3":1},{"year":2017,"stage3":4},{"year":2018,"stage3":1},{"year":2019,"stage3":7},{"year":2020,"stage3":10},{"year":2021,"stage3":3},{"year":2022,"stage3":9},{"year":2023,"stage3":3},{"year":2024,"stage3":4},{"year":2025,"stage3":0}]},{"code":"VSP","values":[{"year":2016,"stage3":67},{"year":2017,"stage3":80},{"year":2018,"stage3":76},{"year":2019,"stage3":63},{"year":2020,"stage3":73},{"year":2021,"stage3":78},{"year":2022,"stage3":71},{"year":2023,"stage3":48},{"year":2024,"stage3":71},{"year":2025,"stage3":52}]},{"code":"WSP","values":[{"year":2016,"stage3":103},{"year":2017,"stage3":93},{"year":2018,"stage3":90},{"year":2019,"stage3":77},{"year":2020,"stage3":92},{"year":2021,"stage3":95},{"year":2022,"stage3":88},{"year":2023,"stage3":75},{"year":2024,"stage3":91},{"year":2025,"stage3":78}]}];
+
+// ── Shared helpers ────────────────────────────────────────────────────────────
+
+const years = annualData.map(d => d.year);
+
+function makeLineChart(containerId, { width, height, margin, series, yMax, yLabel, lineColor, dotColor }) {
+  const svgW = width  + margin.left + margin.right;
+  const svgH = height + margin.top  + margin.bottom;
+  const svg = d3.select(containerId)
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW} ${svgH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear().domain(d3.extent(years)).range([0, width]);
+  const y = d3.scaleLinear().domain([0, yMax]).range([height, 0]);
+
+  // Grid
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
+
+  // Axes
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(years.length));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(",d")));
+
+  // Y label
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2).attr("y", -44)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text(yLabel);
+
+  const line = d3.line()
+    .x(d => x(d.year))
+    .y(d => y(d.value));
+
+  series.forEach(s => {
+    const color = typeof lineColor === "function" ? lineColor(s) : lineColor;
+    const dColor = typeof dotColor  === "function" ? dotColor(s)  : dotColor;
+
+    svg.append("path")
+      .datum(s.data)
+      .attr("fill", "none")
+      .attr("stroke", color)
+      .attr("stroke-width", s.strokeWidth || 1.5)
+      .attr("opacity", s.opacity || 1)
+      .attr("d", line);
+
+    svg.selectAll(null)
+      .data(s.data)
+      .join("circle")
+        .attr("cx", d => x(d.year))
+        .attr("cy", d => y(d.value))
+        .attr("r", s.dotR || 3)
+        .attr("fill", dColor)
+        .attr("opacity", s.opacity || 1);
+  });
+
+  return { svg, x, y };
+}
+
+// ── Chart 1: Annual line chart ────────────────────────────────────────────────
+
+(function() {
+  const margin = { top: 18, right: 20, bottom: 36, left: 54 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 240 - margin.top  - margin.bottom;
+
+  const series = [
+    {
+      data: annualData.map(d => ({ year: d.year, value: d.stage1 })),
+      strokeWidth: 2,
+      dotR: 4,
+      opacity: 1,
+    },
+    {
+      data: annualData.map(d => ({ year: d.year, value: d.stage3 })),
+      strokeWidth: 2,
+      dotR: 4,
+      opacity: 1,
+    },
+  ];
+
+  const colors = ["#444", "#b03020"];
+
+  const { svg, x, y } = makeLineChart("#chart-annual", {
+    width, height, margin,
+    series,
+    yMax: d3.max(annualData, d => d.stage1) * 1.1,
+    yLabel: "Facility-days",
+    lineColor: (s, i) => colors[series.indexOf(s)],
+    dotColor:  (s, i) => colors[series.indexOf(s)],
+  });
+})();
+
+// ── Chart 2: Per-facility horizontal bar ─────────────────────────────────────
+
+(function() {
+  const margin = { top: 8, right: 64, bottom: 36, left: 52 };
+  const rowH   = 19;
+  const height = facilityTotals.length * rowH;
+  const width  = 712 - margin.left - margin.right;
+
+  const svgW2 = width  + margin.left + margin.right;
+  const svgH2 = height + margin.top  + margin.bottom;
+  const svg = d3.select("#chart-facility")
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW2} ${svgH2}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear()
+    .domain([0, d3.max(facilityTotals, d => d.stage3) * 1.08])
+    .range([0, width]);
+
+  const y = d3.scaleBand()
+    .domain(facilityTotals.map(d => d.code))
+    .range([0, height])
+    .padding(0.18);
+
+  svg.append("g").attr("class", "grid")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(6).tickSize(-height).tickFormat(""));
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(6).tickFormat(d3.format(",d")));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y));
+
+  svg.append("text")
+    .attr("x", width / 2).attr("y", height + 32)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Average annual Stage 3 days, 2016–2025");
+
+  svg.selectAll(".bar")
+    .data(facilityTotals)
+    .join("rect")
+      .attr("x", 0)
+      .attr("y",      d => y(d.code))
+      .attr("width",  d => x(d.stage3))
+      .attr("height", y.bandwidth())
+      .attr("fill",   d => d.stage3 === 0 ? "#ddd" : "#b03020");
+
+  svg.selectAll(".bar-label")
+    .data(facilityTotals)
+    .join("text")
+      .attr("x",     d => x(d.stage3) + 5)
+      .attr("y",     d => y(d.code) + y.bandwidth() / 2 + 4)
+      .attr("font-size", "12px").attr("fill", "#555")
+      .text(d => d.stage3 > 0 ? d.stage3.toFixed(1) : "0");
+})();
+
+// ── Chart 3: Per-facility lines over time ─────────────────────────────────────
+
+(function() {
+  const margin = { top: 18, right: 110, bottom: 36, left: 54 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 420 - margin.top  - margin.bottom;
+
+  // Build total per facility for color scale
+  const totalByCode = Object.fromEntries(facilityTotals.map(d => [d.code, d.stage3total]));
+  const maxTotal = d3.max(facilityTotals, d => d.stage3total);
+
+  // Sequential: low = light gray, high = dark red
+  const colorScale = d3.scaleSequential()
+    .domain([0, maxTotal])
+    .interpolator(d3.interpolateRgb("#d0d0d0", "#7a1010"));
+
+  const x = d3.scaleLinear().domain(d3.extent(years)).range([0, width]);
+  const yMax = d3.max(facilityAnnual, s => d3.max(s.values, d => d.stage3));
+  const y = d3.scaleLinear().domain([0, yMax * 1.05]).range([height, 0]);
+
+  const svgW3 = width  + margin.left + margin.right;
+  const svgH3 = height + margin.top  + margin.bottom;
+  const svg = d3.select("#chart-lines")
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW3} ${svgH3}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // Grid
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
+
+  // Axes
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(years.length));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(",d")));
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2).attr("y", -44)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Stage 3 days");
+
+  const line = d3.line()
+    .x(d => x(d.year))
+    .y(d => y(d.stage3));
+
+  // Sort so high-exposure facilities draw on top
+  const sorted = [...facilityAnnual].sort(
+    (a, b) => totalByCode[a.code] - totalByCode[b.code]
+  );
+
+  // Lines
+  sorted.forEach(s => {
+    const total = totalByCode[s.code];
+    const color = colorScale(total);
+    const isTop = total >= 800;
+
+    svg.append("path")
+      .datum(s.values)
+      .attr("fill", "none")
+      .attr("stroke", color)
+      .attr("stroke-width", isTop ? 1.8 : 1)
+      .attr("opacity", isTop ? 0.9 : 0.55)
+      .attr("d", line);
+
+    svg.selectAll(null)
+      .data(s.values)
+      .join("circle")
+        .attr("cx", d => x(d.year))
+        .attr("cy", d => y(d.stage3))
+        .attr("r", isTop ? 2.5 : 1.8)
+        .attr("fill", color)
+        .attr("opacity", isTop ? 0.9 : 0.55);
+  });
+
+  // End-of-line labels:
+  //   Top 4 (stage3total >= 1100): ISP, CEN, CAL, CVSP — always labeled
+  //   Mid sample (800–999): WSP, SATF
+  //   Low sample (< 800): ASP (3891), SCC (4035), MCSP (3761), VSP (3148)
+  //   Bottom tier sample: CTF (4225 — largest pop among near-zero facilities)
+  const TOP_THRESHOLD = 1100;
+  const LABEL_SAMPLE = new Set(["SATF", "WSP", "ASP", "SCC", "MCSP", "VSP", "CTF"]);
+
+  const labelCandidates = facilityAnnual
+    .filter(s => totalByCode[s.code] >= TOP_THRESHOLD || LABEL_SAMPLE.has(s.code))
+    .map(s => {
+      const last = s.values[s.values.length - 1];
+      const label = s.code === "CVSP" ? "CVSP: closed" : s.code;
+      return {
+        code: s.code,
+        label,
+        xPos: x(last.year) + 6,
+        yNatural: y(last.stage3) + 4,
+        color: colorScale(totalByCode[s.code]),
+      };
+    });
+
+  // Collision avoidance — group by xPos so only same-column labels are compared
+  const byX = d3.group(labelCandidates, d => d.xPos);
+  byX.forEach(group => {
+    group.sort((a, b) => a.yNatural - b.yNatural);
+    const minGap = 13;
+    let lastY = -Infinity;
+    group.forEach(lbl => {
+      lbl.yFinal = Math.max(lbl.yNatural, lastY + minGap);
+      lastY = lbl.yFinal;
+    });
+  });
+
+  labelCandidates.forEach(lbl => {
+    svg.append("text")
+      .attr("x", lbl.xPos)
+      .attr("y", lbl.yFinal)
+      .attr("font-size", "12px")
+      .attr("fill", lbl.color)
+      .text(lbl.label);
+  });
+})();
+</script>
+</body>
+</html>
