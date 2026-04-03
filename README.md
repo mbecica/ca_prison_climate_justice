@@ -105,6 +105,10 @@ The SPEI-12 delta is included as a standalone variable. SPEI accounts for both p
 | `drought_hazard_idx_norm` | Normalized Drought Hazard Index (0–100), current. Equal-weight mean of normalized June–August temperature change (current), WSV, and inverted precipitation/demand ratio. | Derived from LCI VCP, 2025 |
 | `drought_hazard_fut_idx_norm` | Normalized Drought Hazard Index (0–100), mid-century (2041–2070). Equal-weight mean of normalized June–August temperature change (mid-century), WSV, and inverted precipitation/demand ratio. | Derived from LCI VCP, 2025 |
 
+# Impact Analysis
+
+See [`analysis/README.md`](analysis/README.md) for the full impact analysis documentation, including heat activation days, summary graphs, and population impact methodology.
+
 # References
 
 ## Facilities

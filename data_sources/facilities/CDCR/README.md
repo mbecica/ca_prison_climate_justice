@@ -21,8 +21,10 @@ Data collection scripts are in the `scrapers/` directory.
 | `capacity_percent_2025` | A 0-1 value calculated from 2025 `average_2025_population` / `capacity`. Values over 1 indicate the facility is over capacity. | Derived from CDCR TPOP1 PDF Reports, 2025 |
 | `age_over_50_pct` | % of population aged 50 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
 | `age_over_55_pct` | % of population aged 55 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
-| `age_over_60_pct` | % of population aged 60 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
-| `age_over_65_pct` | % of population aged 65 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_50_59_pct` | % of population aged 50–59 averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_60_69_pct` | % of population aged 60–69 averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_70_79_pct` | % of population aged 70–79 averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
+| `age_80plus_pct` | % of population aged 80 and older averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
 | `gender_male_pct` | % of population identifying as Male averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
 | `gender_female_pct` | % of population identifying as Female averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
 | `race_white_pct` | % of population identifying as White averaged from monthly counts in 2025. | CDCR Population Data Set, 2025 |
