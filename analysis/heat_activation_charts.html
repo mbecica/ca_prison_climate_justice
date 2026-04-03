@@ -112,6 +112,39 @@
       padding-top: 10px;
     }
 
+    .age-table {
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 14px;
+      width: auto;
+    }
+
+    .age-table th, .age-table td {
+      text-align: right;
+      padding: 5px 16px 5px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .age-table th:first-child, .age-table td:first-child {
+      text-align: left;
+      padding-left: 0;
+    }
+
+    .age-table th {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: #555;
+      border-bottom: 1px solid #bbb;
+    }
+
+    .age-table tr.total-row td {
+      font-weight: bold;
+      border-top: 1px solid #bbb;
+      border-bottom: none;
+    }
+
     @media print {
       body { padding: 20px; }
     }
@@ -147,6 +180,16 @@
 <h2>Annual Days ≥ 90°F Outdoor — All CDCR Facilities Combined</h2>
 <p class="chart-note">Sum of facility-days with outdoor tmax ≥ 90°F across all 32 prisons per year (CVSP included 2016–2023 only).</p>
 <div id="chart-annual"></div>
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-line" style="background:#444;"></div>
+    ≥ 90°F outdoor
+  </div>
+  <div class="legend-item">
+    <div class="legend-line" style="background:#b03020;"></div>
+    ≥ 95°F outdoor
+  </div>
+</div>
 
 <!-- Chart 2: Per-facility horizontal bar -->
 <h2>Average Annual Days ≥ 90°F per Facility, 2016–2025</h2>
@@ -160,6 +203,39 @@
   darker red indicates higher cumulative outdoor heat exposure.
 </p>
 <div id="chart-lines"></div>
+
+<!-- ── Population Impact ──────────────────────────────────────────────────── -->
+<h2>Population Impact: People Aged 50+ Exposed to ≥ 90°F Outdoor Days, 2025</h2>
+<p class="chart-note">
+  Person-days = facility population in each age group × days outdoor tmax ≥ 90°F at that facility,
+  summed across all 31 facilities with 2025 data.
+  Age group populations derived from 2025 CDCR Population Data Set monthly averages.
+</p>
+
+<h2>Person-Days at ≥ 90°F Outdoor by Age Group, 2025</h2>
+<p class="chart-note">Breakdown of the 50+ total by decade age band.</p>
+<div id="chart-age"></div>
+<h2>Average Annual Days ≥ 90°F per Person by Age Group, 2016–2025</h2>
+<p class="chart-note">
+  Weighted average: total person-days ÷ total people in each age group, summed across all active facilities per year.
+  Differences between groups reflect which facilities house higher concentrations of older people.
+</p>
+<div id="chart-age-annual"></div>
+<div class="legend" id="legend-age-annual"></div>
+
+<table class="age-table">
+  <thead>
+    <tr><th>Age group</th><th>People</th><th>Person-days ≥ 90°F (2025)</th><th>Avg days ≥ 90°F / person (2025)</th><th>Avg annual medical cost / person</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>50–59</td><td>14,163</td><td>1,019,387</td><td>72.0</td><td>$60,780</td></tr>
+    <tr><td>60–69</td><td>9,036</td><td>588,907</td><td>65.2</td><td>$87,552</td></tr>
+    <tr><td>70–79</td><td>2,746</td><td>161,970</td><td>59.0</td><td>$139,056</td></tr>
+    <tr><td>80+</td><td>543</td><td>34,786</td><td>64.1</td><td>$237,325</td></tr>
+    <tr class="total-row"><td>50+ total</td><td>26,487</td><td>1,805,051</td><td>—</td><td>—</td></tr>
+  </tbody>
+</table>
+<p class="chart-note" style="margin-top:6px;">Medical cost per person: CCHCS Health Care Services Dashboard, 2025. Reflects average annual health care cost per patient by age group.</p>
 
 <p class="source">
   Data: gridMET daily maximum temperature (tmmx), University of Idaho / Northwest Knowledge Network, 1991–2025.
@@ -298,19 +374,22 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
   const series = [
     {
       data: annualData.map(d => ({ year: d.year, value: d.stage1 })),
-      strokeWidth: 2,
-      dotR: 4,
-      opacity: 1,
+      strokeWidth: 2, dotR: 4, opacity: 1,
+    },
+    {
+      data: annualData.map(d => ({ year: d.year, value: d.stage3 })),
+      strokeWidth: 2, dotR: 4, opacity: 1,
     },
   ];
+  const colors = ["#444", "#b03020"];
 
   const { svg, x, y } = makeLineChart("#chart-annual", {
     width, height, margin,
     series,
     yMax: d3.max(annualData, d => d.stage1) * 1.1,
     yLabel: "Facility-days",
-    lineColor: () => "#444",
-    dotColor:  () => "#444",
+    lineColor: (s) => colors[series.indexOf(s)],
+    dotColor:  (s) => colors[series.indexOf(s)],
   });
 })();
 
@@ -501,6 +580,176 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
       .attr("fill", lbl.color)
       .text(lbl.label);
   });
+})();
+
+// ── Chart 5: Average annual days ≥ 90°F per person by age group ──────────────
+
+(function() {
+  const ageAnnualData = [
+    { year: 2016, g5059: 82.3, g6069: 76.6, g7079: 74.3, g80plus: 79.4 },
+    { year: 2017, g5059: 85.8, g6069: 80.9, g7079: 79.4, g80plus: 84.9 },
+    { year: 2018, g5059: 75.9, g6069: 70.7, g7079: 68.0, g80plus: 73.3 },
+    { year: 2019, g5059: 73.2, g6069: 68.7, g7079: 65.9, g80plus: 70.8 },
+    { year: 2020, g5059: 91.6, g6069: 88.0, g7079: 90.1, g80plus: 96.4 },
+    { year: 2021, g5059: 82.4, g6069: 76.8, g7079: 74.6, g80plus: 79.8 },
+    { year: 2022, g5059: 85.4, g6069: 80.0, g7079: 77.2, g80plus: 82.4 },
+    { year: 2023, g5059: 68.0, g6069: 62.7, g7079: 59.2, g80plus: 63.8 },
+    { year: 2024, g5059: 84.7, g6069: 78.8, g7079: 75.9, g80plus: 81.9 },
+    { year: 2025, g5059: 72.0, g6069: 65.2, g7079: 59.0, g80plus: 64.1 },
+  ];
+
+  const ageSeries = [
+    { key: "g5059",  label: "50–59", color: "#888" },
+    { key: "g6069",  label: "60–69", color: "#666" },
+    { key: "g7079",  label: "70–79", color: "#333" },
+    { key: "g80plus",label: "80+",   color: "#b03020" },
+  ];
+
+  const margin = { top: 18, right: 60, bottom: 36, left: 64 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 240 - margin.top  - margin.bottom;
+
+  const x = d3.scaleLinear().domain(d3.extent(ageAnnualData, d => d.year)).range([0, width]);
+  const yMax = d3.max(ageSeries, s => d3.max(ageAnnualData, d => d[s.key]));
+  const y = d3.scaleLinear().domain([0, yMax * 1.1]).range([height, 0]);
+
+  const svgW5 = width  + margin.left + margin.right;
+  const svgH5 = height + margin.top  + margin.bottom;
+  const svg = d3.select("#chart-age-annual")
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW5} ${svgH5}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(ageAnnualData.length));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".0f")));
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2).attr("y", -52)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Avg days / person");
+
+  const line = d3.line().x(d => x(d.year));
+
+  ageSeries.forEach(s => {
+    const data = ageAnnualData.map(d => ({ year: d.year, val: d[s.key] }));
+    svg.append("path")
+      .datum(data)
+      .attr("fill", "none")
+      .attr("stroke", s.color)
+      .attr("stroke-width", s.key === "g80plus" ? 2 : 1.5)
+      .attr("d", line.y(d => y(d.val)));
+
+    svg.selectAll(null).data(data).join("circle")
+      .attr("cx", d => x(d.year))
+      .attr("cy", d => y(d.val))
+      .attr("r", 3)
+      .attr("fill", s.color);
+
+    // End label
+    const last = data[data.length - 1];
+    svg.append("text")
+      .attr("x", x(last.year) + 6)
+      .attr("y", y(last.val) + 4)
+      .attr("font-size", "12px")
+      .attr("fill", s.color)
+      .text(s.label);
+  });
+
+  // Legend
+  const legend = d3.select("#legend-age-annual");
+  ageSeries.forEach(s => {
+    const item = legend.append("div").attr("class", "legend-item");
+    item.append("div").attr("class", "legend-line").style("background", s.color);
+    item.append("span").text(s.label);
+  });
+})();
+
+// ── Chart 4: Person-days by age group, 2025 ──────────────────────────────────
+
+(function() {
+  // person-days = facility population in age group × days_over_90f, summed across 31 facilities
+  const ageData = [
+    { group: "50–59", personDays: 1019387, people: 14163 },
+    { group: "60–69", personDays:  588907, people:  9036 },
+    { group: "70–79", personDays:  161970, people:  2746 },
+    { group: "80+",   personDays:   34786, people:   543 },
+  ];
+
+  const margin = { top: 18, right: 20, bottom: 36, left: 90 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 260 - margin.top  - margin.bottom;
+
+  const svgW4 = width  + margin.left + margin.right;
+  const svgH4 = height + margin.top  + margin.bottom;
+  const svg = d3.select("#chart-age")
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW4} ${svgH4}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleBand()
+    .domain(ageData.map(d => d.group))
+    .range([0, width])
+    .padding(0.3);
+
+  const y = d3.scaleLinear()
+    .domain([0, d3.max(ageData, d => d.personDays) * 1.1])
+    .range([height, 0]);
+
+  // Grid
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
+
+  // Axes
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(5).tickFormat(d => d >= 1e6 ? (d/1e6).toFixed(1)+"M" : d3.format(",d")(d)));
+
+  // Y label
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2).attr("y", -68)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Person-days");
+
+  // Bars
+  svg.selectAll(".bar")
+    .data(ageData)
+    .join("rect")
+      .attr("x",      d => x(d.group))
+      .attr("y",      d => y(d.personDays))
+      .attr("width",  x.bandwidth())
+      .attr("height", d => height - y(d.personDays))
+      .attr("fill", "#444");
+
+  // Person-days total above each bar
+  svg.selectAll(".val-label")
+    .data(ageData)
+    .join("text")
+      .attr("x", d => x(d.group) + x.bandwidth() / 2)
+      .attr("y", d => y(d.personDays) - 5)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "12px").attr("fill", "#333")
+      .text(d => d3.format(",d")(d.personDays));
+
 })();
 </script>
 </body>
