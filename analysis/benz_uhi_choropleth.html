@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Benz & Burney Urban Heat Anomaly — California Census Tracts</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, serif; background: #f5f5f5; }
+    #header {
+      padding: 16px 24px 12px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    #header h1 { font-size: 15px; font-weight: bold; text-transform: uppercase; letter-spacing: .06em; }
+    #header p  { font-size: 11px; color: #666; margin-top: 4px; font-style: italic; }
+    #map { height: calc(100vh - 88px); width: 100%; }
+    .legend {
+      background: #fff;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      font-size: 11px;
+      font-family: Georgia, serif;
+      line-height: 1.6;
+      min-width: 180px;
+    }
+    .legend h4 { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 8px; }
+    .legend-bar {
+      height: 10px; width: 160px;
+      background: linear-gradient(to right, #2166ac, #d1e5f0, #f7f7f7, #fddbc7, #b2182b);
+      margin: 4px 0 2px;
+    }
+    .legend-labels { display: flex; justify-content: space-between; font-size: 10px; color: #555; }
+    .legend-item { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .dot-present  { background: #222; border: 2px solid #fff; }
+    .dot-buffer   { background: #fff; border: 2.5px solid #2166ac; }
+    .dot-missing  { background: #e65c00; border: 2px solid #fff; }
+    .dot-null { background: #ccc; border: 1px solid #aaa; width: 10px; height: 10px; }
+    #measure-btn {
+      position: absolute; top: 80px; left: 10px; z-index: 1000;
+      background: #fff; border: 2px solid rgba(0,0,0,0.25); border-radius: 4px;
+      padding: 5px 9px; font-family: Georgia, serif; font-size: 12px;
+      cursor: pointer; color: #333; line-height: 1.4;
+    }
+    #measure-btn.active { background: #2166ac; color: #fff; border-color: #2166ac; }
+    #measure-status {
+      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+      z-index: 1000; background: rgba(255,255,255,0.92); border: 1px solid #aaa;
+      padding: 6px 14px; font-family: Georgia, serif; font-size: 12px;
+      border-radius: 4px; pointer-events: none; display: none;
+    }
+  </style>
+</head>
+<body>
+<div id="header">
+  <h1>Benz &amp; Burney (2021) — Daytime Surface Urban Heat Anomaly (ΔT), California Census Tracts</h1>
+  <p>ΔT = 95th-percentile summer daytime land surface temperature vs. rural surroundings (MODIS, 2010–2014). Gray tracts have no Benz coverage (classified as undeveloped in NLCD). Source: Harvard Dataverse doi:10.7910/DVN/1F72FB.</p>
+</div>
+<div id="map"></div>
+<button id="measure-btn" title="Click two points to measure distance">📏 Measure</button>
+<div id="measure-status"></div>
+
+<script>
+const prisons = [{"code": "CAL", "name": "Calipatria State Prison", "lat": 33.16569335411168, "lng": -115.4843440200192, "tract": "06025010101", "dt": -4.399, "missing": false}, {"code": "CEN", "name": "Centinela State Prison", "lat": 32.82339731050856, "lng": -115.7890554901459, "tract": "06025012301", "dt": -0.057, "missing": false}, {"code": "SOL", "name": "California State Prison, Solano", "lat": 38.320776607604, "lng": -121.97523692020748, "tract": "06095253000", "dt": 4.214, "missing": false}, {"code": "ASP", "name": "Avenal State Prison", "lat": 35.97394943680589, "lng": -120.123101823151, "tract": "06031981800", "dt": -0.141, "missing": false}, {"code": "CMC", "name": "California Men'S Colony", "lat": 35.324574100099134, "lng": -120.69890041992886, "tract": "06079011400", "dt": 0.506, "missing": false}, {"code": "CAC", "name": "California City Correctional Center", "lat": 35.15325120165892, "lng": -117.85888005110138, "tract": "06029006500", "dt": -0.322, "missing": false}, {"code": "COR", "name": "California State Prison, Corcoran", "lat": 36.060818292814254, "lng": -119.54912102574772, "tract": "06031980100", "dt": 4.188, "missing": false, "buffer": true, "buffer_tract": "06031001300", "buffer_dist_mi": 0.308}, {"code": "SATF", "name": "Ca Substance Abuse Treatment Facility", "lat": 36.05395908338128, "lng": -119.54782062864966, "tract": "06031980100", "dt": 4.354, "missing": false, "buffer": true, "buffer_tract": "06031001601", "buffer_dist_mi": 0.219}, {"code": "CCWF", "name": "Central California Women'S Facility", "lat": 37.0936807963828, "lng": -120.15270979438849, "tract": "06039000201", "dt": 0.662, "missing": false}, {"code": "CVSP", "name": "Chuckawalla Valley State Prison", "lat": 33.562579498036335, "lng": -114.90950576295587, "tract": "06065981000", "dt": -0.538, "missing": false, "buffer": true, "buffer_tract": "06065046900", "buffer_dist_mi": 0.444}, {"code": "RJD", "name": "R J Donovan Correctional Facility", "lat": 32.58456492210108, "lng": -116.9335763874008, "tract": "06073010016", "dt": -1.542, "missing": false, "buffer": true, "buffer_tract": "06073021302", "buffer_dist_mi": 0.346}, {"code": "PBSP", "name": "Pelican Bay State Prison", "lat": 41.85480855418667, "lng": -124.1490751163596, "tract": "06015000201", "dt": 2.244, "missing": false}, {"code": "PVSP", "name": "Pleasant Valley State Prison", "lat": 36.131473239777144, "lng": -120.24889960644474, "tract": "06019007903", "dt": null, "missing": true}, {"code": "VSP", "name": "Valley State Prison", "lat": 37.105477428630245, "lng": -120.15547185750694, "tract": "06039000201", "dt": 0.662, "missing": false}, {"code": "FWF", "name": "Folsom Women'S Facility", "lat": 38.69320816978507, "lng": -121.14879148409725, "tract": "06067988300", "dt": -0.534, "missing": false}, {"code": "HDSP", "name": "High Desert State Prison", "lat": 40.40786908373915, "lng": -120.51339082085426, "tract": "06035040400", "dt": 0.297, "missing": false}, {"code": "None", "name": "O.H.Close Youth Correctional Facility", "lat": 37.89852127379901, "lng": -121.19769467027837, "tract": "06077005131", "dt": 2.48, "missing": false}, {"code": "CHCF", "name": "California Health Care Facility", "lat": 37.89778736654379, "lng": -121.1905848230992, "tract": "06077005131", "dt": 2.48, "missing": false}, {"code": "FOL", "name": "Folsom State Prison", "lat": 38.69538346625723, "lng": -121.1630323451162, "tract": "06067988300", "dt": -0.534, "missing": false}, {"code": "None", "name": "Mcfarland Female Community Reentry Facility", "lat": 35.667807046660805, "lng": -119.22698574189052, "tract": "06029004703", "dt": null, "missing": true}, {"code": "MCSP", "name": "Mule Creek State Prison", "lat": 38.37074337471898, "lng": -120.95344581511613, "tract": "06005000301", "dt": 1.902, "missing": false}, {"code": "None", "name": "Taft Modified Community Correctional Facility", "lat": 35.13415778402242, "lng": -119.44146788011987, "tract": "06029003304", "dt": -0.129, "missing": false}, {"code": "None", "name": "Shafter Modified Community Correctional Facility", "lat": 35.495318067849404, "lng": -119.25905776312544, "tract": "06029004001", "dt": null, "missing": true}, {"code": "CCI", "name": "California Correctional Institution", "lat": 35.10991555190383, "lng": -118.57033067748, "tract": "06029006002", "dt": null, "missing": true}, {"code": "CIM", "name": "California Institution For Men", "lat": 33.98471244959707, "lng": -117.68239170046569, "tract": "06071012202", "dt": 7.247, "missing": false, "buffer": true, "buffer_tract": "06071000504", "buffer_dist_mi": 0.375}, {"code": "CTF", "name": "Correctional Training Facility", "lat": 36.46964827416208, "lng": -121.38223254073095, "tract": "06053010900", "dt": -1.007, "missing": false}, {"code": "CIW", "name": "California Institution For Women", "lat": 33.94974539755923, "lng": -117.6363650322742, "tract": "06071001907", "dt": 4.385, "missing": false, "buffer": true, "buffer_tract": "06071000115", "buffer_dist_mi": 1.043, "buffer_note": "CDCR 2020 Table 8 corroborated"}, {"code": "CMF", "name": "California Medical Facility", "lat": 38.3285102029971, "lng": -121.97916451130509, "tract": "06095253000", "dt": 4.214, "missing": false}, {"code": "CRC", "name": "California Rehabilitation Center", "lat": 33.9292530412966, "lng": -117.5725312861978, "tract": "06065046601", "dt": 4.14, "missing": false}, {"code": "SAC", "name": "California State Prison, Sacramento", "lat": 38.694444232143624, "lng": -121.15390376526624, "tract": "06067988300", "dt": -0.534, "missing": false}, {"code": "LAC", "name": "California State Prison-Los Angeles County", "lat": 34.693596500791955, "lng": -118.2276135961975, "tract": "06037901003", "dt": -1.114, "missing": false}, {"code": "SQ", "name": "San Quentin State Prison", "lat": 37.940039851419016, "lng": -122.4903665969169, "tract": "06041122000", "dt": -5.309, "missing": false}, {"code": "WSP", "name": "Wasco State Prison", "lat": 35.59431194493489, "lng": -119.40833193657431, "tract": "06029004302", "dt": 3.507, "missing": false, "buffer": true, "buffer_tract": "06029004500", "buffer_dist_mi": 0.495}, {"code": "NKSP", "name": "North Kern State Prison", "lat": 35.78188517301339, "lng": -119.30987566982682, "tract": "06029004601", "dt": 4.548, "missing": false}, {"code": "None", "name": "Department Of State Hospitals - Atascadero", "lat": 35.46406026013646, "lng": -120.6348665784761, "tract": "06079013100", "dt": null, "missing": true}, {"code": "SCC", "name": "Sierra Conservation Center", "lat": 37.89168865412792, "lng": -120.53654018648405, "tract": "06109985202", "dt": -0.122, "missing": false}, {"code": "None", "name": "Department Of State Hospitals - Coalinga", "lat": 36.13343268870778, "lng": -120.24044350195224, "tract": "06019007903", "dt": null, "missing": true}, {"code": "KVSP", "name": "Kern Valley State Prison", "lat": 35.76647451591408, "lng": -119.32536275967016, "tract": "06029004603", "dt": 1.09, "missing": false}, {"code": "ISP", "name": "Ironwood State Prison", "lat": 33.56097662668156, "lng": -114.9260675684116, "tract": "06065981000", "dt": -0.538, "missing": false, "buffer": true, "buffer_tract": "06065046900", "buffer_dist_mi": 0.435}, {"code": "SVSP", "name": "Salinas Valley State Prison", "lat": 36.47885711260287, "lng": -121.37439425565836, "tract": "06053010900", "dt": -1.007, "missing": false}];
+
+const map = L.map('map', { preferCanvas: true }).setView([37.5, -119.5], 6);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; OpenStreetMap &copy; CartoDB',
+  subdomains: 'abcd', maxZoom: 16
+}).addTo(map);
+
+// Color scale: blue (cool) → white (0) → red (hot), range approx -14 to +11
+function getColor(dt) {
+  if (dt === null || dt === undefined) return '#d0d0d0';
+  // Diverging: cool = #2166ac, neutral = #f7f7f7, hot = #b2182b
+  const stops = [
+    [-14, [33,  102, 172]],
+    [ -4, [146, 197, 222]],
+    [  0, [247, 247, 247]],
+    [  4, [244, 165, 130]],
+    [ 11, [178,  24,  43]],
+  ];
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  for (let i = 0; i < stops.length - 1; i++) {
+    const [v0, c0] = stops[i];
+    const [v1, c1] = stops[i + 1];
+    if (dt >= v0 && dt <= v1) {
+      const t = (dt - v0) / (v1 - v0);
+      return `rgb(${Math.round(lerp(c0[0],c1[0],t))},${Math.round(lerp(c0[1],c1[1],t))},${Math.round(lerp(c0[2],c1[2],t))})`;
+    }
+  }
+  return dt < -14 ? '#2166ac' : '#b2182b';
+}
+
+fetch('../data_sources/hazards/benz_uhi_ca_tracts.geojson')
+  .then(r => r.json())
+  .then(data => {
+    L.geoJSON(data, {
+      renderer: L.canvas(),
+      style: feat => {
+        const dt = feat.properties.day;
+        return {
+          fillColor: getColor(dt),
+          fillOpacity: dt === null ? 0.25 : 0.7,
+          color: '#aaa',
+          weight: 0.2
+        };
+      },
+      onEachFeature: (feat, layer) => {
+        const dt = feat.properties.day;
+        const label = dt !== null ? `ΔT = ${dt.toFixed(2)}°C` : 'No Benz coverage';
+        layer.bindTooltip(`<b>Tract ${feat.properties.GEOID}</b><br>${label}`, { sticky: true });
+        layer.on('click', e => {
+          if (measureActive) return;   // let measure handler take over
+          L.popup()
+            .setLatLng(e.latlng)
+            .setContent(`<div style="font-family:Georgia,serif;font-size:12px">
+              <b>Tract ${feat.properties.GEOID}</b><br>
+              ${dt !== null ? `ΔT = <b>${dt.toFixed(3)}°C</b>` : '<span style="color:#e65c00">No Benz coverage</span>'}
+            </div>`)
+            .openOn(map);
+        });
+      }
+    }).addTo(map);
+
+    // Prison markers — three categories:
+    //   original Benz: black fill
+    //   buffer-assigned (≤1 mi): white fill, blue border
+    //   still missing: orange fill
+    prisons.forEach(p => {
+      let fillColor, strokeColor, fillOpacity;
+      if (p.missing) {
+        fillColor = '#e65c00'; strokeColor = '#fff'; fillOpacity = 1;
+      } else if (p.buffer) {
+        fillColor = '#fff'; strokeColor = '#2166ac'; fillOpacity = 1;
+      } else {
+        fillColor = '#111'; strokeColor = '#fff'; fillOpacity = 1;
+      }
+
+      const marker = L.circleMarker([p.lat, p.lng], {
+        radius: 7,
+        fillColor,
+        color: strokeColor,
+        weight: p.buffer ? 2.5 : 1.5,
+        fillOpacity
+      });
+
+      let dtLabel;
+      if (p.missing) {
+        dtLabel = '<span style="color:#e65c00"><b>No Benz coverage — beyond 1 mi buffer</b></span>';
+      } else if (p.buffer) {
+        const note = p.buffer_note ? ` — ${p.buffer_note}` : '';
+        dtLabel = `ΔT = <b>${p.dt.toFixed(3)}°C</b> <i style="color:#555">(buffer — nearest tract ${p.buffer_tract}, ${p.buffer_dist_mi} mi${note})</i>`;
+      } else {
+        dtLabel = `ΔT = <b>${p.dt.toFixed(3)}°C</b>`;
+      }
+
+      marker.bindTooltip(
+        `<div style="font-family:Georgia,serif;font-size:12px"><b>${p.code}</b> — ${p.name}<br>${dtLabel}<br><span style="color:#888;font-size:10px">Prison tract: ${p.tract}</span></div>`,
+        { direction: 'top', offset: [0, -8] }
+      );
+      marker.addTo(map);
+
+      // Label
+      const labelColor = p.missing ? '#e65c00' : p.buffer ? '#2166ac' : '#111';
+      const icon = L.divIcon({
+        className: '',
+        html: `<div style="font-family:Georgia,serif;font-size:10px;font-weight:bold;color:${labelColor};white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff">${p.code}</div>`,
+        iconAnchor: [-9, 8]
+      });
+      L.marker([p.lat, p.lng], { icon }).addTo(map);
+    });
+
+    // Legend
+    const legend = L.control({ position: 'bottomright' });
+    legend.onAdd = () => {
+      const div = L.DomUtil.create('div', 'legend');
+      div.innerHTML = `
+        <h4>Daytime ΔT (°C)</h4>
+        <div class="legend-bar"></div>
+        <div class="legend-labels"><span>−14°C (cool)</span><span>0</span><span>+11°C (hot)</span></div>
+        <div class="legend-item"><div class="dot-null dot"></div> No Benz coverage</div>
+        <div style="border-top:1px solid #ddd;margin:8px 0"></div>
+        <h4>Facilities</h4>
+        <div class="legend-item"><div class="dot dot-present"></div> Benz tract data</div>
+        <div class="legend-item"><div class="dot dot-buffer"></div> Buffer-assigned (8)</div>
+        <div class="legend-item"><div class="dot dot-missing"></div> No coverage (2)</div>
+      `;
+      return div;
+    };
+    legend.addTo(map);
+  });
+
+// ── Measurement tool ─────────────────────────────────────────────────────────
+let measureActive = false;
+let measureStart  = null;
+let measureMarkers = [];
+let measureLine    = null;
+const btn    = document.getElementById('measure-btn');
+const status = document.getElementById('measure-status');
+
+function clearMeasure() {
+  measureMarkers.forEach(m => map.removeLayer(m));
+  measureMarkers = [];
+  if (measureLine) { map.removeLayer(measureLine); measureLine = null; }
+  measureStart = null;
+  status.style.display = 'none';
+}
+
+function formatDist(m) {
+  if (m < 1000) return `${Math.round(m)} m`;
+  return `${(m / 1000).toFixed(2)} km  (${(m / 1609.34).toFixed(2)} mi)`;
+}
+
+btn.addEventListener('click', () => {
+  measureActive = !measureActive;
+  btn.classList.toggle('active', measureActive);
+  map.getContainer().style.cursor = measureActive ? 'crosshair' : '';
+  if (!measureActive) clearMeasure();
+  else status.textContent = 'Click a start point';
+  status.style.display = measureActive ? 'block' : 'none';
+});
+
+map.on('click', e => {
+  if (!measureActive) return;
+
+  if (!measureStart) {
+    measureStart = e.latlng;
+    const m = L.circleMarker(e.latlng, {
+      radius: 5, color: '#2166ac', fillColor: '#2166ac', fillOpacity: 1, weight: 2
+    }).addTo(map);
+    measureMarkers.push(m);
+    status.textContent = 'Click an end point';
+  } else {
+    const end  = e.latlng;
+    const dist = measureStart.distanceTo(end);
+    const m = L.circleMarker(end, {
+      radius: 5, color: '#b2182b', fillColor: '#b2182b', fillOpacity: 1, weight: 2
+    }).addTo(map);
+    measureMarkers.push(m);
+    if (measureLine) map.removeLayer(measureLine);
+    measureLine = L.polyline([measureStart, end], {
+      color: '#333', weight: 1.5, dashArray: '5,4'
+    }).addTo(map);
+
+    const mid = L.latLng(
+      (measureStart.lat + end.lat) / 2,
+      (measureStart.lng + end.lng) / 2
+    );
+    const label = L.divIcon({
+      className: '',
+      html: `<div style="background:rgba(255,255,255,0.9);border:1px solid #555;padding:2px 6px;font-family:Georgia,serif;font-size:11px;border-radius:3px;white-space:nowrap">${formatDist(dist)}</div>`,
+      iconAnchor: [0, 0]
+    });
+    const lm = L.marker(mid, { icon: label, interactive: false }).addTo(map);
+    measureMarkers.push(lm);
+    status.textContent = `Distance: ${formatDist(dist)} — click to start a new measurement`;
+    measureStart = null;
+  }
+});
+</script>
+</body>
+</html>
