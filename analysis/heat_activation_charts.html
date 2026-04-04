@@ -204,6 +204,16 @@
 </p>
 <div id="chart-lines"></div>
 
+<!-- Chart 4a: System-wide avg summer tmax -->
+<h2>Average Summer Temperature Across All Facilities, 2016–2025</h2>
+<p class="chart-note">Mean daily maximum temperature (°F) across all 32 CDCR state prisons during Jun–Aug each year.</p>
+<div id="chart-temp-avg"></div>
+
+<!-- Chart 4b: Per-facility summer tmax lines -->
+<h2>Average Summer Temperature per Facility, 2016–2025</h2>
+<p class="chart-note">Each line is one facility. Color encodes cumulative days ≥ 90°F over 2016–2025 (light gray = low, dark red = high). Bold black line = system-wide average.</p>
+<div id="chart-temp-lines"></div>
+
 <!-- ── Population Impact ──────────────────────────────────────────────────── -->
 <h2>Population Impact: People Aged 50+ Exposed to ≥ 90°F Outdoor Days, 2025</h2>
 <p class="chart-note">
@@ -280,6 +290,43 @@
   include the hottest desert and valley institutions.
 </p>
 
+<h2>Cooling Infrastructure by Facility, 2025 Population</h2>
+<p class="chart-note">
+  Housing unit cooling type from Raychaudhuri et al. (Reuters, 2025). Refrigeration = mechanical AC.
+  Evaporative = swamp coolers (effectiveness degrades in humid conditions or when outdoor temps are extreme).
+  Ventilation = no cooling. Bar lengths represent incarcerated people (2025 facility population × share of housing units with each type). Sorted by number of people in ventilation-only units (highest at top).
+</p>
+
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">People in facilities with any refrigeration (AC)</div>
+    <div class="stat-value stage1">29%</div>
+    <div class="stat-sub">Population-weighted across 31 facilities</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">People in facilities with evaporative cooling</div>
+    <div class="stat-value stage1">54%</div>
+    <div class="stat-sub">Population-weighted across 31 facilities</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">People in facilities with ventilation only</div>
+    <div class="stat-value stage1">17%</div>
+    <div class="stat-sub">No cooling · population-weighted</div>
+  </div>
+</div>
+
+<p class="chart-note">Facilities sorted by number of people in ventilation-only housing units (highest at top).</p>
+<p class="chart-note">
+  <strong>Data note:</strong> The CDCR 2025 Climate Report shows 19% mechanical cooling system-wide, compared to 29% here.
+  The source of this gap is not fully reconcilable from available data. The Reuters FOIA was scoped to air handling units
+  (AHUs) at state prisons; CDCR's report includes a separate "fans only" category (5%) and may use a different unit of
+  aggregation or a broader facility universe (e.g., fire camps, community facilities). A limitation of this analysis is
+  that bed counts per housing unit within each facility are not publicly available — CDCR publishes population only at
+  the institution level. Per-facility bars therefore show the share of housing <em>units</em> (not beds) with each
+  cooling type, and population weighting uses facility-level totals as a proxy.
+</p>
+<div id="chart-ac"></div>
+
 <h2>Marginal Mortality: Skarha 10°F Threshold, 2016–2025</h2>
 <p class="chart-note">
   Skarha et al. (2023) found a 5.2% increase in total in-custody mortality on days where outdoor
@@ -300,14 +347,24 @@
     <div class="stat-sub">Per year · 2016–2025</div>
   </div>
   <div class="stat-block">
-    <div class="stat-label">Avg annual person-days over threshold</div>
+    <div class="stat-label">Projected person-days over threshold / year</div>
     <div class="stat-value stage1">840,457</div>
-    <div class="stat-sub">2025 population × avg annual days per facility</div>
+    <div class="stat-sub">Sum across 31 facilities · 2025 pop × avg annual days (2016–2025)</div>
   </div>
   <div class="stat-block">
-    <div class="stat-label">Expected marginal deaths / year</div>
-    <div class="stat-value stage3">0.37</div>
-    <div class="stat-sub">5.2% × 840,457 person-days × 3.07/1,000/yr baseline</div>
+    <div class="stat-label">Years per expected heat-attributable death</div>
+    <div class="stat-value stage3">2.1</div>
+    <div class="stat-sub">1 ÷ 0.48 deaths/yr · 5.2% × 1,102,039 slope-adjusted person-days × 3.07/1,000/yr</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Non-refrigeration person-days over threshold / year</div>
+    <div class="stat-value stage3">611,051</div>
+    <div class="stat-sub">72.7% of total · facilities with evaporative or ventilation-only cooling</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Years per death — non-refrigeration facilities only</div>
+    <div class="stat-value stage3">2.9</div>
+    <div class="stat-sub">1 ÷ 0.35 deaths/yr · same formula applied to 801,488 slope-adjusted non-ref person-days</div>
   </div>
 </div>
 <p class="chart-note">
@@ -316,9 +373,18 @@
   pre-COVID and pre-fentanyl surge. Source: CCHCS Annual Mortality Review Reports, cchcs.ca.gov/reports/.
   Recent rates (4.0–4.4/1,000 in 2022–2024) are elevated by drug overdose deaths and are not used
   as the baseline to avoid conflating heat mortality with unrelated causes.
-  Expected marginal deaths = 840,457 person-days/year × (3.07/1,000 ÷ 365) × 5.2%.
+  <strong>Continuous slope adjustment:</strong> Skarha's 5.2% is the effect per 10°F above the facility mean
+  summer tmax as a continuous variable, not a flat effect at the binary threshold. Across 2,988 facility-days
+  above the Skarha threshold (2016–2025), the mean excess was 3.11°F above threshold (i.e., 13.11°F above
+  facility mean), giving a mean slope weight of 1.31×. Person-days adjusted accordingly (840,457 × 1.31 =
+  1,102,039 slope-adjusted person-days). A binary threshold calculation would give 0.37 deaths/year.
+  <strong>Non-refrigeration flag:</strong> Because Skarha pools AC and non-AC facilities, the 5.2% estimate is
+  attenuated by mechanical cooling. Restricting to the 72.7% of person-days at facilities without refrigeration
+  (evaporative or ventilation only) gives 611,051 person-days/year (801,488 slope-adjusted), yielding 0.35
+  deaths/year — 1 death every 2.9 years. This is a lower bound on the non-AC effect, as partial-AC facilities
+  are counted proportionally by their non-ref unit share.
   Skarha, J., Jackson, A., Zlotnik, H., Williams, B., &amp; Wildeman, C. (2023). Heat and Mortality in US State Prisons.
-  <em>American Journal of Epidemiology</em>.
+  <em>PLOS ONE</em>, 18(3):e0281389.
 </p>
 
 <p class="source">
@@ -666,6 +732,202 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
   });
 })();
 
+// ── Chart 4a/4b: Summer average temperature ───────────────────────────────────
+
+const systemAvgTemp = [
+  { year:2016, avg:93.02 },
+  { year:2017, avg:93.73 },
+  { year:2018, avg:92.85 },
+  { year:2019, avg:92.04 },
+  { year:2020, avg:92.85 },
+  { year:2021, avg:92.94 },
+  { year:2022, avg:92.56 },
+  { year:2023, avg:90.21 },
+  { year:2024, avg:92.64 },
+  { year:2025, avg:90.30 },
+];
+
+const facilityTempData = [
+  { code:"ASP",  cumulative90:1099, values:[{ year:2016, avg:97.98 },{ year:2017, avg:98.21 },{ year:2018, avg:96.51 },{ year:2019, avg:96.13 },{ year:2020, avg:96.34 },{ year:2021, avg:99.45 },{ year:2022, avg:97.81 },{ year:2023, avg:94.73 },{ year:2024, avg:99.01 },{ year:2025, avg:96.89 }] },
+  { code:"CAL",  cumulative90:1812, values:[{ year:2016, avg:107.67 },{ year:2017, avg:107.40 },{ year:2018, avg:106.41 },{ year:2019, avg:106.77 },{ year:2020, avg:107.29 },{ year:2021, avg:106.61 },{ year:2022, avg:106.06 },{ year:2023, avg:104.90 },{ year:2024, avg:109.10 },{ year:2025, avg:105.62 }] },
+  { code:"CCI",  cumulative90:203,  values:[{ year:2016, avg:86.12 },{ year:2017, avg:86.67 },{ year:2018, avg:86.65 },{ year:2019, avg:84.02 },{ year:2020, avg:84.49 },{ year:2021, avg:85.30 },{ year:2022, avg:83.05 },{ year:2023, avg:79.42 },{ year:2024, avg:84.28 },{ year:2025, avg:81.82 }] },
+  { code:"CCWF", cumulative90:1018, values:[{ year:2016, avg:96.47 },{ year:2017, avg:96.99 },{ year:2018, avg:96.34 },{ year:2019, avg:95.92 },{ year:2020, avg:96.16 },{ year:2021, avg:96.71 },{ year:2022, avg:95.53 },{ year:2023, avg:93.08 },{ year:2024, avg:96.37 },{ year:2025, avg:94.30 }] },
+  { code:"CEN",  cumulative90:1819, values:[{ year:2016, avg:108.22 },{ year:2017, avg:107.34 },{ year:2018, avg:107.23 },{ year:2019, avg:106.92 },{ year:2020, avg:107.88 },{ year:2021, avg:107.52 },{ year:2022, avg:106.95 },{ year:2023, avg:106.59 },{ year:2024, avg:110.05 },{ year:2025, avg:106.88 }] },
+  { code:"CHCF", cumulative90:918,  values:[{ year:2016, avg:94.05 },{ year:2017, avg:95.90 },{ year:2018, avg:94.24 },{ year:2019, avg:94.56 },{ year:2020, avg:95.46 },{ year:2021, avg:93.37 },{ year:2022, avg:93.49 },{ year:2023, avg:91.78 },{ year:2024, avg:95.41 },{ year:2025, avg:92.34 }] },
+  { code:"CIM",  cumulative90:887,  values:[{ year:2016, avg:93.44 },{ year:2017, avg:93.20 },{ year:2018, avg:92.67 },{ year:2019, avg:88.72 },{ year:2020, avg:92.36 },{ year:2021, avg:90.74 },{ year:2022, avg:92.14 },{ year:2023, avg:87.71 },{ year:2024, avg:91.53 },{ year:2025, avg:89.93 }] },
+  { code:"CIW",  cumulative90:930,  values:[{ year:2016, avg:94.41 },{ year:2017, avg:94.30 },{ year:2018, avg:94.31 },{ year:2019, avg:90.26 },{ year:2020, avg:93.09 },{ year:2021, avg:90.89 },{ year:2022, avg:92.59 },{ year:2023, avg:88.29 },{ year:2024, avg:91.57 },{ year:2025, avg:89.71 }] },
+  { code:"CMC",  cumulative90:112,  values:[{ year:2016, avg:79.49 },{ year:2017, avg:81.74 },{ year:2018, avg:81.32 },{ year:2019, avg:77.49 },{ year:2020, avg:78.92 },{ year:2021, avg:79.37 },{ year:2022, avg:80.00 },{ year:2023, avg:76.84 },{ year:2024, avg:78.02 },{ year:2025, avg:74.96 }] },
+  { code:"CMF",  cumulative90:783,  values:[{ year:2016, avg:91.57 },{ year:2017, avg:92.89 },{ year:2018, avg:91.43 },{ year:2019, avg:92.04 },{ year:2020, avg:93.37 },{ year:2021, avg:93.44 },{ year:2022, avg:92.44 },{ year:2023, avg:90.23 },{ year:2024, avg:92.88 },{ year:2025, avg:89.03 }] },
+  { code:"COR",  cumulative90:1156, values:[{ year:2016, avg:99.04 },{ year:2017, avg:100.00 },{ year:2018, avg:97.99 },{ year:2019, avg:97.70 },{ year:2020, avg:97.28 },{ year:2021, avg:100.20 },{ year:2022, avg:97.97 },{ year:2023, avg:95.32 },{ year:2024, avg:99.19 },{ year:2025, avg:97.18 }] },
+  { code:"CRC",  cumulative90:855,  values:[{ year:2016, avg:93.33 },{ year:2017, avg:93.26 },{ year:2018, avg:93.22 },{ year:2019, avg:90.21 },{ year:2020, avg:91.46 },{ year:2021, avg:90.13 },{ year:2022, avg:91.04 },{ year:2023, avg:87.16 },{ year:2024, avg:90.89 },{ year:2025, avg:88.84 }] },
+  { code:"CTF",  cumulative90:128,  values:[{ year:2016, avg:75.93 },{ year:2017, avg:79.64 },{ year:2018, avg:79.96 },{ year:2019, avg:79.77 },{ year:2020, avg:78.83 },{ year:2021, avg:76.75 },{ year:2022, avg:79.82 },{ year:2023, avg:77.48 },{ year:2024, avg:76.06 },{ year:2025, avg:73.72 }] },
+  { code:"CVSP", cumulative90:1416, values:[{ year:2016, avg:107.84 },{ year:2017, avg:108.07 },{ year:2018, avg:106.93 },{ year:2019, avg:107.21 },{ year:2020, avg:109.33 },{ year:2021, avg:107.21 },{ year:2022, avg:106.69 },{ year:2023, avg:107.70 }] },
+  { code:"FOL",  cumulative90:817,  values:[{ year:2016, avg:92.91 },{ year:2017, avg:94.95 },{ year:2018, avg:93.21 },{ year:2019, avg:92.76 },{ year:2020, avg:93.57 },{ year:2021, avg:92.11 },{ year:2022, avg:93.60 },{ year:2023, avg:91.25 },{ year:2024, avg:94.86 },{ year:2025, avg:92.10 }] },
+  { code:"HDSP", cumulative90:542,  values:[{ year:2016, avg:88.64 },{ year:2017, avg:89.63 },{ year:2018, avg:89.25 },{ year:2019, avg:86.71 },{ year:2020, avg:88.71 },{ year:2021, avg:91.32 },{ year:2022, avg:89.06 },{ year:2023, avg:86.84 },{ year:2024, avg:89.71 },{ year:2025, avg:90.48 }] },
+  { code:"ISP",  cumulative90:1795, values:[{ year:2016, avg:108.17 },{ year:2017, avg:108.33 },{ year:2018, avg:107.08 },{ year:2019, avg:107.36 },{ year:2020, avg:109.49 },{ year:2021, avg:107.37 },{ year:2022, avg:106.93 },{ year:2023, avg:107.36 },{ year:2024, avg:110.82 },{ year:2025, avg:107.76 }] },
+  { code:"KVSP", cumulative90:1132, values:[{ year:2016, avg:99.30 },{ year:2017, avg:98.38 },{ year:2018, avg:97.44 },{ year:2019, avg:96.50 },{ year:2020, avg:96.73 },{ year:2021, avg:99.69 },{ year:2022, avg:97.71 },{ year:2023, avg:94.27 },{ year:2024, avg:99.21 },{ year:2025, avg:97.09 }] },
+  { code:"LAC",  cumulative90:1115, values:[{ year:2016, avg:99.12 },{ year:2017, avg:99.24 },{ year:2018, avg:98.07 },{ year:2019, avg:96.74 },{ year:2020, avg:97.02 },{ year:2021, avg:99.42 },{ year:2022, avg:98.74 },{ year:2023, avg:94.22 },{ year:2024, avg:99.19 },{ year:2025, avg:96.13 }] },
+  { code:"MCSP", cumulative90:832,  values:[{ year:2016, avg:93.52 },{ year:2017, avg:95.38 },{ year:2018, avg:93.80 },{ year:2019, avg:93.36 },{ year:2020, avg:94.51 },{ year:2021, avg:94.00 },{ year:2022, avg:93.12 },{ year:2023, avg:92.10 },{ year:2024, avg:93.32 },{ year:2025, avg:89.87 }] },
+  { code:"NKSP", cumulative90:1132, values:[{ year:2016, avg:99.30 },{ year:2017, avg:98.38 },{ year:2018, avg:97.44 },{ year:2019, avg:96.50 },{ year:2020, avg:96.73 },{ year:2021, avg:99.69 },{ year:2022, avg:97.71 },{ year:2023, avg:94.27 },{ year:2024, avg:99.21 },{ year:2025, avg:97.09 }] },
+  { code:"PBSP", cumulative90:1,    values:[{ year:2016, avg:67.09 },{ year:2017, avg:66.85 },{ year:2018, avg:67.14 },{ year:2019, avg:69.19 },{ year:2020, avg:67.80 },{ year:2021, avg:65.63 },{ year:2022, avg:64.75 },{ year:2023, avg:65.46 },{ year:2024, avg:66.58 },{ year:2025, avg:66.86 }] },
+  { code:"PVSP", cumulative90:1144, values:[{ year:2016, avg:98.98 },{ year:2017, avg:99.87 },{ year:2018, avg:96.83 },{ year:2019, avg:96.25 },{ year:2020, avg:98.29 },{ year:2021, avg:100.70 },{ year:2022, avg:98.86 },{ year:2023, avg:95.49 },{ year:2024, avg:98.94 },{ year:2025, avg:96.74 }] },
+  { code:"RJD",  cumulative90:82,   values:[{ year:2016, avg:80.66 },{ year:2017, avg:79.58 },{ year:2018, avg:80.06 },{ year:2019, avg:77.72 },{ year:2020, avg:79.27 },{ year:2021, avg:77.43 },{ year:2022, avg:77.76 },{ year:2023, avg:75.75 },{ year:2024, avg:78.05 },{ year:2025, avg:76.02 }] },
+  { code:"SAC",  cumulative90:800,  values:[{ year:2016, avg:92.62 },{ year:2017, avg:94.69 },{ year:2018, avg:92.95 },{ year:2019, avg:92.44 },{ year:2020, avg:93.31 },{ year:2021, avg:91.99 },{ year:2022, avg:93.44 },{ year:2023, avg:91.12 },{ year:2024, avg:94.15 },{ year:2025, avg:91.51 }] },
+  { code:"SATF", cumulative90:1156, values:[{ year:2016, avg:99.04 },{ year:2017, avg:100.00 },{ year:2018, avg:97.99 },{ year:2019, avg:97.70 },{ year:2020, avg:97.28 },{ year:2021, avg:100.20 },{ year:2022, avg:97.97 },{ year:2023, avg:95.32 },{ year:2024, avg:99.19 },{ year:2025, avg:97.18 }] },
+  { code:"SCC",  cumulative90:865,  values:[{ year:2016, avg:94.16 },{ year:2017, avg:95.34 },{ year:2018, avg:93.20 },{ year:2019, avg:92.90 },{ year:2020, avg:93.52 },{ year:2021, avg:95.59 },{ year:2022, avg:93.49 },{ year:2023, avg:91.07 },{ year:2024, avg:94.05 },{ year:2025, avg:91.17 }] },
+  { code:"SOL",  cumulative90:783,  values:[{ year:2016, avg:91.57 },{ year:2017, avg:92.89 },{ year:2018, avg:91.43 },{ year:2019, avg:92.04 },{ year:2020, avg:93.37 },{ year:2021, avg:93.44 },{ year:2022, avg:92.44 },{ year:2023, avg:90.23 },{ year:2024, avg:92.88 },{ year:2025, avg:89.03 }] },
+  { code:"SQ",   cumulative90:49,   values:[{ year:2016, avg:72.69 },{ year:2017, avg:73.88 },{ year:2018, avg:74.77 },{ year:2019, avg:76.42 },{ year:2020, avg:76.46 },{ year:2021, avg:73.89 },{ year:2022, avg:76.51 },{ year:2023, avg:73.52 },{ year:2024, avg:75.59 },{ year:2025, avg:73.20 }] },
+  { code:"SVSP", cumulative90:128,  values:[{ year:2016, avg:75.93 },{ year:2017, avg:79.64 },{ year:2018, avg:79.96 },{ year:2019, avg:79.77 },{ year:2020, avg:78.83 },{ year:2021, avg:76.75 },{ year:2022, avg:79.82 },{ year:2023, avg:77.48 },{ year:2024, avg:76.06 },{ year:2025, avg:73.72 }] },
+  { code:"VSP",  cumulative90:1018, values:[{ year:2016, avg:96.47 },{ year:2017, avg:96.99 },{ year:2018, avg:96.34 },{ year:2019, avg:95.92 },{ year:2020, avg:96.16 },{ year:2021, avg:96.71 },{ year:2022, avg:95.53 },{ year:2023, avg:93.08 },{ year:2024, avg:96.37 },{ year:2025, avg:94.30 }] },
+  { code:"WSP",  cumulative90:1195, values:[{ year:2016, avg:100.94 },{ year:2017, avg:99.82 },{ year:2018, avg:99.06 },{ year:2019, avg:97.28 },{ year:2020, avg:97.95 },{ year:2021, avg:100.41 },{ year:2022, avg:98.93 },{ year:2023, avg:96.78 },{ year:2024, avg:99.25 },{ year:2025, avg:97.96 }] },
+];
+
+// Chart 4a — system-wide average
+(function() {
+  const margin = { top: 18, right: 30, bottom: 36, left: 54 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 220 - margin.top  - margin.bottom;
+
+  const x = d3.scaleLinear().domain(d3.extent(systemAvgTemp, d => d.year)).range([0, width]);
+  const y = d3.scaleLinear()
+    .domain([d3.min(systemAvgTemp, d => d.avg) - 2, d3.max(systemAvgTemp, d => d.avg) + 2])
+    .range([height, 0]);
+
+  const svg = d3.select("#chart-temp-avg")
+    .append("svg")
+      .attr("viewBox", `0 0 712 ${height + margin.top + margin.bottom}`)
+      .attr("width", "100%").style("display", "block")
+    .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(4).tickSize(-width).tickFormat(""));
+
+  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(systemAvgTemp.length));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(4).tickFormat(d => d + "°F"));
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)").attr("x", -height / 2).attr("y", -44)
+    .attr("text-anchor", "middle").attr("font-size", "13px").attr("fill", "#555")
+    .text("Avg summer tmax (°F)");
+
+  const line = d3.line().x(d => x(d.year)).y(d => y(d.avg)).curve(d3.curveMonotoneX);
+
+  svg.append("path").datum(systemAvgTemp)
+    .attr("fill", "none").attr("stroke", "#1a1a1a").attr("stroke-width", 2)
+    .attr("d", line);
+
+  svg.selectAll("circle").data(systemAvgTemp).join("circle")
+    .attr("cx", d => x(d.year)).attr("cy", d => y(d.avg))
+    .attr("r", 3).attr("fill", "#1a1a1a");
+})();
+
+// Chart 4b — per-facility lines + avg overlay
+(function() {
+  const margin = { top: 18, right: 110, bottom: 36, left: 54 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 420 - margin.top  - margin.bottom;
+
+  const maxCumul = d3.max(facilityTempData, d => d.cumulative90);
+  const colorScale = d3.scaleSequential()
+    .domain([0, maxCumul])
+    .interpolator(d3.interpolateRgb("#d0d0d0", "#7a1010"));
+
+  const allYears = [...new Set(facilityTempData.flatMap(d => d.values.map(v => v.year)))].sort();
+  const x = d3.scaleLinear().domain(d3.extent(allYears)).range([0, width]);
+  const yMin = d3.min(facilityTempData, d => d3.min(d.values, v => v.avg));
+  const yMax = d3.max(facilityTempData, d => d3.max(d.values, v => v.avg));
+  const y = d3.scaleLinear().domain([yMin - 3, yMax + 3]).range([height, 0]);
+
+  const svg = d3.select("#chart-temp-lines")
+    .append("svg")
+      .attr("viewBox", `0 0 712 ${height + margin.top + margin.bottom}`)
+      .attr("width", "100%").style("display", "block")
+    .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
+
+  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(allYears.length));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(5).tickFormat(d => d + "°F"));
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)").attr("x", -height / 2).attr("y", -44)
+    .attr("text-anchor", "middle").attr("font-size", "13px").attr("fill", "#555")
+    .text("Avg summer tmax (°F)");
+
+  const line = d3.line().x(d => x(d.year)).y(d => y(d.avg)).curve(d3.curveMonotoneX);
+
+  // Facility lines (low cumulative drawn first)
+  const sorted = [...facilityTempData].sort((a, b) => a.cumulative90 - b.cumulative90);
+  sorted.forEach(s => {
+    const color = colorScale(s.cumulative90);
+    const isTop = s.cumulative90 >= 800;
+    svg.append("path").datum(s.values)
+      .attr("fill", "none").attr("stroke", color)
+      .attr("stroke-width", isTop ? 1.8 : 1)
+      .attr("opacity", isTop ? 0.9 : 0.55)
+      .attr("d", line);
+    svg.selectAll(null).data(s.values).join("circle")
+      .attr("cx", d => x(d.year)).attr("cy", d => y(d.avg))
+      .attr("r", isTop ? 2.5 : 1.8).attr("fill", color)
+      .attr("opacity", isTop ? 0.9 : 0.55);
+  });
+
+  // Bold black average line on top
+  svg.append("path").datum(systemAvgTemp)
+    .attr("fill", "none").attr("stroke", "#1a1a1a").attr("stroke-width", 2.5)
+    .attr("d", line);
+  svg.selectAll(".avg-dot").data(systemAvgTemp).join("circle")
+    .attr("class", "avg-dot")
+    .attr("cx", d => x(d.year)).attr("cy", d => y(d.avg))
+    .attr("r", 3.5).attr("fill", "#1a1a1a");
+
+  // Labels for sampled facilities
+  const LABEL_SAMPLE = new Set(["CAL", "CEN", "ISP", "CVSP", "SATF", "WSP", "CTF", "PBSP", "SQ"]);
+  const labelCandidates = facilityTempData
+    .filter(s => s.cumulative90 >= 1400 || LABEL_SAMPLE.has(s.code))
+    .map(s => {
+      const last = s.values[s.values.length - 1];
+      return {
+        code: s.code,
+        label: s.code === "CVSP" ? "CVSP: closed" : s.code,
+        xPos: x(last.year) + 6,
+        yNatural: y(last.avg) + 4,
+        color: colorScale(s.cumulative90),
+      };
+    });
+
+  const byX = d3.group(labelCandidates, d => d.xPos);
+  byX.forEach(group => {
+    group.sort((a, b) => a.yNatural - b.yNatural);
+    let lastY = -Infinity;
+    group.forEach(lbl => {
+      lbl.yFinal = Math.max(lbl.yNatural, lastY + 13);
+      lastY = lbl.yFinal;
+    });
+  });
+
+  labelCandidates.forEach(lbl => {
+    svg.append("text")
+      .attr("x", lbl.xPos).attr("y", lbl.yFinal)
+      .attr("font-size", "12px").attr("fill", lbl.color)
+      .text(lbl.label);
+  });
+
+  // "Average" label
+  const lastAvg = systemAvgTemp[systemAvgTemp.length - 1];
+  svg.append("text")
+    .attr("x", x(lastAvg.year) + 6).attr("y", y(lastAvg.avg) + 4)
+    .attr("font-size", "12px").attr("font-weight", "bold").attr("fill", "#1a1a1a")
+    .text("Avg");
+})();
+
 // ── Chart 5: Average annual days ≥ 90°F per person by age group ──────────────
 
 (function() {
@@ -834,6 +1096,124 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
       .attr("font-size", "12px").attr("fill", "#333")
       .text(d => d3.format(",d")(d.personDays));
 
+})();
+
+// ── Chart AC: Cooling infrastructure per facility ─────────────────────────────
+
+(function() {
+  // People per facility per cooling type: facility pop × share of housing units with each type
+  // Source: Reuters_CDCR_cooling.xlsx (CDCR FOIA, June 2025); pop = CDCR 2025 average
+  // CTF corrected per CDCR clarification email; sorted descending by people in ventilation-only units
+  const acData = [
+    { code:"CTF",  ref:   0, evap: 604, vent:3621 },
+    { code:"SOL",  ref: 467, evap: 777, vent:2492 },
+    { code:"RJD",  ref:1149, evap:   0, vent:2443 },
+    { code:"CCI",  ref:   0, evap:   0, vent:2434 },
+    { code:"CMC",  ref:   0, evap:   0, vent:2172 },
+    { code:"PBSP", ref: 323, evap:   0, vent:1773 },
+    { code:"SCC",  ref:1009, evap:2522, vent: 504 },
+    { code:"SATF", ref: 193, evap:5165, vent:   0 },
+    { code:"ASP",  ref:   0, evap:3891, vent:   0 },
+    { code:"WSP",  ref: 118, evap:3558, vent:   0 },
+    { code:"VSP",  ref:   0, evap:3148, vent:   0 },
+    { code:"PVSP", ref: 129, evap:2863, vent:   0 },
+    { code:"LAC",  ref: 127, evap:2822, vent:   0 },
+    { code:"KVSP", ref: 309, evap:2783, vent:   0 },
+    { code:"MCSP", ref:1098, evap:2663, vent:   0 },
+    { code:"COR",  ref:   0, evap:2629, vent:   0 },
+    { code:"HDSP", ref: 130, evap:2589, vent:   0 },
+    { code:"NKSP", ref: 103, evap:2467, vent:   0 },
+    { code:"SVSP", ref: 126, evap:2261, vent:   0 },
+    { code:"SAC",  ref: 143, evap:1988, vent:   0 },
+    { code:"CCWF", ref: 255, evap:1785, vent:   0 },
+    { code:"FOL",  ref:1233, evap:1544, vent:   0 },
+    { code:"CMF",  ref:1023, evap:1023, vent:   0 },
+    { code:"CIW",  ref: 432, evap: 755, vent:   0 },
+    { code:"CRC",  ref:1748, evap: 583, vent:   0 },
+    { code:"CEN",  ref:2984, evap:   0, vent:   0 },
+    { code:"ISP",  ref:2764, evap:   0, vent:   0 },
+    { code:"SQ",   ref:2688, evap:   0, vent:   0 },
+    { code:"CAL",  ref:2462, evap:   0, vent:   0 },
+    { code:"CIM",  ref:2274, evap:   0, vent:   0 },
+    { code:"CHCF", ref:2251, evap:   0, vent:   0 },
+  ];
+
+  const segments = [
+    { key:"vent", label:"Ventilation only",   color:"#333" },
+    { key:"evap", label:"Evaporative",        color:"#999" },
+    { key:"ref",  label:"Refrigeration (AC)", color:"#ddd" },
+  ];
+
+  const rowH  = 16;
+  const margin = { top: 12, right: 160, bottom: 44, left: 54 };
+  const width  = 712 - margin.left - margin.right;
+  const height = acData.length * rowH;
+  const svgH   = height + margin.top + margin.bottom;
+
+  const svg = d3.select("#chart-ac")
+    .append("svg")
+      .attr("viewBox", `0 0 712 ${svgH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const maxPop = d3.max(acData, d => d.ref + d.evap + d.vent);
+  const x = d3.scaleLinear().domain([0, maxPop]).range([0, width]);
+  const y = d3.scaleBand()
+    .domain(acData.map(d => d.code))
+    .range([0, height])
+    .padding(0.15);
+
+  // Grid
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisBottom(x).ticks(5).tickSize(height).tickFormat(""))
+    .call(g => g.select(".domain").remove())
+    .attr("transform", "translate(0,0)");
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(5).tickFormat(d => d.toLocaleString()));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).tickSize(0))
+    .call(g => g.select(".domain").remove());
+
+  // Stacked bars
+  acData.forEach(d => {
+    let xStart = 0;
+    segments.forEach(seg => {
+      const val = d[seg.key];
+      if (val > 0) {
+        svg.append("rect")
+          .attr("x", x(xStart))
+          .attr("y", y(d.code))
+          .attr("width", x(val))
+          .attr("height", y.bandwidth())
+          .attr("fill", seg.color);
+        xStart += val;
+      }
+    });
+  });
+
+  // Legend
+  const legendG = svg.append("g")
+    .attr("transform", `translate(${width + 10}, 0)`);
+  segments.forEach((seg, i) => {
+    const g = legendG.append("g").attr("transform", `translate(0,${i * 18})`);
+    g.append("rect").attr("width", 12).attr("height", 12).attr("fill", seg.color)
+      .attr("stroke", "#bbb").attr("stroke-width", 0.5);
+    g.append("text").attr("x", 16).attr("y", 10)
+      .attr("font-size", "11px").attr("fill", "#333")
+      .text(seg.label);
+  });
+
+  // X label
+  svg.append("text")
+    .attr("x", width / 2).attr("y", height + 38)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "11px").attr("fill", "#555")
+    .text("Incarcerated people (facility pop. × share of housing units with each cooling type, 2025)");
 })();
 
 // ── Chart 7: Person-days ≥ 90°F by health risk category, 2025 ────────────────
