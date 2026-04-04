@@ -19,7 +19,8 @@ All facilities include their name, address, telephone and website information (F
 | `capacity_percent` | A 0-1 value calculated from `population` / `capacity`. | Derived from FEMA, 2025 | 
 | `latitude` | Derived from the geographic centerpoint of the facility boundary. |  | 
 | `longitude` | Derived from the geographic centerpoint of the facility boundary. |  | 
-| `tract_geoid` | The 11-digit census tract GEOID that the facility centerpoint is within. |  | 
+| `tract_geoid` | The 11-digit census tract GEOID that the facility centerpoint is within. |  |
+| `uhi_normalized` | Urban heat island exposure score (0–1). Derived from Benz & Burney (2021) daytime surface urban heat anomaly (ΔT). Negative ΔT clamped to 0; normalized against the maximum ΔT across state prisons (7.247°C, CIM). Direct tract match applied to all 357 facilities (267 matched); 1-mile polygon-edge buffer applied to CDCR state prisons only where validated (8 additional). 82 facilities null — primarily rural fire camps and remote county jails in undeveloped NLCD tracts. See `data_sources/hazards/README.md` for full methodology and source comparison. | Benz & Burney (2021), Harvard Dataverse doi:10.7910/DVN/1F72FB | 
 
 ### Isolation
 
@@ -141,3 +142,5 @@ Department of Water Resources. (2024). Water Shortage Vulnerability Tool [Datase
 CalFire. (2022, 2025). Fire Hazard Severity Zones [Dataset]. California Department of Forestry and Fire Protection. https://osfm.fire.ca.gov/divisions/community-wildfire-preparedness-and-mitigation/wildland-hazard-and-building-codes/fire-hazard-severity-zones-maps/
 
 CalFire. Wildland-Urban Interface [Dataset]. California Department of Forestry and Fire Protection. https://www.fire.ca.gov/what-we-do/fire-resource-assessment-program/wildland-urban-interface
+
+Benz SA, Burney JA. (2021). Widespread race and class disparities in surface urban heat islands across the United States. *Earth's Future*, 9(7), e2021EF002016. Data: Harvard Dataverse, doi:10.7910/DVN/1F72FB. CC0 license.
