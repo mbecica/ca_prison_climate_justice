@@ -237,6 +237,90 @@
 </table>
 <p class="chart-note" style="margin-top:6px;">Medical cost per person: CCHCS Health Care Services Dashboard, 2025. Reflects average annual health care cost per patient by age group.</p>
 
+<h2>Person-Days ≥ 90°F Outdoor by Age Group per Facility, 2025 (Top 12)</h2>
+<p class="chart-note">
+  Person-days = facility population in each age group × days outdoor tmax ≥ 90°F in 2025 at that facility.
+  Top 12 facilities by total 50+ person-days. CVSP excluded (closed 2024, no 2025 population data).
+</p>
+<div class="legend" id="legend-facility-age"></div>
+<div id="chart-facility-age"></div>
+
+<h2>Population Impact: Health Risk &amp; Program Categories, 2025</h2>
+<p class="chart-note">
+  Person-days = people in each category × days outdoor tmax ≥ 90°F at their facility, summed across 31 facilities.
+  Risk tiers (P1/P2/Medium/Low) are mutually exclusive and sum to 100% of each facility's population.
+  EOP and DPP overlap with the risk tiers. Source: CCHCS Health Care Services Dashboard, 2025.
+</p>
+
+<h2>Average Days ≥ 90°F per Person by Health Risk Category, 2025</h2>
+<p class="chart-note">The four risk tiers sum to total system population. EOP and DPP shown separately as cross-cutting groups.</p>
+<div id="chart-risk"></div>
+
+<table class="age-table">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>People</th>
+      <th>Person-days ≥ 90°F (2025)</th>
+      <th>Avg days ≥ 90°F / person (2025)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>High Risk P1</td><td>7,946</td><td>484,137</td><td>60.9</td></tr>
+    <tr><td>High Risk P2</td><td>9,903</td><td>623,932</td><td>63.0</td></tr>
+    <tr><td>Medium Risk</td><td>35,066</td><td>2,599,598</td><td>74.1</td></tr>
+    <tr><td>Low Risk</td><td>36,471</td><td>3,301,175</td><td>90.5</td></tr>
+    <tr><td>MH EOP</td><td>7,947</td><td>475,176</td><td>59.8</td></tr>
+    <tr><td>DPP</td><td>14,132</td><td>953,465</td><td>67.5</td></tr>
+  </tbody>
+</table>
+<p class="chart-note" style="margin-top:6px;">
+  Low Risk patients average more heat days than High Risk patients because the highest-risk patients
+  are concentrated at CHCF and CMF — cooler facilities — while lower-risk general population prisons
+  include the hottest desert and valley institutions.
+</p>
+
+<h2>Marginal Mortality: Skarha 10°F Threshold, 2016–2025</h2>
+<p class="chart-note">
+  Skarha et al. (2023) found a 5.2% increase in total in-custody mortality on days where outdoor
+  daily maximum temperature exceeds the facility's mean summer (Jun–Aug) tmax by 10°F or more.
+  Baseline: 1991–2020 WMO 30-year normal period. Expected marginal deaths derived from
+  CDCR SB 601 in-custody death counts (FY 2024–2025, scaled to 12 months).
+</p>
+
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">Total facility-days over threshold</div>
+    <div class="stat-value stage1">2,988</div>
+    <div class="stat-sub">2016–2025 · 32 facilities</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Avg annual facility-days over threshold</div>
+    <div class="stat-value stage1">299</div>
+    <div class="stat-sub">Per year · 2016–2025</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Avg annual person-days over threshold</div>
+    <div class="stat-value stage1">840,457</div>
+    <div class="stat-sub">2025 population × avg annual days per facility</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Expected marginal deaths / year</div>
+    <div class="stat-value stage3">0.37</div>
+    <div class="stat-sub">5.2% × 840,457 person-days × 3.07/1,000/yr baseline</div>
+  </div>
+</div>
+<p class="chart-note">
+  Near-term projection using avg 2016–2025 Skarha threshold days and a historic baseline mortality rate.
+  Baseline: 2016–2019 all-cause mortality avg (3.07/1,000/year), matching the start of the heat data,
+  pre-COVID and pre-fentanyl surge. Source: CCHCS Annual Mortality Review Reports, cchcs.ca.gov/reports/.
+  Recent rates (4.0–4.4/1,000 in 2022–2024) are elevated by drug overdose deaths and are not used
+  as the baseline to avoid conflating heat mortality with unrelated causes.
+  Expected marginal deaths = 840,457 person-days/year × (3.07/1,000 ÷ 365) × 5.2%.
+  Skarha, J., Jackson, A., Zlotnik, H., Williams, B., &amp; Wildeman, C. (2023). Heat and Mortality in US State Prisons.
+  <em>American Journal of Epidemiology</em>.
+</p>
+
 <p class="source">
   Data: gridMET daily maximum temperature (tmmx), University of Idaho / Northwest Knowledge Network, 1991–2025.
   Activation thresholds from CDCR Prevention Plan for Heat Related Pathologies.
@@ -750,6 +834,187 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
       .attr("font-size", "12px").attr("fill", "#333")
       .text(d => d3.format(",d")(d.personDays));
 
+})();
+
+// ── Chart 7: Person-days ≥ 90°F by health risk category, 2025 ────────────────
+
+(function() {
+  const riskData = [
+    { group: "High Risk P1", avgDays: 60.9  },
+    { group: "High Risk P2", avgDays: 63.0  },
+    { group: "Medium Risk",  avgDays: 74.1  },
+    { group: "Low Risk",     avgDays: 90.5  },
+    { group: "MH EOP",       avgDays: 59.8  },
+    { group: "DPP",          avgDays: 67.5  },
+  ];
+
+  const margin = { top: 18, right: 24, bottom: 52, left: 80 };
+  const width  = 712 - margin.left - margin.right;
+  const height = 220 - margin.top  - margin.bottom;
+
+  const svg = d3.select("#chart-risk")
+    .append("svg")
+      .attr("viewBox", `0 0 712 220`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleBand()
+    .domain(riskData.map(d => d.group))
+    .range([0, width])
+    .padding(0.3);
+
+  const y = d3.scaleLinear()
+    .domain([0, d3.max(riskData, d => d.avgDays) * 1.15])
+    .range([height, 0]);
+
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+      .attr("dy", "1.2em");
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".0f")));
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2).attr("y", -68)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Avg days ≥ 90°F / person");
+
+  // Divider line between risk tiers and cross-cutting groups
+  const dividerX = x("MH EOP") - x.step() * 0.3;
+  svg.append("line")
+    .attr("x1", dividerX).attr("x2", dividerX)
+    .attr("y1", 0).attr("y2", height)
+    .attr("stroke", "#ccc").attr("stroke-dasharray", "3,3").attr("stroke-width", 1);
+
+  svg.selectAll(".bar")
+    .data(riskData)
+    .join("rect")
+      .attr("x",      d => x(d.group))
+      .attr("y",      d => y(d.avgDays))
+      .attr("width",  x.bandwidth())
+      .attr("height", d => height - y(d.avgDays))
+      .attr("fill",   (d, i) => i < 4 ? "#444" : "#888");
+
+  svg.selectAll(".val-label")
+    .data(riskData)
+    .join("text")
+      .attr("x", d => x(d.group) + x.bandwidth() / 2)
+      .attr("y", d => y(d.avgDays) - 5)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "11px").attr("fill", "#333")
+      .text(d => d.avgDays.toFixed(1));
+})();
+
+// ── Chart 6: Average annual person-days ≥ 90°F by age group per facility ─────
+
+(function() {
+  const facilityAgeData = [
+    {"code":"CMF", "g5059":20020,"g6069":21074,"g7079":12730,"g80plus":2943,"total":56767},
+    {"code":"SOL", "g5059":30456,"g6069":19926,"g7079":8514, "g80plus":1278,"total":60174},
+    {"code":"CEN", "g5059":53803,"g6069":13321,"g7079":1293, "g80plus":970, "total":69387},
+    {"code":"LAC", "g5059":47060,"g6069":24986,"g7079":4160, "g80plus":1040,"total":77246},
+    {"code":"MCSP","g5059":38094,"g6069":27874,"g7079":13664,"g80plus":2590,"total":82222},
+    {"code":"CIM", "g5059":35915,"g6069":34879,"g7079":21953,"g80plus":3749,"total":96496},
+    {"code":"CHCF","g5059":33175,"g6069":36375,"g7079":28425,"g80plus":8600,"total":106575},
+    {"code":"COR", "g5059":64602,"g6069":42208,"g7079":10767,"g80plus":1776,"total":119353},
+    {"code":"ASP", "g5059":93692,"g6069":30635,"g7079":137,  "g80plus":0,   "total":124464},
+    {"code":"VSP", "g5059":59708,"g6069":59953,"g7079":15517,"g80plus":2729,"total":137907},
+    {"code":"ISP", "g5059":110784,"g6069":60432,"g7079":3984,"g80plus":960, "total":176160},
+    {"code":"SATF","g5059":106079,"g6069":76886,"g7079":15984,"g80plus":2183,"total":201132},
+  ];
+
+  const ageGroups = [
+    { key: "g5059",  label: "50–59", color: "#aaa" },
+    { key: "g6069",  label: "60–69", color: "#777" },
+    { key: "g7079",  label: "70–79", color: "#444" },
+    { key: "g80plus",label: "80+",   color: "#b03020" },
+  ];
+
+  const barHeight = 14;
+  const groupPad  = 4;
+  const groupHeight = ageGroups.length * barHeight + groupPad;
+  const nFacilities = facilityAgeData.length;
+
+  const margin = { top: 12, right: 80, bottom: 40, left: 54 };
+  const width  = 712 - margin.left - margin.right;
+  const height = nFacilities * groupHeight;
+  const svgH   = height + margin.top + margin.bottom;
+  const svgW   = 712;
+
+  const svg = d3.select("#chart-facility-age")
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW} ${svgH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear()
+    .domain([0, d3.max(facilityAgeData, d => d.total) * 1.05])
+    .range([0, width]);
+
+  // Y: one band per facility
+  const y = d3.scaleBand()
+    .domain(facilityAgeData.map(d => d.code))
+    .range([height, 0])
+    .padding(0.15);
+
+  // Vertical grid
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisBottom(x).ticks(5).tickSize(height).tickFormat(""))
+    .call(g => g.select(".domain").remove());
+
+  // Axes
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(5).tickFormat(d => d >= 1e6 ? (d/1e6).toFixed(1)+"M" : d3.format(",d")(d)));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).tickSize(0))
+    .call(g => g.select(".domain").remove());
+
+  // X axis label
+  svg.append("text")
+    .attr("x", width / 2).attr("y", height + 34)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Person-days ≥ 90°F outdoor, 2025");
+
+  // Grouped bars: within each facility band, stack age groups vertically
+  const bandW = y.bandwidth();
+  const subBarH = bandW / ageGroups.length;
+
+  facilityAgeData.forEach(d => {
+    const bandY = y(d.code);
+    ageGroups.forEach((ag, i) => {
+      const val = d[ag.key];
+      svg.append("rect")
+        .attr("x", 0)
+        .attr("y", bandY + i * subBarH)
+        .attr("width", x(val))
+        .attr("height", subBarH - 1)
+        .attr("fill", ag.color);
+    });
+  });
+
+  // Legend
+  const legendSel = d3.select("#legend-facility-age");
+  ageGroups.forEach(ag => {
+    const item = legendSel.append("span").style("margin-right","16px").style("white-space","nowrap");
+    item.append("svg").attr("width",12).attr("height",12)
+      .style("vertical-align","middle").style("margin-right","4px")
+      .append("rect").attr("width",12).attr("height",12).attr("fill",ag.color);
+    item.append("span").text(ag.label);
+  });
 })();
 </script>
 </body>
