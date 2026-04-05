@@ -34,21 +34,21 @@ Data collection scripts are in the `scrapers/` directory.
 
 | Variable | Description | Source |
 | :--- | :--- | :--- |
-| `n_housing_buildings` | Number of distinct housing buildings at the facility. | Raychaudhuri et al., Reuters, 2025 |
-| `n_housing_units` | Number of housing HVAC units (air handling units, evaporative coolers, etc.) at the facility. | Raychaudhuri et al., Reuters, 2025 |
+| `n_housing_buildings` | Number of active housing units (HUs) at the facility as of December 2025. HUs are wings, dormitories, or cell tiers — finer-grained than buildings. Denominator for `pct_buildings_*` columns. SQ value retains the prior Reuters building count pending verification of SQRC infrastructure status. CVSP and FWF are null (not included in CDCR Jan 2026 report). | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
+| `n_housing_units` | Number of housing HVAC units (air handling units, evaporative coolers, etc.) at the facility. This is an equipment-level count from the Reuters FOIA (563 buildings × average AHUs), distinct from the housing-unit count in `n_housing_buildings`. | Raychaudhuri et al., Reuters, 2025 |
 | `pct_units_evaporation` | Proportion of housing HVAC units using evaporation cooling. Sums to 1.0 with refrigeration and ventilation. | Raychaudhuri et al., Reuters, 2025 |
-| `pct_buildings_evaporation` | Proportion of housing buildings with at least one evaporation cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_buildings_evaporation` | Proportion of housing units (HUs) with evaporative cooling. HUs with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1 (e.g., SATF = 1.03). SQ retains prior Reuters value. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `pct_units_refrigeration` | Proportion of housing HVAC units using refrigeration cooling. Sums to 1.0 with evaporation and ventilation. | Raychaudhuri et al., Reuters, 2025 |
-| `pct_buildings_refrigeration` | Proportion of housing buildings with at least one refrigeration cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_buildings_refrigeration` | Proportion of housing units (HUs) with mechanical (refrigerant) cooling. HUs with mixed cooling types are counted under each applicable type. SQ retains prior Reuters value. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `pct_units_ventilation` | Proportion of housing HVAC units providing ventilation without cooling. Sums to 1.0 with evaporation and refrigeration. | Raychaudhuri et al., Reuters, 2025 |
-| `pct_buildings_ventilation` | Proportion of housing buildings with at least one ventilation-without-cooling unit. Buildings with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1. | Raychaudhuri et al., Reuters, 2025 |
+| `pct_buildings_ventilation` | Proportion of housing units (HUs) with air handlers only (ventilation, no cooling). HUs with mixed cooling types are counted under each applicable type. SQ retains prior Reuters value. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 
 ### Facility Characteristics
 
 | Variable | Description | Source |
 | :--- | :--- | :--- |
-| `year_opened` | The year the facility was opened as a state facility. | Collected from online documentation. |
-| `year_opened_notes` | Notes on the year opened, e.g. if the facility was previously a different institution. | Collected from online documentation. |
+| `year_opened` | The year the facility was opened as a state facility. Primary source: LAO 2020 Figure 1 (all 34 prisons). Corrections: FOL set to 1880 (was null — key mismatch in source file), CVSP set to 1988 (was null), CMC corrected to 1961 (was 1954), CTF corrected to 1946 (was 1948). FWF set to 2013 (co-located women's facility at Folsom, not in LAO). | Legislative Analyst's Office (2020). *Effectively Managing State Prison Infrastructure* (Report 4186, Feb. 2020), Figure 1, p. 4. https://lao.ca.gov/reports/2020/4186/prison-infrastructure-022820.pdf |
+| `year_opened_notes` | Notes on the year opened, e.g. if the facility was previously a different institution, or source discrepancies. | Legislative Analyst's Office (2020). *Effectively Managing State Prison Infrastructure*, Figure 1. |
 | `planned_closure` | If the facility is marked for closure, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `california_model_facility` | If the facility is included in The California Model plan, indicated by `Yes` or `No`. | Collected from online documentation. |
 | `cdcr_air_cooling_pilot` | If the facility is included in the Air Cooling Pilot, indicated by `Yes` or `No`. | Collected from online documentation. |
@@ -93,6 +93,15 @@ Risk tier definitions (source: CCHCS Health Care Services Dashboard):
 | `cchcs_specialized_beds_2025` | Number of Specialized Health Care Beds at the facility (12-month average count, 2025). | CCHCS Health Care Services Dashboard, 2025 |
 
 ## Additional Source Files
+
+### `mpar_projects_completed.csv`
+Completed capital projects from CDCR Master Plan Annual Reports (MPARs) for fiscal years 2022 through 2025. Each row is a single project marked as Complete in the given MPAR year. Columns: `mpar_year` (MPAR edition year, 2022–2025), `institution` (CDCR facility code — FSP used for Folsom State Prison per source documents; SQ used for 2022 San Quentin, SQRC for 2023–2025; Multiple for statewide projects), `project_id` (CDCR project identifier, format P-YYMM-NNNNN), `title` (project title), `type` (MA = Major Capital Outlay, MI = Minor Capital Outlay, SRP = Special Repair Program, DM = Deferred Maintenance Program, E = Energy Conservation/Sustainability Program), `completed` (completion date as M/YYYY), `total_approved_funding` (total approved funding in dollars; 0 for statewide program projects where funding is tracked at the program level). Cross-MPAR deduplication rule: projects appearing as Complete in multiple MPARs are assigned to the earliest year. Only confirmed duplicate: SATF P-1314-00201 (Complete in both 2024 and 2025 MPARs) → assigned mpar_year=2024. Source: CDCR Facilities Planning and Construction Management Division MPAR PDFs, 2022–2025, in `cdcr_facilities_planning/`.
+
+### `air_cooling_housing_units_dec2025.csv`
+Housing unit design types and 2025 indoor heat exposure by institution, as of December 2025. Columns: `institution` (CDCR code; FSP used for Folsom per source document), `hu_270` through `hu_nonstandard` (count of active housing units of each design type: 270-style, 180-style, Dormitories, Cross-Top, Non-Standard), `days_above_78f_2025` (number of days May–October 2025 with indoor temperatures exceeding 78°F). Non-Standard includes single cells, restricted housing, outpatient housing, and other atypical designs. Total active housing units across 31 institutions: 791. Source: CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 1).
+
+### `air_cooling_infrastructure_dec2025.csv`
+Air cooling infrastructure by institution as of December 2025. Columns: `institution` (CDCR code; FSP used for Folsom), `n_housing_units` (total active housing units), `hu_air_handlers_only` (HUs with air handlers/ventilation only, no cooling), `hu_evaporative_cooling` (HUs with evaporative cooling), `hu_mechanical_cooling` (HUs with mechanical/refrigerant cooling). Column values are not mutually exclusive — housing units with mixed cooling systems may be counted in multiple columns, so per-institution column sums may exceed `n_housing_units`. System-wide totals: 791 total HUs; 262 air-handlers-only (33%), 348 evaporative (44%), 181 mechanical (23%). Note: SCC `n_housing_units` corrected from OCR-read 61 to 81 (consistent with Table 1 design counts and the 791 column total). Source: CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2).
 
 ### `sb601_operations_2021-2025.csv`
 Monthly operational metrics for all 32–35 CDCR institutions across fiscal years 2021-2022 through 2024-2025. Columns: `institution` (CDCR code), `fiscal_year`, `category`, `metric`, and one column per month (`Jul` through `Apr`). Three categories: Lockdowns and Modified Programs, Number of Deaths, and Overtime Hours. Source: CDCR SB 601 Programs Dashboard.
@@ -140,3 +149,9 @@ CDCR SB 601 Programs Dashboard. (2025). [Interactive dashboard]. California Depa
 CCHCS Health Care Services Dashboard. (2025). [Interactive dashboard]. California Correctional Health Care Services. https://cchcs.ca.gov/dashboard/
 
 California State Controller's Office. (2021–2026). Active State Employees by Department [PDF reports]. California State Controller's Office. Retrieved via Wayback Machine snapshots.
+
+Legislative Analyst's Office. (2020). *Effectively Managing State Prison Infrastructure* (Report 4186). California Legislative Analyst's Office. https://lao.ca.gov/reports/2020/4186/prison-infrastructure-022820.pdf
+
+CDCR Facilities Planning and Construction Management Division. (2022–2025). *Master Plan Annual Reports*. California Department of Corrections and Rehabilitation. PDFs in `cdcr_facilities_planning/`.
+
+CDCR. (2026, January). *Air Cooling Pilot Program Supplemental Report*. California Department of Corrections and Rehabilitation. https://www.cdcr.ca.gov/fpcm/wp-content/uploads/sites/184/2026/02/Air_Cooling_Document_for_Legislature.pdf

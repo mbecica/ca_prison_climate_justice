@@ -326,9 +326,8 @@
   include the hottest desert and valley institutions.
 </p>
 
-<h2>Cooling Infrastructure by Facility, 2025 Population</h2>
 <p class="chart-note">
-  Housing unit cooling type from Raychaudhuri et al. (Reuters, 2025). Refrigeration = mechanical AC.
+  Housing unit cooling type from CDCR Air Cooling Pilot Program Supplemental Report (January 2026, Table 2). Refrigeration = mechanical AC.
   Evaporative = swamp coolers (effectiveness degrades in humid conditions or when outdoor temps are extreme).
   Ventilation = no cooling. Bar lengths represent incarcerated people (2025 facility population × share of housing units with each type). Sorted by number of people in ventilation-only units (highest at top).
 </p>
@@ -336,31 +335,32 @@
 <div class="summary-stats">
   <div class="stat-block">
     <div class="stat-label">People in facilities with any refrigeration (AC)</div>
-    <div class="stat-value stage1">29%</div>
+    <div class="stat-value stage1">21%</div>
     <div class="stat-sub">Population-weighted across 31 facilities</div>
   </div>
   <div class="stat-block">
     <div class="stat-label">People in facilities with evaporative cooling</div>
-    <div class="stat-value stage1">54%</div>
+    <div class="stat-value stage1">49%</div>
     <div class="stat-sub">Population-weighted across 31 facilities</div>
   </div>
   <div class="stat-block">
     <div class="stat-label">People in facilities with ventilation only</div>
-    <div class="stat-value stage1">17%</div>
+    <div class="stat-value stage1">31%</div>
     <div class="stat-sub">No cooling · population-weighted</div>
   </div>
 </div>
 
 <p class="chart-note">Facilities sorted by number of people in ventilation-only housing units (highest at top).</p>
 <p class="chart-note">
-  <strong>Data note:</strong> The CDCR 2025 Climate Report shows 19% mechanical cooling system-wide, compared to 29% here.
-  The source of this gap is not fully reconcilable from available data. The Reuters FOIA was scoped to air handling units
-  (AHUs) at state prisons; CDCR's report includes a separate "fans only" category (5%) and may use a different unit of
-  aggregation or a broader facility universe (e.g., fire camps, community facilities). A limitation of this analysis is
-  that bed counts per housing unit within each facility are not publicly available — CDCR publishes population only at
-  the institution level. Per-facility bars therefore show the share of housing <em>units</em> (not beds) with each
-  cooling type, and population weighting uses facility-level totals as a proxy.
+  <strong>Data note:</strong> Housing unit counts from the CDCR January 2026 Air Cooling Supplemental Report (Table 2),
+  which covers 791 housing units across 31 adult institutions. Earlier analysis using Reuters FOIA data (June 2025)
+  reported 29% mechanical cooling; the January 2026 CDCR data yields 21% — a difference attributable to Reuters counting
+  only buildings with air handling units (563 buildings) while CDCR's report counts all housing units including fan-only
+  units. A limitation of this analysis is that bed counts per housing unit are not publicly available — CDCR publishes
+  population only at the institution level. Per-facility bars therefore show the share of housing <em>units</em> (not beds)
+  with each cooling type, and population weighting uses facility-level totals as a proxy.
 </p>
+<h2>Cooling Infrastructure by Facility, 2025 Population</h2>
 <div id="chart-ac"></div>
 
 <!-- Chart AC2: Person-days by cooling type (people × avg annual days ≥ 90°F) -->
@@ -399,13 +399,13 @@
   </div>
   <div class="stat-block">
     <div class="stat-label">Non-refrigeration person-days over threshold / year</div>
-    <div class="stat-value stage3">611,051</div>
-    <div class="stat-sub">72.7% of total · facilities with evaporative or ventilation-only cooling</div>
+    <div class="stat-value stage3">692,459</div>
+    <div class="stat-sub">82.4% of total · facilities with evaporative or ventilation-only cooling</div>
   </div>
   <div class="stat-block">
     <div class="stat-label">Years per death — non-refrigeration facilities only</div>
-    <div class="stat-value stage3">2.9</div>
-    <div class="stat-sub">1 ÷ 0.35 deaths/yr · same formula applied to 801,488 slope-adjusted non-ref person-days</div>
+    <div class="stat-value stage3">2.5</div>
+    <div class="stat-sub">1 ÷ 0.40 deaths/yr · same formula applied to 907,121 slope-adjusted non-ref person-days</div>
   </div>
 </div>
 <p class="chart-note">
@@ -420,9 +420,9 @@
   facility mean), giving a mean slope weight of 1.31×. Person-days adjusted accordingly (840,457 × 1.31 =
   1,102,039 slope-adjusted person-days). A binary threshold calculation would give 0.37 deaths/year.
   <strong>Non-refrigeration flag:</strong> Because Skarha pools AC and non-AC facilities, the 5.2% estimate is
-  attenuated by mechanical cooling. Restricting to the 72.7% of person-days at facilities without refrigeration
-  (evaporative or ventilation only) gives 611,051 person-days/year (801,488 slope-adjusted), yielding 0.35
-  deaths/year — 1 death every 2.9 years. This is a lower bound on the non-AC effect, as partial-AC facilities
+  attenuated by mechanical cooling. Restricting to the 82.4% of person-days at facilities without refrigeration
+  (evaporative or ventilation only) gives 692,459 person-days/year (907,121 slope-adjusted), yielding 0.40
+  deaths/year — 1 death every 2.5 years. This is a lower bound on the non-AC effect, as partial-AC facilities
   are counted proportionally by their non-ref unit share.
   Skarha, J., Jackson, A., Zlotnik, H., Williams, B., &amp; Wildeman, C. (2023). Heat and Mortality in US State Prisons.
   <em>PLOS ONE</em>, 18(3):e0281389.
@@ -1145,40 +1145,40 @@ const facilityTempData = [
 
 (function() {
   // People per facility per cooling type: facility pop × share of housing units with each type
-  // Source: Reuters_CDCR_cooling.xlsx (CDCR FOIA, June 2025); pop = CDCR 2025 average
-  // CTF corrected per CDCR clarification email; sorted descending by people in ventilation-only units
+  // Source: CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2); pop = CDCR 2025 average
+  // Sorted descending by people in ventilation-only units
   const acData = [
-    { code:"CTF",  ref:   0, evap: 604, vent:3621 },
-    { code:"SOL",  ref: 467, evap: 777, vent:2492 },
-    { code:"RJD",  ref:1149, evap:   0, vent:2443 },
-    { code:"CCI",  ref:   0, evap:   0, vent:2434 },
-    { code:"CMC",  ref:   0, evap:   0, vent:2172 },
-    { code:"PBSP", ref: 323, evap:   0, vent:1773 },
-    { code:"SCC",  ref:1009, evap:2522, vent: 504 },
-    { code:"SATF", ref: 193, evap:5165, vent:   0 },
-    { code:"ASP",  ref:   0, evap:3891, vent:   0 },
-    { code:"WSP",  ref: 118, evap:3558, vent:   0 },
-    { code:"VSP",  ref:   0, evap:3148, vent:   0 },
-    { code:"PVSP", ref: 129, evap:2863, vent:   0 },
-    { code:"LAC",  ref: 127, evap:2822, vent:   0 },
-    { code:"KVSP", ref: 309, evap:2783, vent:   0 },
-    { code:"MCSP", ref:1098, evap:2663, vent:   0 },
-    { code:"COR",  ref:   0, evap:2629, vent:   0 },
-    { code:"HDSP", ref: 130, evap:2589, vent:   0 },
-    { code:"NKSP", ref: 103, evap:2467, vent:   0 },
-    { code:"SVSP", ref: 126, evap:2261, vent:   0 },
-    { code:"SAC",  ref: 143, evap:1988, vent:   0 },
-    { code:"CCWF", ref: 255, evap:1785, vent:   0 },
-    { code:"FOL",  ref:1233, evap:1544, vent:   0 },
-    { code:"CMF",  ref:1023, evap:1023, vent:   0 },
-    { code:"CIW",  ref: 432, evap: 755, vent:   0 },
-    { code:"CRC",  ref:1748, evap: 583, vent:   0 },
-    { code:"CEN",  ref:2984, evap:   0, vent:   0 },
-    { code:"ISP",  ref:2764, evap:   0, vent:   0 },
-    { code:"SQ",   ref:2688, evap:   0, vent:   0 },
-    { code:"CAL",  ref:2462, evap:   0, vent:   0 },
-    { code:"CIM",  ref:2274, evap:   0, vent:   0 },
-    { code:"CHCF", ref:2251, evap:   0, vent:   0 },
+    { code:"CTF",  ref:   0, evap:  192, vent:4033 },
+    { code:"SCC",  ref:   0, evap:  249, vent:3786 },
+    { code:"KVSP", ref: 309, evap:    0, vent:2783 },
+    { code:"SQ",   ref:   0, evap:    0, vent:2688 },
+    { code:"RJD",  ref:1249, evap:    0, vent:2343 },
+    { code:"CCI",  ref: 111, evap:    0, vent:2323 },
+    { code:"SOL",  ref: 598, evap:  896, vent:2241 },
+    { code:"CRC",  ref: 194, evap:   65, vent:2071 },
+    { code:"PBSP", ref:  72, evap:    0, vent:2024 },
+    { code:"CMC",  ref: 407, evap:    0, vent:1765 },
+    { code:"CIM",  ref: 975, evap:    0, vent:1299 },
+    { code:"SATF", ref: 335, evap: 5525, vent:   0 },
+    { code:"ASP",  ref:   0, evap: 3891, vent:   0 },
+    { code:"WSP",  ref:   0, evap: 3676, vent:   0 },
+    { code:"VSP",  ref:   0, evap: 3148, vent:   0 },
+    { code:"PVSP", ref: 130, evap: 2862, vent:   0 },
+    { code:"LAC",  ref: 134, evap: 2815, vent:   0 },
+    { code:"MCSP", ref: 513, evap: 3248, vent:   0 },
+    { code:"COR",  ref:   0, evap: 2629, vent:   0 },
+    { code:"HDSP", ref:  94, evap: 2625, vent:   0 },
+    { code:"NKSP", ref: 103, evap: 2467, vent:   0 },
+    { code:"SVSP", ref: 311, evap: 2076, vent:   0 },
+    { code:"SAC",  ref: 170, evap: 1961, vent:   0 },
+    { code:"CCWF", ref:   0, evap: 2040, vent:   0 },
+    { code:"FOL",  ref: 694, evap: 2083, vent:   0 },
+    { code:"CMF",  ref:1080, evap:  965, vent:   0 },
+    { code:"CIW",  ref: 432, evap:  755, vent:   0 },
+    { code:"CEN",  ref:2984, evap:    0, vent:   0 },
+    { code:"ISP",  ref:2764, evap:    0, vent:   0 },
+    { code:"CAL",  ref:2462, evap:    0, vent:   0 },
+    { code:"CHCF", ref:2251, evap:    0, vent:   0 },
   ];
 
   const segments = [
@@ -1263,36 +1263,36 @@ const facilityTempData = [
 
 (function() {
   const acHeatData = [
-    { code:"SOL",  ref:  36566, evap:   60839, vent:195124 },
-    { code:"CCI",  ref:      0, evap:       0, vent: 49410 },
-    { code:"CTF",  ref:      0, evap:    7731, vent: 46349 },
-    { code:"SCC",  ref:  87278, evap:  218153, vent: 43596 },
-    { code:"CMC",  ref:      0, evap:       0, vent: 24326 },
-    { code:"RJD",  ref:   9422, evap:       0, vent: 20033 },
-    { code:"PBSP", ref:     32, evap:       0, vent:   177 },
-    { code:"SATF", ref:  22311, evap:  597074, vent:     0 },
+    { code:"SCC",  ref:      0, evap:   21538, vent:327489 },
+    { code:"KVSP", ref:  34979, evap:       0, vent:315036 },
+    { code:"CRC",  ref:  16587, evap:    5558, vent:177070 },
+    { code:"SOL",  ref:  46823, evap:   70157, vent:175470 },
+    { code:"CIM",  ref:  86482, evap:       0, vent:115221 },
+    { code:"CTF",  ref:      0, evap:    2458, vent: 51622 },
+    { code:"CCI",  ref:   2253, evap:       0, vent: 47157 },
+    { code:"CMC",  ref:   4558, evap:       0, vent: 19768 },
+    { code:"RJD",  ref:  10242, evap:       0, vent: 19213 },
+    { code:"SQ",   ref:      0, evap:       0, vent: 13171 },
+    { code:"PBSP", ref:      7, evap:       0, vent:   202 },
+    { code:"SATF", ref:  38726, evap:  638690, vent:     0 },
     { code:"ASP",  ref:      0, evap:  427621, vent:     0 },
-    { code:"WSP",  ref:  14101, evap:  425181, vent:     0 },
+    { code:"WSP",  ref:      0, evap:  439282, vent:     0 },
     { code:"VSP",  ref:      0, evap:  320466, vent:     0 },
-    { code:"PVSP", ref:  14758, evap:  327527, vent:     0 },
-    { code:"LAC",  ref:  14160, evap:  314653, vent:     0 },
-    { code:"KVSP", ref:  34979, evap:  315036, vent:     0 },
-    { code:"MCSP", ref:  91354, evap:  221562, vent:     0 },
+    { code:"PVSP", ref:  14872, evap:  327413, vent:     0 },
+    { code:"LAC",  ref:  14941, evap:  313872, vent:     0 },
+    { code:"MCSP", ref:  42682, evap:  270234, vent:     0 },
     { code:"COR",  ref:      0, evap:  303912, vent:     0 },
-    { code:"HDSP", ref:   7046, evap:  140324, vent:     0 },
+    { code:"HDSP", ref:   5095, evap:  142275, vent:     0 },
     { code:"NKSP", ref:  11660, evap:  279264, vent:     0 },
-    { code:"SVSP", ref:   1613, evap:   28941, vent:     0 },
-    { code:"SAC",  ref:  11440, evap:  159040, vent:     0 },
-    { code:"CCWF", ref:  25959, evap:  181713, vent:     0 },
-    { code:"FOL",  ref: 100736, evap:  126145, vent:     0 },
-    { code:"CMF",  ref:  80101, evap:   80101, vent:     0 },
+    { code:"SVSP", ref:   3981, evap:   26573, vent:     0 },
+    { code:"SAC",  ref:  13600, evap:  156880, vent:     0 },
+    { code:"CCWF", ref:      0, evap:  207672, vent:     0 },
+    { code:"FOL",  ref:  56700, evap:  170181, vent:     0 },
+    { code:"CMF",  ref:  84564, evap:   75560, vent:     0 },
     { code:"CIW",  ref:  40176, evap:   70215, vent:     0 },
-    { code:"CRC",  ref: 149454, evap:   49846, vent:     0 },
     { code:"CEN",  ref: 542790, evap:       0, vent:     0 },
     { code:"ISP",  ref: 496138, evap:       0, vent:     0 },
-    { code:"SQ",   ref:  13171, evap:       0, vent:     0 },
     { code:"CAL",  ref: 446114, evap:       0, vent:     0 },
-    { code:"CIM",  ref: 201704, evap:       0, vent:     0 },
     { code:"CHCF", ref: 206642, evap:       0, vent:     0 },
   ];
 
@@ -1473,10 +1473,10 @@ const facilityTempData = [
     { key: "g80plus",label: "80+",   color: "#b03020" },
   ];
 
-  // Refrigeration share per facility (from Reuters FOIA xlsx, building-weighted)
+  // Refrigeration share per facility (CDCR Air Cooling Supplemental Report, Jan 2026, Table 2)
   const refPct = {
-    CMF: 50, SOL: 13, CEN: 100, LAC: 4, MCSP: 29, CIM: 100,
-    CHCF: 100, COR: 0, ASP: 0, VSP: 0, ISP: 100, SATF: 4,
+    CMF: 53, SOL: 16, CEN: 100, LAC: 5, MCSP: 14, CIM: 43,
+    CHCF: 100, COR: 0, ASP: 0, VSP: 0, ISP: 100, SATF: 6,
   };
 
   const barHeight = 14;
@@ -1595,10 +1595,10 @@ const facilityTempData = [
     { key: "med", label: "Medium Risk",  color: "#bbb" },
   ];
 
-  // ref% lookup (same as age chart)
+  // ref% lookup (CDCR Air Cooling Supplemental Report, Jan 2026, Table 2)
   const refPct = {
-    ISP: 100, KVSP: 10, SOL: 13, SAC: 7, COR: 0,
-    CMF: 50, LAC: 4, CIM: 100, VSP: 0, MCSP: 29, SATF: 4, CHCF: 100,
+    ISP: 100, KVSP: 10, SOL: 16, SAC: 8, COR: 0,
+    CMF: 53, LAC: 5, CIM: 43, VSP: 0, MCSP: 14, SATF: 6, CHCF: 100,
   };
 
   const barHeight = 14;
