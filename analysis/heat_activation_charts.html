@@ -191,6 +191,25 @@
   </div>
 </div>
 
+<!-- Chart 2b: Indoor 78°F days per facility, 2025 -->
+<p class="chart-note">Number of summer days in 2025 where indoor housing unit temperature exceeded 78°F, by facility. Single-year snapshot from CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 1).</p>
+
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">Total facility-days above 78°F indoors</div>
+    <div class="stat-value stage1">2,921</div>
+    <div class="stat-sub">Sum across 31 facilities · 2025</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Average per facility</div>
+    <div class="stat-value stage1">94.2</div>
+    <div class="stat-sub">Days · 2025</div>
+  </div>
+</div>
+
+<h2>Days Indoor Temperature Exceeded 78°F per Facility, 2025</h2>
+<div id="chart-facility-78f"></div>
+
 <!-- Chart 2: Per-facility horizontal bar -->
 <h2>Average Annual Days ≥ 90°F per Facility, 2016–2025</h2>
 <p class="chart-note">Average days with outdoor tmax ≥ 90°F per year at each prison across the 10-year period.</p>
@@ -486,6 +505,40 @@ const facilityTotals = [
   { code: "PBSP", stage1total: 1,    stage1: 0.1   },
 ];
 
+const facility78fData = [
+  { code: "CIM",  days: 161 },
+  { code: "COR",  days: 159 },
+  { code: "SOL",  days: 159 },
+  { code: "FOL",  days: 158 },
+  { code: "SCC",  days: 154 },
+  { code: "CIW",  days: 150 },
+  { code: "CRC",  days: 149 },
+  { code: "CAL",  days: 137 },
+  { code: "WSP",  days: 136 },
+  { code: "CMF",  days: 135 },
+  { code: "NKSP", days: 134 },
+  { code: "SAC",  days: 133 },
+  { code: "SATF", days: 133 },
+  { code: "ASP",  days: 132 },
+  { code: "CCI",  days: 115 },
+  { code: "RJD",  days: 114 },
+  { code: "CCWF", days:  97 },
+  { code: "HDSP", days:  89 },
+  { code: "PVSP", days:  67 },
+  { code: "KVSP", days:  66 },
+  { code: "PBSP", days:  63 },
+  { code: "CTF",  days:  60 },
+  { code: "VSP",  days:  52 },
+  { code: "CEN",  days:  42 },
+  { code: "SQ",   days:  41 },
+  { code: "LAC",  days:  39 },
+  { code: "CMC",  days:  33 },
+  { code: "MCSP", days:  11 },
+  { code: "ISP",  days:   1 },
+  { code: "SVSP", days:   1 },
+  { code: "CHCF", days:   0 },
+];
+
 const facilityAnnual = [{"code":"ASP","values":[{"year":2016,"stage1":117},{"year":2017,"stage1":110},{"year":2018,"stage1":100},{"year":2019,"stage1":101},{"year":2020,"stage1":110},{"year":2021,"stage1":114},{"year":2022,"stage1":118},{"year":2023,"stage1":96},{"year":2024,"stage1":123},{"year":2025,"stage1":110}]},{"code":"CAL","values":[{"year":2016,"stage1":187},{"year":2017,"stage1":195},{"year":2018,"stage1":179},{"year":2019,"stage1":165},{"year":2020,"stage1":185},{"year":2021,"stage1":187},{"year":2022,"stage1":182},{"year":2023,"stage1":167},{"year":2024,"stage1":186},{"year":2025,"stage1":179}]},{"code":"CCI","values":[{"year":2016,"stage1":25},{"year":2017,"stage1":28},{"year":2018,"stage1":25},{"year":2019,"stage1":19},{"year":2020,"stage1":23},{"year":2021,"stage1":26},{"year":2022,"stage1":19},{"year":2023,"stage1":7},{"year":2024,"stage1":27},{"year":2025,"stage1":4}]},{"code":"CCWF","values":[{"year":2016,"stage1":105},{"year":2017,"stage1":102},{"year":2018,"stage1":98},{"year":2019,"stage1":100},{"year":2020,"stage1":109},{"year":2021,"stage1":108},{"year":2022,"stage1":111},{"year":2023,"stage1":86},{"year":2024,"stage1":107},{"year":2025,"stage1":92}]},{"code":"CEN","values":[{"year":2016,"stage1":183},{"year":2017,"stage1":190},{"year":2018,"stage1":179},{"year":2019,"stage1":158},{"year":2020,"stage1":184},{"year":2021,"stage1":188},{"year":2022,"stage1":183},{"year":2023,"stage1":174},{"year":2024,"stage1":186},{"year":2025,"stage1":194}]},{"code":"CHCF","values":[{"year":2016,"stage1":91},{"year":2017,"stage1":101},{"year":2018,"stage1":86},{"year":2019,"stage1":88},{"year":2020,"stage1":120},{"year":2021,"stage1":88},{"year":2022,"stage1":94},{"year":2023,"stage1":75},{"year":2024,"stage1":100},{"year":2025,"stage1":75}]},{"code":"CIM","values":[{"year":2016,"stage1":105},{"year":2017,"stage1":112},{"year":2018,"stage1":82},{"year":2019,"stage1":70},{"year":2020,"stage1":113},{"year":2021,"stage1":90},{"year":2022,"stage1":92},{"year":2023,"stage1":61},{"year":2024,"stage1":88},{"year":2025,"stage1":74}]},{"code":"CIW","values":[{"year":2016,"stage1":112},{"year":2017,"stage1":115},{"year":2018,"stage1":95},{"year":2019,"stage1":82},{"year":2020,"stage1":117},{"year":2021,"stage1":88},{"year":2022,"stage1":92},{"year":2023,"stage1":63},{"year":2024,"stage1":89},{"year":2025,"stage1":77}]},{"code":"CMC","values":[{"year":2016,"stage1":14},{"year":2017,"stage1":19},{"year":2018,"stage1":11},{"year":2019,"stage1":10},{"year":2020,"stage1":22},{"year":2021,"stage1":4},{"year":2022,"stage1":16},{"year":2023,"stage1":7},{"year":2024,"stage1":8},{"year":2025,"stage1":1}]},{"code":"CMF","values":[{"year":2016,"stage1":71},{"year":2017,"stage1":80},{"year":2018,"stage1":71},{"year":2019,"stage1":68},{"year":2020,"stage1":109},{"year":2021,"stage1":92},{"year":2022,"stage1":88},{"year":2023,"stage1":65},{"year":2024,"stage1":85},{"year":2025,"stage1":54}]},{"code":"COR","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":115},{"year":2018,"stage1":110},{"year":2019,"stage1":110},{"year":2020,"stage1":118},{"year":2021,"stage1":123},{"year":2022,"stage1":123},{"year":2023,"stage1":98},{"year":2024,"stage1":126},{"year":2025,"stage1":111}]},{"code":"CRC","values":[{"year":2016,"stage1":97},{"year":2017,"stage1":107},{"year":2018,"stage1":88},{"year":2019,"stage1":80},{"year":2020,"stage1":104},{"year":2021,"stage1":82},{"year":2022,"stage1":85},{"year":2023,"stage1":60},{"year":2024,"stage1":86},{"year":2025,"stage1":66}]},{"code":"CTF","values":[{"year":2016,"stage1":8},{"year":2017,"stage1":25},{"year":2018,"stage1":7},{"year":2019,"stage1":16},{"year":2020,"stage1":24},{"year":2021,"stage1":9},{"year":2022,"stage1":17},{"year":2023,"stage1":8},{"year":2024,"stage1":11},{"year":2025,"stage1":3}]},{"code":"CVSP","values":[{"year":2016,"stage1":174},{"year":2017,"stage1":185},{"year":2018,"stage1":173},{"year":2019,"stage1":155},{"year":2020,"stage1":187},{"year":2021,"stage1":173},{"year":2022,"stage1":188},{"year":2023,"stage1":181}]},{"code":"FOL","values":[{"year":2016,"stage1":81},{"year":2017,"stage1":91},{"year":2018,"stage1":79},{"year":2019,"stage1":72},{"year":2020,"stage1":99},{"year":2021,"stage1":75},{"year":2022,"stage1":92},{"year":2023,"stage1":68},{"year":2024,"stage1":89},{"year":2025,"stage1":71}]},{"code":"HDSP","values":[{"year":2016,"stage1":46},{"year":2017,"stage1":61},{"year":2018,"stage1":52},{"year":2019,"stage1":42},{"year":2020,"stage1":59},{"year":2021,"stage1":66},{"year":2022,"stage1":60},{"year":2023,"stage1":43},{"year":2024,"stage1":54},{"year":2025,"stage1":59}]},{"code":"ISP","values":[{"year":2016,"stage1":175},{"year":2017,"stage1":188},{"year":2018,"stage1":174},{"year":2019,"stage1":155},{"year":2020,"stage1":186},{"year":2021,"stage1":174},{"year":2022,"stage1":188},{"year":2023,"stage1":178},{"year":2024,"stage1":185},{"year":2025,"stage1":192}]},{"code":"KVSP","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":112},{"year":2018,"stage1":106},{"year":2019,"stage1":104},{"year":2020,"stage1":114},{"year":2021,"stage1":114},{"year":2022,"stage1":119},{"year":2023,"stage1":97},{"year":2024,"stage1":130},{"year":2025,"stage1":114}]},{"code":"LAC","values":[{"year":2016,"stage1":109},{"year":2017,"stage1":111},{"year":2018,"stage1":113},{"year":2019,"stage1":100},{"year":2020,"stage1":136},{"year":2021,"stage1":114},{"year":2022,"stage1":117},{"year":2023,"stage1":93},{"year":2024,"stage1":118},{"year":2025,"stage1":104}]},{"code":"MCSP","values":[{"year":2016,"stage1":85},{"year":2017,"stage1":94},{"year":2018,"stage1":82},{"year":2019,"stage1":75},{"year":2020,"stage1":105},{"year":2021,"stage1":87},{"year":2022,"stage1":89},{"year":2023,"stage1":76},{"year":2024,"stage1":83},{"year":2025,"stage1":56}]},{"code":"NKSP","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":112},{"year":2018,"stage1":106},{"year":2019,"stage1":104},{"year":2020,"stage1":114},{"year":2021,"stage1":114},{"year":2022,"stage1":119},{"year":2023,"stage1":97},{"year":2024,"stage1":130},{"year":2025,"stage1":114}]},{"code":"PBSP","values":[{"year":2016,"stage1":0},{"year":2017,"stage1":0},{"year":2018,"stage1":0},{"year":2019,"stage1":0},{"year":2020,"stage1":1},{"year":2021,"stage1":0},{"year":2022,"stage1":0},{"year":2023,"stage1":0},{"year":2024,"stage1":0},{"year":2025,"stage1":0}]},{"code":"PVSP","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":113},{"year":2018,"stage1":99},{"year":2019,"stage1":103},{"year":2020,"stage1":125},{"year":2021,"stage1":124},{"year":2022,"stage1":122},{"year":2023,"stage1":100},{"year":2024,"stage1":125},{"year":2025,"stage1":111}]},{"code":"RJD","values":[{"year":2016,"stage1":14},{"year":2017,"stage1":15},{"year":2018,"stage1":7},{"year":2019,"stage1":5},{"year":2020,"stage1":21},{"year":2021,"stage1":5},{"year":2022,"stage1":7},{"year":2023,"stage1":1},{"year":2024,"stage1":5},{"year":2025,"stage1":2}]},{"code":"SAC","values":[{"year":2016,"stage1":77},{"year":2017,"stage1":89},{"year":2018,"stage1":80},{"year":2019,"stage1":71},{"year":2020,"stage1":96},{"year":2021,"stage1":75},{"year":2022,"stage1":90},{"year":2023,"stage1":68},{"year":2024,"stage1":87},{"year":2025,"stage1":67}]},{"code":"SATF","values":[{"year":2016,"stage1":122},{"year":2017,"stage1":115},{"year":2018,"stage1":110},{"year":2019,"stage1":110},{"year":2020,"stage1":118},{"year":2021,"stage1":123},{"year":2022,"stage1":123},{"year":2023,"stage1":98},{"year":2024,"stage1":126},{"year":2025,"stage1":111}]},{"code":"SCC","values":[{"year":2016,"stage1":88},{"year":2017,"stage1":94},{"year":2018,"stage1":83},{"year":2019,"stage1":77},{"year":2020,"stage1":103},{"year":2021,"stage1":99},{"year":2022,"stage1":98},{"year":2023,"stage1":69},{"year":2024,"stage1":84},{"year":2025,"stage1":70}]},{"code":"SOL","values":[{"year":2016,"stage1":71},{"year":2017,"stage1":80},{"year":2018,"stage1":71},{"year":2019,"stage1":68},{"year":2020,"stage1":109},{"year":2021,"stage1":92},{"year":2022,"stage1":88},{"year":2023,"stage1":65},{"year":2024,"stage1":85},{"year":2025,"stage1":54}]},{"code":"SQ","values":[{"year":2016,"stage1":2},{"year":2017,"stage1":3},{"year":2018,"stage1":0},{"year":2019,"stage1":9},{"year":2020,"stage1":13},{"year":2021,"stage1":4},{"year":2022,"stage1":5},{"year":2023,"stage1":7},{"year":2024,"stage1":5},{"year":2025,"stage1":1}]},{"code":"SVSP","values":[{"year":2016,"stage1":8},{"year":2017,"stage1":25},{"year":2018,"stage1":7},{"year":2019,"stage1":16},{"year":2020,"stage1":24},{"year":2021,"stage1":9},{"year":2022,"stage1":17},{"year":2023,"stage1":8},{"year":2024,"stage1":11},{"year":2025,"stage1":3}]},{"code":"VSP","values":[{"year":2016,"stage1":105},{"year":2017,"stage1":102},{"year":2018,"stage1":98},{"year":2019,"stage1":100},{"year":2020,"stage1":109},{"year":2021,"stage1":108},{"year":2022,"stage1":111},{"year":2023,"stage1":86},{"year":2024,"stage1":107},{"year":2025,"stage1":92}]},{"code":"WSP","values":[{"year":2016,"stage1":130},{"year":2017,"stage1":114},{"year":2018,"stage1":115},{"year":2019,"stage1":108},{"year":2020,"stage1":121},{"year":2021,"stage1":122},{"year":2022,"stage1":122},{"year":2023,"stage1":108},{"year":2024,"stage1":131},{"year":2025,"stage1":124}]}];
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
@@ -582,6 +635,68 @@ function makeLineChart(containerId, { width, height, margin, series, yMax, yLabe
     lineColor: (s) => colors[series.indexOf(s)],
     dotColor:  (s) => colors[series.indexOf(s)],
   });
+})();
+
+// ── Chart 2b: Indoor 78°F days per facility, 2025 ────────────────────────────
+
+(function() {
+  const margin = { top: 8, right: 64, bottom: 36, left: 52 };
+  const rowH   = 19;
+  const height = facility78fData.length * rowH;
+  const width  = 712 - margin.left - margin.right;
+
+  const svgW = width  + margin.left + margin.right;
+  const svgH = height + margin.top  + margin.bottom;
+  const svg = d3.select("#chart-facility-78f")
+    .append("svg")
+      .attr("viewBox", `0 0 ${svgW} ${svgH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear()
+    .domain([0, d3.max(facility78fData, d => d.days) * 1.08])
+    .range([0, width]);
+
+  const y = d3.scaleBand()
+    .domain(facility78fData.map(d => d.code))
+    .range([0, height])
+    .padding(0.18);
+
+  svg.append("g").attr("class", "grid")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(6).tickSize(-height).tickFormat(""));
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(6).tickFormat(d3.format(",d")));
+
+  svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y));
+
+  svg.append("text")
+    .attr("x", width / 2).attr("y", height + 32)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Days indoor temperature exceeded 78°F, 2025");
+
+  svg.selectAll(".bar")
+    .data(facility78fData)
+    .join("rect")
+      .attr("x", 0)
+      .attr("y",      d => y(d.code))
+      .attr("width",  d => x(d.days))
+      .attr("height", y.bandwidth())
+      .attr("fill",   "#444");
+
+  svg.selectAll(".bar-label")
+    .data(facility78fData)
+    .join("text")
+      .attr("x",     d => x(d.days) + 5)
+      .attr("y",     d => y(d.code) + y.bandwidth() / 2 + 4)
+      .attr("font-size", "12px").attr("fill", "#555")
+      .text(d => d.days);
 })();
 
 // ── Chart 2: Per-facility horizontal bar ─────────────────────────────────────

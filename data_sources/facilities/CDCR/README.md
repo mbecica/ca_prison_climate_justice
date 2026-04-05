@@ -34,14 +34,14 @@ Data collection scripts are in the `scrapers/` directory.
 
 | Variable | Description | Source |
 | :--- | :--- | :--- |
-| `n_housing_buildings` | Number of active housing units (HUs) at the facility as of December 2025. HUs are wings, dormitories, or cell tiers — finer-grained than buildings. Denominator for `pct_buildings_*` columns. SQ value retains the prior Reuters building count pending verification of SQRC infrastructure status. CVSP and FWF are null (not included in CDCR Jan 2026 report). | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
+| `n_housing_buildings` | Number of active housing units (HUs) at the facility as of December 2025. HUs are wings, dormitories, or cell tiers — finer-grained than buildings. Denominator for `pct_buildings_*` columns. CVSP and FWF are null (not included in CDCR Jan 2026 report). | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `n_housing_units` | Number of housing HVAC units (air handling units, evaporative coolers, etc.) at the facility. This is an equipment-level count from the Reuters FOIA (563 buildings × average AHUs), distinct from the housing-unit count in `n_housing_buildings`. | Raychaudhuri et al., Reuters, 2025 |
 | `pct_units_evaporation` | Proportion of housing HVAC units using evaporation cooling. Sums to 1.0 with refrigeration and ventilation. | Raychaudhuri et al., Reuters, 2025 |
-| `pct_buildings_evaporation` | Proportion of housing units (HUs) with evaporative cooling. HUs with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1 (e.g., SATF = 1.03). SQ retains prior Reuters value. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
+| `pct_buildings_evaporation` | Proportion of housing units (HUs) with evaporative cooling. HUs with mixed cooling types are counted under each applicable type, so values across cooling types may sum to more than 1 (e.g., SATF = 1.03). | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `pct_units_refrigeration` | Proportion of housing HVAC units using refrigeration cooling. Sums to 1.0 with evaporation and ventilation. | Raychaudhuri et al., Reuters, 2025 |
-| `pct_buildings_refrigeration` | Proportion of housing units (HUs) with mechanical (refrigerant) cooling. HUs with mixed cooling types are counted under each applicable type. SQ retains prior Reuters value. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
+| `pct_buildings_refrigeration` | Proportion of housing units (HUs) with mechanical (refrigerant) cooling. HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `pct_units_ventilation` | Proportion of housing HVAC units providing ventilation without cooling. Sums to 1.0 with evaporation and refrigeration. | Raychaudhuri et al., Reuters, 2025 |
-| `pct_buildings_ventilation` | Proportion of housing units (HUs) with air handlers only (ventilation, no cooling). HUs with mixed cooling types are counted under each applicable type. SQ retains prior Reuters value. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
+| `pct_buildings_ventilation` | Proportion of housing units (HUs) with air handlers only (ventilation, no cooling). HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 
 ### Facility Characteristics
 
