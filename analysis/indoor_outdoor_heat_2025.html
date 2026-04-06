@@ -268,7 +268,7 @@
   <li style="margin-bottom: 8px;">The five facilities with full mechanical AC (Cluster B) have largely
     decoupled indoor from outdoor conditions, but individual cases like CAL — 137 indoor days above 78°F
     despite 100% AC coverage — suggest equipment performance during extreme events is the key unknown.</li>
-  <li>The 18 facilities with predominantly evaporative cooling (Cluster C) show a fourteen-fold range in
+  <li>The 18 facilities with predominantly evaporative cooling (Cluster C) show a twelve-fold range in
     indoor outcomes across similar outdoor climates, with no detectable outdoor-indoor relationship.
     Equipment performance variation and urban heat retention at high-UHI facilities are two distinct
     patterns that outdoor data cannot distinguish.</li>
@@ -345,7 +345,7 @@
 </p>
 <ul style="margin: 10px 0 14px 18px; line-height: 1.65; font-size: 13px; color: #1a1a1a;">
   <li style="margin-bottom: 10px;"><strong>Wide variation between similar facilities:</strong> facilities
-    with similar outdoor climates and the same cooling type show a fourteen-fold range in indoor days above
+    with similar outdoor climates and the same cooling type show a twelve-fold range in indoor days above
     78°F. MCSP logged 11 indoor days against 138 outdoor 78°F days in 2025, while ASP logged 132 indoor
     days against 162 outdoor. That variation is not visible in outdoor temperature records.</li>
   <li><strong>Potential heat retention at high-UHI facilities:</strong> SOL, COR, NKSP, SATF, CIW, and others
@@ -375,11 +375,53 @@
   For Cluster C, Predominantly Evaporative Cooling, monitoring would distinguish between the two
   mechanisms that outdoor data cannot separate. At facilities where the primary driver is cooling
   equipment performance, indoor sensors would show whether evaporative systems are working and whether
-  they degrade during heat events — information the fourteen-fold variation in indoor outcomes across
+  they degrade during heat events — information the twelve-fold variation in indoor outcomes across
   similar outdoor climates makes clear is unavailable. At facilities where urban heat retention is the
   likely mechanism, continuous data would show whether indoor temperatures recover overnight or stay
   elevated, capturing the cumulative heat load that daily threshold counts miss. Both questions require
   the same instrument: sensors inside the building.
+</p>
+
+<h2>Building envelope work</h2>
+
+<p>
+  Ten of 31 facilities had confirmed completed roofing or building envelope projects between 2017 and
+  2025; six more have active projects that had not reached completion as of early 2026 (see data table).
+  None of the five full mechanical AC facilities in Cluster B had confirmed envelope completions in this
+  window. Four of the five were built between 1992 and 1994 (CHCF in 2013), so their roofs are likely
+  still within their service life — the absence of projects probably reflects building age rather than
+  deferred maintenance. The exception worth noting is ISP: a large HVAC project completed in March 2024
+  (P-0910-01113) includes incidental roof work, but the project is classified as HVAC in MPAR records
+  and it is unclear whether it constitutes a full envelope upgrade or only penetration patching around
+  new equipment. In
+  Cluster C, seven of 18 facilities had completed work, but indoor day counts among those seven range
+  from 52 (VSP, 2024 roof) to 159 (SOL, 2025 roof) — nearly as wide as the cluster as a whole. The
+  envelope data does not explain the variation. The two facilities at the center of the wide-variation
+  finding — MCSP (11 indoor days) and ASP (132 indoor days) — neither had qualifying envelope work in
+  this window, so building fabric condition cannot account for the twelve-fold difference in their
+  indoor outcomes.
+</p>
+<p>
+  In Cluster A, the thermal mass hypothesis makes the envelope data harder to interpret. CCI had two
+  roofs replaced in 2025 and still recorded 115 indoor days above 78°F, suggesting roof condition
+  alone does not govern the thermal trap behavior. SVSP likely completed a roof project in early 2025
+  and recorded only 1 indoor day — but SVSP is in the Salinas Valley, a naturally cool coastal
+  microclimate, making it impossible to attribute the low count to the envelope work rather than
+  outdoor conditions.
+</p>
+<p>
+  For facilities showing no work in the 2020–2025 window, a search of LAO budget analyses, capital
+  outlay reports, and procurement records back to 1990 found no confirmed roofing projects at ASP,
+  MCSP, WSP, PBSP, CMF, CIW, CRC, CMC, or CIM. Pre-2017 roofing was funded through a pooled annual
+  special repair appropriation (starting at $10M/year in the early 1990s) with no legislative
+  itemization by facility, and most work was performed by inmate day labor with no public procurement
+  record. The 2023 and 2024 CDCR Master Plan Annual Reports characterize prisons built in the 1980s
+  and 1990s as having original single-ply roof systems that are beyond their useful life. At the
+  nominal 15-to-20-year commercial roof lifespan cited in state budget documents, ASP (1987), MCSP
+  (1987), PBSP (1989), and WSP (1991) would have been due for a first replacement around 2002–2011
+  with no confirmed work found. Two partial replacements were identified: a single-building metal
+  roof at Folsom (2016, $2.4M, 41,000 sq ft) and the PIA facility roof at San Quentin (2019,
+  $4.5M, 100,000 sq ft). These are too limited in scope to affect facility-level heat outcomes.
 </p>
 
 <p class="backmatter-divider">Methodology</p>
@@ -512,7 +554,7 @@
 <div id="chart-ratio"></div>
 
 <p class="section-label">Full data table</p>
-<p class="chart-note">Sorted by indoor-to-outdoor ratio (out78) descending.</p>
+<p class="chart-note">Sorted by indoor-to-outdoor ratio (out78) descending. * Envelope work year is approximate. † ISP P-0910-01113 HVAC project (completed 3/2024) includes incidental roof work; classified as HVAC in MPAR records — scope of envelope upgrade unclear. ‡ CMF roof replacement was funded in the 2022-23 Budget Act but a 2025-26 DOF Budget Change Proposal (BCP) seeks to reappropriate those funds to higher-priority facilities; construction had not begun as of early 2026.</p>
 <div id="table-container"></div>
 
 <p class="source">
@@ -1022,6 +1064,15 @@ const data = [
   ["CAL","CEN","CHCF","CIM","ISP"].forEach(c => clusterOf[c] = "B");
   ["ASP","CCWF","CIW","CMF","COR","CRC","HDSP","KVSP","LAC","MCSP","NKSP","PVSP","SAC","SATF","SCC","SOL","VSP","WSP"].forEach(c => clusterOf[c] = "C");
 
+  const envelopeOf = {
+    "CCI":"2025","NKSP":"2022","PVSP":"2022","RJD":"2021","SAC":"2021",
+    "SATF":"2024","SCC":"2020","SOL":"2025","VSP":"2024","SVSP":"2025*",
+    "FOL":"partial (2016)","SQ":"partial (2019)",
+    "CMF":"funded‡",
+    "ISP":"incidental†",
+    "CAL":"active","CCWF":"active","COR":"active","CTF":"active","HDSP":"active","LAC":"active"
+  };
+
   const sorted = [...data]
     .map(d => ({ ...d, ratio78: d.d78out > 0 ? d.d78 / d.d78out : null }))
     .sort((a, b) => {
@@ -1048,6 +1099,7 @@ const data = [
       <th style="text-align:right">UHI</th>
       <th style="text-align:right">Hot<br>Nights%</th>
       <th style="text-align:right">Lat</th>
+      <th style="text-align:right">Envelope<br>work</th>
     </tr></thead>
     <tbody>
       ${sorted.map(d => {
@@ -1067,6 +1119,7 @@ const data = [
           <td style="text-align:right">${d.uhi.toFixed(2)}</td>
           <td style="text-align:right">${d.hotn.toFixed(1)}%</td>
           <td style="text-align:right">${d.lat.toFixed(2)}</td>
+          <td style="text-align:right">${envelopeOf[d.code] || "—"}</td>
         </tr>`;
       }).join("")}
     </tbody>`;
