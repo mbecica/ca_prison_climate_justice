@@ -136,206 +136,378 @@
 
     .ratio-high { color: #b03020; font-weight: bold; }
     .ratio-low  { color: #2a6020; }
+
+    .callout {
+      border-left: 3px solid #b03020;
+      padding: 10px 14px;
+      margin: 18px 0 24px;
+      background: #fdf8f7;
+    }
+
+    .callout p { margin-bottom: 6px; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 18px 0 28px;
+    }
+
+    .facility-list {
+      border: 1px solid #ddd;
+      padding: 12px 14px;
+    }
+
+    .facility-list .list-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .facility-list ul {
+      margin: 0;
+      padding-left: 14px;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .backmatter-divider {
+      margin-top: 60px;
+      border-top: 2px solid #1a1a1a;
+      padding-top: 12px;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #555;
+      margin-top: 32px;
+      margin-bottom: 6px;
+    }
+
+    .cluster-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+
+    .cluster-card {
+      border: 1px solid #ddd;
+      padding: 12px 14px;
+    }
+
+    .cluster-card-header {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cluster-card-facilities {
+      font-size: 10.5px;
+      color: #555;
+      margin: 6px 0 10px;
+      line-height: 1.5;
+    }
+
+    .cluster-card table {
+      margin-top: 0;
+      font-size: 11px;
+      width: 100%;
+    }
+
+    .cluster-card th {
+      font-size: 10px;
+      color: #666;
+      padding: 2px 0;
+    }
+
+    .cluster-card td {
+      padding: 2px 0;
+      border-bottom: none;
+      font-size: 11px;
+    }
+
+    .cluster-card td:last-child {
+      text-align: right;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
-<h1>Indoor vs. Outdoor Heat: A Facility-Level Discrepancy Analysis</h1>
+<h1>Indoor vs. Outdoor Heat in California Prisons, 2025</h1>
 <p class="subtitle">CDCR State Prisons · 2025 · California Prison Climate Justice, UC Berkeley DCRP</p>
 
 <p>
-  Outdoor temperature thresholds — the standard basis for CDCR heat emergency plans — are a poor predictor
-  of indoor heat conditions inside California state prisons. Across 31 facilities in 2025, the correlation
-  between days with outdoor tmax ≥ 90°F and days with indoor housing unit temperature exceeding 78°F was
-  <strong>r = 0.076</strong>, effectively zero. A cluster-based analysis reveals a more nuanced picture.
-  Cluster B (old buildings in mild coastal and inland valley climates, n=8) shows the strongest link at
-  <strong>r = 0.809</strong> — even modest outdoor heat is amplified by aging thermal mass.
-  Cluster A (predominantly evaporative cooling, moderate outdoor heat, n=10) shows a partial link at
-  <strong>r = 0.458</strong> — evaporative systems attenuate but do not eliminate the outdoor signal.
-  Cluster C (100% mechanical AC, n=4) shows <strong>r = 0.369</strong>, a weak positive relationship
-  driven largely by Calipatria, which faces extreme outdoor heat even with full AC.
-  Most strikingly, Cluster D (high UHI, mixed or insufficient cooling, n=9) shows <strong>r = −0.403</strong>
-  — a negative correlation: these facilities face chronic indoor overheating that no longer tracks outdoor
-  peak temperatures at all, driven instead by persistent urban heat island conditions.
+  AB 2499 requires CDCR to install continuous indoor temperature monitors at three prisons by July 2027
+  and post data publicly each week. The bill sets 85°F as the threshold above which days and hours must
+  be identified and reported. This analysis uses the 2025 indoor temperature data reported by CDCR at
+  78°F, alongside daily outdoor gridMET data, to address two questions relevant to that pilot: do
+  building characteristics help suggest which three facilities should be monitored for the pilot, and
+  what does comparing indoor to outdoor temperature data tell us about heat exposure at each type of
+  building? Pilot location or intervention suggestions require a separate analysis that incorporates
+  vulnerability data about the people inside each facility; this report focuses on the built environment
+  as one step in estimating total heat risk to inform costs. Technical findings about the cluster
+  analysis and variable relationships are at the end of this document.
 </p>
 <p>
-  This report compares indoor 78°F days (CDCR Air Cooling Pilot Program Supplemental Report, January 2026,
-  Table 1) against outdoor 90°F days (gridMET tmmx, 2025) and mechanical cooling share (CDCR January 2026,
-  Table 2) for all 31 adult institutions included in both datasets.
+  Because cooling infrastructure varies widely across the 31 facilities, a single system-wide correlation
+  between indoor and outdoor temperatures is not meaningful. Facilities were grouped into three clusters
+  using k-means on nine exposure variables. Each cluster has a distinct relationship between outdoor conditions
+  and indoor heat.
 </p>
 
-<h2>Facility Clusters: PCA + K-Means (k=4)</h2>
-<p class="chart-note">
-  K-means clustering (k=4, standardized features) on 7 hazard and exposure variables: year opened,
-  % mechanical AC, % evaporative cooling, outdoor days ≥ 90°F, indoor days above 78°F, UHI (normalized),
-  and latitude. PCA biplot below shows the first two principal components (PC1 + PC2 = 53% of variance).
-  Points colored by cluster; all facilities labeled.
-</p>
-
-<div class="summary-stats" style="flex-wrap:wrap; gap:16px;">
-  <div class="stat-block" style="min-width:160px; border-left:4px solid #555; padding-left:12px;">
-    <div class="stat-label">Cluster A · Evaporative / Manageable Indoors</div>
-    <div class="stat-value neutral" style="font-size:18px;">n = 10</div>
-    <div class="stat-sub">ASP CCWF HDSP KVSP LAC MCSP PVSP SAC SVSP VSP</div>
-    <div class="stat-sub" style="margin-top:6px;">Avg: 81 outdoor · 69 indoor days · 6% AC · 85% evaporative · built 1993 · UHI 0.09</div>
+<div class="cluster-grid">
+  <div class="cluster-card" style="border-top: 3px solid #b03020;">
+    <div class="cluster-card-header">Cluster A &mdash; Thermal Trap</div>
+    <div class="cluster-card-facilities" style="font-style:italic; color:#444; margin-bottom:6px;">Mild coastal and valley climates, oldest buildings in the system (avg built 1946), little mechanical cooling, low urban heat island effect (avg UHI 0.05).</div>
+    <div class="cluster-card-facilities">CCI &nbsp;CMC &nbsp;CTF &nbsp;FOL<br>PBSP &nbsp;RJD &nbsp;SQ &nbsp;SVSP &nbsp;(n=8)</div>
+    <table>
+      <tr><th>Measure</th><th>Avg days</th></tr>
+      <tr><td>Indoor above 78°F</td><td>73</td></tr>
+      <tr><td>Outdoor above 78°F</td><td>54</td></tr>
+      <tr><td>Outdoor above 90°F</td><td>11</td></tr>
+    </table>
   </div>
-  <div class="stat-block" style="min-width:160px; border-left:4px solid #b03020; padding-left:12px;">
-    <div class="stat-label">Cluster B · Thermal Trap: Old Buildings, Mild Climate</div>
-    <div class="stat-value alert" style="font-size:18px;">n = 8</div>
-    <div class="stat-sub">CCI CMC CTF FOL PBSP RJD SCC SQ</div>
-    <div class="stat-sub" style="margin-top:6px;">Avg: 19 outdoor · 92 indoor days · 11% AC · built 1942 · UHI 0.08</div>
+  <div class="cluster-card" style="border-top: 3px solid #888;">
+    <div class="cluster-card-header">Cluster B &mdash; Full Mechanical AC</div>
+    <div class="cluster-card-facilities" style="font-style:italic; color:#444; margin-bottom:6px;">Extreme desert heat, high refrigerant cooling (avg 89%), newest facilities (avg built 1987), moderate urban heat island effect (avg UHI 0.27).</div>
+    <div class="cluster-card-facilities">CAL &nbsp;CEN &nbsp;CHCF &nbsp;CIM &nbsp;ISP &nbsp;(n=5)</div>
+    <table>
+      <tr><th>Measure</th><th>Avg days</th></tr>
+      <tr><td>Indoor above 78°F</td><td>68</td></tr>
+      <tr><td>Outdoor above 78°F</td><td>174</td></tr>
+      <tr><td>Outdoor above 90°F</td><td>143</td></tr>
+    </table>
   </div>
-  <div class="stat-block" style="min-width:160px; border-left:4px solid #888; padding-left:12px;">
-    <div class="stat-label">Cluster C · Full AC / Climate-Controlled</div>
-    <div class="stat-value neutral" style="font-size:18px;">n = 4</div>
-    <div class="stat-sub">CAL CEN CHCF ISP</div>
-    <div class="stat-sub" style="margin-top:6px;">Avg: 160 outdoor · 45 indoor days · 100% AC · built 1998 · UHI 0.09</div>
-  </div>
-  <div class="stat-block" style="min-width:160px; border-left:4px solid #7a4010; padding-left:12px;">
-    <div class="stat-label">Cluster D · High UHI / Unresolved Indoor Heat</div>
-    <div class="stat-value alert" style="font-size:18px;">n = 9</div>
-    <div class="stat-sub">CIM CIW CMF COR CRC NKSP SATF SOL WSP</div>
-    <div class="stat-sub" style="margin-top:6px;">Avg: 87 outdoor · 146 indoor days · 19% AC · 60% evaporative · built 1974 · UHI 0.63</div>
+  <div class="cluster-card" style="border-top: 3px solid #555;">
+    <div class="cluster-card-header">Cluster C &mdash; Predominantly Evaporative Cooling</div>
+    <div class="cluster-card-facilities" style="font-style:italic; color:#444; margin-bottom:6px;">Hot outdoor climate, predominantly evaporative cooling (avg 73%), avg built 1984, moderate urban heat island effect (avg UHI 0.29).</div>
+    <div class="cluster-card-facilities">ASP &nbsp;CCWF &nbsp;CIW &nbsp;CMF &nbsp;COR &nbsp;CRC<br>HDSP &nbsp;KVSP &nbsp;LAC &nbsp;MCSP &nbsp;NKSP &nbsp;PVSP<br>SAC &nbsp;SATF &nbsp;SCC &nbsp;SOL &nbsp;VSP &nbsp;WSP &nbsp;(n=18)</div>
+    <table>
+      <tr><th>Measure</th><th>Avg days</th></tr>
+      <tr><td>Indoor above 78°F</td><td>111</td></tr>
+      <tr><td>Outdoor above 78°F</td><td>155</td></tr>
+      <tr><td>Outdoor above 90°F</td><td>88</td></tr>
+    </table>
   </div>
 </div>
 
-<h2>PCA Biplot — PC1 vs PC2</h2>
-<p class="chart-note">
-  PC1 (30%): separates full-AC / southern / high-outdoor-heat facilities (right) from
-  low-AC / northern / mild-outdoor facilities (left). PC2 (23%): separates high indoor heat burden
-  and high UHI (top) from low indoor heat / low UHI (bottom).
-</p>
-<div id="chart-pca"></div>
+<h2>What outdoor temperature data tells us — and misses — at each facility type</h2>
 
-<h2>Indoor vs. Outdoor Correlation by Cluster</h2>
-<div class="summary-stats">
-  <div class="stat-block">
-    <div class="stat-label">r · all 31 facilities</div>
-    <div class="stat-value neutral">0.076</div>
-    <div class="stat-sub">Outdoor 90°F vs indoor 78°F days · 2025</div>
-  </div>
-  <div class="stat-block" style="border-left:3px solid #555; padding-left:10px;">
-    <div class="stat-label">r · Cluster A (n=10)</div>
-    <div class="stat-value neutral">0.458</div>
-    <div class="stat-sub">Evaporative / moderate outdoor heat — partial link</div>
-  </div>
-  <div class="stat-block" style="border-left:3px solid #b03020; padding-left:10px;">
-    <div class="stat-label">r · Cluster B (n=8)</div>
-    <div class="stat-value alert">0.809</div>
-    <div class="stat-sub">Old buildings amplify even mild outdoor heat</div>
-  </div>
-  <div class="stat-block" style="border-left:3px solid #888; padding-left:10px;">
-    <div class="stat-label">r · Cluster C (n=4)</div>
-    <div class="stat-value neutral">0.369</div>
-    <div class="stat-sub">Full AC weakens but doesn't eliminate outdoor link</div>
-  </div>
-  <div class="stat-block" style="border-left:3px solid #7a4010; padding-left:10px;">
-    <div class="stat-label">r · Cluster D (n=9)</div>
-    <div class="stat-value alert">−0.403</div>
-    <div class="stat-sub">High UHI drives chronic indoor heat independent of outdoor peaks</div>
-  </div>
-</div>
-
-<!-- Scatter plots -->
-<h2>Outdoor Days ≥ 90°F vs. Indoor Days Above 78°F by Cluster, 2025</h2>
-<p class="chart-note">
-  Four panels split by facility cluster. X-axis: days outdoor tmax ≥ 90°F (2025). Y-axis: days
-  indoor temperature exceeded 78°F (2025). Axes are shared across panels for comparability. Dashed line
-  marks where indoor days = outdoor days. OLS fit line and r value shown per panel.
-</p>
-<div id="chart-scatter-a"></div>
-<div id="chart-scatter-b"></div>
-<div id="chart-scatter-c"></div>
-<div id="chart-scatter-d"></div>
-
-<!-- Ratio chart -->
-<h2>Ratio of Indoor 78°F Days to Outdoor 90°F Days, 2025</h2>
-<p class="chart-note">
-  Sorted descending. Facilities above the 1.0 reference line have more indoor days above 78°F than outdoor
-  days above 90°F — buildings amplify heat beyond what exterior sensors capture. Facilities with 0 outdoor
-  days are excluded from the ratio calculation (shown separately in the table below).
-  Color encodes mechanical cooling share.
-</p>
-<div id="chart-ratio"></div>
-
-<!-- Key findings -->
-<h2>Key Findings</h2>
-
-<h3>1. Outdoor thresholds miss the majority of indoor overheating</h3>
 <p>
-  The near-zero correlation (r = 0.076) means that using outdoor 90°F days as a proxy for indoor heat risk
-  is unreliable across the CDCR system. Of the 2,921 total indoor facility-days above 78°F recorded
-  system-wide in 2025, the majority occurred at facilities that experienced fewer than 100 outdoor days
-  above 90°F — facilities that would not be flagged as high-risk by exterior temperature monitoring alone.
+  Cluster A, the Thermal Trap, is the only cluster where outdoor temperature significantly predicts indoor
+  heat. The correlation between outdoor and indoor days above 78°F is r = +0.806 (p = 0.016) across these
+  eight facilities. That relationship is detectable at 78°F, but CDCR's Stage I threshold triggers at
+  90°F outdoor — a temperature these facilities averaged only 11 days per year in 2025. PBSP reported 63 indoor days above 78°F despite outdoor temperatures rarely
+  exceeding 65°F. CTF in Salinas and CMC in San Luis Obispo show the same pattern. These are the oldest
+  buildings in the system (avg built 1946), and low UHI scores (avg 0.05) rule out outdoor overnight
+  warming as the mechanism. Building thermal mass likely absorbs solar radiation and releases it slowly,
+  generating indoor heat independently of outdoor peak temperature.
+</p>
+<p>
+  Cluster B, Full Mechanical AC, has refrigerant cooling that keeps indoor temperatures largely independent
+  of outdoor peaks. Five desert-climate facilities averaged 174 outdoor 78°F days and 143 outdoor 90°F
+  days in 2025, but only 68 indoor days above 78°F. The correlation between outdoor and indoor days is r = −0.173
+  (p = 0.78). What outdoor data cannot tell you is whether that independence holds during extreme heat
+  events or whether equipment runs near its limits. CAL in Calipatria reported 137 indoor days despite
+  100% AC coverage — a gap the cluster average obscures.
+</p>
+<p>
+  Cluster C, Predominantly Evaporative Cooling, has no detectable outdoor-indoor relationship (r = +0.104,
+  p = 0.68) across 18 facilities. There are two patterns in the facilities in this cluster: variation
+  in evaporative cooling equipment performance, and urban heat retention at facilities with high urban
+  heat island intensity. Outdoor data cannot distinguish between them.
+</p>
+<ul style="margin: 10px 0 14px 18px; line-height: 1.65; font-size: 13px; color: #1a1a1a;">
+  <li style="margin-bottom: 10px;"><strong>Wide variation between similar facilities:</strong> facilities
+    with similar outdoor climates and the same cooling type show a fourteen-fold range in indoor days above
+    78°F. MCSP logged 11 indoor days against 138 outdoor 78°F days in 2025, while ASP logged 132 indoor
+    days against 162 outdoor. That variation is not visible in outdoor temperature records.</li>
+  <li><strong>Potential heat retention at high-UHI facilities:</strong> SOL, COR, NKSP, SATF, CIW, and others
+    within the cluster are in areas with high urban heat island effects. Urban surfaces likely retain heat
+    overnight, raising the indoor baseline the next day regardless of outdoor peaks. Outdoor overnight
+    temperature minimums carry no explanatory power within the high-UHI subset (see methodology), pointing
+    to structural heat retention that outdoor data cannot measure.</li>
+</ul>
+
+<h2>What indoor monitoring would add</h2>
+
+<p>
+  For Cluster A, the Thermal Trap, outdoor 78°F days significantly predict indoor exposure (r = +0.806,
+  p = 0.016), so continuous monitoring at the 85°F indoor trigger would better identify at-risk days
+  than CDCR's 90°F outdoor operational threshold — which triggers near-zero times per year at PBSP, CTF,
+  CMC, and SQ.
+</p>
+<p>
+  For Cluster B, Full Mechanical AC, monitoring would quantify what AC protection actually delivers
+  day-to-day. ISP had 1 reported indoor day above 78°F against 192 outdoor 90°F days, but continuous
+  data would show near-misses, fluctuations during peak events, and how close equipment runs to its
+  limits. CAL reported 137 indoor days despite 100% AC coverage; continuous data would show whether that
+  reflects equipment failures, specific buildings within the facility, or sustained overload during
+  extreme heat.
+</p>
+<p>
+  For Cluster C, Predominantly Evaporative Cooling, monitoring would distinguish between the two
+  mechanisms that outdoor data cannot separate. At facilities where the primary driver is cooling
+  equipment performance, indoor sensors would show whether evaporative systems are working and whether
+  they degrade during heat events — information the fourteen-fold variation in indoor outcomes across
+  similar outdoor climates makes clear is unavailable. At facilities where urban heat retention is the
+  likely mechanism, continuous data would show whether indoor temperatures recover overnight or stay
+  elevated, capturing the cumulative heat load that daily threshold counts miss. Both questions require
+  the same instrument: sensors inside the building.
 </p>
 
-<h3>2. Coastal and inland valley facilities show the most severe indoor-to-outdoor ratios</h3>
+<p class="backmatter-divider">Methodology</p>
+
 <p>
-  Five facilities — all located in coastal or mild-inland climates — recorded indoor overheating at
-  20× or more the rate implied by outdoor temperatures:
+  Indoor temperature data comes from the CDCR Air Cooling Pilot Program Supplemental Report (January 2026,
+  Table 1), which reports the number of days each housing unit type exceeded 78°F between May and October
+  2025. Outdoor temperature data comes from gridMET daily maximum temperature (tmmx), extracted at each
+  facility's coordinates for the same window. Outdoor days above 78°F and above 90°F were computed from
+  daily facility-level records. Facility attributes — elevation, normalized UHI intensity, census tract
+  hot-nights percentage, year opened, and mechanical and evaporative cooling shares — come from CDCR
+  facility records, EPA EnviroAtlas / NLCD 2019, CalEnviroScreen 4.0, USGS National Elevation Dataset,
+  and the CDCR Air Cooling Supplemental Report Table 2.
 </p>
-<table>
+<p>
+  Facilities were grouped using k-means (k=3) applied to nine standardized (z-score) features: year
+  opened, percent mechanical AC, percent evaporative cooling, outdoor days above 78°F, indoor days above
+  78°F, normalized UHI, elevation (m), latitude, and census tract hot-nights percentage. Two facilities
+  (CCI, PVSP) had missing UHI values and were assigned 0.0 before standardization. The random seed was
+  set to 0. k=3 was selected based on the elbow plot (see analysis/elbow_kmeans.png); the largest
+  percentage drop in within-cluster sum of squares occurs at k=3→4 (24.3%), but k=3 produces more
+  interpretable groupings and avoids splitting the evaporative cooling and urban heat retention facilities
+  into separate clusters when their monitoring implications can be addressed together. PCA was applied to
+  the same standardized feature matrix for visualization; PC1 and PC2 together explain 47.5% of variance.
+</p>
+<p>
+  Pearson r between indoor 78°F days and outdoor temperature variables was computed within each cluster and
+  system-wide. Cluster A (Thermal Trap, n=8) is the only cluster with a statistically significant
+  correlation (r = +0.806, p = 0.016, two-tailed). All other cluster-level r values are descriptive;
+  sample sizes of 5–18 are too small for reliable inference on the non-significant results. Outdoor
+  overnight minimum temperature (gridMET tmin, May–October 2025) was separately tested as a predictor of
+  indoor days within the high-UHI subset of Cluster C to assess whether overnight outdoor conditions could
+  explain the indoor-outdoor divergence observed there. Average overnight tmin correlates with indoor days
+  at r = +0.001 and nights above 65°F at r = −0.284; neither is statistically significant.
+</p>
+
+<p class="section-label">Cluster assignments</p>
+
+<table style="margin-top:10px;">
   <thead>
     <tr>
-      <th>Facility</th><th>Location</th><th>Outdoor 90°F days</th><th>Indoor 78°F days</th><th>Ratio</th><th>Mech. AC</th>
+      <th style="width:38%">Variable (cluster mean)</th>
+      <th style="text-align:right; color:#b03020;">Cluster A<br>Thermal Trap<br><span style="font-weight:normal;">(n=8)</span></th>
+      <th style="text-align:right; color:#666;">Cluster B<br>Full Mech. AC<br><span style="font-weight:normal;">(n=5)</span></th>
+      <th style="text-align:right; color:#333;">Cluster C<br>Evaporative<br><span style="font-weight:normal;">(n=18)</span></th>
     </tr>
   </thead>
   <tbody>
-    <tr class="highlight">
-      <td>RJD — R.J. Donovan</td><td>San Diego (coastal)</td><td>2</td><td>114</td><td class="ratio-high">57×</td><td>35%</td>
-    </tr>
-    <tr class="highlight">
-      <td>SQ — San Quentin</td><td>Marin County (Bay Area)</td><td>1</td><td>41</td><td class="ratio-high">41×</td><td>0%</td>
-    </tr>
-    <tr class="highlight">
-      <td>CMC — Cal. Men's Colony</td><td>San Luis Obispo</td><td>1</td><td>33</td><td class="ratio-high">33×</td><td>19%</td>
-    </tr>
-    <tr class="highlight">
-      <td>CCI — Cal. Correctional Inst.</td><td>Tehachapi</td><td>4</td><td>115</td><td class="ratio-high">29×</td><td>5%</td>
-    </tr>
-    <tr class="highlight">
-      <td>CTF — Correctional Training Fac.</td><td>Salinas</td><td>3</td><td>60</td><td class="ratio-high">20×</td><td>0%</td>
-    </tr>
+    <tr><td>Facilities</td><td style="text-align:right; font-size:10.5px; color:#555;">CCI CMC CTF FOL<br>PBSP RJD SQ SVSP</td><td style="text-align:right; font-size:10.5px; color:#555;">CAL CEN CHCF<br>CIM ISP</td><td style="text-align:right; font-size:10.5px; color:#555;">ASP CCWF CIW CMF COR CRC HDSP KVSP LAC MCSP NKSP PVSP SAC SATF SCC SOL VSP WSP</td></tr>
+    <tr><td>Outdoor days above 78°F (avg)</td><td style="text-align:right">54</td><td style="text-align:right">174</td><td style="text-align:right">155</td></tr>
+    <tr><td>Outdoor days above 90°F (avg)</td><td style="text-align:right">11</td><td style="text-align:right">143</td><td style="text-align:right">88</td></tr>
+    <tr><td>Indoor days above 78°F (avg)</td><td style="text-align:right">73</td><td style="text-align:right">68</td><td style="text-align:right">111</td></tr>
+    <tr><td>Mechanical AC share (avg)</td><td style="text-align:right">12%</td><td style="text-align:right">89%</td><td style="text-align:right">9%</td></tr>
+    <tr><td>Evaporative cooling share (avg)</td><td style="text-align:right">9%</td><td style="text-align:right">0%</td><td style="text-align:right">73%</td></tr>
+    <tr><td>Year opened (avg)</td><td style="text-align:right">1946</td><td style="text-align:right">1987</td><td style="text-align:right">1984</td></tr>
+    <tr><td>Elevation (avg, m)</td><td style="text-align:right">223</td><td style="text-align:right">58</td><td style="text-align:right">196</td></tr>
+    <tr><td>Normalized UHI (avg)</td><td style="text-align:right">0.05</td><td style="text-align:right">0.27</td><td style="text-align:right">0.29</td></tr>
+    <tr><td>Latitude (avg)</td><td style="text-align:right">37.8°N</td><td style="text-align:right">34.3°N</td><td style="text-align:right">36.1°N</td></tr>
+    <tr><td>Hot nights, census tract % (avg)</td><td style="text-align:right">3.7%</td><td style="text-align:right">6.1%</td><td style="text-align:right">7.1%</td></tr>
+    <tr><td>r (in78 vs out78)</td><td style="text-align:right; color:#b03020; font-weight:bold;">+0.806 (p=0.016) ✓</td><td style="text-align:right">−0.173 (p=0.78)</td><td style="text-align:right">+0.104 (p=0.68)</td></tr>
   </tbody>
 </table>
-<p style="margin-top:10px;">
-  These facilities would not trigger any outdoor-threshold-based heat emergency plan, yet incarcerated
-  people inside experienced heat above 78°F for 33–115 days in 2025. Solar gain, thermal mass, and poor
-  ventilation in aging building stock appear to drive indoor overheating largely independently of outdoor
-  peak temperatures.
-</p>
 
-<h3>3. Mechanical AC is the only reliable mitigation</h3>
-<p>
-  Fully air-conditioned facilities show a clear protective effect. ISP (192 outdoor days ≥ 90°F, 100% AC)
-  recorded just 1 indoor day above 78°F. CHCF (75 outdoor days, 100% AC) recorded 0. CEN (194 outdoor days,
-  100% AC) recorded 42 — high in absolute terms, but a ratio of just 0.22 compared to its extreme outdoor
-  heat burden.
+<p class="section-label">PCA biplot: PC1 vs. PC2</p>
+<p class="chart-note">
+  PC1 (25.8%): left = mild outdoor climate and old buildings; right = hot outdoor climate.
+  PC2 (21.7%): bottom = no AC, mild or cool climate; top = full mechanical AC, desert heat.
 </p>
-<p>
-  Evaporative cooling does not provide equivalent protection. COR (0% mechanical, 100% evaporative)
-  recorded 159 indoor days — a ratio of 1.43 relative to its 111 outdoor days. ASP, SATF, WSP, and NKSP,
-  all predominantly evaporative, recorded indoor days at or above their outdoor counts.
-</p>
+<div id="chart-pca"></div>
 
-<h3>4. CMF is a notable anomaly</h3>
-<p>
-  California Medical Facility (CMF) has 53% mechanical cooling yet recorded 135 indoor days above 78°F
-  against only 54 outdoor days (ratio 2.50). This is the highest ratio among facilities with majority
-  mechanical cooling and warrants further investigation — possible explanations include uneven distribution
-  of AC units across housing types, measurement methodology differences in the CDCR report, or a mismatch
-  between the housing units counted as "mechanical" and the units where temperature was recorded.
-</p>
+<p class="chart-note"><strong>Indoor-outdoor correlations.</strong> Pearson r between indoor days above 78°F and outdoor days above the listed threshold, by cluster. The system-wide r values are not meaningful on their own: mixing facilities with full AC, evaporative-only cooling, and no mechanical cooling produces a number that describes nothing in particular. Both the matched threshold (78°F) and the CDCR Stage I threshold (90°F) are shown. Cluster A is the only cluster with a statistically significant result (p = 0.016). All other cluster-level r values are descriptive; sample sizes of 5–18 do not support reliable inference on the non-significant results.</p>
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">All 31 facilities</div>
+    <div class="stat-value neutral">0.321</div>
+    <div class="stat-sub">in78 vs out78 (matched) · p = 0.078</div>
+    <div class="stat-sub" style="margin-top:4px; color:#aaa;">0.076 vs out90 (CDCR Stage I threshold) · p = 0.68</div>
+  </div>
+  <div class="stat-block" style="border-left:3px solid #b03020; padding-left:10px;">
+    <div class="stat-label">Cluster A · Thermal Trap (n=8)</div>
+    <div class="stat-value alert">+0.806</div>
+    <div class="stat-sub">in78 vs out78 · p = 0.016 ✓</div>
+    <div class="stat-sub" style="margin-top:4px; color:#aaa;">+0.672 vs out90 · p = 0.068</div>
+  </div>
+  <div class="stat-block" style="border-left:3px solid #888; padding-left:10px;">
+    <div class="stat-label">Cluster B · Full Mechanical AC (n=5)</div>
+    <div class="stat-value neutral">−0.173</div>
+    <div class="stat-sub">in78 vs out78 · p = 0.78</div>
+    <div class="stat-sub" style="margin-top:4px; color:#aaa;">−0.205 vs out90 · p = 0.74</div>
+  </div>
+  <div class="stat-block" style="border-left:3px solid #555; padding-left:10px;">
+    <div class="stat-label">Cluster C · Evaporative Cooling (n=18)</div>
+    <div class="stat-value neutral">+0.104</div>
+    <div class="stat-sub">in78 vs out78 · p = 0.68</div>
+    <div class="stat-sub" style="margin-top:4px; color:#aaa;">−0.060 vs out90 · p = 0.81</div>
+  </div>
+</div>
 
-<!-- Full data table -->
-<h2>Full Data Table</h2>
-<p class="chart-note">Sorted by ratio descending. PBSP had 0 outdoor days ≥ 90°F in 2025; ratio not calculable.</p>
+<p class="chart-note"><strong>Overnight temperature correlations — high-UHI subset of Cluster C (gridMET tmin, May–Oct 2025).</strong> Pearson r between gridMET daily minimum temperature variables and indoor 78°F days, tested within the high-UHI facilities in Cluster C (former k=4 Cluster D: CIM CIW CMF COR CRC NKSP SATF SOL WSP, n=9) to assess whether outdoor overnight warming could explain the indoor-outdoor divergence at urban-heat-island facilities. None are significant.</p>
+<div class="summary-stats">
+  <div class="stat-block" style="border-left:3px solid #555; padding-left:10px;">
+    <div class="stat-label">High-UHI subset of Cluster C (n=9)</div>
+    <div class="stat-value neutral">+0.001</div>
+    <div class="stat-sub">in78 vs avg overnight tmin · p = 1.00</div>
+    <div class="stat-sub" style="margin-top:4px; color:#aaa;">−0.284 vs nights above 65°F · p = 0.46</div>
+  </div>
+</div>
+
+<p class="section-label">Outdoor days above 78°F vs. indoor days above 78°F by cluster</p>
+<p class="chart-note">
+  Three panels split by facility cluster. X-axis: outdoor days with tmax above 78°F (2025, May–Oct).
+  Y-axis: indoor housing-unit days above 78°F (2025). Axes are shared across panels. Dashed line marks
+  indoor = outdoor. OLS fit line and r value shown per panel.
+</p>
+<div id="chart-scatter-0"></div>
+<div id="chart-scatter-1"></div>
+<div id="chart-scatter-2"></div>
+
+<p class="section-label">Ratio of indoor 78°F days to outdoor 78°F days, 2025</p>
+<p class="chart-note">
+  Sorted descending. Facilities above the 1.0 line have more indoor days above 78°F than outdoor days above
+  78°F. Color encodes mechanical cooling share (dark = less AC, light = more AC).
+  PBSP (4 outdoor days, 63 indoor) is included but its bar extends well beyond the others.
+</p>
+<div id="chart-ratio"></div>
+
+<p class="section-label">Full data table</p>
+<p class="chart-note">Sorted by indoor-to-outdoor ratio (out78) descending.</p>
 <div id="table-container"></div>
 
 <p class="source">
   Indoor 78°F days: CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 1).<br>
-  Outdoor 90°F days: gridMET daily maximum temperature (tmmx), University of Idaho / Northwest Knowledge Network, 2025.<br>
+  Outdoor temperature: gridMET daily maximum temperature (tmmx), University of Idaho / Northwest Knowledge Network, 2025. Days above 78°F and 90°F computed from daily facility-level records (May–October).<br>
+  UHI: Urban Heat Island intensity (normalized), EPA EnviroAtlas / NLCD 2019, computed at census tract level.<br>
+  Hot nights: CalEnviroScreen 4.0 / OEHHA, "percent of nights above heat threshold" at census tract level.<br>
+  Elevation: USGS National Elevation Dataset (EPQS API), 2025.<br>
   Mechanical cooling share: CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2).<br>
+  AB 2499 (2026): California Legislature, introduced February 20, 2026. Sets 85°F as the reporting threshold for the indoor monitoring pilot; data in this report uses 78°F per CDCR's January 2026 reporting.<br>
   Analysis: California Prison Climate Justice, UC Berkeley DCRP, 2026.
 </p>
 
@@ -343,68 +515,65 @@
 // ── Data ──────────────────────────────────────────────────────────────────────
 
 const data = [
-  { code:"RJD",  name:"R.J. Donovan Correctional Facility",        pop:3592,  d90:2,   d78:114, ref:0.3478, evap:0.0,    vent:0.6522 },
-  { code:"SQ",   name:"San Quentin State Prison",                  pop:2688,  d90:1,   d78:41,  ref:0.0,    evap:0.0,    vent:1.0    },
-  { code:"CMC",  name:"California Men's Colony",                   pop:2172,  d90:1,   d78:33,  ref:0.1875, evap:0.0,    vent:0.8125 },
-  { code:"CCI",  name:"California Correctional Institution",       pop:2434,  d90:4,   d78:115, ref:0.0455, evap:0.0,    vent:0.9545 },
-  { code:"CTF",  name:"Correctional Training Facility",            pop:4225,  d90:3,   d78:60,  ref:0.0,    evap:0.0455, vent:0.9545 },
-  { code:"SOL",  name:"California State Prison, Solano",           pop:3735,  d90:54,  d78:159, ref:0.16,   evap:0.24,   vent:0.6    },
-  { code:"CMF",  name:"California Medical Facility",               pop:2045,  d90:54,  d78:135, ref:0.5283, evap:0.4717, vent:0.0    },
-  { code:"CRC",  name:"California Rehabilitation Center",          pop:2330,  d90:66,  d78:149, ref:0.0833, evap:0.0278, vent:0.8889 },
-  { code:"FOL",  name:"Folsom State Prison",                       pop:2777,  d90:71,  d78:158, ref:0.25,   evap:0.75,   vent:0.0    },
-  { code:"SCC",  name:"Sierra Conservation Center",                pop:4035,  d90:70,  d78:154, ref:0.0,    evap:0.0617, vent:0.9383 },
-  { code:"CIM",  name:"California Institution for Men",            pop:2274,  d90:74,  d78:161, ref:0.4286, evap:0.0,    vent:0.5714 },
-  { code:"SAC",  name:"California State Prison, Sacramento",       pop:2131,  d90:67,  d78:133, ref:0.08,   evap:0.92,   vent:0.0    },
-  { code:"CIW",  name:"California Institution for Women",          pop:1187,  d90:77,  d78:150, ref:0.3636, evap:0.6364, vent:0.0    },
-  { code:"HDSP", name:"High Desert State Prison",                  pop:2719,  d90:59,  d78:89,  ref:0.0345, evap:0.9655, vent:0.0    },
-  { code:"COR",  name:"California State Prison, Corcoran",         pop:2629,  d90:111, d78:159, ref:0.0,    evap:1.0,    vent:0.0    },
-  { code:"ASP",  name:"Avenal State Prison",                       pop:3891,  d90:110, d78:132, ref:0.0,    evap:1.0,    vent:0.0    },
-  { code:"SATF", name:"Substance Abuse Treatment Facility",        pop:5860,  d90:111, d78:133, ref:0.0625, evap:1.0313, vent:0.0    },
-  { code:"NKSP", name:"North Kern State Prison",                   pop:2570,  d90:114, d78:134, ref:0.04,   evap:0.96,   vent:0.0    },
-  { code:"WSP",  name:"Wasco State Prison",                        pop:3676,  d90:124, d78:136, ref:0.0,    evap:1.0,    vent:0.0    },
-  { code:"CCWF", name:"Central California Women's Facility",       pop:2040,  d90:92,  d78:97,  ref:0.0,    evap:1.0,    vent:0.0    },
-  { code:"PVSP", name:"Pleasant Valley State Prison",              pop:2992,  d90:111, d78:67,  ref:0.0435, evap:0.9565, vent:0.0    },
-  { code:"KVSP", name:"Kern Valley State Prison",                  pop:3092,  d90:114, d78:66,  ref:0.1,    evap:0.0,    vent:0.9    },
-  { code:"VSP",  name:"Valley State Prison",                       pop:3148,  d90:92,  d78:52,  ref:0.0,    evap:1.0,    vent:0.0    },
-  { code:"CAL",  name:"Calipatria State Prison",                   pop:2462,  d90:179, d78:137, ref:1.0,    evap:0.0,    vent:0.0    },
-  { code:"CEN",  name:"Centinela State Prison",                    pop:2984,  d90:194, d78:42,  ref:1.0,    evap:0.0,    vent:0.0    },
-  { code:"LAC",  name:"California State Prison, Los Angeles Co.",  pop:2949,  d90:104, d78:39,  ref:0.0455, evap:0.9545, vent:0.0    },
-  { code:"SVSP", name:"Salinas Valley State Prison",               pop:2387,  d90:3,   d78:1,   ref:0.1304, evap:0.8696, vent:0.0    },
-  { code:"MCSP", name:"Mule Creek State Prison",                   pop:3761,  d90:56,  d78:11,  ref:0.1364, evap:0.8636, vent:0.0    },
-  { code:"ISP",  name:"Ironwood State Prison",                     pop:2764,  d90:192, d78:1,   ref:1.0,    evap:0.0,    vent:0.0    },
-  { code:"CHCF", name:"California Health Care Facility",           pop:2251,  d90:75,  d78:0,   ref:1.0,    evap:0.0,    vent:0.0    },
-  { code:"PBSP", name:"Pelican Bay State Prison",                  pop:2096,  d90:0,   d78:63,  ref:0.0345, evap:0.0,    vent:0.9655 },
+  { code:"RJD",  name:"R.J. Donovan Correctional Facility",        pop:3592,  d90:2,   d78out:59,  d78:114, ref:0.3478, evap:0.0,    vent:0.6522, yr:1987, elev:180,  uhi:0.000, hotn:5.2,  lat:32.58 },
+  { code:"SQ",   name:"San Quentin State Prison",                  pop:2688,  d90:1,   d78out:29,  d78:41,  ref:0.0,    evap:0.0,    vent:1.0,    yr:1852, elev:1,    uhi:0.000, hotn:6.0,  lat:37.94 },
+  { code:"CMC",  name:"California Men's Colony",                   pop:2172,  d90:1,   d78out:47,  d78:33,  ref:0.1875, evap:0.0,    vent:0.8125, yr:1961, elev:125,  uhi:0.070, hotn:0.0,  lat:35.32 },
+  { code:"CCI",  name:"California Correctional Institution",       pop:2434,  d90:4,   d78out:90,  d78:115, ref:0.0455, evap:0.0,    vent:0.9545, yr:1954, elev:1192, uhi:0.000, hotn:9.0,  lat:35.11 },
+  { code:"CTF",  name:"Correctional Training Facility",            pop:4225,  d90:3,   d78out:31,  d78:60,  ref:0.0,    evap:0.0455, vent:0.9545, yr:1946, elev:65,   uhi:0.000, hotn:4.2,  lat:36.47 },
+  { code:"SOL",  name:"California State Prison, Solano",           pop:3735,  d90:54,  d78out:146, d78:159, ref:0.16,   evap:0.24,   vent:0.6,    yr:1984, elev:42,   uhi:0.582, hotn:6.5,  lat:38.32 },
+  { code:"CMF",  name:"California Medical Facility",               pop:2045,  d90:54,  d78out:146, d78:135, ref:0.5283, evap:0.4717, vent:0.0,    yr:1955, elev:43,   uhi:0.582, hotn:6.5,  lat:38.33 },
+  { code:"CRC",  name:"California Rehabilitation Center",          pop:2330,  d90:66,  d78out:155, d78:149, ref:0.0833, evap:0.0278, vent:0.8889, yr:1962, elev:199,  uhi:0.571, hotn:5.8,  lat:33.93 },
+  { code:"FOL",  name:"Folsom State Prison",                       pop:2777,  d90:71,  d78out:144, d78:158, ref:0.25,   evap:0.75,   vent:0.0,    yr:1880, elev:83,   uhi:0.000, hotn:6.5,  lat:38.70 },
+  { code:"SCC",  name:"Sierra Conservation Center",                pop:4035,  d90:70,  d78out:148, d78:154, ref:0.0,    evap:0.0617, vent:0.9383, yr:1965, elev:329,  uhi:0.000, hotn:8.6,  lat:37.89 },
+  { code:"CIM",  name:"California Institution for Men",            pop:2274,  d90:74,  d78out:162, d78:161, ref:0.4286, evap:0.0,    vent:0.5714, yr:1941, elev:189,  uhi:1.000, hotn:5.5,  lat:33.98 },
+  { code:"SAC",  name:"California State Prison, Sacramento",       pop:2131,  d90:67,  d78out:143, d78:133, ref:0.08,   evap:0.92,   vent:0.0,    yr:1986, elev:117,  uhi:0.000, hotn:6.5,  lat:38.69 },
+  { code:"CIW",  name:"California Institution for Women",          pop:1187,  d90:77,  d78out:164, d78:150, ref:0.3636, evap:0.6364, vent:0.0,    yr:1952, elev:173,  uhi:0.605, hotn:5.5,  lat:33.95 },
+  { code:"HDSP", name:"High Desert State Prison",                  pop:2719,  d90:59,  d78out:128, d78:89,  ref:0.0345, evap:0.9655, vent:0.0,    yr:1995, elev:1267, uhi:0.041, hotn:9.0,  lat:40.41 },
+  { code:"COR",  name:"California State Prison, Corcoran",         pop:2629,  d90:111, d78out:163, d78:159, ref:0.0,    evap:1.0,    vent:0.0,    yr:1988, elev:55,   uhi:0.578, hotn:8.7,  lat:36.06 },
+  { code:"ASP",  name:"Avenal State Prison",                       pop:3891,  d90:110, d78out:162, d78:132, ref:0.0,    evap:1.0,    vent:0.0,    yr:1987, elev:235,  uhi:0.000, hotn:7.3,  lat:35.97 },
+  { code:"SATF", name:"Substance Abuse Treatment Facility",        pop:5860,  d90:111, d78out:163, d78:133, ref:0.0625, evap:1.0313, vent:0.0,    yr:1997, elev:55,   uhi:0.601, hotn:8.7,  lat:36.05 },
+  { code:"NKSP", name:"North Kern State Prison",                   pop:2570,  d90:114, d78out:162, d78:134, ref:0.04,   evap:0.96,   vent:0.0,    yr:1993, elev:78,   uhi:0.628, hotn:7.4,  lat:35.78 },
+  { code:"WSP",  name:"Wasco State Prison",                        pop:3676,  d90:124, d78out:166, d78:136, ref:0.0,    evap:1.0,    vent:0.0,    yr:1991, elev:88,   uhi:0.484, hotn:6.8,  lat:35.59 },
+  { code:"CCWF", name:"Central California Women's Facility",       pop:2040,  d90:92,  d78out:162, d78:97,  ref:0.0,    evap:1.0,    vent:0.0,    yr:1990, elev:85,   uhi:0.091, hotn:7.4,  lat:37.09 },
+  { code:"PVSP", name:"Pleasant Valley State Prison",              pop:2992,  d90:111, d78out:163, d78:67,  ref:0.0435, evap:0.9565, vent:0.0,    yr:1994, elev:173,  uhi:0.000, hotn:6.6,  lat:36.13 },
+  { code:"KVSP", name:"Kern Valley State Prison",                  pop:3092,  d90:114, d78out:162, d78:66,  ref:0.1,    evap:0.0,    vent:0.9,    yr:2005, elev:77,   uhi:0.150, hotn:7.5,  lat:35.77 },
+  { code:"VSP",  name:"Valley State Prison",                       pop:3148,  d90:92,  d78out:162, d78:52,  ref:0.0,    evap:1.0,    vent:0.0,    yr:1995, elev:87,   uhi:0.091, hotn:7.4,  lat:37.11 },
+  { code:"CAL",  name:"Calipatria State Prison",                   pop:2462,  d90:179, d78out:181, d78:137, ref:1.0,    evap:0.0,    vent:0.0,    yr:1992, elev:-48,  uhi:0.000, hotn:5.9,  lat:33.17 },
+  { code:"CEN",  name:"Centinela State Prison",                    pop:2984,  d90:194, d78out:184, d78:42,  ref:1.0,    evap:0.0,    vent:0.0,    yr:1993, elev:-4,   uhi:0.000, hotn:6.6,  lat:32.82 },
+  { code:"LAC",  name:"California State Prison, Los Angeles Co.",  pop:2949,  d90:104, d78out:162, d78:39,  ref:0.0455, evap:0.9545, vent:0.0,    yr:1993, elev:716,  uhi:0.000, hotn:12.1, lat:34.69 },
+  { code:"SVSP", name:"Salinas Valley State Prison",               pop:2387,  d90:3,   d78out:31,  d78:1,   ref:0.1304, evap:0.8696, vent:0.0,    yr:1996, elev:88,   uhi:0.000, hotn:4.2,  lat:36.48 },
+  { code:"MCSP", name:"Mule Creek State Prison",                   pop:3761,  d90:56,  d78out:138, d78:11,  ref:0.1364, evap:0.8636, vent:0.0,    yr:1987, elev:98,   uhi:0.263, hotn:7.4,  lat:38.37 },
+  { code:"ISP",  name:"Ironwood State Prison",                     pop:2764,  d90:192, d78out:183, d78:1,   ref:1.0,    evap:0.0,    vent:0.0,    yr:1994, elev:139,  uhi:0.000, hotn:6.6,  lat:33.56 },
+  { code:"CHCF", name:"California Health Care Facility",           pop:2251,  d90:75,  d78out:161, d78:0,   ref:1.0,    evap:0.0,    vent:0.0,    yr:2013, elev:13,   uhi:0.342, hotn:6.1,  lat:37.90 },
+  { code:"PBSP", name:"Pelican Bay State Prison",                  pop:2096,  d90:0,   d78out:4,   d78:63,  ref:0.0345, evap:0.0,    vent:0.9655, yr:1989, elev:30,   uhi:0.310, hotn:0.0,  lat:41.85 },
 ];
 
-// ── Scatter plots (four cluster panels) ───────────────────────────────────────
+// ── Scatter plots (four cluster panels, using outdoor 78°F) ───────────────────
 
 (function() {
-  const cA = ["ASP","CCWF","HDSP","KVSP","LAC","MCSP","PVSP","SAC","SVSP","VSP"];
-  const cB = ["CCI","CMC","CTF","FOL","PBSP","RJD","SCC","SQ"];
-  const cC = ["CAL","CEN","CHCF","ISP"];
-  const cD = ["CIM","CIW","CMF","COR","CRC","NKSP","SATF","SOL","WSP"];
+  const c0 = ["CCI","CMC","CTF","FOL","PBSP","RJD","SQ","SVSP"];
+  const c1 = ["CAL","CEN","CHCF","CIM","ISP"];
+  const c2 = ["ASP","CCWF","CIW","CMF","COR","CRC","HDSP","KVSP","LAC","MCSP","NKSP","PVSP","SAC","SATF","SCC","SOL","VSP","WSP"];
 
   const panels = [
-    { id: "#chart-scatter-a", subset: data.filter(d => cA.includes(d.code)), title: "Cluster A · Evaporative / Manageable Indoors  (n=10)",      r:  0.458, dotColor: "#555"    },
-    { id: "#chart-scatter-b", subset: data.filter(d => cB.includes(d.code)), title: "Cluster B · Thermal Trap: Old Buildings, Mild Climate  (n=8)", r:  0.809, dotColor: "#b03020" },
-    { id: "#chart-scatter-c", subset: data.filter(d => cC.includes(d.code)), title: "Cluster C · Full AC / Climate-Controlled  (n=4)",            r:  0.369, dotColor: "#888"    },
-    { id: "#chart-scatter-d", subset: data.filter(d => cD.includes(d.code)), title: "Cluster D · High UHI / Unresolved Indoor Heat  (n=9)",       r: -0.403, dotColor: "#7a4010" },
+    { id: "#chart-scatter-0", subset: data.filter(d => c0.includes(d.code)), title: "Cluster A · Thermal Trap  (n=8, r=+0.806, p=0.016)",              r:  0.806, dotColor: "#b03020" },
+    { id: "#chart-scatter-1", subset: data.filter(d => c1.includes(d.code)), title: "Cluster B · Full Mechanical AC  (n=5, r=−0.173, p=0.78)",          r: -0.173, dotColor: "#888"    },
+    { id: "#chart-scatter-2", subset: data.filter(d => c2.includes(d.code)), title: "Cluster C · Predominantly Evaporative Cooling  (n=18, r=+0.104, p=0.68)", r:  0.104, dotColor: "#555"    },
   ];
 
-  // Shared axis extents across all panels
-  const maxX = d3.max(data, d => d.d90) * 1.08;
+  const maxX = d3.max(data, d => d.d78out) * 1.08;
   const maxY = d3.max(data, d => d.d78) * 1.08;
 
-  // OLS line: returns [x0, y0, x1, y1] in data space
   function olsLine(pts, xMax) {
     const n = pts.length;
     const mx = pts.reduce((s, p) => s + p[0], 0) / n;
     const my = pts.reduce((s, p) => s + p[1], 0) / n;
-    const slope = pts.reduce((s, p) => s + (p[0]-mx)*(p[1]-my), 0) /
-                  pts.reduce((s, p) => s + (p[0]-mx)**2, 0);
+    const num = pts.reduce((s, p) => s + (p[0]-mx)*(p[1]-my), 0);
+    const den = pts.reduce((s, p) => s + (p[0]-mx)**2, 0);
+    if (den === 0) return [0, my, xMax, my];
+    const slope = num / den;
     const intercept = my - slope * mx;
-    const x0 = 0, x1 = xMax;
-    return [x0, intercept + slope * x0, x1, intercept + slope * x1];
+    return [0, intercept, xMax, intercept + slope * xMax];
   }
 
   const margin = { top: 28, right: 16, bottom: 46, left: 54 };
@@ -413,7 +582,7 @@ const data = [
   const width  = totalW - margin.left - margin.right;
 
   panels.forEach(panel => {
-    const pts = panel.subset.map(d => [d.d90, d.d78]);
+    const pts = panel.subset.map(d => [d.d78out, d.d78]);
 
     const svg = d3.select(panel.id)
       .append("svg")
@@ -427,21 +596,18 @@ const data = [
     const x = d3.scaleLinear().domain([0, maxX]).range([0, width]);
     const y = d3.scaleLinear().domain([0, maxY]).range([height, 0]);
 
-    // Panel title
     svg.append("text")
       .attr("x", width / 2).attr("y", -14)
       .attr("text-anchor", "middle")
       .attr("font-size", "12px").attr("font-weight", "bold").attr("fill", "#222")
       .text(panel.title);
 
-    // Grid
     svg.append("g").attr("class", "grid")
       .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat(""));
     svg.append("g").attr("class", "grid")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x).ticks(6).tickSize(-height).tickFormat(""));
 
-    // y = x reference line
     const refMax = Math.min(maxX, maxY);
     svg.append("line")
       .attr("x1", x(0)).attr("y1", y(0))
@@ -449,7 +615,6 @@ const data = [
       .attr("stroke", "#ccc").attr("stroke-width", 1)
       .attr("stroke-dasharray", "4,3");
 
-    // OLS fit line
     const [lx0, ly0, lx1, ly1] = olsLine(pts, maxX);
     svg.append("line")
       .attr("x1", x(lx0)).attr("y1", y(Math.max(0, ly0)))
@@ -457,45 +622,39 @@ const data = [
       .attr("stroke", "#b03020").attr("stroke-width", 1.5)
       .attr("opacity", 0.7);
 
-    // r annotation
-    const rLabel = `r = ${panel.r >= 0 ? panel.r.toFixed(3) : panel.r.toFixed(3)}`;
     svg.append("text")
       .attr("x", width - 4).attr("y", 12)
       .attr("text-anchor", "end")
       .attr("font-size", "11px").attr("fill", "#b03020")
-      .text(rLabel);
+      .text(`r = ${panel.r.toFixed(3)}`);
 
-    // Axes
     svg.append("g").attr("class", "axis")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x).ticks(6));
     svg.append("g").attr("class", "axis")
       .call(d3.axisLeft(y).ticks(5));
 
-    // Axis labels
     svg.append("text")
       .attr("x", width / 2).attr("y", height + 38)
       .attr("text-anchor", "middle").attr("font-size", "11px").attr("fill", "#555")
-      .text("Days outdoor tmax ≥ 90°F, 2025");
+      .text("Days outdoor tmax above 78°F, 2025 (May–Oct)");
     svg.append("text")
       .attr("transform", "rotate(-90)")
       .attr("x", -height / 2).attr("y", -42)
       .attr("text-anchor", "middle").attr("font-size", "11px").attr("fill", "#555")
-      .text("Days indoor > 78°F, 2025");
+      .text("Days indoor above 78°F, 2025");
 
-    // Dots + labels
     panel.subset.forEach(d => {
       svg.append("circle")
-        .attr("cx", x(d.d90)).attr("cy", y(d.d78))
+        .attr("cx", x(d.d78out)).attr("cy", y(d.d78))
         .attr("r", 5)
         .attr("fill", panel.dotColor)
         .attr("stroke", "#fff").attr("stroke-width", 0.8)
         .attr("opacity", 0.9);
 
-      // Label offset: nudge left if near right edge
-      const nearRight = x(d.d90) > width - 40;
+      const nearRight = x(d.d78out) > width - 40;
       svg.append("text")
-        .attr("x", x(d.d90) + (nearRight ? -7 : 7))
+        .attr("x", x(d.d78out) + (nearRight ? -7 : 7))
         .attr("y", y(d.d78) + 4)
         .attr("text-anchor", nearRight ? "end" : "start")
         .attr("font-size", "10px").attr("fill", "#333")
@@ -504,29 +663,48 @@ const data = [
   });
 })();
 
-// ── Ratio bar chart ───────────────────────────────────────────────────────────
+// ── Ratio bar chart (indoor 78°F days / outdoor 78°F days) ──────────────────
 
 (function() {
-  // Exclude facilities with 0 outdoor days (ratio undefined)
   const ratioData = data
-    .filter(d => d.d90 > 0)
-    .map(d => ({ ...d, ratio: d.d78 / d.d90 }))
+    .filter(d => d.d78out > 0)
+    .map(d => ({ ...d, ratio: d.d78 / d.d78out }))
     .sort((a, b) => b.ratio - a.ratio);
 
-  const colorScale = d3.scaleLinear().domain([0, 1]).range(["#222", "#bbb"]);
+  const segColors = {
+    ref:  "#2d4055",   // dark: refrigeration (AC)
+    evap: "#7a9eba",   // mid: evaporative
+    vent: "#d0c8be"    // light: ventilation only
+  };
 
-  const margin = { top: 8, right: 70, bottom: 48, left: 54 };
+  const margin = { top: 40, right: 70, bottom: 48, left: 54 };
   const rowH   = 18;
   const height = ratioData.length * rowH;
   const width  = 712 - margin.left - margin.right;
 
-  const svg = d3.select("#chart-ratio")
+  const svgEl = d3.select("#chart-ratio")
     .append("svg")
       .attr("viewBox", `0 0 712 ${height + margin.top + margin.bottom}`)
       .attr("width", "100%")
-      .style("display", "block")
-    .append("g")
+      .style("display", "block");
+
+  const svg = svgEl.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // categorical legend at top-left
+  const legendItems = [
+    { key: "ref",  label: "Refrigeration (AC)" },
+    { key: "evap", label: "Evaporative" },
+    { key: "vent", label: "Ventilation only" },
+  ];
+  const leg = svg.append("g").attr("transform", "translate(0,-28)");
+  legendItems.forEach((item, i) => {
+    const g = leg.append("g").attr("transform", `translate(${i * 148}, 0)`);
+    g.append("rect").attr("width", 10).attr("height", 10).attr("y", -1)
+      .attr("fill", segColors[item.key]);
+    g.append("text").attr("x", 14).attr("y", 9)
+      .attr("font-size", "10px").attr("fill", "#333").text(item.label);
+  });
 
   const maxRatio = d3.max(ratioData, d => d.ratio);
   const x = d3.scaleLinear().domain([0, maxRatio * 1.05]).range([0, width]);
@@ -544,7 +722,6 @@ const data = [
     .call(d3.axisLeft(y).tickSize(0))
     .call(g => g.select(".domain").remove());
 
-  // Reference line at ratio = 1
   svg.append("line")
     .attr("x1", x(1)).attr("y1", 0)
     .attr("x2", x(1)).attr("y2", height)
@@ -559,16 +736,31 @@ const data = [
   svg.append("text")
     .attr("x", width / 2).attr("y", height + 42)
     .attr("text-anchor", "middle").attr("font-size", "11px").attr("fill", "#555")
-    .text("Ratio: indoor 78°F days ÷ outdoor 90°F days, 2025");
+    .text("Ratio: indoor 78°F days / outdoor 78°F days, 2025");
 
-  svg.selectAll(".bar")
-    .data(ratioData)
-    .join("rect")
-      .attr("x", 0)
-      .attr("y", d => y(d.code))
-      .attr("width", d => x(d.ratio))
-      .attr("height", y.bandwidth())
-      .attr("fill", d => colorScale(d.ref));
+  // stacked bars: segments proportional to cooling share within each bar
+  ratioData.forEach(d => {
+    const barW = x(d.ratio);
+    const total = d.ref + d.evap + d.vent || 1;
+    const segments = [
+      { key: "ref",  share: d.ref  / total },
+      { key: "evap", share: d.evap / total },
+      { key: "vent", share: d.vent / total },
+    ];
+    let xOff = 0;
+    segments.forEach(seg => {
+      const segW = barW * seg.share;
+      if (segW > 0) {
+        svg.append("rect")
+          .attr("x", xOff)
+          .attr("y", y(d.code))
+          .attr("width", segW)
+          .attr("height", y.bandwidth())
+          .attr("fill", segColors[seg.key]);
+      }
+      xOff += segW;
+    });
+  });
 
   svg.selectAll(".bar-label")
     .data(ratioData)
@@ -582,48 +774,47 @@ const data = [
 // ── PCA biplot ────────────────────────────────────────────────────────────────
 
 (function() {
-  // Pre-computed PCA coords and cluster assignments (k=4, standardized 7 features)
-  // Features: year_opened, pct_ref, pct_evap, outdoor_90f, indoor_78f, uhi, latitude
+  // 9-feature PCA coords: year_opened, pct_ref, pct_evap, out78, in78, uhi, elev, lat, hotnights
+  // k=3 clusters: 0=Thermal Trap, 1=Full Mechanical AC, 2=Predominantly Evaporative Cooling
   const pca = [
-    {code:"ASP",  cluster:0, pc1:-0.251, pc2: 0.878, d90:110, d78:132, ref:0.00, evap:1.00, yr:1987, uhi:0.000},
-    {code:"CAL",  cluster:2, pc1: 3.354, pc2: 0.135, d90:179, d78:137, ref:1.00, evap:0.00, yr:1992, uhi:0.000},
-    {code:"CCI",  cluster:1, pc1:-0.745, pc2:-0.736, d90:  4, d78:115, ref:0.05, evap:0.00, yr:1954, uhi:0.000},
-    {code:"CCWF", cluster:0, pc1:-0.553, pc2: 0.532, d90: 92, d78: 97, ref:0.00, evap:1.00, yr:1990, uhi:0.091},
-    {code:"CEN",  cluster:2, pc1: 3.875, pc2:-0.703, d90:194, d78: 42, ref:1.00, evap:0.00, yr:1993, uhi:0.000},
-    {code:"CHCF", cluster:2, pc1: 1.862, pc2:-1.423, d90: 75, d78:  0, ref:1.00, evap:0.00, yr:2013, uhi:0.342},
-    {code:"CIM",  cluster:3, pc1: 0.429, pc2: 1.438, d90: 74, d78:161, ref:0.43, evap:0.00, yr:1941, uhi:1.000},
-    {code:"CIW",  cluster:3, pc1: 0.236, pc2: 1.333, d90: 77, d78:150, ref:0.36, evap:0.64, yr:1952, uhi:0.605},
-    {code:"CMC",  cluster:1, pc1:-0.213, pc2:-1.944, d90:  1, d78: 33, ref:0.19, evap:0.00, yr:1961, uhi:0.070},
-    {code:"CMF",  cluster:3, pc1:-0.494, pc2: 0.505, d90: 54, d78:135, ref:0.53, evap:0.47, yr:1955, uhi:0.582},
-    {code:"COR",  cluster:3, pc1:-0.460, pc2: 2.264, d90:111, d78:159, ref:0.00, evap:1.00, yr:1988, uhi:0.578},
-    {code:"CRC",  cluster:3, pc1: 0.046, pc2: 0.790, d90: 66, d78:149, ref:0.08, evap:0.03, yr:1962, uhi:0.571},
-    {code:"CTF",  cluster:1, pc1:-1.007, pc2:-1.834, d90:  3, d78: 60, ref:0.00, evap:0.05, yr:1946, uhi:0.000},
-    {code:"FOL",  cluster:1, pc1:-1.655, pc2:-0.421, d90: 71, d78:158, ref:0.25, evap:0.75, yr:1880, uhi:0.000},
-    {code:"HDSP", cluster:0, pc1:-1.440, pc2:-0.075, d90: 59, d78: 89, ref:0.03, evap:0.97, yr:1995, uhi:0.041},
-    {code:"ISP",  cluster:2, pc1: 3.829, pc2:-1.170, d90:192, d78:  1, ref:1.00, evap:0.00, yr:1994, uhi:0.000},
-    {code:"KVSP", cluster:0, pc1: 0.856, pc2:-0.369, d90:114, d78: 66, ref:0.10, evap:0.00, yr:2005, uhi:0.150},
-    {code:"LAC",  cluster:0, pc1: 0.424, pc2:-0.054, d90:104, d78: 39, ref:0.05, evap:0.95, yr:1993, uhi:0.000},
-    {code:"MCSP", cluster:0, pc1:-0.655, pc2:-0.550, d90: 56, d78: 11, ref:0.14, evap:0.86, yr:1987, uhi:0.263},
-    {code:"NKSP", cluster:3, pc1:-0.168, pc2: 2.119, d90:114, d78:134, ref:0.04, evap:0.96, yr:1993, uhi:0.628},
-    {code:"PBSP", cluster:1, pc1:-1.848, pc2:-1.300, d90:  0, d78: 63, ref:0.03, evap:0.00, yr:1989, uhi:0.310},
-    {code:"PVSP", cluster:0, pc1: 0.035, pc2: 0.662, d90:111, d78: 67, ref:0.04, evap:0.96, yr:1994, uhi:0.000},
-    {code:"RJD",  cluster:1, pc1: 0.680, pc2:-0.971, d90:  2, d78:114, ref:0.35, evap:0.00, yr:1987, uhi:0.000},
-    {code:"SAC",  cluster:0, pc1:-1.086, pc2: 0.318, d90: 67, d78:133, ref:0.08, evap:0.92, yr:1986, uhi:0.000},
-    {code:"SATF", cluster:3, pc1:-0.209, pc2: 2.111, d90:111, d78:133, ref:0.06, evap:1.03, yr:1997, uhi:0.601},
-    {code:"SCC",  cluster:1, pc1:-0.830, pc2:-0.363, d90: 70, d78:154, ref:0.00, evap:0.06, yr:1965, uhi:0.000},
-    {code:"SOL",  cluster:3, pc1:-0.856, pc2: 0.905, d90: 54, d78:159, ref:0.16, evap:0.24, yr:1984, uhi:0.582},
-    {code:"SQ",   cluster:1, pc1:-2.086, pc2:-2.856, d90:  1, d78: 41, ref:0.00, evap:0.00, yr:1852, uhi:0.000},
-    {code:"SVSP", cluster:0, pc1:-0.581, pc2:-1.319, d90:  3, d78:  1, ref:0.13, evap:0.87, yr:1996, uhi:0.000},
-    {code:"VSP",  cluster:0, pc1:-0.372, pc2: 0.110, d90: 92, d78: 52, ref:0.00, evap:1.00, yr:1995, uhi:0.091},
-    {code:"WSP",  cluster:3, pc1:-0.117, pc2: 1.987, d90:124, d78:136, ref:0.00, evap:1.00, yr:1991, uhi:0.484},
+    {code:"ASP",  cluster:2, pc1: 1.258, pc2:-0.639},
+    {code:"CAL",  cluster:1, pc1:-0.241, pc2: 3.010},
+    {code:"CCI",  cluster:0, pc1: 0.315, pc2:-1.404},
+    {code:"CCWF", cluster:2, pc1: 1.023, pc2:-0.663},
+    {code:"CEN",  cluster:1, pc1:-0.559, pc2: 3.055},
+    {code:"CHCF", cluster:1, pc1:-0.946, pc2: 2.072},
+    {code:"CIM",  cluster:1, pc1: 0.331, pc2: 1.779},
+    {code:"CIW",  cluster:2, pc1: 0.706, pc2: 1.069},
+    {code:"CMC",  cluster:0, pc1:-3.394, pc2:-0.045},
+    {code:"CMF",  cluster:2, pc1: 0.200, pc2: 0.470},
+    {code:"COR",  cluster:2, pc1: 2.050, pc2:-0.117},
+    {code:"CRC",  cluster:2, pc1: 0.268, pc2: 0.904},
+    {code:"CTF",  cluster:0, pc1:-2.511, pc2:-0.977},
+    {code:"FOL",  cluster:0, pc1:-0.221, pc2:-1.171},
+    {code:"HDSP", cluster:2, pc1: 1.625, pc2:-2.845},
+    {code:"ISP",  cluster:1, pc1:-0.749, pc2: 2.740},
+    {code:"KVSP", cluster:2, pc1: 0.062, pc2: 0.628},
+    {code:"LAC",  cluster:2, pc1: 2.184, pc2:-0.823},
+    {code:"MCSP", cluster:2, pc1: 0.159, pc2:-0.689},
+    {code:"NKSP", cluster:2, pc1: 1.632, pc2: 0.113},
+    {code:"PBSP", cluster:0, pc1:-3.524, pc2:-1.705},
+    {code:"PVSP", cluster:2, pc1: 0.658, pc2:-0.432},
+    {code:"RJD",  cluster:0, pc1:-1.375, pc2: 0.855},
+    {code:"SAC",  cluster:2, pc1: 0.601, pc2:-1.052},
+    {code:"SATF", cluster:2, pc1: 1.981, pc2: 0.045},
+    {code:"SCC",  cluster:2, pc1: 0.491, pc2:-0.796},
+    {code:"SOL",  cluster:2, pc1: 0.461, pc2: 0.110},
+    {code:"SQ",   cluster:0, pc1:-3.012, pc2:-1.796},
+    {code:"SVSP", cluster:0, pc1:-1.761, pc2:-1.038},
+    {code:"VSP",  cluster:2, pc1: 0.792, pc2:-0.638},
+    {code:"WSP",  cluster:2, pc1: 1.499, pc2:-0.018},
   ];
 
-  const clusterColors = { 0:"#555", 1:"#b03020", 2:"#888", 3:"#7a4010" };
+  const clusterColors = { 0:"#b03020", 1:"#888", 2:"#555" };
   const clusterLabels = {
-    0: "A: Evaporative / Manageable Indoors",
-    1: "B: Thermal Trap",
-    2: "C: Full AC / Climate-Controlled",
-    3: "D: High UHI / Unresolved Indoor Heat"
+    0: "A: Thermal Trap",
+    1: "B: Full Mechanical AC",
+    2: "C: Predominantly Evaporative Cooling"
   };
 
   const margin = { top: 20, right: 160, bottom: 50, left: 54 };
@@ -644,32 +835,28 @@ const data = [
   const x = d3.scaleLinear().domain([xExt[0]-pad, xExt[1]+pad]).range([0, width]);
   const y = d3.scaleLinear().domain([yExt[0]-pad, yExt[1]+pad]).range([height, 0]);
 
-  // Grid
   svg.append("g").attr("class", "grid")
     .call(d3.axisLeft(y).ticks(6).tickSize(-width).tickFormat(""));
   svg.append("g").attr("class", "grid")
     .attr("transform", `translate(0,${height})`)
     .call(d3.axisBottom(x).ticks(6).tickSize(-height).tickFormat(""));
 
-  // Zero lines
   svg.append("line").attr("x1",x(0)).attr("y1",0).attr("x2",x(0)).attr("y2",height)
     .attr("stroke","#ccc").attr("stroke-width",1);
   svg.append("line").attr("x1",0).attr("y1",y(0)).attr("x2",width).attr("y2",y(0))
     .attr("stroke","#ccc").attr("stroke-width",1);
 
-  // Axes
   svg.append("g").attr("class","axis").attr("transform",`translate(0,${height})`)
     .call(d3.axisBottom(x).ticks(6));
   svg.append("g").attr("class","axis").call(d3.axisLeft(y).ticks(6));
 
   svg.append("text").attr("x",width/2).attr("y",height+40)
     .attr("text-anchor","middle").attr("font-size","11px").attr("fill","#555")
-    .text("PC1 (26% variance) — left: outdoor heat / evaporative   →   right: older building / high health need");
+    .text("PC1 (25.8% variance) — left: mild climate / old buildings   →   right: hot outdoor climate");
   svg.append("text").attr("transform","rotate(-90)").attr("x",-height/2).attr("y",-42)
     .attr("text-anchor","middle").attr("font-size","11px").attr("fill","#555")
-    .text("PC2 (23% variance) — bottom: vent-only / mild climate   →   top: full AC / desert heat");
+    .text("PC2 (21.7% variance) — bottom: no AC / mild climate   →   top: full AC / desert heat");
 
-  // Dots
   pca.forEach(d => {
     svg.append("circle")
       .attr("cx", x(d.pc1)).attr("cy", y(d.pc2))
@@ -687,27 +874,32 @@ const data = [
       .text(d.code);
   });
 
-  // Legend
   const lg = svg.append("g").attr("transform",`translate(${width+12},0)`);
   Object.entries(clusterLabels).forEach(([k, label], i) => {
     const g = lg.append("g").attr("transform",`translate(0,${i*22})`);
     g.append("circle").attr("cx",5).attr("cy",5).attr("r",5)
       .attr("fill",clusterColors[+k]).attr("opacity",0.9);
-    const lines = label.split(": ");
+    const parts = label.split(": ");
     g.append("text").attr("x",14).attr("y",9).attr("font-size","10px").attr("fill","#333")
-      .text(lines[0] + ": " + lines[1]);
+      .text(parts[0] + ": " + parts[1]);
   });
 })();
 
 // ── Data table ────────────────────────────────────────────────────────────────
 
 (function() {
+  // Cluster lookup
+  const clusterOf = {};
+  ["CCI","CMC","CTF","FOL","PBSP","RJD","SQ","SVSP"].forEach(c => clusterOf[c] = "A");
+  ["CAL","CEN","CHCF","CIM","ISP"].forEach(c => clusterOf[c] = "B");
+  ["ASP","CCWF","CIW","CMF","COR","CRC","HDSP","KVSP","LAC","MCSP","NKSP","PVSP","SAC","SATF","SCC","SOL","VSP","WSP"].forEach(c => clusterOf[c] = "C");
+
   const sorted = [...data]
-    .map(d => ({ ...d, ratio: d.d90 > 0 ? d.d78 / d.d90 : null }))
+    .map(d => ({ ...d, ratio78: d.d78out > 0 ? d.d78 / d.d78out : null }))
     .sort((a, b) => {
-      if (a.ratio === null) return 1;
-      if (b.ratio === null) return -1;
-      return b.ratio - a.ratio;
+      if (a.ratio78 === null) return 1;
+      if (b.ratio78 === null) return -1;
+      return b.ratio78 - a.ratio78;
     });
 
   const container = document.getElementById("table-container");
@@ -716,29 +908,41 @@ const data = [
     <thead><tr>
       <th>Code</th>
       <th>Facility</th>
-      <th style="text-align:right">Outdoor<br>≥90°F</th>
-      <th style="text-align:right">Indoor<br>>78°F</th>
+      <th>Cluster</th>
+      <th style="text-align:right">Out<br>90°F</th>
+      <th style="text-align:right">Out<br>78°F</th>
+      <th style="text-align:right">In<br>78°F</th>
       <th style="text-align:right">Ratio</th>
-      <th style="text-align:right">Mech.<br>AC%</th>
-      <th style="text-align:right">Evap.<br>%</th>
-      <th style="text-align:right">Vent.<br>only%</th>
+      <th style="text-align:right">AC%</th>
+      <th style="text-align:right">Evap%</th>
+      <th style="text-align:right">Built</th>
+      <th style="text-align:right">Elev m</th>
+      <th style="text-align:right">UHI</th>
+      <th style="text-align:right">Hot<br>Nights%</th>
+      <th style="text-align:right">Lat</th>
     </tr></thead>
     <tbody>
       ${sorted.map(d => {
-        const ratioStr = d.ratio === null ? "—"
-          : d.ratio >= 10 ? `<span class="ratio-high">${d.ratio.toFixed(0)}×</span>`
-          : d.ratio < 0.5 ? `<span class="ratio-low">${d.ratio.toFixed(2)}×</span>`
-          : d.ratio.toFixed(2) + "×";
-        const rowClass = d.ratio !== null && d.ratio >= 10 ? ' class="highlight"' : '';
+        const ratioStr = d.ratio78 === null ? "—"
+          : d.ratio78 >= 5 ? `<span class="ratio-high">${d.ratio78.toFixed(1)}×</span>`
+          : d.ratio78 < 0.5 ? `<span class="ratio-low">${d.ratio78.toFixed(2)}×</span>`
+          : d.ratio78.toFixed(2) + "×";
+        const rowClass = d.ratio78 !== null && d.ratio78 >= 5 ? ' class="highlight"' : '';
         return `<tr${rowClass}>
           <td>${d.code}</td>
           <td>${d.name}</td>
+          <td>${clusterOf[d.code] || "—"}</td>
           <td style="text-align:right">${d.d90}</td>
+          <td style="text-align:right">${d.d78out}</td>
           <td style="text-align:right">${d.d78}</td>
           <td style="text-align:right">${ratioStr}</td>
           <td style="text-align:right">${Math.round(d.ref * 100)}%</td>
           <td style="text-align:right">${Math.round(d.evap * 100)}%</td>
-          <td style="text-align:right">${Math.round(d.vent * 100)}%</td>
+          <td style="text-align:right">${d.yr}</td>
+          <td style="text-align:right">${d.elev}</td>
+          <td style="text-align:right">${d.uhi.toFixed(2)}</td>
+          <td style="text-align:right">${d.hotn.toFixed(1)}%</td>
+          <td style="text-align:right">${d.lat.toFixed(2)}</td>
         </tr>`;
       }).join("")}
     </tbody>`;
