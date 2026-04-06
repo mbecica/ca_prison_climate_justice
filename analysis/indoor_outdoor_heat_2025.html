@@ -132,10 +132,6 @@
       vertical-align: top;
     }
 
-    tr.highlight td { background: #fff5f3; }
-
-    .ratio-high { color: #b03020; font-weight: bold; }
-    .ratio-low  { color: #2a6020; }
 
     .callout {
       border-left: 3px solid #b03020;
@@ -264,11 +260,25 @@
   as one step in estimating total heat risk to inform costs. Technical findings about the cluster
   analysis and variable relationships are at the end of this document.
 </p>
+<ul style="margin: 0 0 20px 18px; line-height: 1.65; font-size: 13px; color: #1a1a1a;">
+  <li style="margin-bottom: 8px;">The eight facilities with the oldest buildings and little mechanical
+    cooling (Cluster A) are the only group where outdoor temperatures significantly predict indoor heat
+    — but CDCR's 90°F operational threshold fires near-zero times per year at these facilities, missing
+    the relationship entirely.</li>
+  <li style="margin-bottom: 8px;">The five facilities with full mechanical AC (Cluster B) have largely
+    decoupled indoor from outdoor conditions, but individual cases like CAL — 137 indoor days above 78°F
+    despite 100% AC coverage — suggest equipment performance during extreme events is the key unknown.</li>
+  <li>The 18 facilities with predominantly evaporative cooling (Cluster C) show a fourteen-fold range in
+    indoor outcomes across similar outdoor climates, with no detectable outdoor-indoor relationship.
+    Equipment performance variation and urban heat retention at high-UHI facilities are two distinct
+    patterns that outdoor data cannot distinguish.</li>
+</ul>
+
 <p>
   Because cooling infrastructure varies widely across the 31 facilities, a single system-wide correlation
   between indoor and outdoor temperatures is not meaningful. Facilities were grouped into three clusters
-  using k-means on nine exposure variables. Each cluster has a distinct relationship between outdoor conditions
-  and indoor heat.
+  using k-means on nine exposure variables. Each cluster has a distinct relationship between outdoor
+  conditions and indoor heat.
 </p>
 
 <div class="cluster-grid">
@@ -412,9 +422,9 @@
   <thead>
     <tr>
       <th style="width:38%">Variable (cluster mean)</th>
-      <th style="text-align:right; color:#b03020;">Cluster A<br>Thermal Trap<br><span style="font-weight:normal;">(n=8)</span></th>
-      <th style="text-align:right; color:#666;">Cluster B<br>Full Mech. AC<br><span style="font-weight:normal;">(n=5)</span></th>
-      <th style="text-align:right; color:#333;">Cluster C<br>Evaporative<br><span style="font-weight:normal;">(n=18)</span></th>
+      <th style="text-align:right;">Cluster A<br>Thermal Trap<br><span style="font-weight:normal;">(n=8)</span></th>
+      <th style="text-align:right;">Cluster B<br>Full Mech. AC<br><span style="font-weight:normal;">(n=5)</span></th>
+      <th style="text-align:right;">Cluster C<br>Evaporative<br><span style="font-weight:normal;">(n=18)</span></th>
     </tr>
   </thead>
   <tbody>
@@ -429,9 +439,12 @@
     <tr><td>Normalized UHI (avg)</td><td style="text-align:right">0.05</td><td style="text-align:right">0.27</td><td style="text-align:right">0.29</td></tr>
     <tr><td>Latitude (avg)</td><td style="text-align:right">37.8°N</td><td style="text-align:right">34.3°N</td><td style="text-align:right">36.1°N</td></tr>
     <tr><td>Hot nights, census tract % (avg)</td><td style="text-align:right">3.7%</td><td style="text-align:right">6.1%</td><td style="text-align:right">7.1%</td></tr>
-    <tr><td>r (in78 vs out78)</td><td style="text-align:right; color:#b03020; font-weight:bold;">+0.806 (p=0.016) ✓</td><td style="text-align:right">−0.173 (p=0.78)</td><td style="text-align:right">+0.104 (p=0.68)</td></tr>
+    <tr><td>r (in78 vs out78)</td><td style="text-align:right; font-weight:bold;">+0.806 (p=0.016) ✓</td><td style="text-align:right">−0.173 (p=0.78)</td><td style="text-align:right">+0.104 (p=0.68)</td></tr>
   </tbody>
 </table>
+
+<p class="section-label">Facility locations by cluster</p>
+<div id="chart-map"></div>
 
 <p class="section-label">PCA biplot: PC1 vs. PC2</p>
 <p class="chart-note">
@@ -440,7 +453,8 @@
 </p>
 <div id="chart-pca"></div>
 
-<p class="chart-note"><strong>Indoor-outdoor correlations.</strong> Pearson r between indoor days above 78°F and outdoor days above the listed threshold, by cluster. The system-wide r values are not meaningful on their own: mixing facilities with full AC, evaporative-only cooling, and no mechanical cooling produces a number that describes nothing in particular. Both the matched threshold (78°F) and the CDCR Stage I threshold (90°F) are shown. Cluster A is the only cluster with a statistically significant result (p = 0.016). All other cluster-level r values are descriptive; sample sizes of 5–18 do not support reliable inference on the non-significant results.</p>
+<h3>Indoor-outdoor correlations</h3>
+<p>Pearson r between indoor days above 78°F and outdoor days above the listed threshold, by cluster. The system-wide r values are not meaningful on their own: mixing facilities with full AC, evaporative-only cooling, and no mechanical cooling produces a number that describes nothing in particular. Both the matched threshold (78°F) and the CDCR Stage I threshold (90°F) are shown. Cluster A is the only cluster with a statistically significant result (p = 0.016). All other cluster-level r values are descriptive; sample sizes of 5–18 do not support reliable inference on the non-significant results.</p>
 <div class="summary-stats">
   <div class="stat-block">
     <div class="stat-label">All 31 facilities</div>
@@ -468,7 +482,8 @@
   </div>
 </div>
 
-<p class="chart-note"><strong>Overnight temperature correlations — high-UHI subset of Cluster C (gridMET tmin, May–Oct 2025).</strong> Pearson r between gridMET daily minimum temperature variables and indoor 78°F days, tested within the high-UHI facilities in Cluster C (former k=4 Cluster D: CIM CIW CMF COR CRC NKSP SATF SOL WSP, n=9) to assess whether outdoor overnight warming could explain the indoor-outdoor divergence at urban-heat-island facilities. None are significant.</p>
+<h3>Overnight temperature correlations — high-UHI subset of Cluster C (gridMET tmin, May–Oct 2025)</h3>
+<p>Pearson r between gridMET daily minimum temperature variables and indoor 78°F days, tested within the high-UHI facilities in Cluster C (former k=4 Cluster D: CIM CIW CMF COR CRC NKSP SATF SOL WSP, n=9) to assess whether outdoor overnight warming could explain the indoor-outdoor divergence at urban-heat-island facilities. None are significant.</p>
 <div class="summary-stats">
   <div class="stat-block" style="border-left:3px solid #555; padding-left:10px;">
     <div class="stat-label">High-UHI subset of Cluster C (n=9)</div>
@@ -729,7 +744,7 @@ const data = [
     .attr("stroke-dasharray", "4,3");
 
   svg.append("text")
-    .attr("x", x(1) + 3).attr("y", -2)
+    .attr("x", x(1) + 3).attr("y", 8)
     .attr("font-size", "9px").attr("fill", "#888")
     .text("indoor = outdoor");
 
@@ -769,6 +784,119 @@ const data = [
       .attr("y", d => y(d.code) + y.bandwidth() / 2 + 4)
       .attr("font-size", "10px").attr("fill", "#555")
       .text(d => d.ratio >= 10 ? d.ratio.toFixed(0) + "×" : d.ratio.toFixed(2) + "×");
+})();
+
+// ── Facility map ──────────────────────────────────────────────────────────────
+
+(function() {
+  const caFeature = {type:"Feature",geometry:{"type":"MultiPolygon","coordinates":[[[[-118.60442,33.47855],[-118.37032,33.40928],[-118.30508,33.31032],[-118.46537,33.32606],[-118.60442,33.47855]]],[[[-118.6105,33.03294],[-118.5739,33.03055],[-118.35418,32.82092],[-118.5062,32.85299],[-118.6105,33.03294]]],[[[-119.04704,33.48382],[-119.0285,33.48742],[-119.03365,33.46575],[-119.04294,33.47055],[-119.04704,33.48382]]],[[[-119.37449,34.01415],[-119.36257,34.01715],[-119.35766,34.01598],[-119.37233,34.01209],[-119.37449,34.01415]]],[[[-119.442,34.01355],[-119.39625,34.00592],[-119.37927,34.00957],[-119.39082,34.00286],[-119.442,34.01355]]],[[[-119.57727,33.27858],[-119.52878,33.28542],[-119.4344,33.22702],[-119.54621,33.23256],[-119.57727,33.27858]]],[[[-119.92989,34.05973],[-119.75943,34.05883],[-119.63774,34.01318],[-119.52064,34.03426],[-119.81825,33.95985],[-119.92989,34.05973]]],[[[-120.24954,34.00248],[-120.04326,34.0358],[-119.96864,33.94287],[-120.11589,33.89436],[-120.24954,34.00248]]],[[[-120.45007,34.03419],[-120.36828,34.07646],[-120.30722,34.02237],[-120.35793,34.01503],[-120.45007,34.03419]]],[[[-122.37768,37.83046],[-122.36291,37.8227],[-122.36229,37.80702],[-122.37284,37.81107],[-122.37768,37.83046]]],[[[-122.42523,37.82859],[-122.42025,37.82651],[-122.42072,37.82525],[-122.42277,37.82526],[-122.42523,37.82859]]],[[[-122.44515,37.86142],[-122.43005,37.87211],[-122.41858,37.85332],[-122.44083,37.8554],[-122.44515,37.86142]]],[[[-123.01392,37.70036],[-123.00351,37.7044],[-122.99875,37.69744],[-123.00279,37.69274],[-123.01392,37.70036]]],[[[-124.21749,41.95081],[-124.21618,41.95221],[-124.21302,41.95103],[-124.215,41.94974],[-124.21749,41.95081]]],[[[-124.4086,40.44321],[-124.11175,41.02689],[-124.16541,41.12983],[-124.06605,41.47026],[-124.14741,41.71796],[-124.25495,41.77817],[-124.2116,41.99846],[-119.99923,41.99494],[-120.00102,38.99958],[-117.50012,37.22038],[-114.63349,35.00185],[-114.63438,34.87289],[-114.47048,34.71137],[-114.3867,34.45791],[-114.13121,34.26273],[-114.43418,34.08738],[-114.53548,33.93465],[-114.5246,33.55223],[-114.72528,33.40505],[-114.70649,33.08816],[-114.46904,32.97229],[-114.52685,32.75709],[-117.12367,32.53444],[-117.16072,32.66568],[-117.24313,32.66454],[-117.3125,33.08697],[-117.46979,33.29642],[-118.1327,33.75322],[-118.41047,33.74104],[-118.39055,33.83878],[-118.52436,34.03068],[-118.80655,34.00045],[-119.12925,34.10084],[-119.56399,34.41532],[-120.45281,34.44244],[-120.63672,34.56097],[-120.64615,35.14394],[-120.85605,35.20649],[-120.88476,35.4302],[-121.28653,35.66553],[-121.50083,35.9981],[-121.90273,36.30638],[-121.97676,36.57944],[-121.8137,36.68236],[-121.86227,36.93155],[-122.13516,36.96778],[-122.40508,37.19579],[-122.40085,37.35923],[-122.51953,37.5373],[-122.47679,37.80944],[-122.38767,37.78881],[-122.37855,37.60559],[-122.0386,37.45462],[-122.16759,37.67718],[-122.33204,37.78204],[-122.3114,37.8958],[-122.43009,37.96312],[-122.28282,38.08289],[-122.49752,38.11514],[-122.4473,37.98439],[-122.50506,37.93642],[-122.43829,37.88237],[-122.50428,37.89412],[-122.50001,37.82091],[-122.88212,38.02527],[-123.02407,37.99488],[-122.97708,38.2679],[-123.72798,38.91942],[-123.69125,39.05079],[-123.82772,39.34844],[-123.76648,39.55281],[-123.85172,39.83204],[-124.36061,40.25722],[-124.4086,40.44321]]]]}};
+
+  const facilities = [
+    {code:"ASP",  lon:-120.123, lat:35.974},
+    {code:"CAL",  lon:-115.484, lat:33.166},
+    {code:"CCI",  lon:-118.570, lat:35.110},
+    {code:"CCWF", lon:-120.153, lat:37.094},
+    {code:"CEN",  lon:-115.789, lat:32.823},
+    {code:"CHCF", lon:-121.191, lat:37.898},
+    {code:"CIM",  lon:-117.682, lat:33.985},
+    {code:"CIW",  lon:-117.636, lat:33.950},
+    {code:"CMC",  lon:-120.699, lat:35.325},
+    {code:"CMF",  lon:-121.979, lat:38.329},
+    {code:"COR",  lon:-119.549, lat:36.061},
+    {code:"CRC",  lon:-117.573, lat:33.929},
+    {code:"CTF",  lon:-121.382, lat:36.470},
+    {code:"FOL",  lon:-121.163, lat:38.695},
+    {code:"HDSP", lon:-120.513, lat:40.408},
+    {code:"ISP",  lon:-114.926, lat:33.561},
+    {code:"KVSP", lon:-119.325, lat:35.766},
+    {code:"LAC",  lon:-118.228, lat:34.694},
+    {code:"MCSP", lon:-120.953, lat:38.371},
+    {code:"NKSP", lon:-119.310, lat:35.782},
+    {code:"PBSP", lon:-124.149, lat:41.855},
+    {code:"PVSP", lon:-120.249, lat:36.131},
+    {code:"RJD",  lon:-116.934, lat:32.585},
+    {code:"SAC",  lon:-121.154, lat:38.694},
+    {code:"SATF", lon:-119.548, lat:36.054},
+    {code:"SCC",  lon:-120.537, lat:37.892},
+    {code:"SOL",  lon:-121.975, lat:38.321},
+    {code:"SQ",   lon:-122.490, lat:37.940},
+    {code:"SVSP", lon:-121.374, lat:36.478},
+    {code:"VSP",  lon:-120.155, lat:37.105},
+    {code:"WSP",  lon:-119.408, lat:35.594},
+  ];
+
+  const clusterOf = {};
+  ["CCI","CMC","CTF","FOL","PBSP","RJD","SQ","SVSP"].forEach(c => clusterOf[c] = "A");
+  ["CAL","CEN","CHCF","CIM","ISP"].forEach(c => clusterOf[c] = "B");
+  ["ASP","CCWF","CIW","CMF","COR","CRC","HDSP","KVSP","LAC","MCSP","NKSP","PVSP","SAC","SATF","SCC","SOL","VSP","WSP"].forEach(c => clusterOf[c] = "C");
+
+  const clusterColors = { A:"#b03020", B:"#888", C:"#555" };
+
+  // manual label offsets [dx, dy, anchor] for overlapping facilities
+  const labelOff = {
+    COR:  [  7, -5, "start"], SATF: [  7,  8, "start"],
+    SOL:  [ -8, -5, "end"  ], CMF:  [ -8,  8, "end"  ],
+    SAC:  [  7, -5, "start"], FOL:  [  7,  8, "start"],
+    KVSP: [ -8,  4, "end"  ], NKSP: [  7,  4, "start"],
+    CIM:  [ -8, -4, "end"  ], CIW:  [  7,  4, "start"],
+    CRC:  [  7, 12, "start"],
+    CTF:  [ -8,  4, "end"  ], SVSP: [  7,  4, "start"],
+    RJD:  [  7, -4, "start"], CEN:  [  7,  8, "start"],
+  };
+
+  const totalW = 712, totalH = 520;
+  const margin = { top: 16, right: 20, bottom: 24, left: 16 };
+  const w = totalW - margin.left - margin.right;
+  const h = totalH - margin.top - margin.bottom;
+
+  const svgEl = d3.select("#chart-map")
+    .append("svg")
+      .attr("viewBox", `0 0 ${totalW} ${totalH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+      .style("margin-bottom", "8px");
+
+  const svg = svgEl.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const projection = d3.geoMercator().fitSize([w, h], caFeature);
+  const pathGen = d3.geoPath().projection(projection);
+
+  svg.append("path")
+    .datum(caFeature)
+    .attr("d", pathGen)
+    .attr("fill", "#f7f6f4")
+    .attr("stroke", "#ccc")
+    .attr("stroke-width", 1);
+
+  facilities.forEach(f => {
+    const [cx, cy] = projection([f.lon, f.lat]);
+    const col = clusterColors[clusterOf[f.code] || "C"];
+    svg.append("circle")
+      .attr("cx", cx).attr("cy", cy).attr("r", 5)
+      .attr("fill", col).attr("stroke", "#fff").attr("stroke-width", 0.8)
+      .attr("opacity", 0.9);
+    const off = labelOff[f.code] || [7, 4, "start"];
+    svg.append("text")
+      .attr("x", cx + off[0]).attr("y", cy + off[1])
+      .attr("text-anchor", off[2])
+      .attr("font-size", "9px").attr("fill", "#333")
+      .text(f.code);
+  });
+
+  // legend
+  const leg = svg.append("g").attr("transform", `translate(${w - 130}, 10)`);
+  [
+    { k:"A", label:"A: Thermal Trap" },
+    { k:"B", label:"B: Full Mechanical AC" },
+    { k:"C", label:"C: Evaporative Cooling" },
+  ].forEach((item, i) => {
+    const g = leg.append("g").attr("transform", `translate(0,${i * 22})`);
+    g.append("circle").attr("cx", 5).attr("cy", 5).attr("r", 5)
+      .attr("fill", clusterColors[item.k]).attr("opacity", 0.9);
+    g.append("text").attr("x", 14).attr("y", 9)
+      .attr("font-size", "10px").attr("fill", "#333").text(item.label);
+  });
 })();
 
 // ── PCA biplot ────────────────────────────────────────────────────────────────
@@ -923,12 +1051,8 @@ const data = [
     </tr></thead>
     <tbody>
       ${sorted.map(d => {
-        const ratioStr = d.ratio78 === null ? "—"
-          : d.ratio78 >= 5 ? `<span class="ratio-high">${d.ratio78.toFixed(1)}×</span>`
-          : d.ratio78 < 0.5 ? `<span class="ratio-low">${d.ratio78.toFixed(2)}×</span>`
-          : d.ratio78.toFixed(2) + "×";
-        const rowClass = d.ratio78 !== null && d.ratio78 >= 5 ? ' class="highlight"' : '';
-        return `<tr${rowClass}>
+        const ratioStr = d.ratio78 === null ? "—" : d.ratio78.toFixed(2) + "×";
+        return `<tr>
           <td>${d.code}</td>
           <td>${d.name}</td>
           <td>${clusterOf[d.code] || "—"}</td>
@@ -950,5 +1074,57 @@ const data = [
 })();
 
 </script>
+
+<p class="backmatter-divider">Limitations</p>
+
+<p>
+  <strong>Indoor temperature data.</strong> CDCR's indoor temperature figures come from the January 2026
+  Air Cooling Pilot Program Supplemental Report, which records the number of days each housing unit type
+  exceeded 78°F between May and October 2025. This is a single-threshold annual count derived from
+  facility self-report, not a continuous sensor record. It cannot distinguish between a facility that
+  briefly exceeded 78°F on many days and one that sustained high temperatures for hours at a time, and it
+  is subject to the reporting inconsistencies that motivate AB 2499 in the first place.
+</p>
+<p>
+  <strong>Single year of data.</strong> All temperature variables — indoor days, outdoor days, and tmin —
+  are from 2025 only. Cluster assignments and correlations reflect one summer's conditions. Unusually hot
+  or mild conditions in 2025 at specific facilities could shift cluster membership; a multi-year average
+  would produce more stable groupings.
+</p>
+<p>
+  <strong>Threshold mismatch.</strong> CDCR reports indoor data at 78°F, CDCR's Stage I operational
+  threshold is 90°F outdoor, and AB 2499's proposed reporting trigger is 85°F indoor. None of these
+  thresholds are directly comparable, and the analysis uses 78°F throughout because it is the only
+  threshold for which indoor data exists.
+</p>
+<p>
+  <strong>UHI and hotnights are tract-level proxies.</strong> Urban heat island intensity and census
+  tract hot-nights percentage are assigned at the census tract level, not the facility parcel. Facilities
+  in large or heterogeneous tracts may have UHI or hot-nights values that poorly represent conditions at
+  their specific location. UHI values are missing for CCI and PVSP and were set to 0.0 before
+  standardization.
+</p>
+<p>
+  <strong>Cooling infrastructure shares are building counts, not capacity.</strong> Mechanical AC,
+  evaporative, and ventilation-only percentages reflect the share of housing buildings with each system
+  type, not installed capacity, equipment age, or condition. A facility coded as 100% evaporative may
+  have poorly maintained or undersized equipment; the data cannot distinguish this from a well-functioning
+  system.
+</p>
+<p>
+  <strong>Clustering is unsupervised and k=3 is a choice.</strong> The k=3 grouping was selected based
+  on the elbow plot and interpretability of the monitoring narrative. Several facilities — particularly
+  CCI, FOL, and CIM — sit near cluster boundaries and could reasonably be assigned differently. The PCA
+  biplot explains 47.5% of variance on two components; the remaining 52.5% is not visible in that
+  visualization.
+</p>
+<p>
+  <strong>Vulnerability data excluded.</strong> This report addresses built environment and temperature
+  variables only. Pilot site selection under AB 2499 should also incorporate facility-level vulnerability
+  data: population health status, age distribution, time in cell, and access to cooling respite. A
+  facility in Cluster A with high thermal mass risk may or may not be the highest-priority pilot site
+  once population vulnerability is factored in.
+</p>
+
 </body>
 </html>

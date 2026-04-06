@@ -4,6 +4,10 @@ data_sources/facilities/CDCR/cdcr_population_pdfs/tpop_weekly/
 data_sources/facilities/CDCR/cdcr_staffing/
 data_sources/facilities/CDCR/cdcr_facilities_planning/*.pdf
 data_sources/cb_2020_us_ua20_500k.zip
+data_sources/cb_2024_us_state_500k.zip
+data_sources/cb_2024_us_state_500k/
+data/ca_outline.json
+data/ca_outline_simple.json
 data_sources/national_map_medical_emergency.csv
 data_sources/hazards/calfire_fhsz.geojson
 data_sources/hazards/Wildland_Urban_Interface.zip
