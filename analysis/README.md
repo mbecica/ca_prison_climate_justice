@@ -4,47 +4,56 @@ Notebooks and scripts are in this directory. Outputs are written to `data/`.
 
 ## CDCR Facility Heat Risk Index
 
-`data/CDCR_heat_risk_index.csv` — facility-level heat risk scores for 31 CDCR state prisons, computed for two time periods (current historic and mid-century 2040–2070). Notebook: `heat_risk_index.ipynb`.
-
-**Framework:** Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) and the VCP environmental risk methodology. All sub-components are min-max normalized 0–1 across the 31 facilities before averaging within each component. Final risk score is normalized 0–100 cross-period (current and mid-century share the same denominator for direct comparison).
+**Output files:**
+- `data/CDCR_heat_risk_index.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century. Notebook: `heat_risk_index.ipynb`.
+- `data/CDCR_heat_risk_sensitivity.csv` — weighting sensitivity analysis and VCP comparison. Notebook: `sensitivity_analysis.ipynb`.
+- `data/CDCR_facility_heat_risk_scores.csv` — mid-century risk scores, tier classifications, and 90°F day counts per facility, for export and mapping.
 
 **Facility coverage:** 31 of 34 state prisons. CAC, CVSP, and FWF excluded — no indoor heat model data available.
 
-| Component | Sub-components (equal weight) |
-| :--- | :--- |
-| **Hazard** | Days over 90°F (Cal-Adapt), hot nights (VCP 98th pctl), AQI (CalEnviroScreen) — pre-computed in `data_sources/hazards/heat_hazard.ipynb` |
-| **Exposure** | Indoor days above 78°F (2025), indoor/outdoor ratio, UHI score (Benz & Burney 2021), inverted AC fraction |
-| **Vulnerability** | Medical acuity (CCHCS P1+P2+medium), age over 50, mental health (EOP), disability (DPP), race/POC |
+### Framework
 
-**Output columns:** `cdcr_code`, `name`, `average_2025_population`, `time_period`, `hazard_score`, `exposure_score`, `vulnerability_score`, `risk_score` (0–100), plus supporting raw inputs.
+Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) and the California Vulnerable Communities and Places (VCP) environmental risk methodology. Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods so that current and mid-century scores are directly comparable on the same scale.
 
-**Mid-century top 5 by risk score:** COR (100), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).
+The multiplicative structure means a facility must score poorly across all three components simultaneously to rank at the top of the index. A facility in a very hot location with full air conditioning and a younger population will score lower than one with moderate temperatures, poor cooling, and high medical acuity.
 
-**Notes:**
-- UHI nulls for CCI and PVSP (undeveloped tract classification) imputed with system mean
-- PBSP `ratio_indoor_to_outdoor` = 15.75 is an outlier driven by ~4 outdoor 78°F days/year at the Crescent City coast; PBSP scores 1.0 on this sub-component but ranks 28th overall due to very low hazard
-- ISP ranks last (0.01) despite highest hazard — its 2024 HVAC project reduced indoor 78°F days to ~1, correctly captured by the exposure component
+Adaptive capacity is not included as a fourth component, following Ovienmhada et al. (2024)'s treatment of carcerated populations as having effectively zero adaptive capacity. Incarcerated people cannot relocate, purchase cooling, choose their housing unit, or leave the facility during a heat event; the institutional and legal structure of incarceration removes the individual and collective agency that capacity metrics are designed to measure.
 
-**Limitations and future work:**
-- **Incarcerated workers** — the share of the facility population employed through Prison Industry Authority (PIA) or other work assignments is not included in the vulnerability component. PIA workers face elevated heat exposure from extended time in industrial or outdoor settings. Facility-level data on the full incarcerated worker participation rates are still being searched for; retained as future work.
-- **Psychotropic medication use** — the share of incarcerated people on psychotropic medications is not included as a standalone sub-component. Psychotropic medications (antipsychotics, anticholinergics, mood stabilizers) impair thermoregulation and are an established heat vulnerability factor. Facility-level psychotropic prescription rates are not publicly available from CCHCS. The CCHCS health risk categories used in the medical acuity sub-component (P1, P2, medium risk) are used instead, with the assumption that psychotropic medication use is captured within those broader risk tier definitions; retained as future work for a more direct measure.
+### Hazard Component
 
-### Outdoor vs. Indoor Temperature Gap
+Equal-weight average of three sub-indicators. Each is min-max normalized 0–1 across the 31 facilities before averaging.
 
-The CDCR Heat Pathology Plan Stage I and Stage III thresholds are defined by **indoor** housing unit temperatures (≥ 90°F and ≥ 95°F respectively). Outdoor gridMET data is used as a proxy for trend analysis and hazard mapping, but outdoor temperatures systematically overstate the number of days that cross indoor thresholds. The exposure component of the risk index uses indoor 78°F day counts directly (from CDCR's January 2026 Air Cooling Pilot Supplemental Report) to address this gap.
+| Sub-indicator | Variable | Description | Source |
+| :--- | :--- | :--- | :--- |
+| Days over 90°F | `days_over_90_historic` / `days_over_90_midcentury` | Annual days over 90°F at each facility's census tract. 30-year averages for 1991–2020 (historic) and 2041–2070 (mid-century) under SSP3-7.0. | Cal-Adapt, LOCA 2 downscaled projections |
+| Hot nights | `hotnights_pre_pct` / `hotnights_fut_pct` | % of nights exceeding the 98th percentile of each tract's own historical minimum temperature. Uses a local relative definition to account for acclimatization. | LCI VCP, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
+| Air quality | `AQI_norm` | Normalized AQI score (0–100) per facility county, derived from ozone, PM2.5, and diesel exposure percentiles. Held at historic CalEnviroScreen values for both time periods — tract-level AQI cannot be reliably projected. | CalEnviroScreen 5.0, 2025 |
 
-Available evidence on the outdoor-to-indoor gap:
+Pre-computed by census tract in `data_sources/hazards/heat_hazard.ipynb`, joined to facilities via `tract_geoid`.
 
-**CalMatters CPRA data (one unnamed prison, 2023–2024):**
+### Exposure Component
+
+Equal-weight average of four sub-indicators capturing how effectively each facility's built environment translates outdoor heat into indoor heat burden. Each is min-max normalized 0–1 across the 31 facilities before averaging.
+
+| Sub-indicator | Variable | Description | Source |
+| :--- | :--- | :--- | :--- |
+| Indoor 78°F days | `days_indoor_above_78f_2025` | Annual days with indoor temperatures above 78°F (2025). The 78°F threshold is the lower bound of CDCR's Stage I heat pathology activation. Where CDCR's 2026 report provided housing unit counts rather than facility averages, facility-level values were calculated from unit-level data. | CDCR Air Cooling Pilot Supplemental Report, January 2026 |
+| Indoor/outdoor ratio | `ratio_indoor_to_outdoor` | Ratio of indoor 78°F days to outdoor 78°F days per facility. Captures the degree to which a building amplifies or attenuates outdoor conditions. PBSP is an outlier (15.75) driven by ~4 outdoor 78°F days/year at the Crescent City coast — physically plausible and retained without capping. | Derived from CDCR 2026 and gridMET outdoor temperature data |
+| Urban heat island | `uhi_normalized` | UHI intensity (0–1), from Benz & Burney (2021) daytime surface urban heat anomaly (ΔT). Negative ΔT clamped to 0; normalized against the maximum ΔT across state prisons (7.247°C, CIM). CCI and PVSP null (undeveloped tract classification) — imputed with the system mean. | Benz & Burney (2021), Harvard Dataverse doi:10.7910/DVN/1F72FB |
+| No AC (inverted) | `inverted_ac_fraction` | 1 minus the fraction of housing units with refrigerated air conditioning, so that facilities with more cooling score lower on this sub-indicator. | CDCR Air Cooling Pilot Supplemental Report, January 2026 |
+
+**Note on outdoor vs. indoor temperatures:** The CDCR Heat Pathology Plan Stage I and Stage III thresholds are defined by indoor housing unit temperatures (≥ 90°F and ≥ 95°F respectively). Outdoor gridMET data is used as a proxy for trend analysis and hazard mapping, but outdoor temperatures systematically overstate the number of days that cross indoor thresholds. Available evidence on the gap:
+
+*CalMatters CPRA data (one unnamed prison, 2023–2024):*
 
 | Year | Outdoor days ≥ 90°F | Indoor days ≥ 90°F | Indoor days ≥ 95°F |
 | :--- | :--- | :--- | :--- |
 | 2023 | 166 | 59 | 20 |
 | 2024 | 182 | 86 | 46 |
 
-Indoor days at ≥ 90°F were roughly 35–47% of outdoor days at the same threshold in these two years.
+Indoor days at ≥ 90°F were roughly 35–47% of outdoor days at the same threshold. The exposure component uses indoor 78°F day counts directly to address this gap.
 
-**OIG audit, August 2022–October 2023 (Corcoran, High Desert, Lancaster):**
+*OIG audit, August 2022–October 2023 (Corcoran, High Desert, Lancaster):*
 
 | Prison | Housing units tested | Units with ≥ 1 day over 89°F | Most days over 89°F in a single unit |
 | :--- | :--- | :--- | :--- |
@@ -53,3 +62,89 @@ Indoor days at ≥ 90°F were roughly 35–47% of outdoor days at the same thres
 | Corcoran | 33 | 23 | 23 |
 
 Source: California Office of the Inspector General, heat log audit.
+
+### Vulnerability Component
+
+Equal-weight average of five sub-indicators describing each facility's population. Each is min-max normalized 0–1 across the 31 facilities before averaging.
+
+| Sub-indicator | Variable | Description | Source |
+| :--- | :--- | :--- | :--- |
+| Medical acuity | `medical_acuity` | Share of the facility population in CCHCS health risk tiers P1 (highest), P2, or medium risk (2025). These tiers capture chronic and acute conditions that increase heat sensitivity, including cardiovascular disease, diabetes, and respiratory illness. | CCHCS Health Care Dashboard, 2025 |
+| Age 50+ | `cchcs_age_over_50_pct_2025` | Share of the facility population aged 50 or older (2025). Age 50 is used as the threshold consistent with CDCR's own heat pathology plan definitions and the accelerated aging literature on incarcerated populations. | CDCR Population Data Points, 2025 |
+| Mental health (EOP) | `cchcs_mental_health_eop_pct_2025` | Share enrolled in the Enhanced Outpatient Program for mental health (2025). EOP enrollment is used as a proxy for psychotropic medication use, which impairs thermoregulation through anticholinergic and antipsychotic mechanisms. | CCHCS Health Care Dashboard, 2025 |
+| Disability (DPP) | `cchcs_dpp_pct_2025` | Share with a Disability Placement Program designation (2025). DPP covers mobility, vision, hearing, and other impairments that may limit a person's ability to respond to heat stress or access cooling resources. | CCHCS Health Care Dashboard, 2025 |
+| Race/POC | `race_peopleofcolor_pct` | Share identifying as people of color (2025), consistent with Ovienmhada et al. (2024)'s treatment of race as a heat vulnerability factor given documented disparities in heat-related health outcomes and access to care. | CDCR Population Data Points, 2025 |
+
+### Risk Tier Classification
+
+Mid-century risk scores are classified into four tiers using Jenks natural breaks, computed to minimize within-class variance. Breaks are applied to the mid-century distribution only; historic scores use the same thresholds for comparability.
+
+| Tier | Score range | n facilities | Color |
+| :--- | :--- | :--- | :--- |
+| Critical | > 82.7 | 3 (COR, SATF, CIM) | `#7a1010` |
+| High | 44.7 – 82.7 | 5 (CMF, SAC, VSP, LAC, NKSP) | `#c44020` |
+| Moderate | 26.6 – 44.7 | 11 | `#e89050` |
+| Low | ≤ 26.6 | 12 | `#e8e0c8` |
+
+**Mid-century top 5 by risk score:** COR (100.0), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).
+
+### Output Column Reference
+
+`data/CDCR_heat_risk_index.csv`:
+
+| Column | Description |
+| :--- | :--- |
+| `cdcr_code` | CDCR facility code |
+| `name` | Facility name |
+| `average_2025_population` | Average 2025 incarcerated population |
+| `time_period` | `current` (1991–2020) or `midcentury` (2041–2070) |
+| `hazard_score` | Hazard component score (0–1) |
+| `exposure_score` | Exposure component score (0–1) |
+| `vulnerability_score` | Vulnerability component score (0–1) |
+| `risk_score` | Final risk score (0–100), normalized cross-period |
+| `AQI_norm` | AQI sub-indicator (raw, 0–100) |
+| `ratio_indoor_to_outdoor` | Indoor/outdoor 78°F day ratio (raw) |
+| `days_indoor_above_78f_2025` | Indoor 78°F days in 2025 (raw count) |
+| `uhi_normalized` | UHI sub-indicator (normalized 0–1) |
+| `medical_acuity` | Medical acuity sub-indicator (share 0–1) |
+| `cchcs_age_over_50_pct_2025` | Age 50+ share (%) |
+| `cchcs_mental_health_eop_pct_2025` | EOP share (%) |
+| `cchcs_dpp_pct_2025` | DPP share (%) |
+| `race_peopleofcolor_pct` | POC share (%) |
+
+`data/CDCR_facility_heat_risk_scores.csv` — mid-century export for mapping and analysis:
+
+| Column | Description |
+| :--- | :--- |
+| `cdcr_code` | CDCR facility code |
+| `name` | Facility name |
+| `latitude` / `longitude` | Facility centroid coordinates |
+| `population_2025` | Average 2025 incarcerated population |
+| `hazard_score` | Hazard component score (0–1) |
+| `exposure_score` | Exposure component score (0–1) |
+| `vulnerability_score` | Vulnerability component score (0–1) |
+| `days_over_90f_midcentury` | Mid-century annual days over 90°F (Cal-Adapt) |
+| `days_over_90f_category` | Categorical bin: `< 1 week`, `1 week – 1 month`, `1 – 3 months`, `3 – 6 months`, `6 – 9 months`, `9+ months` |
+| `risk_score` | Mid-century risk score (0–100) |
+| `risk_category` | Jenks tier: `Critical`, `High`, `Moderate`, or `Low` |
+
+### Sensitivity Analysis and VCP Comparison
+
+`data/CDCR_heat_risk_sensitivity.csv`. Notebook: `sensitivity_analysis.ipynb`.
+
+Three alternative weighting schemes are tested against the equal-weight multiplicative baseline (mid-century only):
+
+| Scheme | Formula | Logic |
+| :--- | :--- | :--- |
+| A — Equal multiplicative (baseline) | H × E × V, normalized 0–100 | All components equal; risk requires elevation across all three |
+| B — Additive 25/25/50 | 0.25H + 0.25E + 0.50V, normalized 0–100 | Ovienmhada vulnerability upweighting; additive structure means high vulnerability alone can drive rank |
+| C — Multiplicative V² | H × E × V², normalized 0–100 | Preserves multiplicative structure; vulnerability amplified but still requires hazard and exposure |
+
+Spearman rank correlations across schemes: A vs B = 0.877, A vs C = 0.935, B vs C = 0.946. The top 5 facilities are stable across all three. CHCF has the largest rank swing (16 positions): it ranks 22nd under equal weighting but rises to 6th under the additive scheme, because high medical complexity drives vulnerability even without indoor heat exposure days (full AC). ISP has the second largest swing (10 positions).
+
+VCP's `ExHeatHealth_Idx` for each prison's surrounding non-institutional census tracts (Pct_GroupQuarters ≤ 25%) is included for comparison. Spearman r between our index and the surrounding community VCP index is −0.17 — the low correlation supports the case for a prison-specific framework rather than applying community-facing indices directly to carceral facilities.
+
+### Limitations and Future Work
+
+- **Incarcerated workers** — the share of the facility population employed through the Prison Industry Authority (PIA) or other work assignments is not included in the vulnerability component. PIA workers face elevated heat exposure from extended time in industrial or outdoor settings. Facility-level data on full incarcerated worker participation rates are still being searched for; retained as future work.
+- **Psychotropic medication use** — the share of incarcerated people on psychotropic medications is not included as a standalone sub-component. Psychotropic medications (antipsychotics, anticholinergics, mood stabilizers) impair thermoregulation and are an established heat vulnerability factor. Facility-level psychotropic prescription rates are not publicly available from CCHCS. The CCHCS health risk categories used in the medical acuity sub-component (P1, P2, medium risk) are used as proxies; retained as future work for a more direct measure.
