@@ -14,6 +14,7 @@ Hazard datasets and processing notebooks for the CA prison climate justice analy
 | `heat_activations_annual.csv` | Annual days over 90°F, 95°F, and Skarha 10°F threshold per facility |
 | `heat_activations_monthly.csv` | Monthly days over 90°F and 95°F per facility per year |
 | `summer_avg_tmax_annual.csv` | Mean Jun–Aug daily tmax (°F) per CDCR facility per year, 1990–2025 |
+| `CDCR_indoor_78f_days_2025.csv` | Days with indoor temperature above 78°F (May–Oct 2025) per CDCR facility (31 state prisons). Source: CDCR Air Cooling Pilot Program Supplemental Report, January 2026, Table 1 |
 | `heatdays_alltimes_tract.csv` | Historic and mid-century days over 90°F per census tract (Cal-Adapt) |
 | `droughtfrequency_tract.csv` | Drought frequency per census tract |
 | `benz_uhi_facilities.csv` | Benz & Burney ΔT and normalized UHI score per CDCR facility (32 state prisons) |
