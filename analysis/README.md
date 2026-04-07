@@ -1,8 +1,6 @@
-# Impact Analysis
+# Analysis
 
-Analysis notebooks and scripts are in this directory. Outputs are written to `data/`.
-
-This work produces **summary impact estimates** — not full risk calculations. Full risk calculations (hazard × exposure × vulnerability) are the intended long-term direction of this repository; the data collected across `data_sources/` is structured to support that. The summary analysis here is scoped to near-term advocacy use for AB-2499.
+Notebooks and scripts are in this directory. Outputs are written to `data/`.
 
 ## Heat Activation Days
 
@@ -234,7 +232,51 @@ Pre-2017 roofing was funded through a pooled annual special repair appropriation
 | Felon Parole Violators – Return to Custody | 155 months (13.0 yrs) | 60–252 mo |
 | Felon Pending Revocations | 41 months (3.4 yrs) | 16–96 mo |
 
-**Note:** Values are average sentence at time of admission, not additional time added. Retained for potential use in recidivism cost modeling; superseded by recidivism dashboard length-of-stay data for this project.
+**Note:** Values are average sentence at time of admission, not additional time added.
+
+## Three-Year Return Rate by Length of Stay (2008–2020)
+
+`data_sources/facilities/CDCR/cdcr_recidivism_los.csv` — three-year return-to-prison rate by length of stay category and fiscal year, scraped from the CDCR Adult Recidivism Power BI dashboard (Returns measure → Crosstabs → Fiscal Year: All → Row: Length of Stay → Column: Length of Stay). Script: `scrapers/fetch_cdcr_recidivism_los.js`.
+
+**Coverage:** 12 release cohorts, FY 2008-09 through 2019-20. 8 length-of-stay categories per cohort (96 data rows).
+
+**2019-20 cohort (most recent):**
+
+| Length of Stay | 3-Year Return Rate |
+| :--- | :--- |
+| Less than 1 year | 18.2% |
+| 1 year (12–23 months) | 20.6% |
+| 2 years (24–35 months) | 20.5% |
+| 3 years (36–47 months) | 18.3% |
+| 4 years (48–59 months) | 16.1% |
+| 5–9 years | 12.0% |
+| 10–14 years | 6.4% |
+| 15 years or more | 2.4% |
+
+System-wide three-year return-to-prison rate: 17.4% (2019-20). Return rates have declined substantially since 2008-09 (when the system-wide rate was ~60%) following California's Public Safety Realignment (2011) and subsequent sentencing reforms.
+
+## CDCR Facility Heat Risk Index
+
+`data/CDCR_heat_risk_index.csv` — facility-level heat risk scores for 31 CDCR state prisons, computed for two time periods (current historic and mid-century 2040–2070). Notebook: `heat_risk_index.ipynb`.
+
+**Framework:** Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) and the VCP environmental risk methodology. All sub-components are min-max normalized 0–1 across the 31 facilities before averaging within each component. Final risk score is normalized 0–100 cross-period (current and mid-century share the same denominator for direct comparison).
+
+**Facility coverage:** 31 of 34 state prisons. CAC, CVSP, and FWF excluded — no indoor heat model data available.
+
+| Component | Sub-components (equal weight) |
+| :--- | :--- |
+| **Hazard** | Days over 90°F (Cal-Adapt), hot nights (VCP 98th pctl), AQI (CalEnviroScreen) — pre-computed in `data_sources/hazards/heat_hazard.ipynb` |
+| **Exposure** | Indoor days above 78°F (2025), indoor/outdoor ratio, UHI score (Benz & Burney 2021), inverted AC fraction |
+| **Vulnerability** | Medical acuity (CCHCS P1+P2+medium), age over 50, mental health (EOP), disability (DPP), race/POC |
+
+**Output columns:** `cdcr_code`, `name`, `average_2025_population`, `time_period`, `hazard_score`, `exposure_score`, `vulnerability_score`, `risk_score` (0–100), plus supporting raw inputs.
+
+**Mid-century top 5 by risk score:** COR (100), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).
+
+**Notes:**
+- UHI nulls for CCI and PVSP (undeveloped tract classification) imputed with system mean
+- PBSP `ratio_indoor_to_outdoor` = 15.75 is an outlier driven by ~4 outdoor 78°F days/year at the Crescent City coast; PBSP scores 1.0 on this sub-component but ranks 28th overall due to very low hazard
+- ISP ranks last (0.01) despite highest hazard — its 2024 HVAC project reduced indoor 78°F days to ~1, correctly captured by the exposure component
 
 ## Urban Heat Island Exposure
 
