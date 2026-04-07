@@ -1,0 +1,87 @@
+Year,Month,Admission Type,avg_sentence_months
+2026,Jan,Felon New Admissions,81
+2026,Jan,Felon Parole Violators-Return to Custody,148
+2026,Jan,Felon Parole Violators-With New Term,52
+2026,Feb,Felon New Admissions,84
+2026,Feb,Felon Parole Violators-Return to Custody,109
+2026,Feb,Felon Parole Violators-With New Term,56
+2026,Mar,Felon New Admissions,85
+2026,Mar,Felon Parole Violators-Return to Custody,139
+2026,Mar,Felon Parole Violators-With New Term,51
+2025,Jan,Felon New Admissions,86
+2025,Jan,Felon Parole Violators-With New Term,71
+2025,Jan,Felon Pending Revocations,44
+2025,Feb,Felon New Admissions,83
+2025,Feb,Felon Parole Violators-Return to Custody,192
+2025,Feb,Felon Parole Violators-With New Term,50
+2025,Mar,Felon New Admissions,91
+2025,Mar,Felon Parole Violators-Return to Custody,115
+2025,Mar,Felon Parole Violators-With New Term,61
+2025,Apr,Felon New Admissions,88
+2025,Apr,Felon Parole Violators-Return to Custody,121
+2025,Apr,Felon Parole Violators-With New Term,47
+2025,Sep,Felon Parole Violators-With New Term,50
+2025,Oct,Felon New Admissions,85
+2025,Oct,Felon Parole Violators-Return to Custody,172
+2025,Oct,Felon Parole Violators-With New Term,43
+2025,Nov,Felon New Admissions,85
+2025,Nov,Felon Parole Violators-Return to Custody,162
+2025,Nov,Felon Parole Violators-With New Term,50
+2025,Dec,Felon New Admissions,87
+2025,Dec,Felon Parole Violators-With New Term,46
+2025,Dec,Felon Pending Revocations,36
+2024,Jan,Felon New Admissions,88
+2024,Jan,Felon Parole Violators-Return to Custody,211
+2024,Jan,Felon Parole Violators-With New Term,44
+2024,Feb,Felon New Admissions,93
+2024,Feb,Felon Parole Violators-Return to Custody,252
+2024,Feb,Felon Parole Violators-With New Term,52
+2024,Feb,Felon Pending Revocations,96
+2024,Mar,Felon New Admissions,86
+2024,Mar,Felon Parole Violators-Return to Custody,224
+2024,Mar,Felon Parole Violators-With New Term,50
+2024,Mar,Felon Pending Revocations,36
+2024,Apr,Felon New Admissions,90
+2024,Aug,Felon Parole Violators-Return to Custody,145
+2024,Aug,Felon Parole Violators-With New Term,57
+2024,Aug,Felon Pending Revocations,16
+2024,Sep,Felon New Admissions,84
+2024,Sep,Felon Parole Violators-Return to Custody,102
+2024,Sep,Felon Parole Violators-With New Term,54
+2024,Oct,Felon New Admissions,78
+2024,Oct,Felon Parole Violators-Return to Custody,114
+2024,Oct,Felon Parole Violators-With New Term,59
+2024,Nov,Felon New Admissions,89
+2024,Nov,Felon Parole Violators-Return to Custody,96
+2024,Nov,Felon Parole Violators-With New Term,57
+2024,Dec,Felon New Admissions,83
+2024,Dec,Felon Parole Violators-Return to Custody,60
+2024,Dec,Felon Parole Violators-With New Term,58
+2023,Jan,Felon New Admissions,65
+2023,Jan,Felon Parole Violators-Return to Custody,245
+2023,Jan,Felon Parole Violators-With New Term,57
+2023,Feb,Felon New Admissions,78
+2023,Feb,Felon Parole Violators-Return to Custody,124
+2023,Feb,Felon Parole Violators-With New Term,45
+2023,Mar,Felon New Admissions,82
+2023,Jun,Felon New Admissions,87
+2023,Jun,Felon Parole Violators-Return to Custody,233
+2023,Jun,Felon Parole Violators-With New Term,59
+2023,Jul,Felon New Admissions,77
+2023,Jul,Felon Parole Violators-Return to Custody,134
+2023,Jul,Felon Parole Violators-With New Term,50
+2023,Aug,Felon New Admissions,80
+2023,Aug,Felon Parole Violators-Return to Custody,168
+2023,Aug,Felon Parole Violators-With New Term,55
+2023,Sep,Felon New Admissions,75
+2023,Sep,Felon Parole Violators-Return to Custody,160
+2023,Sep,Felon Parole Violators-With New Term,52
+2023,Oct,Felon New Admissions,97
+2023,Oct,Felon Parole Violators-With New Term,53
+2023,Nov,Felon New Admissions,94
+2023,Nov,Felon Parole Violators-Return to Custody,137
+2023,Nov,Felon Parole Violators-With New Term,52
+2023,Dec,Felon New Admissions,83
+2023,Dec,Felon Parole Violators-Return to Custody,170
+2023,Dec,Felon Parole Violators-With New Term,48
+2023,Dec,Felon Pending Revocations,16

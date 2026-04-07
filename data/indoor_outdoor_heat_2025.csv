@@ -1,32 +1,32 @@
 cdcr_code,facility_name,average_2025_population,days_outdoor_90f_2025,days_outdoor_above_78f_2025,days_indoor_above_78f_2025,ratio_indoor_to_outdoor,pct_buildings_refrigeration,pct_buildings_evaporation,pct_buildings_ventilation
-RJD,R J Donovan Correctional Facility,3592.0,2,59,114,57.0,0.3478,0.0,0.6522
-SQ,San Quentin State Prison,2688.0,1,29,41,41.0,0.0,0.0,1.0
-CMC,California Men'S Colony,2172.0,1,47,33,33.0,0.1875,0.0,0.8125
-CCI,California Correctional Institution,2434.0,4,90,115,28.75,0.0455,0.0,0.9545
-CTF,Correctional Training Facility,4225.0,3,31,60,20.0,0.0,0.0455,0.9545
-SOL,"California State Prison, Solano",3735.0,54,146,159,2.94,0.16,0.24,0.6
-CMF,California Medical Facility,2045.0,54,146,135,2.5,0.5283,0.4717,0.0
-CRC,California Rehabilitation Center,2330.0,66,155,149,2.26,0.0833,0.0278,0.8889
-FOL,Folsom State Prison,2777.0,71,144,158,2.23,0.25,0.75,0.0
-SCC,Sierra Conservation Center,4035.0,70,148,154,2.2,0.0,0.0617,0.9383
-CIM,California Institution For Men,2274.0,74,162,161,2.18,0.4286,0.0,0.5714
-SAC,"California State Prison, Sacramento",2131.0,67,143,133,1.99,0.08,0.92,0.0
-CIW,California Institution For Women,1187.0,77,164,150,1.95,0.3636,0.6364,0.0
-HDSP,High Desert State Prison,2719.0,59,128,89,1.51,0.0345,0.9655,0.0
-COR,"California State Prison, Corcoran",2629.0,111,163,159,1.43,0.0,1.0,0.0
-ASP,Avenal State Prison,3891.0,110,162,132,1.2,0.0,1.0,0.0
-SATF,Ca Substance Abuse Treatment Facility,5358.0,111,163,133,1.2,0.0625,1.0312,0.0
-NKSP,North Kern State Prison,2570.0,114,162,134,1.18,0.04,0.96,0.0
-WSP,Wasco State Prison,3676.0,124,166,136,1.1,0.0,1.0,0.0
-CCWF,Central California Women'S Facility,2040.0,92,162,97,1.05,0.0,1.0,0.0
-CAL,Calipatria State Prison,2462.0,179,181,137,0.77,1.0,0.0,0.0
-PVSP,Pleasant Valley State Prison,2992.0,111,163,67,0.6,0.0435,0.9565,0.0
-KVSP,Kern Valley State Prison,3092.0,114,162,66,0.58,0.1,0.0,0.9
-VSP,Valley State Prison,3148.0,92,162,52,0.57,0.0,1.0,0.0
-LAC,California State Prison-Los Angeles County,2949.0,104,162,39,0.38,0.0455,0.9545,0.0
-SVSP,Salinas Valley State Prison,2387.0,3,31,1,0.33,0.1304,0.8696,0.0
-CEN,Centinela State Prison,2984.0,194,184,42,0.22,1.0,0.0,0.0
-MCSP,Mule Creek State Prison,3761.0,56,138,11,0.2,0.1364,0.8636,0.0
-ISP,Ironwood State Prison,2764.0,192,183,1,0.01,1.0,0.0,0.0
+RJD,R J Donovan Correctional Facility,3592.0,2,59,114,1.932,0.3478,0.0,0.6522
+SQ,San Quentin State Prison,2688.0,1,29,41,1.414,0.0,0.0,1.0
+CMC,California Men'S Colony,2172.0,1,47,33,0.702,0.1875,0.0,0.8125
+CCI,California Correctional Institution,2434.0,4,90,115,1.278,0.0455,0.0,0.9545
+CTF,Correctional Training Facility,4225.0,3,31,60,1.935,0.0,0.0455,0.9545
+SOL,"California State Prison, Solano",3735.0,54,146,159,1.089,0.16,0.24,0.6
+CMF,California Medical Facility,2045.0,54,146,135,0.925,0.5283,0.4717,0.0
+CRC,California Rehabilitation Center,2330.0,66,155,149,0.961,0.0833,0.0278,0.8889
+FOL,Folsom State Prison,2777.0,71,144,158,1.097,0.25,0.75,0.0
+SCC,Sierra Conservation Center,4035.0,70,148,154,1.041,0.0,0.0617,0.9383
+CIM,California Institution For Men,2274.0,74,162,161,0.994,0.4286,0.0,0.5714
+SAC,"California State Prison, Sacramento",2131.0,67,143,133,0.93,0.08,0.92,0.0
+CIW,California Institution For Women,1187.0,77,164,150,0.915,0.3636,0.6364,0.0
+HDSP,High Desert State Prison,2719.0,59,128,89,0.695,0.0345,0.9655,0.0
+COR,"California State Prison, Corcoran",2629.0,111,163,159,0.975,0.0,1.0,0.0
+ASP,Avenal State Prison,3891.0,110,162,132,0.815,0.0,1.0,0.0
+SATF,Ca Substance Abuse Treatment Facility,5358.0,111,163,133,0.816,0.0625,1.0312,0.0
+NKSP,North Kern State Prison,2570.0,114,162,134,0.827,0.04,0.96,0.0
+WSP,Wasco State Prison,3676.0,124,166,136,0.819,0.0,1.0,0.0
+CCWF,Central California Women'S Facility,2040.0,92,162,97,0.599,0.0,1.0,0.0
+CAL,Calipatria State Prison,2462.0,179,181,137,0.757,1.0,0.0,0.0
+PVSP,Pleasant Valley State Prison,2992.0,111,163,67,0.411,0.0435,0.9565,0.0
+KVSP,Kern Valley State Prison,3092.0,114,162,66,0.407,0.1,0.0,0.9
+VSP,Valley State Prison,3148.0,92,162,52,0.321,0.0,1.0,0.0
+LAC,California State Prison-Los Angeles County,2949.0,104,162,39,0.241,0.0455,0.9545,0.0
+SVSP,Salinas Valley State Prison,2387.0,3,31,1,0.032,0.1304,0.8696,0.0
+CEN,Centinela State Prison,2984.0,194,184,42,0.228,1.0,0.0,0.0
+MCSP,Mule Creek State Prison,3761.0,56,138,11,0.08,0.1364,0.8636,0.0
+ISP,Ironwood State Prison,2764.0,192,183,1,0.005,1.0,0.0,0.0
 CHCF,California Health Care Facility,2251.0,75,161,0,0.0,1.0,0.0,0.0
-PBSP,Pelican Bay State Prison,2096.0,0,4,63,,0.0345,0.0,0.9655
+PBSP,Pelican Bay State Prison,2096.0,0,4,63,15.75,0.0345,0.0,0.9655

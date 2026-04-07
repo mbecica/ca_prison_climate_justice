@@ -190,6 +190,52 @@ Pre-2017 roofing was funded through a pooled annual special repair appropriation
 | `avg_tmin_f_2025` | gridMET daily tmin (tmmn), May–October 2025 |
 | `envelope_work` | CDCR MPAR, LAO budget analyses, SIFC Roof Replacement Needs page, contractor records |
 
+## Violent Incidents by Facility (2021–2025)
+
+`data_sources/facilities/CDCR/cdcr_violent_incidents_by_facility.csv` — monthly violent incident counts per facility, extracted from CDCR Incident Report PDFs (CompStat and Public series). Script: `data_sources/facilities/CDCR/extract_violent_incidents.py`.
+
+**Coverage:** 35 facilities, January 2021–December 2025. Facility count ranges from 35 (2021) to 31 (2025), reflecting closures (CVSP, DVI, CCC, CAC).
+
+**Violent categories included** (summed per facility per month):
+- Assault on a Peace Officer or Non-Prisoner (Total)
+- Battery on a Peace Officer or Non-Prisoner (Total)
+- Assault on Inmate (Total)
+- Battery on Inmate (Total)
+- Cell Extractions (Total)
+- Fighting
+- Riot (incident count only, not "Riot – Number of Inmates Involved")
+
+**Excluded:** all Controlled Substance rows, Type of Force rows.
+
+**Overlap resolution:** For months covered by multiple PDFs, the most recent report takes precedence.
+
+**Validation:** Spot-checked 7 facility-month combinations against All Institutions summary totals across multiple PDFs — all passed.
+
+| Year | System-wide violent incidents |
+| :--- | :--- |
+| 2021 | 7,169 |
+| 2022 | 8,015 |
+| 2023 | 10,077 |
+| 2024 | 12,376 |
+| 2025 | 12,512 |
+
+**Per-facility average** (`avg_annual_violent_incidents`) added to `data/cdcr_facilities.csv` — average annual violent incidents across all years present in the data (2021–2025). System-wide average: ~9,900/year.
+
+## Average Sentence by Admission Type (2023–2026)
+
+`data_sources/facilities/CDCR/cdcr_avg_sentence_by_admission.csv` — average sentence length in months per admission type per month, scraped from the CDCR Population Data Points Power BI dashboard (Admissions > Population Demographics > Crosstabs > Average Sentence, rows: Admission Type, columns: None). Script: `scrapers/fetch_cdcr_avg_sentence.js`.
+
+**Coverage:** January 2023–March 2026, 4 admission types. Some months suppressed (counts < 10).
+
+| Admission Type | Mean sentence | Range |
+| :--- | :--- | :--- |
+| Felon New Admissions | 84 months (7.0 yrs) | 65–97 mo |
+| Felon Parole Violators – With New Term | 53 months (4.4 yrs) | 43–71 mo |
+| Felon Parole Violators – Return to Custody | 155 months (13.0 yrs) | 60–252 mo |
+| Felon Pending Revocations | 41 months (3.4 yrs) | 16–96 mo |
+
+**Note:** Values are average sentence at time of admission, not additional time added. Retained for potential use in recidivism cost modeling; superseded by recidivism dashboard length-of-stay data for this project.
+
 ## Urban Heat Island Exposure
 
 UHI is tracked as an **exposure metric** added to `data/cdcr_facilities.csv` as `uhi_normalized` (0–1). Full methodology, source comparison, and per-facility values in `data_sources/hazards/README.md`.

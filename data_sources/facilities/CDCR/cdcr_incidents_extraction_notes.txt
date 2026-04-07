@@ -1,0 +1,103 @@
+CDCR Violent Incidents Extraction Notes
+============================================================
+
+VIOLENT CATEGORIES SUMMED (per-facility Total rows):
+  - Assault on a Peace Officer or Non-Prisoner (Total)
+  - Battery on a Peace Officer or Non-Prisoner (Total)
+  - Assault on Inmate (Total)
+  - Battery on Inmate (Total)
+  - Cell Extractions (Total)
+  - Fighting
+  - Riot
+
+EXCLUSIONS:
+  - All Controlled Substance rows
+  - All Type of Force rows
+  - 'Riot - Number of Inmates Involved' row (counts individuals, not incidents)
+  - All other non-violent incident categories
+
+METHOD NOTES:
+  - Each facility spans 2-3 pages per PDF; all pages accumulated before storing.
+  - Pages are grouped by (facility, month_column_set) to handle 2-3 page splits.
+  - 'Riot' row matched exactly to avoid confusion with 'Riot - Number of Inmates'.
+
+OVERLAP RESOLUTION:
+  PDFs processed oldest-first; newer reports overwrite older for the same
+  (facility, year, month) key.
+
+VALIDATION (per-facility sums vs All Institutions summary, 7 month spot-checks):
+  All checks validated against the most recent PDF containing that month.
+  Year-Mo   Per-Fac (n)  All-Inst   Diff  Status
+  2025-12      1015 (31)      1015     0   PASS
+  2025-06       910 (31)       910     0   PASS
+  2024-12      1086 (31)      1086     0   PASS
+  2024-01       973 (32)       973     0   PASS
+  2023-06       844 (33)       844     0   PASS
+  2022-12       693 (33)       693     0   PASS
+  2021-06       610 (35)       610     0   PASS
+  ALL CHECKS PASSED - per-facility sums match All Institutions exactly.
+
+  Note on facility count variation (31-35 across years):
+  CDCR has opened and closed facilities over this period. The per-facility
+  section only includes active facilities; the All Institutions total always
+  matches the sum of active per-facility pages.
+
+OUTPUT SUMMARY:
+  Total records: 1963
+  Year range: 2021-2025
+  Facilities (35): ASP, CAC, CAL, CCC, CCI, CCWF, CEN, CHCF, CIM, CIW, CMC, CMF, COR, CRC, CTF, CVSP, DVI, FOL, HDSP, ISP, KVSP, LAC, MCSP, NKSP, PBSP, PVSP, RJD, SAC, SATF, SCC, SOL, SQ, SVSP, VSP, WSP
+
+PER-FILE OVERLAP OVERRIDES (records overwriting an older file's data):
+  d2201: 0 overrides
+  d2212: 68 overrides
+  d2312: 33 overrides
+  d2501: 0 overrides
+  d2512: 62 overrides
+
+
+DETAILED PROCESSING LOG:
+
+============================================================
+FILE: CompStat_Incident_Report_d2201.pdf  (tag: d2201)
+  Total pages: 78
+  Facilities found: ['ASP', 'CAC', 'CAL', 'CCC', 'CCI', 'CCWF', 'CEN', 'CHCF', 'CIM', 'CIW', 'CMC', 'CMF', 'COR', 'CRC', 'CTF', 'CVSP', 'DVI', 'FOL', 'HDSP', 'ISP', 'KVSP', 'LAC', 'MCSP', 'NKSP', 'PBSP', 'PVSP', 'RJD', 'SAC', 'SATF', 'SCC', 'SOL', 'SQ', 'SVSP', 'VSP', 'WSP']
+  Number of facilities: 35
+  New keys added: 448
+  Keys overriding older data: 0
+  Total records so far: 448
+
+============================================================
+FILE: CompStat_Incident_Report_d2212.pdf  (tag: d2212)
+  Total pages: 81
+  Facilities found: ['ASP', 'CAC', 'CAL', 'CCC', 'CCI', 'CCWF', 'CEN', 'CHCF', 'CIM', 'CIW', 'CMC', 'CMF', 'COR', 'CRC', 'CTF', 'CVSP', 'FOL', 'HDSP', 'ISP', 'KVSP', 'LAC', 'MCSP', 'NKSP', 'PBSP', 'PVSP', 'RJD', 'SAC', 'SATF', 'SCC', 'SOL', 'SQ', 'SVSP', 'VSP', 'WSP']
+  Number of facilities: 34
+  New keys added: 372
+  Keys overriding older data: 68
+  Total records so far: 820
+
+============================================================
+FILE: Incident_Report_Public_d2312.pdf  (tag: d2312)
+  Total pages: 78
+  Facilities found: ['ASP', 'CAC', 'CAL', 'CCC', 'CCI', 'CCWF', 'CEN', 'CHCF', 'CIM', 'CIW', 'CMC', 'CMF', 'COR', 'CRC', 'CTF', 'CVSP', 'FOL', 'HDSP', 'ISP', 'KVSP', 'LAC', 'MCSP', 'NKSP', 'PBSP', 'PVSP', 'RJD', 'SAC', 'SATF', 'SCC', 'SOL', 'SQ', 'SVSP', 'VSP', 'WSP']
+  Number of facilities: 34
+  New keys added: 393
+  Keys overriding older data: 33
+  Total records so far: 1213
+
+============================================================
+FILE: CompStat_Incident_Report_d2501.pdf  (tag: d2501)
+  Total pages: 78
+  Facilities found: ['ASP', 'CAL', 'CCI', 'CCWF', 'CEN', 'CHCF', 'CIM', 'CIW', 'CMC', 'CMF', 'COR', 'CRC', 'CTF', 'CVSP', 'FOL', 'HDSP', 'ISP', 'KVSP', 'LAC', 'MCSP', 'NKSP', 'PBSP', 'PVSP', 'RJD', 'SAC', 'SATF', 'SCC', 'SOL', 'SQ', 'SVSP', 'VSP', 'WSP']
+  Number of facilities: 32
+  New keys added: 409
+  Keys overriding older data: 0
+  Total records so far: 1622
+
+============================================================
+FILE: Incident_Report_Public_d2512.pdf  (tag: d2512)
+  Total pages: 78
+  Facilities found: ['ASP', 'CAL', 'CCI', 'CCWF', 'CEN', 'CHCF', 'CIM', 'CIW', 'CMC', 'CMF', 'COR', 'CRC', 'CTF', 'FOL', 'HDSP', 'ISP', 'KVSP', 'LAC', 'MCSP', 'NKSP', 'PBSP', 'PVSP', 'RJD', 'SAC', 'SATF', 'SCC', 'SOL', 'SQ', 'SVSP', 'VSP', 'WSP']
+  Number of facilities: 31
+  New keys added: 341
+  Keys overriding older data: 62
+  Total records so far: 1963
