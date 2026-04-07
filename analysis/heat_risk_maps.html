@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CDCR Heat Risk Index — Maps</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,serif;font-size:13px;color:#1a1a1a;background:#fff}
+  .page{max-width:960px;margin:0 auto;padding:40px 32px 80px}
+  h1{font-size:18px;font-weight:bold;margin-bottom:6px}
+  .subtitle{color:#555;font-size:12px;margin-bottom:40px}
+  h2{font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:.06em;
+     color:#1a1a1a;margin:52px 0 4px;border-top:1px solid #ccc;padding-top:14px}
+  .section-note{font-size:12px;color:#555;margin-bottom:20px}
+  .map-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:8px}
+  .map-block{flex:1 1 420px;min-width:320px}
+  .map-title{font-size:12px;font-weight:bold;color:#333;margin-bottom:6px}
+  .map-note{font-size:11px;color:#666;margin-top:5px;line-height:1.45}
+  svg.map-svg{display:block;width:100%}
+  .tooltip{position:fixed;pointer-events:none;background:#fff;border:1px solid #bbb;
+    padding:7px 10px;font-size:11px;font-family:Georgia,serif;line-height:1.55;
+    color:#1a1a1a;box-shadow:0 2px 6px rgba(0,0,0,.12);max-width:220px;z-index:99;display:none}
+  /* bar chart */
+  .barchart-wrap{margin:24px 0 8px}
+  /* table */
+  table.risk-table{width:100%;border-collapse:collapse;font-size:11px;margin-top:20px}
+  table.risk-table th{text-align:left;font-weight:bold;border-bottom:1px solid #aaa;
+    padding:5px 8px;background:#f9f9f7;white-space:nowrap}
+  table.risk-table td{padding:4px 8px;border-bottom:1px solid #ebebeb;vertical-align:top}
+  table.risk-table tr:hover td{background:#fafaf7}
+  .rank-badge{display:inline-block;background:#b03020;color:#fff;font-size:10px;
+    font-weight:bold;padding:1px 5px;border-radius:2px;min-width:20px;text-align:center}
+  .num{text-align:right}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>CDCR State Prisons — Heat Risk Index Maps</h1>
+<p class="subtitle">31 CDCR adult state prisons. Risk = Hazard × Exposure × Vulnerability (Ovienmhada 2024 / VCP framework). Hover circles for details.</p>
+<div id="tooltip" class="tooltip"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 1: HAZARD
+════════════════════════════════════════════════════════════════════════ -->
+<h2>Hazard</h2>
+<p class="section-note">Equal-weight composite of days over 90°F (Cal-Adapt), hot nights (VCP 98th pctl), and AQI (CalEnviroScreen). Normalized 0–1 cross-period. Circle area scaled by 2025 average facility population.</p>
+<div class="map-row">
+  <div class="map-block">
+    <div class="map-title">Historic hazard score</div>
+    <svg id="m-haz-cur" class="map-svg"></svg>
+    <div class="map-note">Cal-Adapt historic baseline. Central Valley and Imperial Valley facilities dominate.</div>
+  </div>
+  <div class="map-block">
+    <div class="map-title">Mid-century hazard score (2040–2070)</div>
+    <svg id="m-haz-mc" class="map-svg"></svg>
+    <div class="map-note">LOCA2 SSP3-7.0. Scores increase system-wide; relative rankings shift modestly.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 2: OUTDOOR 90°F DAYS
+════════════════════════════════════════════════════════════════════════ -->
+<h2>Outdoor Days ≥ 90°F</h2>
+<p class="section-note">Raw outdoor heat exposure from gridMET (historic 2016–2025 average) and Cal-Adapt tract projections (mid-century 2040–2070). Categorized by duration. Note: outdoor tmax systematically overstates indoor exposure — facilities with full AC (ISP, CAL, CEN) have high outdoor days but low indoor burden.</p>
+<div class="map-row">
+  <div class="map-block">
+    <div class="map-title">Historic avg days ≥ 90°F (2016–2025)</div>
+    <svg id="m-90f-hist" class="map-svg"></svg>
+    <div class="map-note"></div>
+  </div>
+  <div class="map-block">
+    <div class="map-title">Projected days ≥ 90°F (mid-century 2040–2070)</div>
+    <svg id="m-90f-mc" class="map-svg"></svg>
+    <div class="map-note"></div>
+  </div>
+</div>
+<!-- 90F legend (shared) -->
+<div id="legend-90f" style="margin:4px 0 0;font-size:11px;color:#555;display:flex;gap:16px;flex-wrap:wrap"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 3: EXPOSURE & VULNERABILITY
+════════════════════════════════════════════════════════════════════════ -->
+<h2>Exposure &amp; Vulnerability</h2>
+<p class="section-note">Both components are static across time periods (2025 data). Exposure: indoor 78°F days, indoor/outdoor thermal ratio, UHI, inverted AC fraction. Vulnerability: medical acuity (CCHCS P1+P2+medium), age 50+, EOP, DPP, race/POC.</p>
+<div class="map-row">
+  <div class="map-block">
+    <div class="map-title">Exposure component</div>
+    <svg id="m-exp" class="map-svg"></svg>
+    <div class="map-note">Facilities with full refrigeration AC (ISP, CHCF, CAL, CEN) score lowest. CIM, COR, CIW, CRC score highest.</div>
+  </div>
+  <div class="map-block">
+    <div class="map-title">Vulnerability component</div>
+    <svg id="m-vuln" class="map-svg"></svg>
+    <div class="map-note">Medical facilities (CHCF, CMF, CIW) and high-acuity prisons score highest.</div>
+  </div>
+</div>
+<div class="barchart-wrap">
+  <div class="map-title" style="margin-bottom:10px">Exposure &amp; vulnerability sub-components by facility (sorted by mid-century risk score)</div>
+  <div id="bar-subcomp" style="display:block"></div>
+  <div style="margin-top:10px;font-size:11px;color:#555;display:flex;gap:20px;flex-wrap:wrap" id="bar-legend"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 4: FULL RISK INDEX
+════════════════════════════════════════════════════════════════════════ -->
+<h2>Full Risk Index</h2>
+<p class="section-note">Risk = Hazard × Exposure × Vulnerability, normalized 0–100 cross-period. Current and mid-century share the same normalization denominator for direct comparison.</p>
+<div class="map-row">
+  <div class="map-block">
+    <div class="map-title">Full risk index — historic</div>
+    <svg id="m-risk-cur" class="map-svg"></svg>
+  </div>
+  <div class="map-block">
+    <div class="map-title">Full risk index — mid-century (2040–2070)</div>
+    <svg id="m-risk-mc" class="map-svg"></svg>
+    <div class="map-note">Top 5: COR (100), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).</div>
+  </div>
+</div>
+<div id="risk-table-wrap"></div>
+<div id="delta-table-wrap"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 5: OVIENMHADA COMPARISON
+════════════════════════════════════════════════════════════════════════ -->
+<h2>Ovienmhada (2024) Weighting Comparison</h2>
+<p class="section-note">Ovienmhada et al. (2024) weight vulnerability at double the share of hazard and exposure (additive 25/25/50). Both maps use mid-century scores normalized 0–100 on a shared continuous scale. All three Spearman correlations across weighting schemes are ≥ 0.88 and the top 5 facilities are stable, but individual facility ranks shift — most notably CHCF (rank 22 → 6) and ISP (rank 31 → 21).</p>
+<div class="map-row" style="flex-wrap:nowrap">
+  <div class="map-block" style="flex:1 1 0;min-width:0">
+    <div class="map-title">Equal rank (H × E × V)</div>
+    <svg id="m-ov-equal" class="map-svg"></svg>
+    <div class="map-note">Mid-century. Top 5: COR, SATF, CIM, CMF, SAC.</div>
+  </div>
+  <div class="map-block" style="flex:1 1 0;min-width:0">
+    <div class="map-title">Additive rank (0.25H + 0.25E + 0.50V)</div>
+    <svg id="m-ov-add" class="map-svg"></svg>
+    <div class="map-note">Mid-century. Top 5: SATF, COR, CHCF, CMF, SAC. CHCF rises sharply — high medical complexity without high indoor heat exposure is rewarded by the additive structure.</div>
+  </div>
+  <div class="map-block" style="flex:1 1 0;min-width:0">
+    <div class="map-title">Rank divergence (equal − additive)</div>
+    <svg id="m-ov-div" class="map-svg"></svg>
+    <div class="map-note">Orange = rises in priority under Ovienmhada. Blue = falls. Circle size = population.</div>
+  </div>
+</div>
+<div id="ov-rank-table-wrap"></div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SECTION 6: VCP COMPARISON & SENSITIVITY
+════════════════════════════════════════════════════════════════════════ -->
+<h2>VCP Comparison &amp; Weighting Sensitivity</h2>
+<p class="section-note">VCP's ExHeatHealth_Idx uses community-facing demographics that do not describe incarcerated populations (Spearman r=−0.17 vs our index). Max rank swing shown across all three weighting schemes; CHCF (swing=16) and ISP (swing=10) are the most sensitive facilities.</p>
+<div class="map-row">
+  <div class="map-block">
+    <div class="map-title">VCP ExHeatHealth_Idx — surrounding community tracts</div>
+    <svg id="m-vcp" class="map-svg"></svg>
+    <div class="map-note">Average across adjacent non-institutional tracts (Pct_GroupQuarters ≤ 25%). Hot-geography prisons (CAL, ISP, CEN) score highest here.</div>
+  </div>
+  <div class="map-block">
+    <div class="map-title">Rank divergence: our index vs. community VCP</div>
+    <svg id="m-div" class="map-svg"></svg>
+    <div class="map-note">Red = our index ranks prison at higher risk than VCP ranks surrounding community. Blue = VCP ranks surrounding community higher. CIM (#3 ours, #29 community) and ISP (last ours, #4 community) are the extremes.</div>
+  </div>
+</div>
+<div class="map-row">
+  <div class="map-block">
+    <div class="map-title">Weighting sensitivity — max rank swing across 3 schemes</div>
+    <svg id="m-swing" class="map-svg"></svg>
+    <div class="map-note">CHCF swings 16 positions (high vulnerability, zero indoor heat days). ISP swings 10 (highest hazard, near-zero exposure after HVAC upgrade).</div>
+  </div>
+</div>
+
+</div><!-- .page -->
+
+<script>
+// ── Inline data ────────────────────────────────────────────────────────────
+const caOutline  = {"type": "MultiPolygon", "coordinates": [[[[-118.60442, 33.47855], [-118.37032, 33.40928], [-118.30508, 33.31032], [-118.46537, 33.32606], [-118.60442, 33.47855]]], [[[-118.6105, 33.03294], [-118.5739, 33.03055], [-118.35418, 32.82092], [-118.5062, 32.85299], [-118.6105, 33.03294]]], [[[-119.04704, 33.48382], [-119.0285, 33.48742], [-119.03365, 33.46575], [-119.04294, 33.47055], [-119.04704, 33.48382]]], [[[-119.37449, 34.01415], [-119.36257, 34.01715], [-119.35766, 34.01598], [-119.37233, 34.01209], [-119.37449, 34.01415]]], [[[-119.442, 34.01355], [-119.39625, 34.00592], [-119.37927, 34.00957], [-119.39082, 34.00286], [-119.442, 34.01355]]], [[[-119.57727, 33.27858], [-119.52878, 33.28542], [-119.4344, 33.22702], [-119.54621, 33.23256], [-119.57727, 33.27858]]], [[[-119.92989, 34.05973], [-119.75943, 34.05883], [-119.63774, 34.01318], [-119.52064, 34.03426], [-119.81825, 33.95985], [-119.92989, 34.05973]]], [[[-120.24954, 34.00248], [-120.04326, 34.0358], [-119.96864, 33.94287], [-120.11589, 33.89436], [-120.24954, 34.00248]]], [[[-120.45007, 34.03419], [-120.36828, 34.07646], [-120.30722, 34.02237], [-120.35793, 34.01503], [-120.45007, 34.03419]]], [[[-122.37768, 37.83046], [-122.36291, 37.8227], [-122.36229, 37.80702], [-122.37284, 37.81107], [-122.37768, 37.83046]]], [[[-122.42523, 37.82859], [-122.42025, 37.82651], [-122.42072, 37.82525], [-122.42277, 37.82526], [-122.42523, 37.82859]]], [[[-122.44515, 37.86142], [-122.43005, 37.87211], [-122.41858, 37.85332], [-122.44083, 37.8554], [-122.44515, 37.86142]]], [[[-123.01392, 37.70036], [-123.00351, 37.7044], [-122.99875, 37.69744], [-123.00279, 37.69274], [-123.01392, 37.70036]]], [[[-124.21749, 41.95081], [-124.21618, 41.95221], [-124.21302, 41.95103], [-124.215, 41.94974], [-124.21749, 41.95081]]], [[[-124.4086, 40.44321], [-124.11175, 41.02689], [-124.16541, 41.12983], [-124.06605, 41.47026], [-124.14741, 41.71796], [-124.25495, 41.77817], [-124.2116, 41.99846], [-119.99923, 41.99494], [-120.00102, 38.99958], [-117.50012, 37.22038], [-114.63349, 35.00185], [-114.63438, 34.87289], [-114.47048, 34.71137], [-114.3867, 34.45791], [-114.13121, 34.26273], [-114.43418, 34.08738], [-114.53548, 33.93465], [-114.5246, 33.55223], [-114.72528, 33.40505], [-114.70649, 33.08816], [-114.46904, 32.97229], [-114.52685, 32.75709], [-117.12367, 32.53444], [-117.16072, 32.66568], [-117.24313, 32.66454], [-117.3125, 33.08697], [-117.46979, 33.29642], [-118.1327, 33.75322], [-118.41047, 33.74104], [-118.39055, 33.83878], [-118.52436, 34.03068], [-118.80655, 34.00045], [-119.12925, 34.10084], [-119.56399, 34.41532], [-120.45281, 34.44244], [-120.63672, 34.56097], [-120.64615, 35.14394], [-120.85605, 35.20649], [-120.88476, 35.4302], [-121.28653, 35.66553], [-121.50083, 35.9981], [-121.90273, 36.30638], [-121.97676, 36.57944], [-121.8137, 36.68236], [-121.86227, 36.93155], [-122.13516, 36.96778], [-122.40508, 37.19579], [-122.40085, 37.35923], [-122.51953, 37.5373], [-122.47679, 37.80944], [-122.38767, 37.78881], [-122.37855, 37.60559], [-122.0386, 37.45462], [-122.16759, 37.67718], [-122.33204, 37.78204], [-122.3114, 37.8958], [-122.43009, 37.96312], [-122.28282, 38.08289], [-122.49752, 38.11514], [-122.4473, 37.98439], [-122.50506, 37.93642], [-122.43829, 37.88237], [-122.50428, 37.89412], [-122.50001, 37.82091], [-122.88212, 38.02527], [-123.02407, 37.99488], [-122.97708, 38.2679], [-123.72798, 38.91942], [-123.69125, 39.05079], [-123.82772, 39.34844], [-123.76648, 39.55281], [-123.85172, 39.83204], [-124.36061, 40.25722], [-124.4086, 40.44321]]]]};
+const dataCurr   = [{"cdcr_code": "ASP", "name": "Avenal State Prison", "latitude": 35.974, "longitude": -120.123, "average_2025_population": 3891.0, "hazard_score": 0.55, "exposure_score": 0.47, "vulnerability_score": 0.19, "risk_score": 18.99}, {"cdcr_code": "CAL", "name": "Calipatria State Prison", "latitude": 33.166, "longitude": -115.484, "average_2025_population": 2462.0, "hazard_score": 0.72, "exposure_score": 0.22, "vulnerability_score": 0.21, "risk_score": 13.0}, {"cdcr_code": "CCI", "name": "California Correctional Institution", "latitude": 35.11, "longitude": -118.57, "average_2025_population": 2434.0, "hazard_score": 0.44, "exposure_score": 0.51, "vulnerability_score": 0.31, "risk_score": 26.8}, {"cdcr_code": "CCWF", "name": "Central California Women'S Facility", "latitude": 37.094, "longitude": -120.153, "average_2025_population": 2040.0, "hazard_score": 0.68, "exposure_score": 0.43, "vulnerability_score": 0.3, "risk_score": 33.14}, {"cdcr_code": "CEN", "name": "Centinela State Prison", "latitude": 32.823, "longitude": -115.789, "average_2025_population": 2984.0, "hazard_score": 0.77, "exposure_score": 0.07, "vulnerability_score": 0.24, "risk_score": 4.64}, {"cdcr_code": "CHCF", "name": "California Health Care Facility", "latitude": 37.898, "longitude": -121.191, "average_2025_population": 2251.0, "hazard_score": 0.57, "exposure_score": 0.09, "vulnerability_score": 0.72, "risk_score": 13.24}, {"cdcr_code": "CIM", "name": "California Institution For Men", "latitude": 33.985, "longitude": -117.682, "average_2025_population": 2274.0, "hazard_score": 0.77, "exposure_score": 0.52, "vulnerability_score": 0.53, "risk_score": 80.38}, {"cdcr_code": "CIW", "name": "California Institution For Women", "latitude": 33.95, "longitude": -117.636, "average_2025_population": 1187.0, "hazard_score": 0.68, "exposure_score": 0.54, "vulnerability_score": 0.29, "risk_score": 40.44}, {"cdcr_code": "CMC", "name": "California Men'S Colony", "latitude": 35.325, "longitude": -120.699, "average_2025_population": 2172.0, "hazard_score": 0.12, "exposure_score": 0.33, "vulnerability_score": 0.5, "risk_score": 7.37}, {"cdcr_code": "CMF", "name": "California Medical Facility", "latitude": 38.329, "longitude": -121.979, "average_2025_population": 2045.0, "hazard_score": 0.47, "exposure_score": 0.49, "vulnerability_score": 0.66, "risk_score": 58.55}, {"cdcr_code": "COR", "name": "California State Prison, Corcoran", "latitude": 36.061, "longitude": -119.549, "average_2025_population": 2629.0, "hazard_score": 0.77, "exposure_score": 0.66, "vulnerability_score": 0.46, "risk_score": 88.1}, {"cdcr_code": "CRC", "name": "California Rehabilitation Center", "latitude": 33.929, "longitude": -117.573, "average_2025_population": 2330.0, "hazard_score": 0.63, "exposure_score": 0.43, "vulnerability_score": 0.29, "risk_score": 30.06}, {"cdcr_code": "CTF", "name": "Correctional Training Facility", "latitude": 36.47, "longitude": -121.382, "average_2025_population": 4225.0, "hazard_score": 0.21, "exposure_score": 0.37, "vulnerability_score": 0.39, "risk_score": 11.29}, {"cdcr_code": "FOL", "name": "Folsom State Prison", "latitude": 38.695, "longitude": -121.163, "average_2025_population": 2777.0, "hazard_score": 0.53, "exposure_score": 0.44, "vulnerability_score": 0.3, "risk_score": 26.23}, {"cdcr_code": "HDSP", "name": "High Desert State Prison", "latitude": 40.408, "longitude": -120.513, "average_2025_population": 2719.0, "hazard_score": 0.38, "exposure_score": 0.39, "vulnerability_score": 0.34, "risk_score": 19.19}, {"cdcr_code": "ISP", "name": "Ironwood State Prison", "latitude": 33.561, "longitude": -114.926, "average_2025_population": 2764.0, "hazard_score": 0.88, "exposure_score": 0.0, "vulnerability_score": 0.29, "risk_score": 0.0}, {"cdcr_code": "KVSP", "name": "Kern Valley State Prison", "latitude": 35.766, "longitude": -119.325, "average_2025_population": 3092.0, "hazard_score": 0.71, "exposure_score": 0.33, "vulnerability_score": 0.42, "risk_score": 36.98}, {"cdcr_code": "LAC", "name": "California State Prison-Los Angeles County", "latitude": 34.694, "longitude": -118.228, "average_2025_population": 2949.0, "hazard_score": 0.64, "exposure_score": 0.3, "vulnerability_score": 0.56, "risk_score": 40.49}, {"cdcr_code": "MCSP", "name": "Mule Creek State Prison", "latitude": 38.371, "longitude": -120.953, "average_2025_population": 3761.0, "hazard_score": 0.48, "exposure_score": 0.29, "vulnerability_score": 0.5, "risk_score": 26.18}, {"cdcr_code": "NKSP", "name": "North Kern State Prison", "latitude": 35.782, "longitude": -119.31, "average_2025_population": 2570.0, "hazard_score": 0.72, "exposure_score": 0.62, "vulnerability_score": 0.24, "risk_score": 40.39}, {"cdcr_code": "PBSP", "name": "Pelican Bay State Prison", "latitude": 41.855, "longitude": -124.149, "average_2025_population": 2096.0, "hazard_score": 0.11, "exposure_score": 0.65, "vulnerability_score": 0.34, "risk_score": 9.24}, {"cdcr_code": "PVSP", "name": "Pleasant Valley State Prison", "latitude": 36.131, "longitude": -120.249, "average_2025_population": 2992.0, "hazard_score": 0.43, "exposure_score": 0.41, "vulnerability_score": 0.21, "risk_score": 13.51}, {"cdcr_code": "RJD", "name": "R J Donovan Correctional Facility", "latitude": 32.585, "longitude": -116.934, "average_2025_population": 3592.0, "hazard_score": 0.51, "exposure_score": 0.37, "vulnerability_score": 0.62, "risk_score": 43.46}, {"cdcr_code": "SAC", "name": "California State Prison, Sacramento", "latitude": 38.694, "longitude": -121.154, "average_2025_population": 2131.0, "hazard_score": 0.53, "exposure_score": 0.42, "vulnerability_score": 0.62, "risk_score": 51.15}, {"cdcr_code": "SATF", "name": "Ca Substance Abuse Treatment Facility", "latitude": 36.054, "longitude": -119.548, "average_2025_population": 5358.0, "hazard_score": 0.77, "exposure_score": 0.61, "vulnerability_score": 0.49, "risk_score": 86.19}, {"cdcr_code": "SCC", "name": "Sierra Conservation Center", "latitude": 37.892, "longitude": -120.537, "average_2025_population": 4035.0, "hazard_score": 0.5, "exposure_score": 0.49, "vulnerability_score": 0.09, "risk_score": 8.46}, {"cdcr_code": "SOL", "name": "California State Prison, Solano", "latitude": 38.321, "longitude": -121.975, "average_2025_population": 3735.0, "hazard_score": 0.47, "exposure_score": 0.63, "vulnerability_score": 0.38, "risk_score": 42.93}, {"cdcr_code": "SQ", "name": "San Quentin State Prison", "latitude": 37.94, "longitude": -122.49, "average_2025_population": 2688.0, "hazard_score": 0.3, "exposure_score": 0.18, "vulnerability_score": 0.46, "risk_score": 9.38}, {"cdcr_code": "SVSP", "name": "Salinas Valley State Prison", "latitude": 36.479, "longitude": -121.374, "average_2025_population": 2387.0, "hazard_score": 0.21, "exposure_score": 0.23, "vulnerability_score": 0.46, "risk_score": 8.04}, {"cdcr_code": "VSP", "name": "Valley State Prison", "latitude": 37.105, "longitude": -120.155, "average_2025_population": 3148.0, "hazard_score": 0.68, "exposure_score": 0.36, "vulnerability_score": 0.5, "risk_score": 45.79}, {"cdcr_code": "WSP", "name": "Wasco State Prison", "latitude": 35.594, "longitude": -119.408, "average_2025_population": 3676.0, "hazard_score": 0.72, "exposure_score": 0.59, "vulnerability_score": 0.24, "risk_score": 37.82}];
+const dataMC     = [{"cdcr_code": "ASP", "name": "Avenal State Prison", "latitude": 35.974, "longitude": -120.123, "average_2025_population": 3891.0, "hazard_score": 0.59, "exposure_score": 0.47, "vulnerability_score": 0.19, "risk_score": 20.13}, {"cdcr_code": "CAL", "name": "Calipatria State Prison", "latitude": 33.166, "longitude": -115.484, "average_2025_population": 2462.0, "hazard_score": 0.71, "exposure_score": 0.22, "vulnerability_score": 0.21, "risk_score": 12.7}, {"cdcr_code": "CCI", "name": "California Correctional Institution", "latitude": 35.11, "longitude": -118.57, "average_2025_population": 2434.0, "hazard_score": 0.54, "exposure_score": 0.51, "vulnerability_score": 0.31, "risk_score": 32.52}, {"cdcr_code": "CCWF", "name": "Central California Women'S Facility", "latitude": 37.094, "longitude": -120.153, "average_2025_population": 2040.0, "hazard_score": 0.74, "exposure_score": 0.43, "vulnerability_score": 0.3, "risk_score": 36.42}, {"cdcr_code": "CEN", "name": "Centinela State Prison", "latitude": 32.823, "longitude": -115.789, "average_2025_population": 2984.0, "hazard_score": 0.8, "exposure_score": 0.07, "vulnerability_score": 0.24, "risk_score": 4.82}, {"cdcr_code": "CHCF", "name": "California Health Care Facility", "latitude": 37.898, "longitude": -121.191, "average_2025_population": 2251.0, "hazard_score": 0.66, "exposure_score": 0.09, "vulnerability_score": 0.72, "risk_score": 15.28}, {"cdcr_code": "CIM", "name": "California Institution For Men", "latitude": 33.985, "longitude": -117.682, "average_2025_population": 2274.0, "hazard_score": 0.79, "exposure_score": 0.52, "vulnerability_score": 0.53, "risk_score": 82.72}, {"cdcr_code": "CIW", "name": "California Institution For Women", "latitude": 33.95, "longitude": -117.636, "average_2025_population": 1187.0, "hazard_score": 0.72, "exposure_score": 0.54, "vulnerability_score": 0.29, "risk_score": 42.59}, {"cdcr_code": "CMC", "name": "California Men'S Colony", "latitude": 35.325, "longitude": -120.699, "average_2025_population": 2172.0, "hazard_score": 0.1, "exposure_score": 0.33, "vulnerability_score": 0.5, "risk_score": 6.22}, {"cdcr_code": "CMF", "name": "California Medical Facility", "latitude": 38.329, "longitude": -121.979, "average_2025_population": 2045.0, "hazard_score": 0.49, "exposure_score": 0.49, "vulnerability_score": 0.66, "risk_score": 60.93}, {"cdcr_code": "COR", "name": "California State Prison, Corcoran", "latitude": 36.061, "longitude": -119.549, "average_2025_population": 2629.0, "hazard_score": 0.87, "exposure_score": 0.66, "vulnerability_score": 0.46, "risk_score": 100.0}, {"cdcr_code": "CRC", "name": "California Rehabilitation Center", "latitude": 33.929, "longitude": -117.573, "average_2025_population": 2330.0, "hazard_score": 0.69, "exposure_score": 0.43, "vulnerability_score": 0.29, "risk_score": 32.96}, {"cdcr_code": "CTF", "name": "Correctional Training Facility", "latitude": 36.47, "longitude": -121.382, "average_2025_population": 4225.0, "hazard_score": 0.27, "exposure_score": 0.37, "vulnerability_score": 0.39, "risk_score": 15.17}, {"cdcr_code": "FOL", "name": "Folsom State Prison", "latitude": 38.695, "longitude": -121.163, "average_2025_population": 2777.0, "hazard_score": 0.6, "exposure_score": 0.44, "vulnerability_score": 0.3, "risk_score": 30.11}, {"cdcr_code": "HDSP", "name": "High Desert State Prison", "latitude": 40.408, "longitude": -120.513, "average_2025_population": 2719.0, "hazard_score": 0.53, "exposure_score": 0.39, "vulnerability_score": 0.34, "risk_score": 26.62}, {"cdcr_code": "ISP", "name": "Ironwood State Prison", "latitude": 33.561, "longitude": -114.926, "average_2025_population": 2764.0, "hazard_score": 0.93, "exposure_score": 0.0, "vulnerability_score": 0.29, "risk_score": 0.01}, {"cdcr_code": "KVSP", "name": "Kern Valley State Prison", "latitude": 35.766, "longitude": -119.325, "average_2025_population": 3092.0, "hazard_score": 0.79, "exposure_score": 0.33, "vulnerability_score": 0.42, "risk_score": 41.26}, {"cdcr_code": "LAC", "name": "California State Prison-Los Angeles County", "latitude": 34.694, "longitude": -118.228, "average_2025_population": 2949.0, "hazard_score": 0.75, "exposure_score": 0.3, "vulnerability_score": 0.56, "risk_score": 47.41}, {"cdcr_code": "MCSP", "name": "Mule Creek State Prison", "latitude": 38.371, "longitude": -120.953, "average_2025_population": 3761.0, "hazard_score": 0.54, "exposure_score": 0.29, "vulnerability_score": 0.5, "risk_score": 29.07}, {"cdcr_code": "NKSP", "name": "North Kern State Prison", "latitude": 35.782, "longitude": -119.31, "average_2025_population": 2570.0, "hazard_score": 0.81, "exposure_score": 0.62, "vulnerability_score": 0.24, "risk_score": 44.92}, {"cdcr_code": "PBSP", "name": "Pelican Bay State Prison", "latitude": 41.855, "longitude": -124.149, "average_2025_population": 2096.0, "hazard_score": 0.09, "exposure_score": 0.65, "vulnerability_score": 0.34, "risk_score": 7.23}, {"cdcr_code": "PVSP", "name": "Pleasant Valley State Prison", "latitude": 36.131, "longitude": -120.249, "average_2025_population": 2992.0, "hazard_score": 0.5, "exposure_score": 0.41, "vulnerability_score": 0.21, "risk_score": 15.82}, {"cdcr_code": "RJD", "name": "R J Donovan Correctional Facility", "latitude": 32.585, "longitude": -116.934, "average_2025_population": 3592.0, "hazard_score": 0.48, "exposure_score": 0.37, "vulnerability_score": 0.62, "risk_score": 40.89}, {"cdcr_code": "SAC", "name": "California State Prison, Sacramento", "latitude": 38.694, "longitude": -121.154, "average_2025_population": 2131.0, "hazard_score": 0.6, "exposure_score": 0.42, "vulnerability_score": 0.62, "risk_score": 58.68}, {"cdcr_code": "SATF", "name": "Ca Substance Abuse Treatment Facility", "latitude": 36.054, "longitude": -119.548, "average_2025_population": 5358.0, "hazard_score": 0.87, "exposure_score": 0.61, "vulnerability_score": 0.49, "risk_score": 97.83}, {"cdcr_code": "SCC", "name": "Sierra Conservation Center", "latitude": 37.892, "longitude": -120.537, "average_2025_population": 4035.0, "hazard_score": 0.62, "exposure_score": 0.49, "vulnerability_score": 0.09, "risk_score": 10.44}, {"cdcr_code": "SOL", "name": "California State Prison, Solano", "latitude": 38.321, "longitude": -121.975, "average_2025_population": 3735.0, "hazard_score": 0.49, "exposure_score": 0.63, "vulnerability_score": 0.38, "risk_score": 44.68}, {"cdcr_code": "SQ", "name": "San Quentin State Prison", "latitude": 37.94, "longitude": -122.49, "average_2025_population": 2688.0, "hazard_score": 0.36, "exposure_score": 0.18, "vulnerability_score": 0.46, "risk_score": 11.27}, {"cdcr_code": "SVSP", "name": "Salinas Valley State Prison", "latitude": 36.479, "longitude": -121.374, "average_2025_population": 2387.0, "hazard_score": 0.27, "exposure_score": 0.23, "vulnerability_score": 0.46, "risk_score": 10.82}, {"cdcr_code": "VSP", "name": "Valley State Prison", "latitude": 37.105, "longitude": -120.155, "average_2025_population": 3148.0, "hazard_score": 0.74, "exposure_score": 0.36, "vulnerability_score": 0.5, "risk_score": 50.3}, {"cdcr_code": "WSP", "name": "Wasco State Prison", "latitude": 35.594, "longitude": -119.408, "average_2025_population": 3676.0, "hazard_score": 0.76, "exposure_score": 0.59, "vulnerability_score": 0.24, "risk_score": 40.06}];
+const dataSens   = [{"cdcr_code": "ASP", "name": "Avenal State Prison", "latitude": 35.974, "longitude": -120.123, "risk_score_equal_mult": 19.95, "risk_score_additive_25_25_50": 12.82, "risk_score_mult_vsq": 7.86, "rank_equal_mult": 20, "rank_additive_25_25_50": 23, "rank_mult_vsq": 24, "vcp_community_ExHeatHealth_Idx": 56.34, "n_neighbors": 1, "rank_divergence": -3.0, "max_swing": 4}, {"cdcr_code": "CAL", "name": "Calipatria State Prison", "latitude": 33.166, "longitude": -115.484, "risk_score_equal_mult": 12.42, "risk_score_additive_25_25_50": 5.13, "risk_score_mult_vsq": 5.41, "rank_equal_mult": 24, "rank_additive_25_25_50": 29, "rank_mult_vsq": 27, "vcp_community_ExHeatHealth_Idx": 86.88, "n_neighbors": 4, "rank_divergence": 23.0, "max_swing": 5}, {"cdcr_code": "CCI", "name": "California Correctional Institution", "latitude": 35.11, "longitude": -118.57, "risk_score_equal_mult": 32.32, "risk_score_additive_25_25_50": 32.48, "risk_score_mult_vsq": 20.77, "rank_equal_mult": 16, "rank_additive_25_25_50": 18, "rank_mult_vsq": 16, "vcp_community_ExHeatHealth_Idx": 70.69, "n_neighbors": 3, "rank_divergence": 0.0, "max_swing": 2}, {"cdcr_code": "CCWF", "name": "Central California Women'S Facility", "latitude": 37.094, "longitude": -120.153, "risk_score_equal_mult": 36.14, "risk_score_additive_25_25_50": 41.03, "risk_score_mult_vsq": 22.48, "rank_equal_mult": 14, "rank_additive_25_25_50": 16, "rank_mult_vsq": 15, "vcp_community_ExHeatHealth_Idx": 72.66, "n_neighbors": 7, "rank_divergence": 1.5, "max_swing": 2}, {"cdcr_code": "CEN", "name": "Centinela State Prison", "latitude": 32.823, "longitude": -115.789, "risk_score_equal_mult": 5.09, "risk_score_additive_25_25_50": 5.13, "risk_score_mult_vsq": 2.53, "rank_equal_mult": 30, "rank_additive_25_25_50": 28, "rank_mult_vsq": 29, "vcp_community_ExHeatHealth_Idx": 76.3, "n_neighbors": 10, "rank_divergence": 20.0, "max_swing": 2}, {"cdcr_code": "CHCF", "name": "California Health Care Facility", "latitude": 37.898, "longitude": -121.191, "risk_score_equal_mult": 16.19, "risk_score_additive_25_25_50": 76.92, "risk_score_mult_vsq": 24.17, "rank_equal_mult": 22, "rank_additive_25_25_50": 6, "rank_mult_vsq": 13, "vcp_community_ExHeatHealth_Idx": 69.94, "n_neighbors": 9, "rank_divergence": 5.0, "max_swing": 16}, {"cdcr_code": "CIM", "name": "California Institution For Men", "latitude": 33.985, "longitude": -117.682, "risk_score_equal_mult": 82.43, "risk_score_additive_25_25_50": 92.31, "risk_score_mult_vsq": 90.56, "rank_equal_mult": 3, "rank_additive_25_25_50": 3, "rank_mult_vsq": 3, "vcp_community_ExHeatHealth_Idx": 26.23, "n_neighbors": 7, "rank_divergence": -26.0, "max_swing": 0}, {"cdcr_code": "CIW", "name": "California Institution For Women", "latitude": 33.95, "longitude": -117.636, "risk_score_equal_mult": 42.69, "risk_score_additive_25_25_50": 47.01, "risk_score_mult_vsq": 25.66, "rank_equal_mult": 10, "rank_additive_25_25_50": 13, "rank_mult_vsq": 12, "vcp_community_ExHeatHealth_Idx": 17.16, "n_neighbors": 4, "rank_divergence": -20.0, "max_swing": 3}, {"cdcr_code": "CMC", "name": "California Men'S Colony", "latitude": 35.325, "longitude": -120.699, "risk_score_equal_mult": 6.25, "risk_score_additive_25_25_50": 11.97, "risk_score_mult_vsq": 6.47, "rank_equal_mult": 29, "rank_additive_25_25_50": 24, "rank_mult_vsq": 26, "vcp_community_ExHeatHealth_Idx": 44.81, "n_neighbors": 2, "rank_divergence": 2.0, "max_swing": 5}, {"cdcr_code": "CMF", "name": "California Medical Facility", "latitude": 38.329, "longitude": -121.979, "risk_score_equal_mult": 60.0, "risk_score_additive_25_25_50": 86.32, "risk_score_mult_vsq": 82.08, "rank_equal_mult": 4, "rank_additive_25_25_50": 4, "rank_mult_vsq": 4, "vcp_community_ExHeatHealth_Idx": 56.36, "n_neighbors": 4, "rank_divergence": -17.5, "max_swing": 0}, {"cdcr_code": "COR", "name": "California State Prison, Corcoran", "latitude": 36.061, "longitude": -119.549, "risk_score_equal_mult": 100.0, "risk_score_additive_25_25_50": 99.15, "risk_score_mult_vsq": 95.35, "rank_equal_mult": 1, "rank_additive_25_25_50": 2, "rank_mult_vsq": 2, "vcp_community_ExHeatHealth_Idx": 86.1, "n_neighbors": 4, "rank_divergence": -1.5, "max_swing": 1}, {"cdcr_code": "CRC", "name": "California Rehabilitation Center", "latitude": 33.929, "longitude": -117.573, "risk_score_equal_mult": 32.58, "risk_score_additive_25_25_50": 35.04, "risk_score_mult_vsq": 19.58, "rank_equal_mult": 15, "rank_additive_25_25_50": 17, "rank_mult_vsq": 18, "vcp_community_ExHeatHealth_Idx": 59.46, "n_neighbors": 4, "rank_divergence": -5.0, "max_swing": 3}, {"cdcr_code": "CTF", "name": "Correctional Training Facility", "latitude": 36.47, "longitude": -121.382, "risk_score_equal_mult": 14.75, "risk_score_additive_25_25_50": 11.11, "risk_score_mult_vsq": 11.92, "rank_equal_mult": 23, "rank_additive_25_25_50": 26, "rank_mult_vsq": 21, "vcp_community_ExHeatHealth_Idx": 71.35, "n_neighbors": 2, "rank_divergence": 8.5, "max_swing": 5}, {"cdcr_code": "FOL", "name": "Folsom State Prison", "latitude": 38.695, "longitude": -121.163, "risk_score_equal_mult": 29.99, "risk_score_additive_25_25_50": 29.91, "risk_score_mult_vsq": 18.65, "rank_equal_mult": 17, "rank_additive_25_25_50": 19, "rank_mult_vsq": 20, "vcp_community_ExHeatHealth_Idx": 54.58, "n_neighbors": 4, "rank_divergence": -7.5, "max_swing": 3}, {"cdcr_code": "HDSP", "name": "High Desert State Prison", "latitude": 40.408, "longitude": -120.513, "risk_score_equal_mult": 26.61, "risk_score_additive_25_25_50": 26.5, "risk_score_mult_vsq": 18.75, "rank_equal_mult": 19, "rank_additive_25_25_50": 20, "rank_mult_vsq": 19, "vcp_community_ExHeatHealth_Idx": 74.97, "n_neighbors": 4, "rank_divergence": 8.0, "max_swing": 1}, {"cdcr_code": "ISP", "name": "Ironwood State Prison", "latitude": 33.561, "longitude": -114.926, "risk_score_equal_mult": 0.0, "risk_score_additive_25_25_50": 18.8, "risk_score_mult_vsq": 0.0, "rank_equal_mult": 31, "rank_additive_25_25_50": 21, "rank_mult_vsq": 31, "vcp_community_ExHeatHealth_Idx": 86.03, "n_neighbors": 1, "rank_divergence": 27.0, "max_swing": 10}, {"cdcr_code": "KVSP", "name": "Kern Valley State Prison", "latitude": 35.766, "longitude": -119.325, "risk_score_equal_mult": 41.45, "risk_score_additive_25_25_50": 57.26, "risk_score_mult_vsq": 36.09, "rank_equal_mult": 12, "rank_additive_25_25_50": 10, "rank_mult_vsq": 9, "vcp_community_ExHeatHealth_Idx": 78.48, "n_neighbors": 1, "rank_divergence": 4.0, "max_swing": 3}, {"cdcr_code": "LAC", "name": "California State Prison-Los Angeles County", "latitude": 34.694, "longitude": -118.228, "risk_score_equal_mult": 47.7, "risk_score_additive_25_25_50": 75.21, "risk_score_mult_vsq": 55.38, "rank_equal_mult": 7, "rank_additive_25_25_50": 7, "rank_mult_vsq": 6, "vcp_community_ExHeatHealth_Idx": 46.97, "n_neighbors": 5, "rank_divergence": -19.0, "max_swing": 1}, {"cdcr_code": "MCSP", "name": "Mule Creek State Prison", "latitude": 38.371, "longitude": -120.953, "risk_score_equal_mult": 29.64, "risk_score_additive_25_25_50": 46.15, "risk_score_mult_vsq": 30.72, "rank_equal_mult": 18, "rank_additive_25_25_50": 14, "rank_mult_vsq": 11, "vcp_community_ExHeatHealth_Idx": 64.01, "n_neighbors": 9, "rank_divergence": 0.0, "max_swing": 7}, {"cdcr_code": "NKSP", "name": "North Kern State Prison", "latitude": 35.782, "longitude": -119.31, "risk_score_equal_mult": 45.63, "risk_score_additive_25_25_50": 52.99, "risk_score_mult_vsq": 22.7, "rank_equal_mult": 8, "rank_additive_25_25_50": 11, "rank_mult_vsq": 14, "vcp_community_ExHeatHealth_Idx": 83.3, "n_neighbors": 2, "rank_divergence": 3.0, "max_swing": 6}, {"cdcr_code": "PBSP", "name": "Pelican Bay State Prison", "latitude": 41.855, "longitude": -124.149, "risk_score_equal_mult": 7.53, "risk_score_additive_25_25_50": 11.11, "risk_score_mult_vsq": 5.31, "rank_equal_mult": 28, "rank_additive_25_25_50": 26, "rank_mult_vsq": 28, "vcp_community_ExHeatHealth_Idx": 80.41, "n_neighbors": 3, "rank_divergence": 21.0, "max_swing": 2}, {"cdcr_code": "PVSP", "name": "Pleasant Valley State Prison", "latitude": 36.131, "longitude": -120.249, "risk_score_equal_mult": 16.3, "risk_score_additive_25_25_50": 3.42, "risk_score_mult_vsq": 7.09, "rank_equal_mult": 21, "rank_additive_25_25_50": 30, "rank_mult_vsq": 25, "vcp_community_ExHeatHealth_Idx": 77.45, "n_neighbors": 9, "rank_divergence": 12.0, "max_swing": 9}, {"cdcr_code": "RJD", "name": "R J Donovan Correctional Facility", "latitude": 32.585, "longitude": -116.934, "risk_score_equal_mult": 41.69, "risk_score_additive_25_25_50": 68.38, "risk_score_mult_vsq": 53.58, "rank_equal_mult": 11, "rank_additive_25_25_50": 9, "rank_mult_vsq": 7, "vcp_community_ExHeatHealth_Idx": 14.54, "n_neighbors": 6, "rank_divergence": -20.0, "max_swing": 4}, {"cdcr_code": "SAC", "name": "California State Prison, Sacramento", "latitude": 38.694, "longitude": -121.154, "risk_score_equal_mult": 59.15, "risk_score_additive_25_25_50": 82.91, "risk_score_mult_vsq": 76.02, "rank_equal_mult": 5, "rank_additive_25_25_50": 5, "rank_mult_vsq": 5, "vcp_community_ExHeatHealth_Idx": 54.58, "n_neighbors": 4, "rank_divergence": -19.5, "max_swing": 0}, {"cdcr_code": "SATF", "name": "Ca Substance Abuse Treatment Facility", "latitude": 36.054, "longitude": -119.548, "risk_score_equal_mult": 98.45, "risk_score_additive_25_25_50": 100.0, "risk_score_mult_vsq": 100.0, "rank_equal_mult": 2, "rank_additive_25_25_50": 1, "rank_mult_vsq": 1, "vcp_community_ExHeatHealth_Idx": 86.1, "n_neighbors": 4, "rank_divergence": -0.5, "max_swing": 1}, {"cdcr_code": "SCC", "name": "Sierra Conservation Center", "latitude": 37.892, "longitude": -120.537, "risk_score_equal_mult": 10.35, "risk_score_additive_25_25_50": 0.0, "risk_score_mult_vsq": 1.93, "rank_equal_mult": 27, "rank_additive_25_25_50": 31, "rank_mult_vsq": 30, "vcp_community_ExHeatHealth_Idx": 82.1, "n_neighbors": 1, "rank_divergence": 21.0, "max_swing": 4}, {"cdcr_code": "SOL", "name": "California State Prison, Solano", "latitude": 38.321, "longitude": -121.975, "risk_score_equal_mult": 44.41, "risk_score_additive_25_25_50": 50.43, "risk_score_mult_vsq": 34.98, "rank_equal_mult": 9, "rank_additive_25_25_50": 12, "rank_mult_vsq": 10, "vcp_community_ExHeatHealth_Idx": 56.36, "n_neighbors": 4, "rank_divergence": -12.5, "max_swing": 3}, {"cdcr_code": "SQ", "name": "San Quentin State Prison", "latitude": 37.94, "longitude": -122.49, "risk_score_equal_mult": 11.29, "risk_score_additive_25_25_50": 14.53, "risk_score_mult_vsq": 10.76, "rank_equal_mult": 25, "rank_additive_25_25_50": 22, "rank_mult_vsq": 22, "vcp_community_ExHeatHealth_Idx": 35.16, "n_neighbors": 2, "rank_divergence": -3.0, "max_swing": 3}, {"cdcr_code": "SVSP", "name": "Salinas Valley State Prison", "latitude": 36.479, "longitude": -121.374, "risk_score_equal_mult": 10.82, "risk_score_additive_25_25_50": 11.11, "risk_score_mult_vsq": 10.31, "rank_equal_mult": 26, "rank_additive_25_25_50": 26, "rank_mult_vsq": 23, "vcp_community_ExHeatHealth_Idx": 71.35, "n_neighbors": 2, "rank_divergence": 11.5, "max_swing": 3}, {"cdcr_code": "VSP", "name": "Valley State Prison", "latitude": 37.105, "longitude": -120.155, "risk_score_equal_mult": 50.43, "risk_score_additive_25_25_50": 69.23, "risk_score_mult_vsq": 52.27, "rank_equal_mult": 6, "rank_additive_25_25_50": 8, "rank_mult_vsq": 8, "vcp_community_ExHeatHealth_Idx": 72.66, "n_neighbors": 7, "rank_divergence": -6.5, "max_swing": 2}, {"cdcr_code": "WSP", "name": "Wasco State Prison", "latitude": 35.594, "longitude": -119.408, "risk_score_equal_mult": 40.74, "risk_score_additive_25_25_50": 46.15, "risk_score_mult_vsq": 20.27, "rank_equal_mult": 13, "rank_additive_25_25_50": 14, "rank_mult_vsq": 17, "vcp_community_ExHeatHealth_Idx": 61.16, "n_neighbors": 2, "rank_divergence": -6.0, "max_swing": 4}];
+const data90     = [{"cdcr_code": "ASP", "hist_days_90f": 109.9, "days_over_90_midcentury": 125.7, "latitude": 36.0, "longitude": -120.1, "name": "Avenal State Prison", "average_2025_population": 3891.0}, {"cdcr_code": "CAL", "hist_days_90f": 181.2, "days_over_90_midcentury": 205.1, "latitude": 33.2, "longitude": -115.5, "name": "Calipatria State Prison", "average_2025_population": 2462.0}, {"cdcr_code": "CCI", "hist_days_90f": 20.3, "days_over_90_midcentury": 38.3, "latitude": 35.1, "longitude": -118.6, "name": "California Correctional Institution", "average_2025_population": 2434.0}, {"cdcr_code": "CCWF", "hist_days_90f": 101.8, "days_over_90_midcentury": 130.8, "latitude": 37.1, "longitude": -120.2, "name": "Central California Women'S Facility", "average_2025_population": 2040.0}, {"cdcr_code": "CEN", "hist_days_90f": 181.9, "days_over_90_midcentury": 198.3, "latitude": 32.8, "longitude": -115.8, "name": "Centinela State Prison", "average_2025_population": 2984.0}, {"cdcr_code": "CHCF", "hist_days_90f": 91.8, "days_over_90_midcentury": 116.4, "latitude": 37.9, "longitude": -121.2, "name": "California Health Care Facility", "average_2025_population": 2251.0}, {"cdcr_code": "CIM", "hist_days_90f": 88.7, "days_over_90_midcentury": 111.7, "latitude": 34.0, "longitude": -117.7, "name": "California Institution For Men", "average_2025_population": 2274.0}, {"cdcr_code": "CIW", "hist_days_90f": 93.0, "days_over_90_midcentury": 115.2, "latitude": 33.9, "longitude": -117.6, "name": "California Institution For Women", "average_2025_population": 1187.0}, {"cdcr_code": "CMC", "hist_days_90f": 11.2, "days_over_90_midcentury": 8.4, "latitude": 35.3, "longitude": -120.7, "name": "California Men'S Colony", "average_2025_population": 2172.0}, {"cdcr_code": "CMF", "hist_days_90f": 78.3, "days_over_90_midcentury": 90.3, "latitude": 38.3, "longitude": -122.0, "name": "California Medical Facility", "average_2025_population": 2045.0}, {"cdcr_code": "COR", "hist_days_90f": 115.6, "days_over_90_midcentury": 141.9, "latitude": 36.1, "longitude": -119.5, "name": "California State Prison, Corcoran", "average_2025_population": 2629.0}, {"cdcr_code": "CRC", "hist_days_90f": 85.5, "days_over_90_midcentury": 124.8, "latitude": 33.9, "longitude": -117.6, "name": "California Rehabilitation Center", "average_2025_population": 2330.0}, {"cdcr_code": "CTF", "hist_days_90f": 12.8, "days_over_90_midcentury": 39.7, "latitude": 36.5, "longitude": -121.4, "name": "Correctional Training Facility", "average_2025_population": 4225.0}, {"cdcr_code": "FOL", "hist_days_90f": 81.7, "days_over_90_midcentury": 104.1, "latitude": 38.7, "longitude": -121.2, "name": "Folsom State Prison", "average_2025_population": 2777.0}, {"cdcr_code": "HDSP", "hist_days_90f": 54.2, "days_over_90_midcentury": 66.7, "latitude": 40.4, "longitude": -120.5, "name": "High Desert State Prison", "average_2025_population": 2719.0}, {"cdcr_code": "ISP", "hist_days_90f": 179.5, "days_over_90_midcentury": 199.3, "latitude": 33.6, "longitude": -114.9, "name": "Ironwood State Prison", "average_2025_population": 2764.0}, {"cdcr_code": "KVSP", "hist_days_90f": 113.2, "days_over_90_midcentury": 142.5, "latitude": 35.8, "longitude": -119.3, "name": "Kern Valley State Prison", "average_2025_population": 3092.0}, {"cdcr_code": "LAC", "hist_days_90f": 111.5, "days_over_90_midcentury": 125.4, "latitude": 34.7, "longitude": -118.2, "name": "California State Prison-Los Angeles County", "average_2025_population": 2949.0}, {"cdcr_code": "MCSP", "hist_days_90f": 83.2, "days_over_90_midcentury": 118.2, "latitude": 38.4, "longitude": -121.0, "name": "Mule Creek State Prison", "average_2025_population": 3761.0}, {"cdcr_code": "NKSP", "hist_days_90f": 113.2, "days_over_90_midcentury": 139.3, "latitude": 35.8, "longitude": -119.3, "name": "North Kern State Prison", "average_2025_population": 2570.0}, {"cdcr_code": "PBSP", "hist_days_90f": 0.1, "days_over_90_midcentury": 1.3, "latitude": 41.9, "longitude": -124.1, "name": "Pelican Bay State Prison", "average_2025_population": 2096.0}, {"cdcr_code": "PVSP", "hist_days_90f": 114.4, "days_over_90_midcentury": 112.6, "latitude": 36.1, "longitude": -120.2, "name": "Pleasant Valley State Prison", "average_2025_population": 2992.0}, {"cdcr_code": "RJD", "hist_days_90f": 8.2, "days_over_90_midcentury": 29.3, "latitude": 32.6, "longitude": -116.9, "name": "R J Donovan Correctional Facility", "average_2025_population": 3592.0}, {"cdcr_code": "SAC", "hist_days_90f": 80.0, "days_over_90_midcentury": 104.1, "latitude": 38.7, "longitude": -121.2, "name": "California State Prison, Sacramento", "average_2025_population": 2131.0}, {"cdcr_code": "SATF", "hist_days_90f": 115.6, "days_over_90_midcentury": 141.9, "latitude": 36.1, "longitude": -119.5, "name": "Ca Substance Abuse Treatment Facility", "average_2025_population": 5358.0}, {"cdcr_code": "SCC", "hist_days_90f": 86.5, "days_over_90_midcentury": 117.5, "latitude": 37.9, "longitude": -120.5, "name": "Sierra Conservation Center", "average_2025_population": 4035.0}, {"cdcr_code": "SOL", "hist_days_90f": 78.3, "days_over_90_midcentury": 90.3, "latitude": 38.3, "longitude": -122.0, "name": "California State Prison, Solano", "average_2025_population": 3735.0}, {"cdcr_code": "SQ", "hist_days_90f": 4.9, "days_over_90_midcentury": 15.0, "latitude": 37.9, "longitude": -122.5, "name": "San Quentin State Prison", "average_2025_population": 2688.0}, {"cdcr_code": "SVSP", "hist_days_90f": 12.8, "days_over_90_midcentury": 39.7, "latitude": 36.5, "longitude": -121.4, "name": "Salinas Valley State Prison", "average_2025_population": 2387.0}, {"cdcr_code": "VSP", "hist_days_90f": 101.8, "days_over_90_midcentury": 130.8, "latitude": 37.1, "longitude": -120.2, "name": "Valley State Prison", "average_2025_population": 3148.0}, {"cdcr_code": "WSP", "hist_days_90f": 119.5, "days_over_90_midcentury": 145.1, "latitude": 35.6, "longitude": -119.4, "name": "Wasco State Prison", "average_2025_population": 3676.0}];
+const dataBar    = [{"cdcr_code": "COR", "name": "California State Prison, Corcoran", "risk_score": 100.0, "exp_indoor78": 0.988, "exp_ratio": 0.062, "exp_uhi": 0.578, "exp_noac": 1.0, "vuln_medical": 0.738, "vuln_age": 0.565, "vuln_mh": 0.238, "vuln_dpp": 0.301, "vuln_race": 0.451}, {"cdcr_code": "SATF", "name": "Ca Substance Abuse Treatment Facility", "risk_score": 97.83, "exp_indoor78": 0.826, "exp_ratio": 0.052, "exp_uhi": 0.601, "exp_noac": 0.951, "vuln_medical": 0.762, "vuln_age": 0.467, "vuln_mh": 0.279, "vuln_dpp": 0.432, "vuln_race": 0.486}, {"cdcr_code": "CIM", "name": "California Institution For Men", "risk_score": 82.72, "exp_indoor78": 1.0, "exp_ratio": 0.063, "exp_uhi": 1.0, "exp_noac": 0.0, "vuln_medical": 0.844, "vuln_age": 0.874, "vuln_mh": 0.18, "vuln_dpp": 0.462, "vuln_race": 0.306}, {"cdcr_code": "CMF", "name": "California Medical Facility", "risk_score": 60.93, "exp_indoor78": 0.839, "exp_ratio": 0.059, "exp_uhi": 0.582, "exp_noac": 0.5, "vuln_medical": 0.931, "vuln_age": 0.811, "vuln_mh": 0.587, "vuln_dpp": 0.778, "vuln_race": 0.175}, {"cdcr_code": "SAC", "name": "California State Prison, Sacramento", "risk_score": 58.68, "exp_indoor78": 0.826, "exp_ratio": 0.059, "exp_uhi": 0.0, "exp_noac": 0.778, "vuln_medical": 0.869, "vuln_age": 0.257, "vuln_mh": 1.0, "vuln_dpp": 0.267, "vuln_race": 0.684}, {"cdcr_code": "VSP", "name": "Valley State Prison", "risk_score": 50.3, "exp_indoor78": 0.323, "exp_ratio": 0.02, "exp_uhi": 0.091, "exp_noac": 1.0, "vuln_medical": 0.705, "vuln_age": 0.728, "vuln_mh": 0.252, "vuln_dpp": 0.596, "vuln_race": 0.208}, {"cdcr_code": "LAC", "name": "California State Prison-Los Angeles County", "risk_score": 47.41, "exp_indoor78": 0.242, "exp_ratio": 0.015, "exp_uhi": 0.0, "exp_noac": 0.94, "vuln_medical": 0.803, "vuln_age": 0.281, "vuln_mh": 0.498, "vuln_dpp": 0.359, "vuln_race": 0.858}, {"cdcr_code": "NKSP", "name": "North Kern State Prison", "risk_score": 44.92, "exp_indoor78": 0.832, "exp_ratio": 0.053, "exp_uhi": 0.628, "exp_noac": 0.963, "vuln_medical": 0.501, "vuln_age": 0.06, "vuln_mh": 0.075, "vuln_dpp": 0.028, "vuln_race": 0.523}, {"cdcr_code": "SOL", "name": "California State Prison, Solano", "risk_score": 44.68, "exp_indoor78": 0.988, "exp_ratio": 0.069, "exp_uhi": 0.582, "exp_noac": 0.866, "vuln_medical": 0.386, "vuln_age": 0.347, "vuln_mh": 0.0, "vuln_dpp": 0.224, "vuln_race": 0.946}, {"cdcr_code": "CIW", "name": "California Institution For Women", "risk_score": 42.59, "exp_indoor78": 0.932, "exp_ratio": 0.058, "exp_uhi": 0.605, "exp_noac": 0.56, "vuln_medical": 0.801, "vuln_age": 0.225, "vuln_mh": 0.141, "vuln_dpp": 0.279, "vuln_race": 0.0}, {"cdcr_code": "KVSP", "name": "Kern Valley State Prison", "risk_score": 41.26, "exp_indoor78": 0.41, "exp_ratio": 0.026, "exp_uhi": 0.15, "exp_noac": 0.714, "vuln_medical": 0.673, "vuln_age": 0.09, "vuln_mh": 0.265, "vuln_dpp": 0.185, "vuln_race": 0.898}, {"cdcr_code": "RJD", "name": "R J Donovan Correctional Facility", "risk_score": 40.89, "exp_indoor78": 0.708, "exp_ratio": 0.123, "exp_uhi": 0.0, "exp_noac": 0.635, "vuln_medical": 0.873, "vuln_age": 0.653, "vuln_mh": 0.619, "vuln_dpp": 0.583, "vuln_race": 0.364}, {"cdcr_code": "WSP", "name": "Wasco State Prison", "risk_score": 40.06, "exp_indoor78": 0.845, "exp_ratio": 0.052, "exp_uhi": 0.484, "exp_noac": 0.985, "vuln_medical": 0.521, "vuln_age": 0.043, "vuln_mh": 0.083, "vuln_dpp": 0.054, "vuln_race": 0.478}, {"cdcr_code": "CCWF", "name": "Central California Women'S Facility", "risk_score": 36.42, "exp_indoor78": 0.602, "exp_ratio": 0.038, "exp_uhi": 0.091, "exp_noac": 0.974, "vuln_medical": 0.858, "vuln_age": 0.203, "vuln_mh": 0.121, "vuln_dpp": 0.221, "vuln_race": 0.115}, {"cdcr_code": "CRC", "name": "California Rehabilitation Center", "risk_score": 32.96, "exp_indoor78": 0.925, "exp_ratio": 0.061, "exp_uhi": 0.571, "exp_noac": 0.143, "vuln_medical": 0.502, "vuln_age": 0.3, "vuln_mh": 0.044, "vuln_dpp": 0.032, "vuln_race": 0.597}, {"cdcr_code": "CCI", "name": "California Correctional Institution", "risk_score": 32.52, "exp_indoor78": 0.714, "exp_ratio": 0.081, "exp_uhi": 0.241, "exp_noac": 1.0, "vuln_medical": 0.621, "vuln_age": 0.146, "vuln_mh": 0.15, "vuln_dpp": 0.064, "vuln_race": 0.582}, {"cdcr_code": "FOL", "name": "Folsom State Prison", "risk_score": 30.11, "exp_indoor78": 0.981, "exp_ratio": 0.07, "exp_uhi": 0.0, "exp_noac": 0.714, "vuln_medical": 0.366, "vuln_age": 0.315, "vuln_mh": 0.0, "vuln_dpp": 0.021, "vuln_race": 0.79}, {"cdcr_code": "MCSP", "name": "Mule Creek State Prison", "risk_score": 29.07, "exp_indoor78": 0.068, "exp_ratio": 0.005, "exp_uhi": 0.262, "exp_noac": 0.814, "vuln_medical": 0.883, "vuln_age": 0.529, "vuln_mh": 0.512, "vuln_dpp": 0.458, "vuln_race": 0.109}, {"cdcr_code": "HDSP", "name": "High Desert State Prison", "risk_score": 26.62, "exp_indoor78": 0.553, "exp_ratio": 0.044, "exp_uhi": 0.041, "exp_noac": 0.913, "vuln_medical": 0.657, "vuln_age": 0.193, "vuln_mh": 0.092, "vuln_dpp": 0.292, "vuln_race": 0.471}, {"cdcr_code": "ASP", "name": "Avenal State Prison", "risk_score": 20.13, "exp_indoor78": 0.82, "exp_ratio": 0.052, "exp_uhi": 0.0, "exp_noac": 1.0, "vuln_medical": 0.319, "vuln_age": 0.353, "vuln_mh": 0.0, "vuln_dpp": 0.032, "vuln_race": 0.265}, {"cdcr_code": "PVSP", "name": "Pleasant Valley State Prison", "risk_score": 15.82, "exp_indoor78": 0.416, "exp_ratio": 0.026, "exp_uhi": 0.241, "exp_noac": 0.939, "vuln_medical": 0.389, "vuln_age": 0.034, "vuln_mh": 0.124, "vuln_dpp": 0.036, "vuln_race": 0.457}, {"cdcr_code": "CHCF", "name": "California Health Care Facility", "risk_score": 15.28, "exp_indoor78": 0.0, "exp_ratio": 0.0, "exp_uhi": 0.342, "exp_noac": 0.0, "vuln_medical": 1.0, "vuln_age": 1.0, "vuln_mh": 0.505, "vuln_dpp": 1.0, "vuln_race": 0.09}, {"cdcr_code": "CTF", "name": "Correctional Training Facility", "risk_score": 15.17, "exp_indoor78": 0.373, "exp_ratio": 0.123, "exp_uhi": 0.0, "exp_noac": 1.0, "vuln_medical": 0.445, "vuln_age": 0.722, "vuln_mh": 0.0, "vuln_dpp": 0.232, "vuln_race": 0.562}, {"cdcr_code": "CAL", "name": "Calipatria State Prison", "risk_score": 12.7, "exp_indoor78": 0.851, "exp_ratio": 0.048, "exp_uhi": 0.0, "exp_noac": 0.0, "vuln_medical": 0.1, "vuln_age": 0.006, "vuln_mh": 0.0, "vuln_dpp": 0.03, "vuln_race": 0.929}, {"cdcr_code": "SQ", "name": "San Quentin State Prison", "risk_score": 11.27, "exp_indoor78": 0.255, "exp_ratio": 0.09, "exp_uhi": 0.0, "exp_noac": 0.385, "vuln_medical": 0.77, "vuln_age": 0.769, "vuln_mh": 0.223, "vuln_dpp": 0.26, "vuln_race": 0.275}, {"cdcr_code": "SVSP", "name": "Salinas Valley State Prison", "risk_score": 10.82, "exp_indoor78": 0.006, "exp_ratio": 0.002, "exp_uhi": 0.0, "exp_noac": 0.907, "vuln_medical": 0.734, "vuln_age": 0.208, "vuln_mh": 0.277, "vuln_dpp": 0.29, "vuln_race": 0.785}, {"cdcr_code": "SCC", "name": "Sierra Conservation Center", "risk_score": 10.44, "exp_indoor78": 0.957, "exp_ratio": 0.066, "exp_uhi": 0.0, "exp_noac": 0.948, "vuln_medical": 0.0, "vuln_age": 0.0, "vuln_mh": 0.0, "vuln_dpp": 0.0, "vuln_race": 0.457}, {"cdcr_code": "PBSP", "name": "Pelican Bay State Prison", "risk_score": 7.23, "exp_indoor78": 0.391, "exp_ratio": 1.0, "exp_uhi": 0.31, "exp_noac": 0.905, "vuln_medical": 0.653, "vuln_age": 0.298, "vuln_mh": 0.109, "vuln_dpp": 0.148, "vuln_race": 0.488}, {"cdcr_code": "CMC", "name": "California Men'S Colony", "risk_score": 6.22, "exp_indoor78": 0.205, "exp_ratio": 0.045, "exp_uhi": 0.07, "exp_noac": 1.0, "vuln_medical": 0.742, "vuln_age": 0.366, "vuln_mh": 0.723, "vuln_dpp": 0.166, "vuln_race": 0.489}, {"cdcr_code": "CEN", "name": "Centinela State Prison", "risk_score": 4.82, "exp_indoor78": 0.261, "exp_ratio": 0.014, "exp_uhi": 0.0, "exp_noac": 0.0, "vuln_medical": 0.113, "vuln_age": 0.043, "vuln_mh": 0.0, "vuln_dpp": 0.032, "vuln_race": 1.0}, {"cdcr_code": "ISP", "name": "Ironwood State Prison", "risk_score": 0.01, "exp_indoor78": 0.006, "exp_ratio": 0.0, "exp_uhi": 0.0, "exp_noac": 0.0, "vuln_medical": 0.158, "vuln_age": 0.484, "vuln_mh": 0.0, "vuln_dpp": 0.099, "vuln_race": 0.71}];
+const dataTable  = [{"cdcr_code": "COR", "name": "California State Prison, Corcoran", "risk_score": 100.0, "hazard_score": 0.87, "exposure_score": 0.66, "vulnerability_score": 0.46, "average_2025_population": 2629.0, "medical_acuity": 71.5, "cchcs_age_over_50_pct_2025": 40.1, "cchcs_mental_health_eop_pct_2025": 9.8, "cchcs_dpp_pct_2025": 18.4, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 159}, {"cdcr_code": "SATF", "name": "Ca Substance Abuse Treatment Facility", "risk_score": 97.83, "hazard_score": 0.87, "exposure_score": 0.61, "vulnerability_score": 0.49, "average_2025_population": 5358.0, "medical_acuity": 73.4, "cchcs_age_over_50_pct_2025": 34.9, "cchcs_mental_health_eop_pct_2025": 11.5, "cchcs_dpp_pct_2025": 25.4, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 133}, {"cdcr_code": "CIM", "name": "California Institution For Men", "risk_score": 82.72, "hazard_score": 0.79, "exposure_score": 0.52, "vulnerability_score": 0.53, "average_2025_population": 2274.0, "medical_acuity": 79.8, "cchcs_age_over_50_pct_2025": 56.6, "cchcs_mental_health_eop_pct_2025": 7.4, "cchcs_dpp_pct_2025": 27.0, "race_peopleofcolor_pct": 0.76, "days_indoor_above_78f_2025": 161}, {"cdcr_code": "CMF", "name": "California Medical Facility", "risk_score": 60.93, "hazard_score": 0.49, "exposure_score": 0.49, "vulnerability_score": 0.66, "average_2025_population": 2045.0, "medical_acuity": 86.7, "cchcs_age_over_50_pct_2025": 53.2, "cchcs_mental_health_eop_pct_2025": 24.2, "cchcs_dpp_pct_2025": 43.9, "race_peopleofcolor_pct": 0.72, "days_indoor_above_78f_2025": 135}, {"cdcr_code": "SAC", "name": "California State Prison, Sacramento", "risk_score": 58.68, "hazard_score": 0.6, "exposure_score": 0.42, "vulnerability_score": 0.62, "average_2025_population": 2131.0, "medical_acuity": 81.8, "cchcs_age_over_50_pct_2025": 23.7, "cchcs_mental_health_eop_pct_2025": 41.2, "cchcs_dpp_pct_2025": 16.6, "race_peopleofcolor_pct": 0.86, "days_indoor_above_78f_2025": 133}, {"cdcr_code": "VSP", "name": "Valley State Prison", "risk_score": 50.3, "hazard_score": 0.74, "exposure_score": 0.36, "vulnerability_score": 0.5, "average_2025_population": 3148.0, "medical_acuity": 68.9, "cchcs_age_over_50_pct_2025": 48.8, "cchcs_mental_health_eop_pct_2025": 10.4, "cchcs_dpp_pct_2025": 34.2, "race_peopleofcolor_pct": 0.73, "days_indoor_above_78f_2025": 52}, {"cdcr_code": "LAC", "name": "California State Prison-Los Angeles County", "risk_score": 47.41, "hazard_score": 0.75, "exposure_score": 0.3, "vulnerability_score": 0.56, "average_2025_population": 2949.0, "medical_acuity": 76.6, "cchcs_age_over_50_pct_2025": 25.0, "cchcs_mental_health_eop_pct_2025": 20.5, "cchcs_dpp_pct_2025": 21.5, "race_peopleofcolor_pct": 0.9, "days_indoor_above_78f_2025": 39}, {"cdcr_code": "NKSP", "name": "North Kern State Prison", "risk_score": 44.92, "hazard_score": 0.81, "exposure_score": 0.62, "vulnerability_score": 0.24, "average_2025_population": 2570.0, "medical_acuity": 52.8, "cchcs_age_over_50_pct_2025": 13.2, "cchcs_mental_health_eop_pct_2025": 3.1, "cchcs_dpp_pct_2025": 3.8, "race_peopleofcolor_pct": 0.81, "days_indoor_above_78f_2025": 134}, {"cdcr_code": "SOL", "name": "California State Prison, Solano", "risk_score": 44.68, "hazard_score": 0.49, "exposure_score": 0.63, "vulnerability_score": 0.38, "average_2025_population": 3735.0, "medical_acuity": 43.8, "cchcs_age_over_50_pct_2025": 28.5, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 14.3, "race_peopleofcolor_pct": 0.93, "days_indoor_above_78f_2025": 159}, {"cdcr_code": "CIW", "name": "California Institution For Women", "risk_score": 42.59, "hazard_score": 0.72, "exposure_score": 0.54, "vulnerability_score": 0.29, "average_2025_population": 1187.0, "medical_acuity": 76.4, "cchcs_age_over_50_pct_2025": 22.0, "cchcs_mental_health_eop_pct_2025": 5.8, "cchcs_dpp_pct_2025": 17.2, "race_peopleofcolor_pct": 0.68, "days_indoor_above_78f_2025": 150}, {"cdcr_code": "KVSP", "name": "Kern Valley State Prison", "risk_score": 41.26, "hazard_score": 0.79, "exposure_score": 0.33, "vulnerability_score": 0.42, "average_2025_population": 3092.0, "medical_acuity": 66.4, "cchcs_age_over_50_pct_2025": 14.8, "cchcs_mental_health_eop_pct_2025": 10.9, "cchcs_dpp_pct_2025": 12.2, "race_peopleofcolor_pct": 0.91, "days_indoor_above_78f_2025": 66}, {"cdcr_code": "RJD", "name": "R J Donovan Correctional Facility", "risk_score": 40.89, "hazard_score": 0.48, "exposure_score": 0.37, "vulnerability_score": 0.62, "average_2025_population": 3592.0, "medical_acuity": 82.1, "cchcs_age_over_50_pct_2025": 44.8, "cchcs_mental_health_eop_pct_2025": 25.5, "cchcs_dpp_pct_2025": 33.5, "race_peopleofcolor_pct": 0.77, "days_indoor_above_78f_2025": 114}, {"cdcr_code": "WSP", "name": "Wasco State Prison", "risk_score": 40.06, "hazard_score": 0.76, "exposure_score": 0.59, "vulnerability_score": 0.24, "average_2025_population": 3676.0, "medical_acuity": 54.4, "cchcs_age_over_50_pct_2025": 12.3, "cchcs_mental_health_eop_pct_2025": 3.4, "cchcs_dpp_pct_2025": 5.2, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 136}, {"cdcr_code": "CCWF", "name": "Central California Women'S Facility", "risk_score": 36.42, "hazard_score": 0.74, "exposure_score": 0.43, "vulnerability_score": 0.3, "average_2025_population": 2040.0, "medical_acuity": 80.9, "cchcs_age_over_50_pct_2025": 20.8, "cchcs_mental_health_eop_pct_2025": 5.0, "cchcs_dpp_pct_2025": 14.1, "race_peopleofcolor_pct": 0.71, "days_indoor_above_78f_2025": 97}, {"cdcr_code": "CRC", "name": "California Rehabilitation Center", "risk_score": 32.96, "hazard_score": 0.69, "exposure_score": 0.43, "vulnerability_score": 0.29, "average_2025_population": 2330.0, "medical_acuity": 52.9, "cchcs_age_over_50_pct_2025": 26.0, "cchcs_mental_health_eop_pct_2025": 1.8, "cchcs_dpp_pct_2025": 4.0, "race_peopleofcolor_pct": 0.83, "days_indoor_above_78f_2025": 149}, {"cdcr_code": "CCI", "name": "California Correctional Institution", "risk_score": 32.52, "hazard_score": 0.54, "exposure_score": 0.51, "vulnerability_score": 0.31, "average_2025_population": 2434.0, "medical_acuity": 62.3, "cchcs_age_over_50_pct_2025": 17.8, "cchcs_mental_health_eop_pct_2025": 6.2, "cchcs_dpp_pct_2025": 5.7, "race_peopleofcolor_pct": 0.83, "days_indoor_above_78f_2025": 115}, {"cdcr_code": "FOL", "name": "Folsom State Prison", "risk_score": 30.11, "hazard_score": 0.6, "exposure_score": 0.44, "vulnerability_score": 0.3, "average_2025_population": 2777.0, "medical_acuity": 42.2, "cchcs_age_over_50_pct_2025": 26.8, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 3.4, "race_peopleofcolor_pct": 0.88, "days_indoor_above_78f_2025": 158}, {"cdcr_code": "MCSP", "name": "Mule Creek State Prison", "risk_score": 29.07, "hazard_score": 0.54, "exposure_score": 0.29, "vulnerability_score": 0.5, "average_2025_population": 3761.0, "medical_acuity": 82.9, "cchcs_age_over_50_pct_2025": 38.2, "cchcs_mental_health_eop_pct_2025": 21.1, "cchcs_dpp_pct_2025": 26.8, "race_peopleofcolor_pct": 0.71, "days_indoor_above_78f_2025": 11}, {"cdcr_code": "HDSP", "name": "High Desert State Prison", "risk_score": 26.62, "hazard_score": 0.53, "exposure_score": 0.39, "vulnerability_score": 0.34, "average_2025_population": 2719.0, "medical_acuity": 65.1, "cchcs_age_over_50_pct_2025": 20.3, "cchcs_mental_health_eop_pct_2025": 3.8, "cchcs_dpp_pct_2025": 17.9, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 89}, {"cdcr_code": "ASP", "name": "Avenal State Prison", "risk_score": 20.13, "hazard_score": 0.59, "exposure_score": 0.47, "vulnerability_score": 0.19, "average_2025_population": 3891.0, "medical_acuity": 38.5, "cchcs_age_over_50_pct_2025": 28.8, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 4.0, "race_peopleofcolor_pct": 0.75, "days_indoor_above_78f_2025": 132}, {"cdcr_code": "PVSP", "name": "Pleasant Valley State Prison", "risk_score": 15.82, "hazard_score": 0.5, "exposure_score": 0.41, "vulnerability_score": 0.21, "average_2025_population": 2992.0, "medical_acuity": 44.0, "cchcs_age_over_50_pct_2025": 11.8, "cchcs_mental_health_eop_pct_2025": 5.1, "cchcs_dpp_pct_2025": 4.2, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 67}, {"cdcr_code": "CHCF", "name": "California Health Care Facility", "risk_score": 15.28, "hazard_score": 0.66, "exposure_score": 0.09, "vulnerability_score": 0.72, "average_2025_population": 2251.0, "medical_acuity": 92.1, "cchcs_age_over_50_pct_2025": 63.3, "cchcs_mental_health_eop_pct_2025": 20.8, "cchcs_dpp_pct_2025": 55.8, "race_peopleofcolor_pct": 0.7, "days_indoor_above_78f_2025": 0}, {"cdcr_code": "CTF", "name": "Correctional Training Facility", "risk_score": 15.17, "hazard_score": 0.27, "exposure_score": 0.37, "vulnerability_score": 0.39, "average_2025_population": 4225.0, "medical_acuity": 48.4, "cchcs_age_over_50_pct_2025": 48.5, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 14.7, "race_peopleofcolor_pct": 0.82, "days_indoor_above_78f_2025": 60}, {"cdcr_code": "CAL", "name": "Calipatria State Prison", "risk_score": 12.7, "hazard_score": 0.71, "exposure_score": 0.22, "vulnerability_score": 0.21, "average_2025_population": 2462.0, "medical_acuity": 21.3, "cchcs_age_over_50_pct_2025": 10.3, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 3.9, "race_peopleofcolor_pct": 0.92, "days_indoor_above_78f_2025": 137}, {"cdcr_code": "SQ", "name": "San Quentin State Prison", "risk_score": 11.27, "hazard_score": 0.36, "exposure_score": 0.18, "vulnerability_score": 0.46, "average_2025_population": 2688.0, "medical_acuity": 74.0, "cchcs_age_over_50_pct_2025": 51.0, "cchcs_mental_health_eop_pct_2025": 9.2, "cchcs_dpp_pct_2025": 16.2, "race_peopleofcolor_pct": 0.75, "days_indoor_above_78f_2025": 41}, {"cdcr_code": "SVSP", "name": "Salinas Valley State Prison", "risk_score": 10.82, "hazard_score": 0.27, "exposure_score": 0.23, "vulnerability_score": 0.46, "average_2025_population": 2387.0, "medical_acuity": 71.2, "cchcs_age_over_50_pct_2025": 21.1, "cchcs_mental_health_eop_pct_2025": 11.4, "cchcs_dpp_pct_2025": 17.8, "race_peopleofcolor_pct": 0.88, "days_indoor_above_78f_2025": 1}, {"cdcr_code": "SCC", "name": "Sierra Conservation Center", "risk_score": 10.44, "hazard_score": 0.62, "exposure_score": 0.49, "vulnerability_score": 0.09, "average_2025_population": 4035.0, "medical_acuity": 13.4, "cchcs_age_over_50_pct_2025": 10.0, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 2.3, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 154}, {"cdcr_code": "PBSP", "name": "Pelican Bay State Prison", "risk_score": 7.23, "hazard_score": 0.09, "exposure_score": 0.65, "vulnerability_score": 0.34, "average_2025_population": 2096.0, "medical_acuity": 64.8, "cchcs_age_over_50_pct_2025": 25.9, "cchcs_mental_health_eop_pct_2025": 4.5, "cchcs_dpp_pct_2025": 10.2, "race_peopleofcolor_pct": 0.8, "days_indoor_above_78f_2025": 63}, {"cdcr_code": "CMC", "name": "California Men'S Colony", "risk_score": 6.22, "hazard_score": 0.1, "exposure_score": 0.33, "vulnerability_score": 0.5, "average_2025_population": 2172.0, "medical_acuity": 71.8, "cchcs_age_over_50_pct_2025": 29.5, "cchcs_mental_health_eop_pct_2025": 29.8, "cchcs_dpp_pct_2025": 11.2, "race_peopleofcolor_pct": 0.81, "days_indoor_above_78f_2025": 33}, {"cdcr_code": "CEN", "name": "Centinela State Prison", "risk_score": 4.82, "hazard_score": 0.8, "exposure_score": 0.07, "vulnerability_score": 0.24, "average_2025_population": 2984.0, "medical_acuity": 22.3, "cchcs_age_over_50_pct_2025": 12.3, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 4.0, "race_peopleofcolor_pct": 0.94, "days_indoor_above_78f_2025": 42}, {"cdcr_code": "ISP", "name": "Ironwood State Prison", "risk_score": 0.01, "hazard_score": 0.93, "exposure_score": 0.0, "vulnerability_score": 0.29, "average_2025_population": 2764.0, "medical_acuity": 25.8, "cchcs_age_over_50_pct_2025": 35.8, "cchcs_mental_health_eop_pct_2025": 0.0, "cchcs_dpp_pct_2025": 7.6, "race_peopleofcolor_pct": 0.86, "days_indoor_above_78f_2025": 1}];
+
+// ── Shared geometry ────────────────────────────────────────────────────────
+const W = 420, H = 540;
+const caFeature = {type:"Feature", geometry:caOutline, properties:{}};
+const proj = d3.geoMercator().fitExtent([[18,18],[W-18,H-36]], caFeature);
+const path = d3.geoPath().projection(proj);
+
+const popMax = d3.max(dataMC, d => d.average_2025_population || 0);
+const rScale = d3.scaleSqrt().domain([0, popMax]).range([1.5, 13]);
+
+// ── Tooltip ────────────────────────────────────────────────────────────────
+const tip = d3.select("#tooltip");
+const showTip = (e, lines) =>
+  tip.style("display","block").html(lines.join("<br>"))
+     .style("left",(e.clientX+14)+"px").style("top",(e.clientY+14)+"px");
+const moveTip = e =>
+  tip.style("left",(e.clientX+14)+"px").style("top",(e.clientY+14)+"px");
+const hideTip = () => tip.style("display","none");
+
+// ── Color scales ───────────────────────────────────────────────────────────
+const seqGrayRed  = d => d3.scaleSequential(d3.interpolateRgb("#d4d4d4","#7a1010")).domain(d);
+const seqYellowRed= d => d3.scaleSequential(d3.interpolateYlOrRd).domain(d);
+const divRdBu     = d3.scaleDiverging(d3.interpolateRdBu).domain([27,0,-27]);
+const swingPurple = d3.scaleSequential(d3.interpolateRgb("#e0e0e0","#3d0c8a")).domain([0,16]);
+
+// categorical bins for 90F days
+const bins90 = [
+  {max:7,   label:"< 1 week",    color:"#f5f5f0"},
+  {max:30,  label:"1 wk – 1 mo", color:"#fde0a0"},
+  {max:90,  label:"1 – 3 mo",    color:"#f4a45a"},
+  {max:180, label:"3 – 6 mo",    color:"#d05020"},
+  {max:270, label:"6 – 9 mo",    color:"#8b1a0a"},
+  {max:Infinity, label:"9+ mo",  color:"#3d0000"},
+];
+function bin90color(v) {
+  if (v == null) return "#ccc";
+  for (const b of bins90) if (v <= b.max) return b.color;
+  return bins90[bins90.length-1].color;
+}
+
+// ── Legend builder ─────────────────────────────────────────────────────────
+function addGradLegend(svg, {x, y, w=120, h=10, scale, domain, title, fmt, diverging=false}) {
+  const id = "g" + Math.random().toString(36).slice(2);
+  const defs = svg.append("defs");
+  const gr = defs.append("linearGradient").attr("id",id).attr("x1","0%").attr("x2","100%");
+  if (diverging) {
+    gr.append("stop").attr("offset","0%").attr("stop-color", d3.interpolateRdBu(1));
+    gr.append("stop").attr("offset","50%").attr("stop-color","#f7f7f7");
+    gr.append("stop").attr("offset","100%").attr("stop-color", d3.interpolateRdBu(0));
+  } else {
+    d3.range(0,1.01,.1).forEach(t => gr.append("stop").attr("offset",(t*100)+"%")
+      .attr("stop-color", scale(domain[0]+t*(domain[1]-domain[0]))));
+  }
+  svg.append("rect").attr("x",x).attr("y",y).attr("width",w).attr("height",h)
+     .attr("fill","url(#"+id+")").attr("stroke","#bbb").attr("stroke-width",.5);
+  const f = fmt || (domain[1]>5 ? d3.format(".0f") : d3.format(".2f"));
+  svg.append("text").attr("x",x).attr("y",y-3).attr("font-size",9)
+     .attr("fill","#555").attr("font-family","Georgia,serif").text(title||"");
+  svg.append("text").attr("x",x).attr("y",y+h+9).attr("font-size",9)
+     .attr("fill","#555").attr("font-family","Georgia,serif").text(f(domain[0]));
+  svg.append("text").attr("x",x+w).attr("y",y+h+9).attr("font-size",9)
+     .attr("fill","#555").attr("font-family","Georgia,serif").attr("text-anchor","end").text(f(domain[1]));
+}
+
+// ── Generic map builder ────────────────────────────────────────────────────
+function buildMap({id, data, colorFn, rFn, tipLines, legendOpts}) {
+  const svg = d3.select("#"+id).attr("viewBox","0 0 "+W+" "+H)
+    .attr("preserveAspectRatio","xMidYMid meet");
+  svg.append("path").datum(caFeature).attr("d",path)
+     .attr("fill","#f5f5f2").attr("stroke","#aaa").attr("stroke-width",.8);
+  svg.selectAll("circle.f").data(data.filter(d=>d.latitude))
+    .join("circle").attr("class","f")
+    .attr("cx", d=>proj([d.longitude,d.latitude])[0])
+    .attr("cy", d=>proj([d.longitude,d.latitude])[1])
+    .attr("r",  d=>rFn ? rFn(d) : 7)
+    .attr("fill", d=>colorFn(d))
+    .attr("stroke","#fff").attr("stroke-width",.8).attr("opacity",.92)
+    .on("mouseover", (e,d)=>showTip(e, tipLines(d)))
+    .on("mousemove", moveTip).on("mouseleave", hideTip);
+  if (legendOpts) addGradLegend(svg, {x:W-144, y:H-32, ...legendOpts});
+}
+
+// ── SECTION 1: Hazard ──────────────────────────────────────────────────────
+["m-haz-cur","m-haz-mc"].forEach((id, i) => {
+  const dat = i===0 ? dataCurr : dataMC;
+  buildMap({
+    id, data: dat,
+    colorFn: d => seqYellowRed([0,1])(d.hazard_score),
+    rFn: d => rScale(d.average_2025_population||0),
+    tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,
+      `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
+      `Hazard: ${d.hazard_score.toFixed(3)}`],
+    legendOpts: {scale: seqYellowRed([0,1]), domain:[0,1], title:"Hazard score"}
+  });
+});
+
+// ── SECTION 2: 90°F days (categorical) ────────────────────────────────────
+// Render 90F legend
+d3.select("#legend-90f").selectAll("div").data(bins90).join("div")
+  .style("display","flex").style("align-items","center").style("gap","5px")
+  .html(b => `<svg width="14" height="14"><rect width="14" height="14" rx="7" fill="${b.color}" stroke="#bbb" stroke-width=".5"/></svg><span>${b.label}</span>`);
+
+["m-90f-hist","m-90f-mc"].forEach((id, i) => {
+  buildMap({
+    id, data: data90,
+    colorFn: d => bin90color(i===0 ? d.hist_days_90f : d.days_over_90_midcentury),
+    rFn: d => rScale(d.average_2025_population||0),
+    tipLines: d => {
+      const v = i===0 ? d.hist_days_90f : d.days_over_90_midcentury;
+      return [`<b>${d.cdcr_code}</b> — ${d.name}`,
+        `${i===0 ? "Avg 2016–2025" : "Mid-century proj."}: ${v != null ? v.toFixed(1) : "n/a"} days ≥ 90°F`];
+    }
+  });
+});
+
+// ── SECTION 3: Exposure & Vulnerability ───────────────────────────────────
+buildMap({
+  id:"m-exp", data:dataMC,
+  colorFn: d => seqGrayRed([0,1])(d.exposure_score),
+  rFn: () => 7,
+  tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,`Exposure: ${d.exposure_score.toFixed(3)}`],
+  legendOpts:{scale:seqGrayRed([0,1]),domain:[0,1],title:"Exposure score"}
+});
+buildMap({
+  id:"m-vuln", data:dataMC,
+  colorFn: d => seqGrayRed([0,1])(d.vulnerability_score),
+  rFn: () => 7,
+  tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,`Vulnerability: ${d.vulnerability_score.toFixed(3)}`],
+  legendOpts:{scale:seqGrayRed([0,1]),domain:[0,1],title:"Vulnerability score"}
+});
+
+// ── Sub-component grouped bar chart (horizontal) ──────────────────────────
+(function() {
+  const expCols    = ["exp_indoor78","exp_ratio","exp_uhi","exp_noac"];
+  const vulnCols   = ["vuln_medical","vuln_age","vuln_mh","vuln_dpp","vuln_race"];
+  const expLabels  = ["Indoor 78°F days","Indoor/outdoor ratio","UHI","No AC"];
+  const vulnLabels = ["Medical acuity","Age 50+","EOP","DPP","Race/POC"];
+  const expColors  = ["#4e9ac7","#7bbcd6","#a9d5e8","#cce8f4"];
+  const vulnColors = ["#d05020","#e07840","#e8a070","#f0c098","#f5d8c0"];
+
+  const charts = [
+    {cols: expCols,  labels: expLabels,  colors: expColors,  title: "Exposure sub-components"},
+    {cols: vulnCols, labels: vulnLabels, colors: vulnColors, title: "Vulnerability sub-components"},
+  ];
+
+  const wrap = d3.select("#bar-subcomp");
+  wrap.style("display","flex").style("gap","32px").style("align-items","flex-start");
+
+  const barH = 7, barPad = 2;
+  const margin = {top: 16, right: 20, bottom: 28, left: 52};
+  const chartW = 380;
+
+  charts.forEach(({cols, labels, colors, title}) => {
+    const nBars  = cols.length;
+    const perFacH = nBars * (barH + barPad) - barPad;
+    const totalH  = margin.top + dataBar.length * (perFacH + 10) + margin.bottom;
+    const innerW  = chartW - margin.left - margin.right;
+
+    const div = wrap.append("div").style("flex","1 1 300px").style("min-width","280px");
+    div.append("div")
+      .style("font-size","11px").style("font-weight","bold").style("color","#333")
+      .style("margin-bottom","8px").text(title);
+
+    const svg = div.append("svg")
+      .attr("width", chartW).attr("height", totalH)
+      .style("display","block").style("overflow","visible");
+    const g = svg.append("g").attr("transform",`translate(${margin.left},${margin.top})`);
+
+    const x = d3.scaleLinear().domain([0,1]).range([0, innerW]);
+
+    // gridlines + x axis
+    g.append("g")
+      .attr("transform",`translate(0,${totalH - margin.top - margin.bottom})`)
+      .call(d3.axisBottom(x).ticks(4).tickSize(-(totalH - margin.top - margin.bottom)))
+      .selectAll(".tick line").attr("stroke","#ebebeb").attr("stroke-dasharray","2,3");
+    g.select(".domain").remove();
+    g.selectAll(".tick text").attr("font-size",9);
+
+    // Facility groups
+    dataBar.forEach((fac, fi) => {
+      const gy = fi * (perFacH + 10);
+      const grp = g.append("g").attr("transform",`translate(0,${gy})`);
+
+      grp.append("text")
+        .attr("x",-4).attr("y", perFacH / 2 + 3)
+        .attr("text-anchor","end").attr("font-size",9)
+        .attr("fill","#333").attr("font-family","Georgia,serif")
+        .text(fac.cdcr_code);
+
+      cols.forEach((col, ci) => {
+        const v = fac[col] ?? 0;
+        grp.append("rect")
+          .attr("x",0).attr("y", ci * (barH + barPad))
+          .attr("width", x(v)).attr("height", barH)
+          .attr("fill", colors[ci]).attr("opacity",0.9)
+          .on("mouseover", e => showTip(e, [
+            `<b>${fac.cdcr_code}</b> — ${fac.name}`,
+            `${labels[ci]}: ${v.toFixed(3)}`,
+            `Risk rank: ${fi + 1}`
+          ]))
+          .on("mousemove", moveTip).on("mouseleave", hideTip);
+      });
+    });
+
+    // Sub-component legend
+    const leg = div.append("div")
+      .style("margin-top","8px").style("display","flex")
+      .style("flex-wrap","wrap").style("gap","5px 14px");
+    cols.forEach((col, i) => {
+      leg.append("div")
+        .style("display","flex").style("align-items","center").style("gap","4px")
+        .html(`<svg width="10" height="10"><rect width="10" height="10" fill="${colors[i]}" opacity=".9"/></svg>`
+            + `<span style="font-size:10px;color:#444">${labels[i]}</span>`);
+    });
+  });
+})();
+
+// ── SECTION 4: Full risk index ─────────────────────────────────────────────
+// 4-class Jenks natural breaks (breaks at 26.6 / 44.7 / 82.7)
+// Critical: 3 | High: 6 | Moderate: 10 | Low: 12
+const riskTiers = [
+  {label:"Critical", min:82.7,  max:Infinity, color:"#7a1010"},
+  {label:"High",     min:44.7,  max:82.7,     color:"#c44020"},
+  {label:"Moderate", min:26.6,  max:44.7,     color:"#e89050"},
+  {label:"Low",      min:-Infinity, max:26.6,  color:"#e8e0c8"},
+];
+function riskTierColor(v) {
+  for (const t of riskTiers) if (v > t.min && v <= t.max) return t.color;
+  return riskTiers[riskTiers.length-1].color;
+}
+
+["m-risk-cur","m-risk-mc"].forEach((id,i) => {
+  const dat = i===0 ? dataCurr : dataMC;
+  const svg = d3.select("#"+id).attr("viewBox","0 0 "+W+" "+H)
+    .attr("preserveAspectRatio","xMidYMid meet");
+  svg.append("path").datum(caFeature).attr("d",path)
+     .attr("fill","#f5f5f2").attr("stroke","#aaa").attr("stroke-width",.8);
+  svg.selectAll("circle.f").data(dat.filter(d=>d.latitude))
+    .join("circle").attr("class","f")
+    .attr("cx", d=>proj([d.longitude,d.latitude])[0])
+    .attr("cy", d=>proj([d.longitude,d.latitude])[1])
+    .attr("r", d=>rScale(d.average_2025_population||0))
+    .attr("fill", d=>riskTierColor(d.risk_score))
+    .attr("stroke","#fff").attr("stroke-width",.8).attr("opacity",.92)
+    .on("mouseover", (e,d) => showTip(e, [
+      `<b>${d.cdcr_code}</b> — ${d.name}`,
+      `Risk (${i===0?"historic":"mid-century"}): ${d.risk_score.toFixed(1)}`,
+      `Tier: ${riskTiers.find(t=>d.risk_score>t.min&&d.risk_score<=t.max)?.label||"Low"}`
+    ]))
+    .on("mousemove", moveTip).on("mouseleave", hideTip);
+
+  // Categorical legend
+  const lX = W - 110, lY = H - 80;
+  svg.append("text").attr("x",lX).attr("y",lY-6)
+     .attr("font-size",9).attr("fill","#555").attr("font-family","Georgia,serif")
+     .text("Risk tier (Jenks)");
+  riskTiers.forEach((t,ti) => {
+    const y = lY + ti*16;
+    svg.append("rect").attr("x",lX).attr("y",y).attr("width",11).attr("height",11)
+       .attr("fill",t.color).attr("stroke","#bbb").attr("stroke-width",.4);
+    svg.append("text").attr("x",lX+15).attr("y",y+9)
+       .attr("font-size",9).attr("fill","#444").attr("font-family","Georgia,serif")
+       .text(t.label);
+  });
+});
+
+// ── Risk index table ───────────────────────────────────────────────────────
+(function() {
+  const cols = [
+    {key:"_rank",    label:"Rank",        fmt: (_,i)=>`<span class="rank-badge">${i+1}</span>`},
+    {key:"cdcr_code",label:"Code",        fmt: v=>v},
+    {key:"name",     label:"Facility",    fmt: v=>v},
+    {key:"risk_score",    label:"Risk (tier)",  fmt: v=>{
+      const tier = riskTiers.find(t=>v>t.min&&v<=t.max)||riskTiers[riskTiers.length-1];
+      return `${v.toFixed(1)} <span style="display:inline-block;background:${tier.color};color:${tier.color==='#e8e0c8'?'#555':'#fff'};font-size:9px;padding:1px 4px;border-radius:2px;margin-left:3px">${tier.label}</span>`;
+    }, cls:"num"},
+    {key:"hazard_score",  label:"Hazard",      fmt: v=>v.toFixed(3), cls:"num"},
+    {key:"exposure_score",label:"Exposure",    fmt: v=>v.toFixed(3), cls:"num"},
+    {key:"vulnerability_score",label:"Vuln.",  fmt: v=>v.toFixed(3), cls:"num"},
+    {key:"average_2025_population",label:"Pop.", fmt:v=>v!=null?Math.round(v).toLocaleString():"—", cls:"num"},
+    {key:"days_indoor_above_78f_2025", label:"Indoor 78°F days", fmt:v=>v!=null?v:"—", cls:"num"},
+    {key:"medical_acuity", label:"Med. acuity %",fmt:v=>v!=null?v.toFixed(1)+"%":"—",cls:"num"},
+    {key:"cchcs_age_over_50_pct_2025", label:"Age 50+ %", fmt:v=>v!=null?v.toFixed(1)+"%":"—",cls:"num"},
+    {key:"cchcs_mental_health_eop_pct_2025",label:"EOP %",fmt:v=>v!=null?v.toFixed(1)+"%":"—",cls:"num"},
+    {key:"cchcs_dpp_pct_2025",label:"DPP %",fmt:v=>v!=null?v.toFixed(1)+"%":"—",cls:"num"},
+    {key:"race_peopleofcolor_pct",label:"POC %",fmt:v=>v!=null?(v*100).toFixed(1)+"%":"—",cls:"num"},
+  ];
+
+  const wrap = d3.select("#risk-table-wrap");
+  wrap.append("div").attr("class","map-title").style("margin-top","24px").style("margin-bottom","6px")
+    .text("Facility risk scores and vulnerability indicators — mid-century, sorted by risk score");
+  wrap.append("div").attr("class","section-note").style("margin-bottom","8px")
+    .text("Medical acuity = % classified CCHCS High Risk P1 + P2 + Medium Risk. POC % = share non-White.");
+
+  const tbl = wrap.append("table").attr("class","risk-table");
+  tbl.append("thead").append("tr").selectAll("th").data(cols).join("th")
+    .attr("class", c=>c.cls||"").text(c=>c.label);
+  tbl.append("tbody").selectAll("tr").data(dataTable).join("tr")
+    .selectAll("td").data((row,i)=>cols.map(c=>({col:c,val:row[c.key],row,rank:i})))
+    .join("td").attr("class",d=>d.col.cls||"")
+    .html(d=>d.col.key==="_rank" ? d.col.fmt(null,d.rank) : d.col.fmt(d.val,d.rank));
+
+  // Total row
+  const totalPop = d3.sum(dataTable, d => d.average_2025_population || 0);
+  const foot = tbl.append("tfoot").append("tr")
+    .style("border-top","2px solid #aaa").style("font-weight","bold")
+    .style("background","#f9f9f7");
+  cols.forEach(c => {
+    const td = foot.append("td").attr("class", c.cls||"");
+    if (c.key === "name")          td.text("Total / 31 facilities");
+    else if (c.key === "average_2025_population") td.text(Math.round(totalPop).toLocaleString());
+    else                           td.text("");
+  });
+})();
+
+// ── Risk delta table ──────────────────────────────────────────────────────
+(function() {
+  // Join current and mid-century by cdcr_code
+  const currMap = Object.fromEntries(dataCurr.map(d => [d.cdcr_code, d]));
+  const delta = dataMC.map(d => {
+    const c = currMap[d.cdcr_code] || {};
+    const dr = +(d.risk_score - (c.risk_score || 0)).toFixed(2);
+    const pct = c.risk_score > 0 ? +(dr / c.risk_score * 100).toFixed(1) : null;
+    return {
+      cdcr_code: d.cdcr_code, name: d.name,
+      risk_cur: +(c.risk_score || 0).toFixed(1),
+      risk_mc:  +d.risk_score.toFixed(1),
+      delta: dr, pct_change: pct,
+      tier: riskTiers.find(t => d.risk_score > t.min && d.risk_score <= t.max) || riskTiers[riskTiers.length-1]
+    };
+  }).sort((a, b) => b.delta - a.delta);
+
+  const maxAbsDelta = d3.max(delta, d => Math.abs(d.delta));
+  const SPARK_W = 100, SPARK_H = 12, MID = SPARK_W / 2;
+  const sparkX = d3.scaleLinear().domain([-maxAbsDelta, maxAbsDelta]).range([0, SPARK_W]);
+
+  const wrap = d3.select("#delta-table-wrap");
+  wrap.append("div").attr("class","map-title")
+    .style("margin-top","28px").style("margin-bottom","4px")
+    .text("Change in risk score: historic → mid-century (2040–2070), sorted by absolute change");
+  wrap.append("div").attr("class","section-note").style("margin-bottom","8px")
+    .html("Hazard is the only component that differs between time periods — exposure and vulnerability are held at 2025 values. "
+        + "Negative deltas (CAL, CMC, PBSP, RJD) reflect Cal-Adapt tract projections showing marginal decreases in those specific census tracts under SSP3-7.0.");
+
+  const tbl = wrap.append("table").attr("class","risk-table");
+
+  // Header
+  tbl.append("thead").append("tr")
+    .html("<th>Code</th><th>Facility</th><th>Tier</th>"
+        + "<th class='num'>Historic</th><th class='num'>Mid-century</th>"
+        + "<th class='num'>Δ Risk</th><th class='num'>Δ %</th>"
+        + "<th style='padding-left:12px'>Change</th>");
+
+  // Body
+  const tbody = tbl.append("tbody");
+  delta.forEach(d => {
+    const tr = tbody.append("tr");
+    tr.append("td").text(d.cdcr_code);
+    tr.append("td").text(d.name);
+    // tier badge
+    tr.append("td").html(
+      `<span style="display:inline-block;background:${d.tier.color};`
+      + `color:${d.tier.color==='#e8e0c8'?'#555':'#fff'};`
+      + `font-size:9px;padding:1px 5px;border-radius:2px">${d.tier.label}</span>`
+    );
+    tr.append("td").attr("class","num").text(d.risk_cur);
+    tr.append("td").attr("class","num").text(d.risk_mc);
+    // delta value — colour positive orange, negative blue
+    tr.append("td").attr("class","num")
+      .style("color", d.delta > 0 ? "#b04010" : d.delta < 0 ? "#2060a0" : "#555")
+      .style("font-weight", Math.abs(d.delta) > 5 ? "bold" : "normal")
+      .text((d.delta > 0 ? "+" : "") + d.delta.toFixed(2));
+    tr.append("td").attr("class","num")
+      .style("color", d.delta > 0 ? "#b04010" : d.delta < 0 ? "#2060a0" : "#555")
+      .text(d.pct_change != null ? (d.delta > 0 ? "+" : "") + d.pct_change + "%" : "—");
+
+    // Spark bar
+    const sparkTd = tr.append("td").style("padding-left","12px");
+    const svg = sparkTd.append("svg").attr("width", SPARK_W).attr("height", SPARK_H)
+      .style("display","inline-block").style("vertical-align","middle");
+
+    // baseline
+    svg.append("line")
+      .attr("x1", MID).attr("x2", MID).attr("y1", 0).attr("y2", SPARK_H)
+      .attr("stroke","#bbb").attr("stroke-width",0.8);
+
+    // bar
+    const barX = d.delta >= 0 ? MID : sparkX(d.delta);
+    const barW = Math.abs(sparkX(d.delta) - MID);
+    svg.append("rect")
+      .attr("x", barX).attr("y", 2)
+      .attr("width", Math.max(barW, 1)).attr("height", SPARK_H - 4)
+      .attr("fill", d.delta >= 0 ? "#c44020" : "#2060a0")
+      .attr("opacity", 0.85);
+  });
+
+  // Footer total row
+  const foot = tbl.append("tfoot").append("tr")
+    .style("border-top","2px solid #aaa").style("font-weight","bold")
+    .style("background","#f9f9f7");
+  const meanDelta = (d3.mean(delta, d => d.delta)).toFixed(2);
+  foot.append("td").attr("colspan",5).text("System mean");
+  foot.append("td").attr("class","num")
+    .style("color","#b04010")
+    .text("+" + meanDelta);
+  foot.append("td").attr("colspan",2);
+})();
+
+// ── SECTION 5: Ovienmhada comparison ─────────────────────────────────────
+// Both score maps use a shared continuous scale [0,100] so scores are comparable
+const ovScale = seqGrayRed([0, 100]);
+
+// Merge population into dataSens for population-scaled maps
+const dataSensWithPop = dataSens.map(d => {
+  const mc = dataMC.find(m => m.cdcr_code === d.cdcr_code);
+  return Object.assign({}, d, {average_2025_population: mc ? mc.average_2025_population : 0});
+});
+
+// Equal-weight map (same data as m-risk-mc, different SVG)
+buildMap({
+  id:"m-ov-equal", data:dataMC,
+  colorFn: d => ovScale(d.risk_score),
+  rFn: d => rScale(d.average_2025_population||0),
+  tipLines: d => {
+    const tier = riskTiers.find(t=>d.risk_score>t.min&&d.risk_score<=t.max)||riskTiers[riskTiers.length-1];
+    const sens = dataSens.find(s=>s.cdcr_code===d.cdcr_code);
+    return [`<b>${d.cdcr_code}</b> — ${d.name}`,
+      `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
+      `Equal-weight score: ${d.risk_score.toFixed(1)} (${tier.label})`,
+      `Rank: ${sens ? sens.rank_equal_mult : "—"}`];
+  },
+  legendOpts:{scale:ovScale, domain:[0,100], title:"Risk score (0–100)"}
+});
+
+// Additive 25/25/50 map
+buildMap({
+  id:"m-ov-add", data:dataSensWithPop,
+  colorFn: d => ovScale(d.risk_score_additive_25_25_50||0),
+  rFn: d => rScale(d.average_2025_population||0),
+  tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,
+    `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
+    `Additive 25/25/50 score: ${d.risk_score_additive_25_25_50!=null?d.risk_score_additive_25_25_50.toFixed(1):"n/a"}`,
+    `Rank: ${d.rank_additive_25_25_50}`,
+    `Equal-weight rank: ${d.rank_equal_mult}`,
+    `Rank change: ${d.rank_equal_mult - d.rank_additive_25_25_50 >= 0 ? "+" : ""}${d.rank_equal_mult - d.rank_additive_25_25_50}`],
+  legendOpts:{scale:ovScale, domain:[0,100], title:"Additive score (0–100)"}
+});
+
+// Rank divergence map (equal rank − additive rank; positive = rises under Ovienmhada)
+{
+  const deltaMax = d3.max(dataSens, d => Math.abs(d.rank_equal_mult - d.rank_additive_25_25_50));
+  const divOvScale = d3.scaleDiverging(t => d3.interpolateRdBu(1-t))
+    .domain([-deltaMax, 0, deltaMax]);
+  buildMap({
+    id:"m-ov-div", data:dataSensWithPop,
+    colorFn: d => {
+      const delta = d.rank_equal_mult - d.rank_additive_25_25_50;
+      return delta === 0 ? "#e8e8e8" : divOvScale(delta);
+    },
+    rFn: d => rScale(d.average_2025_population||0),
+    tipLines: d => {
+      const delta = d.rank_equal_mult - d.rank_additive_25_25_50;
+      return [`<b>${d.cdcr_code}</b> — ${d.name}`,
+        `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
+        `Equal rank: ${d.rank_equal_mult}  →  Additive rank: ${d.rank_additive_25_25_50}`,
+        `Δ rank: ${delta >= 0 ? "+" : ""}${delta} (${delta > 0 ? "rises" : delta < 0 ? "falls" : "stable"} under Ovienmhada)`];
+    },
+    legendOpts:{scale:divOvScale, domain:[-deltaMax, deltaMax], title:"Rank change (equal − additive)", diverging:true}
+  });
+}
+
+// Rank divergence sparklines table
+(function() {
+  // rank change: positive = facility rises (lower number) under Ovienmhada
+  const rows = dataSens.map(d => {
+    const mc = dataMC.find(m => m.cdcr_code === d.cdcr_code);
+    return {
+      cdcr_code: d.cdcr_code,
+      name: d.name,
+      population: mc ? mc.average_2025_population : null,
+      rank_eq:  d.rank_equal_mult,
+      rank_add: d.rank_additive_25_25_50,
+      score_eq:  +(mc?.risk_score||0).toFixed(1),
+      score_add: +(d.risk_score_additive_25_25_50||0).toFixed(1),
+      delta_rank: d.rank_equal_mult - d.rank_additive_25_25_50,  // positive = rose under Ovienmhada
+      hazard:      +(mc?.hazard_score||0).toFixed(2),
+      exposure:    +(mc?.exposure_score||0).toFixed(2),
+      vulnerability: +(mc?.vulnerability_score||0).toFixed(2),
+    };
+  }).sort((a,b) => Math.abs(b.delta_rank) - Math.abs(a.delta_rank));
+
+  const maxAbsRank = d3.max(rows, d => Math.abs(d.delta_rank));
+  const SPARK_W = 100, SPARK_H = 12, MID = SPARK_W / 2;
+  const sparkX = d3.scaleLinear().domain([-maxAbsRank, maxAbsRank]).range([0, SPARK_W]);
+
+  const wrap = d3.select("#ov-rank-table-wrap");
+  wrap.append("div").attr("class","map-title")
+    .style("margin-top","28px").style("margin-bottom","4px")
+    .text("Rank divergence: equal-weight vs. Ovienmhada additive 25/25/50 — sorted by absolute rank change");
+  wrap.append("div").attr("class","section-note").style("margin-bottom","8px")
+    .html("Orange = facility rises in priority under Ovienmhada (vulnerability upweighted). "
+        + "Blue = facility falls. Stable = no bar. "
+        + "Spearman r between the two ranking schemes = 0.877 (p&lt;0.0001).");
+
+  const tbl = wrap.append("table").attr("class","risk-table");
+  tbl.append("thead").append("tr")
+    .html("<th>Code</th><th>Facility</th>"
+        + "<th class='num'>Pop</th>"
+        + "<th class='num'>Equal rank</th><th class='num'>Additive rank</th>"
+        + "<th class='num'>Δ rank</th>"
+        + "<th class='num'>Equal score</th><th class='num'>Additive score</th>"
+        + "<th class='num'>Hazard</th><th class='num'>Exposure</th><th class='num'>Vulnerability</th>"
+        + "<th style='padding-left:12px'>Change under Ovienmhada</th>");
+
+  const tbody = tbl.append("tbody");
+  rows.forEach(d => {
+    const tr = tbody.append("tr");
+    tr.append("td").text(d.cdcr_code);
+    tr.append("td").text(d.name);
+    tr.append("td").attr("class","num").style("font-size","10px")
+      .text(d.population ? d.population.toLocaleString() : "—");
+    tr.append("td").attr("class","num").text(d.rank_eq);
+    tr.append("td").attr("class","num").text(d.rank_add);
+
+    const sign = d.delta_rank > 0 ? "+" : "";
+    tr.append("td").attr("class","num")
+      .style("color", d.delta_rank > 0 ? "#b04010" : d.delta_rank < 0 ? "#2060a0" : "#555")
+      .style("font-weight", Math.abs(d.delta_rank) >= 5 ? "bold" : "normal")
+      .text(d.delta_rank === 0 ? "—" : sign + d.delta_rank);
+
+    tr.append("td").attr("class","num").text(d.score_eq);
+    tr.append("td").attr("class","num").text(d.score_add);
+    tr.append("td").attr("class","num").text(d.hazard);
+    tr.append("td").attr("class","num").text(d.exposure);
+    tr.append("td").attr("class","num")
+      .style("font-weight", d.delta_rank !== 0 ? "bold" : "normal")
+      .text(d.vulnerability);
+
+    // Spark bar
+    const sparkTd = tr.append("td").style("padding-left","12px");
+    if (d.delta_rank === 0) { sparkTd.append("span").style("color","#bbb").text("stable"); return; }
+    const svg = sparkTd.append("svg").attr("width", SPARK_W).attr("height", SPARK_H)
+      .style("display","inline-block").style("vertical-align","middle");
+    svg.append("line")
+      .attr("x1",MID).attr("x2",MID).attr("y1",0).attr("y2",SPARK_H)
+      .attr("stroke","#bbb").attr("stroke-width",0.8);
+    const barX  = d.delta_rank >= 0 ? MID : sparkX(d.delta_rank);
+    const barW  = Math.abs(sparkX(d.delta_rank) - MID);
+    svg.append("rect")
+      .attr("x", barX).attr("y", 2)
+      .attr("width", Math.max(barW, 1)).attr("height", SPARK_H - 4)
+      .attr("fill", d.delta_rank > 0 ? "#c44020" : "#2060a0")
+      .attr("opacity", 0.85);
+    svg.append("text")
+      .attr("x", d.delta_rank >= 0 ? MID + barW + 3 : MID - barW - 3)
+      .attr("y", SPARK_H - 2)
+      .attr("text-anchor", d.delta_rank >= 0 ? "start" : "end")
+      .attr("font-size", 8).attr("fill", "#555").attr("font-family","Georgia,serif")
+      .text((d.delta_rank > 0 ? "↑" : "↓") + Math.abs(d.delta_rank));
+  });
+})();
+
+// ── SECTION 6: VCP & Sensitivity ─────────────────────────────────────────
+const vcpExt = d3.extent(dataSens.filter(d=>d.vcp_community_ExHeatHealth_Idx!=null),
+  d=>d.vcp_community_ExHeatHealth_Idx);
+buildMap({
+  id:"m-vcp", data:dataSens,
+  colorFn: d => d.vcp_community_ExHeatHealth_Idx!=null
+    ? seqYellowRed(vcpExt)(d.vcp_community_ExHeatHealth_Idx) : "#ccc",
+  rFn: () => 7,
+  tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,
+    `Community VCP: ${d.vcp_community_ExHeatHealth_Idx!=null ? d.vcp_community_ExHeatHealth_Idx.toFixed(1):"n/a"}`,
+    `(${d.n_neighbors} adjacent tracts)`],
+  legendOpts:{scale:seqYellowRed(vcpExt),domain:vcpExt,title:"VCP ExHeatHealth_Idx"}
+});
+
+buildMap({
+  id:"m-div", data:dataSens,
+  colorFn: d => d.rank_divergence!=null ? divRdBu(d.rank_divergence) : "#ccc",
+  rFn: () => 7,
+  tipLines: d => {
+    const v = d.rank_divergence;
+    const dir = v>0 ? "our index ranks higher" : v<0 ? "VCP ranks community higher" : "equal";
+    return [`<b>${d.cdcr_code}</b> — ${d.name}`,
+      `Our rank: ${d.rank_equal_mult} | Community rank: ${d.community_rank!=null?Math.round(d.community_rank):"n/a"}`,
+      `Divergence: ${v!=null?(v>0?"+":"")+v.toFixed(0):"n/a"} (${dir})`];
+  },
+  legendOpts:{diverging:true, domain:[-27,27], title:"Rank divergence (our − VCP)"}
+});
+
+buildMap({
+  id:"m-swing", data:dataSens,
+  colorFn: d => swingPurple(d.max_swing||0),
+  rFn: () => 7,
+  tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,
+    `Rank A (equal): ${d.rank_equal_mult}`,
+    `Rank B (additive): ${d.rank_additive_25_25_50}`,
+    `Rank C (mult V²): ${d.rank_mult_vsq}`,
+    `Max swing: ${d.max_swing}`],
+  legendOpts:{scale:swingPurple,domain:[0,16],title:"Max rank swing"}
+});
+</script>
+</body>
+</html>
