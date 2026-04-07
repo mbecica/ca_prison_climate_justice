@@ -25,6 +25,10 @@ Notebooks and scripts are in this directory. Outputs are written to `data/`.
 - PBSP `ratio_indoor_to_outdoor` = 15.75 is an outlier driven by ~4 outdoor 78°F days/year at the Crescent City coast; PBSP scores 1.0 on this sub-component but ranks 28th overall due to very low hazard
 - ISP ranks last (0.01) despite highest hazard — its 2024 HVAC project reduced indoor 78°F days to ~1, correctly captured by the exposure component
 
+**Limitations and future work:**
+- **Incarcerated workers** — the share of the facility population employed through Prison Industry Authority (PIA) or other work assignments is not included in the vulnerability component. PIA workers face elevated heat exposure from extended time in industrial or outdoor settings. Facility-level data on the full incarcerated worker participation rates are still being searched for; retained as future work.
+- **Psychotropic medication use** — the share of incarcerated people on psychotropic medications is not included as a standalone sub-component. Psychotropic medications (antipsychotics, anticholinergics, mood stabilizers) impair thermoregulation and are an established heat vulnerability factor. Facility-level psychotropic prescription rates are not publicly available from CCHCS. The CCHCS health risk categories used in the medical acuity sub-component (P1, P2, medium risk) are used instead, with the assumption that psychotropic medication use is captured within those broader risk tier definitions; retained as future work for a more direct measure.
+
 ### Outdoor vs. Indoor Temperature Gap
 
 The CDCR Heat Pathology Plan Stage I and Stage III thresholds are defined by **indoor** housing unit temperatures (≥ 90°F and ≥ 95°F respectively). Outdoor gridMET data is used as a proxy for trend analysis and hazard mapping, but outdoor temperatures systematically overstate the number of days that cross indoor thresholds. The exposure component of the risk index uses indoor 78°F day counts directly (from CDCR's January 2026 Air Cooling Pilot Supplemental Report) to address this gap.
