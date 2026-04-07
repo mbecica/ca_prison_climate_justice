@@ -195,3 +195,30 @@ Three sources were evaluated. CDCR 2020 only lists top 5; "—" means not listed
 ### CDCR 2020 Sustainability Report — Table 8
 
 Top five facilities located in urban heat islands (sorted by highest UHII): **CRC, CIM, CIW, CMF, SOL**. Source: CDCR 2020 Sustainability Roadmap, Chapter 1, p. 22. UHII methodology not specified. Only top 5 published; absence from list does not mean no UHI.
+
+---
+
+## Heat Activation Days (CDCR Facility-Level)
+
+Daily and annual counts of outdoor heat threshold exceedances at CDCR state prisons, derived from gridMET 4km gridded daily maximum temperature (tmmx). Scraper: `scrapers/extract_gridmet_heat.py`.
+
+**Facility coverage:** 32 active CDCR state prisons. CAC and FWF excluded throughout. CVSP included for 2016–2023 only (closed mid-2024).
+
+### Threshold definitions
+
+| Column | Definition | Note |
+| :--- | :--- | :--- |
+| `over_90f` / `days_over_90f` | Outdoor tmax ≥ 90°F | Corresponds to CDCR Heat Pathology Plan Stage I outdoor trigger |
+| `over_95f` / `days_over_95f` | Outdoor tmax ≥ 95°F | Corresponds to Stage III outdoor threshold; **Stage III protocol is triggered by indoor temperature** — outdoor is a proxy only |
+| `skarha10` / `days_skarha10` | Outdoor tmax ≥ facility mean summer tmax + 10°F (baseline: 1991–2020 Jun–Aug mean) | Skarha et al. (2023) marginal mortality metric; the only threshold with a mortality calibration |
+
+The 90°F and 95°F thresholds have no direct mortality calibration in the literature — they are regulatory exposure metrics only. The Skarha 10°F threshold carries a statistically significant 5.2% all-cause mortality association (see `heat_hazard.ipynb`).
+
+### Files
+
+| File | Description |
+| :--- | :--- |
+| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags (`over_90f`, `over_95f`, `skarha10`) per facility, 2016–2025 |
+| `heat_activations_annual.csv` | Annual count of days over 90°F, days over 95°F, and Skarha 10°F threshold exceedances per facility |
+| `heat_activations_monthly.csv` | Monthly count of days over 90°F and 95°F per facility per year |
+| `summer_avg_tmax_annual.csv` | Mean Jun–Aug daily tmax (°F) per facility per year, 1990–2025 |

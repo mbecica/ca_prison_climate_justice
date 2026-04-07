@@ -155,3 +155,75 @@ Legislative Analyst's Office. (2020). *Effectively Managing State Prison Infrast
 CDCR Facilities Planning and Construction Management Division. (2022–2025). *Master Plan Annual Reports*. California Department of Corrections and Rehabilitation. PDFs in `cdcr_facilities_planning/`.
 
 CDCR. (2026, January). *Air Cooling Pilot Program Supplemental Report*. California Department of Corrections and Rehabilitation. https://www.cdcr.ca.gov/fpcm/wp-content/uploads/sites/184/2026/02/Air_Cooling_Document_for_Legislature.pdf
+
+
+---
+
+## Behavioral & Incarceration Statistics
+
+### Violent Incidents by Facility (2021–2025)
+
+`cdcr_violent_incidents_by_facility.csv` — monthly violent incident counts per facility, extracted from CDCR Incident Report PDFs (CompStat and Public series). Script: `extract_violent_incidents.py`.
+
+**Coverage:** 35 facilities, January 2021–December 2025. Facility count ranges from 35 (2021) to 31 (2025), reflecting closures (CVSP, DVI, CCC, CAC).
+
+**Violent categories included** (summed per facility per month):
+- Assault on a Peace Officer or Non-Prisoner (Total)
+- Battery on a Peace Officer or Non-Prisoner (Total)
+- Assault on Inmate (Total)
+- Battery on Inmate (Total)
+- Cell Extractions (Total)
+- Fighting
+- Riot (incident count only, not "Riot – Number of Inmates Involved")
+
+**Excluded:** all Controlled Substance rows, Type of Force rows.
+
+**Overlap resolution:** For months covered by multiple PDFs, the most recent report takes precedence.
+
+**Validation:** Spot-checked 7 facility-month combinations against All Institutions summary totals across multiple PDFs — all passed.
+
+| Year | System-wide violent incidents |
+| :--- | :--- |
+| 2021 | 7,169 |
+| 2022 | 8,015 |
+| 2023 | 10,077 |
+| 2024 | 12,376 |
+| 2025 | 12,512 |
+
+The per-facility annual average (`avg_annual_violent_incidents`) is added to `data/cdcr_facilities.csv`. System-wide average: ~9,900/year across 2021–2025.
+
+### Average Sentence by Admission Type (2023–2026)
+
+`cdcr_avg_sentence_by_admission.csv` — average sentence length in months per admission type per month, scraped from the CDCR Population Data Points Power BI dashboard (Admissions > Population Demographics > Crosstabs > Average Sentence, rows: Admission Type, columns: None). Script: `scrapers/fetch_cdcr_avg_sentence.js`.
+
+**Coverage:** January 2023–March 2026, 4 admission types. Some months suppressed (counts < 10).
+
+| Admission Type | Mean sentence | Range |
+| :--- | :--- | :--- |
+| Felon New Admissions | 84 months (7.0 yrs) | 65–97 mo |
+| Felon Parole Violators – With New Term | 53 months (4.4 yrs) | 43–71 mo |
+| Felon Parole Violators – Return to Custody | 155 months (13.0 yrs) | 60–252 mo |
+| Felon Pending Revocations | 41 months (3.4 yrs) | 16–96 mo |
+
+Values are average sentence at time of admission, not additional time added. "Return to Custody" counts are largely suppressed (<10/month); the operative recidivist sentence length is "With New Term" at 4.4 years.
+
+### Three-Year Return Rate by Length of Stay (2008–2020)
+
+`cdcr_recidivism_los.csv` — three-year return-to-prison rate by length-of-stay category and fiscal year, scraped from the CDCR Adult Recidivism Power BI dashboard (Returns measure → Crosstabs → Fiscal Year: All → Row: Length of Stay → Column: Length of Stay). Script: `scrapers/fetch_cdcr_recidivism_los.js`.
+
+**Coverage:** 12 release cohorts, FY 2008-09 through 2019-20. 8 length-of-stay categories per cohort (96 data rows).
+
+**2019-20 cohort (most recent):**
+
+| Length of Stay | 3-Year Return Rate |
+| :--- | :--- |
+| Less than 1 year | 18.2% |
+| 1 year (12–23 months) | 20.6% |
+| 2 years (24–35 months) | 20.5% |
+| 3 years (36–47 months) | 18.3% |
+| 4 years (48–59 months) | 16.1% |
+| 5–9 years | 12.0% |
+| 10–14 years | 6.4% |
+| 15 years or more | 2.4% |
+
+Return rates declined substantially after California's 2011 Public Safety Realignment, which shifted low-level offenders from state prison to county jails. Pre-2011 system-wide rates (~55–65%) are not comparable to post-2011 rates (~17–24%) due to this structural break in the release cohort composition. The 2017-18 through 2019-20 cohorts show an additional downward bias from COVID-19 disruptions to policing, courts, and CDCR intakes. Pre-COVID system-wide baseline (4-cohort average, FY 2013-14 through FY 2016-17): **23.7%**.
