@@ -7,7 +7,6 @@ Notebooks and scripts are in this directory. Outputs are written to `data/`.
 **Output files:**
 - `data/CDCR_heat_risk_index.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century. Notebook: `heat_risk_index.ipynb`.
 - `data/CDCR_heat_risk_sensitivity.csv` — weighting sensitivity analysis and VCP comparison. Notebook: `sensitivity_analysis.ipynb`.
-- `data/CDCR_facility_heat_risk_scores.csv` — mid-century risk scores, tier classifications, and 90°F day counts per facility, for export and mapping.
 
 **Facility coverage:** 31 of 34 state prisons. CAC, CVSP, and FWF excluded — no indoor heat model data available.
 
@@ -96,12 +95,14 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 | :--- | :--- |
 | `cdcr_code` | CDCR facility code |
 | `name` | Facility name |
+| `latitude` / `longitude` | Facility centroid coordinates |
 | `average_2025_population` | Average 2025 incarcerated population |
 | `time_period` | `current` (1991–2020) or `midcentury` (2041–2070) |
 | `hazard_score` | Hazard component score (0–1) |
 | `exposure_score` | Exposure component score (0–1) |
 | `vulnerability_score` | Vulnerability component score (0–1) |
 | `risk_score` | Final risk score (0–100), normalized cross-period |
+| `risk_category` | Jenks tier: `Critical`, `High`, `Moderate`, or `Low` |
 | `AQI_norm` | AQI sub-indicator (raw, 0–100) |
 | `ratio_indoor_to_outdoor` | Indoor/outdoor 78°F day ratio (raw) |
 | `days_indoor_above_78f_2025` | Indoor 78°F days in 2025 (raw count) |
@@ -111,22 +112,6 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 | `cchcs_mental_health_eop_pct_2025` | EOP share (%) |
 | `cchcs_dpp_pct_2025` | DPP share (%) |
 | `race_peopleofcolor_pct` | POC share (%) |
-
-`data/CDCR_facility_heat_risk_scores.csv` — mid-century export for mapping and analysis:
-
-| Column | Description |
-| :--- | :--- |
-| `cdcr_code` | CDCR facility code |
-| `name` | Facility name |
-| `latitude` / `longitude` | Facility centroid coordinates |
-| `population_2025` | Average 2025 incarcerated population |
-| `hazard_score` | Hazard component score (0–1) |
-| `exposure_score` | Exposure component score (0–1) |
-| `vulnerability_score` | Vulnerability component score (0–1) |
-| `days_over_90f_midcentury` | Mid-century annual days over 90°F (Cal-Adapt) |
-| `days_over_90f_category` | Categorical bin: `< 1 week`, `1 week – 1 month`, `1 – 3 months`, `3 – 6 months`, `6 – 9 months`, `9+ months` |
-| `risk_score` | Mid-century risk score (0–100) |
-| `risk_category` | Jenks tier: `Critical`, `High`, `Moderate`, or `Low` |
 
 ### Sensitivity Analysis and VCP Comparison
 

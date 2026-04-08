@@ -5,8 +5,16 @@ All facilities (local and county jails, state prisons, federal prisons) have cli
 
 This project is in support of Climate Justice Coalition 4 California Prisons and a masters capstone at UC Berkeley's Department of City & Regional Planning. It is inspired by and continues the work of the [Toxic Prisons Project](http://toxicprisons.com/) and Ella Baker Center's [Hidden Hazards Report](https://ellabakercenter.org/reports/hiddenhazards/) (2023).
 
+# Data Files
+
+| File | Description |
+| :--- | :--- |
+| `data/ca_facilities.csv` | Base dataset — 357 CA carceral facilities with facility metadata, isolation variables, and UHI. |
+| `data/ca_climate_hazards.csv` | All 357 facilities with all climate hazard fields joined (heat/AQI, flood, drought, wildfire FHSZ/WUI). Build with `analysis/join_climate_hazards.ipynb`. |
+| `data/CDCR_heat_risk_index.csv` | 31 CDCR state prisons — heat risk index (Hazard × Exposure × Vulnerability), current and mid-century. Build with `analysis/heat_risk_index.ipynb`. |
+
 # Data Fields
-Processed data can be found in the `data` folder. 
+Processed data can be found in the `data` folder.
 
 ## Facilities Data
 
