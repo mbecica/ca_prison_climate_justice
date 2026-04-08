@@ -66,9 +66,11 @@ Top five facilities located in urban heat islands (sorted by highest UHII): **CR
 
 ---
 
-## Heat Activation Days (CDCR Facility-Level)
+## Historic Observed Temperatures — CDCR State Prisons
 
-Daily and annual counts of outdoor heat threshold exceedances at CDCR state prisons, derived from gridMET 4km gridded daily maximum temperature (tmmx). Scraper: `scrapers/extract_gridmet_heat.py`.
+Daily and annual observed outdoor temperatures at CDCR state prisons, derived from gridMET 4km gridded daily maximum temperature (`tmmx`). Scraper: `scrapers/extract_gridmet_heat.py`.
+
+**Source:** Abatzoglou, J.T. (2013). Development of gridded surface meteorological data for ecological applications and modelling. *International Journal of Climatology*, 33(1), 121–131. doi:10.1002/joc.3413. Data accessed via [climatologylab.org/gridmet.html](http://www.climatologylab.org/gridmet.html).
 
 **Facility coverage:** 32 active CDCR state prisons. CAC and FWF excluded throughout. CVSP included for 2016–2023 only (closed mid-2024).
 
@@ -84,9 +86,21 @@ The 90°F and 95°F thresholds have no direct mortality calibration in the liter
 
 ### Files
 
-| File | Description |
-| :--- | :--- |
-| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags (`over_90f`, `over_95f`, `skarha10`) per facility, 2016–2025 |
-| `heat_activations_annual.csv` | Annual count of days over 90°F, days over 95°F, and Skarha 10°F threshold exceedances per facility |
-| `heat_activations_monthly.csv` | Monthly count of days over 90°F and 95°F per facility per year |
-| `summer_avg_tmax_annual.csv` | Mean Jun–Aug daily tmax (°F) per facility per year, 1990–2025 |
+| File | Description | Source |
+| :--- | :--- | :--- |
+| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags (`over_90f`, `over_95f`, `skarha10`) per facility, 2016–2025 | gridMET (Abatzoglou, 2013) |
+| `heat_activations_annual.csv` | Annual count of days over 90°F, days over 95°F, and Skarha 10°F threshold exceedances per facility | gridMET (Abatzoglou, 2013) |
+| `heat_activations_monthly.csv` | Monthly count of days over 90°F and 95°F per facility per year | gridMET (Abatzoglou, 2013) |
+| `summer_avg_tmax_annual.csv` | Mean Jun–Aug daily tmax (°F) per facility per year, 1990–2025 | gridMET (Abatzoglou, 2013) |
+
+---
+
+## References
+
+Abatzoglou, J.T. (2013). Development of gridded surface meteorological data for ecological applications and modelling. *International Journal of Climatology*, 33(1), 121–131. doi:10.1002/joc.3413
+
+Benz SA, Burney JA. (2021). Widespread race and class disparities in surface urban heat islands across the United States. *Earth's Future*, 9(7), e2021EF002016. Harvard Dataverse, doi:10.7910/DVN/1F72FB. CC0 license.
+
+California Department of Corrections and Rehabilitation. (2020). Sustainability Roadmap. CDCR.
+
+Governor's Office of Land Use and Climate Innovation. (2025). Vulnerable Communities Platform [Dataset]. https://opr.ca.gov/planning/vulnerable-communities-platform/
