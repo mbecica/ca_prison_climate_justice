@@ -2,31 +2,6 @@
 
 Hazard datasets and processing notebooks for the CA prison climate justice analysis. Tract-level indices cover all 357 carceral facilities via census tract join. Facility-level heat data (gridMET) covers CDCR state prisons only.
 
-## Files
-
-| File | Description |
-| :--- | :--- |
-| `heat_hazard.ipynb` | Builds heat and air quality hazard index from Cal-Adapt, VCP, and CalEnviroScreen |
-| `flood_hazard.ipynb` | Builds flood hazard index from DWR BAM floodplains and VCP precipitation indicators |
-| `drought_hazard.ipynb` | Builds drought hazard index from VCP temperature, WSV, and precipitation/demand ratio |
-| `join_climate_hazards.ipynb` | Joins all hazard indices to the facilities dataset |
-| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags per CDCR facility, 2016–2025 (gridMET) |
-| `heat_activations_annual.csv` | Annual days over 90°F, 95°F, and Skarha 10°F threshold per facility |
-| `heat_activations_monthly.csv` | Monthly days over 90°F and 95°F per facility per year |
-| `summer_avg_tmax_annual.csv` | Mean Jun–Aug daily tmax (°F) per CDCR facility per year, 1990–2025 |
-| `CDCR_indoor_78f_days_2025.csv` | Days with indoor temperature above 78°F (May–Oct 2025) per CDCR facility (31 state prisons). Source: CDCR Air Cooling Pilot Program Supplemental Report, January 2026, Table 1 |
-| `heatdays_alltimes_tract.csv` | Historic and mid-century days over 90°F per census tract (Cal-Adapt) |
-| `droughtfrequency_tract.csv` | Drought frequency per census tract |
-| `benz_uhi_facilities.csv` | Benz & Burney ΔT and normalized UHI score per CDCR facility (32 state prisons) |
-| `benz_uhi_ca_tracts.csv` | Benz & Burney ΔT for all 7,993 CA census tracts |
-| `benz_uhi_ca_tracts.geojson` | Simplified CA tract boundaries with Benz ΔT joined (4.65 MB) |
-| `VCP_Tracts.geojson` | California Vibrant Communities Project tract-level indicators (incl. `UHI_sc`, hot nights, flood, drought) |
-| `CalEnviroScreen_4.0_Results.geojson` | CalEnviroScreen 4.0 scores by census tract |
-| `calenviroscreen50csv_d_12226.csv` | CalEnviroScreen tabular data |
-| `calfire_fhsz.geojson` | CAL FIRE Fire Hazard Severity Zones (SRA 2022, LRA 2025) |
-| `Wildland_Urban_Interface.zip` | CAL FIRE Wildland-Urban Interface boundaries |
-
----
 
 ## Hazard Index Methods
 
@@ -142,52 +117,6 @@ Urban heat island (UHI) effect is tracked as an **exposure metric**, not added t
 
 Facilities with `uhi_normalized = 0` (urban cooling or no positive ΔT): CAL, SQ, CTF, SVSP, LAC, RJD, ISP, CVSP, FOL, FWF, SAC, ASP, CEN, SCC.
 
-### Three-source comparison
-
-Three sources were evaluated. CDCR 2020 only lists top 5; "—" means not listed, not confirmed No.
-
-| Code | Benz ΔT | Source | VCP | CDCR 2020 | Notes |
-| :--- | ---: | :--- | :--- | :--- | :--- |
-| ASP | −0.141 | direct | 0 | — | |
-| CAC | −0.322 | direct | 0 | — | |
-| CAL | −4.399 | direct | 0 | — | |
-| CCI | null | missing | 0 | — | 4.4 mi to nearest Benz tract |
-| CCWF | +0.662 | direct | 2 | — | |
-| CEN | −0.057 | direct | 0 | — | |
-| CHCF | +2.480 | direct | 2 | — | |
-| CIM | +7.247 | buffer | 2 | Yes | all 3 agree |
-| CIW | +4.385 | buffer | 0 | Yes | CDCR=Yes; Benz 1.04 mi buffer; VCP=No |
-| CMC | +0.506 | direct | 0 | — | Benz+, VCP/CDCR not listed |
-| CMF | +4.214 | direct | 2 | Yes | all 3 agree |
-| COR | +4.188 | buffer | 0 | — | Benz+, VCP/CDCR not listed |
-| CRC | +4.140 | direct | 2 | Yes | all 3 agree |
-| CTF | −1.007 | direct | 0 | — | |
-| CVSP | −0.538 | buffer | 0 | — | |
-| FOL | −0.534 | direct | 2 | — | VCP=2, Benz negative |
-| FWF | −0.534 | direct | 2 | — | VCP=2, Benz negative |
-| HDSP | +0.297 | direct | 0 | — | Benz+, VCP/CDCR not listed |
-| ISP | −0.538 | buffer | 0 | — | |
-| KVSP | +1.090 | direct | 0 | — | Benz+, VCP/CDCR not listed |
-| LAC | −1.114 | direct | 2 | — | VCP=2, Benz negative |
-| MCSP | +1.902 | direct | 0 | — | Benz+, VCP/CDCR not listed |
-| NKSP | +4.548 | direct | 0 | — | Benz+, VCP/CDCR not listed |
-| PBSP | +2.244 | direct | 0 | — | Benz+, VCP/CDCR not listed |
-| PVSP | null | missing | 0 | — | 2.2 mi to nearest Benz tract |
-| RJD | −1.542 | buffer | 0 | — | |
-| SAC | −0.534 | direct | 2 | — | VCP=2, Benz negative |
-| SATF | +4.354 | buffer | 0 | — | Benz+, VCP/CDCR not listed |
-| SCC | −0.122 | direct | 0 | — | |
-| SOL | +4.214 | direct | 2 | Yes | all 3 agree |
-| SQ | −5.309 | direct | 0 | — | |
-| SVSP | −1.007 | direct | 0 | — | |
-| VSP | +0.662 | direct | 2 | — | |
-| WSP | +3.507 | buffer | 0 | — | Benz+, VCP/CDCR not listed |
-
-**Benz vs. VCP (31 comparable):** 18 agree / 13 disagree (42% mismatch). VCP not used as fallback — disagreement reflects different methodology (land use classification vs. observed LST anomaly).
-
-**Systematic disagreement patterns:**
-- *Benz positive, VCP = 0:* COR, SATF, NKSP, KVSP, WSP, MCSP, PBSP, HDSP, CMC — rural/exurban prisons with local industrial or agricultural heat in LST, not captured by VCP's urban classification.
-- *VCP = 2, Benz negative:* SAC, FOL, FWF, LAC — suburban areas with tree cover or coastal influence depressing local LST below rural background.
 
 ### VCP UHI_sc
 
