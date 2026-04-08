@@ -9,9 +9,8 @@ This project is in support of Climate Justice Coalition 4 California Prisons and
 
 | File | Description |
 | :--- | :--- |
-| `data/ca_facilities.csv` | Base dataset — 357 CA carceral facilities with facility metadata, isolation variables, and UHI. |
-| `data/ca_climate_hazards.csv` | All 357 facilities with all climate hazard fields joined (heat/AQI, flood, drought, wildfire FHSZ/WUI). Build with `analysis/join_climate_hazards.ipynb`. |
-| `data/CDCR_heat_risk_index.csv` | 31 CDCR state prisons — heat risk index (Hazard × Exposure × Vulnerability), current and mid-century. Build with `analysis/heat_risk_index.ipynb`. |
+| `data/allfacilities_climate_hazards.csv` | All 357 facilities with all climate hazard fields joined (heat/AQI, flood, drought, wildfire FHSZ/WUI). Build with `analysis/hazards/join_climate_hazards.ipynb`. |
+| `data/cdcr/CDCR_heat_risk_index.csv` | 31 CDCR state prisons — heat risk index (Hazard × Exposure × Vulnerability), current and mid-century. Build with `analysis/CDCR_risk_indices/heat_risk_index.ipynb`. |
 
 # Data Fields
 Processed data can be found in the `data` folder.

@@ -1,12 +1,12 @@
 # Analysis
 
-Notebooks and scripts are in this directory. Outputs are written to `data/`.
+Notebooks and scripts are in this directory. Outputs are written to `data/cdcr/` (CDCR) and `data/hazards/` (hazard layers).
 
 ## CDCR Facility Heat Risk Index
 
 **Output files:**
-- `data/CDCR_heat_risk_index.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century. Notebook: `heat_risk_index.ipynb`.
-- `data/CDCR_heat_risk_sensitivity.csv` — weighting sensitivity analysis and VCP comparison. Notebook: `sensitivity_analysis.ipynb`.
+- `data/cdcr/CDCR_heat_risk_index.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century. Notebook: `CDCR_risk_indices/heat_risk_index.ipynb`.
+- `data/cdcr/CDCR_heat_risk_sensitivity.csv` — weighting sensitivity analysis and VCP comparison. Notebook: `CDCR_risk_indices/sensitivity_analysis.ipynb`.
 
 **Facility coverage:** 31 of 34 state prisons. CAC, CVSP, and FWF excluded — no indoor heat model data available.
 
@@ -89,7 +89,7 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 
 ### Output Column Reference
 
-`data/CDCR_heat_risk_index.csv`:
+`data/cdcr/CDCR_heat_risk_index.csv`:
 
 | Column | Description |
 | :--- | :--- |
@@ -115,7 +115,7 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 
 ### Sensitivity Analysis and VCP Comparison
 
-`data/CDCR_heat_risk_sensitivity.csv`. Notebook: `sensitivity_analysis.ipynb`.
+`data/cdcr/CDCR_heat_risk_sensitivity.csv`. Notebook: `CDCR_risk_indices/sensitivity_analysis.ipynb`.
 
 Three alternative weighting schemes are tested against the equal-weight multiplicative baseline (mid-century only):
 
