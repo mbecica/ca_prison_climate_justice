@@ -1,11 +1,16 @@
 /**
- * Scrapes Institution Totals for three operational categories across all fiscal years
+ * Scrapes Institution Totals for four operational categories across all fiscal years
  * from the SB 601 Programs Power BI dashboard:
  *   - Lockdowns and Modified Programs
  *   - Number of Deaths
  *   - Overtime Hours
+ *   - Use of Force
  *
- * Output columns: institution, fiscal_year, category, metric, Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr
+ * Output columns: institution, fiscal_year, category, metric, Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr, May, Jun
+ *
+ * Two-pass horizontal extraction:
+ *   Pass 1 (left):  captures Jul–Apr (columns visible at default scroll position)
+ *   Pass 2 (right): scrolled right to reveal May–Jun; merges those values into pass-1 rows
  *
  * Usage:
  *   node fetch_sb601_operations.js
@@ -23,9 +28,22 @@ const TARGET_CATEGORIES = new Set([
   'Lockdowns and Modified Programs',
   'Number of Deaths',
   'Overtime Hours',
+  'Use of Force (UOF)',
+  'Fiscal',
 ]);
 // Full fiscal year: Jul through Jun (12 months)
 const MONTH_NAMES = ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+
+// Month abbreviation -> canonical name (strips year suffix, e.g. "Jul-22" -> "Jul")
+function parseMonthHeader(h) {
+  if (!h) return null;
+  const clean = h.trim();
+  // "Jul-22", "Aug-22", etc. — strip suffix
+  const m = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/i);
+  if (!m) return null;
+  const name = m[1].charAt(0).toUpperCase() + m[1].slice(1).toLowerCase();
+  return MONTH_NAMES.includes(name) ? name : null;
+}
 
 // Known CDCR institution identifiers — used to anchor forward-fill.
 // Only update lastInst when col[0] is one of these (case-insensitive prefix match or exact code).
@@ -199,6 +217,58 @@ async function scrollGridToTop(page) {
   await page.waitForTimeout(800);
 }
 
+// Scroll the grid horizontally to the leftmost position.
+async function scrollGridToLeft(page) {
+  const gridBox = await page.evaluate(() => {
+    function findGrid(root) {
+      const g = root.querySelector('[role="grid"]');
+      if (g) return g;
+      for (const el of root.querySelectorAll('*')) {
+        if (el.shadowRoot) { const f = findGrid(el.shadowRoot); if (f) return f; }
+      }
+      return null;
+    }
+    const grid = findGrid(document);
+    if (!grid) return null;
+    const r = grid.getBoundingClientRect();
+    return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
+  });
+  if (gridBox) {
+    await page.mouse.move(gridBox.x, gridBox.y);
+    // Large leftward wheel scroll (negative x)
+    await page.mouse.wheel(-50000, 0);
+    await page.waitForTimeout(1000);
+    await page.mouse.wheel(-50000, 0);
+    await page.waitForTimeout(800);
+  }
+}
+
+// Scroll the grid horizontally to the rightmost position.
+async function scrollGridToRight(page) {
+  const gridBox = await page.evaluate(() => {
+    function findGrid(root) {
+      const g = root.querySelector('[role="grid"]');
+      if (g) return g;
+      for (const el of root.querySelectorAll('*')) {
+        if (el.shadowRoot) { const f = findGrid(el.shadowRoot); if (f) return f; }
+      }
+      return null;
+    }
+    const grid = findGrid(document);
+    if (!grid) return null;
+    const r = grid.getBoundingClientRect();
+    return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
+  });
+  if (gridBox) {
+    await page.mouse.move(gridBox.x, gridBox.y);
+    // Large rightward wheel scroll (positive x)
+    await page.mouse.wheel(50000, 0);
+    await page.waitForTimeout(1000);
+    await page.mouse.wheel(50000, 0);
+    await page.waitForTimeout(800);
+  }
+}
+
 async function scrollGrid(page) {
   // Find the grid and mouse-wheel scroll it downward.
   // Keyboard PageDown requires focus that may not persist; mouse wheel is more reliable.
@@ -227,26 +297,60 @@ async function scrollGrid(page) {
   await page.waitForTimeout(300);
 }
 
-// Extract all rows from the wide-format Institution Totals matrix.
+// Read column headers from the currently visible grid position.
+// Returns an array of month names (or null for non-month columns) indexed by cell position.
+// Positions 0,1,2 are always Institution, Category, Metric (fixed).
+// Positions 3+ are month columns — header text like "Jul-22" -> "Jul".
 //
-// The grid has columns: Institution | Category | Metric | Jul-22 | Aug-22 | ... | Jun-23
-// Months appear as column headers with year suffix (e.g. "Jul-22").
-// Rows use forward-fill: Institution and Category only appear in group header rows;
-// data rows have empty col[0]/col[1].
-//
-// Key fixes vs. original:
-//   - Dedup by (inst, cat, met) identity — not row content — so institution header
-//     rows are not falsely deduplicated when Power BI re-renders the virtual list.
-//   - lastInst/lastCat persist across scroll steps (defined outside addRows) so
-//     mid-scroll pages without a visible institution header still get attributed
-//     to the correct institution.
-//   - lastInst only updates for known institution identifiers (isInstitutionHeader).
-//   - Stall threshold: 100 no-new-record steps (100px scroll each).
-async function extractTable(page) {
-  // (inst, cat, met) -> wide row array — keeps first seen occurrence
-  const byKey = new Map();
+// The Institution Totals table has a two-level header:
+//   Row 1 (grouping): "", "", "Quarter", "Q1", "Q1", "Q1", "Q2", ...
+//   Row 2 (months):   "", "", "Metric",  "Jul-22", "Aug-22", "Sep-22", ...
+// We prefer the row that contains actual month abbreviations.
+async function getVisibleColumnHeaders(page) {
+  return await page.evaluate(() => {
+    function findGrid(root) {
+      const g = root.querySelector('[role="grid"]');
+      if (g) return g;
+      for (const el of root.querySelectorAll('*')) {
+        if (el.shadowRoot) { const f = findGrid(el.shadowRoot); if (f) return f; }
+      }
+      return null;
+    }
+    const grid = findGrid(document);
+    if (!grid) return [];
+    const monthRe = /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)/i;
+    const rows = grid.querySelectorAll('[role="row"]');
+    let firstHeaderRow = null;
+    for (const row of rows) {
+      const headers = row.querySelectorAll('[role="columnheader"]');
+      if (headers.length === 0) continue;
+      const texts = Array.from(headers).map(h => (h.innerText || h.textContent || '').trim().replace(/\s+/g, ' '));
+      // Prefer the row that contains at least one month abbreviation
+      if (texts.some(t => monthRe.test(t))) return texts;
+      if (!firstHeaderRow) firstHeaderRow = texts;
+    }
+    // Fallback: return the first header row found
+    return firstHeaderRow || [];
+  });
+}
 
-  // Persist across scroll steps
+// One vertical pass: scroll from top to bottom, collecting rows.
+// Returns a map of key -> { inst, cat, met, monthVals: { [monthName]: value } }
+// where monthVals are keyed by month name using the provided colHeaders array.
+async function collectPass(page, colHeaders, passLabel) {
+  console.log(`  [${passLabel}] Collecting rows with headers: ${JSON.stringify(colHeaders)}`);
+
+  // Map cell position (0-based from row start) to month name
+  // Positions 0,1,2 = Institution, Category, Metric (fixed cols)
+  // Positions 3+ = month cols based on headers[3+]
+  const posToMonth = {};
+  for (let i = 3; i < colHeaders.length; i++) {
+    const mn = parseMonthHeader(colHeaders[i]);
+    if (mn) posToMonth[i] = mn;
+  }
+  console.log(`  [${passLabel}] Month positions: ${JSON.stringify(posToMonth)}`);
+
+  const byKey = new Map(); // key -> { inst, cat, met, monthVals }
   let lastInst = '';
   let lastCat = '';
 
@@ -262,7 +366,18 @@ async function extractTable(page) {
       if (!inst || !cat || !met) continue;
       const key = `${inst}|${cat}|${met}`;
       if (!byKey.has(key)) {
-        byKey.set(key, [inst, cat, met, ...row.slice(3)]);
+        byKey.set(key, { inst, cat, met, monthVals: {} });
+      }
+      const entry = byKey.get(key);
+      // Fill in month values from visible positions (don't overwrite already-set values)
+      for (const [pos, monthName] of Object.entries(posToMonth)) {
+        const cellIdx = parseInt(pos);
+        if (cellIdx < row.length) {
+          const val = (row[cellIdx] || '').trim();
+          if (!(monthName in entry.monthVals) || entry.monthVals[monthName] === '') {
+            entry.monthVals[monthName] = val;
+          }
+        }
       }
     }
   };
@@ -277,16 +392,73 @@ async function extractTable(page) {
     addRows(await extractVisibleRows(page));
     if (byKey.size === before) {
       noNewCount++;
-      if (i % 50 === 0) console.log(`    Scroll ${i}: ${byKey.size} records (stalled ${noNewCount})`);
+      if (i % 50 === 0) console.log(`    [${passLabel}] Scroll ${i}: ${byKey.size} records (stalled ${noNewCount})`);
       if (noNewCount >= 100) break;
     } else {
       noNewCount = 0;
-      if (i % 50 === 0) console.log(`    Scroll ${i}: ${byKey.size} records`);
+      if (i % 50 === 0) console.log(`    [${passLabel}] Scroll ${i}: ${byKey.size} records`);
     }
   }
 
-  console.log(`    Total unique records: ${byKey.size}`);
-  return Array.from(byKey.values());
+  console.log(`    [${passLabel}] Total unique records: ${byKey.size}`);
+  return byKey;
+}
+
+// Extract all rows from the wide-format Institution Totals matrix using two passes:
+//   Pass 1 (left):  grid at default scroll (Jul–Apr visible)
+//   Pass 2 (right): grid scrolled right (May–Jun visible)
+// Results are merged: pass-2 fills in month values missing from pass-1.
+async function extractTable(page) {
+  // --- Pass 1: left position (Jul–Apr) ---
+  await scrollGridToTop(page);
+  await scrollGridToLeft(page);
+  await scrollGridToTop(page);
+  await page.waitForTimeout(500);
+
+  const headers1 = await getVisibleColumnHeaders(page);
+  console.log(`  Pass 1 headers: ${JSON.stringify(headers1)}`);
+  await ss(page, 'pass1_headers');
+
+  const pass1 = await collectPass(page, headers1, 'Pass1');
+
+  // --- Pass 2: right position (May–Jun) ---
+  // Scroll grid back to top first, then scroll horizontally right
+  await scrollGridToTop(page);
+  await scrollGridToRight(page);
+  await scrollGridToTop(page);
+  await page.waitForTimeout(500);
+
+  const headers2 = await getVisibleColumnHeaders(page);
+  console.log(`  Pass 2 headers: ${JSON.stringify(headers2)}`);
+  await ss(page, 'pass2_headers');
+
+  const pass2 = await collectPass(page, headers2, 'Pass2');
+
+  // --- Merge pass2 into pass1 ---
+  // For keys in pass2, fill in any month values not already captured in pass1.
+  // Also add keys that only appear in pass2 (shouldn't happen but be safe).
+  for (const [key, entry2] of pass2) {
+    if (pass1.has(key)) {
+      const entry1 = pass1.get(key);
+      for (const [month, val] of Object.entries(entry2.monthVals)) {
+        if (!(month in entry1.monthVals) || entry1.monthVals[month] === '') {
+          entry1.monthVals[month] = val;
+        }
+      }
+    } else {
+      pass1.set(key, entry2);
+    }
+  }
+
+  console.log(`    Total unique records after merge: ${pass1.size}`);
+
+  // Convert map to array in [inst, cat, met, Jul, Aug, ..., Jun] format
+  const result = [];
+  for (const { inst, cat, met, monthVals } of pass1.values()) {
+    const monthArray = MONTH_NAMES.map(m => monthVals[m] ?? '');
+    result.push([inst, cat, met, ...monthArray]);
+  }
+  return result;
 }
 
 
@@ -334,8 +506,7 @@ function toCsv(rows) {
 
       const rawRows = await extractTable(page);
 
-      // rawRows are already processed as [inst, cat, met, ...monthValues].
-      // No header row exists in this output — use MONTH_NAMES directly.
+      // rawRows are already processed as [inst, cat, met, Jul, Aug, ..., Jun].
       let kept = 0;
       for (const row of rawRows) {
         const institution = row[0];

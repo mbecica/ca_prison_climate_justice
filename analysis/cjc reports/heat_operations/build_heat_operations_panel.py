@@ -3,7 +3,8 @@ build_heat_operations_panel.py
 
 Builds a facility x calendar-month panel joining:
   - Heat exposure (days_over_90f, days_over_95f, days_skarha10) from gridMET daily data
-  - Outcomes from sb601_operations (Dental+MH Overtime, Modified Programs Days)
+  - Outcomes from sb601_operations (Dental+MH Overtime, Modified Programs Days,
+    Actual Expenditures (monthly, differenced from YTD), Institution Budget)
   - Outcomes from cchcs_measures (ED/Hospital Stay rate, staffing vacancies)
   - Crowding ratio from tpop1_institutions (time-varying control)
   - Static covariates: AC type, security level
@@ -12,10 +13,12 @@ Builds a facility x calendar-month panel joining:
 Output: analysis/cjc reports/heat_operations_panel.csv
 
 Notes:
-  - sb601 only covers 10 months/year (Jul-Apr; May-Jun absent from SB 601 reporting)
+  - sb601 covers all 12 months/year (Jul-Jun); May-Jun were added in scraper v2
   - sb601 facility coverage is unbalanced: 26/13/19/17 facilities across FY2021-2025
     This reflects which facilities had reportable conditions, not data collection gaps.
     Flag as limitation in methods.
+  - Actual Expenditures are reported YTD; differenced within fiscal year to get monthly spend.
+    July = YTD value (= monthly). Aug+ = current month YTD minus prior month YTD.
   - Universe = facilities in heat data (gridMET coverage), 34 facilities 2016-2025
   - DVI and CCC excluded: both closed during study period, no heat data
 """
@@ -27,7 +30,7 @@ from datetime import datetime
 from collections import defaultdict
 
 DATA = "data_sources"
-OUT_DIR = "analysis/cjc reports"
+OUT_DIR = "analysis/cjc reports/heat_operations"
 
 EXCLUDE_FACILITIES = {"DVI", "CCC"}
 
@@ -62,13 +65,14 @@ print("Step 2: Reshaping sb601 fiscal-year wide -> calendar month long...")
 
 MONTH_MAP = {
     "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12,
-    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,
+    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
 }
 
 SB601_OUTCOMES = {
     ("Overtime Hours", "Dental + Mental Health (Overtime)"): "dental_mh_overtime",
     ("Lockdowns and Modified Programs", "Incarcerated Persons-Days on Modified Programs"): "modified_programs_days",
     ("Number of Deaths", "Unexpected"): "deaths_unexpected",
+    ("Use of Force (UOF)", "Total UOF Incidents"): "uof_incidents",
 }
 
 sb601 = defaultdict(dict)  # (facility, year, month) -> {col: value}
@@ -100,6 +104,67 @@ with open(f"{DATA}/facilities/CDCR/sb601_operations_2021-2025.csv") as f:
             sb601[key][col_name] = val
 
 print(f"  {len(sb601)} facility-month sb601 records")
+
+# ---------------------------------------------------------------------------
+# Step 2b: Process fiscal data (Actual Expenditures YTD → monthly; Institution Budget)
+#   Actual Expenditures are cumulative YTD within each fiscal year.
+#   Monthly spend = current month YTD − previous month YTD (July = YTD = monthly).
+#   Institution Budget is the current authorized annual budget (revised by amendments).
+# ---------------------------------------------------------------------------
+
+print("Step 2b: Processing fiscal data...")
+
+# Fiscal month sequence within a fiscal year (Jul=first, Jun=last)
+FISCAL_MONTH_SEQ = ["Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun"]
+
+# Raw YTD values keyed by (facility, fiscal_year_str, month_abbr)
+ytd_actual = {}
+budget_raw = {}
+
+with open(f"{DATA}/facilities/CDCR/sb601_operations_2021-2025.csv") as f:
+    for row in csv.DictReader(f):
+        facility = row["institution"]
+        if facility in EXCLUDE_FACILITIES:
+            continue
+        if row["category"] != "Fiscal":
+            continue
+        if row["metric"] not in ("Actual Expenditures ($)", "Institution Budget ($)"):
+            continue
+        fy = row["fiscal_year"]
+        for m_abbr in FISCAL_MONTH_SEQ:
+            raw = row.get(m_abbr, "").replace(",", "").strip()
+            if not raw:
+                continue
+            try:
+                val = float(raw)
+            except ValueError:
+                continue
+            store = ytd_actual if row["metric"] == "Actual Expenditures ($)" else budget_raw
+            store[(facility, fy, m_abbr)] = val
+
+# Difference YTD actuals to get monthly spend; store budget as-is
+fiscal = defaultdict(dict)  # (facility, cal_year, cal_month) -> {actual_expenditure_monthly, institution_budget}
+
+for (facility, fy, m_abbr), ytd in ytd_actual.items():
+    fy_start = int(fy.split("-")[0])
+    m_num = MONTH_MAP[m_abbr]
+    cal_year = fy_start if m_num >= 7 else int(fy.split("-")[1])
+    idx = FISCAL_MONTH_SEQ.index(m_abbr)
+    if idx == 0:
+        monthly_spend = ytd  # July: first month, YTD = monthly
+    else:
+        prev_ytd = ytd_actual.get((facility, fy, FISCAL_MONTH_SEQ[idx - 1]))
+        monthly_spend = (ytd - prev_ytd) if prev_ytd is not None else None
+    if monthly_spend is not None:
+        fiscal[(facility, cal_year, m_num)]["actual_expenditure_monthly"] = monthly_spend
+
+for (facility, fy, m_abbr), val in budget_raw.items():
+    fy_start = int(fy.split("-")[0])
+    m_num = MONTH_MAP[m_abbr]
+    cal_year = fy_start if m_num >= 7 else int(fy.split("-")[1])
+    fiscal[(facility, cal_year, m_num)]["institution_budget"] = val
+
+print(f"  {len(fiscal)} facility-month fiscal records")
 
 # Report coverage by FY for documentation
 print("  sb601 coverage note (Dental+MH OT metric, for reference):")
@@ -269,7 +334,9 @@ COLUMNS = [
     "facility", "year", "month",
     "days_over_90f", "days_over_95f", "days_skarha10",
     "dental_mh_overtime", "modified_programs_days", "deaths_unexpected",
+    "uof_incidents",
     "ed_hospital_rate",
+    "actual_expenditure_monthly", "institution_budget",
     "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh",
     "crowding_pct",
     "ac_type", "security_level",
@@ -288,8 +355,15 @@ for facility, year, month in all_keys:
     row["days_skarha10"] = h["days_skarha10"]
 
     sb = sb601.get((facility, year, month), {})
-    for col in ("dental_mh_overtime", "modified_programs_days", "deaths_unexpected"):
+    for col in ("dental_mh_overtime", "modified_programs_days", "deaths_unexpected", "uof_incidents"):
         val = sb.get(col, "")
+        row[col] = val
+        if val == "":
+            missing_counts[col] += 1
+
+    fc = fiscal.get((facility, year, month), {})
+    for col in ("actual_expenditure_monthly", "institution_budget"):
+        val = fc.get(col, "")
         row[col] = val
         if val == "":
             missing_counts[col] += 1
