@@ -12,6 +12,15 @@ Key design note:
     Each facility gets 2-3 pages in the PDF. Violent categories are split across
     these pages, so we ACCUMULATE values across all pages for the same facility
     (same month header set) rather than overwriting.
+
+Output columns:
+    facility, year, month, violent_incidents, inmate_on_inmate, staff_involved,
+    assault_on_inmate, battery_on_inmate, fighting, riot,
+    assault_on_officer, battery_on_officer, cell_extractions, source_file
+
+    violent_incidents  = inmate_on_inmate + staff_involved  (backwards-compat total)
+    inmate_on_inmate   = assault_on_inmate + battery_on_inmate + fighting + riot
+    staff_involved     = assault_on_officer + battery_on_officer + cell_extractions
 """
 
 import pdfplumber
@@ -32,7 +41,7 @@ PDFS = [
     ("Incident_Report_Public_d2512.pdf",   "d2512"),   # Dec 2024 - Dec 2025
 ]
 
-# Violent categories to sum — the "Total" rows or standalone rows
+# Violent categories to track — the "Total" rows or standalone rows
 # under "Incident Categories" in each per-facility page.
 # EXCLUDED: Controlled Substance rows, Type of Force rows, and all others.
 VIOLENT_TOTALS = [
@@ -44,6 +53,38 @@ VIOLENT_TOTALS = [
     "Fighting",
     "Riot",
 ]
+
+# Map from full category string -> short CSV column name
+CATEGORY_COL = {
+    "Assault on a Peace Officer or Non-Prisoner (Total)": "assault_on_officer",
+    "Battery on a Peace Officer or Non-Prisoner (Total)": "battery_on_officer",
+    "Assault on Inmate (Total)":                          "assault_on_inmate",
+    "Battery on Inmate (Total)":                          "battery_on_inmate",
+    "Cell Extractions (Total)":                           "cell_extractions",
+    "Fighting":                                           "fighting",
+    "Riot":                                               "riot",
+}
+
+# All per-category column names (order controls CSV column order)
+CAT_COLS = [
+    "assault_on_inmate",
+    "battery_on_inmate",
+    "fighting",
+    "riot",
+    "assault_on_officer",
+    "battery_on_officer",
+    "cell_extractions",
+]
+
+# CSV output columns (full order)
+CSV_COLS = [
+    "facility", "year", "month",
+    "violent_incidents", "inmate_on_inmate", "staff_involved",
+    "assault_on_inmate", "battery_on_inmate", "fighting", "riot",
+    "assault_on_officer", "battery_on_officer", "cell_extractions",
+    "source_file",
+]
+
 
 def parse_month_header(token):
     """Parse a month-header token like 'Dec24', 'Jan25' -> (year, month_num)."""
@@ -79,12 +120,13 @@ def extract_row_values(line, row_name):
 
 def extract_facility_data(pdf_path, source_tag):
     """
-    Parse one PDF and extract violent incident counts per facility per month.
+    Parse one PDF and extract violent incident counts per facility per month,
+    tracking each category separately.
 
     Strategy:
     - Each facility spans 2-3 consecutive pages with the same institution header.
     - We group pages by (facility, month_cols_tuple) so all pages for the same
-      facility contribute to a single running sum.
+      facility contribute to a single running accumulator.
     - The "Riot - Number of Inmates Involved" row that begins with "Riot" is
       excluded by using startswith matching against "Riot" only — but we need
       to be careful: the standalone "Riot" row is the count we want, while
@@ -92,15 +134,16 @@ def extract_facility_data(pdf_path, source_tag):
       that exact prefix to exclude it.
 
     Returns:
-        results: dict {(facility, year, month): count}
+        results: dict {(facility, year, month): {col_name: count}}
         notes:   list of diagnostic strings
     """
     results = {}
     notes = []
 
-    # Accumulator keyed by (facility, month_cols_tuple) -> defaultdict of (year,month)->count
+    # Accumulator keyed by (facility, month_cols_tuple):
+    #   {(facility, col_key): {short_col_name: {(yr, mn): count}}}
     # This ensures pages belonging to the same facility all add together
-    facility_accum = {}   # (facility, col_key) -> {(yr,mn): running_count}
+    facility_accum = {}   # (facility, col_key) -> {col_name -> defaultdict(int)}
     facility_col_map = {} # (facility, col_key) -> list of (yr, mn)
 
     with pdfplumber.open(pdf_path) as pdf:
@@ -148,13 +191,17 @@ def extract_facility_data(pdf_path, source_tag):
             gk = (facility, col_key)
 
             if gk not in facility_accum:
-                facility_accum[gk] = defaultdict(int)
+                # Initialize a per-category sub-dict, each keyed by (yr, mn)
+                facility_accum[gk] = {
+                    col: defaultdict(int) for col in CAT_COLS
+                }
                 facility_col_map[gk] = month_cols
-                # Initialize all months to 0
-                for ym in month_cols:
-                    facility_accum[gk][ym] = 0
+                # Ensure all months are present (even if no row fires)
+                for col in CAT_COLS:
+                    for ym in month_cols:
+                        facility_accum[gk][col][ym] = 0
 
-            running = facility_accum[gk]
+            running = facility_accum[gk]  # dict of col_name -> defaultdict(int)
 
             # Scan lines for our target rows and ACCUMULATE (not overwrite)
             scan_start = header_line_idx + 1 if header_line_idx is not None else 0
@@ -173,6 +220,7 @@ def extract_facility_data(pdf_path, source_tag):
                         if not line_stripped.startswith(cat):
                             continue
 
+                    col_name = CATEGORY_COL[cat]
                     vals = extract_row_values(line_stripped, cat)
                     if vals is None:
                         notes.append(
@@ -184,18 +232,23 @@ def extract_facility_data(pdf_path, source_tag):
                             f"{len(vals)} values vs {len(month_cols)} months"
                         )
                         for ci in range(len(vals)):
-                            running[month_cols[ci]] += vals[ci]
+                            running[col_name][month_cols[ci]] += vals[ci]
                     else:
                         for ci, ym in enumerate(month_cols):
-                            running[ym] += vals[ci]
+                            running[col_name][ym] += vals[ci]
                     break  # stop checking other categories for this line
 
         # Flatten accumulator into results dict
-        for (facility, col_key), running in facility_accum.items():
-            for ym, count in running.items():
+        for (facility, col_key), cat_running in facility_accum.items():
+            # Collect all (yr, mn) keys present across any category
+            all_yms = set()
+            for col in CAT_COLS:
+                all_yms.update(cat_running[col].keys())
+
+            for ym in all_yms:
                 yr, mn = ym
                 key = (facility, yr, mn)
-                results[key] = count
+                results[key] = {col: cat_running[col][ym] for col in CAT_COLS}
 
         notes.append(f"  Facilities found: {sorted(facilities_found)}")
         notes.append(f"  Number of facilities: {len(facilities_found)}")
@@ -203,10 +256,27 @@ def extract_facility_data(pdf_path, source_tag):
     return results, notes
 
 
+def compute_derived(cats):
+    """Given a dict of {col_name: count}, compute derived totals."""
+    inmate_on_inmate = (
+        cats["assault_on_inmate"] +
+        cats["battery_on_inmate"] +
+        cats["fighting"] +
+        cats["riot"]
+    )
+    staff_involved = (
+        cats["assault_on_officer"] +
+        cats["battery_on_officer"] +
+        cats["cell_extractions"]
+    )
+    violent_incidents = inmate_on_inmate + staff_involved
+    return violent_incidents, inmate_on_inmate, staff_involved
+
+
 def main():
     # Accumulate data, newest file wins on overlap
     # Process oldest→newest; newer overwrites same key
-    all_data = {}   # (facility, year, month) -> (count, source_tag)
+    all_data = {}   # (facility, year, month) -> ({col_name: count}, source_tag)
     all_notes = []
     overlap_overrides = defaultdict(int)
 
@@ -223,12 +293,12 @@ def main():
 
             overridden = 0
             new_records = 0
-            for key, count in results.items():
+            for key, cats in results.items():
                 if key in all_data:
                     overridden += 1
                 else:
                     new_records += 1
-                all_data[key] = (count, source_tag)
+                all_data[key] = (cats, source_tag)
 
             all_notes.append(f"  New keys added: {new_records}")
             all_notes.append(f"  Keys overriding older data: {overridden}")
@@ -251,11 +321,23 @@ def main():
 
     with open(output_csv, 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['facility', 'year', 'month', 'violent_incidents', 'source_file'])
+        writer.writerow(CSV_COLS)
         for key in sorted_keys:
             facility, year, month = key
-            count, source_tag = all_data[key]
-            writer.writerow([facility, year, month, count, source_tag])
+            cats, source_tag = all_data[key]
+            violent_incidents, inmate_on_inmate, staff_involved = compute_derived(cats)
+            writer.writerow([
+                facility, year, month,
+                violent_incidents, inmate_on_inmate, staff_involved,
+                cats["assault_on_inmate"],
+                cats["battery_on_inmate"],
+                cats["fighting"],
+                cats["riot"],
+                cats["assault_on_officer"],
+                cats["battery_on_officer"],
+                cats["cell_extractions"],
+                source_tag,
+            ])
 
     print(f"\nCSV written: {output_csv}  ({len(all_data)} rows)")
 
@@ -263,10 +345,11 @@ def main():
     #  Validation: compare per-facility sum to All Institutions row       #
     # ------------------------------------------------------------------ #
     print("\nValidation spot-check (Dec 2025 from d2512):")
-    dec25 = [r for r in [
-        {'facility': k[0], 'year': k[1], 'month': k[2], 'count': v[0]}
-        for k, v in all_data.items()
-    ] if r['year'] == 2025 and r['month'] == 12]
+    dec25 = []
+    for k, (cats, src) in all_data.items():
+        if k[1] == 2025 and k[2] == 12:
+            violent_incidents, _, _ = compute_derived(cats)
+            dec25.append({'facility': k[0], 'count': violent_incidents})
     per_fac_total = sum(r['count'] for r in dec25)
     all_inst_expected = 44 + 321 + 17 + 314 + 49 + 2 + 268  # from All Institutions page
     print(f"  Per-facility sum Dec25: {per_fac_total}  (from {len(dec25)} facilities)")
@@ -288,9 +371,14 @@ def main():
         f.write("CDCR Violent Incidents Extraction Notes\n")
         f.write("=" * 60 + "\n\n")
 
-        f.write("VIOLENT CATEGORIES SUMMED (per-facility Total rows):\n")
-        for cat in VIOLENT_TOTALS:
-            f.write(f"  - {cat}\n")
+        f.write("VIOLENT CATEGORIES TRACKED SEPARATELY (per-facility Total rows):\n")
+        for cat, col in CATEGORY_COL.items():
+            f.write(f"  - {cat}  ->  {col}\n")
+
+        f.write("\nDERIVED COLUMNS (computed at write time):\n")
+        f.write("  - inmate_on_inmate = assault_on_inmate + battery_on_inmate + fighting + riot\n")
+        f.write("  - staff_involved   = assault_on_officer + battery_on_officer + cell_extractions\n")
+        f.write("  - violent_incidents = inmate_on_inmate + staff_involved  (backwards-compat total)\n")
 
         f.write("\nEXCLUSIONS:\n")
         f.write("  - All Controlled Substance rows\n")
@@ -335,12 +423,13 @@ def main():
     print(f"\nFacilities ({len(unique_facilities)}): {', '.join(unique_facilities)}")
     print(f"Year range: {year_range}")
     print("\nSample output (first 15 rows of CSV):")
-    print(f"  {'facility':8s}  {'year':4s}  {'mo':2s}  {'violent':>8s}  source")
-    print(f"  {'-'*8}  {'-'*4}  {'--'}  {'-'*8}  ------")
+    print(f"  {'facility':8s}  {'year':4s}  {'mo':2s}  {'violent':>8s}  {'i_on_i':>6s}  {'staff':>5s}  source")
+    print(f"  {'-'*8}  {'-'*4}  {'--'}  {'-'*8}  {'-'*6}  {'-'*5}  ------")
     for key in sorted_keys[:15]:
         facility, year, month = key
-        count, src = all_data[key]
-        print(f"  {facility:8s}  {year}  {month:2d}  {count:8d}  {src}")
+        cats, src = all_data[key]
+        violent_incidents, inmate_on_inmate, staff_involved = compute_derived(cats)
+        print(f"  {facility:8s}  {year}  {month:2d}  {violent_incidents:8d}  {inmate_on_inmate:6d}  {staff_involved:5d}  {src}")
 
 
 if __name__ == "__main__":

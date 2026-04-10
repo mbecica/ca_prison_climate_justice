@@ -14,6 +14,7 @@ data_sources/hazards/wildfire/calfire_fhsz.geojson
 data_sources/hazards/wildfire/Wildland_Urban_Interface.zip
 data_sources/hazards/VCP_Tracts.geojson
 analysis/The Cost of Inaction.md
+**/*_report.md
 
 # Node
 node_modules/

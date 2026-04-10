@@ -1,14 +1,19 @@
 CDCR Violent Incidents Extraction Notes
 ============================================================
 
-VIOLENT CATEGORIES SUMMED (per-facility Total rows):
-  - Assault on a Peace Officer or Non-Prisoner (Total)
-  - Battery on a Peace Officer or Non-Prisoner (Total)
-  - Assault on Inmate (Total)
-  - Battery on Inmate (Total)
-  - Cell Extractions (Total)
-  - Fighting
-  - Riot
+VIOLENT CATEGORIES TRACKED SEPARATELY (per-facility Total rows):
+  - Assault on a Peace Officer or Non-Prisoner (Total)  ->  assault_on_officer
+  - Battery on a Peace Officer or Non-Prisoner (Total)  ->  battery_on_officer
+  - Assault on Inmate (Total)  ->  assault_on_inmate
+  - Battery on Inmate (Total)  ->  battery_on_inmate
+  - Cell Extractions (Total)  ->  cell_extractions
+  - Fighting  ->  fighting
+  - Riot  ->  riot
+
+DERIVED COLUMNS (computed at write time):
+  - inmate_on_inmate = assault_on_inmate + battery_on_inmate + fighting + riot
+  - staff_involved   = assault_on_officer + battery_on_officer + cell_extractions
+  - violent_incidents = inmate_on_inmate + staff_involved  (backwards-compat total)
 
 EXCLUSIONS:
   - All Controlled Substance rows
@@ -25,22 +30,10 @@ OVERLAP RESOLUTION:
   PDFs processed oldest-first; newer reports overwrite older for the same
   (facility, year, month) key.
 
-VALIDATION (per-facility sums vs All Institutions summary, 7 month spot-checks):
-  All checks validated against the most recent PDF containing that month.
-  Year-Mo   Per-Fac (n)  All-Inst   Diff  Status
-  2025-12      1015 (31)      1015     0   PASS
-  2025-06       910 (31)       910     0   PASS
-  2024-12      1086 (31)      1086     0   PASS
-  2024-01       973 (32)       973     0   PASS
-  2023-06       844 (33)       844     0   PASS
-  2022-12       693 (33)       693     0   PASS
-  2021-06       610 (35)       610     0   PASS
-  ALL CHECKS PASSED - per-facility sums match All Institutions exactly.
-
-  Note on facility count variation (31-35 across years):
-  CDCR has opened and closed facilities over this period. The per-facility
-  section only includes active facilities; the All Institutions total always
-  matches the sum of active per-facility pages.
+VALIDATION (Dec 2025 spot-check against All Institutions summary):
+  Per-facility sum: 1015  (31 facilities)
+  All Institutions expected: 1015
+  Difference: 0
 
 OUTPUT SUMMARY:
   Total records: 1963
