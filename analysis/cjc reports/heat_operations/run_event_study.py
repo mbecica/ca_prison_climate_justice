@@ -44,7 +44,7 @@ print("Loading panel...")
 df = pd.read_csv(os.path.join(OUT_DIR, "heat_operations_panel.csv"))
 for col in ["days_over_90f", "days_skarha10", "ed_hospital_rate",
             "dental_mh_overtime", "modified_programs_days", "crowding_pct",
-            "uof_incidents", "actual_expenditure_monthly"]:
+            "uof_incidents", "violent_incidents", "actual_expenditure_monthly"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
 df["date"] = pd.to_datetime(dict(year=df["year"], month=df["month"], day=1))
@@ -102,11 +102,12 @@ AC_EVENTS = {
 OUTCOMES = [
     ("log_ed",                    "ED/Hospital Stay rate (log)",       "ed_hospital_rate",            "ED/Hosp rate\n(per 1,000)"),
     ("dental_mh_overtime",        "Dental+MH Overtime (hours)",        "dental_mh_overtime",          "Dental+MH OT\n(hours)"),
+    ("violent_incidents",         "Violent Incidents (raw)",           "violent_incidents",           "Violent\nIncidents"),
+    ("uof_incidents",             "Use of Force Incidents (raw)",      "uof_incidents",               "UOF\nIncidents"),
     ("custody_ot",                "Custody Overtime (hours)",          "custody_ot",                  "Custody OT\n(hours)"),
     ("noncustody_ot",             "Non-Custody Overtime (hours)",      "noncustody_ot",               "Non-Custody OT\n(hours)"),
     ("total_ot",                  "Total Overtime Hours",              "total_ot",                    "Total OT\n(hours)"),
     ("modified_programs_days",    "Modified Programs Days (raw)",      "modified_programs_days",      "Modified\nPrograms Days"),
-    ("uof_incidents",             "Use of Force Incidents (raw)",      "uof_incidents",               "UOF\nIncidents"),
     ("actual_expenditure_monthly","Monthly Expenditure ($)",           "actual_expenditure_monthly",  "Monthly\nExpenditure ($)"),
 ]
 # Raw (not log) for OT and modprog so ISP's post-installation zeros are
@@ -220,6 +221,8 @@ for treated_fac, treat_date in AC_EVENTS.items():
                 "Mean days >90°F": round(sub["days_over_90f"].mean(), 1),
                 "Mean ED rate": round(sub["ed_hospital_rate"].mean(), 2),
                 "Mean Dental+MH OT": round(sub["dental_mh_overtime"].mean(), 1),
+                "Mean Violent Incidents": round(sub["violent_incidents"].mean(), 1),
+                "Mean UOF Incidents": round(sub["uof_incidents"].mean(), 1),
                 "Mean Mod Prog Days": round(sub["modified_programs_days"].mean(), 1),
             }
             desc_rows.append(row)
@@ -239,6 +242,7 @@ def make_event_figure(treated_fac, treat_date):
     plot_specs = [
         ("ed_hospital_rate",           "ED/Hospital Stay Rate\n(per 1,000)"),
         ("dental_mh_overtime",         "Dental+MH Overtime\n(hours/month)"),
+        ("violent_incidents",          "Violent Incidents\n(count/month)"),
         ("uof_incidents",              "Use of Force Incidents\n(count/month)"),
         ("actual_expenditure_monthly", "Monthly Expenditure\n($ millions)"),
         ("custody_ot",                 "Custody Overtime\n(hours/month)"),

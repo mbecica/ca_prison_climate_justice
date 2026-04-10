@@ -1,9 +1,9 @@
-Facility,Period,Treat date,N months,Mean days >90°F,Mean ED rate,Mean Dental+MH OT,Mean Mod Prog Days
-ISP,Pre,Mar 2024,32,30.0,9.47,50.7,4.7
-Control (mean),Pre,Mar 2024,1056,18.0,15.27,165.3,4.5
-ISP,Post,Mar 2024,8,30.0,12.34,0.0,0.0
-Control (mean),Post,Mar 2024,264,17.4,22.35,260.7,2.1
-CIM,Pre,Feb 2025,36,18.1,14.83,252.2,1.6
-Control (mean),Pre,Feb 2025,1188,18.4,16.0,187.4,3.7
-CIM,Post,Feb 2025,4,14.2,21.45,60.0,0.0
-Control (mean),Post,Feb 2025,132,16.8,21.73,192.4,7.0
+Facility,Period,Treat date,N months,Mean days >90°F,Mean ED rate,Mean Dental+MH OT,Mean Violent Incidents,Mean UOF Incidents,Mean Mod Prog Days
+ISP,Pre,Mar 2024,32,30.0,9.47,50.7,15.2,10.7,4.7
+Control (mean),Pre,Mar 2024,1056,18.0,15.27,165.3,22.6,20.4,4.5
+ISP,Post,Mar 2024,8,30.0,12.34,0.0,8.1,5.4,0.0
+Control (mean),Post,Mar 2024,264,17.4,22.35,260.7,35.2,33.8,2.1
+CIM,Pre,Feb 2025,36,18.1,14.83,252.2,7.2,5.9,1.6
+Control (mean),Pre,Feb 2025,1188,18.4,16.0,187.4,25.9,24.0,3.7
+CIM,Post,Feb 2025,4,14.2,21.45,60.0,8.0,9.0,0.0
+Control (mean),Post,Feb 2025,132,16.8,21.73,192.4,34.8,32.0,7.0

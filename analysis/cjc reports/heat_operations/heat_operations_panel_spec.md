@@ -176,6 +176,7 @@ Join all sources to a single `facility × calendar_month` panel:
 | Skarha et al. (2023) *PLOS ONE* | Facility-relative heat anomaly metric; distributed lag framework; TWFE precedent for prison panel |
 | Cloud et al. (2023) *JAMA Network Open* | Conditional FE regression in prison context; dose-response framing |
 | Ovienmhada et al. (2024) *GeoHealth* | Applies Skarha threshold to CA facilities specifically |
+| Mukherjee & Sanders (2021) *NBER WP 28987* | Causal evidence for heat → inmate violence in Mississippi prisons (no A/C); TWFE with facility + year + week-of-year FEs; ~20% increase in violent acts on 80°F+ days; effects specific to intense violence, null for minor infractions. Directly motivates our UOF outcome and explains our California system-wide null (most CA facilities have cooling). ISP post-HVAC UOF drop is consistent with their A/C policy implication. |
 | Tahamont (2019) | Security level as covariate for rules violations in CA prisons |
 | Burke et al. (2015); Graff Zivin & Neidell (2014) | TWFE with year×month FEs; clustered SEs; log outcomes in environmental economics panels |
 

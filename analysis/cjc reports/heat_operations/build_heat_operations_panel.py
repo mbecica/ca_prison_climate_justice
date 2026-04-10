@@ -6,6 +6,7 @@ Builds a facility x calendar-month panel joining:
   - Outcomes from sb601_operations (Dental+MH Overtime, Modified Programs Days,
     Actual Expenditures (monthly, differenced from YTD), Institution Budget)
   - Outcomes from cchcs_measures (ED/Hospital Stay rate, staffing vacancies)
+  - Violent incidents from CDCR CompStat PDFs (cdcr_violent_incidents_by_facility.csv)
   - Crowding ratio from tpop1_institutions (time-varying control)
   - Static covariates: AC type, security level
   - AC event study indicator (ISP 3/2024, CIM 2/2025)
@@ -305,6 +306,33 @@ print(f"  Security level coverage: {len(security_level)} facilities")
 print(f"  Security levels assigned: {sorted(security_level.items())}")
 
 # ---------------------------------------------------------------------------
+# Step 5b: Load violent incidents from CDCR CompStat PDFs
+#   Source: cdcr_violent_incidents_by_facility.csv
+#   Includes: Assault/Battery on Inmate, Assault/Battery on Officer, Fighting,
+#             Cell Extractions, Riot — summed per facility-month
+#   Coverage: 2021–2025, ~35 facilities, all 12 months
+# ---------------------------------------------------------------------------
+
+print("Step 5b: Loading violent incidents from CompStat...")
+
+violent_incidents = {}  # (facility, year, month) -> count
+
+with open(f"{DATA}/facilities/CDCR/cdcr_violent_incidents_by_facility.csv") as f:
+    for row in csv.DictReader(f):
+        facility = row["facility"]
+        if facility in EXCLUDE_FACILITIES:
+            continue
+        try:
+            year = int(row["year"])
+            month = int(row["month"])
+            count = float(row["violent_incidents"])
+        except (ValueError, KeyError):
+            continue
+        violent_incidents[(facility, year, month)] = count
+
+print(f"  {len(violent_incidents)} facility-month violent incident records")
+
+# ---------------------------------------------------------------------------
 # Step 6: AC event study indicator
 #   ISP: post_ac = 1 from 2024-03 onward (full HVAC, P-0910-01113)
 #   CIM: post_ac = 1 from 2025-02 onward (Air Cooling Facility A, P-1718-00132)
@@ -334,7 +362,7 @@ COLUMNS = [
     "facility", "year", "month",
     "days_over_90f", "days_over_95f", "days_skarha10",
     "dental_mh_overtime", "modified_programs_days", "deaths_unexpected",
-    "uof_incidents",
+    "uof_incidents", "violent_incidents",
     "ed_hospital_rate",
     "actual_expenditure_monthly", "institution_budget",
     "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh",
@@ -360,6 +388,11 @@ for facility, year, month in all_keys:
         row[col] = val
         if val == "":
             missing_counts[col] += 1
+
+    vi = violent_incidents.get((facility, year, month), "")
+    row["violent_incidents"] = vi
+    if vi == "":
+        missing_counts["violent_incidents"] += 1
 
     fc = fiscal.get((facility, year, month), {})
     for col in ("actual_expenditure_monthly", "institution_budget"):

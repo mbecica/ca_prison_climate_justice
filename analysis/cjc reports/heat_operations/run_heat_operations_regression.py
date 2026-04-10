@@ -58,7 +58,8 @@ df["ym"] = df["year"].astype(str) + "_" + df["month"].astype(str).str.zfill(2)
 
 # Log-transform outcomes (replace "" with NaN first)
 for col in ["dental_mh_overtime", "modified_programs_days", "uof_incidents",
-            "ed_hospital_rate", "actual_expenditure_monthly", "institution_budget",
+            "violent_incidents", "ed_hospital_rate",
+            "actual_expenditure_monthly", "institution_budget",
             "crowding_pct", "days_over_90f", "days_skarha10",
             "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
@@ -68,8 +69,9 @@ df["log_dental"]  = np.log(df["dental_mh_overtime"].replace(0, np.nan))
 df["log_modprog"] = np.log1p(df["modified_programs_days"])  # log(y+1) for 40% zeros
 # Fiscal: monthly spend can be negative in rare months (downward budget corrections);
 # use log(y+1) with floor at 0 to retain those rows rather than dropping them.
-df["log_spend"]   = np.log1p(df["actual_expenditure_monthly"].clip(lower=0))
-df["log_uof"]     = np.log1p(df["uof_incidents"])  # log(y+1); ~40% zeros expected
+df["log_spend"]    = np.log1p(df["actual_expenditure_monthly"].clip(lower=0))
+df["log_uof"]      = np.log1p(df["uof_incidents"])      # log(y+1); ~40% zeros expected
+df["log_violent"]  = np.log1p(df["violent_incidents"])  # log(y+1); CompStat-derived
 
 # Lag-1 heat variables (within facility, by calendar date)
 df_sorted = df.sort_values(["facility", "date"])
@@ -178,11 +180,12 @@ def sig_stars(p):
 print("\nRunning main TWFE regressions...")
 
 OUTCOMES = [
-    ("log_ed",      "ED/Hospital Stay rate (log)"),
-    ("log_dental",  "Dental+MH Overtime (log)"),
-    ("log_modprog", "Modified Programs Days [log(y+1)]"),
-    ("log_uof",     "Use of Force Incidents [log(y+1)]"),
-    ("log_spend",   "Monthly Expenditure [log(y+1)]"),
+    ("log_ed",       "ED/Hospital Stay rate (log)"),
+    ("log_dental",   "Dental+MH Overtime (log)"),
+    ("log_modprog",  "Modified Programs Days [log(y+1)]"),
+    ("log_violent",  "Violent Incidents [log(y+1)]"),
+    ("log_uof",      "Use of Force Incidents [log(y+1)]"),
+    ("log_spend",    "Monthly Expenditure [log(y+1)]"),
 ]
 HEAT_VARS = [
     ("days_over_90f",  "Days >90°F"),
@@ -203,7 +206,7 @@ for heat_var, heat_label in HEAT_VARS:
               f"β={coef['beta']:.4f}, SE={coef['se']:.4f}, p={coef['p']:.3f}, "
               f"N={coef['n_obs']}, Fac={coef['n_fac']}")
 
-# BH correction across all 10 primary tests (5 outcomes × 2 heat vars)
+# BH correction across all 12 primary tests (6 outcomes × 2 heat vars)
 bh_pvals = bh_correct(all_pvals)
 for i, row in enumerate(main_rows):
     row["p_bh"] = bh_pvals[i]
@@ -358,6 +361,8 @@ for q in ["0 days", "1–14 days", "15–27 days", "28–31 days"]:
         "Mean ED/Hosp rate": grp["ed_hospital_rate"].mean(),
         "Mean Dental+MH OT": grp["dental_mh_overtime"].mean(),
         "Mean Mod Programs Days": grp["modified_programs_days"].mean(),
+        "Mean Violent Incidents": grp["violent_incidents"].mean(),
+        "Mean UOF Incidents": grp["uof_incidents"].mean(),
         "Mean Crowding (%)": grp["crowding_pct"].mean(),
     })
 

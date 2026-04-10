@@ -1,5 +1,5 @@
-Heat quartile,N facility-months,Mean days >90°F,Mean ED/Hosp rate,Mean Dental+MH OT,Mean Mod Programs Days,Mean Crowding (%)
-0 days,2125,0.0,17.16,252.68,4.13,120.72
-1–14 days,965,5.9,17.16,245.29,2.86,122.91
-15–27 days,607,21.18,16.58,203.54,3.84,122.85
-28–31 days,383,30.05,13.55,134.53,3.16,130.97
+Heat quartile,N facility-months,Mean days >90°F,Mean ED/Hosp rate,Mean Dental+MH OT,Mean Mod Programs Days,Mean Violent Incidents,Mean UOF Incidents,Mean Crowding (%)
+0 days,2125,0.0,17.16,252.68,4.13,26.1,24.94,120.72
+1–14 days,965,5.9,17.16,245.29,2.86,26.13,24.93,122.91
+15–27 days,607,21.18,16.58,203.54,3.84,25.79,23.09,122.85
+28–31 days,383,30.05,13.55,134.53,3.16,23.46,19.01,130.97
