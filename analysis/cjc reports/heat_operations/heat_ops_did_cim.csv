@@ -1,7 +1,9 @@
 beta_days_over_90f,se_days_over_90f,p_days_over_90f,beta_heat_x_post,se_heat_x_post,p_heat_x_post,beta_post_treat,se_post_treat,p_post_treat,n_obs,n_fac,outcome,facility,treat_date
 0.0005,0.0008,0.5769,0.0097,0.0017,0.0,-0.1351,0.0575,0.0189,3437,32,ED/Hospital Stay rate (log),CIM,2025-02
 1.7688,0.8867,0.0462,-2.6201,1.2216,0.0321,-193.2322,37.1005,0.0,1524,32,Dental+MH Overtime (hours),CIM,2025-02
-0.0642,0.0521,0.2182,-0.1241,0.083,0.135,-7.4363,1.4828,0.0,1902,32,Violent Incidents (raw),CIM,2025-02
+0.0269,0.0397,0.4981,-0.1333,0.0548,0.015,-5.1482,1.0528,0.0,1902,32,Inmate-on-Inmate Violence (raw),CIM,2025-02
+0.0372,0.024,0.1206,0.0092,0.0575,0.8725,-2.288,0.844,0.0068,1902,32,Staff-Involved Incidents (raw),CIM,2025-02
+0.0642,0.0521,0.2182,-0.1241,0.083,0.135,-7.4363,1.4828,0.0,1902,32,All Violent Incidents (raw),CIM,2025-02
 -0.0268,0.0493,0.5865,0.9128,0.324,0.0049,-15.3066,2.9455,0.0,1524,32,Use of Force Incidents (raw),CIM,2025-02
 -42.0713,24.4806,0.0859,140.6462,65.2435,0.0313,1218.6363,1202.7393,0.3111,1524,32,Custody Overtime (hours),CIM,2025-02
 -0.0723,2.5308,0.9772,114.4942,5.8823,0.0,-371.2662,94.0707,0.0001,1524,32,Non-Custody Overtime (hours),CIM,2025-02

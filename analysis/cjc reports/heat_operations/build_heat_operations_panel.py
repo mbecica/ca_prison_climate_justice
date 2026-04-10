@@ -315,7 +315,7 @@ print(f"  Security levels assigned: {sorted(security_level.items())}")
 
 print("Step 5b: Loading violent incidents from CompStat...")
 
-violent_incidents = {}  # (facility, year, month) -> count
+violent_incidents = {}  # (facility, year, month) -> dict of counts
 
 with open(f"{DATA}/facilities/CDCR/cdcr_violent_incidents_by_facility.csv") as f:
     for row in csv.DictReader(f):
@@ -325,10 +325,14 @@ with open(f"{DATA}/facilities/CDCR/cdcr_violent_incidents_by_facility.csv") as f
         try:
             year = int(row["year"])
             month = int(row["month"])
-            count = float(row["violent_incidents"])
         except (ValueError, KeyError):
             continue
-        violent_incidents[(facility, year, month)] = count
+        key = (facility, year, month)
+        violent_incidents[key] = {
+            "violent_incidents":  float(row.get("violent_incidents", 0) or 0),
+            "inmate_on_inmate":   float(row.get("inmate_on_inmate", 0) or 0),
+            "staff_involved":     float(row.get("staff_involved", 0) or 0),
+        }
 
 print(f"  {len(violent_incidents)} facility-month violent incident records")
 
@@ -362,7 +366,7 @@ COLUMNS = [
     "facility", "year", "month",
     "days_over_90f", "days_over_95f", "days_skarha10",
     "dental_mh_overtime", "modified_programs_days", "deaths_unexpected",
-    "uof_incidents", "violent_incidents",
+    "uof_incidents", "violent_incidents", "inmate_on_inmate", "staff_involved",
     "ed_hospital_rate",
     "actual_expenditure_monthly", "institution_budget",
     "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh",
@@ -389,10 +393,12 @@ for facility, year, month in all_keys:
         if val == "":
             missing_counts[col] += 1
 
-    vi = violent_incidents.get((facility, year, month), "")
-    row["violent_incidents"] = vi
-    if vi == "":
-        missing_counts["violent_incidents"] += 1
+    vi = violent_incidents.get((facility, year, month), {})
+    for col in ("violent_incidents", "inmate_on_inmate", "staff_involved"):
+        val = vi.get(col, "")
+        row[col] = val
+        if val == "":
+            missing_counts[col] += 1
 
     fc = fiscal.get((facility, year, month), {})
     for col in ("actual_expenditure_monthly", "institution_budget"):
