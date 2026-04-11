@@ -16,7 +16,7 @@ Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) a
 
 The multiplicative structure means a facility must score poorly across all three components simultaneously to rank at the top of the index. A facility in a very hot location with full air conditioning and a younger population will score lower than one with moderate temperatures, poor cooling, and high medical acuity.
 
-Adaptive capacity is not included as a fourth component, following Ovienmhada et al. (2024)'s treatment of carcerated populations as having effectively zero adaptive capacity. Incarcerated people cannot relocate, purchase cooling, choose their housing unit, or leave the facility during a heat event; the institutional and legal structure of incarceration removes the individual and collective agency that capacity metrics are designed to measure.
+Adaptive capacity is not included as a fourth component, following Ovienmhada et al. (2024)'s treatment of carcerated populations as having effectively zero adaptive capacity. Incarcerated people cannot relocate, purchase cooling, choose their housing unit, or leave the facility during a heat event; the institutional and legal structure of incarceration removes the individual and collective agency that capacity metrics are designed to measure. We considered restricted housing unit (RHU) placement as a variable that partially relaxes this uniform assumption — RHU residents face additional restrictions on heat-adaptive behavior, and Cloud et al. (2023) explicitly identify people in solitary confinement as "especially susceptible to the hazards of extreme heat." However, RHU was ultimately excluded from the scored index because the literature does not provide quantified dose-response evidence sufficient to justify an equal-weight assumption. See the Excluded Variables section below.
 
 ### Hazard Component
 
@@ -74,6 +74,14 @@ Equal-weight average of five sub-indicators describing each facility's populatio
 | Disability (DPP) | `cchcs_dpp_pct_2025` | Share with a Disability Placement Program designation (2025). DPP covers mobility, vision, hearing, and other impairments that may limit a person's ability to respond to heat stress or access cooling resources. | CCHCS Health Care Dashboard, 2025 |
 | Race/POC | `race_peopleofcolor_pct` | Share identifying as people of color (2025), consistent with Ovienmhada et al. (2024)'s treatment of race as a heat vulnerability factor given documented disparities in heat-related health outcomes and access to care. | CDCR Population Data Points, 2025 |
 
+### Excluded Variables
+
+Two variables were considered for inclusion and rejected after methodological review. Both are retained in the output data as descriptive columns.
+
+**Restricted housing unit rate (`rhu_pct_2025`)** — 12-month average share of the facility population in restricted housing units (2025), from CDCR STA429 monthly reports. RHU residents face meaningful additional constraints on heat-adaptive behavior: they cannot access cooler facility areas, cannot self-regulate their physical location or activity during heat events, and average approximately one hour of out-of-cell time per day — meeting the UN Mandela Rules definition of solitary confinement (≥22 hours/day in cell). Cloud et al. (2023) explicitly identify solitary confinement as a heat vulnerability factor. However, the existing literature does not provide a quantified dose-response between RHU status and heat health outcomes relative to the general incarcerated population. Including RHU as an equal-weight vulnerability sub-indicator would implicitly assert that 1% of RHU population is equivalent in vulnerability impact to 1% additional EOP enrollment, age 50+, or medical acuity — a claim that cannot be substantiated with current evidence. The variable also has two extreme outliers (COR 13.6%, SAC 12.7%, vs. IQR fence of 6.8%), which under min-max normalization produced disproportionate score separation not grounded in comparative heat outcome data. Retained as a descriptive output column; flagged as a priority candidate for inclusion when dose-response research becomes available.
+
+**Geographic isolation (`dist_nearest_medical_mi`, `in_urban_area_2020`)** — distance to the nearest medical facility and whether the facility is in a 2020 Census urban area. Hidden Hazards (2023) identifies remoteness from hospitals as a vulnerability factor in emergency response, and the concept is conceptually sound (isolated facilities have slower access to higher-level care during heat emergencies). However, among the 31 active CDCR state prisons, this variable shows insufficient differentiation to function as a scored sub-indicator: the median distance to the nearest medical facility is 0.52 miles, the maximum is 1.51 miles (KVSP), and there are no facilities with the degree of isolation that would drive the index in a meaningful way. The variable is more appropriately treated as facility-level context. Retained as a descriptive output column.
+
 ### Risk Tier Classification
 
 Mid-century risk scores are classified into four tiers using Jenks natural breaks, computed to minimize within-class variance. Breaks are applied to the mid-century distribution only; historic scores use the same thresholds for comparability.
@@ -81,9 +89,9 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 | Tier | Score range | n facilities | Color |
 | :--- | :--- | :--- | :--- |
 | Critical | > 82.7 | 3 (COR, SATF, CIM) | `#7a1010` |
-| High | 44.7 – 82.7 | 5 (CMF, SAC, VSP, LAC, NKSP) | `#c44020` |
-| Moderate | 26.6 – 44.7 | 11 | `#e89050` |
-| Low | ≤ 26.6 | 12 | `#e8e0c8` |
+| High | 36.4 – 82.7 | 10 (CMF, SAC, VSP, LAC, NKSP, SOL, CIW, KVSP, RJD, WSP) | `#c44020` |
+| Moderate | 20.1 – 36.4 | 6 (CCWF, CRC, CCI, FOL, MCSP, HDSP) | `#e89050` |
+| Low | ≤ 20.1 | 12 | `#e8e0c8` |
 
 **Mid-century top 5 by risk score:** COR (100.0), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).
 
@@ -112,6 +120,11 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 | `cchcs_mental_health_eop_pct_2025` | EOP share (%) |
 | `cchcs_dpp_pct_2025` | DPP share (%) |
 | `race_peopleofcolor_pct` | POC share (%) |
+| `rhu_pct_2025` | Restricted housing unit share (12-month average %, 2025) — descriptive only, not scored |
+| `dist_nearest_medical_mi` | Distance in miles to nearest medical/emergency facility — descriptive only, not scored |
+| `in_urban_area_2020` | Whether facility falls within a 2020 Census urban area boundary — descriptive only, not scored |
+| `california_model_facility` | Whether facility is designated a California Model facility — descriptive only, not scored |
+| `year_opened` | Year the facility opened — descriptive only, not scored |
 
 ### Sensitivity Analysis and VCP Comparison
 
