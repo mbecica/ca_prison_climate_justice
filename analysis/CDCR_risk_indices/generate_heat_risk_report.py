@@ -36,12 +36,12 @@ mc   = df_all[df_all['time_period'] == 'midcentury'].set_index('cdcr_code')
 
 # ── Color palette ─────────────────────────────────────────────────────────────
 TIER_COLORS = {
-    'Critical': '#7a1010',
+    'Highest':  '#7a1010',
     'High':     '#c44020',
     'Moderate': '#e89050',
-    'Low':      '#c8c0a8',
+    'Lowest':   '#c8c0a8',
 }
-TIER_ORDER = ['Critical', 'High', 'Moderate', 'Low']
+TIER_ORDER = ['Highest', 'High', 'Moderate', 'Lowest']
 
 SCORE_CMAP = 'YlOrRd'
 

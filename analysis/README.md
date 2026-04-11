@@ -86,12 +86,14 @@ Two variables were considered for inclusion and rejected after methodological re
 
 Mid-century risk scores are classified into four tiers using Jenks natural breaks, computed to minimize within-class variance. Breaks are applied to the mid-century distribution only; historic scores use the same thresholds for comparability.
 
+Tiers are named to reflect relative risk within the CDCR system. All incarcerated people face elevated heat risk compared to the general population; these labels indicate which facilities face the highest risk relative to peers, not that lower-ranked facilities are safe.
+
 | Tier | Score range | n facilities | Color |
 | :--- | :--- | :--- | :--- |
-| Critical | > 82.7 | 3 (COR, SATF, CIM) | `#7a1010` |
-| High | 36.4 – 82.7 | 10 (CMF, SAC, VSP, LAC, NKSP, SOL, CIW, KVSP, RJD, WSP) | `#c44020` |
+| Highest | > 60.9 | 3 (COR, SATF, CIM) | `#7a1010` |
+| High | 36.4 – 60.9 | 10 (CMF, SAC, VSP, LAC, NKSP, SOL, CIW, KVSP, RJD, WSP) | `#c44020` |
 | Moderate | 20.1 – 36.4 | 6 (CCWF, CRC, CCI, FOL, MCSP, HDSP) | `#e89050` |
-| Low | ≤ 20.1 | 12 | `#e8e0c8` |
+| Lowest | ≤ 20.1 | 12 | `#e8e0c8` |
 
 **Mid-century top 5 by risk score:** COR (100.0), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).
 
@@ -110,7 +112,7 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 | `exposure_score` | Exposure component score (0–1) |
 | `vulnerability_score` | Vulnerability component score (0–1) |
 | `risk_score` | Final risk score (0–100), normalized cross-period |
-| `risk_category` | Jenks tier: `Critical`, `High`, `Moderate`, or `Low` |
+| `risk_category` | Jenks tier: `Highest`, `High`, `Moderate`, or `Lowest` — relative within the CDCR system |
 | `AQI_norm` | AQI sub-indicator (raw, 0–100) |
 | `ratio_indoor_to_outdoor` | Indoor/outdoor 78°F day ratio (raw) |
 | `days_indoor_above_78f_2025` | Indoor 78°F days in 2025 (raw count) |
