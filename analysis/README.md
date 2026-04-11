@@ -8,7 +8,7 @@ Notebooks and scripts are in this directory. Outputs are written to `data/cdcr/`
 - `data/cdcr/CDCR_heat_risk_index.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century. Notebook: `CDCR_risk_indices/heat_risk_index.ipynb`.
 - `data/cdcr/CDCR_heat_risk_sensitivity.csv` — weighting sensitivity analysis and VCP comparison. Notebook: `CDCR_risk_indices/sensitivity_analysis.ipynb`.
 
-**Facility coverage:** 31 of 34 state prisons. CAC, CVSP, and FWF excluded — no indoor heat model data available.
+**Facility coverage:** 31 CDCR state prisons.
 
 ### Framework
 
