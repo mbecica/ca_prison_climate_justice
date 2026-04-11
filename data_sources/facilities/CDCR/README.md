@@ -42,6 +42,7 @@ Data collection scripts are in the `scrapers/` directory.
 | `pct_buildings_refrigeration` | Proportion of housing units (HUs) with mechanical (refrigerant) cooling. HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `pct_units_ventilation` | Proportion of housing HVAC units providing ventilation without cooling. Sums to 1.0 with evaporation and refrigeration. | Raychaudhuri et al., Reuters, 2025 |
 | `pct_buildings_ventilation` | Proportion of housing units (HUs) with air handlers only (ventilation, no cooling). HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
+| `rhu_pct_2025` | % of facility population in restricted housing units (12-month average, 2025). Derived from CDCR STA429 Restricted Housing Monthly Reports (Jan–Dec 2025). CRC and ASP consistently reported 0 RH units. See `restricted_housing_2025.csv` and scraper `scrapers/extract_restricted_housing.py`. | CDCR Office of Research, STA429 Restricted Housing Monthly Reports, 2025 |
 
 ### Facility Characteristics
 
