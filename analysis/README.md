@@ -62,6 +62,18 @@ Indoor days at ≥ 90°F were roughly 35–47% of outdoor days at the same thres
 
 Source: California Office of the Inspector General, heat log audit.
 
+*Comparison of OIG audit findings to 2025 exposure sub-indicators (COR, HDSP, LAC):*
+
+The OIG audit (89°F threshold, unit-level) and our 2025 exposure data (78°F threshold, institution-level as reported by CDCR) use different thresholds and units of analysis but are directionally consistent. COR is the worst performer in both; LAC shows strong attenuation of outdoor heat in both; HDSP has many moderately warm indoor days but rarely crosses higher thresholds.
+
+| Facility | OIG: units w/ ≥ 1 day > 89°F | OIG: max days > 89°F (single unit) | 2025: indoor 78°F days (CDCR reported) | 2025: outdoor 78°F days | 2025: indoor/outdoor ratio | Cooling type | Elevation | UHI (0–1) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Corcoran (COR) | 23 of 33 (70%) | 23 | 159 | 163 | 0.975 | 100% evaporative | 55 m | 0.578 |
+| High Desert (HDSP) | 3 of 27 (11%) | 1 | 89 | 128 | 0.695 | 100% evaporative | 1,267 m | 0.041 |
+| Lancaster (LAC) | 10 of 29 (34%) | 2 | 39 | 162 | 0.241 | 96% evaporative | 716 m | 0.000 |
+
+LAC's low indoor/outdoor ratio (0.241) despite 162 outdoor 78°F days reflects that evaporative cooling performs well in Lancaster's low-humidity desert climate. COR's ratio of 0.975 means its buildings provide almost no attenuation — consistent with 70% of OIG-audited units recording extreme heat days.
+
 ### Vulnerability Component
 
 Equal-weight average of five sub-indicators describing each facility's population. Each is min-max normalized 0–1 across the 31 facilities before averaging.
@@ -76,11 +88,13 @@ Equal-weight average of five sub-indicators describing each facility's populatio
 
 ### Excluded Variables
 
-Two variables were considered for inclusion and rejected after methodological review. Both are retained in the output data as descriptive columns.
+The following variables were considered for inclusion and rejected after methodological review. Scored variables are retained in the output data as descriptive columns where available.
 
 **Restricted housing unit rate (`rhu_pct_2025`)** — 12-month average share of the facility population in restricted housing units (2025), from CDCR STA429 monthly reports. RHU residents face meaningful additional constraints on heat-adaptive behavior: they cannot access cooler facility areas, cannot self-regulate their physical location or activity during heat events, and average approximately one hour of out-of-cell time per day — meeting the UN Mandela Rules definition of solitary confinement (≥22 hours/day in cell). Cloud et al. (2023) explicitly identify solitary confinement as a heat vulnerability factor. However, the existing literature does not provide a quantified dose-response between RHU status and heat health outcomes relative to the general incarcerated population. Including RHU as an equal-weight vulnerability sub-indicator would implicitly assert that 1% of RHU population is equivalent in vulnerability impact to 1% additional EOP enrollment, age 50+, or medical acuity — a claim that cannot be substantiated with current evidence. The variable also has two extreme outliers (COR 13.6%, SAC 12.7%, vs. IQR fence of 6.8%), which under min-max normalization produced disproportionate score separation not grounded in comparative heat outcome data. Retained as a descriptive output column; flagged as a priority candidate for inclusion when dose-response research becomes available.
 
 **Geographic isolation (`dist_nearest_medical_mi`, `in_urban_area_2020`)** — distance to the nearest medical facility and whether the facility is in a 2020 Census urban area. Hidden Hazards (2023) identifies remoteness from hospitals as a vulnerability factor in emergency response, and the concept is conceptually sound (isolated facilities have slower access to higher-level care during heat emergencies). However, among the 31 active CDCR state prisons, this variable shows insufficient differentiation to function as a scored sub-indicator: the median distance to the nearest medical facility is 0.52 miles, the maximum is 1.51 miles (KVSP), and there are no facilities with the degree of isolation that would drive the index in a meaningful way. The variable is more appropriately treated as facility-level context. Retained as a descriptive output column.
+
+**Incarcerated workers (% assigned to work)** — work assignments in kitchens, laundry, and outdoor labor involve sustained physical exertion and/or prolonged exposure to high-heat environments with limited ability to self-limit activity, representing a meaningful exposure pathway not captured by facility-level indoor temperature data. Days above 80°F increase the risk of workplace injuries by 3%, and days above 90°F increase the risk by 10% (LAO, 2024; Alahmad, 2025). Facility-level data on work assignment rates are not currently available in this project. *Data gap — candidate for inclusion if CDCR work assignment data becomes available.*
 
 ### Risk Tier Classification
 
