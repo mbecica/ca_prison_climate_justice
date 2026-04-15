@@ -5,7 +5,7 @@
  *   Staffing:    Actual Vacancies (All), Medical Vacancies (All),
  *                Mental Health Vacancies (All), Dental Vacancies (All)
  *   Major Costs: Total Labor Cost (All), ED & Hospital Stays
- *   Other Trends: ED/Hospital Stay*
+ *   Other Trends: ED/Hospital Stay*, Specialty Care Referrals*, Prescriptions Per Patient
  *
  * Output: long-format CSV — month, group, institution, measure, value
  * Saved to: data_sources/facilities/CDCR/cchcs_measures_2017-2025.csv
@@ -22,7 +22,7 @@ const path = require('path');
 
 const URL = 'https://app.powerbigov.us/view?r=eyJrIjoiY2QyNzllZWItMmIxYi00NTk0LWI0OWQtNWEzMTkwYzA3NGE4IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9';
 const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_measures_2017-2025.csv');
-const CHECKPOINT_PATH = '/tmp/cchcs_measures_checkpoint.json';
+const CHECKPOINT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_measures_checkpoint.json');
 
 // Each group: treeItem is the exact text to click in the Domain dropdown.
 // keepMeasures: only these row labels are saved (all others are read but discarded).
@@ -51,6 +51,14 @@ const MEASURE_GROUPS = [
     treeItem: 'Other Trends',
     keepMeasures: new Set([
       'ED/Hospital Stay*',
+    ]),
+  },
+  {
+    name: 'Other Trends Extra',
+    treeItem: 'Other Trends',
+    keepMeasures: new Set([
+      'Specialty Care Referrals*',
+      'Prescriptions Per Patient',
     ]),
   },
 ];

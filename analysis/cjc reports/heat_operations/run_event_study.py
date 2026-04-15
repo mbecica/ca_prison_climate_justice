@@ -42,7 +42,8 @@ OUT_DIR = "analysis/cjc reports/heat_operations"
 
 print("Loading panel...")
 df = pd.read_csv(os.path.join(OUT_DIR, "heat_operations_panel.csv"))
-for col in ["days_over_90f", "days_skarha10", "ed_hospital_rate",
+for col in ["days_over_90f", "days_skarha10", "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
+            "specialty_care_referrals", "prescriptions_per_patient",
             "dental_mh_overtime", "modified_programs_days", "crowding_pct",
             "uof_incidents", "violent_incidents", "inmate_on_inmate", "staff_involved",
             "actual_expenditure_monthly"]:
@@ -100,8 +101,17 @@ AC_EVENTS = {
     "CIM": pd.Timestamp("2025-02-01"),
 }
 
+df["log_ed_cost"]       = np.log1p(df["ed_hospital_cost"].clip(lower=0))
+df["log_labor_cost"]    = np.log1p(df["total_labor_cost"].clip(lower=0))
+df["log_specialty"]     = np.log1p(df["specialty_care_referrals"].clip(lower=0))
+df["log_prescriptions"] = np.log(df["prescriptions_per_patient"].replace(0, np.nan))
+
 OUTCOMES = [
     ("log_ed",                    "ED/Hospital Stay rate (log)",       "ed_hospital_rate",            "ED/Hosp rate\n(per 1,000)"),
+    ("log_ed_cost",               "ED & Hospital Stay Cost [log(y+1)]","ed_hospital_cost",            "ED/Hosp Cost\n(log $)"),
+    ("log_labor_cost",            "Total Labor Cost [log(y+1)]",       "total_labor_cost",            "Total Labor\nCost (log $)"),
+    ("log_specialty",             "Specialty Care Referrals [log(y+1)]","specialty_care_referrals",   "Specialty Care\nReferrals"),
+    ("log_prescriptions",         "Prescriptions Per Patient (log)",   "prescriptions_per_patient",   "Prescriptions\nPer Patient"),
     ("dental_mh_overtime",        "Dental+MH Overtime (hours)",        "dental_mh_overtime",          "Dental+MH OT\n(hours)"),
     ("inmate_on_inmate",          "Inmate-on-Inmate Violence (raw)",   "inmate_on_inmate",            "Inmate-on-Inmate\nViolence"),
     ("staff_involved",            "Staff-Involved Incidents (raw)",    "staff_involved",              "Staff-Involved\nIncidents"),

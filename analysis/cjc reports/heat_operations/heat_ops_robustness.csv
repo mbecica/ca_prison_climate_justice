@@ -1,5 +1,9 @@
 beta,se,p,n_obs,n_fac,outcome,heat,spec,sig
 -0.0004,0.0007,0.5948,3437,32,ED/Hospital Stay rate (log),Days >90°F,Lag 1,
+-0.0008,0.0011,0.4587,3438,32,ED & Hospital Stay Cost [log(y+1)],Days >90°F,Lag 1,
+-0.0005,0.0003,0.1862,3438,32,Total Labor Cost [log(y+1)],Days >90°F,Lag 1,
+-0.001,0.001,0.3212,3438,32,Specialty Care Referrals [log(y+1)],Days >90°F,Lag 1,
+0.0006,0.0003,0.0578,3437,32,Prescriptions Per Patient (log),Days >90°F,Lag 1,.
 0.0067,0.0049,0.1724,1432,32,Dental+MH Overtime (log),Days >90°F,Lag 1,
 -0.0009,0.006,0.8781,1538,33,Modified Programs Days [log(y+1)],Days >90°F,Lag 1,
 0.0012,0.0016,0.4431,1902,32,Inmate-on-Inmate Violence [log(y+1)],Days >90°F,Lag 1,
@@ -8,6 +12,10 @@ beta,se,p,n_obs,n_fac,outcome,heat,spec,sig
 0.0005,0.0019,0.7958,1524,32,Use of Force Incidents [log(y+1)],Days >90°F,Lag 1,
 -0.0007,0.0003,0.0263,1524,32,Monthly Expenditure [log(y+1)],Days >90°F,Lag 1,*
 0.0004,0.0041,0.9276,3437,32,ED/Hospital Stay rate (log),Days mean summer temp. anomaly,Lag 1,
+-0.0008,0.0039,0.8441,3438,32,ED & Hospital Stay Cost [log(y+1)],Days mean summer temp. anomaly,Lag 1,
+-0.002,0.0017,0.2375,3438,32,Total Labor Cost [log(y+1)],Days mean summer temp. anomaly,Lag 1,
+-0.0078,0.0051,0.1267,3438,32,Specialty Care Referrals [log(y+1)],Days mean summer temp. anomaly,Lag 1,
+0.0015,0.0021,0.4676,3437,32,Prescriptions Per Patient (log),Days mean summer temp. anomaly,Lag 1,
 -0.0112,0.0099,0.2564,1432,32,Dental+MH Overtime (log),Days mean summer temp. anomaly,Lag 1,
 -0.0055,0.013,0.6742,1538,33,Modified Programs Days [log(y+1)],Days mean summer temp. anomaly,Lag 1,
 -0.0051,0.0074,0.4909,1902,32,Inmate-on-Inmate Violence [log(y+1)],Days mean summer temp. anomaly,Lag 1,

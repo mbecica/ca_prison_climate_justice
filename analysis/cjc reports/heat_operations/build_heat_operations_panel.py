@@ -190,6 +190,10 @@ CCHCS_RECODE = {"FSP": "FOL"}
 
 CCHCS_OUTCOMES = {
     ("Other Trends", "ED/Hospital Stay*"): "ed_hospital_rate",
+    ("Major Costs", "ED & Hospital Stays"): "ed_hospital_cost",
+    ("Major Costs", "Total Labor Cost (All)"): "total_labor_cost",
+    ("Other Trends Extra", "Specialty Care Referrals*"): "specialty_care_referrals",
+    ("Other Trends Extra", "Prescriptions Per Patient"): "prescriptions_per_patient",
     ("Staffing", "Actual Vacancies (All)"): "vacancy_all",
     ("Staffing", "Medical Vacancies (All)"): "vacancy_medical",
     ("Staffing", "Dental Vacancies (All)"): "vacancy_dental",
@@ -367,7 +371,8 @@ COLUMNS = [
     "days_over_90f", "days_over_95f", "days_skarha10",
     "dental_mh_overtime", "modified_programs_days", "deaths_unexpected",
     "uof_incidents", "violent_incidents", "inmate_on_inmate", "staff_involved",
-    "ed_hospital_rate",
+    "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
+    "specialty_care_referrals", "prescriptions_per_patient",
     "actual_expenditure_monthly", "institution_budget",
     "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh",
     "crowding_pct",
@@ -408,7 +413,9 @@ for facility, year, month in all_keys:
             missing_counts[col] += 1
 
     cc = cchcs.get((facility, year, month), {})
-    for col in ("ed_hospital_rate", "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh"):
+    for col in ("ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
+                "specialty_care_referrals", "prescriptions_per_patient",
+                "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh"):
         val = cc.get(col, "")
         row[col] = val
         if val == "":

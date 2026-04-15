@@ -59,12 +59,18 @@ df["ym"] = df["year"].astype(str) + "_" + df["month"].astype(str).str.zfill(2)
 # Log-transform outcomes (replace "" with NaN first)
 for col in ["dental_mh_overtime", "modified_programs_days", "uof_incidents",
             "violent_incidents", "inmate_on_inmate", "staff_involved", "ed_hospital_rate",
+            "ed_hospital_cost", "total_labor_cost",
+            "specialty_care_referrals", "prescriptions_per_patient",
             "actual_expenditure_monthly", "institution_budget",
             "crowding_pct", "days_over_90f", "days_skarha10",
             "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
 df["log_ed"]      = np.log(df["ed_hospital_rate"].replace(0, np.nan))
+df["log_ed_cost"]        = np.log1p(df["ed_hospital_cost"].clip(lower=0))
+df["log_labor_cost"]     = np.log1p(df["total_labor_cost"].clip(lower=0))
+df["log_specialty"]      = np.log1p(df["specialty_care_referrals"].clip(lower=0))
+df["log_prescriptions"]  = np.log(df["prescriptions_per_patient"].replace(0, np.nan))
 df["log_dental"]  = np.log(df["dental_mh_overtime"].replace(0, np.nan))
 df["log_modprog"] = np.log1p(df["modified_programs_days"])  # log(y+1) for 40% zeros
 # Fiscal: monthly spend can be negative in rare months (downward budget corrections);
@@ -183,6 +189,10 @@ print("\nRunning main TWFE regressions...")
 
 OUTCOMES = [
     ("log_ed",       "ED/Hospital Stay rate (log)"),
+    ("log_ed_cost",       "ED & Hospital Stay Cost [log(y+1)]"),
+    ("log_labor_cost",    "Total Labor Cost [log(y+1)]"),
+    ("log_specialty",     "Specialty Care Referrals [log(y+1)]"),
+    ("log_prescriptions", "Prescriptions Per Patient (log)"),
     ("log_dental",   "Dental+MH Overtime (log)"),
     ("log_modprog",  "Modified Programs Days [log(y+1)]"),
     ("log_inmate_v", "Inmate-on-Inmate Violence [log(y+1)]"),
