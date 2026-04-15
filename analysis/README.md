@@ -12,7 +12,7 @@ Notebooks and scripts are in this directory. Outputs are written to `data/cdcr/`
 
 ### Framework
 
-Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) and the California Vulnerable Communities and Places (VCP) environmental risk methodology. Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods so that current and mid-century scores are directly comparable on the same scale.
+Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) and the California Vulnerable Communities Platform (VCP) environmental risk methodology. Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods so that current and mid-century scores are directly comparable on the same scale.
 
 The multiplicative structure means a facility must score poorly across all three components simultaneously to rank at the top of the index. A facility in a very hot location with full air conditioning and a younger population will score lower than one with moderate temperatures, poor cooling, and high medical acuity.
 

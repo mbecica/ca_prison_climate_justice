@@ -280,7 +280,7 @@ md_lines = [
     f'',
     f'## Framework',
     f'',
-    f'**Risk = Hazard × Exposure × Vulnerability**, following Ovienmhada et al. (2024) and the California Vulnerable Communities and Places (VCP) methodology. Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods (current: 1991–2020; mid-century: 2041–2070, SSP3-7.0).',
+    f'**Risk = Hazard × Exposure × Vulnerability**, following Ovienmhada et al. (2024) and the California Vulnerable Communities Platform (VCP) methodology. Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods (current: 1991–2020; mid-century: 2041–2070, SSP3-7.0).',
     f'',
     f'Adaptive capacity is excluded as a standalone component following Ovienmhada et al. (2024). Incarcerated people cannot relocate, purchase cooling, or leave the facility — the institutional structure of incarceration removes the individual and collective agency that adaptive capacity metrics are designed to measure.',
     f'',
