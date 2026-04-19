@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>CDCR Heat Risk Index — Maps</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:Georgia,serif;font-size:13px;color:#1a1a1a;background:#fff}
@@ -32,12 +34,15 @@
   .rank-badge{display:inline-block;background:#b03020;color:#fff;font-size:10px;
     font-weight:bold;padding:1px 5px;border-radius:2px;min-width:20px;text-align:center}
   .num{text-align:right}
+  .prison-label{background:transparent!important;border:none!important;box-shadow:none!important;
+    font:bold 11px Georgia,serif!important;color:#333!important;padding:0!important}
+  .prison-label::before{display:none!important}
 </style>
 </head>
 <body>
 <div class="page">
 <h1>CDCR State Prisons — Heat Risk Index Maps</h1>
-<p class="subtitle">31 CDCR adult state prisons. Risk = Hazard × Exposure × Vulnerability (Ovienmhada 2024 / VCP framework). Hover circles for details.</p>
+<p class="subtitle">31 CDCR adult state prisons. Risk = Hazard × Exposure × Vulnerability. Hover circles for details.</p>
 <div id="tooltip" class="tooltip"></div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
@@ -121,25 +126,25 @@
 <div id="delta-table-wrap"></div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
-     SECTION 5: OVIENMHADA COMPARISON
+     SECTION 5: WEIGHTING SENSITIVITY — SCHEME A vs B
 ════════════════════════════════════════════════════════════════════════ -->
-<h2>Ovienmhada (2024) Weighting Comparison</h2>
-<p class="section-note">Ovienmhada et al. (2024) weight vulnerability at double the share of hazard and exposure (additive 25/25/50). Both maps use current-period scores normalized 0–100 on a shared continuous scale. All three Spearman correlations across weighting schemes are ≥ 0.91 (A vs B = 0.911, A vs C = 0.942, B vs C = 0.936) and the top 5 facilities are stable, but individual facility ranks shift — most notably CHCF (rank 22 → 11) and ISP (rank 31 → 20).</p>
+<h2>Weighting Sensitivity — Scheme A vs. Scheme B</h2>
+<p class="section-note">Scheme A (equal multiplicative: H × E × V) vs. Scheme B (additive 25/25/50: 0.25H + 0.25E + 0.50V). Both maps use current-period scores normalized 0–100 on a shared continuous scale. All three Spearman correlations across weighting schemes are ≥ 0.91 (A vs B = 0.911, A vs C = 0.942, B vs C = 0.936) and the top 5 facilities are stable, but individual facility ranks shift — most notably CHCF (rank 22 → 11) and ISP (rank 31 → 20).</p>
 <div class="map-row" style="flex-wrap:nowrap">
   <div class="map-block" style="flex:1 1 0;min-width:0">
-    <div class="map-title">Equal rank (H × E × V)</div>
+    <div class="map-title">Scheme A — Equal multiplicative (H × E × V)</div>
     <svg id="m-ov-equal" class="map-svg"></svg>
     <div class="map-note">Current period. Top 5: COR, SATF, CIM, CIW, CMF.</div>
   </div>
   <div class="map-block" style="flex:1 1 0;min-width:0">
-    <div class="map-title">Additive rank (0.25H + 0.25E + 0.50V)</div>
+    <div class="map-title">Scheme B — Additive 25/25/50 (0.25H + 0.25E + 0.50V)</div>
     <svg id="m-ov-add" class="map-svg"></svg>
-    <div class="map-note">Current period. Top 5: COR, SATF, CIM, CMF, CIW. CHCF rises sharply — high medical complexity without high indoor heat exposure is rewarded by the additive structure.</div>
+    <div class="map-note">Current period. Top 5: COR, SATF, CIM, CMF, CIW. CHCF rises sharply — high vulnerability without indoor heat exposure is rewarded by the additive structure.</div>
   </div>
   <div class="map-block" style="flex:1 1 0;min-width:0">
-    <div class="map-title">Rank divergence (equal − additive)</div>
+    <div class="map-title">Rank divergence (Scheme A − Scheme B)</div>
     <svg id="m-ov-div" class="map-svg"></svg>
-    <div class="map-note">Orange = rises in priority under Ovienmhada. Blue = falls. Circle size = population.</div>
+    <div class="map-note">Orange = rises in priority under Scheme B. Blue = falls. Circle size = population.</div>
   </div>
 </div>
 <div id="ov-rank-table-wrap"></div>
@@ -162,10 +167,22 @@
   </div>
 </div>
 <div class="map-row">
+  <div class="map-block" style="flex:1 1 100%">
+    <div class="map-title">California — VCP ExHeatHealth_Idx with CDCR prison risk scores</div>
+    <div id="m-vcp-state" style="width:100%;height:600px;border:1px solid #ccc"></div>
+    <div class="map-note">Census tracts colored by VCP ExHeatHealth_Idx (0–100). Prison dots colored by risk tier. Click for details.</div>
+  </div>
+</div>
+<div class="map-row">
   <div class="map-block">
     <div class="map-title">Weighting sensitivity — max rank swing across 3 schemes</div>
     <svg id="m-swing" class="map-svg"></svg>
     <div class="map-note">CHCF swings 11 positions (high vulnerability, zero indoor heat days). ISP swings 11 (highest hazard, near-zero exposure after HVAC upgrade).</div>
+  </div>
+  <div class="map-block">
+    <div class="map-title">COR / SATF tract — VCP ExHeatHealth_Idx (zoomed)</div>
+    <div id="m-vcp-zoom" style="width:100%;height:420px;border:1px solid #ccc"></div>
+    <div class="map-note">COR ranks #1 in our index (risk = 100) but VCP's heat hazard sub-score is null for the prison tract (100% group quarters). Surrounding community tracts all have ExHeatHealth_Idx 68–94 and heat hazard scores of 1.36–1.58. The prison tract's composite ExHeatHealth_Idx (79.6) is computed without the hazard sub-score, making it incomparable to neighboring tracts.</div>
   </div>
 </div>
 
@@ -589,7 +606,7 @@ function riskTierColor(v) {
   foot.append("td").attr("colspan",2);
 })();
 
-// ── SECTION 5: Ovienmhada comparison ─────────────────────────────────────
+// ── SECTION 5: Weighting sensitivity — Scheme A vs B ─────────────────────
 // Both score maps use a shared continuous scale [0,100] so scores are comparable
 const ovScale = seqGrayRed([0, 100]);
 
@@ -609,27 +626,27 @@ buildMap({
     const sens = dataSens.find(s=>s.cdcr_code===d.cdcr_code);
     return [`<b>${d.cdcr_code}</b> — ${d.name}`,
       `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
-      `Equal-weight score: ${d.risk_score.toFixed(1)} (${tier.label})`,
+      `Scheme A score: ${d.risk_score.toFixed(1)} (${tier.label})`,
       `Rank: ${sens ? sens.rank_equal_mult : "—"}`];
   },
   legendOpts:{scale:ovScale, domain:[0,100], title:"Risk score (0–100)"}
 });
 
-// Additive 25/25/50 map
+// Scheme B map
 buildMap({
   id:"m-ov-add", data:dataSensWithPop,
   colorFn: d => ovScale(d.risk_score_additive_25_25_50||0),
   rFn: d => rScale(d.average_2025_population||0),
   tipLines: d => [`<b>${d.cdcr_code}</b> — ${d.name}`,
     `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
-    `Additive 25/25/50 score: ${d.risk_score_additive_25_25_50!=null?d.risk_score_additive_25_25_50.toFixed(1):"n/a"}`,
-    `Rank: ${d.rank_additive_25_25_50}`,
-    `Equal-weight rank: ${d.rank_equal_mult}`,
+    `Scheme B score: ${d.risk_score_additive_25_25_50!=null?d.risk_score_additive_25_25_50.toFixed(1):"n/a"}`,
+    `Scheme B rank: ${d.rank_additive_25_25_50}`,
+    `Scheme A rank: ${d.rank_equal_mult}`,
     `Rank change: ${d.rank_equal_mult - d.rank_additive_25_25_50 >= 0 ? "+" : ""}${d.rank_equal_mult - d.rank_additive_25_25_50}`],
-  legendOpts:{scale:ovScale, domain:[0,100], title:"Additive score (0–100)"}
+  legendOpts:{scale:ovScale, domain:[0,100], title:"Scheme B score (0–100)"}
 });
 
-// Rank divergence map (equal rank − additive rank; positive = rises under Ovienmhada)
+// Rank divergence map (Scheme A rank − Scheme B rank; positive = rises under Scheme B)
 {
   const deltaMax = d3.max(dataSens, d => Math.abs(d.rank_equal_mult - d.rank_additive_25_25_50));
   const divOvScale = d3.scaleDiverging(t => d3.interpolateRdBu(1-t))
@@ -645,8 +662,8 @@ buildMap({
       const delta = d.rank_equal_mult - d.rank_additive_25_25_50;
       return [`<b>${d.cdcr_code}</b> — ${d.name}`,
         `Pop: ${d.average_2025_population ? d.average_2025_population.toLocaleString() : "n/a"}`,
-        `Equal rank: ${d.rank_equal_mult}  →  Additive rank: ${d.rank_additive_25_25_50}`,
-        `Δ rank: ${delta >= 0 ? "+" : ""}${delta} (${delta > 0 ? "rises" : delta < 0 ? "falls" : "stable"} under Ovienmhada)`];
+        `Scheme A rank: ${d.rank_equal_mult}  →  Scheme B rank: ${d.rank_additive_25_25_50}`,
+        `Δ rank: ${delta >= 0 ? "+" : ""}${delta} (${delta > 0 ? "rises" : delta < 0 ? "falls" : "stable"} under Scheme B)`];
     },
     legendOpts:{scale:divOvScale, domain:[-deltaMax, deltaMax], title:"Rank change (equal − additive)", diverging:true}
   });
@@ -654,7 +671,7 @@ buildMap({
 
 // Rank divergence sparklines table
 (function() {
-  // rank change: positive = facility rises (lower number) under Ovienmhada
+  // rank change: positive = facility rises (lower number) under Scheme B
   const rows = dataSens.map(d => {
     const mc = dataMC.find(m => m.cdcr_code === d.cdcr_code);
     return {
@@ -665,7 +682,7 @@ buildMap({
       rank_add: d.rank_additive_25_25_50,
       score_eq:  +(mc?.risk_score||0).toFixed(1),
       score_add: +(d.risk_score_additive_25_25_50||0).toFixed(1),
-      delta_rank: d.rank_equal_mult - d.rank_additive_25_25_50,  // positive = rose under Ovienmhada
+      delta_rank: d.rank_equal_mult - d.rank_additive_25_25_50,  // positive = rose under Scheme B
       hazard:      +(mc?.hazard_score||0).toFixed(2),
       exposure:    +(mc?.exposure_score||0).toFixed(2),
       vulnerability: +(mc?.vulnerability_score||0).toFixed(2),
@@ -679,9 +696,9 @@ buildMap({
   const wrap = d3.select("#ov-rank-table-wrap");
   wrap.append("div").attr("class","map-title")
     .style("margin-top","28px").style("margin-bottom","4px")
-    .text("Rank divergence: equal-weight vs. Ovienmhada additive 25/25/50 — sorted by absolute rank change");
+    .text("Rank divergence: Scheme A vs. Scheme B — sorted by absolute rank change");
   wrap.append("div").attr("class","section-note").style("margin-bottom","8px")
-    .html("Orange = facility rises in priority under Ovienmhada (vulnerability upweighted). "
+    .html("Orange = facility rises in priority under Scheme B (vulnerability upweighted). "
         + "Blue = facility falls. Stable = no bar. "
         + "Spearman r between the two ranking schemes = 0.911 (p&lt;0.0001).");
 
@@ -689,11 +706,11 @@ buildMap({
   tbl.append("thead").append("tr")
     .html("<th>Code</th><th>Facility</th>"
         + "<th class='num'>Pop</th>"
-        + "<th class='num'>Equal rank</th><th class='num'>Additive rank</th>"
+        + "<th class='num'>A rank</th><th class='num'>B rank</th>"
         + "<th class='num'>Δ rank</th>"
-        + "<th class='num'>Equal score</th><th class='num'>Additive score</th>"
+        + "<th class='num'>A score</th><th class='num'>B score</th>"
         + "<th class='num'>Hazard</th><th class='num'>Exposure</th><th class='num'>Vulnerability</th>"
-        + "<th style='padding-left:12px'>Change under Ovienmhada</th>");
+        + "<th style='padding-left:12px'>Change under Scheme B</th>");
 
   const tbody = tbl.append("tbody");
   rows.forEach(d => {
@@ -782,6 +799,210 @@ buildMap({
     `Max swing: ${d.max_swing}`],
   legendOpts:{scale:swingPurple,domain:[0,11],title:"Max rank swing"}
 });
+
+// ── Statewide VCP choropleth with CDCR prisons (Leaflet) ──────────────────
+(function() {
+  const prisonData = [{"code":"ASP","name":"Avenal State Prison","lat":35.9739,"lon":-120.1231,"risk":19.9,"tier":"Lowest","H":0.59,"E":0.47,"V":0.16},{"code":"CAL","name":"Calipatria State Prison","lat":33.1657,"lon":-115.4843,"risk":12.4,"tier":"Lowest","H":0.71,"E":0.22,"V":0.18},{"code":"CCI","name":"California Correctional Institution","lat":35.1099,"lon":-118.5703,"risk":32.3,"tier":"Moderate","H":0.54,"E":0.51,"V":0.26},{"code":"CCWF","name":"Central California Women'S Facility","lat":37.0937,"lon":-120.1527,"risk":59.7,"tier":"High","H":0.74,"E":0.43,"V":0.41},{"code":"CEN","name":"Centinela State Prison","lat":32.8234,"lon":-115.7891,"risk":5.1,"tier":"Lowest","H":0.8,"E":0.07,"V":0.2},{"code":"CHCF","name":"California Health Care Facility","lat":37.8978,"lon":-121.1906,"risk":16.2,"tier":"Lowest","H":0.66,"E":0.09,"V":0.6},{"code":"CIM","name":"California Institution For Men","lat":33.9847,"lon":-117.6824,"risk":82.4,"tier":"Highest","H":0.79,"E":0.52,"V":0.44},{"code":"CIW","name":"California Institution For Women","lat":33.9497,"lon":-117.6364,"risk":72.1,"tier":"High","H":0.72,"E":0.54,"V":0.41},{"code":"CMC","name":"California Men'S Colony","lat":35.3246,"lon":-120.6989,"risk":6.2,"tier":"Lowest","H":0.1,"E":0.33,"V":0.42},{"code":"CMF","name":"California Medical Facility","lat":38.3285,"lon":-121.9792,"risk":60.0,"tier":"High","H":0.49,"E":0.49,"V":0.55},{"code":"COR","name":"California State Prison, Corcoran","lat":36.0608,"lon":-119.5491,"risk":100.0,"tier":"Highest","H":0.87,"E":0.66,"V":0.38},{"code":"CRC","name":"California Rehabilitation Center","lat":33.9293,"lon":-117.5725,"risk":32.6,"tier":"Moderate","H":0.69,"E":0.43,"V":0.24},{"code":"CTF","name":"Correctional Training Facility","lat":36.4696,"lon":-121.3822,"risk":14.8,"tier":"Lowest","H":0.27,"E":0.37,"V":0.33},{"code":"FOL","name":"Folsom State Prison","lat":38.6954,"lon":-121.163,"risk":30.0,"tier":"Moderate","H":0.6,"E":0.44,"V":0.25},{"code":"HDSP","name":"High Desert State Prison","lat":40.4079,"lon":-120.5134,"risk":26.6,"tier":"Moderate","H":0.53,"E":0.39,"V":0.28},{"code":"ISP","name":"Ironwood State Prison","lat":33.561,"lon":-114.9261,"risk":0.0,"tier":"Lowest","H":0.93,"E":0.0,"V":0.24},{"code":"KVSP","name":"Kern Valley State Prison","lat":35.7665,"lon":-119.3254,"risk":41.5,"tier":"Moderate","H":0.79,"E":0.33,"V":0.35},{"code":"LAC","name":"California State Prison-Los Angeles County","lat":34.6936,"lon":-118.2276,"risk":47.7,"tier":"Moderate","H":0.75,"E":0.3,"V":0.47},{"code":"MCSP","name":"Mule Creek State Prison","lat":38.3707,"lon":-120.9534,"risk":29.6,"tier":"Moderate","H":0.54,"E":0.29,"V":0.42},{"code":"NKSP","name":"North Kern State Prison","lat":35.7819,"lon":-119.3099,"risk":45.6,"tier":"Moderate","H":0.81,"E":0.62,"V":0.2},{"code":"PBSP","name":"Pelican Bay State Prison","lat":41.8548,"lon":-124.1491,"risk":7.5,"tier":"Lowest","H":0.09,"E":0.65,"V":0.28},{"code":"PVSP","name":"Pleasant Valley State Prison","lat":36.1315,"lon":-120.2489,"risk":16.3,"tier":"Lowest","H":0.5,"E":0.41,"V":0.18},{"code":"RJD","name":"R J Donovan Correctional Facility","lat":32.5846,"lon":-116.9336,"risk":41.7,"tier":"Moderate","H":0.48,"E":0.37,"V":0.52},{"code":"SAC","name":"California State Prison, Sacramento","lat":38.6944,"lon":-121.1539,"risk":59.1,"tier":"High","H":0.6,"E":0.42,"V":0.52},{"code":"SATF","name":"Ca Substance Abuse Treatment Facility","lat":36.054,"lon":-119.5478,"risk":98.5,"tier":"Highest","H":0.87,"E":0.61,"V":0.41},{"code":"SCC","name":"Sierra Conservation Center","lat":37.8917,"lon":-120.5365,"risk":10.3,"tier":"Lowest","H":0.62,"E":0.49,"V":0.07},{"code":"SOL","name":"California State Prison, Solano","lat":38.3208,"lon":-121.9752,"risk":44.4,"tier":"Moderate","H":0.49,"E":0.63,"V":0.32},{"code":"SQ","name":"San Quentin State Prison","lat":37.94,"lon":-122.4904,"risk":11.3,"tier":"Lowest","H":0.36,"E":0.18,"V":0.38},{"code":"SVSP","name":"Salinas Valley State Prison","lat":36.4789,"lon":-121.3744,"risk":10.8,"tier":"Lowest","H":0.27,"E":0.23,"V":0.38},{"code":"VSP","name":"Valley State Prison","lat":37.1055,"lon":-120.1555,"risk":50.4,"tier":"High","H":0.74,"E":0.36,"V":0.42},{"code":"WSP","name":"Wasco State Prison","lat":35.5943,"lon":-119.4083,"risk":40.7,"tier":"Moderate","H":0.76,"E":0.59,"V":0.2}];
+
+  const tierColor = {Highest:"#7a1010", High:"#c44020", Moderate:"#e89050", Lowest:"#e8e0c8"};
+
+  function tractColor(v) {
+    if (v == null) return "#ccc";
+    const s = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 100]);
+    return s(v);
+  }
+
+  const map = L.map("m-vcp-state", {scrollWheelZoom: true}).setView([37.5, -119.5], 6);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  fetch("vcp_tracts_simplified.geojson")
+    .then(r => r.json())
+    .then(gj => {
+      L.geoJSON(gj, {
+        style: function(feature) {
+          const p = feature.properties;
+          const v = p.ExHeatHealth_Idx;
+          const nullHaz = p.Heat_sc_hazard_fut == null;
+          return {
+            fillColor: nullHaz ? "#b0b0b0" : tractColor(v),
+            fillOpacity: nullHaz ? 0.6 : 0.5,
+            weight: nullHaz ? 1.0 : 0.3,
+            color: nullHaz ? "#666" : "#999",
+            opacity: nullHaz ? 0.7 : 0.4,
+            dashArray: nullHaz ? "4 3" : null
+          };
+        },
+        onEachFeature: function(feature, layer) {
+          const p = feature.properties;
+          const haz = p.Heat_sc_hazard_fut != null ? p.Heat_sc_hazard_fut : "null";
+          const gq = p.Pct_GroupQuarters != null ? p.Pct_GroupQuarters.toFixed(1) + "%" : "n/a";
+          layer.bindPopup(
+            "<b>Tract " + p.GEOID + "</b><br>" +
+            "ExHeatHealth_Idx: " + (p.ExHeatHealth_Idx != null ? p.ExHeatHealth_Idx.toFixed(1) : "n/a") + "<br>" +
+            "Heat hazard (future): " + haz + "<br>" +
+            "Group quarters: " + gq
+          );
+        }
+      }).addTo(map);
+
+      // Add prison markers on top of tracts
+      prisonData.forEach(function(p) {
+        const marker = L.circleMarker([p.lat, p.lon], {
+          radius: 7,
+          fillColor: tierColor[p.tier],
+          fillOpacity: 1,
+          weight: 2,
+          color: "#333",
+          opacity: 0.9
+        }).addTo(map);
+
+        marker.bindTooltip(p.code, {
+          permanent: true,
+          direction: "top",
+          offset: [0, -8],
+          className: "prison-label"
+        });
+
+        marker.bindPopup(
+          "<b>" + p.code + "</b> — " + p.name + "<br>" +
+          "Risk score: " + p.risk + "<br>" +
+          "Tier: " + p.tier + "<br>" +
+          "Hazard: " + p.H + " | Exposure: " + p.E + " | Vulnerability: " + p.V
+        );
+      });
+
+      // Legend
+      const legend = L.control({position: "bottomright"});
+      legend.onAdd = function() {
+        const div = L.DomUtil.create("div", "");
+        div.style.cssText = "background:#fff;padding:10px 14px;border:1px solid #aaa;border-radius:4px;font:11px Georgia,serif;line-height:1.6;box-shadow:0 1px 4px rgba(0,0,0,.15)";
+        const s = d3.scaleSequential(d3.interpolateYlOrRd).domain([0, 100]);
+        let grad = "";
+        for (let i = 0; i <= 100; i += 10) grad += "," + s(i);
+        div.innerHTML =
+          "<div style='font-weight:bold;margin-bottom:4px'>VCP ExHeatHealth_Idx</div>" +
+          "<div style='display:flex;align-items:center;gap:6px;margin-bottom:6px'>" +
+            "<span>0</span>" +
+            "<span style='display:inline-block;width:100px;height:10px;background:linear-gradient(to right" + grad + ");border:1px solid #aaa'></span>" +
+            "<span>100</span>" +
+          "</div>" +
+          "<div style='font-weight:bold;margin-bottom:4px'>Prison heat risk tier</div>" +
+          "<div><span style='display:inline-block;width:10px;height:10px;background:#7a1010;border:1px solid #333;border-radius:50%;vertical-align:middle'></span> Highest</div>" +
+          "<div><span style='display:inline-block;width:10px;height:10px;background:#c44020;border:1px solid #333;border-radius:50%;vertical-align:middle'></span> High</div>" +
+          "<div><span style='display:inline-block;width:10px;height:10px;background:#e89050;border:1px solid #333;border-radius:50%;vertical-align:middle'></span> Moderate</div>" +
+          "<div><span style='display:inline-block;width:10px;height:10px;background:#e8e0c8;border:1px solid #333;border-radius:50%;vertical-align:middle'></span> Lowest</div>" +
+          "<div style='margin-top:6px;font-weight:bold;margin-bottom:4px'>Tract hazard data</div>" +
+          "<div><span style='display:inline-block;width:10px;height:10px;background:#b0b0b0;border:1px dashed #666;vertical-align:middle'></span> VCP null heat hazard</div>";
+        return div;
+      };
+      legend.addTo(map);
+    });
+})();
+
+// ── COR/SATF zoomed VCP choropleth (Leaflet) ─────────────────────────────
+(function() {
+  const corTracts = {"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"GEOID": "06031001601", "ExHeatHealth_Idx": 85.23, "Heat_sc_hazard_fut": 1.46, "Pct_GroupQuarters": 1.11, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-120.098169673878, 36.07465095238989], [-120.025966667533, 36.13040996260132], [-120.000981665534, 36.14951496581097], [-119.99533466521501, 36.15333996646221], [-119.97726566323101, 36.16801796992554], [-119.95922266118701, 36.18140797227328], [-119.958928661459, 36.18141897168924], [-119.959091661665, 36.18229097247523], [-119.958911664435, 36.209885975072424], [-119.95893766886601, 36.255472979192334], [-119.94090766724001, 36.25558698010669], [-119.92310266394901, 36.25514498160651], [-119.906198660107, 36.255329982150066], [-119.90080265985802, 36.255193982486205], [-119.898149659042, 36.25532298307329], [-119.87176565495498, 36.25537198456567], [-119.869503654849, 36.25556798515729], [-119.869498654826, 36.25532698533992], [-119.863660654711, 36.255324986017605], [-119.86059165307, 36.25538898531276], [-119.85743965338402, 36.25581598543782], [-119.850779651665, 36.25531998626287], [-119.83487364915501, 36.255260987394294], [-119.797931643126, 36.254653989559664], [-119.763932637444, 36.25461999208825], [-119.744576634424, 36.25492599342813], [-119.744264624373, 36.1525719835563], [-119.74435662263798, 36.1402929814925], [-119.744333622173, 36.138094982042965], [-119.744199622279, 36.13792098185402], [-119.71867261816001, 36.13782498348581], [-119.716285618381, 36.13801798344118], [-119.64571960658901, 36.13798798780975], [-119.636841605145, 36.13792298925501], [-119.634755604765, 36.13777998919797], [-119.60772060147399, 36.137931990274616], [-119.60752760113, 36.13783799061718], [-119.60784560024901, 36.137435990981594], [-119.60815359932198, 36.123130989343814], [-119.60827959702398, 36.0989649866917], [-119.608053597068, 36.098083987137215], [-119.608106594975, 36.079538985526405], [-119.60780759342802, 36.06527998374705], [-119.57192258738299, 36.06539598616616], [-119.57192058593701, 36.05076298442832], [-119.536173579984, 36.05078698666605], [-119.53606057910801, 36.03858698513088], [-119.53618757214302, 35.963419977998264], [-119.53739157244, 35.963351977670214], [-119.53743957032401, 35.94893297674557], [-119.537721569458, 35.93488997510192], [-119.53763856871899, 35.927514974647806], [-119.537902565615, 35.89152597043706], [-119.53776156245502, 35.8624869686677], [-119.537837558131, 35.818163963131134], [-119.538132555887, 35.78990296015763], [-119.608432566642, 35.78978295680573], [-119.73382758687201, 35.78895194802209], [-119.760609591342, 35.78957294594932], [-119.796262597583, 35.789648943557715], [-119.868848609632, 35.78898193953557], [-119.869765609874, 35.78993493988911], [-119.88372461371901, 35.80828994104089], [-119.885918613155, 35.811487940883744], [-119.89002861578501, 35.82379694087018], [-119.89059161602502, 35.82576094227251], [-119.890563615538, 35.82651394164179], [-119.889024616403, 35.8355559421114], [-119.88889161813, 35.84807094412192], [-119.889427617707, 35.84939494404413], [-119.89167161827, 35.8522619440262], [-119.89230361900502, 35.85347694442428], [-119.892562619471, 35.854389944850844], [-119.892498618999, 35.85807694474426], [-119.891844619421, 35.86497094512787], [-119.891859620388, 35.866390945014906], [-119.89405562127001, 35.87486394646821], [-119.903158623743, 35.88897594701355], [-119.912805627088, 35.90435494837026], [-119.91576562805099, 35.907230948219855], [-119.91782362884202, 35.912734948578944], [-119.92219362996599, 35.921895949224975], [-119.92308863046699, 35.923178948903946], [-119.93042863350001, 35.93601895028064], [-119.930487633051, 35.93675294936952], [-119.92993763323, 35.9393199505854], [-119.92993963377798, 35.94019195036079], [-119.941611636504, 35.962064951136995], [-119.941708636589, 35.962631951784694], [-119.94153263776, 35.96362895190905], [-119.96150464252, 35.983060952619304], [-119.98162564814099, 36.00409995358094], [-119.984179649223, 36.00616095304657], [-119.98817164915802, 36.0088809537303], [-120.01936065636, 36.02885195332897], [-120.05301266350898, 36.047462952783135], [-120.098169673878, 36.07465095238989]]]}}, {"type": "Feature", "properties": {"GEOID": "06031001300", "ExHeatHealth_Idx": 93.89, "Heat_sc_hazard_fut": 1.55, "Pct_GroupQuarters": 0.14, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.60819459663502, 36.09935398619526], [-119.60815359932198, 36.123130989343814], [-119.60784560024901, 36.137435990981594], [-119.60752760113, 36.13783799061718], [-119.576031596477, 36.137967992166594], [-119.536392589251, 36.1378979950423], [-119.53626458830601, 36.12495599449268], [-119.53650158813198, 36.12371399345233], [-119.53647958749302, 36.12075299384576], [-119.536361587492, 36.120340993704055], [-119.536455586305, 36.10796299277656], [-119.536213583761, 36.087417991053194], [-119.536599582652, 36.07110398850369], [-119.53629158178201, 36.069565988527025], [-119.536280581911, 36.06527598846828], [-119.543293582909, 36.065070987257506], [-119.571910587688, 36.06515398568316], [-119.57192258738299, 36.06539598616616], [-119.57274958811202, 36.06539898588842], [-119.60780759342802, 36.06527998374705], [-119.608106594975, 36.079538985526405], [-119.608053597068, 36.098083987137215], [-119.60827959702398, 36.0989649866917], [-119.60819459663502, 36.09935398619526]], [[-119.581100594691, 36.11587699039141], [-119.580990591493, 36.09444298782199], [-119.57203559005599, 36.094443988811946], [-119.57192858902799, 36.079870988062694], [-119.554166586292, 36.07983298839892], [-119.55426758926899, 36.10529699138412], [-119.558785589634, 36.10527999142039], [-119.55900359009199, 36.10548099037278], [-119.562204590182, 36.105477990002186], [-119.56247759089099, 36.10532699007322], [-119.572086591906, 36.105353989827094], [-119.572144592531, 36.11628799074918], [-119.58110259434102, 36.116268990289235], [-119.581100594691, 36.11587699039141]]]}}, {"type": "Feature", "properties": {"GEOID": "06031001200", "ExHeatHealth_Idx": 67.91, "Heat_sc_hazard_fut": 1.36, "Pct_GroupQuarters": 0.0, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.74471363918302, 36.2988529976399], [-119.72716163651, 36.2983489980446], [-119.709268633355, 36.29849399995554], [-119.65480062369302, 36.29830100380868], [-119.636964621338, 36.298701004103684], [-119.61896861914899, 36.298398005840575], [-119.60075161612899, 36.2984960068604], [-119.60078961755998, 36.31641000811759], [-119.600984618452, 36.32800501007756], [-119.59170161695198, 36.32806701094549], [-119.591675617013, 36.32771401062113], [-119.57837361491599, 36.32786801165018], [-119.57365761418401, 36.32821701202406], [-119.493300601802, 36.328211016762964], [-119.475376598685, 36.32767801855138], [-119.475246597192, 36.31337801704306], [-119.474379595382, 36.29789401561354], [-119.47437059426298, 36.28527201409568], [-119.47461959288698, 36.26903001248469], [-119.510582598749, 36.26911600949651], [-119.529370600609, 36.269855009028205], [-119.529364598964, 36.239631005263405], [-119.529162595704, 36.215846003241225], [-119.529153587399, 36.13791899621743], [-119.60752760113, 36.13783799061718], [-119.607861600143, 36.13794199100326], [-119.60808560134699, 36.13783199017215], [-119.634755604765, 36.13777998919797], [-119.636841605145, 36.13792298925501], [-119.64571960658901, 36.13798798780975], [-119.716285618381, 36.13801798344118], [-119.71867261816001, 36.13782498348581], [-119.744199622279, 36.13792098185402], [-119.744333622173, 36.138094982042965], [-119.74435662263798, 36.1402929814925], [-119.744264624373, 36.1525719835563], [-119.74471363918302, 36.2988529976399]]]}}, {"type": "Feature", "properties": {"GEOID": "06031001500", "ExHeatHealth_Idx": 80.3, "Heat_sc_hazard_fut": 1.58, "Pct_GroupQuarters": 0.2, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.58110259434102, 36.116268990289235], [-119.572144592531, 36.11628799074918], [-119.572086591906, 36.105353989827094], [-119.56538059105502, 36.105342989901594], [-119.56538659000499, 36.10169998983559], [-119.56485759099802, 36.10169199063957], [-119.56491359017701, 36.09446098894273], [-119.565370589213, 36.09445898914105], [-119.565366589015, 36.09079098916408], [-119.572046590825, 36.09079498822818], [-119.57203559005599, 36.094443988811946], [-119.580990591493, 36.09444298782199], [-119.58110259434102, 36.116268990289235]]]}}, {"type": "Feature", "properties": {"GEOID": "06031001402", "ExHeatHealth_Idx": 91.49, "Heat_sc_hazard_fut": 1.48, "Pct_GroupQuarters": 0.16, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.565353590393, 36.10265098980199], [-119.56538059105502, 36.105342989901594], [-119.55900359009199, 36.10548099037278], [-119.558785589634, 36.10527999142039], [-119.55426758926899, 36.10529699138412], [-119.55430758855398, 36.09442798966748], [-119.560876589138, 36.094438989669406], [-119.560869588567, 36.09077198979578], [-119.565366589015, 36.09079098916408], [-119.565370589213, 36.09445898914105], [-119.56491359017701, 36.09446098894273], [-119.56485759099802, 36.10169199063957], [-119.56538659000499, 36.10169998983559], [-119.565353590393, 36.10265098980199]]]}}, {"type": "Feature", "properties": {"GEOID": "06031001401", "ExHeatHealth_Idx": 83.32, "Heat_sc_hazard_fut": 1.53, "Pct_GroupQuarters": 0.0, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.572046590825, 36.09079498822818], [-119.560869588567, 36.09077198979578], [-119.560876589138, 36.094438989669406], [-119.55430758855398, 36.09442798966748], [-119.554166586292, 36.07983298839892], [-119.57192858902799, 36.079870988062694], [-119.572046590825, 36.09079498822818]]]}}, {"type": "Feature", "properties": {"GEOID": "06107004200", "ExHeatHealth_Idx": 76.93, "Heat_sc_hazard_fut": 1.36, "Pct_GroupQuarters": 0.06, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.537710569588, 35.9351139751644], [-119.53743957032401, 35.94893297674557], [-119.53739157244, 35.963351977670214], [-119.53618757214302, 35.963419977998264], [-119.53612057578898, 36.00725498269971], [-119.323700541962, 36.00775999623371], [-119.303747538366, 36.007636998143724], [-119.214671523651, 36.007778003382214], [-119.21463752511302, 36.02231100460058], [-119.143555513835, 36.02257100979429], [-119.125502510846, 36.0224350107615], [-119.12548750987901, 36.022592011280224], [-119.121712509679, 36.02240601069161], [-119.10747350724901, 36.02229201194193], [-119.10743850169901, 35.964294005743675], [-119.10786349465899, 35.891770998619116], [-119.25042451867202, 35.891900988937174], [-119.25048652129101, 35.919294992391414], [-119.252786521032, 35.91823299190448], [-119.25348952191199, 35.91706399165613], [-119.254642522156, 35.91665399174611], [-119.25506352120702, 35.91582899107627], [-119.255738520701, 35.915645991574095], [-119.25981452209798, 35.915509991566424], [-119.26144552219301, 35.91425099059032], [-119.264959523175, 35.913908990663984], [-119.26557752276801, 35.91370199004785], [-119.266195522361, 35.912968990529826], [-119.266729523187, 35.91285399042383], [-119.27187652391301, 35.91295599060211], [-119.27448952454701, 35.912503990053416], [-119.274983524292, 35.91257398981479], [-119.277637524933, 35.913883990034876], [-119.27821752489102, 35.913908989936395], [-119.279843524963, 35.91343298934801], [-119.28369652587898, 35.913730989330205], [-119.28592752602299, 35.91365698981054], [-119.28697352703502, 35.913998989371116], [-119.28903652694899, 35.91435998936474], [-119.29228852709302, 35.91320798932317], [-119.29517152716501, 35.9128819881748], [-119.303782529543, 35.91240698834843], [-119.30374052971102, 35.920819988376984], [-119.339888535521, 35.92078198619813], [-119.34003253546102, 35.9210289869397], [-119.340068536344, 35.92718698767917], [-119.33989953898501, 35.94979598897597], [-119.38450354646498, 35.949729986940945], [-119.38459654545301, 35.942736985133884], [-119.384863545417, 35.94251298558323], [-119.393364546394, 35.94252598501606], [-119.44217055476902, 35.94186298212422], [-119.42633454988399, 35.92014998105366], [-119.42872655058501, 35.920216980440976], [-119.42920555026102, 35.92042298117663], [-119.44634255462901, 35.93426998155506], [-119.447074554025, 35.93456698074219], [-119.46381155746201, 35.93465298022507], [-119.47354255867499, 35.934324979225785], [-119.47372655969698, 35.93478997942791], [-119.501146563851, 35.93493697729452], [-119.53770656939001, 35.93478897495373], [-119.537710569588, 35.9351139751644]]]}}, {"type": "Feature", "properties": {"GEOID": "06107002100", "ExHeatHealth_Idx": 72.36, "Heat_sc_hazard_fut": 1.38, "Pct_GroupQuarters": 0.66, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.529395600723, 36.260005008009394], [-119.529370600609, 36.269855009028205], [-119.510582598749, 36.26911600949651], [-119.47461959288698, 36.26903001248469], [-119.47437059426298, 36.28527201409568], [-119.474379595382, 36.29789401561354], [-119.447760591119, 36.29778701671181], [-119.38476758019101, 36.29817702127747], [-119.38254457954498, 36.2935850212358], [-119.377059577811, 36.28514202097513], [-119.36720257530298, 36.27052601975947], [-119.36393857366701, 36.266565019328176], [-119.362312573596, 36.26370501908874], [-119.359811572217, 36.25841801911531], [-119.35893657270599, 36.25725201920656], [-119.35622557126399, 36.2544710186333], [-119.34574156804301, 36.240222017794274], [-119.355359570177, 36.240185017377634], [-119.351938568183, 36.22559001586281], [-119.35612356846201, 36.2257000160019], [-119.384603573872, 36.22558401416417], [-119.384346571259, 36.20338601211241], [-119.42115957651801, 36.20347600944593], [-119.43912257999298, 36.20305400850573], [-119.45729058261001, 36.20315400732994], [-119.475475585843, 36.2028600059429], [-119.49302158866801, 36.20335700412229], [-119.49311258710802, 36.19587900431697], [-119.529081593717, 36.19649200134339], [-119.529216593436, 36.19614300126792], [-119.529162595704, 36.215846003241225], [-119.529395600723, 36.260005008009394]]]}}, {"type": "Feature", "properties": {"GEOID": "06107003100", "ExHeatHealth_Idx": 75.96, "Heat_sc_hazard_fut": 1.43, "Pct_GroupQuarters": 0.0, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.536599582652, 36.07110398850369], [-119.536213583761, 36.087417991053194], [-119.536455586305, 36.10796299277656], [-119.536361587492, 36.120340993704055], [-119.53647958749302, 36.12075299384576], [-119.53650158813198, 36.12371399345233], [-119.53626458830601, 36.12495599449268], [-119.536392589251, 36.1378979950423], [-119.529153587399, 36.13791899621743], [-119.529082590847, 36.16714499877796], [-119.529253592348, 36.18175900006771], [-119.52914259291799, 36.18242700032634], [-119.529216593436, 36.19614300126792], [-119.529081593717, 36.19649200134339], [-119.49311258710802, 36.19587900431697], [-119.49302158866801, 36.20335700412229], [-119.475475585843, 36.2028600059429], [-119.45729058261001, 36.20315400732994], [-119.43912257999298, 36.20305400850573], [-119.42115957651801, 36.20347600944593], [-119.384346571259, 36.20338601211241], [-119.3841895709, 36.20061401152829], [-119.384030570891, 36.200479011278624], [-119.384303570703, 36.20018501144312], [-119.384340570513, 36.19973401097478], [-119.38406656908, 36.181781009675376], [-119.32871156021201, 36.18218101282497], [-119.328963560107, 36.17912101298624], [-119.32932155940901, 36.177154012584005], [-119.33200755893999, 36.1640930115832], [-119.333182558026, 36.160759011081424], [-119.333308558423, 36.158687010582945], [-119.33300055845102, 36.157029010572266], [-119.326941554811, 36.13689400926969], [-119.325893554149, 36.13282200836243], [-119.32221755009, 36.09391500489412], [-119.32291055002601, 36.09420900481676], [-119.323866550626, 36.09529500561769], [-119.32454354977, 36.095638005325384], [-119.32708155095901, 36.09641600486122], [-119.33069155130302, 36.09689600555624], [-119.33551455306302, 36.09705500393778], [-119.33968955329601, 36.09774100391258], [-119.35478455586899, 36.097772003530885], [-119.358554556046, 36.09623300303028], [-119.361611557094, 36.09449800232318], [-119.366335556425, 36.093038001388464], [-119.375913558376, 36.092512000887915], [-119.394024561091, 36.09112200049943], [-119.403187563838, 36.09398499985969], [-119.40497356374401, 36.09393200005812], [-119.405711562987, 36.093562998819245], [-119.40798056366401, 36.092959998961284], [-119.409737564156, 36.09322799954999], [-119.41047556429702, 36.09361299949783], [-119.411099564636, 36.09363399945389], [-119.41385056446398, 36.09263799940194], [-119.414615565269, 36.09304699884372], [-119.41589256536102, 36.09297399929102], [-119.416403565722, 36.09329099825833], [-119.41677156507, 36.093312998578895], [-119.41699856485002, 36.0931289994038], [-119.41686656460598, 36.09177199871713], [-119.41715156590999, 36.09135799910918], [-119.417804564764, 36.09087399819468], [-119.4178345658, 36.09059799796472], [-119.41761056549402, 36.09029899892054], [-119.41770056500701, 36.08972399834362], [-119.419372566008, 36.08948799773144], [-119.41996756513602, 36.089623997813945], [-119.42022456505401, 36.08925599773082], [-119.42062156561299, 36.08904799849978], [-119.42305956634401, 36.08883299782269], [-119.42385356566402, 36.08830199795929], [-119.424817565762, 36.08813799829644], [-119.42535856625999, 36.08760899806991], [-119.42572556668202, 36.08751499768858], [-119.42779756681699, 36.087690997769975], [-119.428165567063, 36.08748299730148], [-119.42859356668501, 36.0867229971649], [-119.429585566372, 36.08688199725311], [-119.42980856685298, 36.0871559974766], [-119.429522566623, 36.0877739970075], [-119.429635566601, 36.087864997487785], [-119.431348567609, 36.087772996658714], [-119.43188156681299, 36.08829799731647], [-119.432721567063, 36.088343997074425], [-119.43303056685902, 36.088778997840464], [-119.433592568172, 36.08882399698135], [-119.43508056725301, 36.08827399708499], [-119.435473567614, 36.08838799757498], [-119.435920567502, 36.08882299664581], [-119.436735567637, 36.088844996765076], [-119.437773568253, 36.088180996390896], [-119.43825056827899, 36.08813399691933], [-119.441339568215, 36.088544997246856], [-119.44190156863002, 36.088154996887425], [-119.442037568174, 36.087307996383394], [-119.442735569032, 36.08634599689439], [-119.442815569398, 36.085451996150375], [-119.44329256852501, 36.08497099632178], [-119.44387856833099, 36.08393999599918], [-119.44542956895802, 36.08313899571702], [-119.44571156898999, 36.082612995763895], [-119.44638756831, 36.082131995989414], [-119.44666956924002, 36.08169699546747], [-119.447528568858, 36.08122899570833], [-119.447935569462, 36.080511995481736], [-119.44968756903201, 36.079927995510154], [-119.44959556896998, 36.07910699526899], [-119.449864569482, 36.07851299471628], [-119.449693568879, 36.0778689949877], [-119.45033956896, 36.0762569948346], [-119.450320569592, 36.07554699491371], [-119.45007956866901, 36.074731994858894], [-119.454543569505, 36.07359599427593], [-119.456958569772, 36.072746994129815], [-119.458395570596, 36.07118999386138], [-119.459579569904, 36.07102999415237], [-119.46031257002302, 36.07114399350649], [-119.46045356959, 36.070548993956926], [-119.460622569644, 36.07045699319632], [-119.461101570218, 36.07050299395299], [-119.462173570271, 36.07102899359049], [-119.46313157052099, 36.070959993269824], [-119.46386457064, 36.07111999312117], [-119.464907571279, 36.069952992961085], [-119.466091570586, 36.06940299320623], [-119.466823571778, 36.06935699325842], [-119.467162570814, 36.069928992938614], [-119.46786757134402, 36.070043993010586], [-119.468233571042, 36.06983699290511], [-119.468233571042, 36.06963099356069], [-119.468740571205, 36.069150992657], [-119.469332571757, 36.06892199322694], [-119.469304571269, 36.06828099299293], [-119.47029057200702, 36.06752499338861], [-119.471248572257, 36.067501993231964], [-119.471727571932, 36.066814992337], [-119.47384257262398, 36.066539992498896], [-119.47542057211702, 36.0659669929642], [-119.475502571234, 36.06518899198337], [-119.47585957160902, 36.06443499227647], [-119.47619457224401, 36.064296991624936], [-119.47691957196702, 36.06431999199239], [-119.477141571724, 36.0641609920298], [-119.47716557201402, 36.063794991716975], [-119.476905572621, 36.06326899236078], [-119.47690257224801, 36.062994991684185], [-119.477123572181, 36.0627429916667], [-119.478627572054, 36.06185199184977], [-119.479436572341, 36.06203399170492], [-119.47975857255601, 36.06079999123683], [-119.480568572668, 36.06079999123684], [-119.480843573028, 36.06031999164104], [-119.48120557252798, 36.06020599112512], [-119.481540573162, 36.06050299137844], [-119.48181857299599, 36.06047999134751], [-119.48287357333, 36.05945199159375], [-119.48401657263, 36.05906299144317], [-119.48446257269399, 36.05874299102581], [-119.484707572916, 36.058147990637224], [-119.4857645729, 36.05730099081609], [-119.486739572869, 36.056844990601206], [-119.48754057276, 36.05565599006177], [-119.49050557374602, 36.05613699053549], [-119.49093957411398, 36.05602198974298], [-119.491205573355, 36.055634990129676], [-119.491110573819, 36.055042990325], [-119.49166057363898, 36.05504399036398], [-119.49222157333098, 36.05424798943242], [-119.49320357387002, 36.054180989744935], [-119.493782574004, 36.054411990052905], [-119.49415857464601, 36.0542989897417], [-119.495037574354, 36.053386990372616], [-119.49549857448702, 36.05331998995213], [-119.496110574232, 36.053664989145126], [-119.49617457380602, 36.05396398949805], [-119.497145574475, 36.05398799003331], [-119.49759557473699, 36.05371298966455], [-119.49759557473699, 36.05332398946943], [-119.49782057486802, 36.05295798958768], [-119.498158574976, 36.052911989466416], [-119.498553574088, 36.05314098901503], [-119.49875057463, 36.0530489896856], [-119.49863757465198, 36.05236298903698], [-119.498862574783, 36.052087989526825], [-119.499230575029, 36.05206598929213], [-119.49956957406401, 36.0528439893008], [-119.499879574584, 36.053094989726894], [-119.50141157494402, 36.053006989150724], [-119.501748575228, 36.052800989315266], [-119.50231357511801, 36.051772988748844], [-119.503610575301, 36.051086989325995], [-119.503638575789, 36.05081198898922], [-119.536173579984, 36.05078698666605], [-119.536288583205, 36.069455989213814], [-119.536599582652, 36.07110398850369]]]}}, {"type": "Feature", "properties": {"GEOID": "06107003201", "ExHeatHealth_Idx": 89.34, "Heat_sc_hazard_fut": 1.42, "Pct_GroupQuarters": 0.0, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.536173579984, 36.05078698666605], [-119.503638575789, 36.05081198898922], [-119.503610575301, 36.051086989325995], [-119.50231357511801, 36.051772988748844], [-119.501748575228, 36.052800989315266], [-119.50141157494402, 36.053006989150724], [-119.499879574584, 36.053094989726894], [-119.49956957406401, 36.0528439893008], [-119.499230575029, 36.05206598929213], [-119.498862574783, 36.052087989526825], [-119.49863757465198, 36.05236298903698], [-119.49875057463, 36.0530489896856], [-119.498553574088, 36.05314098901503], [-119.498158574976, 36.052911989466416], [-119.49782057486802, 36.05295798958768], [-119.49759557473699, 36.05332398946943], [-119.49759557473699, 36.05371298966455], [-119.497145574475, 36.05398799003331], [-119.49617457380602, 36.05396398949805], [-119.496110574232, 36.053664989145126], [-119.49549857448702, 36.05331998995213], [-119.495037574354, 36.053386990372616], [-119.49415857464601, 36.0542989897417], [-119.493782574004, 36.054411990052905], [-119.49320357387002, 36.054180989744935], [-119.49222157333098, 36.05424798943242], [-119.49166057363898, 36.05504399036398], [-119.491110573819, 36.055042990325], [-119.491205573355, 36.055634990129676], [-119.49093957411398, 36.05602198974298], [-119.49050557374602, 36.05613699053549], [-119.48754057276, 36.05565599006177], [-119.486739572869, 36.056844990601206], [-119.4857645729, 36.05730099081609], [-119.484707572916, 36.058147990637224], [-119.48446257269399, 36.05874299102581], [-119.48401657263, 36.05906299144317], [-119.48287357333, 36.05945199159375], [-119.48181857299599, 36.06047999134751], [-119.481540573162, 36.06050299137844], [-119.48120557252798, 36.06020599112512], [-119.480843573028, 36.06031999164104], [-119.480568572668, 36.06079999123684], [-119.47975857255601, 36.06079999123683], [-119.479436572341, 36.06203399170492], [-119.478627572054, 36.06185199184977], [-119.477123572181, 36.0627429916667], [-119.47690257224801, 36.062994991684185], [-119.476905572621, 36.06326899236078], [-119.47716557201402, 36.063794991716975], [-119.477141571724, 36.0641609920298], [-119.47691957196702, 36.06431999199239], [-119.47619457224401, 36.064296991624936], [-119.47585957160902, 36.06443499227647], [-119.475502571234, 36.06518899198337], [-119.47542057211702, 36.0659669929642], [-119.47384257262398, 36.066539992498896], [-119.471727571932, 36.066814992337], [-119.471248572257, 36.067501993231964], [-119.47029057200702, 36.06752499338861], [-119.469304571269, 36.06828099299293], [-119.469332571757, 36.06892199322694], [-119.468740571205, 36.069150992657], [-119.468233571042, 36.06963099356069], [-119.468233571042, 36.06983699290511], [-119.46786757134402, 36.070043993010586], [-119.467162570814, 36.069928992938614], [-119.466823571778, 36.06935699325842], [-119.466091570586, 36.06940299320623], [-119.464907571279, 36.069952992961085], [-119.46386457064, 36.07111999312117], [-119.46313157052099, 36.070959993269824], [-119.462173570271, 36.07102899359049], [-119.461101570218, 36.07050299395299], [-119.460622569644, 36.07045699319632], [-119.46045356959, 36.070548993956926], [-119.46031257002302, 36.07114399350649], [-119.459579569904, 36.07102999415237], [-119.458395570596, 36.07118999386138], [-119.456958569772, 36.072746994129815], [-119.454543569505, 36.07359599427593], [-119.45007956866901, 36.074731994858894], [-119.450320569592, 36.07554699491371], [-119.45033956896, 36.0762569948346], [-119.449693568879, 36.0778689949877], [-119.449864569482, 36.07851299471628], [-119.44959556896998, 36.07910699526899], [-119.44968756903201, 36.079927995510154], [-119.447935569462, 36.080511995481736], [-119.447528568858, 36.08122899570833], [-119.44666956924002, 36.08169699546747], [-119.44638756831, 36.082131995989414], [-119.44571156898999, 36.082612995763895], [-119.44542956895802, 36.08313899571702], [-119.44387856833099, 36.08393999599918], [-119.44329256852501, 36.08497099632178], [-119.442815569398, 36.085451996150375], [-119.442735569032, 36.08634599689439], [-119.442037568174, 36.087307996383394], [-119.44190156863002, 36.088154996887425], [-119.441339568215, 36.088544997246856], [-119.43825056827899, 36.08813399691933], [-119.437773568253, 36.088180996390896], [-119.436735567637, 36.088844996765076], [-119.435920567502, 36.08882299664581], [-119.435473567614, 36.08838799757498], [-119.43508056725301, 36.08827399708499], [-119.433592568172, 36.08882399698135], [-119.43303056685902, 36.088778997840464], [-119.432721567063, 36.088343997074425], [-119.43188156681299, 36.08829799731647], [-119.431348567609, 36.087772996658714], [-119.429635566601, 36.087864997487785], [-119.429522566623, 36.0877739970075], [-119.42980856685298, 36.0871559974766], [-119.429585566372, 36.08688199725311], [-119.42859356668501, 36.0867229971649], [-119.428165567063, 36.08748299730148], [-119.42779756681699, 36.087690997769975], [-119.42572556668202, 36.08751499768858], [-119.42535856625999, 36.08760899806991], [-119.424817565762, 36.08813799829644], [-119.42385356566402, 36.08830199795929], [-119.42305956634401, 36.08883299782269], [-119.42062156561299, 36.08904799849978], [-119.42022456505401, 36.08925599773082], [-119.41996756513602, 36.089623997813945], [-119.419372566008, 36.08948799773144], [-119.41770056500701, 36.08972399834362], [-119.41761056549402, 36.09029899892054], [-119.4178345658, 36.09059799796472], [-119.417804564764, 36.09087399819468], [-119.41715156590999, 36.09135799910918], [-119.41686656460598, 36.09177199871713], [-119.41699856485002, 36.0931289994038], [-119.41677156507, 36.093312998578895], [-119.416403565722, 36.09329099825833], [-119.41589256536102, 36.09297399929102], [-119.414615565269, 36.09304699884372], [-119.41385056446398, 36.09263799940194], [-119.411099564636, 36.09363399945389], [-119.41047556429702, 36.09361299949783], [-119.409737564156, 36.09322799954999], [-119.40798056366401, 36.092959998961284], [-119.405711562987, 36.093562998819245], [-119.40497356374401, 36.09393200005812], [-119.403187563838, 36.09398499985969], [-119.394024561091, 36.09112200049943], [-119.375913558376, 36.092512000887915], [-119.366335556425, 36.093038001388464], [-119.361611557094, 36.09449800232318], [-119.358554556046, 36.09623300303028], [-119.35478455586899, 36.097772003530885], [-119.33968955329601, 36.09774100391258], [-119.33551455306302, 36.09705500393778], [-119.33069155130302, 36.09689600555624], [-119.32708155095901, 36.09641600486122], [-119.32454354977, 36.095638005325384], [-119.323866550626, 36.09529500561769], [-119.32291055002601, 36.09420900481676], [-119.322428549977, 36.093899004916096], [-119.31188054897902, 36.09451800540919], [-119.29589054590501, 36.096943007047], [-119.291653545748, 36.098181007464916], [-119.286127544006, 36.0989960083281], [-119.27927354391498, 36.100718008947005], [-119.276297543058, 36.101105008849075], [-119.27454054256701, 36.10158600865478], [-119.273197542353, 36.10247800846489], [-119.269174542456, 36.10391900910789], [-119.26590254132299, 36.10547400982979], [-119.26550954096201, 36.10579400953407], [-119.264391541777, 36.10741900984668], [-119.26346554131402, 36.10826601060251], [-119.26234254210598, 36.108677010150075], [-119.254189540385, 36.109041011144484], [-119.24989353977801, 36.10953901075725], [-119.249863539641, 36.11047801163283], [-119.24960954009602, 36.110958011329], [-119.24850653918301, 36.111348011008594], [-119.24313753869899, 36.11130501252707], [-119.241075537711, 36.111557012220814], [-119.23232053629002, 36.111920012889684], [-119.23232453379302, 36.0802480092193], [-119.19673452820001, 36.08017101197018], [-119.196765526365, 36.065701010352605], [-119.16108552036, 36.06574801306737], [-119.161072519941, 36.05133101145658], [-119.16146951780502, 36.037028009357584], [-119.161499517044, 36.022453008745], [-119.21463752511302, 36.02231100460058], [-119.214671523651, 36.007778003382214], [-119.303747538366, 36.007636998143724], [-119.323700541962, 36.00775999623371], [-119.53612057578898, 36.00725498269971], [-119.536173579984, 36.05078698666605]]]}}, {"type": "Feature", "properties": {"GEOID": "06107004302", "ExHeatHealth_Idx": 88.12, "Heat_sc_hazard_fut": 1.43, "Pct_GroupQuarters": 0.0, "is_prison_tract": false}, "geometry": {"type": "Polygon", "coordinates": [[[-119.538072556511, 35.797060961098595], [-119.537837558131, 35.818163963131134], [-119.53776156245502, 35.8624869686677], [-119.537902565615, 35.89152597043706], [-119.537731566809, 35.90631397197026], [-119.53770656939001, 35.93478897495373], [-119.485174561218, 35.934893979173886], [-119.47372655969698, 35.93478997942791], [-119.47354255867499, 35.934324979225785], [-119.46381155746201, 35.93465298022507], [-119.447074554025, 35.93456698074219], [-119.44634255462901, 35.93426998155506], [-119.42920555026102, 35.92042298117663], [-119.42872655058501, 35.920216980440976], [-119.42633454988399, 35.92014998105366], [-119.44217055476902, 35.94186298212422], [-119.393364546394, 35.94252598501606], [-119.384863545417, 35.94251298558323], [-119.38459654545301, 35.942736985133884], [-119.38450354646498, 35.949729986940945], [-119.33989953898501, 35.94979598897597], [-119.340068536344, 35.92718698767917], [-119.34003253546102, 35.9210289869397], [-119.339888535521, 35.92078198619813], [-119.30374052971102, 35.920819988376984], [-119.303782529543, 35.91240698834843], [-119.29517152716501, 35.9128819881748], [-119.29228852709302, 35.91320798932317], [-119.28903652694899, 35.91435998936474], [-119.28697352703502, 35.913998989371116], [-119.28592752602299, 35.91365698981054], [-119.28369652587898, 35.913730989330205], [-119.28136952547501, 35.913504989046224], [-119.276393522656, 35.89188798773188], [-119.28589352389099, 35.89189098750641], [-119.28595852329, 35.87732598605097], [-119.27708752151901, 35.8773549862877], [-119.277260519975, 35.86270598442347], [-119.269353518301, 35.862684984813676], [-119.26751351796901, 35.85473798437868], [-119.266941517509, 35.85478598433823], [-119.265347517224, 35.8554209846762], [-119.25936751592101, 35.85556798510501], [-119.250338514865, 35.85546798529361], [-119.25019851332601, 35.83401298381149], [-119.25029050889601, 35.79278497984959], [-119.250179509466, 35.792383979112316], [-119.249308508356, 35.79108597940554], [-119.24920250895, 35.790453979325484], [-119.538132555887, 35.78990296015763], [-119.538072556511, 35.797060961098595]]]}}, {"type": "Feature", "properties": {"GEOID": "06031980100", "ExHeatHealth_Idx": 79.57, "Heat_sc_hazard_fut": null, "Pct_GroupQuarters": 100.0, "is_prison_tract": true}, "geometry": {"type": "Polygon", "coordinates": [[[-119.571902586393, 36.05403898470107], [-119.571910587688, 36.06515398568316], [-119.543293582909, 36.065070987257506], [-119.536280581911, 36.06527598846828], [-119.536173579984, 36.05078698666605], [-119.57192058593701, 36.05076298442832], [-119.571902586393, 36.05403898470107]]]}}]};
+
+  // Color scale
+  function vcpColor(v) {
+    // YlOrRd-ish: 60=yellow, 100=dark red
+    const t = Math.max(0, Math.min(1, (v - 60) / 40));
+    const r = Math.round(255);
+    const g = Math.round(255 - t * 200);
+    const b = Math.round(80 - t * 60);
+    return `rgb(${r},${g},${b})`;
+  }
+
+  const map = L.map("m-vcp-zoom", {scrollWheelZoom: true}).setView([36.057, -119.55], 11);
+
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; OpenStreetMap, &copy; CARTO',
+    maxZoom: 18
+  }).addTo(map);
+
+  // Choropleth layer
+  L.geoJSON(corTracts, {
+    style: function(feature) {
+      const p = feature.properties;
+      if (p.is_prison_tract) {
+        return {
+          fillColor: "#a0a0a0",
+          fillOpacity: 0.6,
+          color: "#333",
+          weight: 1.5,
+          dashArray: "5,3"
+        };
+      }
+      return {
+        fillColor: vcpColor(p.ExHeatHealth_Idx),
+        fillOpacity: 0.65,
+        color: "#fff",
+        weight: 1.5
+      };
+    },
+    onEachFeature: function(feature, layer) {
+      const p = feature.properties;
+      let html;
+      if (p.is_prison_tract) {
+        html = `<b>Tract ${p.GEOID}</b><br>Prison tract (100% group quarters)<br>VCP ExHeatHealth_Idx: ${p.ExHeatHealth_Idx}<br>VCP Heat_sc_hazard_fut: <b>null</b>`;
+      } else {
+        html = `<b>Tract ${p.GEOID}</b><br>VCP ExHeatHealth_Idx: ${p.ExHeatHealth_Idx}<br>VCP Heat hazard (future): ${p.Heat_sc_hazard_fut}<br>Group quarters: ${p.Pct_GroupQuarters.toFixed(1)}%`;
+      }
+      layer.bindPopup(html, {className: "leaflet-popup"});
+      layer.on("mouseover", function() { this.setStyle({weight: 3, color: "#333"}); });
+      layer.on("mouseout", function() {
+        const isPrison = feature.properties.is_prison_tract;
+        this.setStyle({weight: isPrison ? 1.5 : 1.5, color: isPrison ? "#333" : "#fff"});
+      });
+    }
+  }).addTo(map);
+
+  // Prison markers
+  const prisons = [
+    {code: "COR", lat: 36.060818, lon: -119.549121, risk: 100.0},
+    {code: "SATF", lat: 36.053959, lon: -119.547821, risk: 98.5}
+  ];
+
+  prisons.forEach(p => {
+    const marker = L.circleMarker([p.lat, p.lon], {
+      radius: 8,
+      fillColor: "#7a1010",
+      fillOpacity: 1,
+      color: "#fff",
+      weight: 2.5
+    }).addTo(map);
+    marker.bindPopup(`<b>${p.code}</b><br>Risk score: ${p.risk} (Highest)<br>VCP heat hazard: null (100% group quarters)<br>VCP ExHeatHealth_Idx: 79.6`);
+    marker.bindTooltip(p.code, {permanent: true, direction: "right", offset: [8, 0],
+      className: "prison-label"});
+  });
+
+  // Legend
+  const legend = L.control({position: "bottomright"});
+  legend.onAdd = function() {
+    const div = L.DomUtil.create("div");
+    div.style.cssText = "background:#fff;padding:8px 12px;border-radius:4px;border:1px solid #ccc;font:11px Georgia,serif;color:#555;line-height:1.6";
+    div.innerHTML = `
+      <div style="font-weight:bold;margin-bottom:4px">VCP ExHeatHealth_Idx</div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">
+        <span style="display:inline-block;width:60px;height:10px;background:linear-gradient(to right,${vcpColor(60)},${vcpColor(80)},${vcpColor(100)});border:1px solid #aaa"></span>
+        <span>60 — 100</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">
+        <span style="display:inline-block;width:14px;height:10px;background:#a0a0a0;border:2px dashed #333"></span>
+        <span>Prison tract (hazard null)</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#7a1010;border:2px solid #fff;box-shadow:0 0 0 1px #aaa"></span>
+        <span>Prison (risk score)</span>
+      </div>
+    `;
+    return div;
+  };
+  legend.addTo(map);
+})();
 </script>
 </body>
 </html>
