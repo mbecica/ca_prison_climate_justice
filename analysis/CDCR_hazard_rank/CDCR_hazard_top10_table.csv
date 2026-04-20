@@ -1,0 +1,137 @@
+Rank,"Days Over 80°F
+Mid-Century","Drought Frequency
+SPEI-12 Mid-Century","Drought Index
+Mid-Century","Very Wet Years
+Mid-Century","Flood Index
+Mid-Century","Fire Hazard
+Severity Zone",drought_idx_midcentury,drought_idx_change_pct,flood_idx_midcentury,flood_idx_change_pct
+1,"Calipatria State Prison (CAL)
+Calipatria, CA
+(271 days, +12% increase)","Ironwood State Prison (ISP)
+Blythe, CA
+(32.2% of years, +544% increase)","Central California Women'S Facility (CCWF)
+Chowchilla, CA
+(78.4 index, +-1% increase)","California Men'S Colony (CMC)
+San Luis Obispo, CA
+(32.7% of years, +13% increase)","California State Prison-Los Angeles County (LAC)
+Lancaster, CA
+(82.3 index, +333% increase)","R J Donovan Correctional Facility (RJD)
+San Diego, CA
+(Very High Hazard)",78.4,-1,82.3,333
+2,"Ironwood State Prison (ISP)
+Blythe, CA
+(260 days, +12% increase)","Calipatria State Prison (CAL)
+Calipatria, CA
+(31.7% of years, +533% increase)","Valley State Prison (VSP)
+Chowchilla, CA
+(78.4 index, +-1% increase)","Avenal State Prison (ASP)
+Avenal, CA
+(30.4% of years, +9% increase)","California State Prison, Corcoran (COR)
+Corcoran, CA
+(38.7 index, +2% increase)","Sierra Conservation Center (SCC)
+Jamestown, CA
+(Very High Hazard)",78.4,-1,38.7,2
+3,"Centinela State Prison (CEN)
+Imperial, CA
+(260 days, +10% increase)","Centinela State Prison (CEN)
+Imperial, CA
+(30.9% of years, +518% increase)","California Health Care Facility (CHCF)
+Stockton, CA
+(70.4 index, +-0% increase)","California Institution For Women (CIW)
+Corona, CA
+(30.2% of years, +22% increase)","Ca Substance Abuse Treatment Facility (SATF)
+Corcoran, CA
+(38.7 index, +2% increase)","Mule Creek State Prison (MCSP)
+Ione, CA
+(High Hazard)",70.4,0,38.7,2
+4,"California Institution For Women (CIW)
+Corona, CA
+(210 days, +24% increase)","California State Prison-Los Angeles County (LAC)
+Lancaster, CA
+(30.5% of years, +510% increase)","North Kern State Prison (NKSP)
+Delano, CA
+(66.1 index, +1% increase)","California State Prison, Solano (SOL)
+Vacaville, CA
+(28.1% of years, +-1% increase)","Pleasant Valley State Prison (PVSP)
+Coalinga, CA
+(34.3 index, +20% increase)","California Institution For Women (CIW)
+Corona, CA
+(High Hazard)",66.1,1,34.3,20
+5,"California Institution For Men (CIM)
+Chino, CA
+(210 days, +25% increase)","R J Donovan Correctional Facility (RJD)
+San Diego, CA
+(21.6% of years, +332% increase)","Kern Valley State Prison (KVSP)
+Delano, CA
+(65.8 index, +1% increase)","California Medical Facility (CMF)
+Vacaville, CA
+(28.1% of years, +-1% increase)","California Institution For Women (CIW)
+Corona, CA
+(33.7 index, +40% increase)","Calipatria State Prison (CAL)
+Calipatria, CA
+(Moderate Hazard)",65.8,1,33.7,40
+6,"Wasco State Prison (WSP)
+Wasco, CA
+(200 days, +11% increase)","California Institution For Men (CIM)
+Chino, CA
+(20.7% of years, +314% increase)","Mule Creek State Prison (MCSP)
+Ione, CA
+(63.7 index, +1% increase)","Pleasant Valley State Prison (PVSP)
+Coalinga, CA
+(27.0% of years, +9% increase)","California Men'S Colony (CMC)
+San Luis Obispo, CA
+(30.8 index, +9% increase)","California State Prison, Solano (SOL)
+Vacaville, CA
+(Moderate Hazard)",63.7,1,30.8,9
+7,"Kern Valley State Prison (KVSP)
+Delano, CA
+(198 days, +11% increase)","California Institution For Women (CIW)
+Corona, CA
+(20.3% of years, +305% increase)","Sierra Conservation Center (SCC)
+Jamestown, CA
+(63.6 index, +4% increase)","Pelican Bay State Prison (PBSP)
+Crescent City, CA
+(26.0% of years, +9% increase)","Pelican Bay State Prison (PBSP)
+Crescent City, CA
+(28.8 index, +7% increase)","California Men'S Colony (CMC)
+San Luis Obispo, CA
+(Moderate Hazard)",63.6,4,28.8,7
+8,"California State Prison, Corcoran (COR)
+Corcoran, CA
+(196 days, +11% increase)","California Correctional Institution (CCI)
+Tehachapi, CA
+(17.7% of years, +254% increase)","California State Prison, Corcoran (COR)
+Corcoran, CA
+(61.8 index, +1% increase)","Correctional Training Facility (CTF)
+Soledad, CA
+(25.7% of years, +3% increase)","Kern Valley State Prison (KVSP)
+Delano, CA
+(28.6 index, +-1% increase)","Pelican Bay State Prison (PBSP)
+Crescent City, CA
+(Moderate Hazard)",61.8,1,28.6,-1
+9,"Ca Substance Abuse Treatment Facility (SATF)
+Corcoran, CA
+(196 days, +11% increase)","Wasco State Prison (WSP)
+Wasco, CA
+(17.5% of years, +251% increase)","Ca Substance Abuse Treatment Facility (SATF)
+Corcoran, CA
+(61.8 index, +1% increase)","Salinas Valley State Prison (SVSP)
+Soledad, CA
+(25.7% of years, +3% increase)","Avenal State Prison (ASP)
+Avenal, CA
+(27.3 index, +3% increase)","High Desert State Prison (HDSP)
+Susanville, CA
+(Moderate Hazard)",61.8,1,27.3,3
+10,"North Kern State Prison (NKSP)
+Delano, CA
+(194 days, +11% increase)","High Desert State Prison (HDSP)
+Susanville, CA
+(16.7% of years, +234% increase)","Wasco State Prison (WSP)
+Wasco, CA
+(59.7 index, +1% increase)","California Correctional Institution (CCI)
+Tehachapi, CA
+(25.5% of years, +-0% increase)","California State Prison, Solano (SOL)
+Vacaville, CA
+(27.2 index, +-0% increase)","Folsom State Prison (FOL)
+Represa, CA
+(Moderate Hazard)",59.7,1,27.2,0
