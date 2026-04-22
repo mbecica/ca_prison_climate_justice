@@ -14,20 +14,20 @@ Static across time periods (both use 2025 data).
 - **Vulnerability**: CCHCS medical acuity (P1+P2+medium), age 50+, EOP, DPP, race/POC
 
 ### Full Risk Index (2 maps)
-Historic and mid-century full risk scores (0–100). Risk = Hazard × Exposure × Vulnerability; normalized cross-period.
+Historic and mid-century full risk scores (0–100). Risk = 0.25H + 0.25E + 0.50V; normalized cross-period.
 
 ### VCP Comparison & Weighting Sensitivity (4 maps)
 
 - **VCP community ExHeatHealth_Idx** — average VCP heat-health index across adjacent non-institutional census tracts (Pct_GroupQuarters ≤ 25%). Reflects community-facing heat risk in surrounding geography.
 - **Rank divergence** — our risk rank minus community VCP rank. Diverging red/blue scale: red = our index ranks the facility at higher risk than VCP ranks surrounding community; blue = VCP ranks surrounding community higher. Low correlation (Spearman r=−0.17) supports the argument for a prison-specific framework.
-- **Max rank swing** — maximum difference in rank position across three weighting schemes (equal multiplicative, additive 25/25/50, multiplicative V²). CHCF (swing=16) and ISP (swing=10) are the most sensitive; top 5 facilities are stable across all schemes.
-- **Additive 25/25/50 score** — Ovienmhada (2024) vulnerability-upweighted variant. CHCF rises from rank 22 to rank 6 under this scheme due to high medical complexity despite zero indoor heat days (full AC).
+- **Max rank swing** — maximum difference in rank position across three weighting schemes (additive 25/25/50, equal multiplicative, multiplicative V²). CHCF and ISP are the most sensitive; top facilities are stable across all schemes.
+- **Equal multiplicative score** — alternative H × E × V model. Under this scheme, CHCF drops from rank 6 to rank 22 because full AC zeros out its exposure, despite having the highest vulnerability in the system.
 
 ## Data Sources
 
 | Layer | Source file |
 | :--- | :--- |
-| Risk scores | `data/CDCR_heat_risk_index.csv` |
+| Risk scores | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv` |
 | Sensitivity & VCP comparison | `data/CDCR_heat_risk_sensitivity.csv` |
 | CA outline | `data/ca_outline_simple.json` |
 | Facility coordinates | `data/cdcr_facilities.csv` |

@@ -5,16 +5,16 @@ Notebooks and scripts are in this directory. Outputs are written to `data/cdcr/`
 ## CDCR Facility Heat Risk Index
 
 **Output files:**
-- `data/cdcr/CDCR_heat_risk_index.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century. Notebook: `CDCR_risk_indices/heat_risk_index.ipynb`.
+- `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv` — facility-level component scores and risk scores for 31 CDCR state prisons, current and mid-century (additive 0.25H + 0.25E + 0.50V). Notebook: `CDCR_risk_indices/heat_risk_index.ipynb`.
 - `data/cdcr/CDCR_heat_risk_sensitivity.csv` — weighting sensitivity analysis and VCP comparison. Notebook: `CDCR_risk_indices/sensitivity_analysis.ipynb`.
 
 **Facility coverage:** 31 CDCR state prisons.
 
 ### Framework
 
-Risk = Hazard × Exposure × Vulnerability, following Ovienmhada et al. (2024) and the California Vulnerable Communities Platform (VCP) environmental risk methodology. Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods so that current and mid-century scores are directly comparable on the same scale.
+Risk = 0.25H + 0.25E + 0.50V (additive, vulnerability double-weighted), following Ovienmhada et al. (2024). Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods so that current and mid-century scores are directly comparable on the same scale.
 
-The multiplicative structure means a facility must score poorly across all three components simultaneously to rank at the top of the index. A facility in a very hot location with full air conditioning and a younger population will score lower than one with moderate temperatures, poor cooling, and high medical acuity.
+Vulnerability receives double weight because cooling in prisons is controlled by staff who, as Brunn et al. (2025) document, withhold AC, water, and shade to punish and retaliate. The additive form also prevents a facility with full mechanical AC from scoring zero risk; a multiplicative model would zero out CHCF, which has the highest vulnerability in the system but no indoor heat days.
 
 Adaptive capacity is not included as a fourth component, following Ovienmhada et al. (2024)'s treatment of carcerated populations as having effectively zero adaptive capacity. Incarcerated people cannot relocate, purchase cooling, choose their housing unit, or leave the facility during a heat event; the institutional and legal structure of incarceration removes the individual and collective agency that capacity metrics are designed to measure. We considered restricted housing unit (RHU) placement as a variable that partially relaxes this uniform assumption — RHU residents face additional restrictions on heat-adaptive behavior, and Cloud et al. (2023) explicitly identify people in solitary confinement as "especially susceptible to the hazards of extreme heat." However, RHU was ultimately excluded from the scored index because the literature does not provide quantified dose-response evidence sufficient to justify an equal-weight assumption. See the Excluded Variables section below.
 
@@ -117,7 +117,7 @@ Tiers are named to reflect relative risk within the CDCR system. All incarcerate
 
 ### Output Column Reference
 
-`data/cdcr/CDCR_heat_risk_index.csv`:
+`data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`:
 
 | Column | Description |
 | :--- | :--- |

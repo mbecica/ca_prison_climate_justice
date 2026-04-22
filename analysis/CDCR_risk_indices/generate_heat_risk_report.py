@@ -24,7 +24,7 @@ ROOT    = Path('.')
 OUT_DIR = ROOT / 'analysis/cjc reports/heat_risk_index'
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-INDEX   = ROOT / 'data/cdcr/CDCR_heat_risk_index.csv'
+INDEX   = ROOT / 'data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv'
 CA_GEO  = ROOT / 'data/ca_outline_simple.json'
 SENS    = ROOT / 'data/cdcr/CDCR_heat_risk_sensitivity.csv'
 
@@ -274,7 +274,7 @@ md_lines = [
     f'**Date:** April 2026',
     f'**Notebook:** `analysis/CDCR_risk_indices/heat_risk_index.ipynb`',
     f'**Sensitivity:** `analysis/CDCR_risk_indices/sensitivity_analysis.ipynb`',
-    f'**Output data:** `data/cdcr/CDCR_heat_risk_index.csv`, `data/cdcr/CDCR_heat_risk_sensitivity.csv`',
+    f'**Output data:** `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `data/cdcr/CDCR_heat_risk_sensitivity.csv`',
     f'',
     f'---',
     f'',
