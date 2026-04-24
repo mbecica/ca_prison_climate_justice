@@ -1,0 +1,151 @@
+Facility,Heat (Days Over 80F Mid-Century),Drought (Mid-Century Index),Flood (Mid-Century Index),Wildfire (FHSZ),heat_bold,drought_bold,flood_bold,wildfire_bold,points
+"California Institution For Women (CIW)
+Corona, CA","210 days
++24% increase","'+9.1F summer temp
+30.2 WSV","9.7% in floodplain
+30.2% very wet days",High,True,False,True,True,3
+"California State Prison, Corcoran (COR)
+Corcoran, CA","196 days
++11% increase","'+9.7F summer temp
+44.6 WSV","32.6% in floodplain
+23.1% very wet days",None,True,True,True,False,3
+"CA Substance Abuse Treatment Facility (SATF)
+Corcoran, CA","196 days
++11% increase","'+9.7F summer temp
+44.6 WSV","32.6% in floodplain
+23.1% very wet days",None,True,True,True,False,3
+"Kern Valley State Prison (KVSP)
+Delano, CA","198 days
++11% increase","'+9.6F summer temp
+48.9 WSV","17.6% in floodplain
+23.3% very wet days",None,True,True,True,False,3
+"California State Prison-Los Angeles County (LAC)
+Lancaster, CA","188 days
++21% increase","'+9.7F summer temp
+27.6 WSV","100.0% in floodplain
+21.3% very wet days",Very High,False,False,True,True,2
+"Sierra Conservation Center (SCC)
+Jamestown, CA","173 days
++17% increase","'+10.6F summer temp
+41.8 WSV","0.0% in floodplain
+21.9% very wet days",Very High,False,True,False,True,2
+"Mule Creek State Prison (MCSP)
+Ione, CA","173 days
++15% increase","'+9.8F summer temp
+45.8 WSV","2.7% in floodplain
+21.5% very wet days",High,False,True,False,True,2
+"North Kern State Prison (NKSP)
+Delano, CA","194 days
++11% increase","'+9.6F summer temp
+49.5 WSV","0.0% in floodplain
+24.2% very wet days",None,True,True,False,False,2
+"Wasco State Prison (WSP)
+Wasco, CA","200 days
++11% increase","'+9.4F summer temp
+43.7 WSV","0.0% in floodplain
+23.7% very wet days",None,True,True,False,False,2
+"Central California Women's Facility (CCWF)
+Chowchilla, CA","186 days
++13% increase","'+10.3F summer temp
+58.3 WSV","12.2% in floodplain
+21.5% very wet days",None,False,True,False,False,1
+"Valley State Prison (VSP)
+Chowchilla, CA","186 days
++13% increase","'+10.3F summer temp
+58.3 WSV","12.2% in floodplain
+21.5% very wet days",None,False,True,False,False,1
+"R J Donovan Correctional Facility (RJD)
+San Diego, CA","140 days
++48% increase","'+7.1F summer temp
+27.9 WSV","0.0% in floodplain
+24.7% very wet days",Very High,False,False,False,True,1
+"California Health Care Facility (CHCF)
+Stockton, CA","180 days
++16% increase","'+9.7F summer temp
+53.1 WSV","10.0% in floodplain
+21.3% very wet days",None,False,True,False,False,1
+"Ironwood State Prison (ISP)
+Blythe, CA","260 days
++12% increase","'+8.9F summer temp
+13.3 WSV","0.0% in floodplain
+12.5% very wet days",Moderate,True,False,False,False,1
+"California State Prison, Solano (SOL)
+Vacaville, CA","167 days
++22% increase","'+9.8F summer temp
+29.3 WSV","4.8% in floodplain
+28.1% very wet days",Moderate,False,False,True,False,1
+"California Institution For Men (CIM)
+Chino, CA","210 days
++25% increase","'+9.1F summer temp
+29.5 WSV","0.4% in floodplain
+25.4% very wet days",None,True,False,False,False,1
+"Calipatria State Prison (CAL)
+Calipatria, CA","271 days
++12% increase","'+8.6F summer temp
+20.6 WSV","0.0% in floodplain
+19.5% very wet days",Moderate,True,False,False,False,1
+"California Medical Facility (CMF)
+Vacaville, CA","167 days
++22% increase","'+9.8F summer temp
+29.3 WSV","4.8% in floodplain
+28.1% very wet days",None,False,False,True,False,1
+"Pleasant Valley State Prison (PVSP)
+Coalinga, CA","172 days
++17% increase","'+9.6F summer temp
+22.9 WSV","17.5% in floodplain
+27.0% very wet days",None,False,False,True,False,1
+"Avenal State Prison (ASP)
+Avenal, CA","182 days
++15% increase","'+9.4F summer temp
+13.8 WSV","0.0% in floodplain
+30.4% very wet days",None,False,False,True,False,1
+"Centinela State Prison (CEN)
+Imperial, CA","260 days
++10% increase","'+7.9F summer temp
+9.5 WSV","12.2% in floodplain
+17.6% very wet days",None,True,False,False,False,1
+"California Men's Colony (CMC)
+San Luis Obispo, CA","51 days
++74% increase","'+5.9F summer temp
+36.5 WSV","0.0% in floodplain
+32.7% very wet days",Moderate,False,False,True,False,1
+"Pelican Bay State Prison (PBSP)
+Crescent City, CA","15 days
++81% increase","'+5.2F summer temp
+13.8 WSV","11.8% in floodplain
+26.0% very wet days",Moderate,False,False,True,False,1
+"High Desert State Prison (HDSP)
+Susanville, CA","123 days
++27% increase","'+11.5F summer temp
+31.7 WSV","6.8% in floodplain
+25.2% very wet days",Moderate,False,False,False,False,0
+"California Correctional Institution (CCI)
+Tehachapi, CA","116 days
++44% increase","'+10.2F summer temp
+28.8 WSV","0.0% in floodplain
+25.5% very wet days",Moderate,False,False,False,False,0
+"California State Prison, Sacramento (SAC)
+Represa, CA","164 days
++17% increase","'+9.4F summer temp
+23.0 WSV","0.0% in floodplain
+22.8% very wet days",Moderate,False,False,False,False,0
+"Folsom State Prison (FOL)
+Represa, CA","164 days
++17% increase","'+9.4F summer temp
+23.0 WSV","0.0% in floodplain
+22.8% very wet days",Moderate,False,False,False,False,0
+"Correctional Training Facility (CTF)
+Soledad, CA","146 days
++40% increase","'+7.2F summer temp
+31.8 WSV","0.0% in floodplain
+25.7% very wet days",Moderate,False,False,False,False,0
+"Salinas Valley State Prison (SVSP)
+Soledad, CA","146 days
++40% increase","'+7.2F summer temp
+31.8 WSV","0.0% in floodplain
+25.7% very wet days",Moderate,False,False,False,False,0
+"San Quentin State Prison (SQ)
+San Quentin, CA","82 days
++62% increase","'+8.5F summer temp
+33.6 WSV","6.6% in floodplain
+22.6% very wet days",None,False,False,False,False,0
