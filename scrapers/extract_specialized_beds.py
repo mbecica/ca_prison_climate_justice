@@ -15,6 +15,10 @@ Extract specialized mental health bed data from CDCR PDF reports into CSVs:
      System-wide historical actuals by program type (APP, ICF-High, ICF-Low,
      MHCB, EOP-GP, RHE, CCCMS) from 2014–2025.
 
+  5. MHSDS Map (2021) → mhsds_programs_by_facility.csv
+     Facility-level mental health program flags read from the map's icon
+     letters in the PDF text layer.
+
 Sources: data_sources/facilities/CDCR/specialized_beds/*.pdf
 
 Usage:
@@ -294,9 +298,9 @@ def extract_coleman_waitlist(pdf_path):
         if col0 == "" or col0 is None:
             continue
 
-        # Skip grand totals row
         if "GRAND TOTALS" in col0:
             facility = "GRAND TOTALS"
+            current_section = "All PIPs"
         elif col0 == "Total":
             facility = f"Total - {current_section}"
         else:
@@ -456,9 +460,10 @@ def extract_bed_need_study(pdf_path):
                 target_measures = {
                     "Census Rate": "Census Rate",
                     "Avg Program Census": "Avg Census",
-                    "Total Avg Daily Census (ADC)": "Avg Census",
-                    "Total Avg Daily Census": "Avg Census",
-                    "Total Avg Daily Census": "Avg Census",
+                    # Total ADC = Avg Program Census + Avg Pending List;
+                    # in CCCMS/EOP tables it is the only census row
+                    "Total Avg Daily Census (ADC)": "Total ADC",
+                    "Total Avg Daily Census": "Total ADC",
                     "Avg Program Census (CSH)": "Avg Census (CSH)",
                     "Avg Census (CHCF)": "Avg Census (CHCF)",
                     "Avg Census (VPP)": "Avg Census (VPP)",
@@ -485,8 +490,6 @@ def extract_bed_need_study(pdf_path):
                     "LEVEL IV TOTAL ADC": "Level IV Avg Census",
                     "LEVEL IV Bed Need (95% Occ)": "Level IV Bed Need (95%)",
                     "Total EOP-GP Bed Need": "Bed Need (95%)",
-                    # CCCMS
-                    "Total Avg Daily Census (ADC)": "Avg Census",
                 }
 
                 measure = target_measures.get(label)
@@ -537,6 +540,130 @@ def build_bed_need_study_csv():
     return df
 
 
+# ── 5. MHSDS Map ───────────────────────────────────────────────────────────
+
+MHSDS_LETTER_COLS = {
+    "R": "reception_center",
+    "C": "cccms",
+    "E": "eop",
+    "M": "mhcb",
+    "S": "short_term_rh",
+    "L": "long_term_rh",
+    "A": "asu_eop_hub",
+    "P": "psychiatric_services_unit",
+    "PI": "psychiatric_inpatient",
+    "D": "developmental_disabilities",
+}
+
+MHSDS_FACILITIES = [
+    "PBSP", "HDSP", "CCC", "FSP/FWF", "SAC", "CMF", "SOL", "SQ", "MCSP",
+    "CHCF", "SCC", "DVI", "CCWF", "VSP", "CTF", "SVSP", "PVSP", "ASP",
+    "COR", "SATF", "KVSP", "NKSP", "WSP", "CCI", "CAC", "CMC", "LAC",
+    "CIM", "CIW", "CRC", "ISP", "CVSP", "CAL", "CEN", "RJD",
+]
+
+
+def extract_mhsds_map(pdf_path):
+    """Extract the facility × program matrix from the MHSDS map PDF.
+
+    The program icons next to each facility are diamonds whose letters
+    (R, C, E, M, S, L, A, P, PI, D) are real text glyphs in a small
+    Tahoma-Bold font, so we read them from the text layer and assign each
+    glyph to the facility label on the same row, rather than reading the
+    map as an image.
+    """
+    pdf = pdfplumber.open(pdf_path)
+    page = pdf.pages[0]
+
+    # Icon letters: small Tahoma glyphs. Facility labels are Arial 9pt.
+    icons = [c for c in page.chars
+             if "Tahoma" in c["fontname"] and c["size"] < 6 and c["text"].strip()]
+    words = page.extract_words(extra_attrs=["fontname", "size"])
+    label_words = [w for w in words
+                   if "Arial" in w["fontname"] and 7.5 < w["size"] < 9.5]
+
+    fac_names = set(MHSDS_FACILITIES)
+    labels = [w for w in label_words if w["text"].strip("●•.") in fac_names]
+
+    # A couple of labels (COR, SATF) are letter-spaced and come through as
+    # fragments ('C','O','R' / 'S','AT','F'); reconstruct them per text line.
+    found = {w["text"].strip("●•.") for w in labels}
+    frags = [w for w in label_words if w["text"].strip("●•.") not in fac_names]
+    by_line = {}
+    for w in frags:
+        by_line.setdefault(round(w["top"]), []).append(w)
+    for line in by_line.values():
+        line.sort(key=lambda w: w["x0"])
+        joined = "".join(w["text"] for w in line).strip("●•.")
+        if joined in fac_names and joined not in found:
+            labels.append({
+                "text": joined,
+                "x0": min(w["x0"] for w in line),
+                "x1": max(w["x1"] for w in line),
+                "top": min(w["top"] for w in line),
+                "bottom": max(w["bottom"] for w in line),
+            })
+
+    # Assign each icon glyph to the closest facility label on its row.
+    assigned = {}
+    for c in icons:
+        cy = (c["top"] + c["bottom"]) / 2
+        best, best_d = None, None
+        for w in labels:
+            wy = (w["top"] + w["bottom"]) / 2
+            ydiff = abs(wy - cy)
+            dx = c["x0"] - w["x1"]  # icons sit to the right of the label
+            if ydiff > 5.5 or dx < -2 or dx > 130:
+                continue
+            d = ydiff + dx * 0.01
+            if best_d is None or d < best_d:
+                best, best_d = w["text"].strip("●•."), d
+        if best is None:
+            raise ValueError(
+                f"MHSDS map: could not assign icon glyph {c['text']!r} "
+                f"at ({c['x0']:.0f}, {c['top']:.0f}) to a facility")
+        assigned.setdefault(best, []).append((c["x0"], c["text"]))
+    pdf.close()
+
+    rows = []
+    for fac in MHSDS_FACILITIES:
+        glyphs = sorted(assigned.get(fac, []))
+        seq = [g for _, g in glyphs]
+        letters, i = [], 0
+        while i < len(seq):  # merge adjacent P + I into the PI icon
+            if seq[i] == "P" and i + 1 < len(seq) and seq[i + 1] == "I":
+                letters.append("PI")
+                i += 2
+            else:
+                letters.append(seq[i])
+                i += 1
+        row = {"facility": "FSP" if fac == "FSP/FWF" else fac}
+        row.update({col: 0 for col in MHSDS_LETTER_COLS.values()})
+        for letter in letters:
+            row[MHSDS_LETTER_COLS[letter]] = 1
+        row["source"] = "MHSDS Map"
+        row["source_date"] = "2021-07-02"
+        rows.append(row)
+    return rows
+
+
+def build_mhsds_csv():
+    """Process the MHSDS map PDF and write mhsds_programs_by_facility.csv."""
+    files = list(SRC.glob("MHSDS-Map*"))
+    if not files:
+        print("  No MHSDS map PDF found.")
+        return None
+
+    f = files[0]
+    print(f"  MHSDS Map: {f.name}")
+    df = pd.DataFrame(extract_mhsds_map(f))
+    out_path = OUT / "mhsds_programs_by_facility.csv"
+    df.to_csv(out_path, index=False)
+    n_flags = df[list(MHSDS_LETTER_COLS.values())].to_numpy().sum()
+    print(f"  → {out_path} ({len(df)} facilities, {n_flags} program flags)")
+    return df
+
+
 # ── Main ───────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -556,6 +683,10 @@ if __name__ == "__main__":
 
     print("4. Bed Need Study")
     bns_df = build_bed_need_study_csv()
+    print()
+
+    print("5. MHSDS Map")
+    mhsds_df = build_mhsds_csv()
     print()
 
     print("Done.")

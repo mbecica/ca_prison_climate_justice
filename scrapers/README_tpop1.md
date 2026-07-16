@@ -15,6 +15,13 @@ Outputs written to `data_sources/facilities/CDCR/`:
 
 ## Source PDFs
 
+Downloaded from the CDCR Office of Research population reports page:
+https://www.cdcr.ca.gov/research/population-reports-2/ (TPOP-1 monthly and
+weekly reports). CDCR has removed some older archives from the site; historical
+reports can be requested from the Office of Research Data Concierge Service at
+data.requests@cdcr.ca.gov. The PDFs are not tracked in git — the extracted
+CSVs in `data_sources/facilities/CDCR/` are.
+
 | Period | Format | Location | Naming |
 | :--- | :--- | :--- | :--- |
 | 2019–2026 | Monthly | `cdcr_population_pdfs/` | `Tpop1d{YYMM}.pdf` (standard); a few files use `Tpop1d{YYMMDD}.pdf` or `Tpop1d{YYMM}-1.pdf` |

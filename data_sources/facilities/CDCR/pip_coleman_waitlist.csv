@@ -14,7 +14,7 @@ date,section,facility,bed_capacity,census,beds_reserved,beds_redlined,medical_is
 2025-10-27,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),495,235,14,66,0,180,13,3,16
 2025-10-27,Female High Custody,California Institution for Women,45,28,1,0,0,16,0,0,0
 2025-10-27,Female High Custody,Total - Female High Custody,45,28,1,0,0,16,1,0,1
-2025-10-27,Female High Custody,GRAND TOTALS,1142,716,35,67,0,324,30,13,43
+2025-10-27,All PIPs,GRAND TOTALS,1142,716,35,67,0,324,30,13,43
 2025-11-24,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,22,2,0,0,40,0,0,0
 2025-11-24,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,22,2,0,0,40,1,1,2
 2025-11-24,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,249,11,1,0,69,0,0,0
@@ -30,7 +30,7 @@ date,section,facility,bed_capacity,census,beds_reserved,beds_redlined,medical_is
 2025-11-24,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),495,231,17,66,0,181,11,10,21
 2025-11-24,Female High Custody,California Institution for Women,45,30,0,0,0,15,0,0,0
 2025-11-24,Female High Custody,Total - Female High Custody,45,30,0,0,0,15,0,0,0
-2025-11-24,Female High Custody,GRAND TOTALS,1142,703,42,69,0,328,42,15,57
+2025-11-24,All PIPs,GRAND TOTALS,1142,703,42,69,0,328,42,15,57
 2025-12-29,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,23,1,0,0,40,0,0,0
 2025-12-29,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,23,1,0,0,40,0,1,1
 2025-12-29,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,235,13,1,0,81,0,0,0
@@ -46,7 +46,7 @@ date,section,facility,bed_capacity,census,beds_reserved,beds_redlined,medical_is
 2025-12-29,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),495,248,12,67,0,168,11,4,15
 2025-12-29,Female High Custody,California Institution for Women,45,35,2,0,0,8,0,0,0
 2025-12-29,Female High Custody,Total - Female High Custody,45,35,2,0,0,8,1,1,2
-2025-12-29,Female High Custody,GRAND TOTALS,1142,726,32,69,0,315,31,13,44
+2025-12-29,All PIPs,GRAND TOTALS,1142,726,32,69,0,315,31,13,44
 2026-01-26,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,29,0,0,0,35,0,0,0
 2026-01-26,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,29,0,0,0,35,0,0,0
 2026-01-26,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,239,15,1,0,75,0,0,0
@@ -62,4 +62,4 @@ date,section,facility,bed_capacity,census,beds_reserved,beds_redlined,medical_is
 2026-01-26,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),464,230,18,69,0,147,17,3,20
 2026-01-26,Female High Custody,California Institution for Women,45,35,2,0,0,8,0,0,0
 2026-01-26,Female High Custody,Total - Female High Custody,45,35,2,0,0,8,2,0,2
-2026-01-26,Female High Custody,GRAND TOTALS,1142,717,41,102,0,282,46,6,52
+2026-01-26,All PIPs,GRAND TOTALS,1142,717,41,102,0,282,46,6,52

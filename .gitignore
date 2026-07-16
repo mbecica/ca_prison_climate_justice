@@ -1,4 +1,6 @@
 # Ignore where files get large
+# (source PDFs are linked in READMEs next to their directories instead)
+data_sources/facilities/CDCR/specialized_beds/*.pdf
 data_sources/facilities/CDCR/cdcr_population_pdfs/
 data_sources/facilities/CDCR/cdcr_population_pdfs/tpop_weekly/
 data_sources/facilities/CDCR/cdcr_staffing/

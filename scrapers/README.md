@@ -106,5 +106,24 @@ Columns: `layer` (sublayer label), `name`, `fcode`, `address`, `city`, `state`, 
 
 ---
 
+### `extract_specialized_beds.py`
+Extracts CDCR specialized mental health bed data from PDF reports stored in `data_sources/facilities/CDCR/specialized_beds/` (see the README there for source URLs). Uses `pdfplumber`.
+
+Writes five CSVs to `data_sources/facilities/CDCR/`:
+
+- `pip_census.csv` — Psychiatric Inpatient Program census by facility, program (APP/ICF), and custody level, one snapshot per report date. `Out of LRH`, `PC 1370`, and `WIC 7301` are informational subsets of the census, not additive with the level rows.
+- `pip_coleman_waitlist.csv` — PIP capacity, census, reserved/redlined beds, and waitlist by facility. Referral/waitlist columns are only reported on section `Total` rows in the source (facility cells are blank → 0). `GRAND TOTALS` rows carry `section="All PIPs"`.
+- `mhcb_census.csv` — system-level Mental Health Crisis Bed capacity/census (male/female/total).
+- `bed_need_study_actuals.csv` — historical actuals and forecasts by program from the Bed Need Study. `Avg Census` is the program census; `Total ADC` = `Avg Census` + `Avg Pending List`; in CCCMS/EOP tables `Total ADC` is the only census measure. `is_forecast` is true for FY2026+.
+- `mhsds_programs_by_facility.csv` — facility × program flag matrix from the MHSDS map. The map's icon letters are real text glyphs in the PDF, extracted by position and clustered to facility labels (not read from the rendered image).
+
+```
+python3 scrapers/extract_specialized_beds.py
+```
+
+New monthly PIP/MHCB reports can be added by downloading them into `specialized_beds/` with a `YYYY-MM-DD_` filename prefix and re-running; duplicate report dates are skipped automatically.
+
+---
+
 ### `probe_cchcs.js`
 Exploratory script used to inspect the CCHCS dashboard DOM structure (grid layout, dropdown scroll behavior, institution column headers). Not intended for production use.
