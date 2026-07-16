@@ -1,0 +1,3676 @@
+{
+  "meta": {
+    "n_prisons": 31,
+    "weights": {
+      "hazard": 0.25,
+      "exposure": 0.25,
+      "vulnerability": 0.5
+    },
+    "periods": {
+      "historic": {
+        "label": "Current",
+        "sub": "1991–2020"
+      },
+      "midcentury": {
+        "label": "Mid-century",
+        "sub": "2041–2070"
+      }
+    },
+    "planned_periods": [
+      "endcentury"
+    ],
+    "period_note": "Periods are modeled climate data, not observed weather. Only the heat hazard changes between periods; exposure and vulnerability are held constant (2025 values).",
+    "scale_note": "Scores are relative to California's 31 state prisons: the lowest sits near 0 and the highest near 100. A low score means lower risk than other prisons, not that the heat is safe.",
+    "categories": [
+      "Lowest",
+      "Moderate",
+      "High",
+      "Highest"
+    ],
+    "layers": {
+      "risk": {
+        "label": "Overall Risk",
+        "short": "Who is most at risk if cooling fails",
+        "desc": "A combined score: one part heat hazard, one part exposure, and two parts vulnerability. Higher means people here are more at risk from extreme heat than at other California prisons."
+      },
+      "hazard": {
+        "label": "Heat Hazard",
+        "short": "How hot and smoky the outdoor climate is",
+        "desc": "How extreme the local climate is: hot days, nights that stay warm, and air quality, modeled for the area around each prison."
+      },
+      "exposure": {
+        "label": "Exposure",
+        "short": "How much that heat reaches people inside",
+        "desc": "How much of that outdoor heat actually reaches people inside: indoor hot days, how much the buildings trap heat, the urban heat island, and how little real air conditioning there is."
+      },
+      "vulnerability": {
+        "label": "Vulnerability",
+        "short": "Who is least able to withstand heat",
+        "desc": "How much harm that heat is likely to cause the people held here, based on age, serious mental-health and disability needs, and overall medical acuity. It carries the most weight, because people in prison can't cool themselves at will."
+      }
+    }
+  },
+  "prisons": [
+    {
+      "code": "ASP",
+      "name": "Avenal State Prison",
+      "slug": "avenal-state-prison",
+      "city": "Avenal",
+      "county": "Kings",
+      "address": "1 Kings Way, Avenal, CA 93204",
+      "jurisdiction": "State",
+      "lat": 35.97395,
+      "lon": -120.1231,
+      "year_opened": 1987,
+      "population": 3891,
+      "capacity_pct": 1.338,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 17.25,
+            "display": 17,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.55,
+            "display": 55,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.47,
+            "display": 47,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.16,
+            "display": 16,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 20.14,
+            "display": 20,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.59,
+            "display": 59,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.47,
+            "display": 47,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.16,
+            "display": 16,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 98.01883894266923,
+            "midcentury": 125.70750459778348
+          },
+          "hotnights_pct": {
+            "historic": 7.3,
+            "midcentury": 14
+          },
+          "aqi_pctile": 34.12999199345762
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0,
+          "pct_units_evaporation": 1,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 69
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 74.6,
+          "age_over_50_pct": 28.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 4,
+          "high_risk_p1_pct": 0,
+          "high_risk_p2_pct": 0.1,
+          "medium_risk_pct": 38.4
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 132,
+          "ratio_indoor_to_outdoor": 0.815,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.33,
+          "rhu_pct": 0,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 194.2
+        }
+      },
+      "risk_rank": 22,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "ironwood-state-prison",
+          "name": "Ironwood State Prison"
+        },
+        "lower": {
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
+        }
+      }
+    },
+    {
+      "code": "CCI",
+      "name": "California Correctional Institution",
+      "slug": "california-correctional-institution",
+      "city": "Tehachapi",
+      "county": "Kern",
+      "address": "24900 Hwy 202, Tehachapi, CA 93561",
+      "jurisdiction": "State",
+      "lat": 35.10992,
+      "lon": -118.57033,
+      "year_opened": 1954,
+      "population": 2434,
+      "capacity_pct": 1.614,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 28.54,
+            "display": 29,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.44,
+            "display": 44,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.51,
+            "display": 51,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.26,
+            "display": 26,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 36.77,
+            "display": 37,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.54,
+            "display": 54,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.51,
+            "display": 51,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.26,
+            "display": 26,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 10.89568083494013,
+            "midcentury": 38.2516634306241
+          },
+          "hotnights_pct": {
+            "historic": 9,
+            "midcentury": 18.1
+          },
+          "aqi_pctile": 45.871387949762784
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 1,
+          "n_housing_units": 44
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 82.9,
+          "age_over_50_pct": 17.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 6.2,
+          "dpp_pct": 5.7,
+          "high_risk_p1_pct": 1.6,
+          "high_risk_p2_pct": 7.3,
+          "medium_risk_pct": 53.4
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 115,
+          "ratio_indoor_to_outdoor": 1.278,
+          "uhi_normalized": null
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.41,
+          "rhu_pct": 3.133,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 467
+        }
+      },
+      "risk_rank": 18,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-rehabilitation-center",
+          "name": "California Rehabilitation Center"
+        },
+        "lower": {
+          "slug": "folsom-state-prison",
+          "name": "Folsom State Prison"
+        }
+      }
+    },
+    {
+      "code": "CHCF",
+      "name": "California Health Care Facility",
+      "slug": "california-health-care-facility",
+      "city": "Stockton",
+      "county": "San Joaquin",
+      "address": "7707 Austin Road, Stockton, CA 95215",
+      "jurisdiction": "State",
+      "lat": 37.89779,
+      "lon": -121.19058,
+      "year_opened": 2013,
+      "population": 2251,
+      "capacity_pct": 0.762,
+      "security": "Not Available",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 61.76,
+            "display": 62,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.57,
+            "display": 57,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.09,
+            "display": 9,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.6,
+            "display": 60,
+            "category": "Highest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 69.36,
+            "display": 69,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.66,
+            "display": 66,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.09,
+            "display": 9,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.6,
+            "display": 60,
+            "category": "Highest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 84.95705497178939,
+            "midcentury": 116.40477515476276
+          },
+          "hotnights_pct": {
+            "historic": 6.1,
+            "midcentury": 16
+          },
+          "aqi_pctile": 48.03373276709035
+        },
+        "cooling": {
+          "pct_units_refrigeration": 1,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 61
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 70,
+          "age_over_50_pct": 63.3
+        },
+        "medical": {
+          "mental_health_eop_pct": 20.8,
+          "dpp_pct": 55.8,
+          "high_risk_p1_pct": 50.9,
+          "high_risk_p2_pct": 20.2,
+          "medium_risk_pct": 21
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 0,
+          "ratio_indoor_to_outdoor": 0,
+          "uhi_normalized": 0.342
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.3,
+          "rhu_pct": 1.35,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 380.2
+        }
+      },
+      "risk_rank": 9,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-state-prison-los-angeles-county",
+          "name": "California State Prison, Los Angeles County"
+        },
+        "lower": {
+          "slug": "valley-state-prison",
+          "name": "Valley State Prison"
+        }
+      }
+    },
+    {
+      "code": "CIM",
+      "name": "California Institution for Men",
+      "slug": "california-institution-for-men",
+      "city": "Chino",
+      "county": "San Bernardino",
+      "address": "14901 Central Avenue, Chino, CA 91710",
+      "jurisdiction": "State",
+      "lat": 33.98471,
+      "lon": -117.68239,
+      "year_opened": 1941,
+      "population": 2274,
+      "capacity_pct": 1.418,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 89.46,
+            "display": 89,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.77,
+            "display": 77,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.52,
+            "display": 52,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.44,
+            "display": 44,
+            "category": "Highest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 91.41,
+            "display": 91,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.79,
+            "display": 79,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.52,
+            "display": 52,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.44,
+            "display": 44,
+            "category": "Highest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 72.51144479078853,
+            "midcentury": 111.66124011410945
+          },
+          "hotnights_pct": {
+            "historic": 5.5,
+            "midcentury": 13.2
+          },
+          "aqi_pctile": 94.40464835864267
+        },
+        "cooling": {
+          "pct_units_refrigeration": 1,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 15
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 75.7,
+          "age_over_50_pct": 56.6
+        },
+        "medical": {
+          "mental_health_eop_pct": 7.4,
+          "dpp_pct": 27,
+          "high_risk_p1_pct": 22.6,
+          "high_risk_p2_pct": 25.8,
+          "medium_risk_pct": 31.4
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 161,
+          "ratio_indoor_to_outdoor": 0.994,
+          "uhi_normalized": 1
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.52,
+          "rhu_pct": 3.192,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 72.4
+        }
+      },
+      "risk_rank": 3,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-substance-abuse-treatment-facility",
+          "name": "California Substance Abuse Treatment Facility"
+        },
+        "lower": {
+          "slug": "california-medical-facility",
+          "name": "California Medical Facility"
+        }
+      }
+    },
+    {
+      "code": "CIW",
+      "name": "California Institution for Women",
+      "slug": "california-institution-for-women",
+      "city": "Corona",
+      "county": "San Bernardino",
+      "address": "16756 Chino-Corona Road, Corona, CA 92880",
+      "jurisdiction": "State",
+      "lat": 33.94975,
+      "lon": -117.63637,
+      "year_opened": 1952,
+      "population": 1187,
+      "capacity_pct": 0.927,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 77.69,
+            "display": 78,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.68,
+            "display": 68,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.54,
+            "display": 54,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.41,
+            "display": 41,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 80.85,
+            "display": 81,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.72,
+            "display": 72,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.54,
+            "display": 54,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.41,
+            "display": 41,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 77.7903661372297,
+            "midcentury": 115.17458049522756
+          },
+          "hotnights_pct": {
+            "historic": 5.5,
+            "midcentury": 13.1
+          },
+          "aqi_pctile": 75.58603784147648
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.44,
+          "pct_units_evaporation": 0.56,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 25
+        },
+        "demographics": {
+          "female_pct": 100,
+          "poc_pct": 67.6,
+          "age_over_50_pct": 22
+        },
+        "medical": {
+          "mental_health_eop_pct": 5.8,
+          "dpp_pct": 17.2,
+          "high_risk_p1_pct": 11.7,
+          "high_risk_p2_pct": 13.1,
+          "medium_risk_pct": 51.6
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 150,
+          "ratio_indoor_to_outdoor": 0.915,
+          "uhi_normalized": 0.605
+        },
+        "context": {
+          "dist_nearest_medical_mi": 1.34,
+          "rhu_pct": 1.392,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 115
+        }
+      },
+      "risk_rank": 5,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-medical-facility",
+          "name": "California Medical Facility"
+        },
+        "lower": {
+          "slug": "california-state-prison-sacramento",
+          "name": "California State Prison, Sacramento"
+        }
+      }
+    },
+    {
+      "code": "CMF",
+      "name": "California Medical Facility",
+      "slug": "california-medical-facility",
+      "city": "Vacaville",
+      "county": "Solano",
+      "address": "1600 California Drive, Vacaville, CA 95696",
+      "jurisdiction": "State",
+      "lat": 38.32851,
+      "lon": -121.97916,
+      "year_opened": 1955,
+      "population": 2045,
+      "capacity_pct": 0.882,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 79.93,
+            "display": 80,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.47,
+            "display": 47,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.49,
+            "display": 49,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.55,
+            "display": 55,
+            "category": "Highest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 81.61,
+            "display": 82,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.49,
+            "display": 49,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.49,
+            "display": 49,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.55,
+            "display": 55,
+            "category": "Highest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 56.91904830932617,
+            "midcentury": 90.2510757446289
+          },
+          "hotnights_pct": {
+            "historic": 6.5,
+            "midcentury": 10.5
+          },
+          "aqi_pctile": 40.62387437615521
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.5,
+          "pct_units_evaporation": 0.5,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 10
+        },
+        "demographics": {
+          "female_pct": 0.2,
+          "poc_pct": 72.2,
+          "age_over_50_pct": 53.2
+        },
+        "medical": {
+          "mental_health_eop_pct": 24.2,
+          "dpp_pct": 43.9,
+          "high_risk_p1_pct": 33.9,
+          "high_risk_p2_pct": 21.5,
+          "medium_risk_pct": 31.3
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 135,
+          "ratio_indoor_to_outdoor": 0.925,
+          "uhi_normalized": 0.582
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.07,
+          "rhu_pct": 2.817,
+          "california_model_facility": null,
+          "air_cooling_pilot": true,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 320.6
+        }
+      },
+      "risk_rank": 4,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-institution-for-men",
+          "name": "California Institution for Men"
+        },
+        "lower": {
+          "slug": "california-institution-for-women",
+          "name": "California Institution for Women"
+        }
+      }
+    },
+    {
+      "code": "CMC",
+      "name": "California Men's Colony",
+      "slug": "california-mens-colony",
+      "city": "San Luis Obispo",
+      "county": "San Luis Obispo",
+      "address": "Colony Drive, San Luis Obispo, CA 93409",
+      "jurisdiction": "State",
+      "lat": 35.32457,
+      "lon": -120.6989,
+      "year_opened": 1961,
+      "population": 2172,
+      "capacity_pct": 0.831,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 11.47,
+            "display": 11,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.12,
+            "display": 12,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.41,
+            "display": 41,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 9.87,
+            "display": 10,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.1,
+            "display": 10,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.41,
+            "display": 41,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 3.8428571224212646,
+            "midcentury": 8.417203903198242
+          },
+          "hotnights_pct": {
+            "historic": 0,
+            "midcentury": 0
+          },
+          "aqi_pctile": 21.635279342708017
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 1,
+          "n_housing_units": 33
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 80.5,
+          "age_over_50_pct": 29.5
+        },
+        "medical": {
+          "mental_health_eop_pct": 29.8,
+          "dpp_pct": 11.2,
+          "high_risk_p1_pct": 6.7,
+          "high_risk_p2_pct": 13.9,
+          "medium_risk_pct": 51.2
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 33,
+          "ratio_indoor_to_outdoor": 0.702,
+          "uhi_normalized": 0.07
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.24,
+          "rhu_pct": 6.467,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 172.8
+        }
+      },
+      "risk_rank": 27,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "calipatria-state-prison",
+          "name": "Calipatria State Prison"
+        },
+        "lower": {
+          "slug": "centinela-state-prison",
+          "name": "Centinela State Prison"
+        }
+      }
+    },
+    {
+      "code": "CRC",
+      "name": "California Rehabilitation Center",
+      "slug": "california-rehabilitation-center",
+      "city": "Norco",
+      "county": "Riverside",
+      "address": "5Th Street And Western Avenue, Norco, CA 92860",
+      "jurisdiction": "State",
+      "lat": 33.92925,
+      "lon": -117.57253,
+      "year_opened": 1962,
+      "population": 2330,
+      "capacity_pct": 1.279,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 35.05,
+            "display": 35,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.63,
+            "display": 63,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.43,
+            "display": 43,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.25,
+            "display": 25,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 40.34,
+            "display": 40,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.69,
+            "display": 69,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.43,
+            "display": 43,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.25,
+            "display": 25,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 88.138759134889,
+            "midcentury": 124.7909609847153
+          },
+          "hotnights_pct": {
+            "historic": 5.8,
+            "midcentury": 14.3
+          },
+          "aqi_pctile": 59.583481416329555
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.8571,
+          "pct_units_evaporation": 0.1429,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 14
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 83.3,
+          "age_over_50_pct": 26
+        },
+        "medical": {
+          "mental_health_eop_pct": 1.8,
+          "dpp_pct": 4,
+          "high_risk_p1_pct": 3.3,
+          "high_risk_p2_pct": 7.8,
+          "medium_risk_pct": 41.8
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 149,
+          "ratio_indoor_to_outdoor": 0.961,
+          "uhi_normalized": 0.571
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.38,
+          "rhu_pct": 0,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": true,
+          "avg_annual_violent_incidents": 133.4
+        }
+      },
+      "risk_rank": 17,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "mule-creek-state-prison",
+          "name": "Mule Creek State Prison"
+        },
+        "lower": {
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
+        }
+      }
+    },
+    {
+      "code": "COR",
+      "name": "California State Prison, Corcoran",
+      "slug": "california-state-prison-corcoran",
+      "city": "Corcoran",
+      "county": "Kings",
+      "address": "4001 King Avenue, Corcoran, CA 93212",
+      "jurisdiction": "State",
+      "lat": 36.06082,
+      "lon": -119.54912,
+      "year_opened": 1988,
+      "population": 2629,
+      "capacity_pct": 0.844,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 90.95,
+            "display": 91,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.77,
+            "display": 77,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.66,
+            "display": 66,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.38,
+            "display": 38,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 100,
+            "display": 100,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.87,
+            "display": 87,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.66,
+            "display": 66,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.38,
+            "display": 38,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 116.91996525324817,
+            "midcentury": 141.90202448313028
+          },
+          "hotnights_pct": {
+            "historic": 8.7,
+            "midcentury": 23.2
+          },
+          "aqi_pctile": 61.689244197361795
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0,
+          "pct_units_evaporation": 1,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 59
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 79.5,
+          "age_over_50_pct": 40.1
+        },
+        "medical": {
+          "mental_health_eop_pct": 9.8,
+          "dpp_pct": 18.4,
+          "high_risk_p1_pct": 8.8,
+          "high_risk_p2_pct": 15.1,
+          "medium_risk_pct": 47.6
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 159,
+          "ratio_indoor_to_outdoor": 0.975,
+          "uhi_normalized": 0.578
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.27,
+          "rhu_pct": 13.608,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 538.8
+        }
+      },
+      "risk_rank": 1,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": null,
+        "lower": {
+          "slug": "california-substance-abuse-treatment-facility",
+          "name": "California Substance Abuse Treatment Facility"
+        }
+      }
+    },
+    {
+      "code": "LAC",
+      "name": "California State Prison, Los Angeles County",
+      "slug": "california-state-prison-los-angeles-county",
+      "city": "Lancaster",
+      "county": "Los Angeles",
+      "address": "44750 60Th Street West, Lancaster, CA 93536",
+      "jurisdiction": "State",
+      "lat": 34.6936,
+      "lon": -118.22761,
+      "year_opened": 1993,
+      "population": 2949,
+      "capacity_pct": 1.282,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 62.92,
+            "display": 63,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.64,
+            "display": 64,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.3,
+            "display": 30,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.47,
+            "display": 47,
+            "category": "Highest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 72.37,
+            "display": 72,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.75,
+            "display": 75,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.3,
+            "display": 30,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.47,
+            "display": 47,
+            "category": "Highest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 91.76809692382812,
+            "midcentury": 125.36236572265624
+          },
+          "hotnights_pct": {
+            "historic": 12.1,
+            "midcentury": 24
+          },
+          "aqi_pctile": 34.084143030236156
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0597,
+          "pct_units_evaporation": 0.9403,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 67
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 90.2,
+          "age_over_50_pct": 25
+        },
+        "medical": {
+          "mental_health_eop_pct": 20.5,
+          "dpp_pct": 21.5,
+          "high_risk_p1_pct": 11.7,
+          "high_risk_p2_pct": 15.1,
+          "medium_risk_pct": 49.8
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 39,
+          "ratio_indoor_to_outdoor": 0.241,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 1.51,
+          "rhu_pct": 7.075,
+          "california_model_facility": null,
+          "air_cooling_pilot": true,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 708.8
+        }
+      },
+      "risk_rank": 8,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "central-california-womens-facility",
+          "name": "Central California Women's Facility"
+        },
+        "lower": {
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
+        }
+      }
+    },
+    {
+      "code": "SAC",
+      "name": "California State Prison, Sacramento",
+      "slug": "california-state-prison-sacramento",
+      "city": "Represa",
+      "county": "Sacramento",
+      "address": "100 Prison Road, Represa, CA 95671",
+      "jurisdiction": "State",
+      "lat": 38.69444,
+      "lon": -121.1539,
+      "year_opened": 1986,
+      "population": 2131,
+      "capacity_pct": 1.166,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 71.56,
+            "display": 72,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.53,
+            "display": 53,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.42,
+            "display": 42,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.51,
+            "display": 51,
+            "category": "Highest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 78.3,
+            "display": 78,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.6,
+            "display": 60,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.42,
+            "display": 42,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.51,
+            "display": 51,
+            "category": "Highest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 74.99864696771587,
+            "midcentury": 104.09597410210633
+          },
+          "hotnights_pct": {
+            "historic": 6.5,
+            "midcentury": 15.4
+          },
+          "aqi_pctile": 42.258666363697984
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.2222,
+          "pct_units_evaporation": 0.7778,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 18
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 85.6,
+          "age_over_50_pct": 23.7
+        },
+        "medical": {
+          "mental_health_eop_pct": 41.2,
+          "dpp_pct": 16.6,
+          "high_risk_p1_pct": 11.8,
+          "high_risk_p2_pct": 22.8,
+          "medium_risk_pct": 47.2
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 133,
+          "ratio_indoor_to_outdoor": 0.93,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.43,
+          "rhu_pct": 12.733,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 835.8
+        }
+      },
+      "risk_rank": 6,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-institution-for-women",
+          "name": "California Institution for Women"
+        },
+        "lower": {
+          "slug": "central-california-womens-facility",
+          "name": "Central California Women's Facility"
+        }
+      }
+    },
+    {
+      "code": "SOL",
+      "name": "California State Prison, Solano",
+      "slug": "california-state-prison-solano",
+      "city": "Vacaville",
+      "county": "Solano",
+      "address": "2100 Peabody Road, Vacaville, CA 95687",
+      "jurisdiction": "State",
+      "lat": 38.32078,
+      "lon": -121.97524,
+      "year_opened": 1984,
+      "population": 3735,
+      "capacity_pct": 1.44,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 51.24,
+            "display": 51,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.47,
+            "display": 47,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.63,
+            "display": 63,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.32,
+            "display": 32,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 52.92,
+            "display": 53,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.49,
+            "display": 49,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.63,
+            "display": 63,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.32,
+            "display": 32,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 56.91904830932617,
+            "midcentury": 90.2510757446289
+          },
+          "hotnights_pct": {
+            "historic": 6.5,
+            "midcentury": 10.5
+          },
+          "aqi_pctile": 40.62387437615521
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.1343,
+          "pct_units_evaporation": 0.1493,
+          "pct_units_ventilation": 0.7164,
+          "n_housing_units": 67
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 92.5,
+          "age_over_50_pct": 28.5
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 14.3,
+          "high_risk_p1_pct": 7.6,
+          "high_risk_p2_pct": 10.9,
+          "medium_risk_pct": 25.3
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 159,
+          "ratio_indoor_to_outdoor": 1.089,
+          "uhi_normalized": 0.582
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.52,
+          "rhu_pct": 2.95,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 179.8
+        }
+      },
+      "risk_rank": 14,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "north-kern-state-prison",
+          "name": "North Kern State Prison"
+        },
+        "lower": {
+          "slug": "wasco-state-prison",
+          "name": "Wasco State Prison"
+        }
+      }
+    },
+    {
+      "code": "SATF",
+      "name": "California Substance Abuse Treatment Facility",
+      "slug": "california-substance-abuse-treatment-facility",
+      "city": "Corcoran",
+      "county": "Kings",
+      "address": "900 Quebec Ave, Corcoran, CA 93212",
+      "jurisdiction": "State",
+      "lat": 36.05396,
+      "lon": -119.54782,
+      "year_opened": 1997,
+      "population": 5358,
+      "capacity_pct": 1.565,
+      "security": "Not Available",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 90.51,
+            "display": 91,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.77,
+            "display": 77,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.61,
+            "display": 61,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.4,
+            "display": 40,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 99.56,
+            "display": 100,
+            "category": "Highest"
+          },
+          "hazard": {
+            "value": 0.87,
+            "display": 87,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.61,
+            "display": 61,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.4,
+            "display": 40,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 116.91996525324817,
+            "midcentury": 141.90202448313028
+          },
+          "hotnights_pct": {
+            "historic": 8.7,
+            "midcentury": 23.2
+          },
+          "aqi_pctile": 61.689244197361795
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0494,
+          "pct_units_evaporation": 0.9506,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 81
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 80.4,
+          "age_over_50_pct": 34.9
+        },
+        "medical": {
+          "mental_health_eop_pct": 11.5,
+          "dpp_pct": 25.4,
+          "high_risk_p1_pct": 8.5,
+          "high_risk_p2_pct": 12.7,
+          "medium_risk_pct": 52.2
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 133,
+          "ratio_indoor_to_outdoor": 0.816,
+          "uhi_normalized": 0.601
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.21,
+          "rhu_pct": 1.917,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 460.6
+        }
+      },
+      "risk_rank": 2,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-state-prison-corcoran",
+          "name": "California State Prison, Corcoran"
+        },
+        "lower": {
+          "slug": "california-institution-for-men",
+          "name": "California Institution for Men"
+        }
+      }
+    },
+    {
+      "code": "CAL",
+      "name": "Calipatria State Prison",
+      "slug": "calipatria-state-prison",
+      "city": "Calipatria",
+      "county": "Imperial",
+      "address": "7018 Blair Road, Calipatria, CA 92233",
+      "jurisdiction": "State",
+      "lat": 33.16569,
+      "lon": -115.48434,
+      "year_opened": 1992,
+      "population": 2462,
+      "capacity_pct": 1.361,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 13.41,
+            "display": 13,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.72,
+            "display": 72,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.22,
+            "display": 22,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.18,
+            "display": 18,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 12.02,
+            "display": 12,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.71,
+            "display": 71,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.22,
+            "display": 22,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.18,
+            "display": 18,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 180.1461446888058,
+            "midcentury": 205.0750280595582
+          },
+          "hotnights_pct": {
+            "historic": 5.9,
+            "midcentury": 12.2
+          },
+          "aqi_pctile": 34.1657626589918
+        },
+        "cooling": {
+          "pct_units_refrigeration": 1,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 69
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 92,
+          "age_over_50_pct": 10.3
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 3.9,
+          "high_risk_p1_pct": 1,
+          "high_risk_p2_pct": 3.4,
+          "medium_risk_pct": 16.9
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 137,
+          "ratio_indoor_to_outdoor": 0.757,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.51,
+          "rhu_pct": 4.15,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 201.4
+        }
+      },
+      "risk_rank": 26,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "correctional-training-facility",
+          "name": "Correctional Training Facility"
+        },
+        "lower": {
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
+        }
+      }
+    },
+    {
+      "code": "CEN",
+      "name": "Centinela State Prison",
+      "slug": "centinela-state-prison",
+      "city": "Imperial",
+      "county": "Imperial",
+      "address": "2302 Brown Road, Imperial, CA 92251",
+      "jurisdiction": "State",
+      "lat": 32.8234,
+      "lon": -115.78906,
+      "year_opened": 1993,
+      "population": 2984,
+      "capacity_pct": 1.293,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 7.64,
+            "display": 8,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.77,
+            "display": 77,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.07,
+            "display": 7,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 10.18,
+            "display": 10,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.8,
+            "display": 80,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.07,
+            "display": 7,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 174.26962881009268,
+            "midcentury": 198.3435615055492
+          },
+          "hotnights_pct": {
+            "historic": 6.6,
+            "midcentury": 16.5
+          },
+          "aqi_pctile": 43.55668748025076
+        },
+        "cooling": {
+          "pct_units_refrigeration": 1,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 68
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 93.9,
+          "age_over_50_pct": 12.3
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 4,
+          "high_risk_p1_pct": 1,
+          "high_risk_p2_pct": 2.4,
+          "medium_risk_pct": 18.9
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 42,
+          "ratio_indoor_to_outdoor": 0.228,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.25,
+          "rhu_pct": 2.475,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 140
+        }
+      },
+      "risk_rank": 28,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
+        },
+        "lower": {
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
+        }
+      }
+    },
+    {
+      "code": "CCWF",
+      "name": "Central California Women's Facility",
+      "slug": "central-california-womens-facility",
+      "city": "Chowchilla",
+      "county": "Madera",
+      "address": "23370 Road 22, Chowchilla, CA 93610",
+      "jurisdiction": "State",
+      "lat": 37.09368,
+      "lon": -120.15271,
+      "year_opened": 1990,
+      "population": 2040,
+      "capacity_pct": 1.027,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 68.56,
+            "display": 69,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.68,
+            "display": 68,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.43,
+            "display": 43,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 74.35,
+            "display": 74,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.74,
+            "display": 74,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.43,
+            "display": 43,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 103.39133407249412,
+            "midcentury": 130.76722208024992
+          },
+          "hotnights_pct": {
+            "historic": 7.4,
+            "midcentury": 17.9
+          },
+          "aqi_pctile": 54.67109503384696
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0256,
+          "pct_units_evaporation": 0.9744,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 78
+        },
+        "demographics": {
+          "female_pct": 97.8,
+          "poc_pct": 70.7,
+          "age_over_50_pct": 20.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 5,
+          "dpp_pct": 14.1,
+          "high_risk_p1_pct": 9.4,
+          "high_risk_p2_pct": 11.6,
+          "medium_risk_pct": 59.9
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 97,
+          "ratio_indoor_to_outdoor": 0.599,
+          "uhi_normalized": 0.091
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.26,
+          "rhu_pct": 2.6,
+          "california_model_facility": true,
+          "air_cooling_pilot": true,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 327.2
+        }
+      },
+      "risk_rank": 7,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-state-prison-sacramento",
+          "name": "California State Prison, Sacramento"
+        },
+        "lower": {
+          "slug": "california-state-prison-los-angeles-county",
+          "name": "California State Prison, Los Angeles County"
+        }
+      }
+    },
+    {
+      "code": "CTF",
+      "name": "Correctional Training Facility",
+      "slug": "correctional-training-facility",
+      "city": "Soledad",
+      "county": "Monterey",
+      "address": "Soledad Prison Road, Soledad, CA 93960",
+      "jurisdiction": "State",
+      "lat": 36.46965,
+      "lon": -121.38223,
+      "year_opened": 1946,
+      "population": 4225,
+      "capacity_pct": 1.509,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 7.39,
+            "display": 7,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.21,
+            "display": 21,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.37,
+            "display": 37,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 13.44,
+            "display": 13,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.27,
+            "display": 27,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.37,
+            "display": 37,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 23.85387289665635,
+            "midcentury": 39.671031902667856
+          },
+          "hotnights_pct": {
+            "historic": 4.2,
+            "midcentury": 9.7
+          },
+          "aqi_pctile": 12.204984562477916
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0,
+          "pct_units_evaporation": 0.2,
+          "pct_units_ventilation": 0.8,
+          "n_housing_units": 10
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 82.4,
+          "age_over_50_pct": 48.5
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 14.7,
+          "high_risk_p1_pct": 5,
+          "high_risk_p2_pct": 12.6,
+          "medium_risk_pct": 30.8
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 60,
+          "ratio_indoor_to_outdoor": 1.935,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.42,
+          "rhu_pct": 2.525,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 57.8
+        }
+      },
+      "risk_rank": 25,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
+        },
+        "lower": {
+          "slug": "calipatria-state-prison",
+          "name": "Calipatria State Prison"
+        }
+      }
+    },
+    {
+      "code": "FOL",
+      "name": "Folsom State Prison",
+      "slug": "folsom-state-prison",
+      "city": "Represa",
+      "county": "Sacramento",
+      "address": "300 Prison Road, Represa, CA 95671",
+      "jurisdiction": "State",
+      "lat": 38.69538,
+      "lon": -121.16303,
+      "year_opened": 1880,
+      "population": 2777,
+      "capacity_pct": 1.345,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 27.67,
+            "display": 28,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.53,
+            "display": 53,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.44,
+            "display": 44,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.25,
+            "display": 25,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 34.41,
+            "display": 34,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.6,
+            "display": 60,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.44,
+            "display": 44,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.25,
+            "display": 25,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 74.99864696771587,
+            "midcentury": 104.09597410210633
+          },
+          "hotnights_pct": {
+            "historic": 6.5,
+            "midcentury": 15.4
+          },
+          "aqi_pctile": 42.258666363697984
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.2857,
+          "pct_units_evaporation": 0.7143,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 14
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 88.4,
+          "age_over_50_pct": 26.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 3.4,
+          "high_risk_p1_pct": 3.5,
+          "high_risk_p2_pct": 8.5,
+          "medium_risk_pct": 30.2
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 158,
+          "ratio_indoor_to_outdoor": 1.097,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.22,
+          "rhu_pct": 4.325,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 114.4
+        }
+      },
+      "risk_rank": 19,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
+        },
+        "lower": {
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
+        }
+      }
+    },
+    {
+      "code": "HDSP",
+      "name": "High Desert State Prison",
+      "slug": "high-desert-state-prison",
+      "city": "Susanville",
+      "county": "Lassen",
+      "address": "475-750 Rice Canyon Road, Susanville, CA 96127",
+      "jurisdiction": "State",
+      "lat": 40.40787,
+      "lon": -120.51339,
+      "year_opened": 1995,
+      "population": 2719,
+      "capacity_pct": 1.306,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 16.79,
+            "display": 17,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.38,
+            "display": 38,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.39,
+            "display": 39,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.28,
+            "display": 28,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 29.67,
+            "display": 30,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.53,
+            "display": 53,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.39,
+            "display": 39,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.28,
+            "display": 28,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 33.46113294208219,
+            "midcentury": 66.69958387415485
+          },
+          "hotnights_pct": {
+            "historic": 9,
+            "midcentury": 19.9
+          },
+          "aqi_pctile": 23.94519366034654
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.087,
+          "pct_units_evaporation": 0.913,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 46
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 80,
+          "age_over_50_pct": 20.3
+        },
+        "medical": {
+          "mental_health_eop_pct": 3.8,
+          "dpp_pct": 17.9,
+          "high_risk_p1_pct": 4.9,
+          "high_risk_p2_pct": 7.8,
+          "medium_risk_pct": 52.4
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 89,
+          "ratio_indoor_to_outdoor": 0.695,
+          "uhi_normalized": 0.041
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.53,
+          "rhu_pct": 3.667,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 340.2
+        }
+      },
+      "risk_rank": 20,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "folsom-state-prison",
+          "name": "Folsom State Prison"
+        },
+        "lower": {
+          "slug": "ironwood-state-prison",
+          "name": "Ironwood State Prison"
+        }
+      }
+    },
+    {
+      "code": "ISP",
+      "name": "Ironwood State Prison",
+      "slug": "ironwood-state-prison",
+      "city": "Blythe",
+      "county": "Riverside",
+      "address": "19005 Wiley'S Well Road, Blythe, CA 92225",
+      "jurisdiction": "State",
+      "lat": 33.56098,
+      "lon": -114.92607,
+      "year_opened": 1994,
+      "population": 2764,
+      "capacity_pct": 1.252,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 19.28,
+            "display": 19,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.88,
+            "display": 88,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0,
+            "display": 0,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.24,
+            "display": 24,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 23.76,
+            "display": 24,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.93,
+            "display": 93,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0,
+            "display": 0,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.24,
+            "display": 24,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 174.4827692089917,
+            "midcentury": 199.30841290050725
+          },
+          "hotnights_pct": {
+            "historic": 6.6,
+            "midcentury": 19.4
+          },
+          "aqi_pctile": 65.61582130994081
+        },
+        "cooling": {
+          "pct_units_refrigeration": 1,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 83
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 86.3,
+          "age_over_50_pct": 35.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 7.6,
+          "high_risk_p1_pct": 2,
+          "high_risk_p2_pct": 6.9,
+          "medium_risk_pct": 16.9
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 1,
+          "ratio_indoor_to_outdoor": 0.005,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 1.12,
+          "rhu_pct": 2.525,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 152.8
+        }
+      },
+      "risk_rank": 21,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
+        },
+        "lower": {
+          "slug": "avenal-state-prison",
+          "name": "Avenal State Prison"
+        }
+      }
+    },
+    {
+      "code": "KVSP",
+      "name": "Kern Valley State Prison",
+      "slug": "kern-valley-state-prison",
+      "city": "Delano",
+      "county": "Kern",
+      "address": "3000 West Cecil Avenue, Delano, CA 93216",
+      "jurisdiction": "State",
+      "lat": 35.76647,
+      "lon": -119.32536,
+      "year_opened": 2005,
+      "population": 3092,
+      "capacity_pct": 1.263,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 51.59,
+            "display": 52,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.71,
+            "display": 71,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.35,
+            "display": 35,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 58.74,
+            "display": 59,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.79,
+            "display": 79,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.35,
+            "display": 35,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 117.99237800740906,
+            "midcentury": 142.48336436010888
+          },
+          "hotnights_pct": {
+            "historic": 7.5,
+            "midcentury": 19.9
+          },
+          "aqi_pctile": 54.240175514320654
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.2857,
+          "pct_units_evaporation": 0.7143,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 28
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 91.2,
+          "age_over_50_pct": 14.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 10.9,
+          "dpp_pct": 12.2,
+          "high_risk_p1_pct": 4.4,
+          "high_risk_p2_pct": 8.8,
+          "medium_risk_pct": 53.2
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 66,
+          "ratio_indoor_to_outdoor": 0.407,
+          "uhi_normalized": 0.15
+        },
+        "context": {
+          "dist_nearest_medical_mi": 1.48,
+          "rhu_pct": 6.425,
+          "california_model_facility": null,
+          "air_cooling_pilot": true,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 618
+        }
+      },
+      "risk_rank": 12,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
+        },
+        "lower": {
+          "slug": "north-kern-state-prison",
+          "name": "North Kern State Prison"
+        }
+      }
+    },
+    {
+      "code": "MCSP",
+      "name": "Mule Creek State Prison",
+      "slug": "mule-creek-state-prison",
+      "city": "Ione",
+      "county": "Amador",
+      "address": "4001 State Highway 104, Ione, CA 95640",
+      "jurisdiction": "State",
+      "lat": 38.37074,
+      "lon": -120.95345,
+      "year_opened": 1987,
+      "population": 3761,
+      "capacity_pct": 1.145,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 39.51,
+            "display": 40,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.48,
+            "display": 48,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.29,
+            "display": 29,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 44.12,
+            "display": 44,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.54,
+            "display": 54,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.29,
+            "display": 29,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 90.50851118188665,
+            "midcentury": 118.18691314631442
+          },
+          "hotnights_pct": {
+            "historic": 7.4,
+            "midcentury": 14.3
+          },
+          "aqi_pctile": 23.079087058140587
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.1857,
+          "pct_units_evaporation": 0.8143,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 70
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 70.5,
+          "age_over_50_pct": 38.2
+        },
+        "medical": {
+          "mental_health_eop_pct": 21.1,
+          "dpp_pct": 26.8,
+          "high_risk_p1_pct": 19.9,
+          "high_risk_p2_pct": 18.6,
+          "medium_risk_pct": 44.4
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 11,
+          "ratio_indoor_to_outdoor": 0.08,
+          "uhi_normalized": 0.263
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.17,
+          "rhu_pct": 2.725,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 451.4
+        }
+      },
+      "risk_rank": 16,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "wasco-state-prison",
+          "name": "Wasco State Prison"
+        },
+        "lower": {
+          "slug": "california-rehabilitation-center",
+          "name": "California Rehabilitation Center"
+        }
+      }
+    },
+    {
+      "code": "NKSP",
+      "name": "North Kern State Prison",
+      "slug": "north-kern-state-prison",
+      "city": "Delano",
+      "county": "Kern",
+      "address": "2737 West Cecil Avenue, Delano, CA 93215",
+      "jurisdiction": "State",
+      "lat": 35.78189,
+      "lon": -119.30988,
+      "year_opened": 1993,
+      "population": 2570,
+      "capacity_pct": 1.345,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 51.6,
+            "display": 52,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.72,
+            "display": 72,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.62,
+            "display": 62,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 58.66,
+            "display": 59,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.81,
+            "display": 81,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.62,
+            "display": 62,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 115.18395366728932,
+            "midcentury": 139.33335304221131
+          },
+          "hotnights_pct": {
+            "historic": 7.4,
+            "midcentury": 19.9
+          },
+          "aqi_pctile": 58.88274154861368
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.037,
+          "pct_units_evaporation": 0.963,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 54
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 81.4,
+          "age_over_50_pct": 13.2
+        },
+        "medical": {
+          "mental_health_eop_pct": 3.1,
+          "dpp_pct": 3.8,
+          "high_risk_p1_pct": 1.5,
+          "high_risk_p2_pct": 4.4,
+          "medium_risk_pct": 46.9
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 134,
+          "ratio_indoor_to_outdoor": 0.827,
+          "uhi_normalized": 0.628
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.21,
+          "rhu_pct": 3.367,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 403.4
+        }
+      },
+      "risk_rank": 13,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
+        },
+        "lower": {
+          "slug": "california-state-prison-solano",
+          "name": "California State Prison, Solano"
+        }
+      }
+    },
+    {
+      "code": "PBSP",
+      "name": "Pelican Bay State Prison",
+      "slug": "pelican-bay-state-prison",
+      "city": "Crescent City",
+      "county": "Del Norte",
+      "address": "5905 Lake Earl Drive, Crescent City, CA 95531",
+      "jurisdiction": "State",
+      "lat": 41.85481,
+      "lon": -124.14908,
+      "year_opened": 1989,
+      "population": 2096,
+      "capacity_pct": 1.162,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 15.76,
+            "display": 16,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.11,
+            "display": 11,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.65,
+            "display": 65,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.28,
+            "display": 28,
+            "category": "Moderate"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 13.68,
+            "display": 14,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.09,
+            "display": 9,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.65,
+            "display": 65,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.28,
+            "display": 28,
+            "category": "Moderate"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 0.7974257440724264,
+            "midcentury": 1.2816500022282356
+          },
+          "hotnights_pct": {
+            "historic": 0,
+            "midcentury": 0
+          },
+          "aqi_pctile": 21.345065727058465
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0952,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0.9048,
+          "n_housing_units": 63
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 80.5,
+          "age_over_50_pct": 25.9
+        },
+        "medical": {
+          "mental_health_eop_pct": 4.5,
+          "dpp_pct": 10.2,
+          "high_risk_p1_pct": 3,
+          "high_risk_p2_pct": 8.8,
+          "medium_risk_pct": 53
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 63,
+          "ratio_indoor_to_outdoor": 15.75,
+          "uhi_normalized": 0.31
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.21,
+          "rhu_pct": 4.758,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 241.8
+        }
+      },
+      "risk_rank": 23,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "avenal-state-prison",
+          "name": "Avenal State Prison"
+        },
+        "lower": {
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
+        }
+      }
+    },
+    {
+      "code": "PVSP",
+      "name": "Pleasant Valley State Prison",
+      "slug": "pleasant-valley-state-prison",
+      "city": "Coalinga",
+      "county": "Fresno",
+      "address": "24863 West Jayne Avenue, Coalinga, CA 93210",
+      "jurisdiction": "State",
+      "lat": 36.13147,
+      "lon": -120.2489,
+      "year_opened": 1994,
+      "population": 2992,
+      "capacity_pct": 1.296,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 2.61,
+            "display": 3,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.43,
+            "display": 43,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.41,
+            "display": 41,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.17,
+            "display": 17,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 8.92,
+            "display": 9,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.5,
+            "display": 50,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.41,
+            "display": 41,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.17,
+            "display": 17,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 85.08020384147802,
+            "midcentury": 112.55941330854844
+          },
+          "hotnights_pct": {
+            "historic": 6.6,
+            "midcentury": 13.9
+          },
+          "aqi_pctile": 17.850388774590186
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0606,
+          "pct_units_evaporation": 0.9394,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 66
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 79.6,
+          "age_over_50_pct": 11.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 5.1,
+          "dpp_pct": 4.2,
+          "high_risk_p1_pct": 0,
+          "high_risk_p2_pct": 0.5,
+          "medium_risk_pct": 43.5
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 67,
+          "ratio_indoor_to_outdoor": 0.411,
+          "uhi_normalized": null
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.37,
+          "rhu_pct": 3.333,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 182.2
+        }
+      },
+      "risk_rank": 31,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "sierra-conservation-center",
+          "name": "Sierra Conservation Center"
+        },
+        "lower": null
+      }
+    },
+    {
+      "code": "RJD",
+      "name": "Richard J. Donovan Correctional Facility",
+      "slug": "richard-j-donovan-correctional-facility",
+      "city": "San Diego",
+      "county": "San Diego",
+      "address": "480 Alta Road, San Diego, CA 92179",
+      "jurisdiction": "State",
+      "lat": 32.58456,
+      "lon": -116.93358,
+      "year_opened": 1987,
+      "population": 3592,
+      "capacity_pct": 1.2,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 65.83,
+            "display": 66,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.51,
+            "display": 51,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.37,
+            "display": 37,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.52,
+            "display": 52,
+            "category": "Highest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 63.23,
+            "display": 63,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.48,
+            "display": 48,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.37,
+            "display": 37,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.52,
+            "display": 52,
+            "category": "Highest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 14.400625292237612,
+            "midcentury": 29.28300499593595
+          },
+          "hotnights_pct": {
+            "historic": 5.2,
+            "midcentury": 8.7
+          },
+          "aqi_pctile": 71.2991253984341
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.3649,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0.6351,
+          "n_housing_units": 74
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 77.2,
+          "age_over_50_pct": 44.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 25.5,
+          "dpp_pct": 33.5,
+          "high_risk_p1_pct": 21.3,
+          "high_risk_p2_pct": 20.8,
+          "medium_risk_pct": 40
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 114,
+          "ratio_indoor_to_outdoor": 1.932,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.76,
+          "rhu_pct": 3.592,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 429.4
+        }
+      },
+      "risk_rank": 11,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "valley-state-prison",
+          "name": "Valley State Prison"
+        },
+        "lower": {
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
+        }
+      }
+    },
+    {
+      "code": "SVSP",
+      "name": "Salinas Valley State Prison",
+      "slug": "salinas-valley-state-prison",
+      "city": "Soledad",
+      "county": "Monterey",
+      "address": "31625 Highway 101, Soledad, CA 93960",
+      "jurisdiction": "State",
+      "lat": 36.47886,
+      "lon": -121.37439,
+      "year_opened": 1996,
+      "population": 2387,
+      "capacity_pct": 0.974,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 4.45,
+            "display": 4,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.21,
+            "display": 21,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.23,
+            "display": 23,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.38,
+            "display": 38,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 10.5,
+            "display": 10,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.27,
+            "display": 27,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.23,
+            "display": 23,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.38,
+            "display": 38,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 23.85387289665635,
+            "midcentury": 39.671031902667856
+          },
+          "hotnights_pct": {
+            "historic": 4.2,
+            "midcentury": 9.7
+          },
+          "aqi_pctile": 12.204984562477916
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.093,
+          "pct_units_evaporation": 0.907,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 43
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 88.3,
+          "age_over_50_pct": 21.1
+        },
+        "medical": {
+          "mental_health_eop_pct": 11.4,
+          "dpp_pct": 17.8,
+          "high_risk_p1_pct": 10,
+          "high_risk_p2_pct": 12.4,
+          "medium_risk_pct": 48.8
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 1,
+          "ratio_indoor_to_outdoor": 0.032,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 1.17,
+          "rhu_pct": 4.567,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 913.8
+        }
+      },
+      "risk_rank": 29,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "centinela-state-prison",
+          "name": "Centinela State Prison"
+        },
+        "lower": {
+          "slug": "sierra-conservation-center",
+          "name": "Sierra Conservation Center"
+        }
+      }
+    },
+    {
+      "code": "SQ",
+      "name": "San Quentin Rehabilitation Center",
+      "slug": "san-quentin-rehabilitation-center",
+      "city": "San Quentin",
+      "county": "Marin",
+      "address": "Main Street, San Quentin, CA 94964",
+      "jurisdiction": "State",
+      "lat": 37.94004,
+      "lon": -122.49037,
+      "year_opened": 1852,
+      "population": 2688,
+      "capacity_pct": 0.872,
+      "security": "Maximum",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 8.67,
+            "display": 9,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.3,
+            "display": 30,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.18,
+            "display": 18,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.38,
+            "display": 38,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 13.84,
+            "display": 14,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.36,
+            "display": 36,
+            "category": "Lowest"
+          },
+          "exposure": {
+            "value": 0.18,
+            "display": 18,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.38,
+            "display": 38,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 7.478095054626465,
+            "midcentury": 14.998387336730955
+          },
+          "hotnights_pct": {
+            "historic": 6,
+            "midcentury": 13.1
+          },
+          "aqi_pctile": 31.085921282338564
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.6154,
+          "pct_units_evaporation": 0,
+          "pct_units_ventilation": 0.3846,
+          "n_housing_units": 26
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 74.9,
+          "age_over_50_pct": 51
+        },
+        "medical": {
+          "mental_health_eop_pct": 9.2,
+          "dpp_pct": 16.2,
+          "high_risk_p1_pct": 16.1,
+          "high_risk_p2_pct": 21.2,
+          "medium_risk_pct": 36.7
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 41,
+          "ratio_indoor_to_outdoor": 1.414,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.49,
+          "rhu_pct": 2.592,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 101.2
+        }
+      },
+      "risk_rank": 24,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
+        },
+        "lower": {
+          "slug": "correctional-training-facility",
+          "name": "Correctional Training Facility"
+        }
+      }
+    },
+    {
+      "code": "SCC",
+      "name": "Sierra Conservation Center",
+      "slug": "sierra-conservation-center",
+      "city": "Jamestown",
+      "county": "Tuolumne",
+      "address": "5100 O'Byrnes Ferry Road, Jamestown, CA 95327",
+      "jurisdiction": "State",
+      "lat": 37.89169,
+      "lon": -120.53654,
+      "year_opened": 1965,
+      "population": 4035,
+      "capacity_pct": 0.812,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 0,
+            "display": 0,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.5,
+            "display": 50,
+            "category": "Moderate"
+          },
+          "exposure": {
+            "value": 0.49,
+            "display": 49,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.08,
+            "display": 8,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 10.07,
+            "display": 10,
+            "category": "Lowest"
+          },
+          "hazard": {
+            "value": 0.62,
+            "display": 62,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.49,
+            "display": 49,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.08,
+            "display": 8,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 87.49333190917969,
+            "midcentury": 117.48440551757812
+          },
+          "hotnights_pct": {
+            "historic": 8.6,
+            "midcentury": 19.5
+          },
+          "aqi_pctile": 23.802979386426276
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0517,
+          "pct_units_evaporation": 0.2586,
+          "pct_units_ventilation": 0.6897,
+          "n_housing_units": 58
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 79.6,
+          "age_over_50_pct": 10
+        },
+        "medical": {
+          "mental_health_eop_pct": 0,
+          "dpp_pct": 2.3,
+          "high_risk_p1_pct": 0,
+          "high_risk_p2_pct": 1.2,
+          "medium_risk_pct": 12.2
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 154,
+          "ratio_indoor_to_outdoor": 1.041,
+          "uhi_normalized": 0
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.2,
+          "rhu_pct": 2.892,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 253.4
+        }
+      },
+      "risk_rank": 30,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
+        },
+        "lower": {
+          "slug": "pleasant-valley-state-prison",
+          "name": "Pleasant Valley State Prison"
+        }
+      }
+    },
+    {
+      "code": "VSP",
+      "name": "Valley State Prison",
+      "slug": "valley-state-prison",
+      "city": "Chowchilla",
+      "county": "Madera",
+      "address": "21633 Avenue 24, Chowchilla, CA 93610",
+      "jurisdiction": "State",
+      "lat": 37.10548,
+      "lon": -120.15547,
+      "year_opened": 1995,
+      "population": 3148,
+      "capacity_pct": 1.605,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 62.48,
+            "display": 62,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.68,
+            "display": 68,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.36,
+            "display": 36,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 68.27,
+            "display": 68,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.74,
+            "display": 74,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.36,
+            "display": 36,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 103.39133407249412,
+            "midcentury": 130.76722208024992
+          },
+          "hotnights_pct": {
+            "historic": 7.4,
+            "midcentury": 17.9
+          },
+          "aqi_pctile": 54.67109503384696
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0,
+          "pct_units_evaporation": 1,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 77
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 73.1,
+          "age_over_50_pct": 48.8
+        },
+        "medical": {
+          "mental_health_eop_pct": 10.4,
+          "dpp_pct": 34.2,
+          "high_risk_p1_pct": 13,
+          "high_risk_p2_pct": 16.1,
+          "medium_risk_pct": 39.8
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 52,
+          "ratio_indoor_to_outdoor": 0.321,
+          "uhi_normalized": 0.091
+        },
+        "context": {
+          "dist_nearest_medical_mi": 1.08,
+          "rhu_pct": 1.008,
+          "california_model_facility": true,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 136.4
+        }
+      },
+      "risk_rank": 10,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
+        },
+        "lower": {
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
+        }
+      }
+    },
+    {
+      "code": "WSP",
+      "name": "Wasco State Prison",
+      "slug": "wasco-state-prison",
+      "city": "Wasco",
+      "county": "Kern",
+      "address": "701 Scofield Avenue, Wasco, CA 93280",
+      "jurisdiction": "State",
+      "lat": 35.59431,
+      "lon": -119.40833,
+      "year_opened": 1991,
+      "population": 3676,
+      "capacity_pct": 1.542,
+      "security": "Medium",
+      "periods": {
+        "historic": {
+          "risk": {
+            "value": 48.12,
+            "display": 48,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.72,
+            "display": 72,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.59,
+            "display": 59,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
+          }
+        },
+        "midcentury": {
+          "risk": {
+            "value": 51.81,
+            "display": 52,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.76,
+            "display": 76,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.59,
+            "display": 59,
+            "category": "Highest"
+          },
+          "vulnerability": {
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
+          }
+        }
+      },
+      "profile": {
+        "hazard": {
+          "days_over_90": {
+            "historic": 120.21041623380076,
+            "midcentury": 145.10775925227702
+          },
+          "hotnights_pct": {
+            "historic": 6.8,
+            "midcentury": 16.7
+          },
+          "aqi_pctile": 56.9272052060359
+        },
+        "cooling": {
+          "pct_units_refrigeration": 0.0152,
+          "pct_units_evaporation": 0.9848,
+          "pct_units_ventilation": 0,
+          "n_housing_units": 66
+        },
+        "demographics": {
+          "female_pct": 0,
+          "poc_pct": 80.2,
+          "age_over_50_pct": 12.3
+        },
+        "medical": {
+          "mental_health_eop_pct": 3.4,
+          "dpp_pct": 5.2,
+          "high_risk_p1_pct": 1.4,
+          "high_risk_p2_pct": 4.6,
+          "medium_risk_pct": 48.4
+        },
+        "heat": {
+          "days_indoor_above_78f_2025": 136,
+          "ratio_indoor_to_outdoor": 0.819,
+          "uhi_normalized": 0.484
+        },
+        "context": {
+          "dist_nearest_medical_mi": 0.19,
+          "rhu_pct": 2.15,
+          "california_model_facility": null,
+          "air_cooling_pilot": null,
+          "planned_closure": null,
+          "avg_annual_violent_incidents": 300
+        }
+      },
+      "risk_rank": 15,
+      "risk_rank_total": 31,
+      "neighbors": {
+        "higher": {
+          "slug": "california-state-prison-solano",
+          "name": "California State Prison, Solano"
+        },
+        "lower": {
+          "slug": "mule-creek-state-prison",
+          "name": "Mule Creek State Prison"
+        }
+      }
+    }
+  ]
+}

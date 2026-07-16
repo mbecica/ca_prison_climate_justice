@@ -17,6 +17,9 @@ data_sources/hazards/VCP_Tracts.geojson
 analysis/The Cost of Inaction.md
 **/*_report.md
 analysis/cjc reports/heat_risk_index/
+analysis/CDCR_hazard_rank/top10_narrative.md
+analysis/CDCR_hazard_rank/heat_6mo_exposure_stats.md
+analysis/cjc reports/*/for_publish/
 
 # Node
 node_modules/

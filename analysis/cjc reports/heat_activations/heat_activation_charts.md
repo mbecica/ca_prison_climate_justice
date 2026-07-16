@@ -47,6 +47,46 @@ Person-days = facility population in age bracket × days outdoor tmax ≥ 90°F 
 
 Per-facility grouped bar chart (top 12 by total 50+ person-days) also shown, with estimated % refrigeration cooling as a sub-label on each facility axis tick.
 
+### Population impacts — health risk category × Skarha threshold (2016–2025 avg)
+
+Person-days over Skarha 10°F threshold = population in each health risk tier × avg annual days outdoor tmax exceeds facility mean summer tmax by ≥ 10°F, 2016–2025. All 31 active facilities, sorted by combined P1+P2 person-days. Same risk tiers and sort logic as the ≥ 90°F health risk chart.
+
+System-wide:
+- **59.2%** of the total population (52,915 of 89,394) is in medium or higher health risk category
+- **9.8 avg Skarha threshold days/person/year** for medium+ population (520,840 person-days ÷ 52,915 people)
+
+### Population impacts — EOP mental health × Skarha threshold (2016–2025 avg)
+
+EOP person-days over Skarha 10°F threshold = EOP people × avg annual days outdoor tmax exceeds facility mean summer tmax by ≥ 10°F, 2016–2025. Top 12 facilities by EOP person-days. System avg: 9.4 Skarha threshold days per facility per year (32 facilities, 2016–2025).
+
+All 23 facilities with EOP > 0, sorted by EOP person-days (8 facilities with 0% EOP excluded: ASP, CAL, CEN, CTF, FOL, ISP, SCC, SOL):
+
+| Facility | EOP people | EOP % | Avg Skarha days/yr | EOP person-days/yr |
+| :--- | ---: | ---: | ---: | ---: |
+| CMC | 647 | 30% | 15.9 | 10,287 |
+| RJD | 916 | 26% | 10.8 | 9,893 |
+| SAC | 878 | 41% | 9.8 | 8,604 |
+| CMF | 495 | 24% | 15.1 | 7,474 |
+| MCSP | 794 | 21% | 8.6 | 6,828 |
+| LAC | 605 | 20% | 11.2 | 6,776 |
+| SVSP | 272 | 11% | 20.1 | 5,467 |
+| CHCF | 468 | 21% | 10.6 | 4,961 |
+| SQ | 247 | 9% | 15.1 | 3,730 |
+| SATF | 616 | 12% | 5.6 | 3,450 |
+| CIM | 168 | 7% | 13.9 | 2,335 |
+| VSP | 327 | 10% | 6.6 | 2,158 |
+| HDSP | 103 | 4% | 15.6 | 1,607 |
+| COR | 258 | 10% | 5.6 | 1,445 |
+| KVSP | 337 | 11% | 3.6 | 1,213 |
+| CIW | 69 | 6% | 12.7 | 876 |
+| PBSP | 94 | 4% | 8.0 | 752 |
+| PVSP | 153 | 5% | 4.6 | 704 |
+| CCWF | 102 | 5% | 6.6 | 673 |
+| CCI | 151 | 6% | 4.3 | 649 |
+| WSP | 125 | 3% | 3.8 | 475 |
+| CRC | 42 | 2% | 10.1 | 424 |
+| NKSP | 80 | 3% | 3.6 | 288 |
+
 ### Population impacts — CCHCS health risk category (2025)
 
 Person-days by CCHCS risk tier: High Risk Priority 1, High Risk Priority 2, and Medium Risk. Top 12 facilities selected and sorted by combined P1+P2 person-days. Health risk percentages from CCHCS IPC Dashboard (most recent 2025 month per facility).

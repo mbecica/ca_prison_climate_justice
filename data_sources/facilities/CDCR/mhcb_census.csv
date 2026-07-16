@@ -1,0 +1,13 @@
+date,program,bed_capacity,census,beds_redlined,available_beds,total_pending_referrals,beds_assigned,pending_referrals_gt_24hrs
+2025-10-27,Male Programs,380,269,35,76,14,14,0
+2025-10-27,Female Programs,41,12,0,29,1,1,0
+2025-10-27,Totals,421,281,35,105,15,15,0
+2025-11-24,Male Programs,380,253,32,95,13,13,0
+2025-11-24,Female Programs,41,12,0,29,1,1,0
+2025-11-24,Totals,421,265,32,124,14,14,0
+2025-12-29,Male Programs,380,295,33,52,12,12,0
+2025-12-29,Female Programs,41,18,0,23,2,2,0
+2025-12-29,Totals,421,313,33,75,14,14,0
+2026-01-26,Male Programs,380,239,24,117,17,17,0
+2026-01-26,Female Programs,41,21,0,20,1,1,0
+2026-01-26,Totals,421,260,24,137,18,18,0

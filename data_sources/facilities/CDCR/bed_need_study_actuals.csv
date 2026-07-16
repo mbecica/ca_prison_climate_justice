@@ -1,0 +1,1081 @@
+program,measure,fy_ending,value,is_forecast
+Male APP,CDCR Male Pop,2014,128211.0,False
+Male APP,CDCR Male Pop,2015,128303.0,False
+Male APP,CDCR Male Pop,2016,122540.0,False
+Male APP,CDCR Male Pop,2017,123213.0,False
+Male APP,CDCR Male Pop,2018,124414.0,False
+Male APP,CDCR Male Pop,2019,121939.0,False
+Male APP,CDCR Male Pop,2020,118494.0,False
+Male APP,CDCR Male Pop,2021,93311.0,False
+Male APP,CDCR Male Pop,2022,95890.0,False
+Male APP,CDCR Male Pop,2023,92051.0,False
+Male APP,CDCR Male Pop,2024,90421.0,False
+Male APP,CDCR Male Pop,2025,87721.0,False
+Male APP,CDCR Male Pop,2026,85795.0,True
+Male APP,CDCR Male Pop,2027,84058.0,True
+Male APP,CDCR Male Pop,2028,83436.0,True
+Male APP,CDCR Male Pop,2029,82524.0,True
+Male APP,CDCR Male Pop,2030,81559.0,True
+Male APP,Census Rate,2014,2.08,False
+Male APP,Census Rate,2015,2.3,False
+Male APP,Census Rate,2016,2.6,False
+Male APP,Census Rate,2017,3.01,False
+Male APP,Census Rate,2018,2.84,False
+Male APP,Census Rate,2019,2.21,False
+Male APP,Census Rate,2020,3.53,False
+Male APP,Census Rate,2021,3.11,False
+Male APP,Census Rate,2022,3.49,False
+Male APP,Census Rate,2023,3.59,False
+Male APP,Census Rate,2024,3.0,False
+Male APP,Census Rate,2025,2.44,False
+Male APP,Census Rate,2026,2.43,True
+Male APP,Census Rate,2027,2.43,True
+Male APP,Census Rate,2028,2.44,True
+Male APP,Census Rate,2029,2.43,True
+Male APP,Census Rate,2030,2.43,True
+Male APP,Avg Census,2014,249.8,False
+Male APP,Avg Census,2015,275.2,False
+Male APP,Avg Census,2016,291.5,False
+Male APP,Avg Census,2017,334.6,False
+Male APP,Avg Census,2018,332.0,False
+Male APP,Avg Census,2019,253.9,False
+Male APP,Avg Census,2020,386.5,False
+Male APP,Avg Census,2021,278.8,False
+Male APP,Avg Census,2022,316.8,False
+Male APP,Avg Census,2023,313.3,False
+Male APP,Avg Census,2024,259.1,False
+Male APP,Avg Census,2025,193.8,False
+Male APP,Avg Pending List,2014,16.9,False
+Male APP,Avg Pending List,2015,20.4,False
+Male APP,Avg Pending List,2016,27.5,False
+Male APP,Avg Pending List,2017,36.0,False
+Male APP,Avg Pending List,2018,21.2,False
+Male APP,Avg Pending List,2019,15.3,False
+Male APP,Avg Pending List,2020,31.3,False
+Male APP,Avg Pending List,2021,11.0,False
+Male APP,Avg Pending List,2022,17.5,False
+Male APP,Avg Pending List,2023,17.4,False
+Male APP,Avg Pending List,2024,12.3,False
+Male APP,Avg Pending List,2025,14.0,False
+Male APP,Avg Census,2014,266.7,False
+Male APP,Avg Census,2015,295.5,False
+Male APP,Avg Census,2016,319.0,False
+Male APP,Avg Census,2017,370.6,False
+Male APP,Avg Census,2018,353.2,False
+Male APP,Avg Census,2019,269.2,False
+Male APP,Avg Census,2020,417.8,False
+Male APP,Avg Census,2021,289.8,False
+Male APP,Avg Census,2022,334.3,False
+Male APP,Avg Census,2023,330.7,False
+Male APP,Avg Census,2024,271.4,False
+Male APP,Avg Census,2025,207.8,False
+Male APP,Avg Census,2026,208.1,True
+Male APP,Avg Census,2027,204.1,True
+Male APP,Avg Census,2028,203.2,True
+Male APP,Avg Census,2029,200.8,True
+Male APP,Avg Census,2030,198.4,True
+Male APP,Bed Need (90%),2014,296.0,False
+Male APP,Bed Need (90%),2015,328.0,False
+Male APP,Bed Need (90%),2016,354.0,False
+Male APP,Bed Need (90%),2017,412.0,False
+Male APP,Bed Need (90%),2018,392.0,False
+Male APP,Bed Need (90%),2019,299.0,False
+Male APP,Bed Need (90%),2020,464.0,False
+Male APP,Bed Need (90%),2021,322.0,False
+Male APP,Bed Need (90%),2022,371.0,False
+Male APP,Bed Need (90%),2023,367.0,False
+Male APP,Bed Need (90%),2024,302.0,False
+Male APP,Bed Need (90%),2025,231.0,False
+Male APP,Bed Need (90%),2026,231.0,True
+Male APP,Bed Need (90%),2027,227.0,True
+Male APP,Bed Need (90%),2028,226.0,True
+Male APP,Bed Need (90%),2029,223.0,True
+Male APP,Bed Need (90%),2030,220.0,True
+Male ICF-High,CDCR Male Pop,2014,128211.0,False
+Male ICF-High,CDCR Male Pop,2015,128303.0,False
+Male ICF-High,CDCR Male Pop,2016,122540.0,False
+Male ICF-High,CDCR Male Pop,2017,123213.0,False
+Male ICF-High,CDCR Male Pop,2018,124414.0,False
+Male ICF-High,CDCR Male Pop,2019,121939.0,False
+Male ICF-High,CDCR Male Pop,2020,118494.0,False
+Male ICF-High,CDCR Male Pop,2021,93311.0,False
+Male ICF-High,CDCR Male Pop,2022,95890.0,False
+Male ICF-High,CDCR Male Pop,2023,92051.0,False
+Male ICF-High,CDCR Male Pop,2030,81559.0,True
+Male ICF-High,Census Rate,2014,5.1,False
+Male ICF-High,Census Rate,2015,5.51,False
+Male ICF-High,Census Rate,2016,4.97,False
+Male ICF-High,Census Rate,2017,5.72,False
+Male ICF-High,Census Rate,2018,5.23,False
+Male ICF-High,Census Rate,2019,4.97,False
+Male ICF-High,Census Rate,2020,6.2,False
+Male ICF-High,Census Rate,2021,7.31,False
+Male ICF-High,Census Rate,2022,6.48,False
+Male ICF-High,Census Rate,2023,6.63,False
+Male ICF-High,Census Rate,2024,5.8,False
+Male ICF-High,Census Rate,2025,5.14,False
+Male ICF-High,Census Rate,2026,5.09,True
+Male ICF-High,Census Rate,2027,5.1,True
+Male ICF-High,Census Rate,2028,5.12,True
+Male ICF-High,Census Rate,2029,5.12,True
+Male ICF-High,Census Rate,2030,5.12,True
+Male ICF-High,Avg Census (VPP),2014,125.9,False
+Male ICF-High,Avg Census (VPP),2015,62.2,False
+Male ICF-High,Avg Census (VPP),2016,84.4,False
+Male ICF-High,Avg Census (VPP),2017,91.2,False
+Male ICF-High,Avg Census (VPP),2018,139.7,False
+Male ICF-High,Avg Census (VPP),2019,149.7,False
+Male ICF-High,Avg Census (VPP),2020,147.9,False
+Male ICF-High,Avg Census (VPP),2021,112.0,False
+Male ICF-High,Avg Census (VPP),2022,106.9,False
+Male ICF-High,Avg Census (VPP),2023,75.3,False
+Male ICF-High,Avg Census (VPP),2024,40.2,False
+Male ICF-High,Avg Census (VPP),2025,35.5,False
+Male ICF-High,Avg Census (CHCF),2014,218.4,False
+Male ICF-High,Avg Census (CHCF),2015,365.4,False
+Male ICF-High,Avg Census (CHCF),2016,298.6,False
+Male ICF-High,Avg Census (CHCF),2017,333.4,False
+Male ICF-High,Avg Census (CHCF),2018,255.6,False
+Male ICF-High,Avg Census (CHCF),2019,255.5,False
+Male ICF-High,Avg Census (CHCF),2020,305.3,False
+Male ICF-High,Avg Census (CHCF),2021,345.5,False
+Male ICF-High,Avg Census (CHCF),2022,268.2,False
+Male ICF-High,Avg Census (CHCF),2023,245.5,False
+Male ICF-High,Avg Census (CHCF),2024,243.7,False
+Male ICF-High,Avg Census (CHCF),2025,207.9,False
+Male ICF-High,Avg Pending List,2014,59.4,False
+Male ICF-High,Avg Pending List,2015,51.5,False
+Male ICF-High,Avg Pending List,2016,18.7,False
+Male ICF-High,Avg Pending List,2017,70.8,False
+Male ICF-High,Avg Pending List,2018,33.1,False
+Male ICF-High,Avg Pending List,2019,24.1,False
+Male ICF-High,Avg Pending List,2020,75.1,False
+Male ICF-High,Avg Pending List,2021,24.9,False
+Male ICF-High,Avg Pending List,2022,31.4,False
+Male ICF-High,Avg Pending List,2023,62.8,False
+Male ICF-High,Avg Pending List,2024,16.9,False
+Male ICF-High,Avg Pending List,2025,18.7,False
+Male ICF-High,Avg Census,2014,653.5,False
+Male ICF-High,Avg Census,2015,706.6,False
+Male ICF-High,Avg Census,2016,609.5,False
+Male ICF-High,Avg Census,2017,704.3,False
+Male ICF-High,Avg Census,2018,651.1,False
+Male ICF-High,Avg Census,2019,605.7,False
+Male ICF-High,Avg Census,2020,758.1,False
+Male ICF-High,Avg Census,2021,682.2,False
+Male ICF-High,Avg Census,2022,621.8,False
+Male ICF-High,Avg Census,2023,610.0,False
+Male ICF-High,Avg Census,2024,506.7,False
+Male ICF-High,Avg Census,2025,437.6,False
+Male ICF-High,Avg Census,2026,436.7,True
+Male ICF-High,Avg Census,2027,428.7,True
+Male ICF-High,Avg Census,2028,427.5,True
+Male ICF-High,Avg Census,2029,422.4,True
+Male ICF-High,Avg Census,2030,417.3,True
+Male ICF-High,Bed Need (90%),2014,726.0,False
+Male ICF-High,Bed Need (90%),2015,785.0,False
+Male ICF-High,Bed Need (90%),2016,677.0,False
+Male ICF-High,Bed Need (90%),2017,783.0,False
+Male ICF-High,Bed Need (90%),2018,723.0,False
+Male ICF-High,Bed Need (90%),2019,673.0,False
+Male ICF-High,Bed Need (90%),2020,842.0,False
+Male ICF-High,Bed Need (90%),2021,758.0,False
+Male ICF-High,Bed Need (90%),2022,691.0,False
+Male ICF-High,Bed Need (90%),2023,678.0,False
+Male ICF-High,Bed Need (90%),2024,563.0,False
+Male ICF-High,Bed Need (90%),2025,486.0,False
+Male ICF-High,Bed Need (90%),2026,485.0,True
+Male ICF-High,Bed Need (90%),2027,476.0,True
+Male ICF-High,Bed Need (90%),2028,475.0,True
+Male ICF-High,Bed Need (90%),2029,469.0,True
+Male ICF-High,Bed Need (90%),2030,464.0,True
+Male ICF-Low,CDCR Male Pop,2014,128211.0,False
+Male ICF-Low,CDCR Male Pop,2015,128303.0,False
+Male ICF-Low,CDCR Male Pop,2016,122540.0,False
+Male ICF-Low,CDCR Male Pop,2017,123213.0,False
+Male ICF-Low,CDCR Male Pop,2018,124414.0,False
+Male ICF-Low,CDCR Male Pop,2019,121939.0,False
+Male ICF-Low,CDCR Male Pop,2020,118494.0,False
+Male ICF-Low,CDCR Male Pop,2021,93311.0,False
+Male ICF-Low,CDCR Male Pop,2022,95890.0,False
+Male ICF-Low,CDCR Male Pop,2030,81559.0,True
+Male ICF-Low,Census Rate,2014,2.59,False
+Male ICF-Low,Census Rate,2015,2.32,False
+Male ICF-Low,Census Rate,2016,2.61,False
+Male ICF-Low,Census Rate,2017,2.7,False
+Male ICF-Low,Census Rate,2018,2.81,False
+Male ICF-Low,Census Rate,2019,2.33,False
+Male ICF-Low,Census Rate,2020,3.17,False
+Male ICF-Low,Census Rate,2021,2.78,False
+Male ICF-Low,Census Rate,2022,2.15,False
+Male ICF-Low,Census Rate,2023,1.43,False
+Male ICF-Low,Census Rate,2024,1.63,False
+Male ICF-Low,Census Rate,2025,2.34,False
+Male ICF-Low,Census Rate,2026,2.35,True
+Male ICF-Low,Census Rate,2027,2.34,True
+Male ICF-Low,Census Rate,2028,2.34,True
+Male ICF-Low,Census Rate,2029,2.33,True
+Male ICF-Low,Census Rate,2030,2.33,True
+Male ICF-Low,Avg Census (CSH),2014,46.6,False
+Male ICF-Low,Avg Census (CSH),2015,47.4,False
+Male ICF-Low,Avg Census (CSH),2016,48.5,False
+Male ICF-Low,Avg Census (CSH),2017,44.4,False
+Male ICF-Low,Avg Census (CSH),2018,48.4,False
+Male ICF-Low,Avg Census (CSH),2019,47.2,False
+Male ICF-Low,Avg Census (CSH),2020,44.7,False
+Male ICF-Low,Avg Census (CSH),2021,34.5,False
+Male ICF-Low,Avg Census (CSH),2022,21.2,False
+Male ICF-Low,Avg Census (CSH),2023,25.6,False
+Male ICF-Low,Avg Census (CSH),2024,41.4,False
+Male ICF-Low,Avg Census (CSH),2025,44.4,False
+Male ICF-Low,Avg Census (VPP),2014,74.0,False
+Male ICF-Low,Avg Census (VPP),2015,72.4,False
+Male ICF-Low,Avg Census (VPP),2016,73.4,False
+Male ICF-Low,Avg Census (VPP),2017,73.5,False
+Male ICF-Low,Avg Census (VPP),2018,69.5,False
+Male ICF-Low,Avg Census (VPP),2019,75.4,False
+Male ICF-Low,Avg Census (VPP),2020,74.2,False
+Male ICF-Low,Avg Census (VPP),2021,50.0,False
+Male ICF-Low,Avg Census (VPP),2022,48.0,False
+Male ICF-Low,Avg Census (VPP),2023,27.1,False
+Male ICF-Low,Avg Census (VPP),2024,33.1,False
+Male ICF-Low,Avg Census (VPP),2025,24.5,False
+Male ICF-Low,Avg Census (ASH),2014,211.1,False
+Male ICF-Low,Avg Census (ASH),2015,177.7,False
+Male ICF-Low,Avg Census (ASH),2016,197.9,False
+Male ICF-Low,Avg Census (ASH),2017,206.6,False
+Male ICF-Low,Avg Census (ASH),2018,199.1,False
+Male ICF-Low,Avg Census (ASH),2019,140.8,False
+Male ICF-Low,Avg Census (ASH),2020,225.1,False
+Male ICF-Low,Avg Census (ASH),2021,163.7,False
+Male ICF-Low,Avg Census (ASH),2022,129.2,False
+Male ICF-Low,Avg Census (ASH),2023,72.0,False
+Male ICF-Low,Avg Census (ASH),2024,79.8,False
+Male ICF-Low,Avg Census (ASH),2025,120.8,False
+Male ICF-Low,Avg Pending List,2017,7.9,False
+Male ICF-Low,Avg Pending List,2018,33.0,False
+Male ICF-Low,Avg Pending List,2019,20.4,False
+Male ICF-Low,Avg Pending List,2020,32.7,False
+Male ICF-Low,Avg Pending List,2021,11.4,False
+Male ICF-Low,Avg Pending List,2022,7.5,False
+Male ICF-Low,Avg Pending List,2023,7.0,False
+Male ICF-Low,Avg Pending List,2024,19.3,False
+Male ICF-Low,Avg Pending List,2025,19.4,False
+Male ICF-Low,Avg Census,2014,331.6,False
+Male ICF-Low,Avg Census,2015,297.5,False
+Male ICF-Low,Avg Census,2016,319.7,False
+Male ICF-Low,Avg Census,2017,332.3,False
+Male ICF-Low,Avg Census,2018,350.0,False
+Male ICF-Low,Avg Census,2019,283.8,False
+Male ICF-Low,Avg Census,2020,376.6,False
+Male ICF-Low,Avg Census,2021,259.5,False
+Male ICF-Low,Avg Census,2022,205.9,False
+Male ICF-Low,Avg Census,2023,131.7,False
+Male ICF-Low,Avg Census,2024,173.5,False
+Male ICF-Low,Avg Census,2025,209.0,False
+Male ICF-Low,Avg Census,2026,201.4,True
+Male ICF-Low,Avg Census,2027,197.0,True
+Male ICF-Low,Avg Census,2028,195.3,True
+Male ICF-Low,Avg Census,2029,192.6,True
+Male ICF-Low,Avg Census,2030,190.0,True
+Male ICF-Low,Bed Need (90%),2014,368.0,False
+Male ICF-Low,Bed Need (90%),2015,331.0,False
+Male ICF-Low,Bed Need (90%),2016,355.0,False
+Male ICF-Low,Bed Need (90%),2017,369.0,False
+Male ICF-Low,Bed Need (90%),2018,389.0,False
+Male ICF-Low,Bed Need (90%),2019,315.0,False
+Male ICF-Low,Bed Need (90%),2020,418.0,False
+Male ICF-Low,Bed Need (90%),2021,288.0,False
+Male ICF-Low,Bed Need (90%),2022,229.0,False
+Male ICF-Low,Bed Need (90%),2023,146.0,False
+Male ICF-Low,Bed Need (90%),2024,193.0,False
+Male ICF-Low,Bed Need (90%),2025,232.0,False
+Male ICF-Low,Bed Need (90%),2026,224.0,True
+Male ICF-Low,Bed Need (90%),2027,219.0,True
+Male ICF-Low,Bed Need (90%),2028,217.0,True
+Male ICF-Low,Bed Need (90%),2029,214.0,True
+Male ICF-Low,Bed Need (90%),2030,211.0,True
+Male MHCB,CDCR Male Pop,2014,128211.0,False
+Male MHCB,CDCR Male Pop,2015,128303.0,False
+Male MHCB,CDCR Male Pop,2016,122540.0,False
+Male MHCB,CDCR Male Pop,2017,123213.0,False
+Male MHCB,CDCR Male Pop,2020,118494.0,False
+Male MHCB,CDCR Male Pop,2021,93311.0,False
+Male MHCB,CDCR Male Pop,2022,95890.0,False
+Male MHCB,CDCR Male Pop,2023,92051.0,False
+Male MHCB,CDCR Male Pop,2024,90421.0,False
+Male MHCB,CDCR Male Pop,2025,87721.0,False
+Male MHCB,CDCR Male Pop,2026,85795.0,True
+Male MHCB,CDCR Male Pop,2027,84058.0,True
+Male MHCB,CDCR Male Pop,2028,83436.0,True
+Male MHCB,CDCR Male Pop,2029,82524.0,True
+Male MHCB,CDCR Male Pop,2030,81559.0,True
+Male MHCB,Census Rate,2014,2.82,False
+Male MHCB,Census Rate,2015,3.33,False
+Male MHCB,Census Rate,2016,3.53,False
+Male MHCB,Census Rate,2017,3.39,False
+Male MHCB,Census Rate,2018,2.87,False
+Male MHCB,Census Rate,2019,2.18,False
+Male MHCB,Census Rate,2020,2.62,False
+Male MHCB,Census Rate,2021,2.72,False
+Male MHCB,Census Rate,2022,2.64,False
+Male MHCB,Census Rate,2023,2.81,False
+Male MHCB,Census Rate,2024,3.28,False
+Male MHCB,Census Rate,2025,3.33,False
+Male MHCB,Census Rate,2026,3.31,True
+Male MHCB,Census Rate,2027,3.31,True
+Male MHCB,Census Rate,2028,3.32,True
+Male MHCB,Census Rate,2029,3.32,True
+Male MHCB,Census Rate,2030,3.32,True
+Male MHCB,Avg Census,2014,342.8,False
+Male MHCB,Avg Census,2015,400.5,False
+Male MHCB,Avg Census,2016,399.6,False
+Male MHCB,Avg Census,2017,377.5,False
+Male MHCB,Avg Census,2018,329.1,False
+Male MHCB,Avg Census,2019,254.5,False
+Male MHCB,Avg Census,2020,285.6,False
+Male MHCB,Avg Census,2021,249.0,False
+Male MHCB,Avg Census,2022,243.0,False
+Male MHCB,Avg Census,2023,241.6,False
+Male MHCB,Avg Census,2024,276.8,False
+Male MHCB,Avg Census,2025,270.3,False
+Male MHCB,Avg Pending List,2014,12.4,False
+Male MHCB,Avg Pending List,2015,26.2,False
+Male MHCB,Avg Pending List,2016,33.6,False
+Male MHCB,Avg Pending List,2017,40.0,False
+Male MHCB,Avg Pending List,2018,28.1,False
+Male MHCB,Avg Pending List,2019,11.7,False
+Male MHCB,Avg Pending List,2020,10.8,False
+Male MHCB,Avg Pending List,2021,4.9,False
+Male MHCB,Avg Pending List,2022,10.6,False
+Male MHCB,Avg Pending List,2023,17.5,False
+Male MHCB,Avg Pending List,2024,20.1,False
+Male MHCB,Avg Pending List,2025,22.1,False
+Male MHCB,Avg Census,2014,361.1,False
+Male MHCB,Avg Census,2015,426.8,False
+Male MHCB,Avg Census,2016,433.2,False
+Male MHCB,Avg Census,2017,417.5,False
+Male MHCB,Avg Census,2018,357.1,False
+Male MHCB,Avg Census,2019,266.3,False
+Male MHCB,Avg Census,2020,296.4,False
+Male MHCB,Avg Census,2021,253.9,False
+Male MHCB,Avg Census,2022,253.5,False
+Male MHCB,Avg Census,2023,259.1,False
+Male MHCB,Avg Census,2024,296.9,False
+Male MHCB,Avg Census,2025,292.4,False
+Male MHCB,Avg Census,2026,284.3,True
+Male MHCB,Avg Census,2027,278.6,True
+Male MHCB,Avg Census,2028,277.2,True
+Male MHCB,Avg Census,2029,274.0,True
+Male MHCB,Avg Census,2030,270.6,True
+Male MHCB,Bed Need (90%),2014,401.0,False
+Male MHCB,Bed Need (90%),2015,474.0,False
+Male MHCB,Bed Need (90%),2016,481.0,False
+Male MHCB,Bed Need (90%),2017,464.0,False
+Male MHCB,Bed Need (90%),2018,397.0,False
+Male MHCB,Bed Need (90%),2019,296.0,False
+Male MHCB,Bed Need (90%),2020,329.0,False
+Male MHCB,Bed Need (90%),2021,282.0,False
+Male MHCB,Bed Need (90%),2022,282.0,False
+Male MHCB,Bed Need (90%),2023,288.0,False
+Male MHCB,Bed Need (90%),2024,330.0,False
+Male MHCB,Bed Need (90%),2025,325.0,False
+Male MHCB,Bed Need (90%),2026,316.0,True
+Male MHCB,Bed Need (90%),2027,310.0,True
+Male MHCB,Bed Need (90%),2028,308.0,True
+Male MHCB,Bed Need (90%),2029,304.0,True
+Male MHCB,Bed Need (90%),2030,301.0,True
+Male EOP-GP,Level I Census Rate,2014,13.58,False
+Male EOP-GP,Level I Census Rate,2015,15.96,False
+Male EOP-GP,Level I Census Rate,2016,16.94,False
+Male EOP-GP,Level I Census Rate,2017,16.94,False
+Male EOP-GP,Level I Census Rate,2018,20.0,False
+Male EOP-GP,Level I Census Rate,2019,22.28,False
+Male EOP-GP,Level I Census Rate,2020,24.48,False
+Male EOP-GP,Level I Census Rate,2021,21.26,False
+Male EOP-GP,Level I Census Rate,2022,30.49,False
+Male EOP-GP,Level I Census Rate,2023,35.39,False
+Male EOP-GP,Level I Census Rate,2024,47.55,False
+Male EOP-GP,Level I Census Rate,2025,34.09,False
+Male EOP-GP,Level I Census Rate,2026,34.09,True
+Male EOP-GP,Level I Census Rate,2027,34.09,True
+Male EOP-GP,Level I Census Rate,2028,34.09,True
+Male EOP-GP,Level I Census Rate,2029,34.09,True
+Male EOP-GP,Level I Census Rate,2030,34.09,True
+Male EOP-GP,Level I Avg Census,2014,199.0,False
+Male EOP-GP,Level I Avg Census,2015,230.7,False
+Male EOP-GP,Level I Avg Census,2016,198.9,False
+Male EOP-GP,Level I Avg Census,2017,197.5,False
+Male EOP-GP,Level I Avg Census,2018,263.8,False
+Male EOP-GP,Level I Avg Census,2019,321.2,False
+Male EOP-GP,Level I Avg Census,2020,336.6,False
+Male EOP-GP,Level I Avg Census,2021,228.0,False
+Male EOP-GP,Level I Avg Census,2022,268.1,False
+Male EOP-GP,Level I Avg Census,2023,298.2,False
+Male EOP-GP,Level I Avg Census,2024,352.8,False
+Male EOP-GP,Level I Avg Census,2025,304.8,False
+Male EOP-GP,Level I Avg Census,2026,296.7,True
+Male EOP-GP,Level I Avg Census,2027,281.7,True
+Male EOP-GP,Level I Avg Census,2028,276.2,True
+Male EOP-GP,Level I Avg Census,2029,276.7,True
+Male EOP-GP,Level I Avg Census,2030,276.1,True
+Male EOP-GP,Level I Bed Need (95%),2014,209.0,False
+Male EOP-GP,Level I Bed Need (95%),2015,243.0,False
+Male EOP-GP,Level I Bed Need (95%),2016,209.0,False
+Male EOP-GP,Level I Bed Need (95%),2017,208.0,False
+Male EOP-GP,Level I Bed Need (95%),2018,278.0,False
+Male EOP-GP,Level I Bed Need (95%),2019,338.0,False
+Male EOP-GP,Level I Bed Need (95%),2020,354.0,False
+Male EOP-GP,Level I Bed Need (95%),2021,240.0,False
+Male EOP-GP,Level I Bed Need (95%),2022,282.0,False
+Male EOP-GP,Level I Bed Need (95%),2023,314.0,False
+Male EOP-GP,Level I Bed Need (95%),2024,371.0,False
+Male EOP-GP,Level I Bed Need (95%),2025,321.0,False
+Male EOP-GP,Level I Bed Need (95%),2026,312.0,True
+Male EOP-GP,Level I Bed Need (95%),2027,297.0,True
+Male EOP-GP,Level I Bed Need (95%),2028,291.0,True
+Male EOP-GP,Level I Bed Need (95%),2029,291.0,True
+Male EOP-GP,Level I Bed Need (95%),2030,291.0,True
+Male EOP-GP,Level II Census Rate,2014,36.85,False
+Male EOP-GP,Level II Census Rate,2015,41.17,False
+Male EOP-GP,Level II Census Rate,2016,42.66,False
+Male EOP-GP,Level II Census Rate,2017,49.29,False
+Male EOP-GP,Level II Census Rate,2018,54.42,False
+Male EOP-GP,Level II Census Rate,2019,51.84,False
+Male EOP-GP,Level II Census Rate,2020,53.06,False
+Male EOP-GP,Level II Census Rate,2021,58.76,False
+Male EOP-GP,Level II Census Rate,2022,60.55,False
+Male EOP-GP,Level II Census Rate,2023,64.68,False
+Male EOP-GP,Level II Census Rate,2024,71.66,False
+Male EOP-GP,Level II Census Rate,2025,75.86,False
+Male EOP-GP,Level II Census Rate,2026,75.86,True
+Male EOP-GP,Level II Census Rate,2027,75.86,True
+Male EOP-GP,Level II Census Rate,2028,75.86,True
+Male EOP-GP,Level II Census Rate,2029,75.86,True
+Male EOP-GP,Level II Census Rate,2030,75.86,True
+Male EOP-GP,Level II Avg Census,2014,1467.4,False
+Male EOP-GP,Level II Avg Census,2015,1668.5,False
+Male EOP-GP,Level II Avg Census,2016,1901.8,False
+Male EOP-GP,Level II Avg Census,2017,2215.6,False
+Male EOP-GP,Level II Avg Census,2018,2540.2,False
+Male EOP-GP,Level II Avg Census,2019,2459.5,False
+Male EOP-GP,Level II Avg Census,2020,2490.4,False
+Male EOP-GP,Level II Avg Census,2021,2373.0,False
+Male EOP-GP,Level II Avg Census,2022,2527.7,False
+Male EOP-GP,Level II Avg Census,2023,2638.5,False
+Male EOP-GP,Level II Avg Census,2024,3049.3,False
+Male EOP-GP,Level II Avg Census,2025,3068.4,False
+Male EOP-GP,Level II Avg Census,2026,3048.9,True
+Male EOP-GP,Level II Avg Census,2027,2979.8,True
+Male EOP-GP,Level II Avg Census,2028,2928.2,True
+Male EOP-GP,Level II Avg Census,2029,2863.1,True
+Male EOP-GP,Level II Avg Census,2030,2808.5,True
+Male EOP-GP,Level II Bed Need (95%),2014,1545.0,False
+Male EOP-GP,Level II Bed Need (95%),2015,1756.0,False
+Male EOP-GP,Level II Bed Need (95%),2016,2002.0,False
+Male EOP-GP,Level II Bed Need (95%),2017,2332.0,False
+Male EOP-GP,Level II Bed Need (95%),2018,2674.0,False
+Male EOP-GP,Level II Bed Need (95%),2019,2589.0,False
+Male EOP-GP,Level II Bed Need (95%),2020,2621.0,False
+Male EOP-GP,Level II Bed Need (95%),2021,2498.0,False
+Male EOP-GP,Level II Bed Need (95%),2022,2661.0,False
+Male EOP-GP,Level II Bed Need (95%),2023,2777.0,False
+Male EOP-GP,Level II Bed Need (95%),2024,3210.0,False
+Male EOP-GP,Level II Bed Need (95%),2025,3230.0,False
+Male EOP-GP,Level II Bed Need (95%),2026,3209.0,True
+Male EOP-GP,Level II Bed Need (95%),2027,3137.0,True
+Male EOP-GP,Level II Bed Need (95%),2028,3082.0,True
+Male EOP-GP,Level II Bed Need (95%),2029,3014.0,True
+Male EOP-GP,Level II Bed Need (95%),2030,2956.0,True
+Male EOP-GP,Level III Census Rate,2014,24.04,False
+Male EOP-GP,Level III Census Rate,2015,29.15,False
+Male EOP-GP,Level III Census Rate,2016,42.96,False
+Male EOP-GP,Level III Census Rate,2017,46.79,False
+Male EOP-GP,Level III Census Rate,2018,50.31,False
+Male EOP-GP,Level III Census Rate,2019,46.58,False
+Male EOP-GP,Level III Census Rate,2020,46.34,False
+Male EOP-GP,Level III Census Rate,2021,47.28,False
+Male EOP-GP,Level III Census Rate,2022,43.49,False
+Male EOP-GP,Level III Census Rate,2023,49.47,False
+Male EOP-GP,Level III Census Rate,2024,71.84,False
+Male EOP-GP,Level III Census Rate,2025,71.99,False
+Male EOP-GP,Level III Census Rate,2026,71.99,True
+Male EOP-GP,Level III Census Rate,2027,71.99,True
+Male EOP-GP,Level III Census Rate,2028,71.99,True
+Male EOP-GP,Level III Census Rate,2029,71.99,True
+Male EOP-GP,Level III Census Rate,2030,71.99,True
+Male EOP-GP,Level III Avg Census,2014,783.1,False
+Male EOP-GP,Level III Avg Census,2015,921.9,False
+Male EOP-GP,Level III Avg Census,2016,1075.4,False
+Male EOP-GP,Level III Avg Census,2017,1222.4,False
+Male EOP-GP,Level III Avg Census,2018,1208.8,False
+Male EOP-GP,Level III Avg Census,2019,1012.5,False
+Male EOP-GP,Level III Avg Census,2020,943.8,False
+Male EOP-GP,Level III Avg Census,2021,762.8,False
+Male EOP-GP,Level III Avg Census,2022,704.6,False
+Male EOP-GP,Level III Avg Census,2023,736.4,False
+Male EOP-GP,Level III Avg Census,2024,940.4,False
+Male EOP-GP,Level III Avg Census,2025,953.0,False
+Male EOP-GP,Level III Avg Census,2026,929.6,True
+Male EOP-GP,Level III Avg Census,2027,921.4,True
+Male EOP-GP,Level III Avg Census,2028,935.2,True
+Male EOP-GP,Level III Avg Census,2029,942.9,True
+Male EOP-GP,Level III Avg Census,2030,940.0,True
+Male EOP-GP,Level III Bed Need (95%),2014,824.0,False
+Male EOP-GP,Level III Bed Need (95%),2015,970.0,False
+Male EOP-GP,Level III Bed Need (95%),2016,1132.0,False
+Male EOP-GP,Level III Bed Need (95%),2017,1287.0,False
+Male EOP-GP,Level III Bed Need (95%),2018,1272.0,False
+Male EOP-GP,Level III Bed Need (95%),2019,1066.0,False
+Male EOP-GP,Level III Bed Need (95%),2020,994.0,False
+Male EOP-GP,Level III Bed Need (95%),2021,803.0,False
+Male EOP-GP,Level III Bed Need (95%),2022,742.0,False
+Male EOP-GP,Level III Bed Need (95%),2023,775.0,False
+Male EOP-GP,Level III Bed Need (95%),2024,990.0,False
+Male EOP-GP,Level III Bed Need (95%),2025,1003.0,False
+Male EOP-GP,Level III Bed Need (95%),2026,979.0,True
+Male EOP-GP,Level III Bed Need (95%),2027,970.0,True
+Male EOP-GP,Level III Bed Need (95%),2028,984.0,True
+Male EOP-GP,Level III Bed Need (95%),2029,992.0,True
+Male EOP-GP,Level III Bed Need (95%),2030,989.0,True
+Male EOP-GP,Level IV Census Rate,2014,56.95,False
+Male EOP-GP,Level IV Census Rate,2015,67.33,False
+Male EOP-GP,Level IV Census Rate,2016,70.26,False
+Male EOP-GP,Level IV Census Rate,2017,82.69,False
+Male EOP-GP,Level IV Census Rate,2018,88.75,False
+Male EOP-GP,Level IV Census Rate,2019,76.1,False
+Male EOP-GP,Level IV Census Rate,2020,69.8,False
+Male EOP-GP,Level IV Census Rate,2021,85.4,False
+Male EOP-GP,Level IV Census Rate,2022,87.47,False
+Male EOP-GP,Level IV Census Rate,2023,97.61,False
+Male EOP-GP,Level IV Census Rate,2024,130.48,False
+Male EOP-GP,Level IV Census Rate,2025,149.42,False
+Male EOP-GP,Level IV Census Rate,2026,149.42,True
+Male EOP-GP,Level IV Census Rate,2027,149.42,True
+Male EOP-GP,Level IV Census Rate,2028,149.42,True
+Male EOP-GP,Level IV Census Rate,2029,149.42,True
+Male EOP-GP,Level IV Census Rate,2030,149.42,True
+Male EOP-GP,Level IV Avg Census,2014,1381.5,False
+Male EOP-GP,Level IV Avg Census,2015,1675.3,False
+Male EOP-GP,Level IV Avg Census,2016,1951.0,False
+Male EOP-GP,Level IV Avg Census,2017,2362.6,False
+Male EOP-GP,Level IV Avg Census,2018,2555.1,False
+Male EOP-GP,Level IV Avg Census,2019,2108.8,False
+Male EOP-GP,Level IV Avg Census,2020,1874.7,False
+Male EOP-GP,Level IV Avg Census,2021,1888.7,False
+Male EOP-GP,Level IV Avg Census,2022,1973.3,False
+Male EOP-GP,Level IV Avg Census,2023,2011.9,False
+Male EOP-GP,Level IV Avg Census,2024,2431.3,False
+Male EOP-GP,Level IV Avg Census,2025,2543.7,False
+Male EOP-GP,Level IV Avg Census,2026,2439.0,True
+Male EOP-GP,Level IV Avg Census,2027,2396.7,True
+Male EOP-GP,Level IV Avg Census,2028,2396.2,True
+Male EOP-GP,Level IV Avg Census,2029,2365.5,True
+Male EOP-GP,Level IV Avg Census,2030,2337.4,True
+Male EOP-GP,Level IV Bed Need (95%),2014,1454.0,False
+Male EOP-GP,Level IV Bed Need (95%),2015,1764.0,False
+Male EOP-GP,Level IV Bed Need (95%),2016,2054.0,False
+Male EOP-GP,Level IV Bed Need (95%),2017,2487.0,False
+Male EOP-GP,Level IV Bed Need (95%),2018,2690.0,False
+Male EOP-GP,Level IV Bed Need (95%),2019,2220.0,False
+Male EOP-GP,Level IV Bed Need (95%),2020,1973.0,False
+Male EOP-GP,Level IV Bed Need (95%),2021,1988.0,False
+Male EOP-GP,Level IV Bed Need (95%),2022,2077.0,False
+Male EOP-GP,Level IV Bed Need (95%),2023,2118.0,False
+Male EOP-GP,Level IV Bed Need (95%),2024,2559.0,False
+Male EOP-GP,Level IV Bed Need (95%),2025,2678.0,False
+Male EOP-GP,Level IV Bed Need (95%),2026,2567.0,True
+Male EOP-GP,Level IV Bed Need (95%),2027,2523.0,True
+Male EOP-GP,Level IV Bed Need (95%),2028,2522.0,True
+Male EOP-GP,Level IV Bed Need (95%),2029,2490.0,True
+Male EOP-GP,Level IV Bed Need (95%),2030,2460.0,True
+Male EOP-GP,Bed Need (95%),2014,4291.0,False
+Male EOP-GP,Bed Need (95%),2015,5012.0,False
+Male EOP-GP,Bed Need (95%),2016,5663.0,False
+Male EOP-GP,Bed Need (95%),2017,6578.0,False
+Male EOP-GP,Bed Need (95%),2018,7127.0,False
+Male EOP-GP,Bed Need (95%),2019,6377.0,False
+Male EOP-GP,Bed Need (95%),2020,6101.0,False
+Male EOP-GP,Bed Need (95%),2021,5645.0,False
+Male EOP-GP,Bed Need (95%),2022,5937.0,False
+Male EOP-GP,Bed Need (95%),2023,6177.0,False
+Male EOP-GP,Bed Need (95%),2024,7379.0,False
+Male EOP-GP,Bed Need (95%),2025,7443.0,False
+Male EOP-GP,Bed Need (95%),2026,7383.0,True
+Male EOP-GP,Bed Need (95%),2027,7110.0,True
+Male EOP-GP,Bed Need (95%),2028,7064.0,True
+Male EOP-GP,Bed Need (95%),2029,6974.0,True
+Male EOP-GP,Bed Need (95%),2030,6884.0,True
+Male RHE,CDCR Male Pop,2014,121939.0,False
+Male RHE,CDCR Male Pop,2015,118494.0,False
+Male RHE,CDCR Male Pop,2016,93311.0,False
+Male RHE,CDCR Male Pop,2017,95890.0,False
+Male RHE,CDCR Male Pop,2018,92051.0,False
+Male RHE,CDCR Male Pop,2019,90421.0,False
+Male RHE,CDCR Male Pop,2020,87721.0,False
+Male RHE,CDCR Male Pop,2021,85795.0,False
+Male RHE,CDCR Male Pop,2022,84058.0,False
+Male RHE,CDCR Male Pop,2023,83436.0,False
+Male RHE,CDCR Male Pop,2024,82524.0,False
+Male RHE,CDCR Male Pop,2025,81559.0,False
+Male RHE,Census Rate,2014,5.45,False
+Male RHE,Census Rate,2015,5.21,False
+Male RHE,Census Rate,2016,7.2,False
+Male RHE,Census Rate,2017,7.62,False
+Male RHE,Census Rate,2018,8.41,False
+Male RHE,Census Rate,2019,7.99,False
+Male RHE,Census Rate,2020,9.09,False
+Male RHE,Census Rate,2021,8.96,False
+Male RHE,Census Rate,2022,8.98,False
+Male RHE,Census Rate,2023,9.05,False
+Male RHE,Census Rate,2024,9.04,False
+Male RHE,Census Rate,2025,9.05,False
+Male RHE,Avg Census,2014,610.0,False
+Male RHE,Avg Census,2015,539.0,False
+Male RHE,Avg Census,2016,494.0,False
+Male RHE,Avg Census,2017,596.0,False
+Male RHE,Avg Census,2018,689.0,False
+Male RHE,Avg Census,2019,658.8,False
+Male RHE,Avg Census,2020,708.2,False
+Male RHE,Avg Pending List,2014,54.56,False
+Male RHE,Avg Pending List,2015,78.13,False
+Male RHE,Avg Pending List,2016,178.76,False
+Male RHE,Avg Pending List,2017,135.25,False
+Male RHE,Avg Pending List,2018,85.25,False
+Male RHE,Avg Pending List,2019,63.8,False
+Male RHE,Avg Pending List,2020,89.5,False
+Male RHE,Avg Census,2014,664.8,False
+Male RHE,Avg Census,2015,617.6,False
+Male RHE,Avg Census,2016,672.3,False
+Male RHE,Avg Census,2017,730.8,False
+Male RHE,Avg Census,2018,774.4,False
+Male RHE,Avg Census,2019,722.6,False
+Male RHE,Avg Census,2020,797.7,False
+Male RHE,Avg Census,2021,768.5,False
+Male RHE,Avg Census,2022,755.2,False
+Male RHE,Avg Census,2023,754.9,False
+Male RHE,Avg Census,2024,746.4,False
+Male RHE,Avg Census,2025,737.8,False
+Male RHE,Bed Need (95%),2014,700.0,False
+Male RHE,Bed Need (95%),2015,650.0,False
+Male RHE,Bed Need (95%),2016,708.0,False
+Male RHE,Bed Need (95%),2017,769.0,False
+Male RHE,Bed Need (95%),2018,815.0,False
+Male RHE,Bed Need (95%),2019,761.0,False
+Male RHE,Bed Need (95%),2020,840.0,False
+Male RHE,Bed Need (95%),2021,809.0,False
+Male RHE,Bed Need (95%),2022,795.0,False
+Male RHE,Bed Need (95%),2023,795.0,False
+Male RHE,Bed Need (95%),2024,786.0,False
+Male RHE,Bed Need (95%),2025,777.0,False
+Male CCCMS,CDCR Male Pop,2014,128211.0,False
+Male CCCMS,CDCR Male Pop,2015,128303.0,False
+Male CCCMS,CDCR Male Pop,2016,122540.0,False
+Male CCCMS,CDCR Male Pop,2017,123213.0,False
+Male CCCMS,CDCR Male Pop,2018,124414.0,False
+Male CCCMS,CDCR Male Pop,2019,121939.0,False
+Male CCCMS,CDCR Male Pop,2020,118494.0,False
+Male CCCMS,CDCR Male Pop,2021,93311.0,False
+Male CCCMS,CDCR Male Pop,2022,95890.0,False
+Male CCCMS,CDCR Male Pop,2023,92051.0,False
+Male CCCMS,CDCR Male Pop,2024,90421.0,False
+Male CCCMS,CDCR Male Pop,2025,87721.0,False
+Male CCCMS,CDCR Male Pop,2026,85795.0,True
+Male CCCMS,CDCR Male Pop,2027,84058.0,True
+Male CCCMS,CDCR Male Pop,2028,83436.0,True
+Male CCCMS,Census Rate,2014,211.4,False
+Male CCCMS,Census Rate,2015,217.4,False
+Male CCCMS,Census Rate,2016,219.6,False
+Male CCCMS,Census Rate,2017,219.0,False
+Male CCCMS,Census Rate,2018,214.5,False
+Male CCCMS,Census Rate,2019,216.0,False
+Male CCCMS,Census Rate,2020,215.5,False
+Male CCCMS,Census Rate,2021,226.4,False
+Male CCCMS,Census Rate,2022,235.0,False
+Male CCCMS,Census Rate,2023,249.8,False
+Male CCCMS,Census Rate,2024,258.3,False
+Male CCCMS,Census Rate,2025,277.6,False
+Male CCCMS,Census Rate,2026,275.7,True
+Male CCCMS,Census Rate,2027,275.9,True
+Male CCCMS,Census Rate,2028,276.1,True
+Male CCCMS,Census Rate,2029,276.0,True
+Male CCCMS,Census Rate,2030,275.8,True
+Male CCCMS,Avg Census,2014,27107.0,False
+Male CCCMS,Avg Census,2015,27891.0,False
+Male CCCMS,Avg Census,2016,26907.0,False
+Male CCCMS,Avg Census,2017,26981.0,False
+Male CCCMS,Avg Census,2018,26681.0,False
+Male CCCMS,Avg Census,2019,26344.0,False
+Male CCCMS,Avg Census,2020,25538.0,False
+Male CCCMS,Avg Census,2021,21128.0,False
+Male CCCMS,Avg Census,2022,22538.0,False
+Male CCCMS,Avg Census,2023,22990.0,False
+Male CCCMS,Avg Census,2024,23354.0,False
+Male CCCMS,Avg Census,2025,24349.0,False
+Male CCCMS,Avg Census,2026,23658.0,True
+Male CCCMS,Avg Census,2027,23194.0,True
+Male CCCMS,Avg Census,2028,23040.0,True
+Male CCCMS,Avg Census,2029,22774.0,True
+Male CCCMS,Avg Census,2030,22495.0,True
+Female APP/ICF,CDCR Female Pop,2014,6128.0,False
+Female APP/ICF,CDCR Female Pop,2015,6130.0,False
+Female APP/ICF,CDCR Female Pop,2016,5729.0,False
+Female APP/ICF,CDCR Female Pop,2017,5869.0,False
+Female APP/ICF,CDCR Female Pop,2018,5849.0,False
+Female APP/ICF,CDCR Female Pop,2019,5770.0,False
+Female APP/ICF,CDCR Female Pop,2020,5533.0,False
+Female APP/ICF,CDCR Female Pop,2021,3640.0,False
+Female APP/ICF,CDCR Female Pop,2022,3839.0,False
+Female APP/ICF,CDCR Female Pop,2023,3656.0,False
+Female APP/ICF,CDCR Female Pop,2024,3767.0,False
+Female APP/ICF,CDCR Female Pop,2025,3637.0,False
+Female APP/ICF,CDCR Female Pop,2026,3627.0,True
+Female APP/ICF,CDCR Female Pop,2027,3674.0,True
+Female APP/ICF,CDCR Female Pop,2028,3713.0,True
+Female APP/ICF,CDCR Female Pop,2029,3776.0,True
+Female APP/ICF,CDCR Female Pop,2030,3709.0,True
+Female APP/ICF,Census Rate,2014,6.95,False
+Female APP/ICF,Census Rate,2015,7.26,False
+Female APP/ICF,Census Rate,2016,8.2,False
+Female APP/ICF,Census Rate,2017,7.95,False
+Female APP/ICF,Census Rate,2018,10.52,False
+Female APP/ICF,Census Rate,2019,9.65,False
+Female APP/ICF,Census Rate,2020,9.92,False
+Female APP/ICF,Census Rate,2021,10.95,False
+Female APP/ICF,Census Rate,2022,9.31,False
+Female APP/ICF,Census Rate,2023,11.8,False
+Female APP/ICF,Census Rate,2024,10.46,False
+Female APP/ICF,Census Rate,2025,13.4,False
+Female APP/ICF,Census Rate,2026,13.4,True
+Female APP/ICF,Census Rate,2027,13.4,True
+Female APP/ICF,Census Rate,2028,13.4,True
+Female APP/ICF,Census Rate,2029,13.4,True
+Female APP/ICF,Census Rate,2030,13.4,True
+Female APP/ICF,Avg Census (PSH),2014,2.0,False
+Female APP/ICF,Avg Census (PSH),2015,2.0,False
+Female APP/ICF,Avg Census (PSH),2016,1.5,False
+Female APP/ICF,Avg Census (PSH),2017,0.0,False
+Female APP/ICF,Avg Census (PSH),2018,12.1,False
+Female APP/ICF,Avg Census (PSH),2019,11.4,False
+Female APP/ICF,Avg Census (PSH),2020,13.6,False
+Female APP/ICF,Avg Census (PSH),2021,10.7,False
+Female APP/ICF,Avg Census (PSH),2022,10.15,False
+Female APP/ICF,Avg Census (PSH),2023,7.3,False
+Female APP/ICF,Avg Census (PSH),2024,4.7,False
+Female APP/ICF,Avg Census (PSH),2025,7.7,False
+Female APP/ICF,Avg Census (CIW),2014,40.1,False
+Female APP/ICF,Avg Census (CIW),2015,41.9,False
+Female APP/ICF,Avg Census (CIW),2016,43.1,False
+Female APP/ICF,Avg Census (CIW),2017,44.0,False
+Female APP/ICF,Avg Census (CIW),2018,44.2,False
+Female APP/ICF,Avg Census (CIW),2019,41.9,False
+Female APP/ICF,Avg Census (CIW),2020,35.0,False
+Female APP/ICF,Avg Census (CIW),2021,28.4,False
+Female APP/ICF,Avg Census (CIW),2022,24.3,False
+Female APP/ICF,Avg Census (CIW),2023,33.4,False
+Female APP/ICF,Avg Census (CIW),2024,32.1,False
+Female APP/ICF,Avg Census (CIW),2025,35.4,False
+Female APP/ICF,Avg Pending List,2014,0.4,False
+Female APP/ICF,Avg Pending List,2015,0.62,False
+Female APP/ICF,Avg Pending List,2016,2.44,False
+Female APP/ICF,Avg Pending List,2017,2.6,False
+Female APP/ICF,Avg Pending List,2018,5.25,False
+Female APP/ICF,Avg Pending List,2019,2.37,False
+Female APP/ICF,Avg Pending List,2020,2.21,False
+Female APP/ICF,Avg Pending List,2021,0.75,False
+Female APP/ICF,Avg Pending List,2022,1.27,False
+Female APP/ICF,Avg Pending List,2023,2.4,False
+Female APP/ICF,Avg Pending List,2024,2.6,False
+Female APP/ICF,Avg Pending List,2025,5.6,False
+Female APP/ICF,Avg Census,2014,42.6,False
+Female APP/ICF,Avg Census,2015,44.5,False
+Female APP/ICF,Avg Census,2016,47.0,False
+Female APP/ICF,Avg Census,2017,46.7,False
+Female APP/ICF,Avg Census,2018,61.5,False
+Female APP/ICF,Avg Census,2019,55.7,False
+Female APP/ICF,Avg Census,2020,54.9,False
+Female APP/ICF,Avg Census,2021,39.8,False
+Female APP/ICF,Avg Census,2022,35.7,False
+Female APP/ICF,Avg Census,2023,43.1,False
+Female APP/ICF,Avg Census,2024,39.4,False
+Female APP/ICF,Avg Census,2025,48.7,False
+Female APP/ICF,Avg Census,2026,48.6,True
+Female APP/ICF,Avg Census,2027,49.2,True
+Female APP/ICF,Avg Census,2028,49.8,True
+Female APP/ICF,Avg Census,2029,50.6,True
+Female APP/ICF,Avg Census,2030,49.7,True
+Female APP/ICF,Bed Need (90%),2014,47.0,False
+Female APP/ICF,Bed Need (90%),2015,49.0,False
+Female APP/ICF,Bed Need (90%),2016,52.0,False
+Female APP/ICF,Bed Need (90%),2017,52.0,False
+Female APP/ICF,Bed Need (90%),2018,68.0,False
+Female APP/ICF,Bed Need (90%),2019,62.0,False
+Female APP/ICF,Bed Need (90%),2020,61.0,False
+Female APP/ICF,Bed Need (90%),2021,44.0,False
+Female APP/ICF,Bed Need (90%),2022,40.0,False
+Female APP/ICF,Bed Need (90%),2023,48.0,False
+Female APP/ICF,Bed Need (90%),2024,44.0,False
+Female APP/ICF,Bed Need (90%),2025,54.0,False
+Female APP/ICF,Bed Need (90%),2026,54.0,True
+Female APP/ICF,Bed Need (90%),2027,55.0,True
+Female APP/ICF,Bed Need (90%),2028,55.0,True
+Female APP/ICF,Bed Need (90%),2029,56.0,True
+Female APP/ICF,Bed Need (90%),2030,55.0,True
+Female MHCB,CDCR Female Pop,2014,6128.0,False
+Female MHCB,CDCR Female Pop,2015,6130.0,False
+Female MHCB,CDCR Female Pop,2016,5729.0,False
+Female MHCB,CDCR Female Pop,2017,5869.0,False
+Female MHCB,CDCR Female Pop,2018,5849.0,False
+Female MHCB,CDCR Female Pop,2019,5770.0,False
+Female MHCB,CDCR Female Pop,2020,5533.0,False
+Female MHCB,CDCR Female Pop,2021,3640.0,False
+Female MHCB,CDCR Female Pop,2022,3839.0,False
+Female MHCB,CDCR Female Pop,2023,3656.0,False
+Female MHCB,CDCR Female Pop,2024,3767.0,False
+Female MHCB,CDCR Female Pop,2025,3637.0,False
+Female MHCB,CDCR Female Pop,2026,3627.0,True
+Female MHCB,CDCR Female Pop,2027,3674.0,True
+Female MHCB,CDCR Female Pop,2028,3713.0,True
+Female MHCB,CDCR Female Pop,2029,3776.0,True
+Female MHCB,CDCR Female Pop,2030,3709.0,True
+Female MHCB,Census Rate,2014,2.29,False
+Female MHCB,Census Rate,2015,3.05,False
+Female MHCB,Census Rate,2016,3.78,False
+Female MHCB,Census Rate,2017,4.76,False
+Female MHCB,Census Rate,2018,4.63,False
+Female MHCB,Census Rate,2019,4.31,False
+Female MHCB,Census Rate,2020,4.09,False
+Female MHCB,Census Rate,2021,2.71,False
+Female MHCB,Census Rate,2022,3.38,False
+Female MHCB,Census Rate,2023,3.75,False
+Female MHCB,Census Rate,2024,4.01,False
+Female MHCB,Census Rate,2025,4.66,False
+Female MHCB,Census Rate,2026,4.7,True
+Female MHCB,Census Rate,2027,4.7,True
+Female MHCB,Census Rate,2028,4.7,True
+Female MHCB,Census Rate,2029,4.7,True
+Female MHCB,Census Rate,2030,4.7,True
+Female MHCB,Avg Census,2014,13.9,False
+Female MHCB,Avg Census,2015,16.7,False
+Female MHCB,Avg Census,2016,16.3,False
+Female MHCB,Avg Census,2017,17.7,False
+Female MHCB,Avg Census,2018,17.5,False
+Female MHCB,Avg Census,2019,20.4,False
+Female MHCB,Avg Census,2020,21.4,False
+Female MHCB,Avg Census,2021,9.2,False
+Female MHCB,Avg Census,2022,12.2,False
+Female MHCB,Avg Census,2023,12.65,False
+Female MHCB,Avg Census,2024,14.0,False
+Female MHCB,Avg Census,2025,15.92,False
+Female MHCB,Avg Pending List,2014,0.1,False
+Female MHCB,Avg Pending List,2015,2.0,False
+Female MHCB,Avg Pending List,2016,5.35,False
+Female MHCB,Avg Pending List,2017,10.23,False
+Female MHCB,Avg Pending List,2018,9.52,False
+Female MHCB,Avg Pending List,2019,4.45,False
+Female MHCB,Avg Pending List,2020,1.21,False
+Female MHCB,Avg Pending List,2021,0.71,False
+Female MHCB,Avg Pending List,2022,0.83,False
+Female MHCB,Avg Pending List,2023,1.06,False
+Female MHCB,Avg Pending List,2024,1.12,False
+Female MHCB,Avg Pending List,2025,1.02,False
+Female MHCB,Avg Census,2014,14.0,False
+Female MHCB,Avg Census,2015,18.7,False
+Female MHCB,Avg Census,2016,21.6,False
+Female MHCB,Avg Census,2017,28.0,False
+Female MHCB,Avg Census,2018,27.1,False
+Female MHCB,Avg Census,2019,24.8,False
+Female MHCB,Avg Census,2020,22.7,False
+Female MHCB,Avg Census,2021,9.9,False
+Female MHCB,Avg Census,2022,13.0,False
+Female MHCB,Avg Census,2023,13.7,False
+Female MHCB,Avg Census,2024,15.1,False
+Female MHCB,Avg Census,2025,16.9,False
+Female MHCB,Avg Census,2026,16.9,True
+Female MHCB,Avg Census,2027,17.1,True
+Female MHCB,Avg Census,2028,17.3,True
+Female MHCB,Avg Census,2029,17.6,True
+Female MHCB,Avg Census,2030,17.3,True
+Female MHCB,Bed Need (90%),2014,16.0,False
+Female MHCB,Bed Need (90%),2015,21.0,False
+Female MHCB,Bed Need (90%),2016,24.0,False
+Female MHCB,Bed Need (90%),2017,31.0,False
+Female MHCB,Bed Need (90%),2018,30.0,False
+Female MHCB,Bed Need (90%),2019,28.0,False
+Female MHCB,Bed Need (90%),2020,25.0,False
+Female MHCB,Bed Need (90%),2021,11.0,False
+Female MHCB,Bed Need (90%),2022,14.0,False
+Female MHCB,Bed Need (90%),2023,15.0,False
+Female MHCB,Bed Need (90%),2024,17.0,False
+Female MHCB,Bed Need (90%),2025,19.0,False
+Female MHCB,Bed Need (90%),2026,19.0,True
+Female MHCB,Bed Need (90%),2027,19.0,True
+Female MHCB,Bed Need (90%),2028,19.0,True
+Female MHCB,Bed Need (90%),2029,20.0,True
+Female MHCB,Bed Need (90%),2030,19.0,True
+Female EOP-GP,CDCR Female Pop,2014,6128.0,False
+Female EOP-GP,CDCR Female Pop,2015,6130.0,False
+Female EOP-GP,CDCR Female Pop,2016,5729.0,False
+Female EOP-GP,CDCR Female Pop,2017,5869.0,False
+Female EOP-GP,CDCR Female Pop,2018,5849.0,False
+Female EOP-GP,CDCR Female Pop,2019,5770.0,False
+Female EOP-GP,CDCR Female Pop,2020,5533.0,False
+Female EOP-GP,CDCR Female Pop,2021,3640.0,False
+Female EOP-GP,CDCR Female Pop,2022,3839.0,False
+Female EOP-GP,CDCR Female Pop,2023,3656.0,False
+Female EOP-GP,CDCR Female Pop,2024,3767.0,False
+Female EOP-GP,CDCR Female Pop,2025,3637.0,False
+Female EOP-GP,CDCR Female Pop,2026,3627.0,True
+Female EOP-GP,CDCR Female Pop,2027,3674.0,True
+Female EOP-GP,CDCR Female Pop,2028,3713.0,True
+Female EOP-GP,CDCR Female Pop,2029,3776.0,True
+Female EOP-GP,CDCR Female Pop,2030,3709.0,True
+Female EOP-GP,Census Rate,2014,20.87,False
+Female EOP-GP,Census Rate,2015,22.85,False
+Female EOP-GP,Census Rate,2016,27.03,False
+Female EOP-GP,Census Rate,2017,32.89,False
+Female EOP-GP,Census Rate,2018,37.59,False
+Female EOP-GP,Census Rate,2019,34.44,False
+Female EOP-GP,Census Rate,2020,30.02,False
+Female EOP-GP,Census Rate,2021,34.18,False
+Female EOP-GP,Census Rate,2022,31.86,False
+Female EOP-GP,Census Rate,2023,34.57,False
+Female EOP-GP,Census Rate,2024,36.91,False
+Female EOP-GP,Census Rate,2025,42.57,False
+Female EOP-GP,Census Rate,2026,42.57,True
+Female EOP-GP,Census Rate,2027,42.57,True
+Female EOP-GP,Census Rate,2028,42.57,True
+Female EOP-GP,Census Rate,2029,42.57,True
+Female EOP-GP,Census Rate,2030,42.57,True
+Female EOP-GP,Avg Census,2014,127.9,False
+Female EOP-GP,Avg Census,2015,140.1,False
+Female EOP-GP,Avg Census,2016,154.9,False
+Female EOP-GP,Avg Census,2017,193.0,False
+Female EOP-GP,Avg Census,2018,219.9,False
+Female EOP-GP,Avg Census,2019,198.7,False
+Female EOP-GP,Avg Census,2020,166.1,False
+Female EOP-GP,Avg Census,2021,124.4,False
+Female EOP-GP,Avg Census,2022,122.3,False
+Female EOP-GP,Avg Census,2023,126.4,False
+Female EOP-GP,Avg Census,2024,139.1,False
+Female EOP-GP,Avg Census,2025,154.8,False
+Female EOP-GP,Avg Census,2026,154.4,True
+Female EOP-GP,Avg Census,2027,156.4,True
+Female EOP-GP,Avg Census,2028,158.0,True
+Female EOP-GP,Avg Census,2029,160.7,True
+Female EOP-GP,Avg Census,2030,157.9,True
+Female EOP-GP,Bed Need (95%),2014,135.0,False
+Female EOP-GP,Bed Need (95%),2015,147.0,False
+Female EOP-GP,Bed Need (95%),2016,163.0,False
+Female EOP-GP,Bed Need (95%),2017,203.0,False
+Female EOP-GP,Bed Need (95%),2018,231.0,False
+Female EOP-GP,Bed Need (95%),2019,209.0,False
+Female EOP-GP,Bed Need (95%),2020,175.0,False
+Female EOP-GP,Bed Need (95%),2021,131.0,False
+Female EOP-GP,Bed Need (95%),2022,129.0,False
+Female EOP-GP,Bed Need (95%),2023,133.0,False
+Female EOP-GP,Bed Need (95%),2024,146.0,False
+Female EOP-GP,Bed Need (95%),2025,163.0,False
+Female EOP-GP,Bed Need (95%),2026,163.0,True
+Female EOP-GP,Bed Need (95%),2027,165.0,True
+Female EOP-GP,Bed Need (95%),2028,166.0,True
+Female EOP-GP,Bed Need (95%),2029,169.0,True
+Female EOP-GP,Bed Need (95%),2030,166.0,True
+Female RHE,CDCR Female Pop,2014,5770.0,False
+Female RHE,CDCR Female Pop,2015,5533.0,False
+Female RHE,CDCR Female Pop,2016,3640.0,False
+Female RHE,CDCR Female Pop,2017,3839.0,False
+Female RHE,CDCR Female Pop,2018,3656.0,False
+Female RHE,CDCR Female Pop,2019,3767.0,False
+Female RHE,CDCR Female Pop,2020,3637.0,False
+Female RHE,CDCR Female Pop,2021,3627.0,False
+Female RHE,CDCR Female Pop,2022,3674.0,False
+Female RHE,CDCR Female Pop,2023,3713.0,False
+Female RHE,CDCR Female Pop,2024,3776.0,False
+Female RHE,CDCR Female Pop,2025,3709.0,False
+Female RHE,Census Rate,2014,3.33,False
+Female RHE,Census Rate,2015,2.72,False
+Female RHE,Census Rate,2016,2.35,False
+Female RHE,Census Rate,2017,5.02,False
+Female RHE,Census Rate,2018,4.37,False
+Female RHE,Census Rate,2019,2.41,False
+Female RHE,Census Rate,2020,2.4,False
+Female RHE,Census Rate,2021,2.4,False
+Female RHE,Census Rate,2022,2.4,False
+Female RHE,Census Rate,2023,2.4,False
+Female RHE,Census Rate,2024,2.4,False
+Female RHE,Census Rate,2025,2.4,False
+Female RHE,Avg Census,2014,19.2,False
+Female RHE,Avg Census,2015,15.1,False
+Female RHE,Avg Census,2016,8.5,False
+Female RHE,Avg Census,2017,19.3,False
+Female RHE,Avg Census,2018,16.0,False
+Female RHE,Avg Census,2019,9.1,False
+Female RHE,Avg Census,2020,8.7,False
+Female RHE,Avg Census,2021,8.7,False
+Female RHE,Avg Census,2022,8.8,False
+Female RHE,Avg Census,2023,8.9,False
+Female RHE,Avg Census,2024,9.1,False
+Female RHE,Avg Census,2025,8.9,False
+Female RHE,Bed Need (95%),2014,20.0,False
+Female RHE,Bed Need (95%),2015,16.0,False
+Female RHE,Bed Need (95%),2016,9.0,False
+Female RHE,Bed Need (95%),2017,20.0,False
+Female RHE,Bed Need (95%),2018,17.0,False
+Female RHE,Bed Need (95%),2019,10.0,False
+Female RHE,Bed Need (95%),2020,9.0,False
+Female RHE,Bed Need (95%),2021,9.0,False
+Female RHE,Bed Need (95%),2022,9.0,False
+Female RHE,Bed Need (95%),2023,9.0,False
+Female RHE,Bed Need (95%),2025,9.0,False
+Female CCCMS,CDCR Female Pop,2014,6128.0,False
+Female CCCMS,CDCR Female Pop,2015,6130.0,False
+Female CCCMS,CDCR Female Pop,2016,5729.0,False
+Female CCCMS,CDCR Female Pop,2017,5869.0,False
+Female CCCMS,CDCR Female Pop,2018,5849.0,False
+Female CCCMS,CDCR Female Pop,2019,5770.0,False
+Female CCCMS,CDCR Female Pop,2020,5533.0,False
+Female CCCMS,CDCR Female Pop,2021,3640.0,False
+Female CCCMS,CDCR Female Pop,2022,3839.0,False
+Female CCCMS,CDCR Female Pop,2023,3656.0,False
+Female CCCMS,CDCR Female Pop,2024,3767.0,False
+Female CCCMS,CDCR Female Pop,2025,3637.0,False
+Female CCCMS,CDCR Female Pop,2026,3627.0,True
+Female CCCMS,CDCR Female Pop,2027,3674.0,True
+Female CCCMS,CDCR Female Pop,2028,3713.0,True
+Female CCCMS,CDCR Female Pop,2029,3776.0,True
+Female CCCMS,CDCR Female Pop,2030,3709.0,True
+Female CCCMS,Census Rate,2014,336.3,False
+Female CCCMS,Census Rate,2015,344.3,False
+Female CCCMS,Census Rate,2016,325.9,False
+Female CCCMS,Census Rate,2017,358.1,False
+Female CCCMS,Census Rate,2018,383.7,False
+Female CCCMS,Census Rate,2019,384.6,False
+Female CCCMS,Census Rate,2020,387.2,False
+Female CCCMS,Census Rate,2021,445.4,False
+Female CCCMS,Census Rate,2022,471.7,False
+Female CCCMS,Census Rate,2023,473.4,False
+Female CCCMS,Census Rate,2024,480.6,False
+Female CCCMS,Census Rate,2025,513.4,False
+Female CCCMS,Census Rate,2026,513.4,True
+Female CCCMS,Census Rate,2027,513.4,True
+Female CCCMS,Census Rate,2028,513.4,True
+Female CCCMS,Census Rate,2029,513.4,True
+Female CCCMS,Census Rate,2030,513.4,True
+Female CCCMS,Avg Census,2014,2061.0,False
+Female CCCMS,Avg Census,2015,2111.0,False
+Female CCCMS,Avg Census,2016,1867.0,False
+Female CCCMS,Avg Census,2017,2102.0,False
+Female CCCMS,Avg Census,2018,2244.0,False
+Female CCCMS,Avg Census,2019,2219.0,False
+Female CCCMS,Avg Census,2020,2142.0,False
+Female CCCMS,Avg Census,2021,1621.0,False
+Female CCCMS,Avg Census,2022,1811.0,False
+Female CCCMS,Avg Census,2023,1731.0,False
+Female CCCMS,Avg Census,2024,1811.0,False
+Female CCCMS,Avg Census,2025,1867.0,False
+Female CCCMS,Avg Census,2026,1862.0,True
+Female CCCMS,Avg Census,2027,1886.0,True
+Female CCCMS,Avg Census,2028,1906.0,True
+Female CCCMS,Avg Census,2029,1939.0,True
+Female CCCMS,Avg Census,2030,1904.0,True

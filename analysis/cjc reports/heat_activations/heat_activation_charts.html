@@ -312,8 +312,62 @@
   Top 12 facilities selected and sorted by combined P1+P2 person-days (highest at top).
   Percentages from CCHCS IPC Dashboard (2025 avg); population from CDCR 2025 avg.
 </p>
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">System-wide medium+ health risk</div>
+    <div class="stat-value stage1">59.2%</div>
+    <div class="stat-sub">52,915 of 89,386 people · P1 + P2 + Medium</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Avg days ≥ 90°F / person / year (medium+)</div>
+    <div class="stat-value stage1">70.1</div>
+    <div class="stat-sub">3,707,667 person-days ÷ 52,915 people · 2025</div>
+  </div>
+</div>
 <div style="font-size:11px; margin-bottom:10px;" id="legend-facility-risk"></div>
 <div id="chart-facility-risk"></div>
+
+<h2>Person-Days over Skarha 10°F Threshold by Health Risk Category per Facility, 2016–2025 avg</h2>
+<p class="chart-note">
+  Person-days = facility population in each health risk tier × avg annual days outdoor tmax exceeds facility mean summer tmax by ≥ 10°F (2016–2025).
+  High Risk P1 and P2 = CCHCS highest-acuity tiers. Medium Risk = intermediate chronic care.
+  All 31 active facilities, sorted by combined P1+P2 person-days (highest at top).
+  Percentages from CCHCS IPC Dashboard (2025 avg); population from CDCR 2025 avg.
+</p>
+
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">System-wide medium+ health risk</div>
+    <div class="stat-value stage1">59.2%</div>
+    <div class="stat-sub">52,915 of 89,394 people · P1 + P2 + Medium</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-label">Avg Skarha threshold days / person / year (medium+)</div>
+    <div class="stat-value stage1">9.8</div>
+    <div class="stat-sub">520,840 person-days ÷ 52,915 people · 2016–2025</div>
+  </div>
+</div>
+<div style="font-size:11px; margin-bottom:10px;" id="legend-facility-risk-skarha"></div>
+<div id="chart-facility-risk-skarha"></div>
+
+<h2>EOP Mental Health Person-Days over Skarha 10°F Threshold per Facility, 2016–2025 avg</h2>
+<p class="chart-note">
+  Person-days = EOP mental health population × avg annual days outdoor tmax exceeds facility mean summer tmax by ≥ 10°F (2016–2025).
+  EOP = Enhanced Outpatient Program (CCHCS highest-volume mental health caseload).
+  All 23 facilities with EOP population > 0, sorted by EOP person-days (highest at top).
+  8 facilities with 0% EOP (ASP, CAL, CEN, CTF, FOL, ISP, SCC, SOL) are excluded.
+  EOP percentages from CCHCS IPC Dashboard (2025 avg); population from CDCR 2025 avg.
+  System avg: 9.4 Skarha threshold days/facility/year across 32 facilities.
+</p>
+
+<div class="summary-stats">
+  <div class="stat-block">
+    <div class="stat-label">System-wide EOP mental health</div>
+    <div class="stat-value stage1">8.9%</div>
+    <div class="stat-sub">7,947 of 89,394 people · 31 facilities</div>
+  </div>
+</div>
+<div id="chart-facility-eop-skarha"></div>
 
 <h2>Population Impact: Health Risk &amp; Program Categories, 2025</h2>
 <p class="chart-note">
@@ -1801,6 +1855,250 @@ const facilityTempData = [
       .append("rect").attr("width",12).attr("height",12).attr("fill",rg.color);
     item.append("span").text(rg.label);
   });
+})();
+
+// ── Chart 6b2: Person-days over Skarha 10°F threshold by health risk category per facility ──
+
+(function() {
+  const facilityRiskSkarha = [
+    { code:"CMF",  p1: 10464, p2:  6644, med:   9664, total:  26772 },
+    { code:"CHCF", p1: 12148, p2:  4823, med:   5014, total:  21985 },
+    { code:"RJD",  p1:  8262, p2:  8068, med:  15520, total:  31850 },
+    { code:"CIM",  p1:  7145, p2:  8159, med:   9925, total:  25229 },
+    { code:"SQ",   p1:  6538, p2:  8607, med:  14889, total:  30034 },
+    { code:"CTF",  p1:  4241, p2: 10693, med:  26150, total:  41084 },
+    { code:"MCSP", p1:  6433, p2:  6020, med:  14362, total:  26815 },
+    { code:"SVSP", p1:  4804, p2:  5950, med:  23416, total:  34170 },
+    { code:"SOL",  p1:  4288, p2:  6146, med:  14270, total:  24704 },
+    { code:"LAC",  p1:  3864, p2:  4984, med:  16453, total:  25301 },
+    { code:"SAC",  p1:  2460, p2:  4763, med:   9859, total:  17082 },
+    { code:"CMC",  p1:  2321, p2:  4802, med:  17681, total:  24804 },
+    { code:"SATF", p1:  2548, p2:  3808, med:  15663, total:  22019 },
+    { code:"VSP",  p1:  2699, p2:  3346, med:   8270, total:  14315 },
+    { code:"HDSP", p1:  2075, p2:  3307, med:  22230, total:  27612 },
+    { code:"CIW",  p1:  1765, p2:  1968, med:   7772, total:  11505 },
+    { code:"COR",  p1:  1294, p2:  2223, med:   7006, total:  10523 },
+    { code:"FOL",  p1:   960, p2:  2336, med:   8306, total:  11602 },
+    { code:"CCWF", p1:  1267, p2:  1564, med:   8065, total:  10896 },
+    { code:"CRC",  p1:   778, p2:  1838, med:   9837, total:  12453 },
+    { code:"PBSP", p1:   504, p2:  1472, med:   8888, total:  10864 },
+    { code:"KVSP", p1:   490, p2:   979, med:   5922, total:   7391 },
+    { code:"ISP",  p1:   220, p2:   764, med:   1868, total:   2852 },
+    { code:"CCI",  p1:   168, p2:   765, med:   5590, total:   6523 },
+    { code:"WSP",  p1:   194, p2:   642, med:   6760, total:   7596 },
+    { code:"NKSP", p1:   140, p2:   407, med:   4338, total:   4885 },
+    { code:"CEN",  p1:   150, p2:   360, med:   2820, total:   3330 },
+    { code:"SCC",  p1:     0, p2:   370, med:   3788, total:   4158 },
+    { code:"CAL",  p1:    48, p2:   160, med:    790, total:    998 },
+    { code:"PVSP", p1:     0, p2:    69, med:   5989, total:   6058 },
+    { code:"ASP",  p1:     0, p2:    41, med:  15388, total:  15429 },
+  ];
+
+  const riskGroups = [
+    { key: "p1",  label: "High Risk P1", color: "#b03020" },
+    { key: "p2",  label: "High Risk P2", color: "#777" },
+    { key: "med", label: "Medium Risk",  color: "#bbb" },
+  ];
+
+  const refPct = {
+    CMF: 50, CHCF: 100, RJD: 36, CIM: 100, SQ: 62, CTF: 0,
+    MCSP: 19, SVSP: 9, SOL: 13, LAC: 6, SAC: 22, CMC: 0,
+    SATF: 5, VSP: 0, HDSP: 9, CIW: 44, COR: 0, FOL: 29,
+    CCWF: 3, CRC: 86, PBSP: 10, KVSP: 29, ISP: 100, CCI: 0,
+    WSP: 2, NKSP: 4, CEN: 100, SCC: 5, CAL: 100, PVSP: 6, ASP: 0,
+  };
+
+  const barHeight = 14;
+  const groupPad  = 4;
+  const groupHeight = riskGroups.length * barHeight + groupPad;
+  const nFacilities = facilityRiskSkarha.length;
+
+  const margin = { top: 12, right: 80, bottom: 40, left: 62 };
+  const width  = 712 - margin.left - margin.right;
+  const height = nFacilities * groupHeight;
+  const svgH   = height + margin.top + margin.bottom;
+
+  const svg = d3.select("#chart-facility-risk-skarha")
+    .append("svg")
+      .attr("viewBox", `0 0 712 ${svgH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear()
+    .domain([0, d3.max(facilityRiskSkarha, d => d.total) * 1.05])
+    .range([0, width]);
+
+  const y = d3.scaleBand()
+    .domain(facilityRiskSkarha.map(d => d.code))
+    .range([height, 0])
+    .padding(0.15);
+
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisBottom(x).ticks(5).tickSize(height).tickFormat(""))
+    .call(g => g.select(".domain").remove());
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(5).tickFormat(d => d >= 1e6 ? (d/1e6).toFixed(1)+"M" : d3.format(",d")(d)));
+
+  const yAxisG = svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).tickSize(0))
+    .call(g => g.select(".domain").remove());
+
+  yAxisG.selectAll(".tick").each(function(d) {
+    const pct = refPct[d];
+    if (pct === undefined) return;
+    const label = pct === 0 ? "no AC" : pct + "% AC";
+    d3.select(this).append("text")
+      .attr("x", -4).attr("y", 16)
+      .attr("text-anchor", "end")
+      .style("font-size", "9px")
+      .attr("fill", pct === 0 ? "#b03020" : "#888")
+      .text(label);
+  });
+
+  svg.append("text")
+    .attr("x", width / 2).attr("y", height + 34)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("Person-days over Skarha 10°F threshold / year (people × avg annual days, 2016–2025)");
+
+  const bandW = y.bandwidth();
+  const subBarH = bandW / riskGroups.length;
+
+  facilityRiskSkarha.forEach(d => {
+    const bandY = y(d.code);
+    riskGroups.forEach((rg, i) => {
+      svg.append("rect")
+        .attr("x", 0)
+        .attr("y", bandY + i * subBarH)
+        .attr("width", x(d[rg.key]))
+        .attr("height", subBarH - 1)
+        .attr("fill", rg.color);
+    });
+  });
+
+  const legendSel = d3.select("#legend-facility-risk-skarha");
+  riskGroups.forEach(rg => {
+    const item = legendSel.append("span").style("margin-right","16px").style("white-space","nowrap");
+    item.append("svg").attr("width",12).attr("height",12)
+      .style("vertical-align","middle").style("margin-right","4px")
+      .append("rect").attr("width",12).attr("height",12).attr("fill",rg.color);
+    item.append("span").text(rg.label);
+  });
+})();
+
+// ── Chart 6c: EOP person-days over Skarha 10°F threshold per facility ────────
+
+(function() {
+  const facilityEopSkarha = [
+    { code:"CMC",  eop: 10287, eopPeople: 647, eopPct: 30, skDays: 15.9 },
+    { code:"RJD",  eop:  9893, eopPeople: 916, eopPct: 26, skDays: 10.8 },
+    { code:"SAC",  eop:  8604, eopPeople: 878, eopPct: 41, skDays:  9.8 },
+    { code:"CMF",  eop:  7474, eopPeople: 495, eopPct: 24, skDays: 15.1 },
+    { code:"MCSP", eop:  6828, eopPeople: 794, eopPct: 21, skDays:  8.6 },
+    { code:"LAC",  eop:  6776, eopPeople: 605, eopPct: 20, skDays: 11.2 },
+    { code:"SVSP", eop:  5467, eopPeople: 272, eopPct: 11, skDays: 20.1 },
+    { code:"CHCF", eop:  4961, eopPeople: 468, eopPct: 21, skDays: 10.6 },
+    { code:"SQ",   eop:  3730, eopPeople: 247, eopPct:  9, skDays: 15.1 },
+    { code:"SATF", eop:  3450, eopPeople: 616, eopPct: 12, skDays:  5.6 },
+    { code:"CIM",  eop:  2335, eopPeople: 168, eopPct:  7, skDays: 13.9 },
+    { code:"VSP",  eop:  2158, eopPeople: 327, eopPct: 10, skDays:  6.6 },
+    { code:"HDSP", eop:  1607, eopPeople: 103, eopPct:  4, skDays: 15.6 },
+    { code:"COR",  eop:  1445, eopPeople: 258, eopPct: 10, skDays:  5.6 },
+    { code:"KVSP", eop:  1213, eopPeople: 337, eopPct: 11, skDays:  3.6 },
+    { code:"CIW",  eop:   876, eopPeople:  69, eopPct:  6, skDays: 12.7 },
+    { code:"PBSP", eop:   752, eopPeople:  94, eopPct:  4, skDays:  8.0 },
+    { code:"PVSP", eop:   704, eopPeople: 153, eopPct:  5, skDays:  4.6 },
+    { code:"CCWF", eop:   673, eopPeople: 102, eopPct:  5, skDays:  6.6 },
+    { code:"CCI",  eop:   649, eopPeople: 151, eopPct:  6, skDays:  4.3 },
+    { code:"WSP",  eop:   475, eopPeople: 125, eopPct:  3, skDays:  3.8 },
+    { code:"CRC",  eop:   424, eopPeople:  42, eopPct:  2, skDays: 10.1 },
+    { code:"NKSP", eop:   288, eopPeople:  80, eopPct:  3, skDays:  3.6 },
+  ];
+
+  const refPct = {
+    CMC: 0, RJD: 36, SAC: 22, CMF: 50, MCSP: 19, LAC: 6,
+    SVSP: 9, CHCF: 100, SQ: 62, SATF: 5, CIM: 100, VSP: 0,
+    HDSP: 9, COR: 0, KVSP: 29, CIW: 44, PBSP: 10, PVSP: 6,
+    CCWF: 3, CCI: 0, WSP: 2, CRC: 86, NKSP: 4,
+  };
+
+  const barHeight = 18;
+  const groupPad  = 6;
+  const nFacilities = facilityEopSkarha.length;
+
+  const margin = { top: 12, right: 100, bottom: 40, left: 62 };
+  const width  = 712 - margin.left - margin.right;
+  const height = nFacilities * (barHeight + groupPad);
+  const svgH   = height + margin.top + margin.bottom;
+
+  const svg = d3.select("#chart-facility-eop-skarha")
+    .append("svg")
+      .attr("viewBox", `0 0 712 ${svgH}`)
+      .attr("width", "100%")
+      .style("display", "block")
+    .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear()
+    .domain([0, d3.max(facilityEopSkarha, d => d.eop) * 1.05])
+    .range([0, width]);
+
+  const y = d3.scaleBand()
+    .domain(facilityEopSkarha.map(d => d.code))
+    .range([0, height])
+    .padding(0.15);
+
+  svg.append("g").attr("class", "grid")
+    .call(d3.axisBottom(x).ticks(5).tickSize(height).tickFormat(""))
+    .call(g => g.select(".domain").remove());
+
+  svg.append("g").attr("class", "axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(",d")));
+
+  const yAxisG = svg.append("g").attr("class", "axis")
+    .call(d3.axisLeft(y).tickSize(0))
+    .call(g => g.select(".domain").remove());
+
+  yAxisG.selectAll(".tick").each(function(d) {
+    const pct = refPct[d];
+    if (pct === undefined) return;
+    const label = pct === 0 ? "no AC" : pct + "% AC";
+    d3.select(this).append("text")
+      .attr("x", -4).attr("y", 14)
+      .attr("text-anchor", "end")
+      .style("font-size", "9px")
+      .attr("fill", pct === 0 ? "#b03020" : "#888")
+      .text(label);
+  });
+
+  svg.append("text")
+    .attr("x", width / 2).attr("y", height + 34)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "13px").attr("fill", "#555")
+    .text("EOP person-days over Skarha threshold / year (people × avg annual days, 2016–2025)");
+
+  svg.selectAll(".bar")
+    .data(facilityEopSkarha)
+    .join("rect")
+      .attr("x", 0)
+      .attr("y", d => y(d.code))
+      .attr("width", d => x(d.eop))
+      .attr("height", y.bandwidth())
+      .attr("fill", "#6a3d9a");
+
+  // Value labels with EOP people and avg Skarha days
+  svg.selectAll(".val-label")
+    .data(facilityEopSkarha)
+    .join("text")
+      .attr("x", d => x(d.eop) + 4)
+      .attr("y", d => y(d.code) + y.bandwidth() / 2 + 4)
+      .attr("font-size", "10px").attr("fill", "#333")
+      .text(d => d3.format(",d")(d.eop) + " (" + d.eopPct + "% EOP, " + d.skDays.toFixed(1) + " d)");
 })();
 </script>
 </body>

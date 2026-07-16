@@ -1,0 +1,65 @@
+date,section,facility,bed_capacity,census,beds_reserved,beds_redlined,medical_isolation_rooms,available_beds,pending_referrals,accepted_referrals,total_waitlist
+2025-10-27,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,15,4,0,0,45,0,0,0
+2025-10-27,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,15,4,0,0,45,0,4,4
+2025-10-27,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,249,10,1,0,70,0,0,0
+2025-10-27,Male ICF High Custody,CMF Multi Cell,20,11,0,0,0,9,0,0,0
+2025-10-27,Male ICF High Custody,CMF Single Cell,62,57,3,0,0,2,0,0,0
+2025-10-27,Male ICF High Custody,Salinas Valley State Prison (SVSP) Multi Cell,44,39,3,0,0,2,0,0,0
+2025-10-27,Male ICF High Custody,SVSP Single Cell,82,82,0,0,0,0,0,0,0
+2025-10-27,Male ICF High Custody,Total - Male ICF High Custody,538,438,16,1,0,83,16,6,22
+2025-10-27,Male Flex (APP/ICF),CHCF,217,108,10,0,0,99,0,0,0
+2025-10-27,Male Flex (APP/ICF),CMF,250,104,2,66,0,78,0,0,0
+2025-10-27,Male Flex (APP/ICF),San Quentin (SQ),28,23,2,0,0,3,0,0,0
+2025-10-27,Male Flex (APP/ICF),California Men's Colony,0,0,0,0,0,0,0,0,0
+2025-10-27,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),495,235,14,66,0,180,13,3,16
+2025-10-27,Female High Custody,California Institution for Women,45,28,1,0,0,16,0,0,0
+2025-10-27,Female High Custody,Total - Female High Custody,45,28,1,0,0,16,1,0,1
+2025-10-27,Female High Custody,GRAND TOTALS,1142,716,35,67,0,324,30,13,43
+2025-11-24,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,22,2,0,0,40,0,0,0
+2025-11-24,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,22,2,0,0,40,1,1,2
+2025-11-24,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,249,11,1,0,69,0,0,0
+2025-11-24,Male ICF High Custody,CMF Multi Cell,20,10,2,0,0,8,0,0,0
+2025-11-24,Male ICF High Custody,CMF Single Cell,62,48,4,1,0,9,0,0,0
+2025-11-24,Male ICF High Custody,Salinas Valley State Prison (SVSP) Multi Cell,44,41,2,0,0,1,0,0,0
+2025-11-24,Male ICF High Custody,SVSP Single Cell,82,72,4,1,0,5,0,0,0
+2025-11-24,Male ICF High Custody,Total - Male ICF High Custody,538,420,23,3,0,92,30,4,34
+2025-11-24,Male Flex (APP/ICF),CHCF,217,118,12,0,0,87,0,0,0
+2025-11-24,Male Flex (APP/ICF),CMF,250,92,4,66,0,88,0,0,0
+2025-11-24,Male Flex (APP/ICF),San Quentin (SQ),28,21,1,0,0,6,0,0,0
+2025-11-24,Male Flex (APP/ICF),California Men's Colony,0,0,0,0,0,0,0,0,0
+2025-11-24,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),495,231,17,66,0,181,11,10,21
+2025-11-24,Female High Custody,California Institution for Women,45,30,0,0,0,15,0,0,0
+2025-11-24,Female High Custody,Total - Female High Custody,45,30,0,0,0,15,0,0,0
+2025-11-24,Female High Custody,GRAND TOTALS,1142,703,42,69,0,328,42,15,57
+2025-12-29,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,23,1,0,0,40,0,0,0
+2025-12-29,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,23,1,0,0,40,0,1,1
+2025-12-29,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,235,13,1,0,81,0,0,0
+2025-12-29,Male ICF High Custody,CMF Multi Cell,20,12,0,0,0,8,0,0,0
+2025-12-29,Male ICF High Custody,CMF Single Cell,62,58,1,1,0,2,0,0,0
+2025-12-29,Male ICF High Custody,Salinas Valley State Prison (SVSP) Multi Cell,44,42,2,0,0,0,0,0,0
+2025-12-29,Male ICF High Custody,SVSP Single Cell,82,73,1,0,0,8,0,0,0
+2025-12-29,Male ICF High Custody,Total - Male ICF High Custody,538,420,17,2,0,99,19,7,26
+2025-12-29,Male Flex (APP/ICF),CHCF,217,124,9,0,0,84,0,0,0
+2025-12-29,Male Flex (APP/ICF),CMF,250,100,2,67,0,81,0,0,0
+2025-12-29,Male Flex (APP/ICF),San Quentin (SQ),28,24,1,0,0,3,0,0,0
+2025-12-29,Male Flex (APP/ICF),California Men's Colony,0,0,0,0,0,0,0,0,0
+2025-12-29,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),495,248,12,67,0,168,11,4,15
+2025-12-29,Female High Custody,California Institution for Women,45,35,2,0,0,8,0,0,0
+2025-12-29,Female High Custody,Total - Female High Custody,45,35,2,0,0,8,1,1,2
+2025-12-29,Female High Custody,GRAND TOTALS,1142,726,32,69,0,315,31,13,44
+2026-01-26,Male Intermediate Locked Dorm,California Medical Facility (CMF),64,29,0,0,0,35,0,0,0
+2026-01-26,Male Intermediate Locked Dorm,Total - Male Intermediate Locked Dorm,64,29,0,0,0,35,0,0,0
+2026-01-26,Male ICF High Custody,California Health Care Facility (CHCF) Single Cell,330,239,15,1,0,75,0,0,0
+2026-01-26,Male ICF High Custody,CMF Multi Cell,20,11,0,0,0,9,0,0,0
+2026-01-26,Male ICF High Custody,CMF Single Cell,93,52,3,32,0,6,0,0,0
+2026-01-26,Male ICF High Custody,Salinas Valley State Prison (SVSP) Multi Cell,44,43,1,0,0,0,0,0,0
+2026-01-26,Male ICF High Custody,SVSP Single Cell,82,78,2,0,0,2,0,0,0
+2026-01-26,Male ICF High Custody,Total - Male ICF High Custody,569,423,21,33,0,92,27,3,30
+2026-01-26,Male Flex (APP/ICF),CHCF,217,114,15,1,0,87,0,0,0
+2026-01-26,Male Flex (APP/ICF),CMF,219,93,2,68,0,56,0,0,0
+2026-01-26,Male Flex (APP/ICF),San Quentin (SQ),28,23,1,0,0,4,0,0,0
+2026-01-26,Male Flex (APP/ICF),California Men's Colony,0,0,0,0,0,0,0,0,0
+2026-01-26,Male Flex (APP/ICF),Total - Male Flex (APP/ICF),464,230,18,69,0,147,17,3,20
+2026-01-26,Female High Custody,California Institution for Women,45,35,2,0,0,8,0,0,0
+2026-01-26,Female High Custody,Total - Female High Custody,45,35,2,0,0,8,2,0,2
+2026-01-26,Female High Custody,GRAND TOTALS,1142,717,41,102,0,282,46,6,52

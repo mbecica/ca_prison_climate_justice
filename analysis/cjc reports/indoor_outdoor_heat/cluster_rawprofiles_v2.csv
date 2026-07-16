@@ -1,0 +1,11 @@
+,A,B,C
+year_opened,1958.73,1989.4,1981.6
+pct_buildings_refrigeration,0.13,0.91,0.08
+pct_buildings_evaporation,0.03,0.09,0.93
+days_outdoor_above_78f_2025,93.91,171.0,147.53
+days_indoor_above_78f_2025,101.36,63.0,99.4
+uhi_normalized,0.24,0.18,0.23
+elevation_m,220.82,28.6,226.53
+latitude,36.29,35.16,36.74
+hotnights_pre_pct,5.31,6.33,7.42
+n,11.0,5.0,15.0
