@@ -6,7 +6,7 @@ How to refresh the data in this repository, family by family: which scraper to r
 which notebook/script rebuilds what, which `data/` outputs change, and which downstream
 consumers need to be rebuilt afterward. Consumers include the
 [Prison Heat Index](https://marybecica.com/prison-heat-index/) export (`analysis/app_export/`),
-the Heat Tracker static builds (`analysis/heatwave_app/` → the `ca-carceral-heat-tracker` repo),
+the Heat Tracker static builds (in the `ca-carceral-heat-tracker` repo, which reads these CSVs),
 and the capstone/CJC report analyses.
 
 ## Versioning convention: frozen vs. living
@@ -36,8 +36,8 @@ Rules that follow from this:
 
 | When | What | Why |
 |---|---|---|
-| **Pre-season (Apr–May)** — the main refresh | CDCR population (TPOP-1), CCHCS vulnerability dashboards, HiFLD facility list re-download, rebuild `cdcr_facilities.csv` + `ca_facilities.csv`, rerun Heat Tracker static builds | The heat apps enter summer with current numbers |
-| **Post-season (Nov–Dec)** | Population touch-up; roll the Heat Tracker 10-year hourly envelope forward one season (`build_historic_bands.py`); extend gridMET analysis years if the heat-operations work continues | Annual climate roll-forward |
+| **Pre-season (Apr–May)** — the main refresh | CDCR population (TPOP-1), CCHCS vulnerability dashboards, HiFLD facility list re-download, rebuild `cdcr_facilities.csv` + `ca_facilities.csv`; then rebuild downstream consumers (PHI export; the Heat Tracker's builds, per **its own repo's REFRESH**) | Consumers enter summer with current numbers |
+| **Post-season (Nov–Dec)** | Population touch-up; extend gridMET analysis years if the heat-operations work continues | Annual touch-up |
 | **Unscheduled (user-initiated)** | Anything event-driven, run only when its trigger happens — a closure or large population move; **cooling infrastructure** (a master-plan project completes, or CDCR/FOIA releases a new cooling report); refreshed hazard/climate source layers (Cal-Adapt, VCP, CalEnviroScreen, CalFire) or Census boundaries | One-off, no calendar |
 
 Estimated effort for a pre-season refresh: about half a session, dominated by scraper
@@ -54,7 +54,7 @@ scrapers/* + manual downloads
   → analysis/hazards, CDCR_risk_indices,
     CDCR_hazard_rank, cjc reports         (analyses)
   → analysis/app_export (PHI → website repo)
-  → analysis/heatwave_app (→ ca-carceral-heat-tracker repo)
+  → ca-carceral-heat-tracker/pipeline (separate app repo; reads these CSVs)
 ```
 
 ## Manual PDF downloads (do this before running the PDF scrapers)
@@ -86,11 +86,11 @@ a visible browser; see each family's section.
 | Sources | FEMA RAPT / HiFLD "Prison Boundaries" layer (**manual download** → `data_sources/facilities/Prison_Boundaries_RAPT.geojson`); USGS National Map medical/EMS layer (`python3 scrapers/fetch_national_map_medical.py`, fully automatic → `data_sources/national_map_medical_emergency.csv`); Census tract/urban-area boundary zips (manual, rarely change); CalFire WUI zip |
 | Rebuild | `data_sources/facilities/create_facilities.ipynb` |
 | Output | `data_sources/facilities/ca_facilities.csv` — **LIVING** |
-| Consumers | `create_cdcr_facilities.ipynb` · `analysis/hazards/join_climate_hazards.ipynb` · `analysis/cjc reports/heat_operations/build_heat_operations_panel.py` · **Heat Tracker:** all three `analysis/heatwave_app/build_*.py` |
+| Consumers | `create_cdcr_facilities.ipynb` · `analysis/hazards/join_climate_hazards.ipynb` · `analysis/cjc reports/heat_operations/build_heat_operations_panel.py` · **Heat Tracker:** its `pipeline/build_*.py` (in the app repo) |
 | After refresh | Rebuild `cdcr_facilities.csv` (family 2); rerun `join_climate_hazards.ipynb`; rerun Heat Tracker builds (family 11) — `build_baselines.py --only-missing` and `build_historic_bands.py --only-missing` for any new facilities |
 
 Update the HiFLD vintage where it's displayed: `FACILITY_LIST_AS_OF` in
-`analysis/heatwave_app/build_facilities.py`, and the PHI/tracker methods pages.
+the tracker's `pipeline/build_facilities.py` (app repo), and the PHI/tracker methods pages.
 
 ## 2. CDCR population, demographics & capacity
 
@@ -148,7 +148,7 @@ in a new release when one appears, not *when*.
 | Sources | All **manual**, all **FROZEN**: `air_cooling_housing_units_dec2025.csv` + `air_cooling_infrastructure_dec2025.csv` (transcribed from CDCR Air Cooling Pilot Supplemental Report, Jan 2026), `Reuters_CDCR_cooling.xlsx` (Reuters FOIA, 2025), and MPAR project-completion extracts. A new release lands alongside with its own vintage name |
 | Rebuild | `create_cdcr_facilities.ipynb` → cooling columns of `cdcr_facilities.csv` |
 | Consumers | PHI cooling pie · Heat Tracker CDCR cooling block · heat-operations panel |
-| When a new release appears | Add the new vintage file; point `create_cdcr_facilities.ipynb` at it (deliberate consumer move, rule 2); update `COOLING_AS_OF` in `analysis/heatwave_app/build_facilities.py`; rerun `build_facilities.py` |
+| When a new release appears | Add the new vintage file; point `create_cdcr_facilities.ipynb` at it (deliberate consumer move, rule 2); update `COOLING_AS_OF` in the tracker's `pipeline/build_facilities.py` (app repo); rerun it |
 
 ## 5. Other CDCR operational sources (reports/capstone only)
 
@@ -218,32 +218,24 @@ overwrite. In practice these need no action during a routine refresh.
 | Outputs | `analysis/app_export/output/` (canonical) + copies into `../website`: `data/prison_heat_index.json`, `static/data/{prison_heat_index.json, prison_boundaries.geojson, ca_outline_simple.json}`, `content/prison-heat-index/<slug>.md` × 31 — **LIVING** (regenerated wholesale on each deliberate export) |
 | After refresh | Nothing automatic. PHI moves to a new data vintage only when you edit `build_app_data.py` to read it (rule 2), then commit + push `website` |
 
-## 11. Heat Tracker static builds (→ ca-carceral-heat-tracker repo)
+## 11. Heat Tracker — this repo is only an input
 
-Scripts in `analysis/heatwave_app/`; outputs go to the sibling app repo. The live
-3-hour pipeline (`fetch_current.py`, GitHub Actions) lives in the app repo and just
-reads these files — it needs no changes when the facility list changes.
+**The Heat Tracker's build scripts live in its own repo now** —
+`ca-carceral-heat-tracker/pipeline/` (moved out of here Jul 17 2026). This repo just
+supplies two **inputs** the tracker reads as a sibling checkout: `ca_facilities.csv`
+and `data/cdcr/cdcr_facilities.csv`. Nothing here consumes the tracker's outputs, and
+the tracker's own data (baselines, bands, slug registry, live feed) lives entirely in
+its repo. Its build/refresh runbook lives there too (`ca-carceral-heat-tracker/pipeline/`
++ that repo's docs); the tracker no longer uses Open-Meteo/ERA5 — baseline is PRISM and
+band/live are NWS/RTMA via Google Earth Engine (see that repo's SCOPE_AND_PLAN §2).
 
-| Script | Inputs | Outputs | Classification |
-|---|---|---|---|
-| `build_baselines.py` | `ca_facilities.csv` (lat/lon), Open-Meteo ERA5 archive | `analysis/heatwave_app/data/baselines.csv` | **FROZEN by definition** (1991–2020 window never re-windows). Run `--only-missing` for new facilities only |
-| `build_facilities.py` | `ca_facilities.csv`, `cdcr_facilities.csv` (auto-discovers latest vintage columns), `data/baselines.csv`, PHI export (cross-links) | app repo `static/data/facilities.json`, `facility_boundaries.geojson`, `content/facilities/*.md`, `static/_redirects`; local `slugs.csv` | facilities.json **LIVING** (vintage-stamped in `meta.vintages`); `slugs.csv` **LIVING, append-only** — never edit slugs by hand, retired slugs are never reused |
-| `build_historic_bands.py` | `ca_facilities.csv`, `slugs.csv`, Open-Meteo ERA5 archive | app repo `static/data/bands/<slug>.json` | **LIVING** — post-season, roll the 10-year window forward one year (edit the year constants) and rerun; `--only-missing` for new facilities mid-cycle |
-
-### Heat Tracker refresh procedure
-
-1. Run the relevant scrapers per families 1–4 above (the slow, human-in-the-loop part).
-2. Rebuild `data/cdcr/cdcr_facilities.csv` and (pre-season) `ca_facilities.csv`.
-3. `python3 analysis/heatwave_app/build_facilities.py`; if the facility list changed,
-   also `build_baselines.py --only-missing` and `build_historic_bands.py --only-missing`,
-   then rerun `build_facilities.py` so new thresholds land in the master JSON.
-4. Review the git diff **in the app repo** — it shows exactly which facilities'
-   numbers changed (this is the sanity check). Closures should show as: stub deleted,
-   `_redirects` line added, slug marked retired in `slugs.csv`.
-5. Update vintage constants if their sources moved (`FACILITY_LIST_AS_OF`,
-   `COOLING_AS_OF` in `build_facilities.py`; population/CCHCS years are auto-discovered).
-6. Commit both repos; the app-repo commit triggers its Cloudflare Pages rebuild.
-7. `git tag refresh-YYYY-MM` in this repo (rule 3).
+**What a refresh here means for the tracker:** when you re-scrape and rebuild
+`cdcr_facilities.csv` / `ca_facilities.csv` (families 1–4), afterward go to the app repo
+and rerun its builds against these updated CSVs (`pipeline/build_facilities.py`, plus
+`build_baselines.py`/`build_historic_bands.py --only-missing` if the facility list
+changed). Both checkouts must sit side-by-side for the app's static builds to find these
+files. Then commit each repo; the app-repo commit triggers its Cloudflare rebuild, and
+`git tag refresh-YYYY-MM` here (rule 3).
 
 ---
 
@@ -270,9 +262,6 @@ that needs Mary's sign-off before this runbook is adopted.**
 | `analysis/cjc reports/**` outputs | **FROZEN (one-time memos)** | Published analyses; never refreshed in place |
 | `analysis/CDCR_hazard_rank/*.csv` | FROZEN | Feed the frozen CJC memos |
 | PHI export (`app_export/output/*`, website copies) | LIVING (deliberate rebuilds only) | Regenerated wholesale by `build_app_data.py` |
-| `analysis/heatwave_app/data/baselines.csv` | **FROZEN by definition** | 1991–2020 WMO normal window |
-| `analysis/heatwave_app/slugs.csv` | LIVING (append-only) | URL stability contract |
-| Heat Tracker app-repo outputs (`facilities.json`, bands, stubs) | LIVING | Vintage-stamped in `meta.vintages`; rebuilt each refresh |
 
 ## Resolved (Mary, Jul 17 2026)
 
