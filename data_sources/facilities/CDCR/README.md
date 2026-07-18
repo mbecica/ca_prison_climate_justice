@@ -42,7 +42,7 @@ Data collection scripts are in the `scrapers/` directory.
 | `pct_buildings_refrigeration` | Proportion of housing units (HUs) with mechanical (refrigerant) cooling. HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `pct_units_ventilation` | Proportion of housing HVAC units providing ventilation without cooling. Sums to 1.0 with evaporation and refrigeration. | Raychaudhuri et al., Reuters, 2025 |
 | `pct_buildings_ventilation` | Proportion of housing units (HUs) with air handlers only (ventilation, no cooling). HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
-| `rhu_pct_2025` | % of facility population in restricted housing units (12-month average, 2025). Derived from CDCR STA429 Restricted Housing Monthly Reports (Jan–Dec 2025). CRC and ASP consistently reported 0 RH units. See `restricted_housing_2025.csv` and scraper `scrapers/extract_restricted_housing.py`. | CDCR Office of Research, STA429 Restricted Housing Monthly Reports, 2025 |
+| `rhu_pct_2025` | % of facility population in restricted housing units (12-month average, 2025). Derived from CDCR STA429 Restricted Housing Monthly Reports (Jan–Dec 2025). CRC and ASP consistently reported 0 RH units. See `restricted_housing.csv` and scraper `scrapers/extract_restricted_housing.py`. | CDCR Office of Research, STA429 Restricted Housing Monthly Reports, 2025 |
 
 ### Facility Characteristics
 
@@ -104,16 +104,16 @@ Housing unit design types and 2025 indoor heat exposure by institution, as of De
 ### `air_cooling_infrastructure_dec2025.csv`
 Air cooling infrastructure by institution as of December 2025. Columns: `institution` (CDCR code; FSP used for Folsom), `n_housing_units` (total active housing units), `hu_air_handlers_only` (HUs with air handlers/ventilation only, no cooling), `hu_evaporative_cooling` (HUs with evaporative cooling), `hu_mechanical_cooling` (HUs with mechanical/refrigerant cooling). Column values are not mutually exclusive — housing units with mixed cooling systems may be counted in multiple columns, so per-institution column sums may exceed `n_housing_units`. System-wide totals: 791 total HUs; 262 air-handlers-only (33%), 348 evaporative (44%), 181 mechanical (23%). Note: SCC `n_housing_units` corrected from OCR-read 61 to 81 (consistent with Table 1 design counts and the 791 column total). Source: CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2).
 
-### `sb601_operations_2021-2025.csv`
+### `sb601_operations.csv`
 Monthly operational metrics for all 32–35 CDCR institutions across fiscal years 2021-2022 through 2024-2025. Columns: `institution` (CDCR code), `fiscal_year`, `category`, `metric`, and one column per month (`Jul` through `Apr`). Three categories: Lockdowns and Modified Programs, Number of Deaths, and Overtime Hours. Source: CDCR SB 601 Programs Dashboard.
 
-### `sb601_programs_2024-2025.csv`
+### `sb601_programs.csv`
 Program operational capacity by institution for fiscal year 2024-2025. Used to derive the `cognitive_behavioral_interventions` and `rehabilitative_programs` columns. Source: CDCR SB 601 Programs Dashboard.
 
-### `cchcs_ipc_2017-2025.csv`
+### `cchcs_ipc.csv`
 Monthly Institution & Population Characteristics for all CDCR institutions, January 2017–December 2025 (108 months), in long format. Columns: `month`, `institution` (CDCR code), `measure`, `value`. Measures include the eight health classification variables above plus Institution Population (total facility headcount). Source: CCHCS Health Care Services Dashboard.
 
-### `cchcs_measures_2017-2025.csv`
+### `cchcs_measures.csv`
 Monthly staffing vacancy rates, labor costs, and ED/hospital utilization for all CDCR institutions, January 2017–December 2025 (108 months), in long format. Columns: `month`, `group`, `institution` (CDCR code), `measure`, `value`. Contains 26,302 rows across 7 measures in three groups:
 
 | Group | Measure | Description |
@@ -128,7 +128,7 @@ Monthly staffing vacancy rates, labor costs, and ED/hospital utilization for all
 
 Source: CCHCS Health Care Services Dashboard.
 
-### `sco_staffing_2020-2026.csv`
+### `sco_staffing.csv`
 Total active employees at CDCR facilities from the California State Controller's Office "Active State Employees by Department" reports. Cross-sectional snapshots extracted from PDFs in `cdcr_staffing/`. Long format: one row per facility per snapshot. Columns: `date` (report date as "Month YYYY"), `sco_facility_name` (facility name as it appears in the SCO report), `full_time`, `part_time`, `intermittent`, `indeterminate`, `total`.
 
 **Coverage:** 8 snapshots spanning April 2021 – February 2026. Extraction script: `scrapers/extract_sco_staffing.py`.

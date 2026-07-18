@@ -78,7 +78,7 @@ SB601_OUTCOMES = {
 
 sb601 = defaultdict(dict)  # (facility, year, month) -> {col: value}
 
-with open(f"{DATA}/facilities/CDCR/sb601_operations_2021-2025.csv") as f:
+with open(f"{DATA}/facilities/CDCR/sb601_operations.csv") as f:
     for row in csv.DictReader(f):
         facility = row["institution"]
         if facility in EXCLUDE_FACILITIES:
@@ -122,7 +122,7 @@ FISCAL_MONTH_SEQ = ["Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr",
 ytd_actual = {}
 budget_raw = {}
 
-with open(f"{DATA}/facilities/CDCR/sb601_operations_2021-2025.csv") as f:
+with open(f"{DATA}/facilities/CDCR/sb601_operations.csv") as f:
     for row in csv.DictReader(f):
         facility = row["institution"]
         if facility in EXCLUDE_FACILITIES:
@@ -170,7 +170,7 @@ print(f"  {len(fiscal)} facility-month fiscal records")
 # Report coverage by FY for documentation
 print("  sb601 coverage note (Dental+MH OT metric, for reference):")
 fy_coverage = defaultdict(set)
-with open(f"{DATA}/facilities/CDCR/sb601_operations_2021-2025.csv") as f:
+with open(f"{DATA}/facilities/CDCR/sb601_operations.csv") as f:
     for row in csv.DictReader(f):
         if (row["category"], row["metric"]) == ("Overtime Hours", "Dental + Mental Health (Overtime)"):
             fy_coverage[row["fiscal_year"]].add(row["institution"])
@@ -202,7 +202,7 @@ CCHCS_OUTCOMES = {
 
 cchcs = defaultdict(dict)  # (facility, year, month) -> {col: value}
 
-with open(f"{DATA}/facilities/CDCR/cchcs_measures_2017-2025.csv") as f:
+with open(f"{DATA}/facilities/CDCR/cchcs_measures.csv") as f:
     for row in csv.DictReader(f):
         facility = CCHCS_RECODE.get(row["institution"], row["institution"])
         if facility in EXCLUDE_FACILITIES or facility == "SW":

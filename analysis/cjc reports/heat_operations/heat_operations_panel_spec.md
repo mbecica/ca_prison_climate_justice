@@ -18,8 +18,8 @@ Does monthly heat exposure predict worse operational outcomes at CDCR facilities
 |------|------|----------|
 | Heat exposure (primary) | `data_sources/hazards/heat/heat_activations_monthly.csv` | 2016–2025, monthly, per facility |
 | Heat exposure (robustness) | `data_sources/hazards/heat/heat_activations_daily.csv` | 2016–2025, daily — used to compute Skarha anomaly |
-| Outcome: ED/Hospital Stay rate | `data_sources/facilities/CDCR/cchcs_measures_2017-2025.csv` | Apr 2017–Sep 2025, monthly |
-| Outcome: Dental+MH Overtime | `data_sources/facilities/CDCR/sb601_operations_2021-2025.csv` | FY 2021–2025, wide format |
+| Outcome: ED/Hospital Stay rate | `data_sources/facilities/CDCR/cchcs_measures.csv` | Apr 2017–Sep 2025, monthly |
+| Outcome: Dental+MH Overtime | `data_sources/facilities/CDCR/sb601_operations.csv` | FY 2021–2025, wide format |
 | Outcome: Modified Programs Days | same as above | FY 2021–2025, wide format |
 | Crowding ratio (time-varying control) | `data_sources/facilities/CDCR/tpop1_institutions.csv` | Jan 2015–Mar 2026, monthly |
 | AC type (cross-sectional moderator) | `data_sources/facilities/CDCR/air_cooling_infrastructure_dec2025.csv` | Dec 2025 snapshot |
@@ -42,7 +42,7 @@ Does monthly heat exposure predict worse operational outcomes at CDCR facilities
 
 ### Secondary (exploratory — labeled hypothesis-generating)
 
-- Staffing vacancies: All, Medical, Dental, Mental Health (`cchcs_measures_2017-2025.csv`, Staffing group)
+- Staffing vacancies: All, Medical, Dental, Mental Health (`cchcs_measures.csv`, Staffing group)
 
 ---
 
@@ -141,7 +141,7 @@ Control group: all non-treated CDCR facilities in the panel.
 ## 8. Required Data Pipeline (build before analysis)
 
 ### Step 1: Reshape sb601 fiscal-year wide → calendar month long
-- Input: `sb601_operations_2021-2025.csv` (wide: columns Jul–Apr per fiscal year)
+- Input: `sb601_operations.csv` (wide: columns Jul–Apr per fiscal year)
 - Map fiscal year months to calendar months: FY 2021-2022 Jul = July 2021, etc.
 - Output: long format with columns `facility`, `year`, `month`, `category`, `metric`, `value`
 

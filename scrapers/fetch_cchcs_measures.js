@@ -8,7 +8,7 @@
  *   Other Trends: ED/Hospital Stay*, Specialty Care Referrals*, Prescriptions Per Patient
  *
  * Output: long-format CSV — month, group, institution, measure, value
- * Saved to: data_sources/facilities/CDCR/cchcs_measures_2017-2025.csv
+ * Saved to: data_sources/facilities/CDCR/cchcs_measures.csv
  *
  * Checkpoint: /tmp/cchcs_measures_checkpoint.json  (delete to re-scrape)
  *
@@ -21,8 +21,13 @@ const fs = require('fs');
 const path = require('path');
 
 const URL = 'https://app.powerbigov.us/view?r=eyJrIjoiY2QyNzllZWItMmIxYi00NTk0LWI0OWQtNWEzMTkwYzA3NGE4IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9';
-const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_measures_2017-2025.csv');
+const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_measures.csv');
 const CHECKPOINT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_measures_checkpoint.json');
+
+// Month range to scrape. To advance a year at refresh time, bump LATEST_YEAR —
+// nothing else (filename, downstream reads) changes. See REFRESH.md.
+const FIRST_YEAR = 2017;
+const LATEST_YEAR = 2025;
 
 // Each group: treeItem is the exact text to click in the Domain dropdown.
 // keepMeasures: only these row labels are saved (all others are read but discarded).
@@ -110,12 +115,12 @@ async function selectTreeItem(page, targetText, dropdownX = 998) {
 function generateMonthList() {
   const names = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const months = [];
-  for (let year = 2025; year >= 2017; year--) {
+  for (let year = LATEST_YEAR; year >= FIRST_YEAR; year--) {
     for (let m = 11; m >= 0; m--) {
       months.push(`${names[m]} ${year}`);
     }
   }
-  return months; // 108 months, newest first
+  return months; // newest first
 }
 
 async function selectMonth(page, monthStr, positionIndex) {

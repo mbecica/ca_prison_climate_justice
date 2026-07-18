@@ -18,8 +18,13 @@ const fs = require('fs');
 const path = require('path');
 
 const URL = 'https://app.powerbigov.us/view?r=eyJrIjoiY2QyNzllZWItMmIxYi00NTk0LWI0OWQtNWEzMTkwYzA3NGE4IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9';
-const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_ipc_2017-2025.csv');
+const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'cchcs_ipc.csv');
 const CHECKPOINT_PATH = '/tmp/cchcs_ipc_checkpoint.json';
+
+// Month range to scrape. To advance a year at refresh time, bump LATEST_YEAR —
+// nothing else (filename, downstream reads) changes. See REFRESH.md.
+const FIRST_YEAR = 2017;
+const LATEST_YEAR = 2025;
 
 // Measures to keep (skip group/sub-group header rows with no data)
 const SKIP_MEASURES = new Set(['Institution & Population Characteristics', 'Patient Panel']);
@@ -74,12 +79,12 @@ async function selectTreeItem(page, targetText, dropdownX = 998) {
 function generateMonthList() {
   const names = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   const months = [];
-  for (let year = 2025; year >= 2017; year--) {
+  for (let year = LATEST_YEAR; year >= FIRST_YEAR; year--) {
     for (let m = 11; m >= 0; m--) {
       months.push(`${names[m]} ${year}`);
     }
   }
-  return months; // 108 months, newest first
+  return months; // newest first
 }
 
 // Open Dashboard Month dropdown and select a month.

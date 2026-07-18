@@ -13,8 +13,9 @@ Filename convention: STA429-MMDDYY-M.pdf
   Data as-of date  = last day of the prior month
   (e.g. STA429-030525-M.pdf published Mar 5 2025 → data as of Feb 28 2025)
 
-Output: data_sources/facilities/CDCR/restricted_housing_2025.csv
+Output: data_sources/facilities/CDCR/restricted_housing.csv
   Columns: data_month, cdcr_code, rhu_population, total_population, pct_in_rhu
+  (living series — reprocesses every STA429 PDF in the input folder, all years)
 """
 
 import re
@@ -24,7 +25,7 @@ from datetime import date, timedelta
 import pdfplumber
 
 BASE = Path("data_sources/facilities/CDCR/restricted_housing")
-OUT  = Path("data_sources/facilities/CDCR/restricted_housing_2025.csv")
+OUT  = Path("data_sources/facilities/CDCR/restricted_housing.csv")
 
 # Rows to skip in Table 2 (not facility rows)
 SKIP_ROWS = {"Other In-Custody Populations", "Total"}
@@ -148,12 +149,12 @@ def main():
     df = df.sort_values(["data_month", "cdcr_code"]).reset_index(drop=True)
 
     # ASP (Avenal State Prison) has 0 RH units and 0 RH population every month.
-    # Its row name is dropped in the Apr 2025 PDF due to a rendering artifact.
-    # Impute with 0 for that month so n_months=12.
-    df_2025 = df[df["data_month"].str.startswith("2025")]
-    asp_months = set(df_2025[df_2025["cdcr_code"] == "ASP"]["data_month"])
-    all_2025_months = set(df_2025["data_month"].unique())
-    for missing_month in sorted(all_2025_months - asp_months):
+    # Its row is occasionally dropped from a PDF due to a rendering artifact
+    # (e.g. Apr 2025). Impute with 0 for any month where every other facility
+    # reported but ASP didn't, so its n_months stays complete.
+    asp_months = set(df[df["cdcr_code"] == "ASP"]["data_month"])
+    all_months = set(df["data_month"].unique())
+    for missing_month in sorted(all_months - asp_months):
         print(f"  Imputing ASP {missing_month} = 0 (0 RH units, rendering artifact)")
         df = pd.concat([df, pd.DataFrame([{
             "data_month": missing_month,
@@ -167,16 +168,16 @@ def main():
     df.to_csv(OUT, index=False)
     print(f"\nWrote {len(df)} rows → {OUT}")
 
-    # Summary: 2025 months available per facility
-    df_2025 = df[df["data_month"].str.startswith("2025")]
-    months_available = df_2025["data_month"].nunique()
-    print(f"\n2025 months available: {sorted(df_2025['data_month'].unique())}")
-    print(f"Facilities with data: {df_2025['cdcr_code'].nunique()}")
-    print(f"\n2025 annual average % in RH by facility:")
-    avg = (df_2025.groupby("cdcr_code")["pct_in_rhu"]
+    # Summary for the most recent year present in the data.
+    latest_year = max(m[:4] for m in df["data_month"])
+    df_latest = df[df["data_month"].str.startswith(latest_year)]
+    print(f"\n{latest_year} months available: {sorted(df_latest['data_month'].unique())}")
+    print(f"Facilities with data: {df_latest['cdcr_code'].nunique()}")
+    print(f"\n{latest_year} annual average % in RH by facility:")
+    avg = (df_latest.groupby("cdcr_code")["pct_in_rhu"]
            .agg(["mean", "count"])
-           .rename(columns={"mean": "avg_pct_in_rhu_2025", "count": "n_months"})
-           .sort_values("avg_pct_in_rhu_2025", ascending=False))
+           .rename(columns={"mean": f"avg_pct_in_rhu_{latest_year}", "count": "n_months"})
+           .sort_values(f"avg_pct_in_rhu_{latest_year}", ascending=False))
     print(avg.to_string())
 
 

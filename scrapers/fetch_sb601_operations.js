@@ -21,7 +21,8 @@ const fs = require('fs');
 const path = require('path');
 
 const URL = 'https://app.powerbigov.us/view?r=eyJrIjoiYzlkM2RiNWEtZDRjMi00ODllLTg2YzEtZjYyM2MwMjA5NmQ0IiwidCI6IjA2NjI0NzdkLWZhMGMtNDU1Ni1hOGY1LWMzYmM2MmFhMGQ5YyJ9&pageName=5a926528bbf7e48d60c2';
-const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'sb601_operations_2021-2025.csv');
+const OUT_PATH = path.join(__dirname, '..', 'data_sources', 'facilities', 'CDCR', 'sb601_operations.csv');
+// To add a year at refresh time, append it to FISCAL_YEARS below — the filename is stable. See REFRESH.md.
 
 const FISCAL_YEARS = ['2021-2022', '2022-2023', '2023-2024', '2024-2025'];
 const TARGET_CATEGORIES = new Set([

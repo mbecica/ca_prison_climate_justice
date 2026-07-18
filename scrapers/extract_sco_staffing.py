@@ -3,7 +3,7 @@ Extract CDCR facility staff counts from State Controller's Office
 "Active State Employees by Department" PDFs.
 
 Input:  data_sources/facilities/CDCR/cdcr_staffing/*.pdf
-Output: data_sources/facilities/CDCR/sco_staffing_2020-2026.csv
+Output: data_sources/facilities/CDCR/sco_staffing.csv
 
 Columns in output: date, sco_facility_name, full_time, part_time,
                    intermittent, indeterminate, total
@@ -259,7 +259,7 @@ def extract_via_table(pdf, canonical_lookup: dict) -> list[dict]:
 def main():
     repo_root = Path(__file__).parent.parent
     input_dir = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'cdcr_staffing'
-    output_file = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'sco_staffing_2020-2026.csv'
+    output_file = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'sco_staffing.csv'
 
     pdf_paths = sorted(input_dir.glob('*.pdf'))
     if not pdf_paths:

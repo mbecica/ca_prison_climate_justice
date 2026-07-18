@@ -20,7 +20,7 @@ Supports checkpoint/resume — progress is saved to `/tmp/cchcs_ipc_checkpoint.j
 node fetch_cchcs_ipc.js
 ```
 
-Output: `data_sources/facilities/CDCR/cchcs_ipc_2017-2025.csv`
+Output: `data_sources/facilities/CDCR/cchcs_ipc.csv`
 
 ---
 
@@ -31,7 +31,7 @@ Scrapes the **CDCR SB 601 Programs Dashboard** for program operational capacity 
 node fetch_sb601_programs.js
 ```
 
-Output: `data_sources/facilities/CDCR/sb601_programs_2024-2025.csv`
+Output: `data_sources/facilities/CDCR/sb601_programs.csv`
 
 ---
 
@@ -42,7 +42,7 @@ Scrapes the **CDCR SB 601 Programs Dashboard** for operational metrics (Lockdown
 node fetch_sb601_operations.js
 ```
 
-Output: `data_sources/facilities/CDCR/sb601_operations_2021-2025.csv`
+Output: `data_sources/facilities/CDCR/sb601_operations.csv`
 
 ---
 
@@ -61,7 +61,7 @@ Supports checkpoint/resume — progress is saved to `/tmp/cchcs_measures_checkpo
 node fetch_cchcs_measures.js
 ```
 
-Output: `data_sources/facilities/CDCR/cchcs_measures_2017-2025.csv`
+Output: `data_sources/facilities/CDCR/cchcs_measures.csv`
 
 ---
 
@@ -76,18 +76,18 @@ Handles two PDF encoding variants: older reports (2020–2024) use text extracti
 python3 scrapers/extract_sco_staffing.py
 ```
 
-Output: `data_sources/facilities/CDCR/sco_staffing_2020-2026.csv`
+Output: `data_sources/facilities/CDCR/sco_staffing.csv`
 
 ---
 
-### `build_sco_staffing_2025.py`
-Reads `sco_staffing_2020-2026.csv`, filters to the three 2025 snapshots (February, May, June), averages staff counts across snapshots, and maps each row to a CDCR institutional code. Applies name corrections for two garbled/truncated entries from the 2025 table-extracted PDFs.
+### `build_sco_staffing_avg.py`
+Reads `sco_staffing.csv`, filters to the three 2025 snapshots (February, May, June), averages staff counts across snapshots, and maps each row to a CDCR institutional code. Applies name corrections for two garbled/truncated entries from the 2025 table-extracted PDFs.
 
 ```
-python3 scrapers/build_sco_staffing_2025.py
+python3 scrapers/build_sco_staffing_avg.py
 ```
 
-Output: `data_sources/facilities/CDCR/sco_staffing_2025_avg.csv`
+Output: `data_sources/facilities/CDCR/sco_staffing_avg.csv`
 
 Columns: `cdcr_code`, `sco_facility_name`, `is_pia` (Prison Industry Authority sub-entry; workers are incarcerated people), `is_cchcs` (CCHCS healthcare staff at CHCF), `n_snapshots`, `full_time`, `part_time`, `intermittent`, `indeterminate`, `total`.
 

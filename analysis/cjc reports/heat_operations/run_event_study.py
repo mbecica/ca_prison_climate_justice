@@ -69,7 +69,7 @@ EXTRA_OT = {
 }
 import csv as csvmod
 extra = {}
-with open("data_sources/facilities/CDCR/sb601_operations_2021-2025.csv") as f:
+with open("data_sources/facilities/CDCR/sb601_operations.csv") as f:
     for row in csvmod.DictReader(f):
         key = (row["category"], row["metric"])
         if key not in EXTRA_OT:

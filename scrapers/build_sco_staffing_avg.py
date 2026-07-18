@@ -1,10 +1,13 @@
 """
-Build a 2025 cross-section from sco_staffing_2020-2026.csv.
+Build a single-year cross-section from sco_staffing.csv.
 
-Reads the three 2025 snapshots (February, May, June), averages the staff
-counts, maps each row to a CDCR institutional code, and writes:
+Reads that year's snapshots, averages the staff counts, maps each row to a
+CDCR institutional code, and writes:
 
-    data_sources/facilities/CDCR/sco_staffing_2025_avg.csv
+    data_sources/facilities/CDCR/sco_staffing_avg.csv
+
+To advance a year at refresh time, bump LATEST_YEAR below — the filenames are
+stable. See REFRESH.md.
 
 Columns: cdcr_code, sco_facility_name, is_pia, is_cchcs,
          n_snapshots, full_time, part_time, intermittent, indeterminate, total
@@ -26,6 +29,9 @@ from pathlib import Path
 # Mapping: normalized SCO name → CDCR code
 # Normalization: strip non-alphanumeric, lowercase (same as in the extractor)
 # ---------------------------------------------------------------------------
+LATEST_YEAR = 2025   # year to build the cross-section for; bump at refresh time
+
+
 def normalize(s: str) -> str:
     return re.sub(r'[^a-z0-9]', '', s.lower())
 
@@ -137,16 +143,16 @@ def get_cdcr_code(name: str) -> str:
 # ---------------------------------------------------------------------------
 def main():
     repo_root = Path(__file__).parent.parent
-    src = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'sco_staffing_2020-2026.csv'
-    out = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'sco_staffing_2025_avg.csv'
+    src = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'sco_staffing.csv'
+    out = repo_root / 'data_sources' / 'facilities' / 'CDCR' / 'sco_staffing_avg.csv'
 
     numeric_cols = ['full_time', 'part_time', 'intermittent', 'indeterminate', 'total']
 
-    # Accumulate 2025 rows by facility name
+    # Accumulate the target year's rows by facility name
     accum: dict[str, list[dict]] = defaultdict(list)
     with open(src) as f:
         for row in csv.DictReader(f):
-            if '2025' not in row['date']:
+            if str(LATEST_YEAR) not in row['date']:
                 continue
             name = NAME_CORRECTIONS.get(row['sco_facility_name'], row['sco_facility_name'])
             accum[name].append(row)

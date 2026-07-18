@@ -127,13 +127,13 @@ it and drop the manual step + PDF download from the population refresh.
 
 | Step | What |
 |---|---|
-| Source | CCHCS Power BI dashboard via `node scrapers/fetch_cchcs_ipc.js` — **interactive** (visible browser), checkpoint at `/tmp/cchcs_ipc_checkpoint.json`. ⚠ The month range **and** the output filename are hardcoded (`2017–2025`): to extend, edit `generateMonthList()` and write to a new filename |
-| Output | `data_sources/facilities/CDCR/cchcs_ipc_2017-2025.csv` — **FROZEN** (range in name; a new pull lands alongside as `cchcs_ipc_2017-2026.csv` or similar) |
+| Source | CCHCS Power BI dashboard via `node scrapers/fetch_cchcs_ipc.js` — **interactive** (visible browser), checkpoint at `/tmp/cchcs_ipc_checkpoint.json`. To extend a year, bump `LATEST_YEAR` at the top of the script — the filename is stable |
+| Output | `data_sources/facilities/CDCR/cchcs_ipc.csv` — **LIVING (extendable)**: re-scrapes the full history each run, same filename |
 | Rebuild | `create_cdcr_facilities.ipynb` → the `cchcs_*_YYYY` columns of `cdcr_facilities.csv` |
 | Consumers | Same as family 2 |
 
-The companion `fetch_cchcs_measures.js` (staffing/costs, same hardcoded range; its
-checkpoint `cchcs_measures_checkpoint.json` sits **in the repo** and must be deleted
+The companion `fetch_cchcs_measures.js` (staffing/costs, same `LATEST_YEAR` knob; its
+checkpoint `cchcs_measures_checkpoint.json` is now git-ignored and must be deleted
 for a full re-scrape) feeds the heat-operations panel (family 8), not `cdcr_facilities.csv`.
 
 ## 4. CDCR cooling infrastructure
@@ -153,15 +153,16 @@ in a new release when one appears, not *when*.
 ## 5. Other CDCR operational sources (reports/capstone only)
 
 All in `data_sources/facilities/CDCR/`; none feed the two apps. Human downloads
-PDFs first; scrapers only parse. All outputs **FROZEN** (vintage in name) unless noted.
+PDFs first; scrapers only parse. Outputs are **LIVING (extendable)** unless noted —
+stable filenames, re-scraped in full each refresh.
 
 | Source | Scraper | Output |
 |---|---|---|
-| SCO staffing PDFs | `extract_sco_staffing.py`, then `build_sco_staffing_2025.py` | `sco_staffing_2020-2026.csv`, `sco_staffing_2025_avg.csv` |
-| Restricted housing (STA429 PDFs) | `extract_restricted_housing.py` | `restricted_housing_2025.csv` ⚠ output name hardcoded `_2025` but the input folder already holds 2026 PDFs — re-running today would mix vintages under a 2025 name; rename the output constant first |
-| Specialized beds (CCHCS PDFs) | `extract_specialized_beds.py` | `pip_census.csv`, `mhcb_census.csv`, etc. (**LIVING**, report-date rows appended) |
+| SCO staffing PDFs | `extract_sco_staffing.py`, then `build_sco_staffing_avg.py` | `sco_staffing.csv`, `sco_staffing_avg.csv` (`LATEST_YEAR` knob) |
+| Restricted housing (STA429 PDFs) | `extract_restricted_housing.py` | `restricted_housing.csv` — reprocesses every PDF in the folder, all years |
+| Specialized beds (CCHCS PDFs) | `extract_specialized_beds.py` | `pip_census.csv`, `mhcb_census.csv`, etc. (report-date rows appended) |
 | Violent incidents (5 hardcoded PDFs) | `data_sources/facilities/CDCR/extract_violent_incidents.py` (⚠ lives outside `scrapers/`) | `cdcr_violent_incidents_by_facility.csv` |
-| SB 601 dashboards | `fetch_sb601_programs.js`, `fetch_sb601_operations.js` — **interactive**; fiscal years + filenames hardcoded | `sb601_programs_2024-2025.csv`, `sb601_operations_2021-2025.csv` |
+| SB 601 dashboards | `fetch_sb601_programs.js`, `fetch_sb601_operations.js` — **interactive**; bump `FISCAL_YEAR`/`FISCAL_YEARS`, filenames stable | `sb601_programs.csv`, `sb601_operations.csv` |
 | Recidivism / avg sentence dashboards | `fetch_cdcr_recidivism_los.js`, `fetch_cdcr_avg_sentence.js` — **interactive** | `cdcr_recidivism_los.csv`, `cdcr_avg_sentence_by_admission.csv` (**LIVING**, dashboard-driven range) |
 | Mortality, MPAR, manual flags | none (hand-curated) | `cchcs_mortality_2006-2024.csv`, `mpar_*.csv`, `cdcr_manual_data.csv` |
 
@@ -255,7 +256,7 @@ that needs Mary's sign-off before this runbook is adopted.**
 |---|---|---|
 | `data_sources/facilities/ca_facilities.csv` | LIVING | Current facility roster; consumers want "now" |
 | `data/cdcr/cdcr_facilities.csv` | LIVING (vintaged columns FROZEN) | One row per facility stays current; `*_2025` columns are immutable, `*_2026` added alongside |
-| **Re-scraped time series** — `cchcs_ipc_*.csv`, `cchcs_measures_*.csv`, `sb601_operations_*.csv`, `sb601_programs_*.csv`, `sco_staffing_*.csv`, `restricted_housing_*.csv` | **LIVING (extendable)** | Each refresh re-scrapes the full history and the series grows. ⚠ Today their filenames bake in a year range (`_2017-2025`, `_2025`), which fights "same filename in place" — this is exactly what the *hardcoded-dates scope* below proposes to fix |
+| **Re-scraped time series** — `cchcs_ipc.csv`, `cchcs_measures.csv`, `sb601_operations.csv`, `sb601_programs.csv`, `sco_staffing.csv`, `sco_staffing_avg.csv`, `restricted_housing.csv` | **LIVING (extendable)** | Each refresh re-scrapes the full history and the series grows. ✅ Filenames are now stable (no baked-in year) with a single `LATEST_YEAR`/`FISCAL_YEAR` knob per scraper — see the appendix |
 | `tpop1_institutions.csv`, `tpop1_summary.csv` | LIVING (extendable) | Month rows appended; no vintage in name (may be retired — see §2 open question) |
 | `specialized_beds` outputs, `cdcr_recidivism_los.csv`, `cdcr_avg_sentence_by_admission.csv` | LIVING (extendable) | Report-date/month rows appended |
 | **Manual vintaged snapshots** — `CDCR_YYYY_pop_averages.csv`, `cdcr_in-custody-*_YYYY.csv`, `air_cooling_*_dec2025.csv`, `cchcs_mortality_2006-2024.csv`, MPAR extracts | FROZEN | Hand-made point-in-time snapshots; a new one lands alongside |
@@ -284,37 +285,34 @@ that needs Mary's sign-off before this runbook is adopted.**
 # Known issues to fix before the next refresh
 
 1. **gridMET path drift** — `extract_gridmet_heat.py` / `extract_gridmet_summer_avg.py` write to `data_sources/hazards/` but files live in `data_sources/hazards/heat/`.
-2. **`restricted_housing_2025.csv`** — output name hardcoded while 2026 input PDFs already sit in the folder.
+2. ✅ **`restricted_housing.csv`** — resolved: stable filename, now reprocesses every PDF in the folder (all years) instead of mixing vintages under a `_2025` name.
 3. **`indoor_outdoor_heat_2025.csv`** — live dependency of the risk index with no in-repo builder; document or script its upstream.
-4. **Hardcoded year ranges** in `fetch_cchcs_*.js` (month loop + filename) and `fetch_sb601_operations.js` (`FISCAL_YEARS` + filename) — each needs a code-and-filename edit to advance a year.
-5. **`cchcs_measures_checkpoint.json`** (2.2 MB) committed in the data dir; delete to force a full re-scrape (and consider git-ignoring it).
+4. ✅ **Hardcoded year ranges** — resolved: `fetch_cchcs_*.js` and `fetch_sb601_*.js` now use a single `LATEST_YEAR`/`FISCAL_YEAR` knob with stable filenames (see appendix).
+5. ✅ **`cchcs_measures_checkpoint.json`** — resolved: git-ignored and untracked (regenerable resume-state); delete on disk to force a full re-scrape.
 6. **Benz UHI processing** not scripted in-repo (outputs only).
 7. **`extract_violent_incidents.py`** lives outside `scrapers/` with 5 hardcoded input PDF names; not covered by `scrapers/README.md`.
 8. **`heat_activations` report** has no builder script in-repo.
 9. **Power BI scraper fragility** — all five depend on exact dashboard DOM/canvas layouts; expect breakage after CDCR/CCHCS dashboard updates.
 
-# Appendix: hardcoded-date cleanup (proposed, not yet done)
+# Appendix: hardcoded-date cleanup (✅ DONE, Jul 17 2026)
 
-The re-scraped time series are conceptually LIVING but their filenames/loops bake in a
-year, forcing a code edit + rename every refresh. **All six are in scope** — a dataset
-that currently feeds only a frozen memo is still a living dataset that new analyses will
-re-consume; freezing the *memo* does not freeze the *data*.
+The re-scraped time series were conceptually LIVING but their filenames/loops baked in a
+year. **All six were in scope** — a dataset that feeds only a frozen memo is still a living
+dataset new analyses will re-consume; freezing the *memo* doesn't freeze the *data*.
 
-**Approved: option A (Mary, Jul 17 2026).** Give each scraper a single dated constant at
-the top (`LATEST_YEAR` / `LATEST_FY`) and a **stable, un-dated output filename**; update
-the one downstream read for each. Advancing a year becomes a one-line edit, no rename.
-(Option B — auto-detect the latest period from each dashboard — removes even that edit but
-bolts brittle scraping onto interactive tools a human already babysits; rejected.)
+**Applied option A:** each scraper now has a single dated knob (`LATEST_YEAR` /
+`FISCAL_YEAR` / `FISCAL_YEARS`) and a **stable, un-dated output filename**; the existing
+data files were `git mv`'d to the stable names and every downstream read was updated.
+Advancing a year is now a one-line edit, no rename.
 
-| Scraper | Hardcoded spot | Stable output name → | Downstream to update |
+| Scraper | Knob to bump | Stable output | Downstream updated |
 |---|---|---|---|
-| `fetch_cchcs_ipc.js` | `generateMonthList()` end-year + `_2017-2025` name | `cchcs_ipc.csv` | `create_cdcr_facilities.ipynb` |
-| `fetch_cchcs_measures.js` | end-year loop + `_2017-2025` name | `cchcs_measures.csv` | `build_heat_operations_panel.py` |
-| `fetch_sb601_programs.js` | `FISCAL_YEAR='2024-2025'` + name | `sb601_programs.csv` | `create_cdcr_facilities.ipynb` |
-| `fetch_sb601_operations.js` | `FISCAL_YEARS` array + name | `sb601_operations.csv` | `build_heat_operations_panel.py`, `run_event_study.py` |
-| `extract_sco_staffing.py` + `build_sco_staffing_2025.py` | `_2020-2026` / `_2025_avg` names; `_2025` cross-section | `sco_staffing.csv` / `sco_staffing_avg.csv` | `create_cdcr_facilities.ipynb` |
-| `extract_restricted_housing.py` | `_2025` name; 2026 PDFs already present (fixes issue #2) | `restricted_housing.csv` | rhu_pct column |
+| `fetch_cchcs_ipc.js` | `LATEST_YEAR` | `cchcs_ipc.csv` | `create_cdcr_facilities.ipynb` |
+| `fetch_cchcs_measures.js` | `LATEST_YEAR` | `cchcs_measures.csv` | `build_heat_operations_panel.py` |
+| `fetch_sb601_programs.js` | `FISCAL_YEAR` | `sb601_programs.csv` | `create_cdcr_facilities.ipynb` |
+| `fetch_sb601_operations.js` | `FISCAL_YEARS` | `sb601_operations.csv` | `build_heat_operations_panel.py`, `run_event_study.py` |
+| `extract_sco_staffing.py` + `build_sco_staffing_avg.py` | `LATEST_YEAR` (avg script) | `sco_staffing.csv` / `sco_staffing_avg.csv` | `create_cdcr_facilities.ipynb` |
+| `extract_restricted_housing.py` | (none — reprocesses all PDFs) | `restricted_housing.csv` | none (rhu_pct column wiring is a separate undocumented gap) |
 
-Estimated effort: about half a session for all six (mechanical renames + one dated
-constant each + six downstream read updates). The interactive Power BI scrapers can't be
-test-run headless, so verification is a manual re-scrape when you next refresh.
+The interactive Power BI scrapers can't be test-run headless, so their code paths are
+verified by inspection here; the next manual refresh exercises them end-to-end.
