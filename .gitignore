@@ -235,3 +235,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Scraper resume-state (regenerable, large; not source data)
+data_sources/facilities/CDCR/cchcs_measures_checkpoint.json

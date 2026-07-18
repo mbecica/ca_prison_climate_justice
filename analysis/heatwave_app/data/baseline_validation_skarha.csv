@@ -1,0 +1,35 @@
+cdcr_code,facilityid,name,gridmet_baseline_f,n_years,era5_baseline_f,grid_elevation_m,diff_f
+LAC,10002353,California State Prison-Los Angeles County,95.79,30,91.96,718.0,-3.83
+CMF,10000785,California Medical Facility,90.55,30,86.79,46.0,-3.76
+MCSP,10000782,Mule Creek State Prison,92.71,30,88.98,100.0,-3.73
+SOL,10002323,"California State Prison, Solano",90.55,30,86.84,42.0,-3.71
+SCC,10001522,Sierra Conservation Center,92.47,30,88.94,324.0,-3.53
+CAC,10000852,California City Correctional Center,97.44,25,94.19,783.0,-3.25
+SQ,10000790,San Quentin State Prison,74.71,30,71.47,5.0,-3.24
+CIM,10000836,California Institution For Men,89.68,30,86.53,190.0,-3.15
+CHCF,10000799,California Health Care Facility,92.46,30,89.56,13.0,-2.9
+PVSP,10000810,Pleasant Valley State Prison,97.53,30,95.54,176.0,-1.99
+CRC,10000857,California Rehabilitation Center,90.46,30,88.67,191.0,-1.79
+CIW,10002341,California Institution For Women,90.6,30,88.87,174.0,-1.73
+SAC,10002322,"California State Prison, Sacramento",91.58,30,90.07,117.0,-1.51
+FOL,10000780,Folsom State Prison,91.93,30,90.46,84.0,-1.47
+HDSP,10002310,High Desert State Prison,86.37,30,84.95,1268.0,-1.42
+CVSP,10002346,Chuckawalla Valley State Prison,106.85,30,105.54,140.0,-1.31
+ISP,10000861,Ironwood State Prison,106.87,30,105.56,138.0,-1.31
+FWF,10006530,Folsom Women'S Facility,91.25,25,90.34,126.0,-0.91
+NKSP,10000841,North Kern State Prison,97.02,30,96.34,82.0,-0.68
+KVSP,10000844,Kern Valley State Prison,97.02,30,96.37,80.0,-0.65
+CMC,10002345,California Men'S Colony,78.31,30,77.78,136.0,-0.53
+CAL,10002347,Calipatria State Prison,106.24,30,105.83,-46.0,-0.41
+ASP,10000826,Avenal State Prison,94.69,30,94.66,234.0,-0.03
+WSP,10000847,Wasco State Prison,97.9,30,97.91,90.0,0.01
+CEN,10002348,Centinela State Prison,105.47,30,105.78,-4.0,0.31
+VSP,10000802,Valley State Prison,94.04,30,94.58,88.0,0.54
+CCWF,10000801,Central California Women'S Facility,94.04,30,94.61,86.0,0.57
+CCI,10001530,California Correctional Institution,84.15,30,84.88,1190.0,0.73
+RJD,10000869,R J Donovan Correctional Facility,78.85,30,79.74,180.0,0.89
+COR,10000824,"California State Prison, Corcoran",96.43,30,98.11,59.0,1.68
+SATF,10000825,Ca Substance Abuse Treatment Facility,96.43,30,98.12,58.0,1.69
+PBSP,10002309,Pelican Bay State Prison,67.15,30,72.63,29.0,5.48
+SVSP,10000821,Salinas Valley State Prison,76.97,30,86.54,91.0,9.57
+CTF,10000817,Correctional Training Facility,76.97,30,86.82,67.0,9.85
