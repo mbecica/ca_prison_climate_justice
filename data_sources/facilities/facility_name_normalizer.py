@@ -91,12 +91,35 @@ _PAREN_RE = re.compile(r"\(([^)]+)\)")
 _TOKEN_SPLIT_RE = re.compile(r"(\s+)")
 _ALPHA_ONLY_RE = re.compile(r"[^A-Za-z]")
 
+# Ordinal suffix directly following digits (e.g. "14Th" -> "14th"). Scoped to
+# digit+suffix so it never touches the "St"/"Rd" street-type abbreviations or
+# directionals ("N"/"W").
+_ORDINAL_RE = re.compile(r"\b(\d+)(ST|ND|RD|TH)\b", re.IGNORECASE)
+
+# "PO Box" is title-cased to "Po Box"; restore the initialism.
+_PO_BOX_RE = re.compile(r"\bPo Box\b", re.IGNORECASE)
+
+# Missing space before an opening parenthesis (e.g. "Prison(PVSP)").
+_PAREN_SPACING_RE = re.compile(r"(?<=\S)\(")
+
 
 # --- Helpers ----------------------------------------------------------------
 
 def _fix_possessives(s: str) -> str:
     """Lowercase possessive/contraction suffixes; leave real names alone."""
     return _POSSESSIVE_RE.sub(lambda m: "'" + m.group(1).lower(), s)
+
+
+def _fix_ordinals(s: str) -> str:
+    """Lowercase ordinal suffixes that directly follow digits (14Th -> 14th)."""
+    return _ORDINAL_RE.sub(lambda m: m.group(1) + m.group(2).lower(), s)
+
+
+def _apply_special(s: str) -> str:
+    """Small unambiguous fixups: PO Box initialism, missing space before '('."""
+    s = _PO_BOX_RE.sub("PO Box", s)
+    s = _PAREN_SPACING_RE.sub(" (", s)
+    return s
 
 
 def _fix_parenthetical_codes(s: str) -> str:
@@ -148,6 +171,8 @@ def normalize_facility_name(value):
 
     s = str(value).title()
     s = _fix_possessives(s)
+    s = _fix_ordinals(s)
+    s = _apply_special(s)
     s = _fix_parenthetical_codes(s)
     parts = _TOKEN_SPLIT_RE.split(s)
     parts = [p if i % 2 else _fix_token(p) for i, p in enumerate(parts)]

@@ -49,6 +49,21 @@ CASES = [
     ("Folsom State Prison (Fsp)", "Folsom State Prison (FOL)"),  # FEMA->CDCR fix
     ("San Quentin State Prison (Sq)", "San Quentin State Prison (SQ)"),
 
+    # --- ordinal suffixes after digits (lowercase; leave St/Rd abbrevs) ---
+    ("1023 14Th St, Marysville", "1023 14th St, Marysville"),
+    ("1125 3Rd Street, Napa", "1125 3rd Street, Napa"),
+    ("44750 60Th Street West, Lancaster", "44750 60th Street West, Lancaster"),
+    ("200 N 3Rd St, Burbank", "200 N 3rd St, Burbank"),
+    ("700 West 22Nd Street", "700 West 22nd Street"),
+    ("5Th Street And Western Avenue", "5th Street And Western Avenue"),
+
+    # --- PO Box initialism + missing space before '(' ---
+    ("Po Box 1234", "PO Box 1234"),
+    ("Pleasant Valley State Prison(Pvsp)", "Pleasant Valley State Prison (PVSP)"),
+
+    # --- a real O'-name inside an address must survive ---
+    ("5100 O'Byrnes Ferry Road", "5100 O'Byrnes Ferry Road"),
+
     # --- descriptive parentheticals must NOT be uppercased ---
     ("Santa Clara County Main Jail Complex (South)",
      "Santa Clara County Main Jail Complex (South)"),
