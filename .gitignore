@@ -241,3 +241,9 @@ data_sources/facilities/CDCR/cchcs_measures_checkpoint.json
 
 # Working design docs (local only, not published)
 analysis/CDCR_risk_indices/REBUILD_PLAN.md
+
+# LOCA2-CA per-member extraction cache — resumable intermediate, ~11 MB.
+# Rebuilt by scrapers/extract_loca2_heat.py; the committed product is
+# data_sources/hazards/heat/loca2_facility_heat.csv
+data_sources/hazards/heat/loca2_members/
+data_sources/hazards/heat/loca2_facility_heat_PREVIEW.csv
