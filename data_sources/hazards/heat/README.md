@@ -156,31 +156,52 @@ Every facility carries the identical column set. Period suffix is one of `histor
 | :--- | :--- |
 | Absolute tmax | `loca2_days_over_{80,90,100,110}_{period}` |
 | Absolute tmin | `loca2_nights_over_{60,70,80,90}_{period}` |
-| Relative tmax | `loca2_days_over_avg_{period}`, `loca2_days_over_avg_plus10_{period}`, `loca2_avg_summer_tmax_f` |
-| Relative tmin | `loca2_nights_over_avg_{period}`, `loca2_nights_over_avg_plus10_{period}`, `loca2_avg_summer_tmin_f`, `loca2_nights_over_p98_{period}`, `loca2_p98_tmin_f` |
+| Relative tmax (hot days) | `loca2_days_over_avg_{period}`, `loca2_days_over_avg_plus10_{period}`, `loca2_avg_summer_tmax_f` |
+| Relative tmin (warm nights) | `loca2_nights_over_p95_{period}`, `loca2_nights_over_p98_{period}`, `loca2_p95_tmin_f`, `loca2_p98_tmin_f`, `loca2_avg_summer_tmin_f` |
 | Provenance | `cell_lat`, `cell_lon`, `cell_dist_km`, `n_models`, `mask_override` |
 
 Absolute thresholds match the published Cal-Adapt variables, so the reproduction check above
-covers all four. Relative thresholds are anchored to each member's own 1981–2010 value, held
-fixed and applied to every period. A baseline that moved with the climate would cancel the shift
-these counts exist to measure.
+covers all four.
 
-`days_over_avg` counts the whole year against a summer-mean threshold, so in the historical
+**Hot days** use a facility-relative daytime threshold anchored to each member's own summer
+(June–August) 1981–2010 mean maximum temperature, held fixed and applied to every period. A
+baseline that moved with the climate would cancel the shift these counts exist to measure.
+`days_over_avg` counts the whole year against that summer-mean threshold, so in the historical
 period it lands near half of summer by construction plus the shoulder-season days that also
 clear it: 71 days a year at the median facility, 77 on average, ranging 60 to 131. The
 information is in how far mid- and end-century rise above that, not in the level itself. Across
-357 facilities the historical-to-mid-century increase averages +38.5 days.
+357 facilities the historical-to-mid-century increase averages +38.5 days. The `plus10` rung
+follows Skarha et al. (2023), whose facility-relative anomaly carries a published mortality
+coefficient; Ovienmhada et al. (2024) apply the same threshold as one of four facility-level heat
+metrics across 1,614 US prisons, the closest published precedent for computing it per facility
+rather than per tract.
 
-The `plus10` rung follows Skarha et al. (2023), whose facility-relative anomaly carries a
-published mortality coefficient. Ovienmhada et al. (2024) apply the same threshold as one of
-four facility-level heat metrics across 1,614 US prisons, which is the closest published
-precedent for computing it per facility rather than per tract. Summer means use June–August. `p98_tmin_f` is the 98th
-percentile of the full-year historical `tasmin` distribution, not summer only.
+**Warm nights** follow the convention California's climate agencies use for nighttime heat. A warm
+night is one whose minimum temperature clears a percentile of the facility's own April–October
+minimum temperatures, with the percentile fixed from a 1961–1990 baseline and the count taken over
+April 1 to October 31 of each period. The primary indicator, `loca2_nights_over_p95_*`, uses the
+95th percentile, the threshold OEHHA applies in *Indicators of Climate Change in California* (2022).
+`loca2_nights_over_p98_*` uses the 98th percentile, matching Cal-Adapt and the Fifth Climate Change
+Assessment, and is carried as a sensitivity check. The thresholds themselves are recorded in °F as
+`p95_tmin_f` and `p98_tmin_f`.
+
+The percentile is set from the 1961–1990 baseline and then applied to each later period, so the
+years being counted are not the years that defined the threshold. Both OEHHA and Cal-Adapt build the
+metric this way, and holding the baseline earlier than the counting window is what lets the count
+carry a spatial signal. The absolute night counts (`nights_over_{60,70,80,90}`) are whole-year
+totals, matching the published tasmin variables; the relative warm-night counts run April through
+October, matching the agencies' warm-night season.
+
+**Baseline asymmetry, stated deliberately.** Hot days are anchored to summer 1981–2010; warm
+nights to April–October 1961–1990. Each threshold is adopted from the evidence base that
+calibrated it. The two indicators are normalized independently and averaged into the hazard
+component — never differenced against each other — so the different anchors introduce no
+arithmetic inconsistency.
 
 Naming follows the convention in `../README.md`: a source prefix on every column, and the
-baseline window named wherever a threshold is relative. LOCA2 relative thresholds are anchored to
-1981–2010 and carry the period suffix; the gridMET observed columns are anchored to 1991–2020 and
-carry `base1991_2020`. The two are not interchangeable.
+baseline window named wherever a threshold is relative. The gridMET observed columns are anchored
+to 1991–2020 and carry `base1991_2020`; the LOCA2 modeled columns here are not interchangeable
+with them.
 
 ## Mixed Basis With Other Hazards
 

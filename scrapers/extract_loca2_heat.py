@@ -23,8 +23,10 @@ Source: LOCA2-CA (Pierce, Cayan & Dehann), grid d03 at 1/32 degree, via the Cal-
 Usage:
   caffeinate -is conda run --no-capture-output -n data_science python3 scrapers/extract_loca2_heat.py
 
-Runtime: ~6 hours (62 members x 3 periods x 2 variables). Safe to interrupt and re-run —
-completed members are cached and skipped.
+Runtime: ~6 hours from cold (62 members x 3 periods x 2 variables). Safe to interrupt and
+re-run — completed members are cached and skipped. When a v0.1 cache is present, only tasmin
+is re-read (~3.5 hours): the validated tasmax counts are reused and the tasmin warm-night
+metrics are recomputed under the v0.2 definition (Apr-Oct P95/P98, 1961-1990 baseline).
 
 The data product is written only when all 62 members are cached. A partial cache would pool
 into a product built on a smaller ensemble than the method claims while looking complete, so
@@ -65,6 +67,17 @@ TMAX_ABS_F = [80, 90, 100, 110]
 TMIN_ABS_F = [60, 70, 80, 90]
 SUMMER_MONTHS = [6, 7, 8]
 DELTA_F = 10.0
+
+# Warm-night thresholds follow the California agency convention: a percentile of
+# warm-season (Apr-Oct) daily minimum temperature over a fixed baseline window,
+# counted over Apr-Oct of each period. Because the baseline window (1961-1990)
+# differs from the counting windows, the current-period count varies across
+# facilities rather than collapsing to the percentile's own tail fraction.
+# P95 is primary (OEHHA Indicators of Climate Change); P98 (Cal-Adapt / Fifth
+# Assessment) is emitted as sensitivity. See data_sources/hazards/heat/README.md.
+NIGHT_SEASON = [4, 5, 6, 7, 8, 9, 10]      # April-October
+NIGHT_BASELINE = (1961, 1990)              # observed-era analogue, within LOCA2 historical
+NIGHT_PCTLS = [95, 98]
 
 # San Quentin sits on water in the LOCA2 land mask. Nearest-by-distance crosses
 # Richardson Bay to a cell open to the Golden Gate and 3.1F cooler; this cell is
@@ -207,41 +220,101 @@ def annual_avg_count(vals, years, thresh_k):
     return np.stack([flag[years == y].sum(axis=0) for y in uy]).mean(axis=0)
 
 
-def extract_member(cat, model, member, ilat, ilon):
+def season_avg_count(vals, years, months, thresh_k, season):
+    """Mean annual count of season-restricted days above threshold: count the
+    days within `season` each calendar year, then mean over years."""
+    sel = np.isin(months, season)
+    v, y = vals[sel], years[sel]
+    flag = v > thresh_k
+    uy = np.unique(y)
+    return np.stack([flag[y == yr].sum(axis=0) for yr in uy]).mean(axis=0)
+
+
+def _read_points(cat, model, exp, member, var, y0, y1, ilat, ilon):
+    ds = open_member(cat, model, exp, member, var)
+    da = ds[var].sel(time=slice(f"{y0}-01-01", f"{y1}-12-31"))
+    pts = da.isel(lat=xr.DataArray(ilat, dims="c"), lon=xr.DataArray(ilon, dims="c"))
+    vals = pts.values
+    t = pd.DatetimeIndex(pts.time.values)
+    # NaN silently fails a `>` comparison and yields a count of 0 rather than an
+    # error, so it must abort rather than be reported afterwards.
+    n_nan = int(np.isnan(vals).any(axis=0).sum())
+    if n_nan:
+        raise ValueError(f"{model}/{member}/{var}/{y0}-{y1}: {n_nan} NaN cells")
+    return vals, t.year.values, t.month.values
+
+
+def extract_tasmax(cat, model, member, ilat, ilon):
+    """Absolute counts + relative avg / avg+10, baseline = summer 1981-2010.
+    Unchanged from the validated v0.1 path (reproduction gate)."""
     res = {}
-    for var, abs_thresholds in (("tasmax", TMAX_ABS_F), ("tasmin", TMIN_ABS_F)):
-        base_mean = base_p98 = None
-        for pname, exp, y0, y1 in PERIODS:
-            ds = open_member(cat, model, exp, member, var)
-            da = ds[var].sel(time=slice(f"{y0}-01-01", f"{y1}-12-31"))
-            pts = da.isel(lat=xr.DataArray(ilat, dims="c"), lon=xr.DataArray(ilon, dims="c"))
-            vals = pts.values
-            t = pd.DatetimeIndex(pts.time.values)
-            years, months = t.year.values, t.month.values
-
-            # NaN silently fails a `>` comparison and yields a count of 0 rather
-            # than an error, so it must abort rather than be reported afterwards.
-            n_nan = int(np.isnan(vals).any(axis=0).sum())
-            if n_nan:
-                raise ValueError(f"{model}/{member}/{var}/{pname}: {n_nan} NaN cells")
-            n_years = len(np.unique(years))
-            if n_years != 30:
-                raise ValueError(f"{model}/{member}/{var}/{pname}: {n_years} years, expected 30")
-
-            if pname == "historic":
-                base_mean = vals[np.isin(months, SUMMER_MONTHS)].mean(axis=0)
-                base_p98 = np.percentile(vals, 98, axis=0)   # full-year distribution
-                res[f"avg_summer_{var}_f"] = k_to_f(base_mean).tolist()
-                res[f"p98_{var}_f"] = k_to_f(base_p98).tolist()
-
-            for t_f in abs_thresholds:
-                res[f"abs_{var}_{t_f}_{pname}"] = annual_avg_count(vals, years, f_to_k(t_f)).tolist()
-            res[f"rel_{var}_avg_{pname}"] = annual_avg_count(vals, years, base_mean).tolist()
-            res[f"rel_{var}_avg_plus10_{pname}"] = annual_avg_count(
-                vals, years, base_mean + DELTA_F * 5 / 9).tolist()
-            if var == "tasmin":
-                res[f"rel_{var}_p98_{pname}"] = annual_avg_count(vals, years, base_p98).tolist()
+    base_mean = None
+    for pname, exp, y0, y1 in PERIODS:
+        vals, years, months = _read_points(cat, model, exp, member, "tasmax", y0, y1, ilat, ilon)
+        if len(np.unique(years)) != 30:
+            raise ValueError(f"{model}/{member}/tasmax/{pname}: expected 30 years")
+        if pname == "historic":
+            base_mean = vals[np.isin(months, SUMMER_MONTHS)].mean(axis=0)
+            res["avg_summer_tasmax_f"] = k_to_f(base_mean).tolist()
+        for t_f in TMAX_ABS_F:
+            res[f"abs_tasmax_{t_f}_{pname}"] = annual_avg_count(vals, years, f_to_k(t_f)).tolist()
+        res[f"rel_tasmax_avg_{pname}"] = annual_avg_count(vals, years, base_mean).tolist()
+        res[f"rel_tasmax_avg_plus10_{pname}"] = annual_avg_count(
+            vals, years, base_mean + DELTA_F * 5 / 9).tolist()
     return res
+
+
+def extract_tasmin(cat, model, member, ilat, ilon):
+    """Absolute counts (full-year, matching the published tasmin variable set) +
+    relative warm-night counts (Apr-Oct P95/P98, baseline 1961-1990 Apr-Oct).
+
+    A single historical read of 1961-2010 supplies both the baseline window and the
+    historic counting window; the two projected periods are read separately."""
+    res = {}
+    b0, b1 = NIGHT_BASELINE
+    vh, yh, mh = _read_points(cat, model, "historical", member, "tasmin", b0, 2010, ilat, ilon)
+
+    base = np.isin(yh, np.arange(b0, b1 + 1)) & np.isin(mh, NIGHT_SEASON)
+    if len(np.unique(yh[np.isin(yh, np.arange(b0, b1 + 1))])) != (b1 - b0 + 1):
+        raise ValueError(f"{model}/{member}/tasmin: baseline {b0}-{b1} incomplete")
+    pctl = {p: np.percentile(vh[base], p, axis=0) for p in NIGHT_PCTLS}
+    for p in NIGHT_PCTLS:
+        res[f"p{p}_tasmin_f"] = k_to_f(pctl[p]).tolist()
+
+    hist_mask = np.isin(yh, np.arange(1981, 2011))
+    period_data = {"historic": (vh[hist_mask], yh[hist_mask], mh[hist_mask])}
+    for pname, exp, y0, y1 in PERIODS:
+        if pname == "historic":
+            continue
+        period_data[pname] = _read_points(cat, model, exp, member, "tasmin", y0, y1, ilat, ilon)
+
+    for pname, (vals, years, months) in period_data.items():
+        if len(np.unique(years)) != 30:
+            raise ValueError(f"{model}/{member}/tasmin/{pname}: expected 30 years")
+        if pname == "historic":
+            res["avg_summer_tasmin_f"] = k_to_f(
+                vals[np.isin(months, SUMMER_MONTHS)].mean(axis=0)).tolist()
+        for t_f in TMIN_ABS_F:
+            res[f"abs_tasmin_{t_f}_{pname}"] = annual_avg_count(vals, years, f_to_k(t_f)).tolist()
+        for p in NIGHT_PCTLS:
+            res[f"rel_tasmin_p{p}_{pname}"] = season_avg_count(
+                vals, years, months, pctl[p], NIGHT_SEASON).tolist()
+    return res
+
+
+def extract_member(cat, model, member, ilat, ilon):
+    res = extract_tasmax(cat, model, member, ilat, ilon)
+    res.update(extract_tasmin(cat, model, member, ilat, ilon))
+    return res
+
+
+# Sentinel key marking a cache entry as carrying the v0.2 warm-night definition.
+# A v0.1 cache has full-year rel_tasmin_p98 and rel_tasmin_avg instead.
+NIGHT_SENTINEL = "rel_tasmin_p95_historic"
+
+
+def _is_v2_tasmin(cached):
+    return NIGHT_SENTINEL in cached
 
 
 def extract_all(cat, roster, ilat, ilon):
@@ -255,12 +328,27 @@ def extract_all(cat, roster, ilat, ilon):
         for member in members:
             n += 1
             path = MEMBER_CACHE / f"{model}__{member}.json"
-            if path.exists():
-                print(f"  [{n:2d}/{total}] {model:18s} {member:10s} cached", flush=True)
+            cached = json.load(open(path)) if path.exists() else None
+
+            if cached is not None and _is_v2_tasmin(cached):
+                print(f"  [{n:2d}/{total}] {model:18s} {member:10s} cached (v0.2)", flush=True)
                 continue
-            res = extract_member(cat, model, member, ilat, ilon)
+
+            tmin = extract_tasmin(cat, model, member, ilat, ilon)
+            if cached is not None:
+                # Reuse the validated v0.1 tasmax computation; replace only the
+                # tasmin keys (drops the discarded full-year p98 / avg / avg+10),
+                # and drop the unused tasmax p98 baseline so key sets stay uniform.
+                tasmax = {k: v for k, v in cached.items()
+                          if "tasmin" not in k and k != "p98_tasmax_f"}
+                res = {**tasmax, **tmin}
+                tag = "tasmin re-extracted, tasmax reused"
+            else:
+                res = extract_tasmax(cat, model, member, ilat, ilon)
+                res.update(tmin)
+                tag = "full extract"
             json.dump(res, open(path, "w"))
-            print(f"  [{n:2d}/{total}] {model:18s} {member:10s} done  "
+            print(f"  [{n:2d}/{total}] {model:18s} {member:10s} {tag}  "
                   f"elapsed {(time.time()-t0)/60:6.1f}m", flush=True)
 
 
@@ -324,12 +412,11 @@ def pool_and_write(roster, cells, ukey, allow_partial=False):
             rename[f"abs_tasmin_{t_f}_{pname}"] = f"loca2_nights_over_{t_f}_{pname}"
         rename[f"rel_tasmax_avg_{pname}"] = f"loca2_days_over_avg_{pname}"
         rename[f"rel_tasmax_avg_plus10_{pname}"] = f"loca2_days_over_avg_plus10_{pname}"
-        rename[f"rel_tasmin_avg_{pname}"] = f"loca2_nights_over_avg_{pname}"
-        rename[f"rel_tasmin_avg_plus10_{pname}"] = f"loca2_nights_over_avg_plus10_{pname}"
+        rename[f"rel_tasmin_p95_{pname}"] = f"loca2_nights_over_p95_{pname}"
         rename[f"rel_tasmin_p98_{pname}"] = f"loca2_nights_over_p98_{pname}"
     rename["avg_summer_tasmax_f"] = "loca2_avg_summer_tmax_f"
     rename["avg_summer_tasmin_f"] = "loca2_avg_summer_tmin_f"
-    rename["p98_tasmax_f"] = "loca2_p98_tmax_f"
+    rename["p95_tasmin_f"] = "loca2_p95_tmin_f"
     rename["p98_tasmin_f"] = "loca2_p98_tmin_f"
 
     cell_df = ukey[["cell_key"]].copy()

@@ -76,7 +76,7 @@ LAC's low indoor/outdoor ratio (0.241) despite 162 outdoor 78°F days reflects t
 
 ### Vulnerability Component
 
-Equal-weight average of five sub-indicators describing each facility's population. Each is min-max normalized 0–1 across the 31 facilities before averaging.
+Equal-weight average of six sub-indicators describing each facility's population. Each is min-max normalized 0–1 across the 31 facilities before averaging.
 
 | Sub-indicator | Variable | Description | Source |
 | :--- | :--- | :--- | :--- |
@@ -85,6 +85,7 @@ Equal-weight average of five sub-indicators describing each facility's populatio
 | Mental health (EOP) | `cchcs_mental_health_eop_pct_2025` | Share enrolled in the Enhanced Outpatient Program for mental health (2025). EOP enrollment is used as a proxy for psychotropic medication use, which impairs thermoregulation through anticholinergic and antipsychotic mechanisms. | CCHCS Health Care Dashboard, 2025 |
 | Disability (DPP) | `cchcs_dpp_pct_2025` | Share with a Disability Placement Program designation (2025). DPP covers mobility, vision, hearing, and other impairments that may limit a person's ability to respond to heat stress or access cooling resources. | CCHCS Health Care Dashboard, 2025 |
 | Race/POC | `race_peopleofcolor_pct` | Share identifying as people of color (2025), consistent with Ovienmhada et al. (2024)'s treatment of race as a heat vulnerability factor given documented disparities in heat-related health outcomes and access to care. | CDCR Population Data Points, 2025 |
+| Gender (female) | `gender_female_pct` | Share of the facility population who are women (2025). Included because women's carceral facilities differ systematically in medical infrastructure, and the pregnancy and reproductive-health conditions concentrated in these facilities carry additional heat sensitivity. | CDCR Population Data Points, 2025 |
 
 ### Excluded Variables
 
@@ -106,14 +107,22 @@ Mid-century risk scores are classified into four tiers using Jenks natural break
 
 Tiers are named to reflect relative risk within the CDCR system. All incarcerated people face elevated heat risk compared to the general population; these labels indicate which facilities face the highest risk relative to peers, not that lower-ranked facilities are safe.
 
-| Tier | Score range | n facilities | Color |
-| :--- | :--- | :--- | :--- |
-| Highest | > 60.9 | 3 (COR, SATF, CIM) | `#7a1010` |
-| High | 36.4 – 60.9 | 10 (CMF, SAC, VSP, LAC, NKSP, SOL, CIW, KVSP, RJD, WSP) | `#c44020` |
-| Moderate | 20.1 – 36.4 | 6 (CCWF, CRC, CCI, FOL, MCSP, HDSP) | `#e89050` |
-| Lowest | ≤ 20.1 | 12 | `#e8e0c8` |
+The table below reflects the **additive default model** (Risk = 0.25 H + 0.25 E + 0.50 V), which
+has been the published default since the 2026-04-21 switch from the multiplicative baseline. The
+score range shown for each tier is the observed span of mid-century scores within it; Jenks breaks
+fall in the gaps between tiers.
 
-**Mid-century top 5 by risk score:** COR (100.0), SATF (97.8), CIM (82.7), CMF (60.9), SAC (58.7).
+| Tier | Mid-century score span | n facilities | Facilities | Color |
+| :--- | :--- | :--- | :--- | :--- |
+| Highest | 78.3 – 100.0 | 6 | COR, SATF, CIM, CMF, CIW, SAC | `#7a1010` |
+| High | 51.8 – 74.3 | 9 | CCWF, CHCF, KVSP, LAC, NKSP, RJD, SOL, VSP, WSP | `#c44020` |
+| Moderate | 29.7 – 44.1 | 5 | CCI, CRC, FOL, HDSP, MCSP | `#e89050` |
+| Lowest | 8.9 – 23.8 | 11 | ASP, CAL, CEN, CMC, CTF, ISP, PBSP, PVSP, SCC, SQ, SVSP | `#e8e0c8` |
+
+Applying the same mid-century breaks to the current period gives Highest 5, High 10, Moderate 4,
+Lowest 12.
+
+**Mid-century top 5 by risk score:** COR (100.0), SATF (99.6), CIM (91.4), CMF (81.6), CIW (80.8).
 
 ### Output Column Reference
 
