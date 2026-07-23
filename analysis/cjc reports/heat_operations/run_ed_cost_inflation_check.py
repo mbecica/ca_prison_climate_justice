@@ -71,7 +71,7 @@ print(f"2024 medical CPI base (annual avg): {cpi_2024_base:.3f}")
 print("Loading panel...")
 df = pd.read_csv(os.path.join(OUT_DIR, "heat_operations_panel.csv"))
 
-for col in ["days_over_90f", "ed_hospital_cost", "total_labor_cost", "crowding_pct"]:
+for col in ["gridmet_days_over_90f", "ed_hospital_cost", "total_labor_cost", "crowding_pct"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
 df["date"] = pd.to_datetime(dict(year=df["year"], month=df["month"], day=1))
@@ -99,15 +99,15 @@ ISP_TREAT = pd.Timestamp("2024-03-01")
 def run_did(df, outcome, label):
     sub = df.copy()
     sub["post_treat"]  = ((sub["facility"] == "ISP") & (sub["date"] >= ISP_TREAT)).astype(float)
-    sub["heat_x_post"] = sub["days_over_90f"] * sub["post_treat"]
+    sub["heat_x_post"] = sub["gridmet_days_over_90f"] * sub["post_treat"]
 
-    cols = [outcome, "days_over_90f", "heat_x_post", "post_treat", "crowding_10pp"]
+    cols = [outcome, "gridmet_days_over_90f", "heat_x_post", "post_treat", "crowding_10pp"]
     sub = sub[["facility", "date"] + cols].dropna(subset=cols)
     sub = sub.set_index(["facility", "date"])
 
     mod = PanelOLS(
         dependent=sub[outcome],
-        exog=sub[["days_over_90f", "heat_x_post", "post_treat", "crowding_10pp"]],
+        exog=sub[["gridmet_days_over_90f", "heat_x_post", "post_treat", "crowding_10pp"]],
         entity_effects=True,
         time_effects=True,
         check_rank=False,
@@ -121,7 +121,7 @@ def run_did(df, outcome, label):
         if p < 0.1:   return "."
         return ""
 
-    b_heat = res.params["days_over_90f"]
+    b_heat = res.params["gridmet_days_over_90f"]
     b_ix   = res.params["heat_x_post"]
     p_ix   = res.pvalues["heat_x_post"]
     se_ix  = res.std_errors["heat_x_post"]

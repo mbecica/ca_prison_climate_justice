@@ -2,7 +2,8 @@
 build_heat_operations_panel.py
 
 Builds a facility x calendar-month panel joining:
-  - Heat exposure (days_over_90f, days_over_95f, days_over_avg_plus10) from gridMET daily data
+  - Heat exposure (gridmet_days_over_90f, gridmet_days_over_95f,
+    gridmet_days_over_avg_plus10_base1991_2020) from gridMET daily data
   - Outcomes from sb601_operations (Dental+MH Overtime, Modified Programs Days,
     Actual Expenditures (monthly, differenced from YTD), Institution Budget)
   - Outcomes from cchcs_measures (ED/Hospital Stay rate, staffing vacancies)
@@ -38,21 +39,22 @@ EXCLUDE_FACILITIES = {"DVI", "CCC"}
 # ---------------------------------------------------------------------------
 # Step 1: Aggregate daily heat to monthly
 #   Input: heat_activations_daily.csv
-#   Columns: cdcr_code, date, tmax_f, over_90f, over_95f, over_avg_plus10
+#   Columns: cdcr_code, date, gridmet_tmax_f, gridmet_over_90f, gridmet_over_95f,
+#            gridmet_over_avg_base1991_2020, gridmet_over_avg_plus10_base1991_2020
 # ---------------------------------------------------------------------------
 
 print("Step 1: Aggregating daily heat to monthly...")
 
-heat_monthly = defaultdict(lambda: {"days_over_90f": 0, "days_over_95f": 0, "days_over_avg_plus10": 0})
+heat_monthly = defaultdict(lambda: {"gridmet_days_over_90f": 0, "gridmet_days_over_95f": 0, "gridmet_days_over_avg_plus10_base1991_2020": 0})
 
 with open(f"{DATA}/hazards/heat/heat_activations_daily.csv") as f:
     for row in csv.DictReader(f):
         facility = row["cdcr_code"]
         d = datetime.strptime(row["date"], "%Y-%m-%d")
         key = (facility, d.year, d.month)
-        heat_monthly[key]["days_over_90f"] += int(row["over_90f"])
-        heat_monthly[key]["days_over_95f"] += int(row["over_95f"])
-        heat_monthly[key]["days_over_avg_plus10"] += int(row["over_avg_plus10"])
+        heat_monthly[key]["gridmet_days_over_90f"] += int(row["gridmet_over_90f"])
+        heat_monthly[key]["gridmet_days_over_95f"] += int(row["gridmet_over_95f"])
+        heat_monthly[key]["gridmet_days_over_avg_plus10_base1991_2020"] += int(row["gridmet_over_avg_plus10_base1991_2020"])
 
 print(f"  {len(heat_monthly)} facility-month heat records")
 
@@ -368,7 +370,7 @@ all_keys = sorted(heat_monthly.keys())
 
 COLUMNS = [
     "facility", "year", "month",
-    "days_over_90f", "days_over_95f", "days_over_avg_plus10",
+    "gridmet_days_over_90f", "gridmet_days_over_95f", "gridmet_days_over_avg_plus10_base1991_2020",
     "dental_mh_overtime", "modified_programs_days", "deaths_unexpected",
     "uof_incidents", "violent_incidents", "inmate_on_inmate", "staff_involved",
     "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
@@ -387,9 +389,9 @@ for facility, year, month in all_keys:
     row = {"facility": facility, "year": year, "month": month}
 
     h = heat_monthly[(facility, year, month)]
-    row["days_over_90f"] = h["days_over_90f"]
-    row["days_over_95f"] = h["days_over_95f"]
-    row["days_over_avg_plus10"] = h["days_over_avg_plus10"]
+    row["gridmet_days_over_90f"] = h["gridmet_days_over_90f"]
+    row["gridmet_days_over_95f"] = h["gridmet_days_over_95f"]
+    row["gridmet_days_over_avg_plus10_base1991_2020"] = h["gridmet_days_over_avg_plus10_base1991_2020"]
 
     sb = sb601.get((facility, year, month), {})
     for col in ("dental_mh_overtime", "modified_programs_days", "deaths_unexpected", "uof_incidents"):

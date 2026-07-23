@@ -186,7 +186,7 @@ on the seasonal calendar.
 |---|---|
 | Scrapers | `extract_gridmet_heat.py` (fully automatic, ~5.8 GB / 30–45 min) → `heat_activations_{daily,annual,monthly}.csv`; `extract_gridmet_summer_avg.py` (~3.5 GB) → `summer_avg_tmax_annual.csv` |
 | ⚠ Path drift | Both scripts write to `data_sources/hazards/` but the committed CSVs live in `data_sources/hazards/heat/` — fix the output constants (or move files) before re-running |
-| Classification | The 1991–2020 mean summer tmax baseline inside `extract_gridmet_heat.py` is **FROZEN by definition** (WMO normal period — never re-window). The daily/annual/monthly activation files and `summer_avg_tmax_annual.csv` are **LIVING-extendable**: re-running with `ANALYSIS_YEARS` extended appends seasons under the same names |
+| Classification | The 1991–2020 mean summer tmax baseline (`base1991_2020` in the column names) inside `extract_gridmet_heat.py` is **FROZEN by definition** (WMO normal period — never re-window). The daily/annual/monthly activation files and `summer_avg_tmax_annual.csv` are **LIVING-extendable**: re-running with `ANALYSIS_YEARS` extended appends seasons under the same names |
 | Consumers | `build_heat_operations_panel.py` (family 8) · the heat_activations report · Heat Tracker baseline **validation** (one-time cross-check, not a runtime dependency) |
 
 ## 8. CJC report analyses (heat operations, indoor/outdoor, risk report)

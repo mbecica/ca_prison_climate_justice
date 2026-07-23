@@ -6,16 +6,19 @@ Outputs:
   data_sources/hazards/heat/heat_activations_annual.csv  — annual counts per facility
   data_sources/hazards/heat/heat_activations_monthly.csv — monthly counts per facility per year
 
-Metrics:
-  over_90f         — outdoor tmax >= 90°F  (CDCR Heat Pathology Plan Stage I outdoor threshold)
-  over_95f         — outdoor tmax >= 95°F  (CDCR Heat Pathology Plan Stage III outdoor threshold;
-                     note: Stage III protocol is triggered by indoor temperature, not outdoor)
-  over_avg         — tmax >= facility mean summer (Jun–Aug) tmax
-  over_avg_plus10  — tmax >= facility mean summer (Jun–Aug) tmax + 10°F
-                     Based on Skarha et al. (2023) marginal mortality metric.
+Metrics (all columns carry a `gridmet_` source prefix; the modeled LOCA2-CA
+equivalents carry `loca2_` and a period suffix, so the two never collide):
 
-  Baseline for both relative metrics: 1991–2020 mean Jun–Aug tmax per facility
-  (WMO 30-year normal period), held fixed across all analysis years.
+  gridmet_over_90f  — outdoor tmax >= 90°F  (CDCR Heat Pathology Plan Stage I outdoor threshold)
+  gridmet_over_95f  — outdoor tmax >= 95°F  (CDCR Heat Pathology Plan Stage III outdoor threshold;
+                      note: Stage III protocol is triggered by indoor temperature, not outdoor)
+  gridmet_over_avg_base1991_2020         — tmax >= facility mean summer (Jun–Aug) tmax
+  gridmet_over_avg_plus10_base1991_2020  — tmax >= facility mean summer (Jun–Aug) tmax + 10°F
+                                           Based on Skarha et al. (2023) marginal mortality metric.
+
+  The `base1991_2020` suffix is load-bearing: these relative thresholds are anchored to the
+  1991–2020 WMO normal, whereas the LOCA2-CA `_historic` counts are anchored to 1981–2010.
+  The baseline is held fixed across all analysis years.
 
 Source: gridMET (University of Idaho), variable tmmx (daily maximum temperature, Kelvin)
         https://www.northwestknowledge.net/metdata/data/tmmx_{year}.nc
@@ -90,7 +93,7 @@ def extract_facility_tmax(nc_path, facilities):
     """
     Open a gridMET year file and extract daily tmax (°F) for each facility.
 
-    Returns a DataFrame with columns: cdcr_code, date, tmax_f
+    Returns a DataFrame with columns: cdcr_code, date, gridmet_tmax_f
     """
     ds = xr.open_dataset(nc_path)
 
@@ -112,7 +115,7 @@ def extract_facility_tmax(nc_path, facilities):
         df = pd.DataFrame({
             "cdcr_code": row["cdcr_code"],
             "date": dates,
-            "tmax_f": tmax_f[:, fi],
+            "gridmet_tmax_f": tmax_f[:, fi],
         })
         rows.append(df)
 
@@ -143,7 +146,7 @@ def compute_avg_summer_baselines(facilities):
             df = extract_facility_tmax(tmp, facilities)
             df["date"] = pd.to_datetime(df["date"])
             summer = df[df["date"].dt.month.isin([6, 7, 8])]
-            summer_records.append(summer[["cdcr_code", "tmax_f"]])
+            summer_records.append(summer[["cdcr_code", "gridmet_tmax_f"]])
             print(f"{len(summer)} summer days extracted")
 
         finally:
@@ -152,7 +155,7 @@ def compute_avg_summer_baselines(facilities):
 
     all_summer = pd.concat(summer_records, ignore_index=True)
     baselines = (
-        all_summer.groupby("cdcr_code")["tmax_f"]
+        all_summer.groupby("cdcr_code")["gridmet_tmax_f"]
         .mean()
         .to_dict()
     )
@@ -173,7 +176,8 @@ def extract_analysis_years(facilities, avg_summer_baselines):
     Download 2016–2025 gridMET files and build the daily activation dataset.
 
     Returns daily DataFrame with:
-      cdcr_code, date, tmax_f, over_90f, over_95f, over_avg, over_avg_plus10
+      cdcr_code, date, gridmet_tmax_f, gridmet_over_90f, gridmet_over_95f,
+      gridmet_over_avg_base1991_2020, gridmet_over_avg_plus10_base1991_2020
     """
     print("\n=== Extracting analysis years (2016–2025) ===")
 
@@ -198,14 +202,14 @@ def extract_analysis_years(facilities, avg_summer_baselines):
     daily = daily.sort_values(["cdcr_code", "date"]).reset_index(drop=True)
 
     # Apply thresholds
-    daily["over_90f"] = (daily["tmax_f"] >= STAGE1_F).astype(int)
-    daily["over_95f"] = (daily["tmax_f"] >= STAGE3_F).astype(int)
+    daily["gridmet_over_90f"] = (daily["gridmet_tmax_f"] >= STAGE1_F).astype(int)
+    daily["gridmet_over_95f"] = (daily["gridmet_tmax_f"] >= STAGE3_F).astype(int)
     daily["avg_threshold_f"] = daily["cdcr_code"].map(
         lambda c: avg_summer_baselines.get(c, np.nan)
     )
     daily["avg_plus10_threshold_f"] = daily["avg_threshold_f"] + DELTA_F
-    daily["over_avg"] = (daily["tmax_f"] >= daily["avg_threshold_f"]).astype(int)
-    daily["over_avg_plus10"] = (daily["tmax_f"] >= daily["avg_plus10_threshold_f"]).astype(int)
+    daily["gridmet_over_avg_base1991_2020"] = (daily["gridmet_tmax_f"] >= daily["avg_threshold_f"]).astype(int)
+    daily["gridmet_over_avg_plus10_base1991_2020"] = (daily["gridmet_tmax_f"] >= daily["avg_plus10_threshold_f"]).astype(int)
     daily = daily.drop(columns=["avg_threshold_f", "avg_plus10_threshold_f"])
 
     return daily
@@ -223,10 +227,10 @@ def aggregate(daily):
     annual = (
         daily.groupby(["cdcr_code", "year"])
         .agg(
-            days_over_90f=("over_90f", "sum"),
-            days_over_95f=("over_95f", "sum"),
-            days_over_avg=("over_avg", "sum"),
-            days_over_avg_plus10=("over_avg_plus10", "sum"),
+            gridmet_days_over_90f=("gridmet_over_90f", "sum"),
+            gridmet_days_over_95f=("gridmet_over_95f", "sum"),
+            gridmet_days_over_avg_base1991_2020=("gridmet_over_avg_base1991_2020", "sum"),
+            gridmet_days_over_avg_plus10_base1991_2020=("gridmet_over_avg_plus10_base1991_2020", "sum"),
         )
         .reset_index()
     )
@@ -234,8 +238,8 @@ def aggregate(daily):
     monthly = (
         daily.groupby(["cdcr_code", "year", "month"])
         .agg(
-            days_over_90f=("over_90f", "sum"),
-            days_over_95f=("over_95f", "sum"),
+            gridmet_days_over_90f=("gridmet_over_90f", "sum"),
+            gridmet_days_over_95f=("gridmet_over_95f", "sum"),
         )
         .reset_index()
     )
@@ -273,8 +277,8 @@ def main():
     print(f"Wrote {len(annual):,} rows  → {annual_path.relative_to(REPO_ROOT)}")
     print(f"Wrote {len(monthly):,} rows  → {monthly_path.relative_to(REPO_ROOT)}")
 
-    print("\nSample annual output (top 10 by days_over_avg_plus10):")
-    print(annual.nlargest(10, "days_over_avg_plus10").to_string(index=False))
+    print("\nSample annual output (top 10 by gridmet_days_over_avg_plus10_base1991_2020):")
+    print(annual.nlargest(10, "gridmet_days_over_avg_plus10_base1991_2020").to_string(index=False))
 
 
 if __name__ == "__main__":

@@ -49,7 +49,7 @@ Does monthly heat exposure predict worse operational outcomes at CDCR facilities
 ## 4. Heat Exposure Variables
 
 ### Primary
-`days_over_90f` — monthly count of days with outdoor tmax ≥ 90°F (gridMET)
+`gridmet_days_over_90f` — monthly count of days with outdoor tmax ≥ 90°F (gridMET)
 Rationale: CDCR Heat Pathology Plan Stage 1 outdoor trigger; policy-relevant threshold
 
 ### Robustness check
@@ -147,7 +147,7 @@ Control group: all non-treated CDCR facilities in the panel.
 
 ### Step 2: Build master panel
 Join all sources to a single `facility × calendar_month` panel:
-- Heat: `heat_activations_monthly.csv` (days_over_90f, days_over_95f)
+- Heat: `heat_activations_monthly.csv` (`gridmet_days_over_90f`, `gridmet_days_over_95f`)
 - Crowding: `tpop1_institutions.csv` (pct_occupied) — match on facility + nearest report date
 - Outcomes from cchcs: direct merge on facility + month-year
 - Outcomes from sb601: after Step 1
@@ -155,7 +155,7 @@ Join all sources to a single `facility × calendar_month` panel:
 ### Step 3: Compute Skarha facility-relative anomaly
 - From `heat_activations_daily.csv`, compute each facility's mean Jun–Aug tmax over 1991–2020
 - For each facility-day: flag if tmax ≥ (facility mean + 10°F)
-- Aggregate to monthly count: `days_over_avg_plus10`
+- Aggregate to monthly count: `gridmet_days_over_avg_plus10_base1991_2020`
 
 ### Step 4: Merge static covariates
 - AC type: `air_cooling_infrastructure_dec2025.csv` → categorical variable (mechanical / evaporative / ventilation)

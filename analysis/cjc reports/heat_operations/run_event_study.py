@@ -42,7 +42,7 @@ OUT_DIR = "analysis/cjc reports/heat_operations"
 
 print("Loading panel...")
 df = pd.read_csv(os.path.join(OUT_DIR, "heat_operations_panel.csv"))
-for col in ["days_over_90f", "days_over_avg_plus10", "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
+for col in ["gridmet_days_over_90f", "gridmet_days_over_avg_plus10_base1991_2020", "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
             "specialty_care_referrals", "prescriptions_per_patient",
             "dental_mh_overtime", "modified_programs_days", "crowding_pct",
             "uof_incidents", "violent_incidents", "inmate_on_inmate", "staff_involved",
@@ -130,7 +130,7 @@ OUTCOMES = [
 # DiD model helper
 # ---------------------------------------------------------------------------
 
-def run_did(df, treated_fac, treat_date, outcome, heat_var="days_over_90f"):
+def run_did(df, treated_fac, treat_date, outcome, heat_var="gridmet_days_over_90f"):
     """
     Y ~ heat + heat×post_treat + post_treat + crowding + facility_FE + ym_FE
     post_treat = 1 for treated_fac in months >= treat_date.
@@ -197,7 +197,7 @@ for treated_fac, treat_date in AC_EVENTS.items():
         result["treat_date"] = treat_date.strftime("%Y-%m")
         rows.append(result)
 
-        b_heat    = result["beta_days_over_90f"]
+        b_heat    = result["beta_gridmet_days_over_90f"]
         b_ix      = result["beta_heat_x_post"]
         p_ix      = result["p_heat_x_post"]
         b_post    = result["beta_post_treat"]
@@ -231,7 +231,7 @@ for treated_fac, treat_date in AC_EVENTS.items():
                 "Period": period_label,
                 "Treat date": treat_date.strftime("%b %Y"),
                 "N months": len(sub),
-                "Mean days >90°F": round(sub["days_over_90f"].mean(), 1),
+                "Mean days >90°F": round(sub["gridmet_days_over_90f"].mean(), 1),
                 "Mean ED rate": round(sub["ed_hospital_rate"].mean(), 2),
                 "Mean Dental+MH OT": round(sub["dental_mh_overtime"].mean(), 1),
                 "Mean Inmate-on-Inmate": round(sub["inmate_on_inmate"].mean(), 1),
@@ -295,7 +295,7 @@ def make_event_figure(treated_fac, treat_date):
     )
 
     # Heat series for the treated facility (days >90°F), trimmed to plot window
-    heat_plot = fac_df[(fac_df["date"] >= pre_date) & (fac_df["date"] <= post_date)][["date", "days_over_90f"]].copy()
+    heat_plot = fac_df[(fac_df["date"] >= pre_date) & (fac_df["date"] <= post_date)][["date", "gridmet_days_over_90f"]].copy()
 
     for ax, (fac_col, ylabel) in zip(axes, plot_specs):
         fac_plot  = fac_df[(fac_df["date"] >= pre_date) & (fac_df["date"] <= post_date)]
@@ -304,9 +304,9 @@ def make_event_figure(treated_fac, treat_date):
 
         # Secondary axis: heat (days >90°F) as light orange bars behind the outcome
         ax2 = ax.twinx()
-        ax2.bar(heat_plot["date"], heat_plot["days_over_90f"],
+        ax2.bar(heat_plot["date"], heat_plot["gridmet_days_over_90f"],
                 width=20, color="darkorange", alpha=0.18, label="Days >90°F")
-        ax2.set_ylim(0, heat_plot["days_over_90f"].max() * 4)  # keep bars unobtrusive
+        ax2.set_ylim(0, heat_plot["gridmet_days_over_90f"].max() * 4)  # keep bars unobtrusive
         ax2.set_ylabel("Days >90°F", fontsize=6, color="darkorange")
         ax2.tick_params(axis="y", labelsize=6, colors="darkorange")
         ax2.spines["right"].set_edgecolor("darkorange")

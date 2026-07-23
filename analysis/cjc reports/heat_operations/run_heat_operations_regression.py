@@ -62,7 +62,7 @@ for col in ["dental_mh_overtime", "modified_programs_days", "uof_incidents",
             "ed_hospital_cost", "total_labor_cost",
             "specialty_care_referrals", "prescriptions_per_patient",
             "actual_expenditure_monthly", "institution_budget",
-            "crowding_pct", "days_over_90f", "days_over_avg_plus10",
+            "crowding_pct", "gridmet_days_over_90f", "gridmet_days_over_avg_plus10_base1991_2020",
             "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
@@ -83,8 +83,8 @@ df["log_staff_v"]      = np.log1p(df["staff_involved"])
 
 # Lag-1 heat variables (within facility, by calendar date)
 df_sorted = df.sort_values(["facility", "date"])
-df["heat_90_lag1"]    = df_sorted.groupby("facility")["days_over_90f"].shift(1)
-df["over_avg_plus10_lag1"] = df_sorted.groupby("facility")["days_over_avg_plus10"].shift(1)
+df["heat_90_lag1"]    = df_sorted.groupby("facility")["gridmet_days_over_90f"].shift(1)
+df["over_avg_plus10_lag1"] = df_sorted.groupby("facility")["gridmet_days_over_avg_plus10_base1991_2020"].shift(1)
 
 # Crowding: standardize so coefficient is per 10pp
 df["crowding_10pp"] = df["crowding_pct"] / 10
@@ -202,8 +202,8 @@ OUTCOMES = [
     ("log_spend",    "Monthly Expenditure [log(y+1)]"),
 ]
 HEAT_VARS = [
-    ("days_over_90f",  "Days >90°F"),
-    ("days_over_avg_plus10",  "Days mean summer temp. anomaly"),
+    ("gridmet_days_over_90f",  "Days >90°F"),
+    ("gridmet_days_over_avg_plus10_base1991_2020",  "Days mean summer temp. anomaly"),
 ]
 
 main_rows = []
@@ -242,7 +242,7 @@ print("\nRunning robustness regressions (lag-1)...")
 
 rob_rows = []
 for heat_var, heat_label in HEAT_VARS:
-    lag_var = "heat_90_lag1" if heat_var == "days_over_90f" else "over_avg_plus10_lag1"
+    lag_var = "heat_90_lag1" if heat_var == "gridmet_days_over_90f" else "over_avg_plus10_lag1"
     for outcome, outcome_label in OUTCOMES:
         res = run_twfe(df, outcome, lag_var)
         coef = extract_coef(res, lag_var)
@@ -357,10 +357,10 @@ if not mod_df.empty:
 
 print("\nBuilding panel summary table...")
 
-# days_over_90f is 52% zeros (Oct-Mar months), so quartile bins degenerate.
+# gridmet_days_over_90f is 52% zeros (Oct-Mar months), so quartile bins degenerate.
 # Use substantive bins instead: 0 days / 1-14 / 15-27 / 28-31.
 df["heat_q"] = pd.cut(
-    df["days_over_90f"],
+    df["gridmet_days_over_90f"],
     bins=[-0.001, 0, 14, 27, 31],
     labels=["0 days", "1–14 days", "15–27 days", "28–31 days"],
 )
@@ -371,7 +371,7 @@ for q in ["0 days", "1–14 days", "15–27 days", "28–31 days"]:
     summary_rows.append({
         "Heat quartile": q,
         "N facility-months": len(grp),
-        "Mean days >90°F": grp["days_over_90f"].mean(),
+        "Mean days >90°F": grp["gridmet_days_over_90f"].mean(),
         "Mean ED/Hosp rate": grp["ed_hospital_rate"].mean(),
         "Mean Dental+MH OT": grp["dental_mh_overtime"].mean(),
         "Mean Mod Programs Days": grp["modified_programs_days"].mean(),
@@ -427,7 +427,7 @@ event_fig.suptitle(
 )
 
 for ax, (outcome, outcome_label) in zip(axes, OUTCOMES):
-    sub = partial_out_fes(df, outcome, "days_over_90f")
+    sub = partial_out_fes(df, outcome, "gridmet_days_over_90f")
     isp_sub = sub[sub["facility"] == "ISP"].copy()
     isp_sub["event_month"] = ((isp_sub["date"].dt.year - isp_treat_date.year) * 12 +
                                (isp_sub["date"].dt.month - isp_treat_date.month))
