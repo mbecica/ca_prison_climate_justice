@@ -86,7 +86,8 @@
             "value": 0.16,
             "display": 16,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 21
         },
         "midcentury": {
           "risk": {
@@ -108,7 +109,8 @@
             "value": 0.16,
             "display": 16,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 22
         }
       },
       "profile": {
@@ -155,7 +157,6 @@
           "avg_annual_violent_incidents": 194.2
         }
       },
-      "risk_rank": 22,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -163,8 +164,8 @@
           "name": "Ironwood State Prison"
         },
         "lower": {
-          "slug": "pelican-bay-state-prison",
-          "name": "Pelican Bay State Prison"
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
         }
       }
     },
@@ -203,7 +204,8 @@
             "value": 0.26,
             "display": 26,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 18
         },
         "midcentury": {
           "risk": {
@@ -225,7 +227,8 @@
             "value": 0.26,
             "display": 26,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 18
         }
       },
       "profile": {
@@ -272,7 +275,6 @@
           "avg_annual_violent_incidents": 467
         }
       },
-      "risk_rank": 18,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -320,7 +322,8 @@
             "value": 0.6,
             "display": 60,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 11
         },
         "midcentury": {
           "risk": {
@@ -342,7 +345,8 @@
             "value": 0.6,
             "display": 60,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 9
         }
       },
       "profile": {
@@ -389,16 +393,15 @@
           "avg_annual_violent_incidents": 380.2
         }
       },
-      "risk_rank": 9,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-state-prison-los-angeles-county",
-          "name": "California State Prison, Los Angeles County"
-        },
-        "lower": {
           "slug": "valley-state-prison",
           "name": "Valley State Prison"
+        },
+        "lower": {
+          "slug": "north-kern-state-prison",
+          "name": "North Kern State Prison"
         }
       }
     },
@@ -437,7 +440,8 @@
             "value": 0.44,
             "display": 44,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 3
         },
         "midcentury": {
           "risk": {
@@ -459,7 +463,8 @@
             "value": 0.44,
             "display": 44,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 3
         }
       },
       "profile": {
@@ -506,7 +511,6 @@
           "avg_annual_violent_incidents": 72.4
         }
       },
-      "risk_rank": 3,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -554,7 +558,8 @@
             "value": 0.41,
             "display": 41,
             "category": "High"
-          }
+          },
+          "risk_rank": 5
         },
         "midcentury": {
           "risk": {
@@ -576,7 +581,8 @@
             "value": 0.41,
             "display": 41,
             "category": "High"
-          }
+          },
+          "risk_rank": 5
         }
       },
       "profile": {
@@ -623,7 +629,6 @@
           "avg_annual_violent_incidents": 115
         }
       },
-      "risk_rank": 5,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -671,7 +676,8 @@
             "value": 0.55,
             "display": 55,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 4
         },
         "midcentury": {
           "risk": {
@@ -693,7 +699,8 @@
             "value": 0.55,
             "display": 55,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 4
         }
       },
       "profile": {
@@ -740,7 +747,6 @@
           "avg_annual_violent_incidents": 320.6
         }
       },
-      "risk_rank": 4,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -788,7 +794,8 @@
             "value": 0.41,
             "display": 41,
             "category": "High"
-          }
+          },
+          "risk_rank": 25
         },
         "midcentury": {
           "risk": {
@@ -810,7 +817,8 @@
             "value": 0.41,
             "display": 41,
             "category": "High"
-          }
+          },
+          "risk_rank": 30
         }
       },
       "profile": {
@@ -857,7 +865,6 @@
           "avg_annual_violent_incidents": 172.8
         }
       },
-      "risk_rank": 27,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -865,8 +872,8 @@
           "name": "Calipatria State Prison"
         },
         "lower": {
-          "slug": "centinela-state-prison",
-          "name": "Centinela State Prison"
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
         }
       }
     },
@@ -876,7 +883,7 @@
       "slug": "california-rehabilitation-center",
       "city": "Norco",
       "county": "Riverside",
-      "address": "5Th Street And Western Avenue, Norco, CA 92860",
+      "address": "5th Street And Western Avenue, Norco, CA 92860",
       "jurisdiction": "State",
       "lat": 33.92925,
       "lon": -117.57253,
@@ -905,7 +912,8 @@
             "value": 0.25,
             "display": 25,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 17
         },
         "midcentury": {
           "risk": {
@@ -927,7 +935,8 @@
             "value": 0.25,
             "display": 25,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 17
         }
       },
       "profile": {
@@ -974,7 +983,6 @@
           "avg_annual_violent_incidents": 133.4
         }
       },
-      "risk_rank": 17,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -1022,7 +1030,8 @@
             "value": 0.38,
             "display": 38,
             "category": "High"
-          }
+          },
+          "risk_rank": 1
         },
         "midcentury": {
           "risk": {
@@ -1044,7 +1053,8 @@
             "value": 0.38,
             "display": 38,
             "category": "High"
-          }
+          },
+          "risk_rank": 1
         }
       },
       "profile": {
@@ -1091,7 +1101,6 @@
           "avg_annual_violent_incidents": 538.8
         }
       },
-      "risk_rank": 1,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": null,
@@ -1107,7 +1116,7 @@
       "slug": "california-state-prison-los-angeles-county",
       "city": "Lancaster",
       "county": "Los Angeles",
-      "address": "44750 60Th Street West, Lancaster, CA 93536",
+      "address": "44750 60th Street West, Lancaster, CA 93536",
       "jurisdiction": "State",
       "lat": 34.6936,
       "lon": -118.22761,
@@ -1136,7 +1145,8 @@
             "value": 0.47,
             "display": 47,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 9
         },
         "midcentury": {
           "risk": {
@@ -1158,7 +1168,8 @@
             "value": 0.47,
             "display": 47,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 8
         }
       },
       "profile": {
@@ -1205,16 +1216,15 @@
           "avg_annual_violent_incidents": 708.8
         }
       },
-      "risk_rank": 8,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "central-california-womens-facility",
-          "name": "Central California Women's Facility"
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
         },
         "lower": {
-          "slug": "california-health-care-facility",
-          "name": "California Health Care Facility"
+          "slug": "valley-state-prison",
+          "name": "Valley State Prison"
         }
       }
     },
@@ -1253,7 +1263,8 @@
             "value": 0.51,
             "display": 51,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 6
         },
         "midcentury": {
           "risk": {
@@ -1275,7 +1286,8 @@
             "value": 0.51,
             "display": 51,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 6
         }
       },
       "profile": {
@@ -1322,7 +1334,6 @@
           "avg_annual_violent_incidents": 835.8
         }
       },
-      "risk_rank": 6,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -1370,7 +1381,8 @@
             "value": 0.32,
             "display": 32,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 14
         },
         "midcentury": {
           "risk": {
@@ -1392,7 +1404,8 @@
             "value": 0.32,
             "display": 32,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 14
         }
       },
       "profile": {
@@ -1439,12 +1452,11 @@
           "avg_annual_violent_incidents": 179.8
         }
       },
-      "risk_rank": 14,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "north-kern-state-prison",
-          "name": "North Kern State Prison"
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
         },
         "lower": {
           "slug": "wasco-state-prison",
@@ -1487,7 +1499,8 @@
             "value": 0.4,
             "display": 40,
             "category": "High"
-          }
+          },
+          "risk_rank": 2
         },
         "midcentury": {
           "risk": {
@@ -1509,7 +1522,8 @@
             "value": 0.4,
             "display": 40,
             "category": "High"
-          }
+          },
+          "risk_rank": 2
         }
       },
       "profile": {
@@ -1556,7 +1570,6 @@
           "avg_annual_violent_incidents": 460.6
         }
       },
-      "risk_rank": 2,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -1604,7 +1617,8 @@
             "value": 0.18,
             "display": 18,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 24
         },
         "midcentury": {
           "risk": {
@@ -1626,7 +1640,8 @@
             "value": 0.18,
             "display": 18,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 26
         }
       },
       "profile": {
@@ -1673,12 +1688,11 @@
           "avg_annual_violent_incidents": 201.4
         }
       },
-      "risk_rank": 26,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "correctional-training-facility",
-          "name": "Correctional Training Facility"
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
         },
         "lower": {
           "slug": "california-mens-colony",
@@ -1721,7 +1735,8 @@
             "value": 0.2,
             "display": 20,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 27
         },
         "midcentury": {
           "risk": {
@@ -1743,7 +1758,8 @@
             "value": 0.2,
             "display": 20,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 28
         }
       },
       "profile": {
@@ -1790,16 +1806,15 @@
           "avg_annual_violent_incidents": 140
         }
       },
-      "risk_rank": 28,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-mens-colony",
-          "name": "California Men's Colony"
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
         },
         "lower": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
+          "slug": "correctional-training-facility",
+          "name": "Correctional Training Facility"
         }
       }
     },
@@ -1838,7 +1853,8 @@
             "value": 0.42,
             "display": 42,
             "category": "High"
-          }
+          },
+          "risk_rank": 7
         },
         "midcentury": {
           "risk": {
@@ -1860,7 +1876,8 @@
             "value": 0.42,
             "display": 42,
             "category": "High"
-          }
+          },
+          "risk_rank": 7
         }
       },
       "profile": {
@@ -1907,7 +1924,6 @@
           "avg_annual_violent_incidents": 327.2
         }
       },
-      "risk_rank": 7,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -1915,8 +1931,8 @@
           "name": "California State Prison, Sacramento"
         },
         "lower": {
-          "slug": "california-state-prison-los-angeles-county",
-          "name": "California State Prison, Los Angeles County"
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
         }
       }
     },
@@ -1955,7 +1971,8 @@
             "value": 0.33,
             "display": 33,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 28
         },
         "midcentury": {
           "risk": {
@@ -1977,7 +1994,8 @@
             "value": 0.33,
             "display": 33,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 25
         }
       },
       "profile": {
@@ -2024,16 +2042,15 @@
           "avg_annual_violent_incidents": 57.8
         }
       },
-      "risk_rank": 25,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "san-quentin-rehabilitation-center",
-          "name": "San Quentin Rehabilitation Center"
+          "slug": "centinela-state-prison",
+          "name": "Centinela State Prison"
         },
         "lower": {
-          "slug": "calipatria-state-prison",
-          "name": "Calipatria State Prison"
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
         }
       }
     },
@@ -2072,7 +2089,8 @@
             "value": 0.25,
             "display": 25,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 19
         },
         "midcentury": {
           "risk": {
@@ -2094,7 +2112,8 @@
             "value": 0.25,
             "display": 25,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 19
         }
       },
       "profile": {
@@ -2141,7 +2160,6 @@
           "avg_annual_violent_incidents": 114.4
         }
       },
-      "risk_rank": 19,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -2149,8 +2167,8 @@
           "name": "California Correctional Institution"
         },
         "lower": {
-          "slug": "high-desert-state-prison",
-          "name": "High Desert State Prison"
+          "slug": "ironwood-state-prison",
+          "name": "Ironwood State Prison"
         }
       }
     },
@@ -2189,7 +2207,8 @@
             "value": 0.28,
             "display": 28,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 22
         },
         "midcentury": {
           "risk": {
@@ -2211,7 +2230,8 @@
             "value": 0.28,
             "display": 28,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 20
         }
       },
       "profile": {
@@ -2258,16 +2278,15 @@
           "avg_annual_violent_incidents": 340.2
         }
       },
-      "risk_rank": 20,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "folsom-state-prison",
-          "name": "Folsom State Prison"
+          "slug": "avenal-state-prison",
+          "name": "Avenal State Prison"
         },
         "lower": {
-          "slug": "ironwood-state-prison",
-          "name": "Ironwood State Prison"
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
         }
       }
     },
@@ -2277,7 +2296,7 @@
       "slug": "ironwood-state-prison",
       "city": "Blythe",
       "county": "Riverside",
-      "address": "19005 Wiley'S Well Road, Blythe, CA 92225",
+      "address": "19005 Wiley's Well Road, Blythe, CA 92225",
       "jurisdiction": "State",
       "lat": 33.56098,
       "lon": -114.92607,
@@ -2306,7 +2325,8 @@
             "value": 0.24,
             "display": 24,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 20
         },
         "midcentury": {
           "risk": {
@@ -2328,7 +2348,8 @@
             "value": 0.24,
             "display": 24,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 21
         }
       },
       "profile": {
@@ -2375,12 +2396,11 @@
           "avg_annual_violent_incidents": 152.8
         }
       },
-      "risk_rank": 21,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "high-desert-state-prison",
-          "name": "High Desert State Prison"
+          "slug": "folsom-state-prison",
+          "name": "Folsom State Prison"
         },
         "lower": {
           "slug": "avenal-state-prison",
@@ -2423,7 +2443,8 @@
             "value": 0.35,
             "display": 35,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 13
         },
         "midcentury": {
           "risk": {
@@ -2445,7 +2466,8 @@
             "value": 0.35,
             "display": 35,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 12
         }
       },
       "profile": {
@@ -2492,16 +2514,15 @@
           "avg_annual_violent_incidents": 618
         }
       },
-      "risk_rank": 12,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "richard-j-donovan-correctional-facility",
-          "name": "Richard J. Donovan Correctional Facility"
-        },
-        "lower": {
           "slug": "north-kern-state-prison",
           "name": "North Kern State Prison"
+        },
+        "lower": {
+          "slug": "california-state-prison-solano",
+          "name": "California State Prison, Solano"
         }
       }
     },
@@ -2540,7 +2561,8 @@
             "value": 0.42,
             "display": 42,
             "category": "High"
-          }
+          },
+          "risk_rank": 16
         },
         "midcentury": {
           "risk": {
@@ -2562,7 +2584,8 @@
             "value": 0.42,
             "display": 42,
             "category": "High"
-          }
+          },
+          "risk_rank": 16
         }
       },
       "profile": {
@@ -2609,7 +2632,6 @@
           "avg_annual_violent_incidents": 451.4
         }
       },
-      "risk_rank": 16,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
@@ -2657,7 +2679,8 @@
             "value": 0.2,
             "display": 20,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 12
         },
         "midcentury": {
           "risk": {
@@ -2679,7 +2702,8 @@
             "value": 0.2,
             "display": 20,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 13
         }
       },
       "profile": {
@@ -2726,16 +2750,15 @@
           "avg_annual_violent_incidents": 403.4
         }
       },
-      "risk_rank": 13,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "kern-valley-state-prison",
-          "name": "Kern Valley State Prison"
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
         },
         "lower": {
-          "slug": "california-state-prison-solano",
-          "name": "California State Prison, Solano"
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
         }
       }
     },
@@ -2774,7 +2797,8 @@
             "value": 0.28,
             "display": 28,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 23
         },
         "midcentury": {
           "risk": {
@@ -2796,7 +2820,8 @@
             "value": 0.28,
             "display": 28,
             "category": "Moderate"
-          }
+          },
+          "risk_rank": 24
         }
       },
       "profile": {
@@ -2843,16 +2868,15 @@
           "avg_annual_violent_incidents": 241.8
         }
       },
-      "risk_rank": 23,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "avenal-state-prison",
-          "name": "Avenal State Prison"
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
         },
         "lower": {
-          "slug": "san-quentin-rehabilitation-center",
-          "name": "San Quentin Rehabilitation Center"
+          "slug": "calipatria-state-prison",
+          "name": "Calipatria State Prison"
         }
       }
     },
@@ -2891,7 +2915,8 @@
             "value": 0.17,
             "display": 17,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 30
         },
         "midcentury": {
           "risk": {
@@ -2913,7 +2938,8 @@
             "value": 0.17,
             "display": 17,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 31
         }
       },
       "profile": {
@@ -2960,14 +2986,16 @@
           "avg_annual_violent_incidents": 182.2
         }
       },
-      "risk_rank": 31,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
+        },
+        "lower": {
           "slug": "sierra-conservation-center",
           "name": "Sierra Conservation Center"
-        },
-        "lower": null
+        }
       }
     },
     {
@@ -3005,7 +3033,8 @@
             "value": 0.52,
             "display": 52,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 8
         },
         "midcentury": {
           "risk": {
@@ -3027,7 +3056,8 @@
             "value": 0.52,
             "display": 52,
             "category": "Highest"
-          }
+          },
+          "risk_rank": 11
         }
       },
       "profile": {
@@ -3074,16 +3104,15 @@
           "avg_annual_violent_incidents": 429.4
         }
       },
-      "risk_rank": 11,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "valley-state-prison",
-          "name": "Valley State Prison"
+          "slug": "central-california-womens-facility",
+          "name": "Central California Women's Facility"
         },
         "lower": {
-          "slug": "kern-valley-state-prison",
-          "name": "Kern Valley State Prison"
+          "slug": "california-state-prison-los-angeles-county",
+          "name": "California State Prison, Los Angeles County"
         }
       }
     },
@@ -3122,7 +3151,8 @@
             "value": 0.38,
             "display": 38,
             "category": "High"
-          }
+          },
+          "risk_rank": 29
         },
         "midcentury": {
           "risk": {
@@ -3144,7 +3174,8 @@
             "value": 0.38,
             "display": 38,
             "category": "High"
-          }
+          },
+          "risk_rank": 27
         }
       },
       "profile": {
@@ -3191,16 +3222,15 @@
           "avg_annual_violent_incidents": 913.8
         }
       },
-      "risk_rank": 29,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "centinela-state-prison",
-          "name": "Centinela State Prison"
+          "slug": "correctional-training-facility",
+          "name": "Correctional Training Facility"
         },
         "lower": {
-          "slug": "sierra-conservation-center",
-          "name": "Sierra Conservation Center"
+          "slug": "pleasant-valley-state-prison",
+          "name": "Pleasant Valley State Prison"
         }
       }
     },
@@ -3239,7 +3269,8 @@
             "value": 0.38,
             "display": 38,
             "category": "High"
-          }
+          },
+          "risk_rank": 26
         },
         "midcentury": {
           "risk": {
@@ -3261,7 +3292,8 @@
             "value": 0.38,
             "display": 38,
             "category": "High"
-          }
+          },
+          "risk_rank": 23
         }
       },
       "profile": {
@@ -3308,16 +3340,15 @@
           "avg_annual_violent_incidents": 101.2
         }
       },
-      "risk_rank": 24,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "pelican-bay-state-prison",
-          "name": "Pelican Bay State Prison"
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
         },
         "lower": {
-          "slug": "correctional-training-facility",
-          "name": "Correctional Training Facility"
+          "slug": "centinela-state-prison",
+          "name": "Centinela State Prison"
         }
       }
     },
@@ -3356,7 +3387,8 @@
             "value": 0.08,
             "display": 8,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 31
         },
         "midcentury": {
           "risk": {
@@ -3378,7 +3410,8 @@
             "value": 0.08,
             "display": 8,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 29
         }
       },
       "profile": {
@@ -3425,17 +3458,13 @@
           "avg_annual_violent_incidents": 253.4
         }
       },
-      "risk_rank": 30,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
-        },
-        "lower": {
           "slug": "pleasant-valley-state-prison",
           "name": "Pleasant Valley State Prison"
-        }
+        },
+        "lower": null
       }
     },
     {
@@ -3473,7 +3502,8 @@
             "value": 0.42,
             "display": 42,
             "category": "High"
-          }
+          },
+          "risk_rank": 10
         },
         "midcentury": {
           "risk": {
@@ -3495,7 +3525,8 @@
             "value": 0.42,
             "display": 42,
             "category": "High"
-          }
+          },
+          "risk_rank": 10
         }
       },
       "profile": {
@@ -3542,16 +3573,15 @@
           "avg_annual_violent_incidents": 136.4
         }
       },
-      "risk_rank": 10,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-health-care-facility",
-          "name": "California Health Care Facility"
+          "slug": "california-state-prison-los-angeles-county",
+          "name": "California State Prison, Los Angeles County"
         },
         "lower": {
-          "slug": "richard-j-donovan-correctional-facility",
-          "name": "Richard J. Donovan Correctional Facility"
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
         }
       }
     },
@@ -3590,7 +3620,8 @@
             "value": 0.2,
             "display": 20,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 15
         },
         "midcentury": {
           "risk": {
@@ -3612,7 +3643,8 @@
             "value": 0.2,
             "display": 20,
             "category": "Lowest"
-          }
+          },
+          "risk_rank": 15
         }
       },
       "profile": {
@@ -3659,7 +3691,6 @@
           "avg_annual_violent_incidents": 300
         }
       },
-      "risk_rank": 15,
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {

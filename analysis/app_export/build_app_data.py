@@ -301,16 +301,28 @@ def main():
 
     prisons.sort(key=lambda p: p["name"])
 
-    # Overall-risk ranking (mid-century) + neighbor links for profile prev/next.
-    ranked = sorted(prisons, key=lambda p: (p["periods"]["midcentury"]["risk"]["display"]
-                                            if p["periods"]["midcentury"]["risk"]["display"] is not None
-                                            else -1), reverse=True)
-    n = len(ranked)
-    for i, p in enumerate(ranked):
-        p["risk_rank"] = i + 1
+    # Overall-risk ranking, computed WITHIN each period: the hazard component moves
+    # between periods, so a prison's standing does too, and the profile's rank line
+    # follows its period toggle. Ranked on the unrounded `value` — the rounded
+    # `display` ties often (e.g. two prisons both showing 100), which would make the
+    # order between them arbitrary.
+    n = len(prisons)
+
+    def risk_value(p, period):
+        v = p["periods"][period]["risk"]["value"]
+        return -1 if v is None else v
+
+    for period in ("historic", "midcentury"):
+        ranked = sorted(prisons, key=lambda p: risk_value(p, period), reverse=True)
+        for i, p in enumerate(ranked):
+            p["periods"][period]["risk_rank"] = i + 1
+
+    # Neighbor links for profile prev/next, ordered by the app's DEFAULT period.
+    default_ranked = sorted(prisons, key=lambda p: risk_value(p, "historic"), reverse=True)
+    for i, p in enumerate(default_ranked):
         p["risk_rank_total"] = n
-        hi = ranked[i - 1] if i > 0 else None            # higher overall risk
-        lo = ranked[i + 1] if i < n - 1 else None         # lower overall risk
+        hi = default_ranked[i - 1] if i > 0 else None      # higher overall risk
+        lo = default_ranked[i + 1] if i < n - 1 else None  # lower overall risk
         p["neighbors"] = {
             "higher": {"slug": hi["slug"], "name": hi["name"]} if hi else None,
             "lower": {"slug": lo["slug"], "name": lo["name"]} if lo else None,
