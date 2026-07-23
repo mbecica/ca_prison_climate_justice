@@ -186,7 +186,7 @@ on the seasonal calendar.
 |---|---|
 | Scrapers | `extract_gridmet_heat.py` (fully automatic, ~5.8 GB / 30–45 min) → `heat_activations_{daily,annual,monthly}.csv`; `extract_gridmet_summer_avg.py` (~3.5 GB) → `summer_avg_tmax_annual.csv` |
 | ⚠ Path drift | Both scripts write to `data_sources/hazards/` but the committed CSVs live in `data_sources/hazards/heat/` — fix the output constants (or move files) before re-running |
-| Classification | The 1991–2020 skarha baseline inside `extract_gridmet_heat.py` is **FROZEN by definition** (WMO normal period — never re-window). The daily/annual/monthly activation files and `summer_avg_tmax_annual.csv` are **LIVING-extendable**: re-running with `ANALYSIS_YEARS` extended appends seasons under the same names |
+| Classification | The 1991–2020 mean summer tmax baseline inside `extract_gridmet_heat.py` is **FROZEN by definition** (WMO normal period — never re-window). The daily/annual/monthly activation files and `summer_avg_tmax_annual.csv` are **LIVING-extendable**: re-running with `ANALYSIS_YEARS` extended appends seasons under the same names |
 | Consumers | `build_heat_operations_panel.py` (family 8) · the heat_activations report · Heat Tracker baseline **validation** (one-time cross-check, not a runtime dependency) |
 
 ## 8. CJC report analyses (heat operations, indoor/outdoor, risk report)
@@ -254,7 +254,7 @@ that needs Mary's sign-off before this runbook is adopted.**
 | **Manual vintaged snapshots** — `CDCR_YYYY_pop_averages.csv`, `cdcr_in-custody-*_YYYY.csv`, `air_cooling_*_dec2025.csv`, `cchcs_mortality_2006-2024.csv`, MPAR extracts | FROZEN | Hand-made point-in-time snapshots; a new one lands alongside |
 | `data/hazards/{heat_air,flood,drought}_hazard.csv` | LIVING | Rebuilt only when a source layer re-releases (unscheduled) |
 | `data/allfacilities_climate_hazards.csv` | LIVING | Join of living inputs |
-| `data_sources/hazards/heat/heat_activations_*.csv`, `summer_avg_tmax_annual.csv` | LIVING (extendable) | Seasons appended; skarha baseline inside is definitionally fixed |
+| `data_sources/hazards/heat/heat_activations_*.csv`, `summer_avg_tmax_annual.csv` | LIVING (extendable) | Seasons appended; the mean summer tmax baseline inside is definitionally fixed |
 | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` | **FROZEN (2025 vintage)** | The analysis PHI ships; next cut gets a vintage name alongside |
 | `data/cdcr/indoor_outdoor_heat_2025.csv` | FROZEN (manual, one-time) | Built once from a specific CDCR PDF for the memo; no builder script exists. ⚠ Gap: if indoor data is ever re-released, write a builder then — otherwise it never updates |
 | `data/cdcr/CDCR_heat_risk_index_multiplicative.csv` | FROZEN (alternate method) | Intentional alternate index formulation, kept for possible future re-evaluation — not stale, do not delete |

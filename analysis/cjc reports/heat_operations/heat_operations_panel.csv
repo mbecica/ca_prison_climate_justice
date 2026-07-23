@@ -1,4 +1,4 @@
-facility,year,month,days_over_90f,days_over_95f,days_skarha10,dental_mh_overtime,modified_programs_days,deaths_unexpected,uof_incidents,violent_incidents,inmate_on_inmate,staff_involved,ed_hospital_rate,ed_hospital_cost,total_labor_cost,specialty_care_referrals,prescriptions_per_patient,actual_expenditure_monthly,institution_budget,vacancy_all,vacancy_medical,vacancy_dental,vacancy_mh,crowding_pct,ac_type,security_level,post_ac
+facility,year,month,days_over_90f,days_over_95f,days_over_avg_plus10,dental_mh_overtime,modified_programs_days,deaths_unexpected,uof_incidents,violent_incidents,inmate_on_inmate,staff_involved,ed_hospital_rate,ed_hospital_cost,total_labor_cost,specialty_care_referrals,prescriptions_per_patient,actual_expenditure_monthly,institution_budget,vacancy_all,vacancy_medical,vacancy_dental,vacancy_mh,crowding_pct,ac_type,security_level,post_ac
 ASP,2016,1,0,0,0,,,,,,,,,,,,,,,,,,,113.2,evaporative,MEDIUM,0
 ASP,2016,2,0,0,0,,,,,,,,,,,,,,,,,,,113.2,evaporative,MEDIUM,0
 ASP,2016,3,0,0,0,,,,,,,,,,,,,,,,,,,109.8,evaporative,MEDIUM,0

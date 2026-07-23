@@ -71,16 +71,17 @@ Daily and annual observed outdoor temperatures at CDCR state prisons, derived fr
 | :--- | :--- | :--- |
 | `over_90f` / `days_over_90f` | Outdoor tmax ≥ 90°F | Corresponds to CDCR Heat Pathology Plan Stage I outdoor trigger |
 | `over_95f` / `days_over_95f` | Outdoor tmax ≥ 95°F | Corresponds to Stage III outdoor threshold; **Stage III protocol is triggered by indoor temperature** — outdoor is a proxy only |
-| `skarha10` / `days_skarha10` | Outdoor tmax ≥ facility mean summer tmax + 10°F (baseline: 1991–2020 Jun–Aug mean) | Skarha et al. (2023) marginal mortality metric; the only threshold with a mortality calibration |
+| `over_avg` / `days_over_avg` | Outdoor tmax ≥ facility mean summer tmax (baseline: 1991–2020 Jun–Aug mean) | Soft relative threshold — shift in the bulk of the distribution |
+| `over_avg_plus10` / `days_over_avg_plus10` | Outdoor tmax ≥ facility mean summer tmax + 10°F (baseline: 1991–2020 Jun–Aug mean) | Skarha et al. (2023) marginal mortality metric; the only threshold with a mortality calibration |
 
-The 90°F and 95°F thresholds have no direct mortality calibration in the literature — they are regulatory exposure metrics only. The Skarha 10°F threshold carries a statistically significant 5.2% all-cause mortality association (see `heat_hazard.ipynb`).
+The 90°F and 95°F thresholds have no direct mortality calibration in the literature — they are regulatory exposure metrics only. The mean-summer-plus-10°F threshold carries a statistically significant 5.2% all-cause mortality association (see `heat_hazard.ipynb`).
 
 ### Files
 
 | File | Description | Years | Source |
 | :--- | :--- | :--- | :--- |
-| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags (`over_90f`, `over_95f`, `skarha10`) per facility | 2016–2025 | gridMET (Abatzoglou, 2013) |
-| `heat_activations_annual.csv` | Annual count of days over 90°F, days over 95°F, and Skarha 10°F threshold exceedances per facility | 2016–2025 | gridMET (Abatzoglou, 2013) |
+| `heat_activations_daily.csv` | Daily tmax (°F) and threshold flags (`over_90f`, `over_95f`, `over_avg`, `over_avg_plus10`) per facility | 2016–2025 | gridMET (Abatzoglou, 2013) |
+| `heat_activations_annual.csv` | Annual counts: `days_over_90f`, `days_over_95f`, `days_over_avg`, `days_over_avg_plus10` per facility | 2016–2025 | gridMET (Abatzoglou, 2013) |
 | `heat_activations_monthly.csv` | Monthly count of days over 90°F and 95°F per facility per year | 2016–2025 | gridMET (Abatzoglou, 2013) |
 | `summer_avg_tmax_annual.csv` | Mean Jun–Aug daily tmax (°F) per facility per year | 1990–2025 | gridMET (Abatzoglou, 2013) |
 

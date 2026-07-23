@@ -62,7 +62,7 @@ for col in ["dental_mh_overtime", "modified_programs_days", "uof_incidents",
             "ed_hospital_cost", "total_labor_cost",
             "specialty_care_referrals", "prescriptions_per_patient",
             "actual_expenditure_monthly", "institution_budget",
-            "crowding_pct", "days_over_90f", "days_skarha10",
+            "crowding_pct", "days_over_90f", "days_over_avg_plus10",
             "vacancy_all", "vacancy_medical", "vacancy_dental", "vacancy_mh"]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
@@ -84,7 +84,7 @@ df["log_staff_v"]      = np.log1p(df["staff_involved"])
 # Lag-1 heat variables (within facility, by calendar date)
 df_sorted = df.sort_values(["facility", "date"])
 df["heat_90_lag1"]    = df_sorted.groupby("facility")["days_over_90f"].shift(1)
-df["heat_skarha_lag1"] = df_sorted.groupby("facility")["days_skarha10"].shift(1)
+df["over_avg_plus10_lag1"] = df_sorted.groupby("facility")["days_over_avg_plus10"].shift(1)
 
 # Crowding: standardize so coefficient is per 10pp
 df["crowding_10pp"] = df["crowding_pct"] / 10
@@ -203,7 +203,7 @@ OUTCOMES = [
 ]
 HEAT_VARS = [
     ("days_over_90f",  "Days >90°F"),
-    ("days_skarha10",  "Days mean summer temp. anomaly"),
+    ("days_over_avg_plus10",  "Days mean summer temp. anomaly"),
 ]
 
 main_rows = []
@@ -242,7 +242,7 @@ print("\nRunning robustness regressions (lag-1)...")
 
 rob_rows = []
 for heat_var, heat_label in HEAT_VARS:
-    lag_var = "heat_90_lag1" if heat_var == "days_over_90f" else "heat_skarha_lag1"
+    lag_var = "heat_90_lag1" if heat_var == "days_over_90f" else "over_avg_plus10_lag1"
     for outcome, outcome_label in OUTCOMES:
         res = run_twfe(df, outcome, lag_var)
         coef = extract_coef(res, lag_var)

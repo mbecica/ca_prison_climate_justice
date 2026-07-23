@@ -155,7 +155,7 @@ Join all sources to a single `facility × calendar_month` panel:
 ### Step 3: Compute Skarha facility-relative anomaly
 - From `heat_activations_daily.csv`, compute each facility's mean Jun–Aug tmax over 1991–2020
 - For each facility-day: flag if tmax ≥ (facility mean + 10°F)
-- Aggregate to monthly count: `days_skarha_anomaly`
+- Aggregate to monthly count: `days_over_avg_plus10`
 
 ### Step 4: Merge static covariates
 - AC type: `air_cooling_infrastructure_dec2025.csv` → categorical variable (mechanical / evaporative / ventilation)

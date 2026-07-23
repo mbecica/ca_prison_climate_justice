@@ -42,7 +42,7 @@ OUT_DIR = "analysis/cjc reports/heat_operations"
 
 print("Loading panel...")
 df = pd.read_csv(os.path.join(OUT_DIR, "heat_operations_panel.csv"))
-for col in ["days_over_90f", "days_skarha10", "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
+for col in ["days_over_90f", "days_over_avg_plus10", "ed_hospital_rate", "ed_hospital_cost", "total_labor_cost",
             "specialty_care_referrals", "prescriptions_per_patient",
             "dental_mh_overtime", "modified_programs_days", "crowding_pct",
             "uof_incidents", "violent_incidents", "inmate_on_inmate", "staff_involved",

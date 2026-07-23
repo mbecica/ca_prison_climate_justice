@@ -2,17 +2,20 @@
 gridMET daily maximum temperature extraction for CDCR state prisons.
 
 Outputs:
-  data_sources/hazards/heat_activations_daily.csv   — daily tmax + activation flags per facility (2016–2025)
-  data_sources/hazards/heat_activations_annual.csv  — annual counts per facility
-  data_sources/hazards/heat_activations_monthly.csv — monthly counts per facility per year
+  data_sources/hazards/heat/heat_activations_daily.csv   — daily tmax + activation flags per facility (2016–2025)
+  data_sources/hazards/heat/heat_activations_annual.csv  — annual counts per facility
+  data_sources/hazards/heat/heat_activations_monthly.csv — monthly counts per facility per year
 
 Metrics:
-  over_90f  — outdoor tmax >= 90°F  (CDCR Heat Pathology Plan Stage I outdoor threshold)
-  over_95f  — outdoor tmax >= 95°F  (CDCR Heat Pathology Plan Stage III outdoor threshold;
-              note: Stage III protocol is triggered by indoor temperature, not outdoor)
-  skarha10  — tmax >= facility mean summer (Jun–Aug) tmax + 10°F
-              Based on Skarha et al. (2023) marginal mortality metric.
-              Baseline: 1991–2020 mean Jun–Aug tmax per facility (WMO 30-year normal period).
+  over_90f         — outdoor tmax >= 90°F  (CDCR Heat Pathology Plan Stage I outdoor threshold)
+  over_95f         — outdoor tmax >= 95°F  (CDCR Heat Pathology Plan Stage III outdoor threshold;
+                     note: Stage III protocol is triggered by indoor temperature, not outdoor)
+  over_avg         — tmax >= facility mean summer (Jun–Aug) tmax
+  over_avg_plus10  — tmax >= facility mean summer (Jun–Aug) tmax + 10°F
+                     Based on Skarha et al. (2023) marginal mortality metric.
+
+  Baseline for both relative metrics: 1991–2020 mean Jun–Aug tmax per facility
+  (WMO 30-year normal period), held fixed across all analysis years.
 
 Source: gridMET (University of Idaho), variable tmmx (daily maximum temperature, Kelvin)
         https://www.northwestknowledge.net/metdata/data/tmmx_{year}.nc
@@ -38,16 +41,16 @@ from pathlib import Path
 
 GRIDMET_URL = "https://www.northwestknowledge.net/metdata/data/tmmx_{year}.nc"
 
-BASELINE_YEARS = range(1991, 2021)   # 1991–2020 inclusive, for Skarha mean
+BASELINE_YEARS = range(1991, 2021)   # 1991–2020 inclusive, for the mean summer baseline
 ANALYSIS_YEARS = range(2016, 2026)   # 2016–2025 inclusive
 
 STAGE1_F = 90.0
 STAGE3_F = 95.0
-SKARHA_DELTA_F = 10.0  # degrees above facility mean summer tmax
+DELTA_F = 10.0  # degrees above facility mean summer tmax
 
 REPO_ROOT = Path(__file__).parent.parent
-FACILITIES_CSV = REPO_ROOT / "data" / "cdcr_facilities.csv"
-OUTPUT_DIR = REPO_ROOT / "data_sources" / "hazards"
+FACILITIES_CSV = REPO_ROOT / "data" / "cdcr" / "cdcr_facilities.csv"
+OUTPUT_DIR = REPO_ROOT / "data_sources" / "hazards" / "heat"
 
 
 # ---------------------------------------------------------------------------
@@ -120,13 +123,13 @@ def extract_facility_tmax(nc_path, facilities):
 # Step 1: Compute per-facility mean summer (Jun–Aug) tmax over 1991–2020
 # ---------------------------------------------------------------------------
 
-def compute_skarha_baselines(facilities):
+def compute_avg_summer_baselines(facilities):
     """
     Download 1991–2020 gridMET files and compute mean Jun–Aug tmax per facility.
 
     Returns a dict: cdcr_code -> mean_summer_tmax_f
     """
-    print("\n=== Computing Skarha baselines (1991–2020 mean Jun–Aug tmax) ===")
+    print("\n=== Computing mean summer baselines (1991–2020 mean Jun–Aug tmax) ===")
 
     # Accumulate summer days across all baseline years
     summer_records = []
@@ -156,7 +159,7 @@ def compute_skarha_baselines(facilities):
 
     print("\nFacility mean summer tmax (°F):")
     for code, mean_f in sorted(baselines.items()):
-        print(f"  {code:6s}  {mean_f:.1f}°F  (threshold: {mean_f + SKARHA_DELTA_F:.1f}°F)")
+        print(f"  {code:6s}  {mean_f:.1f}°F  (+10°F threshold: {mean_f + DELTA_F:.1f}°F)")
 
     return baselines
 
@@ -165,11 +168,12 @@ def compute_skarha_baselines(facilities):
 # Step 2: Extract 2016–2025 daily data and apply thresholds
 # ---------------------------------------------------------------------------
 
-def extract_analysis_years(facilities, skarha_baselines):
+def extract_analysis_years(facilities, avg_summer_baselines):
     """
     Download 2016–2025 gridMET files and build the daily activation dataset.
 
-    Returns daily DataFrame with: cdcr_code, date, tmax_f, stage1, stage3, skarha10
+    Returns daily DataFrame with:
+      cdcr_code, date, tmax_f, over_90f, over_95f, over_avg, over_avg_plus10
     """
     print("\n=== Extracting analysis years (2016–2025) ===")
 
@@ -196,11 +200,13 @@ def extract_analysis_years(facilities, skarha_baselines):
     # Apply thresholds
     daily["over_90f"] = (daily["tmax_f"] >= STAGE1_F).astype(int)
     daily["over_95f"] = (daily["tmax_f"] >= STAGE3_F).astype(int)
-    daily["skarha_threshold_f"] = daily["cdcr_code"].map(
-        lambda c: skarha_baselines.get(c, np.nan) + SKARHA_DELTA_F
+    daily["avg_threshold_f"] = daily["cdcr_code"].map(
+        lambda c: avg_summer_baselines.get(c, np.nan)
     )
-    daily["skarha10"]  = (daily["tmax_f"] >= daily["skarha_threshold_f"]).astype(int)
-    daily = daily.drop(columns=["skarha_threshold_f"])
+    daily["avg_plus10_threshold_f"] = daily["avg_threshold_f"] + DELTA_F
+    daily["over_avg"] = (daily["tmax_f"] >= daily["avg_threshold_f"]).astype(int)
+    daily["over_avg_plus10"] = (daily["tmax_f"] >= daily["avg_plus10_threshold_f"]).astype(int)
+    daily = daily.drop(columns=["avg_threshold_f", "avg_plus10_threshold_f"])
 
     return daily
 
@@ -219,7 +225,8 @@ def aggregate(daily):
         .agg(
             days_over_90f=("over_90f", "sum"),
             days_over_95f=("over_95f", "sum"),
-            days_skarha10=("skarha10", "sum"),
+            days_over_avg=("over_avg", "sum"),
+            days_over_avg_plus10=("over_avg_plus10", "sum"),
         )
         .reset_index()
     )
@@ -244,9 +251,9 @@ def main():
     print("Loading facilities...")
     facilities = load_facilities()
 
-    skarha_baselines = compute_skarha_baselines(facilities)
+    avg_summer_baselines = compute_avg_summer_baselines(facilities)
 
-    daily = extract_analysis_years(facilities, skarha_baselines)
+    daily = extract_analysis_years(facilities, avg_summer_baselines)
 
     annual, monthly = aggregate(daily)
 
@@ -266,8 +273,8 @@ def main():
     print(f"Wrote {len(annual):,} rows  → {annual_path.relative_to(REPO_ROOT)}")
     print(f"Wrote {len(monthly):,} rows  → {monthly_path.relative_to(REPO_ROOT)}")
 
-    print("\nSample annual output (top 10 by days_skarha10):")
-    print(annual.nlargest(10, "days_skarha10").to_string(index=False))
+    print("\nSample annual output (top 10 by days_over_avg_plus10):")
+    print(annual.nlargest(10, "days_over_avg_plus10").to_string(index=False))
 
 
 if __name__ == "__main__":
