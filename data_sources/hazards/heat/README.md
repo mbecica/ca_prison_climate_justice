@@ -163,9 +163,13 @@ Every facility carries the identical column set. Period suffix is one of `histor
 Absolute thresholds match the published Cal-Adapt variables, so the reproduction check above
 covers all four. Relative thresholds are anchored to each member's own 1981–2010 value, held
 fixed and applied to every period. A baseline that moved with the climate would cancel the shift
-these counts exist to measure. In the historical period
-`days_over_avg` is therefore about half the summer days by construction; the information is in
-how far mid- and end-century rise above it.
+these counts exist to measure.
+
+`days_over_avg` counts the whole year against a summer-mean threshold, so in the historical
+period it lands near half of summer by construction plus the shoulder-season days that also
+clear it: 71 days a year at the median facility, 77 on average, ranging 60 to 131. The
+information is in how far mid- and end-century rise above that, not in the level itself. Across
+357 facilities the historical-to-mid-century increase averages +38.5 days.
 
 The `plus10` rung follows Skarha et al. (2023), whose facility-relative anomaly carries a
 published mortality coefficient. Ovienmhada et al. (2024) apply the same threshold as one of
