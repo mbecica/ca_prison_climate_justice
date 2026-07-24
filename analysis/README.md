@@ -72,7 +72,7 @@ The OIG audit (89°F threshold, unit-level) and our 2025 exposure data (78°F th
 | High Desert (HDSP) | 3 of 27 (11%) | 1 | 89 | 128 | 0.695 | 100% evaporative | 1,267 m | 0.041 |
 | Lancaster (LAC) | 10 of 29 (34%) | 2 | 39 | 162 | 0.241 | 96% evaporative | 716 m | 0.000 |
 
-LAC's low indoor/outdoor ratio (0.241) despite 162 outdoor 78°F days reflects that evaporative cooling performs well in Lancaster's low-humidity desert climate. COR's ratio of 0.975 means its buildings provide almost no attenuation — consistent with 70% of OIG-audited units recording extreme heat days.
+LAC's low indoor/outdoor ratio (0.241) despite 162 outdoor 78°F days reflects strong indoor attenuation of outdoor heat. It is not a humidity effect: LAC is the driest of the 31 facilities (summer wet-bulb depression 30.4°F), but COR is nearly as dry (26.9°F) with a ratio of 0.975, so evaporative-cooling capacity does not distinguish them — the difference is in the buildings, not the climate. COR's ratio of 0.975 means its buildings provide almost no attenuation — consistent with 70% of OIG-audited units recording extreme heat days.
 
 ### Vulnerability Component
 

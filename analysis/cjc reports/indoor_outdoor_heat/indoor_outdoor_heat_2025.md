@@ -19,6 +19,42 @@ Pearson r (indoor 78°F days vs outdoor 78°F days, 2025):
 - Cluster B: r=−0.173, p=0.78
 - Cluster C: r=+0.104, p=0.68
 
+## Humidity and evaporative cooling capacity
+
+An evaporative ("swamp") cooler cannot cool air below the wet-bulb temperature, so its physical
+capacity is the wet-bulb depression `wbd = tmax − twb` (°F). `facility_wetbulb_2025.csv`
+(`extract_wetbulb.py`) reports `wbd`, the delivered supply-air temperature `tmax − ε·wbd`
+(ε = 0.70/0.80/0.85 direct-evaporative effectiveness), and the count of days a cooler cannot
+reach 78°F/85°F, per facility over May–Oct 2025, from gridMET daily-min relative humidity paired
+with the coincident daily-max temperature (Stull 2011 wet-bulb).
+
+In California's dry heat, humidity does not limit evaporative cooling. Wet-bulb depression at the
+predominantly-evaporative facilities (evaporative the dominant cooling mode, n=15) is 20–28°F.
+Every facility reaches 85°F on every summer day (`days_evap_cannot_reach_85f` = 0 at ε=0.80, and
+still 0 at the conservative ε=0.70), and reaches 78°F on all but ≤2 days. The large cannot-reach
+counts (50–62 days) belong to CAL/CEN/ISP — full-mechanical Imperial Valley prisons that do not
+use evaporative cooling and are limited by dry-bulb magnitude.
+
+Humidity also does not explain the indoor-day spread within the predominantly-evaporative group
+(range 1–159 days). Correlations with `days_indoor_above_78f_2025`:
+
+| predictor | r | p |
+| :--- | ---: | ---: |
+| wet-bulb depression (`wbd`) | +0.31 | 0.26 |
+| evaporative share × `wbd` (effective evaporative capacity) | +0.17 | 0.55 |
+| evaporative share | −0.10 | 0.73 |
+
+The wet-bulb depression is null and, where it trends, drier facilities have slightly *more* indoor
+hot days — dryness coincides with Central Valley heat, the opposite of a humidity limitation. The
+spread belongs to building envelope, cooler sizing and condition, operations, or occupancy. LAC's
+low indoor/outdoor ratio (0.241) is not a humidity effect: LAC is the driest of the 31 (`wbd`
+30.4°F) but COR is equally dry (`wbd` 26.9°F) with a ratio of 0.975. Humidity is therefore left
+out of the clustering, the regression, and the risk index; the clustering stays k=3 on the
+feature set above.
+
+Humidity as a *hazard* is separately settled: Skarha et al. (2023) tested heat index and WBGT
+against carceral mortality and neither improved on dry-bulb tmax.
+
 ## Building Envelope
 
 Roofing and building envelope project status per facility drawn from:
@@ -42,3 +78,4 @@ Pre-2017 roofing was funded through a pooled annual special repair appropriation
 | `elevation_m` | USGS National Elevation Dataset (EPQS API) |
 | `avg_tmin_f_2025` | gridMET daily tmin (tmmn), May–October 2025 |
 | `envelope_work` | CDCR MPAR, LAO budget analyses, SIFC Roof Replacement Needs page, contractor records |
+| `facility_wetbulb_2025.csv` (`wbd_mean_f_may_oct`, `days_evap_cannot_reach_{78,85}f_eps{70,80,85}_may_oct`, …) | gridMET daily-min/max relative humidity (rmin/rmax), University of Idaho, 2025, paired with gridMET tmax; wet-bulb via Stull (2011). Built by `extract_wetbulb.py`. |

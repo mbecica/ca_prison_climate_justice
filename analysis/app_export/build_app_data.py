@@ -266,6 +266,10 @@ def main():
                     "hot_days": {  # days_over_avg_plus10 (relative, Skarha threshold)
                         "historic": num(hz("heat_days_over_avg_plus10_historic"), 1),
                         "midcentury": num(hz("heat_days_over_avg_plus10_midcentury"), 1),
+                        # Facility's historic mean summer daily-high (°F). The hot-day
+                        # threshold is this + 10°F, so the app can label the metric with
+                        # the actual per-facility cutoff.
+                        "avg_summer_high_f": num(hz("heat_avg_summer_tmax_f"), 1),
                     },
                     "warm_nights": {  # nights_over_p95, Apr-Oct, per year (relative)
                         "historic": num(hz("heat_nights_over_p95_historic"), 1),

@@ -122,7 +122,8 @@
           },
           "hot_days": {
             "historic": 6.3,
-            "midcentury": 20.2
+            "midcentury": 20.2,
+            "avg_summer_high_f": 94.8
           },
           "warm_nights": {
             "historic": 14,
@@ -246,7 +247,8 @@
           },
           "hot_days": {
             "historic": 6.7,
-            "midcentury": 30.1
+            "midcentury": 30.1,
+            "avg_summer_high_f": 81.4
           },
           "warm_nights": {
             "historic": 14.7,
@@ -370,7 +372,8 @@
           },
           "hot_days": {
             "historic": 8.8,
-            "midcentury": 25.5
+            "midcentury": 25.5,
+            "avg_summer_high_f": 92
           },
           "warm_nights": {
             "historic": 14.8,
@@ -494,7 +497,8 @@
           },
           "hot_days": {
             "historic": 12.8,
-            "midcentury": 36.9
+            "midcentury": 36.9,
+            "avg_summer_high_f": 88.7
           },
           "warm_nights": {
             "historic": 14.4,
@@ -615,7 +619,8 @@
           },
           "hot_days": {
             "historic": 13.5,
-            "midcentury": 37
+            "midcentury": 37,
+            "avg_summer_high_f": 89.1
           },
           "warm_nights": {
             "historic": 14.3,
@@ -739,7 +744,8 @@
           },
           "hot_days": {
             "historic": 14.5,
-            "midcentury": 31.6
+            "midcentury": 31.6,
+            "avg_summer_high_f": 88.3
           },
           "warm_nights": {
             "historic": 14.4,
@@ -863,7 +869,8 @@
           },
           "hot_days": {
             "historic": 24.1,
-            "midcentury": 44.3
+            "midcentury": 44.3,
+            "avg_summer_high_f": 71.1
           },
           "warm_nights": {
             "historic": 12.1,
@@ -987,7 +994,8 @@
           },
           "hot_days": {
             "historic": 11.1,
-            "midcentury": 33.5
+            "midcentury": 33.5,
+            "avg_summer_high_f": 91.2
           },
           "warm_nights": {
             "historic": 14.4,
@@ -1111,7 +1119,8 @@
           },
           "hot_days": {
             "historic": 4.6,
-            "midcentury": 19.4
+            "midcentury": 19.4,
+            "avg_summer_high_f": 97.4
           },
           "warm_nights": {
             "historic": 14.5,
@@ -1235,7 +1244,8 @@
           },
           "hot_days": {
             "historic": 7,
-            "midcentury": 27.8
+            "midcentury": 27.8,
+            "avg_summer_high_f": 93.3
           },
           "warm_nights": {
             "historic": 15.1,
@@ -1359,7 +1369,8 @@
           },
           "hot_days": {
             "historic": 7.7,
-            "midcentury": 24.9
+            "midcentury": 24.9,
+            "avg_summer_high_f": 89.6
           },
           "warm_nights": {
             "historic": 14.7,
@@ -1483,7 +1494,8 @@
           },
           "hot_days": {
             "historic": 14.5,
-            "midcentury": 31.6
+            "midcentury": 31.6,
+            "avg_summer_high_f": 88.3
           },
           "warm_nights": {
             "historic": 14.4,
@@ -1607,7 +1619,8 @@
           },
           "hot_days": {
             "historic": 4.6,
-            "midcentury": 19.4
+            "midcentury": 19.4,
+            "avg_summer_high_f": 97.4
           },
           "warm_nights": {
             "historic": 14.5,
@@ -1731,7 +1744,8 @@
           },
           "hot_days": {
             "historic": 2.6,
-            "midcentury": 15.6
+            "midcentury": 15.6,
+            "avg_summer_high_f": 106.8
           },
           "warm_nights": {
             "historic": 13.9,
@@ -1855,7 +1869,8 @@
           },
           "hot_days": {
             "historic": 2.6,
-            "midcentury": 14
+            "midcentury": 14,
+            "avg_summer_high_f": 107.5
           },
           "warm_nights": {
             "historic": 14,
@@ -1976,7 +1991,8 @@
           },
           "hot_days": {
             "historic": 5.7,
-            "midcentury": 23.7
+            "midcentury": 23.7,
+            "avg_summer_high_f": 94.9
           },
           "warm_nights": {
             "historic": 14.4,
@@ -2100,7 +2116,8 @@
           },
           "hot_days": {
             "historic": 18,
-            "midcentury": 31.7
+            "midcentury": 31.7,
+            "avg_summer_high_f": 81.8
           },
           "warm_nights": {
             "historic": 12.6,
@@ -2224,7 +2241,8 @@
           },
           "hot_days": {
             "historic": 10.1,
-            "midcentury": 27.8
+            "midcentury": 27.8,
+            "avg_summer_high_f": 92.8
           },
           "warm_nights": {
             "historic": 15,
@@ -2348,7 +2366,8 @@
           },
           "hot_days": {
             "historic": 7.9,
-            "midcentury": 34.3
+            "midcentury": 34.3,
+            "avg_summer_high_f": 88.9
           },
           "warm_nights": {
             "historic": 16.3,
@@ -2472,7 +2491,8 @@
           },
           "hot_days": {
             "historic": 2.3,
-            "midcentury": 15.8
+            "midcentury": 15.8,
+            "avg_summer_high_f": 108.1
           },
           "warm_nights": {
             "historic": 14.5,
@@ -2596,7 +2616,8 @@
           },
           "hot_days": {
             "historic": 4.7,
-            "midcentury": 20
+            "midcentury": 20,
+            "avg_summer_high_f": 97.3
           },
           "warm_nights": {
             "historic": 14.3,
@@ -2720,7 +2741,8 @@
           },
           "hot_days": {
             "historic": 9.6,
-            "midcentury": 28.2
+            "midcentury": 28.2,
+            "avg_summer_high_f": 93.4
           },
           "warm_nights": {
             "historic": 14.5,
@@ -2844,7 +2866,8 @@
           },
           "hot_days": {
             "historic": 4.6,
-            "midcentury": 20.5
+            "midcentury": 20.5,
+            "avg_summer_high_f": 96.9
           },
           "warm_nights": {
             "historic": 14.3,
@@ -2968,7 +2991,8 @@
           },
           "hot_days": {
             "historic": 13.4,
-            "midcentury": 23.2
+            "midcentury": 23.2,
+            "avg_summer_high_f": 69.4
           },
           "warm_nights": {
             "historic": 12.3,
@@ -3092,7 +3116,8 @@
           },
           "hot_days": {
             "historic": 5.5,
-            "midcentury": 22.3
+            "midcentury": 22.3,
+            "avg_summer_high_f": 96
           },
           "warm_nights": {
             "historic": 14.2,
@@ -3216,7 +3241,8 @@
           },
           "hot_days": {
             "historic": 13.6,
-            "midcentury": 31.5
+            "midcentury": 31.5,
+            "avg_summer_high_f": 81.4
           },
           "warm_nights": {
             "historic": 13.3,
@@ -3340,7 +3366,8 @@
           },
           "hot_days": {
             "historic": 17.9,
-            "midcentury": 32.8
+            "midcentury": 32.8,
+            "avg_summer_high_f": 80.1
           },
           "warm_nights": {
             "historic": 12.8,
@@ -3464,7 +3491,8 @@
           },
           "hot_days": {
             "historic": 13.1,
-            "midcentury": 28
+            "midcentury": 28,
+            "avg_summer_high_f": 82.4
           },
           "warm_nights": {
             "historic": 14.5,
@@ -3588,7 +3616,8 @@
           },
           "hot_days": {
             "historic": 7.8,
-            "midcentury": 28.3
+            "midcentury": 28.3,
+            "avg_summer_high_f": 92.8
           },
           "warm_nights": {
             "historic": 14.3,
@@ -3712,7 +3741,8 @@
           },
           "hot_days": {
             "historic": 5.7,
-            "midcentury": 23.6
+            "midcentury": 23.6,
+            "avg_summer_high_f": 95
           },
           "warm_nights": {
             "historic": 14.4,
@@ -3836,7 +3866,8 @@
           },
           "hot_days": {
             "historic": 4.5,
-            "midcentury": 19.4
+            "midcentury": 19.4,
+            "avg_summer_high_f": 97.4
           },
           "warm_nights": {
             "historic": 14.2,
