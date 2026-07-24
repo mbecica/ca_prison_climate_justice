@@ -366,7 +366,7 @@ def main():
                            "exposure and vulnerability are held constant (2025 "
                            "values).",
             "scale_note": "Scores are relative to California's 31 state prisons: "
-                          "the lowest sits near 0 and the highest near 100. A low "
+                          "a higher score means more at risk from extreme heat than the other prisons. A low "
                           "score means lower risk than other prisons, not that the "
                           "heat is safe.",
             "categories": CATEGORIES,
