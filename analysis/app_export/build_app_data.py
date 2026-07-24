@@ -274,10 +274,19 @@ def main():
                     "aqi_pctile": num(hz("heat_aqi_pctile")),
                 },
                 "cooling": {
-                    "pct_units_refrigeration": num(f["pct_units_refrigeration"], 4),
-                    "pct_units_evaporation": num(f["pct_units_evaporation"], 4),
-                    "pct_units_ventilation": num(f["pct_units_ventilation"], 4),
-                    "n_housing_units": num(f["n_housing_units"]),
+                    # Housing-unit cooling mix from the CDCR Air Cooling Pilot
+                    # Supplemental Report (Jan 2026, as of Dec 2025) — the newest,
+                    # complete, per-facility source. Replaces the older, incomplete
+                    # Reuters FOIA equipment inventory (pct_units_*). Mixed-cooling
+                    # units are counted under each type, so shares can sum slightly >1.
+                    # Only "mechanical" is refrigerated AC; evaporative and ventilation
+                    # do not provide reliable cooling.
+                    "mechanical_pct": num(f["pct_buildings_refrigeration"], 4),
+                    "evaporative_pct": num(f["pct_buildings_evaporation"], 4),
+                    "ventilation_pct": num(f["pct_buildings_ventilation"], 4),
+                    "n_housing_units": num(f["n_housing_buildings"]),
+                    "as_of": "2025-12",
+                    "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026",
                 },
                 "demographics": {
                     # gender_female_pct and race_peopleofcolor_pct are fractions

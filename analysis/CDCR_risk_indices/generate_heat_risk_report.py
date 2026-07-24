@@ -450,7 +450,7 @@ for _, row in exp_data.iterrows():
         f"| {fmt_i(row['days_indoor_above_78f_2025'])} "
         f"| {fmt_f(row['ratio_indoor_to_outdoor'])} "
         f"| {fmt_f(row['uhi_normalized'])} "
-        f"| {fmt_f(1 - row.get('pct_units_refrigeration', 0) if 'pct_units_refrigeration' in row.index else float('nan'))} "
+        f"| {fmt_f(1 - row.get('pct_buildings_refrigeration', 0) if 'pct_buildings_refrigeration' in row.index else float('nan'))} "
         f"| {row['exposure_score']:.2f} |"
     )
 

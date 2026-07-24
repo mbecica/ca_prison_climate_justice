@@ -69,8 +69,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 20.44,
-            "display": 20,
+            "value": 18.92,
+            "display": 19,
             "category": "Lowest"
           },
           "hazard": {
@@ -92,8 +92,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 43.6,
-            "display": 44,
+            "value": 40.34,
+            "display": 40,
             "category": "Lowest"
           },
           "hazard": {
@@ -131,10 +131,12 @@
           "aqi_pctile": 34.12999199345762
         },
         "cooling": {
-          "pct_units_refrigeration": 0,
-          "pct_units_evaporation": 1,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 69
+          "mechanical_pct": 0,
+          "evaporative_pct": 1,
+          "ventilation_pct": 0,
+          "n_housing_units": 20,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -191,8 +193,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 35,
-            "display": 35,
+            "value": 31.79,
+            "display": 32,
             "category": "Lowest"
           },
           "hazard": {
@@ -201,8 +203,8 @@
             "category": "Lowest"
           },
           "exposure": {
-            "value": 0.51,
-            "display": 51,
+            "value": 0.5,
+            "display": 50,
             "category": "High"
           },
           "vulnerability": {
@@ -210,12 +212,12 @@
             "display": 26,
             "category": "Moderate"
           },
-          "risk_rank": 18
+          "risk_rank": 21
         },
         "midcentury": {
           "risk": {
-            "value": 69.17,
-            "display": 69,
+            "value": 63.42,
+            "display": 63,
             "category": "Moderate"
           },
           "hazard": {
@@ -224,8 +226,8 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.51,
-            "display": 51,
+            "value": 0.5,
+            "display": 50,
             "category": "High"
           },
           "vulnerability": {
@@ -233,7 +235,7 @@
             "display": 26,
             "category": "Moderate"
           },
-          "risk_rank": 15
+          "risk_rank": 17
         }
       },
       "profile": {
@@ -253,10 +255,12 @@
           "aqi_pctile": 45.871387949762784
         },
         "cooling": {
-          "pct_units_refrigeration": 0,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 1,
-          "n_housing_units": 44
+          "mechanical_pct": 0.0455,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0.9545,
+          "n_housing_units": 22,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -287,12 +291,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
         },
         "lower": {
-          "slug": "san-quentin-rehabilitation-center",
-          "name": "San Quentin Rehabilitation Center"
+          "slug": "north-kern-state-prison",
+          "name": "North Kern State Prison"
         }
       }
     },
@@ -313,8 +317,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 50.81,
-            "display": 51,
+            "value": 47.02,
+            "display": 47,
             "category": "Moderate"
           },
           "hazard": {
@@ -336,8 +340,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 82.07,
-            "display": 82,
+            "value": 75.95,
+            "display": 76,
             "category": "High"
           },
           "hazard": {
@@ -375,10 +379,12 @@
           "aqi_pctile": 48.03373276709035
         },
         "cooling": {
-          "pct_units_refrigeration": 1,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 61
+          "mechanical_pct": 1,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0,
+          "n_housing_units": 29,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -413,8 +419,8 @@
           "name": "California State Prison, Solano"
         },
         "lower": {
-          "slug": "california-mens-colony",
-          "name": "California Men's Colony"
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
         }
       }
     },
@@ -435,8 +441,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 62,
-            "display": 62,
+            "value": 64.83,
+            "display": 65,
             "category": "Moderate"
           },
           "hazard": {
@@ -445,8 +451,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.52,
-            "display": 52,
+            "value": 0.66,
+            "display": 66,
             "category": "Highest"
           },
           "vulnerability": {
@@ -468,8 +474,8 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.52,
-            "display": 52,
+            "value": 0.66,
+            "display": 66,
             "category": "Highest"
           },
           "vulnerability": {
@@ -497,10 +503,12 @@
           "aqi_pctile": 94.40464835864267
         },
         "cooling": {
-          "pct_units_refrigeration": 1,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 15
+          "mechanical_pct": 0.4286,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0.5714,
+          "n_housing_units": 21,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -535,8 +543,8 @@
           "name": "California Medical Facility"
         },
         "lower": {
-          "slug": "richard-j-donovan-correctional-facility",
-          "name": "Richard J. Donovan Correctional Facility"
+          "slug": "california-state-prison-sacramento",
+          "name": "California State Prison, Sacramento"
         }
       }
     },
@@ -557,8 +565,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 58.74,
-            "display": 59,
+            "value": 55.36,
+            "display": 55,
             "category": "Moderate"
           },
           "hazard": {
@@ -567,9 +575,9 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.54,
-            "display": 54,
-            "category": "Highest"
+            "value": 0.56,
+            "display": 56,
+            "category": "High"
           },
           "vulnerability": {
             "value": 0.41,
@@ -580,8 +588,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 94.58,
-            "display": 95,
+            "value": 88.52,
+            "display": 89,
             "category": "Highest"
           },
           "hazard": {
@@ -590,9 +598,9 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.54,
-            "display": 54,
-            "category": "Highest"
+            "value": 0.56,
+            "display": 56,
+            "category": "High"
           },
           "vulnerability": {
             "value": 0.41,
@@ -619,10 +627,12 @@
           "aqi_pctile": 75.58603784147648
         },
         "cooling": {
-          "pct_units_refrigeration": 0.44,
-          "pct_units_evaporation": 0.56,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 25
+          "mechanical_pct": 0.3636,
+          "evaporative_pct": 0.6364,
+          "ventilation_pct": 0,
+          "n_housing_units": 11,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 100,
@@ -653,8 +663,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-state-prison-sacramento",
-          "name": "California State Prison, Sacramento"
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
         },
         "lower": {
           "slug": "california-state-prison-corcoran",
@@ -679,9 +689,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 71.17,
-            "display": 71,
-            "category": "Moderate"
+            "value": 65.49,
+            "display": 65,
+            "category": "High"
           },
           "hazard": {
             "value": 0.3,
@@ -702,8 +712,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 96.93,
-            "display": 97,
+            "value": 89.33,
+            "display": 89,
             "category": "Highest"
           },
           "hazard": {
@@ -741,10 +751,12 @@
           "aqi_pctile": 40.62387437615521
         },
         "cooling": {
-          "pct_units_refrigeration": 0.5,
-          "pct_units_evaporation": 0.5,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 10
+          "mechanical_pct": 0.5283,
+          "evaporative_pct": 0.4717,
+          "ventilation_pct": 0,
+          "n_housing_units": 53,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0.2,
@@ -798,8 +810,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 50.67,
-            "display": 51,
+            "value": 44.44,
+            "display": 44,
             "category": "Moderate"
           },
           "hazard": {
@@ -808,21 +820,21 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.33,
-            "display": 33,
-            "category": "Moderate"
+            "value": 0.28,
+            "display": 28,
+            "category": "Lowest"
           },
           "vulnerability": {
             "value": 0.41,
             "display": 41,
             "category": "High"
           },
-          "risk_rank": 10
+          "risk_rank": 11
         },
         "midcentury": {
           "risk": {
-            "value": 72.05,
-            "display": 72,
+            "value": 64.22,
+            "display": 64,
             "category": "Moderate"
           },
           "hazard": {
@@ -831,16 +843,16 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.33,
-            "display": 33,
-            "category": "Moderate"
+            "value": 0.28,
+            "display": 28,
+            "category": "Lowest"
           },
           "vulnerability": {
             "value": 0.41,
             "display": 41,
             "category": "High"
           },
-          "risk_rank": 13
+          "risk_rank": 16
         }
       },
       "profile": {
@@ -860,10 +872,12 @@
           "aqi_pctile": 21.635279342708017
         },
         "cooling": {
-          "pct_units_refrigeration": 0,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 1,
-          "n_housing_units": 33
+          "mechanical_pct": 0.1875,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0.8125,
+          "n_housing_units": 16,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -894,12 +908,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-health-care-facility",
-          "name": "California Health Care Facility"
-        },
-        "lower": {
           "slug": "pelican-bay-state-prison",
           "name": "Pelican Bay State Prison"
+        },
+        "lower": {
+          "slug": "central-california-womens-facility",
+          "name": "Central California Women's Facility"
         }
       }
     },
@@ -920,8 +934,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 31.82,
-            "display": 32,
+            "value": 39.54,
+            "display": 40,
             "category": "Lowest"
           },
           "hazard": {
@@ -930,22 +944,22 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.43,
-            "display": 43,
-            "category": "High"
+            "value": 0.62,
+            "display": 62,
+            "category": "Highest"
           },
           "vulnerability": {
             "value": 0.25,
             "display": 25,
             "category": "Moderate"
           },
-          "risk_rank": 23
+          "risk_rank": 15
         },
         "midcentury": {
           "risk": {
-            "value": 66.21,
-            "display": 66,
-            "category": "Moderate"
+            "value": 71.37,
+            "display": 71,
+            "category": "High"
           },
           "hazard": {
             "value": 0.89,
@@ -953,16 +967,16 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.43,
-            "display": 43,
-            "category": "High"
+            "value": 0.62,
+            "display": 62,
+            "category": "Highest"
           },
           "vulnerability": {
             "value": 0.25,
             "display": 25,
             "category": "Moderate"
           },
-          "risk_rank": 17
+          "risk_rank": 12
         }
       },
       "profile": {
@@ -982,10 +996,12 @@
           "aqi_pctile": 59.583481416329555
         },
         "cooling": {
-          "pct_units_refrigeration": 0.8571,
-          "pct_units_evaporation": 0.1429,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 14
+          "mechanical_pct": 0.0833,
+          "evaporative_pct": 0.0278,
+          "ventilation_pct": 0.8889,
+          "n_housing_units": 36,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1016,12 +1032,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "folsom-state-prison",
-          "name": "Folsom State Prison"
+          "slug": "valley-state-prison",
+          "name": "Valley State Prison"
         },
         "lower": {
-          "slug": "high-desert-state-prison",
-          "name": "High Desert State Prison"
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
         }
       }
     },
@@ -1042,8 +1058,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 56.02,
-            "display": 56,
+            "value": 51.84,
+            "display": 52,
             "category": "Moderate"
           },
           "hazard": {
@@ -1065,8 +1081,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 87.7,
-            "display": 88,
+            "value": 81.16,
+            "display": 81,
             "category": "High"
           },
           "hazard": {
@@ -1104,10 +1120,12 @@
           "aqi_pctile": 61.689244197361795
         },
         "cooling": {
-          "pct_units_refrigeration": 0,
-          "pct_units_evaporation": 1,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 59
+          "mechanical_pct": 0,
+          "evaporative_pct": 1,
+          "ventilation_pct": 0,
+          "n_housing_units": 24,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1164,8 +1182,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 46.44,
-            "display": 46,
+            "value": 43.16,
+            "display": 43,
             "category": "Moderate"
           },
           "hazard": {
@@ -1187,8 +1205,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 78.35,
-            "display": 78,
+            "value": 72.69,
+            "display": 73,
             "category": "High"
           },
           "hazard": {
@@ -1206,7 +1224,7 @@
             "display": 47,
             "category": "Highest"
           },
-          "risk_rank": 11
+          "risk_rank": 10
         }
       },
       "profile": {
@@ -1226,10 +1244,12 @@
           "aqi_pctile": 34.084143030236156
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0597,
-          "pct_units_evaporation": 0.9403,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 67
+          "mechanical_pct": 0.0455,
+          "evaporative_pct": 0.9545,
+          "ventilation_pct": 0,
+          "n_housing_units": 22,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1286,8 +1306,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 58.75,
-            "display": 59,
+            "value": 56.23,
+            "display": 56,
             "category": "Moderate"
           },
           "hazard": {
@@ -1296,21 +1316,21 @@
             "category": "Lowest"
           },
           "exposure": {
-            "value": 0.42,
-            "display": 42,
-            "category": "Moderate"
+            "value": 0.45,
+            "display": 45,
+            "category": "High"
           },
           "vulnerability": {
             "value": 0.51,
             "display": 51,
             "category": "Highest"
           },
-          "risk_rank": 4
+          "risk_rank": 3
         },
         "midcentury": {
           "risk": {
-            "value": 85.26,
-            "display": 85,
+            "value": 80.76,
+            "display": 81,
             "category": "High"
           },
           "hazard": {
@@ -1319,16 +1339,16 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.42,
-            "display": 42,
-            "category": "Moderate"
+            "value": 0.45,
+            "display": 45,
+            "category": "High"
           },
           "vulnerability": {
             "value": 0.51,
             "display": 51,
             "category": "Highest"
           },
-          "risk_rank": 6
+          "risk_rank": 5
         }
       },
       "profile": {
@@ -1348,10 +1368,12 @@
           "aqi_pctile": 42.258666363697984
         },
         "cooling": {
-          "pct_units_refrigeration": 0.2222,
-          "pct_units_evaporation": 0.7778,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 18
+          "mechanical_pct": 0.08,
+          "evaporative_pct": 0.92,
+          "ventilation_pct": 0,
+          "n_housing_units": 25,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1382,12 +1404,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "richard-j-donovan-correctional-facility",
-          "name": "Richard J. Donovan Correctional Facility"
+          "slug": "california-institution-for-men",
+          "name": "California Institution for Men"
         },
         "lower": {
-          "slug": "california-institution-for-women",
-          "name": "California Institution for Women"
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
         }
       }
     },
@@ -1408,8 +1430,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 52.6,
-            "display": 53,
+            "value": 48.34,
+            "display": 48,
             "category": "Moderate"
           },
           "hazard": {
@@ -1418,8 +1440,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.63,
-            "display": 63,
+            "value": 0.62,
+            "display": 62,
             "category": "Highest"
           },
           "vulnerability": {
@@ -1431,8 +1453,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 78.37,
-            "display": 78,
+            "value": 72.19,
+            "display": 72,
             "category": "High"
           },
           "hazard": {
@@ -1441,8 +1463,8 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.63,
-            "display": 63,
+            "value": 0.62,
+            "display": 62,
             "category": "Highest"
           },
           "vulnerability": {
@@ -1450,7 +1472,7 @@
             "display": 32,
             "category": "Moderate"
           },
-          "risk_rank": 10
+          "risk_rank": 11
         }
       },
       "profile": {
@@ -1470,10 +1492,12 @@
           "aqi_pctile": 40.62387437615521
         },
         "cooling": {
-          "pct_units_refrigeration": 0.1343,
-          "pct_units_evaporation": 0.1493,
-          "pct_units_ventilation": 0.7164,
-          "n_housing_units": 67
+          "mechanical_pct": 0.16,
+          "evaporative_pct": 0.24,
+          "ventilation_pct": 0.6,
+          "n_housing_units": 25,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1530,8 +1554,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 55.73,
-            "display": 56,
+            "value": 51.4,
+            "display": 51,
             "category": "Moderate"
           },
           "hazard": {
@@ -1540,8 +1564,8 @@
             "category": "Lowest"
           },
           "exposure": {
-            "value": 0.61,
-            "display": 61,
+            "value": 0.6,
+            "display": 60,
             "category": "Highest"
           },
           "vulnerability": {
@@ -1553,8 +1577,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 87.41,
-            "display": 87,
+            "value": 80.72,
+            "display": 81,
             "category": "High"
           },
           "hazard": {
@@ -1563,8 +1587,8 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.61,
-            "display": 61,
+            "value": 0.6,
+            "display": 60,
             "category": "Highest"
           },
           "vulnerability": {
@@ -1572,7 +1596,7 @@
             "display": 40,
             "category": "High"
           },
-          "risk_rank": 5
+          "risk_rank": 6
         }
       },
       "profile": {
@@ -1592,10 +1616,12 @@
           "aqi_pctile": 61.689244197361795
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0494,
-          "pct_units_evaporation": 0.9506,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 81
+          "mechanical_pct": 0.0625,
+          "evaporative_pct": 1.0312,
+          "ventilation_pct": 0,
+          "n_housing_units": 32,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1652,7 +1678,7 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 6.11,
+            "value": 5.66,
             "display": 6,
             "category": "Lowest"
           },
@@ -1675,8 +1701,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 26.48,
-            "display": 26,
+            "value": 24.51,
+            "display": 25,
             "category": "Lowest"
           },
           "hazard": {
@@ -1714,10 +1740,12 @@
           "aqi_pctile": 34.1657626589918
         },
         "cooling": {
-          "pct_units_refrigeration": 1,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 69
+          "mechanical_pct": 1,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0,
+          "n_housing_units": 24,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1797,8 +1825,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 21.68,
-            "display": 22,
+            "value": 20.06,
+            "display": 20,
             "category": "Lowest"
           },
           "hazard": {
@@ -1836,10 +1864,12 @@
           "aqi_pctile": 43.55668748025076
         },
         "cooling": {
-          "pct_units_refrigeration": 1,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 68
+          "mechanical_pct": 1,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0,
+          "n_housing_units": 24,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -1893,8 +1923,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 47.28,
-            "display": 47,
+            "value": 44.09,
+            "display": 44,
             "category": "Moderate"
           },
           "hazard": {
@@ -1905,7 +1935,7 @@
           "exposure": {
             "value": 0.43,
             "display": 43,
-            "category": "High"
+            "category": "Moderate"
           },
           "vulnerability": {
             "value": 0.42,
@@ -1916,8 +1946,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 79.55,
-            "display": 80,
+            "value": 73.95,
+            "display": 74,
             "category": "High"
           },
           "hazard": {
@@ -1928,7 +1958,7 @@
           "exposure": {
             "value": 0.43,
             "display": 43,
-            "category": "High"
+            "category": "Moderate"
           },
           "vulnerability": {
             "value": 0.42,
@@ -1955,10 +1985,12 @@
           "aqi_pctile": 54.67109503384696
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0256,
-          "pct_units_evaporation": 0.9744,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 78
+          "mechanical_pct": 0,
+          "evaporative_pct": 1,
+          "ventilation_pct": 0,
+          "n_housing_units": 16,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 97.8,
@@ -1989,8 +2021,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "pelican-bay-state-prison",
-          "name": "Pelican Bay State Prison"
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
         },
         "lower": {
           "slug": "california-state-prison-los-angeles-county",
@@ -2015,8 +2047,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 39.37,
-            "display": 39,
+            "value": 36.43,
+            "display": 36,
             "category": "Lowest"
           },
           "hazard": {
@@ -2034,12 +2066,12 @@
             "display": 33,
             "category": "Moderate"
           },
-          "risk_rank": 16
+          "risk_rank": 18
         },
         "midcentury": {
           "risk": {
-            "value": 59.32,
-            "display": 59,
+            "value": 54.89,
+            "display": 55,
             "category": "Moderate"
           },
           "hazard": {
@@ -2077,10 +2109,12 @@
           "aqi_pctile": 12.204984562477916
         },
         "cooling": {
-          "pct_units_refrigeration": 0,
-          "pct_units_evaporation": 0.2,
-          "pct_units_ventilation": 0.8,
-          "n_housing_units": 10
+          "mechanical_pct": 0,
+          "evaporative_pct": 0.0455,
+          "ventilation_pct": 0.9545,
+          "n_housing_units": 22,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2137,8 +2171,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 32.05,
-            "display": 32,
+            "value": 30.12,
+            "display": 30,
             "category": "Lowest"
           },
           "hazard": {
@@ -2147,8 +2181,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.44,
-            "display": 44,
+            "value": 0.45,
+            "display": 45,
             "category": "High"
           },
           "vulnerability": {
@@ -2156,12 +2190,12 @@
             "display": 25,
             "category": "Moderate"
           },
-          "risk_rank": 22
+          "risk_rank": 23
         },
         "midcentury": {
           "risk": {
-            "value": 60.1,
-            "display": 60,
+            "value": 56.09,
+            "display": 56,
             "category": "Moderate"
           },
           "hazard": {
@@ -2170,8 +2204,8 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.44,
-            "display": 44,
+            "value": 0.45,
+            "display": 45,
             "category": "High"
           },
           "vulnerability": {
@@ -2199,10 +2233,12 @@
           "aqi_pctile": 42.258666363697984
         },
         "cooling": {
-          "pct_units_refrigeration": 0.2857,
-          "pct_units_evaporation": 0.7143,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 14
+          "mechanical_pct": 0.25,
+          "evaporative_pct": 0.75,
+          "ventilation_pct": 0,
+          "n_housing_units": 16,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2237,8 +2273,8 @@
           "name": "North Kern State Prison"
         },
         "lower": {
-          "slug": "california-rehabilitation-center",
-          "name": "California Rehabilitation Center"
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
         }
       }
     },
@@ -2259,8 +2295,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 31.62,
-            "display": 32,
+            "value": 29.95,
+            "display": 30,
             "category": "Lowest"
           },
           "hazard": {
@@ -2269,8 +2305,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.39,
-            "display": 39,
+            "value": 0.4,
+            "display": 40,
             "category": "Moderate"
           },
           "vulnerability": {
@@ -2282,8 +2318,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 65.33,
-            "display": 65,
+            "value": 61.14,
+            "display": 61,
             "category": "Moderate"
           },
           "hazard": {
@@ -2292,8 +2328,8 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.39,
-            "display": 39,
+            "value": 0.4,
+            "display": 40,
             "category": "Moderate"
           },
           "vulnerability": {
@@ -2301,7 +2337,7 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 18
+          "risk_rank": 19
         }
       },
       "profile": {
@@ -2321,10 +2357,12 @@
           "aqi_pctile": 23.94519366034654
         },
         "cooling": {
-          "pct_units_refrigeration": 0.087,
-          "pct_units_evaporation": 0.913,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 46
+          "mechanical_pct": 0.0345,
+          "evaporative_pct": 0.9655,
+          "ventilation_pct": 0,
+          "n_housing_units": 29,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2355,8 +2393,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-rehabilitation-center",
-          "name": "California Rehabilitation Center"
+          "slug": "folsom-state-prison",
+          "name": "Folsom State Prison"
         },
         "lower": {
           "slug": "wasco-state-prison",
@@ -2381,7 +2419,7 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 1.8,
+            "value": 1.66,
             "display": 2,
             "category": "Lowest"
           },
@@ -2404,8 +2442,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 26.5,
-            "display": 26,
+            "value": 24.52,
+            "display": 25,
             "category": "Lowest"
           },
           "hazard": {
@@ -2443,10 +2481,12 @@
           "aqi_pctile": 65.61582130994081
         },
         "cooling": {
-          "pct_units_refrigeration": 1,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 83
+          "mechanical_pct": 1,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0,
+          "n_housing_units": 23,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2503,7 +2543,7 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 33.63,
+            "value": 33.54,
             "display": 34,
             "category": "Lowest"
           },
@@ -2513,8 +2553,8 @@
             "category": "Lowest"
           },
           "exposure": {
-            "value": 0.33,
-            "display": 33,
+            "value": 0.37,
+            "display": 37,
             "category": "Moderate"
           },
           "vulnerability": {
@@ -2526,8 +2566,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 62.19,
-            "display": 62,
+            "value": 59.98,
+            "display": 60,
             "category": "Moderate"
           },
           "hazard": {
@@ -2536,8 +2576,8 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.33,
-            "display": 33,
+            "value": 0.37,
+            "display": 37,
             "category": "Moderate"
           },
           "vulnerability": {
@@ -2545,7 +2585,7 @@
             "display": 35,
             "category": "Moderate"
           },
-          "risk_rank": 19
+          "risk_rank": 20
         }
       },
       "profile": {
@@ -2565,10 +2605,12 @@
           "aqi_pctile": 54.240175514320654
         },
         "cooling": {
-          "pct_units_refrigeration": 0.2857,
-          "pct_units_evaporation": 0.7143,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 28
+          "mechanical_pct": 0.1,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0.9,
+          "n_housing_units": 20,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2599,12 +2641,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "san-quentin-rehabilitation-center",
-          "name": "San Quentin Rehabilitation Center"
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
         },
         "lower": {
-          "slug": "north-kern-state-prison",
-          "name": "North Kern State Prison"
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
         }
       }
     },
@@ -2625,8 +2667,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 40.88,
-            "display": 41,
+            "value": 38.48,
+            "display": 38,
             "category": "Lowest"
           },
           "hazard": {
@@ -2635,8 +2677,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.29,
-            "display": 29,
+            "value": 0.3,
+            "display": 30,
             "category": "Lowest"
           },
           "vulnerability": {
@@ -2644,12 +2686,12 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 15
+          "risk_rank": 17
         },
         "midcentury": {
           "risk": {
-            "value": 69.55,
-            "display": 70,
+            "value": 65,
+            "display": 65,
             "category": "Moderate"
           },
           "hazard": {
@@ -2658,8 +2700,8 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.29,
-            "display": 29,
+            "value": 0.3,
+            "display": 30,
             "category": "Lowest"
           },
           "vulnerability": {
@@ -2667,7 +2709,7 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 14
+          "risk_rank": 15
         }
       },
       "profile": {
@@ -2687,10 +2729,12 @@
           "aqi_pctile": 23.079087058140587
         },
         "cooling": {
-          "pct_units_refrigeration": 0.1857,
-          "pct_units_evaporation": 0.8143,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 70
+          "mechanical_pct": 0.1364,
+          "evaporative_pct": 0.8636,
+          "ventilation_pct": 0,
+          "n_housing_units": 22,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2721,8 +2765,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "valley-state-prison",
-          "name": "Valley State Prison"
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
         },
         "lower": {
           "slug": "correctional-training-facility",
@@ -2747,8 +2791,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 32.84,
-            "display": 33,
+            "value": 30.35,
+            "display": 30,
             "category": "Lowest"
           },
           "hazard": {
@@ -2766,12 +2810,12 @@
             "display": 20,
             "category": "Lowest"
           },
-          "risk_rank": 21
+          "risk_rank": 22
         },
         "midcentury": {
           "risk": {
-            "value": 62.11,
-            "display": 62,
+            "value": 57.44,
+            "display": 57,
             "category": "Moderate"
           },
           "hazard": {
@@ -2789,7 +2833,7 @@
             "display": 20,
             "category": "Lowest"
           },
-          "risk_rank": 20
+          "risk_rank": 21
         }
       },
       "profile": {
@@ -2809,10 +2853,12 @@
           "aqi_pctile": 58.88274154861368
         },
         "cooling": {
-          "pct_units_refrigeration": 0.037,
-          "pct_units_evaporation": 0.963,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 54
+          "mechanical_pct": 0.04,
+          "evaporative_pct": 0.96,
+          "ventilation_pct": 0,
+          "n_housing_units": 25,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2843,8 +2889,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "kern-valley-state-prison",
-          "name": "Kern Valley State Prison"
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
         },
         "lower": {
           "slug": "folsom-state-prison",
@@ -2869,8 +2915,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 47.48,
-            "display": 47,
+            "value": 44.73,
+            "display": 45,
             "category": "Moderate"
           },
           "hazard": {
@@ -2879,8 +2925,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.65,
-            "display": 65,
+            "value": 0.67,
+            "display": 67,
             "category": "Highest"
           },
           "vulnerability": {
@@ -2888,12 +2934,12 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 11
+          "risk_rank": 10
         },
         "midcentury": {
           "risk": {
-            "value": 66.91,
-            "display": 67,
+            "value": 62.71,
+            "display": 63,
             "category": "Moderate"
           },
           "hazard": {
@@ -2902,8 +2948,8 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.65,
-            "display": 65,
+            "value": 0.67,
+            "display": 67,
             "category": "Highest"
           },
           "vulnerability": {
@@ -2911,7 +2957,7 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 16
+          "risk_rank": 18
         }
       },
       "profile": {
@@ -2931,10 +2977,12 @@
           "aqi_pctile": 21.345065727058465
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0952,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0.9048,
-          "n_housing_units": 63
+          "mechanical_pct": 0.0345,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0.9655,
+          "n_housing_units": 29,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -2965,12 +3013,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-mens-colony",
-          "name": "California Men's Colony"
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
         },
         "lower": {
-          "slug": "central-california-womens-facility",
-          "name": "Central California Women's Facility"
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
         }
       }
     },
@@ -2991,8 +3039,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 17.36,
-            "display": 17,
+            "value": 16.29,
+            "display": 16,
             "category": "Lowest"
           },
           "hazard": {
@@ -3014,8 +3062,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 43.66,
-            "display": 44,
+            "value": 40.62,
+            "display": 41,
             "category": "Lowest"
           },
           "hazard": {
@@ -3053,10 +3101,12 @@
           "aqi_pctile": 17.850388774590186
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0606,
-          "pct_units_evaporation": 0.9394,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 66
+          "mechanical_pct": 0.0435,
+          "evaporative_pct": 0.9565,
+          "ventilation_pct": 0,
+          "n_housing_units": 23,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -3113,8 +3163,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 60.45,
-            "display": 60,
+            "value": 56.16,
+            "display": 56,
             "category": "Moderate"
           },
           "hazard": {
@@ -3132,12 +3182,12 @@
             "display": 52,
             "category": "Highest"
           },
-          "risk_rank": 3
+          "risk_rank": 4
         },
         "midcentury": {
           "risk": {
-            "value": 84.98,
-            "display": 85,
+            "value": 78.86,
+            "display": 79,
             "category": "High"
           },
           "hazard": {
@@ -3175,10 +3225,12 @@
           "aqi_pctile": 71.2991253984341
         },
         "cooling": {
-          "pct_units_refrigeration": 0.3649,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0.6351,
-          "n_housing_units": 74
+          "mechanical_pct": 0.3478,
+          "evaporative_pct": 0,
+          "ventilation_pct": 0.6522,
+          "n_housing_units": 23,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -3209,12 +3261,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-institution-for-men",
-          "name": "California Institution for Men"
-        },
-        "lower": {
           "slug": "california-state-prison-sacramento",
           "name": "California State Prison, Sacramento"
+        },
+        "lower": {
+          "slug": "california-institution-for-women",
+          "name": "California Institution for Women"
         }
       }
     },
@@ -3235,8 +3287,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 37.46,
-            "display": 37,
+            "value": 34.18,
+            "display": 34,
             "category": "Lowest"
           },
           "hazard": {
@@ -3245,8 +3297,8 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.23,
-            "display": 23,
+            "value": 0.22,
+            "display": 22,
             "category": "Lowest"
           },
           "vulnerability": {
@@ -3254,12 +3306,12 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 17
+          "risk_rank": 19
         },
         "midcentury": {
           "risk": {
-            "value": 58.7,
-            "display": 59,
+            "value": 53.83,
+            "display": 54,
             "category": "Moderate"
           },
           "hazard": {
@@ -3268,8 +3320,8 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.23,
-            "display": 23,
+            "value": 0.22,
+            "display": 22,
             "category": "Lowest"
           },
           "vulnerability": {
@@ -3297,10 +3349,12 @@
           "aqi_pctile": 12.204984562477916
         },
         "cooling": {
-          "pct_units_refrigeration": 0.093,
-          "pct_units_evaporation": 0.907,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 43
+          "mechanical_pct": 0.1304,
+          "evaporative_pct": 0.8696,
+          "ventilation_pct": 0,
+          "n_housing_units": 23,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -3335,8 +3389,8 @@
           "name": "Correctional Training Facility"
         },
         "lower": {
-          "slug": "california-correctional-institution",
-          "name": "California Correctional Institution"
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
         }
       }
     },
@@ -3357,8 +3411,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 33.78,
-            "display": 34,
+            "value": 39.3,
+            "display": 39,
             "category": "Lowest"
           },
           "hazard": {
@@ -3367,21 +3421,21 @@
             "category": "Moderate"
           },
           "exposure": {
-            "value": 0.18,
-            "display": 18,
-            "category": "Lowest"
+            "value": 0.34,
+            "display": 34,
+            "category": "Moderate"
           },
           "vulnerability": {
             "value": 0.38,
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 19
+          "risk_rank": 16
         },
         "midcentury": {
           "risk": {
-            "value": 62.08,
-            "display": 62,
+            "value": 65.49,
+            "display": 65,
             "category": "Moderate"
           },
           "hazard": {
@@ -3390,16 +3444,16 @@
             "category": "Highest"
           },
           "exposure": {
-            "value": 0.18,
-            "display": 18,
-            "category": "Lowest"
+            "value": 0.34,
+            "display": 34,
+            "category": "Moderate"
           },
           "vulnerability": {
             "value": 0.38,
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 21
+          "risk_rank": 14
         }
       },
       "profile": {
@@ -3419,10 +3473,12 @@
           "aqi_pctile": 31.085921282338564
         },
         "cooling": {
-          "pct_units_refrigeration": 0.6154,
-          "pct_units_evaporation": 0,
-          "pct_units_ventilation": 0.3846,
-          "n_housing_units": 26
+          "mechanical_pct": 0,
+          "evaporative_pct": 0,
+          "ventilation_pct": 1,
+          "n_housing_units": 11,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -3453,12 +3509,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-correctional-institution",
-          "name": "California Correctional Institution"
+          "slug": "california-rehabilitation-center",
+          "name": "California Rehabilitation Center"
         },
         "lower": {
-          "slug": "kern-valley-state-prison",
-          "name": "Kern Valley State Prison"
+          "slug": "mule-creek-state-prison",
+          "name": "Mule Creek State Prison"
         }
       }
     },
@@ -3479,7 +3535,7 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 12.93,
+            "value": 12.64,
             "display": 13,
             "category": "Lowest"
           },
@@ -3489,8 +3545,8 @@
             "category": "Lowest"
           },
           "exposure": {
-            "value": 0.49,
-            "display": 49,
+            "value": 0.51,
+            "display": 51,
             "category": "High"
           },
           "vulnerability": {
@@ -3502,8 +3558,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 41.89,
-            "display": 42,
+            "value": 39.44,
+            "display": 39,
             "category": "Lowest"
           },
           "hazard": {
@@ -3512,8 +3568,8 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.49,
-            "display": 49,
+            "value": 0.51,
+            "display": 51,
             "category": "High"
           },
           "vulnerability": {
@@ -3541,10 +3597,12 @@
           "aqi_pctile": 23.802979386426276
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0517,
-          "pct_units_evaporation": 0.2586,
-          "pct_units_ventilation": 0.6897,
-          "n_housing_units": 58
+          "mechanical_pct": 0,
+          "evaporative_pct": 0.0617,
+          "ventilation_pct": 0.9383,
+          "n_housing_units": 81,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -3601,8 +3659,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 43.38,
-            "display": 43,
+            "value": 40.15,
+            "display": 40,
             "category": "Lowest"
           },
           "hazard": {
@@ -3624,8 +3682,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 75.24,
-            "display": 75,
+            "value": 69.63,
+            "display": 70,
             "category": "High"
           },
           "hazard": {
@@ -3643,7 +3701,7 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 12
+          "risk_rank": 13
         }
       },
       "profile": {
@@ -3663,10 +3721,12 @@
           "aqi_pctile": 54.67109503384696
         },
         "cooling": {
-          "pct_units_refrigeration": 0,
-          "pct_units_evaporation": 1,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 77
+          "mechanical_pct": 0,
+          "evaporative_pct": 1,
+          "ventilation_pct": 0,
+          "n_housing_units": 16,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,
@@ -3701,8 +3761,8 @@
           "name": "California State Prison, Los Angeles County"
         },
         "lower": {
-          "slug": "mule-creek-state-prison",
-          "name": "Mule Creek State Prison"
+          "slug": "california-rehabilitation-center",
+          "name": "California Rehabilitation Center"
         }
       }
     },
@@ -3723,8 +3783,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 31.04,
-            "display": 31,
+            "value": 28.92,
+            "display": 29,
             "category": "Lowest"
           },
           "hazard": {
@@ -3733,8 +3793,8 @@
             "category": "Lowest"
           },
           "exposure": {
-            "value": 0.59,
-            "display": 59,
+            "value": 0.6,
+            "display": 60,
             "category": "Highest"
           },
           "vulnerability": {
@@ -3746,8 +3806,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 56.9,
-            "display": 57,
+            "value": 52.85,
+            "display": 53,
             "category": "Moderate"
           },
           "hazard": {
@@ -3756,8 +3816,8 @@
             "category": "High"
           },
           "exposure": {
-            "value": 0.59,
-            "display": 59,
+            "value": 0.6,
+            "display": 60,
             "category": "Highest"
           },
           "vulnerability": {
@@ -3785,10 +3845,12 @@
           "aqi_pctile": 56.9272052060359
         },
         "cooling": {
-          "pct_units_refrigeration": 0.0152,
-          "pct_units_evaporation": 0.9848,
-          "pct_units_ventilation": 0,
-          "n_housing_units": 66
+          "mechanical_pct": 0,
+          "evaporative_pct": 1,
+          "ventilation_pct": 0,
+          "n_housing_units": 28,
+          "as_of": "2025-12",
+          "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
         },
         "demographics": {
           "female_pct": 0,

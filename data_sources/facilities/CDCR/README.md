@@ -44,6 +44,12 @@ Data collection scripts are in the `scrapers/` directory.
 | `pct_buildings_ventilation` | Proportion of housing units (HUs) with air handlers only (ventilation, no cooling). HUs with mixed cooling types are counted under each applicable type. | CDCR Air Cooling Pilot Program Supplemental Report, January 2026 (Table 2) |
 | `rhu_pct_2025` | % of facility population in restricted housing units (12-month average, 2025). Derived from CDCR STA429 Restricted Housing Monthly Reports (Jan–Dec 2025). CRC and ASP consistently reported 0 RH units. See `restricted_housing.csv` and scraper `scrapers/extract_restricted_housing.py`. | CDCR Office of Research, STA429 Restricted Housing Monthly Reports, 2025 |
 
+> **⚠ Cooling data — use `pct_buildings_*`, not `pct_units_*`.** There are two cooling sources here and they are easy to confuse (the column names are misleading):
+> - **`pct_buildings_*` / `n_housing_buildings`** come from the **CDCR Air Cooling Pilot Supplemental Report (Jan 2026, as of Dec 2025)** — the newest, most authoritative, **complete** per-facility inventory at the housing-unit (wing/dorm/tier) level. **This is the source to use** for cooling coverage and the heat-risk index's AC sub-indicator (`pct_buildings_refrigeration`).
+> - **`pct_units_*` / `n_housing_units`** come from the older **Reuters FOIA (2025)** HVAC-equipment inventory. It is **incomplete — it misses housing at 11 of 31 facilities** (e.g. CIM: 15 equipment rows, yielding a spurious 100% refrigeration vs the CDCR report's ~43%). Retained for provenance only; **do not use it for cooling coverage.**
+>
+> Validated against CDCR's own June-2025 statewide pie (evaporative 52% / mechanical 24% / air-handlers 19% / fans 5%): the `pct_buildings_*` report matches on mechanical (23%); its lower evaporative / higher "ventilation only" reflects real degradation of swamp-cooling systems by Dec 2025, not a labeling error. Two per-facility caveats: mixed-cooling units are counted under each type (shares can sum >1, e.g. SATF 1.03), and CIM reads 0% evaporative even though its Facility A retrofit (completed Feb 2025) is evaporative per CEQA #2018128257 — CIM's mix is the least certain. A full source-explicit column rename (`pct_units_*` → `*_reuters`) is deferred because it ripples into the frozen indoor/outdoor and heat-operations memo builders.
+
 ### Facility Characteristics
 
 | Variable | Description | Source |
