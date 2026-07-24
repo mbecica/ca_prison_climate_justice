@@ -24,7 +24,7 @@ Source: gridMET (University of Idaho), variable tmmx (daily maximum temperature,
         https://www.northwestknowledge.net/metdata/data/tmmx_{year}.nc
 
 Usage:
-  conda run -n data_science python3 scrapers/extract_gridmet_heat.py
+  conda run -n data_science python3 data_sources/hazards/heat/extraction/extract_gridmet_heat.py
 
 Runtime: ~30–45 minutes (downloads ~5.8 GB across 40 year files; files are deleted after use).
 """
@@ -51,7 +51,7 @@ STAGE1_F = 90.0
 STAGE3_F = 95.0
 DELTA_F = 10.0  # degrees above facility mean summer tmax
 
-REPO_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[4]
 FACILITIES_CSV = REPO_ROOT / "data" / "cdcr" / "cdcr_facilities.csv"
 OUTPUT_DIR = REPO_ROOT / "data_sources" / "hazards" / "heat"
 

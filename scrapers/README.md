@@ -125,30 +125,17 @@ New monthly PIP/MHCB reports can be added by downloading them into `specialized_
 
 ---
 
-### `extract_loca2_heat.py`
-Extracts facility-relative heat thresholds from **LOCA2-CA daily** projections (Cal-Adapt / cadcat).
-This is an API/catalog read, not a scrape: it opens the cadcat S3 zarr store anonymously via
-`intake-esm` and reads `tasmax`/`tasmin` lazily at each facility's containing grid cell. Ensemble is
-14 models / 62 members, pooled by model democracy (per member → within model → across models);
-periods are historic (1981–2010), mid-century (2041–2070, ssp370), and end-century.
+### Heat extractors — moved to `data_sources/hazards/heat/extraction/`
+The heat-metric extractors are **API/catalog reads, not scrapes**, and now live next to the hazard
+data they produce, in `data_sources/hazards/heat/extraction/`:
 
-Writes `data_sources/hazards/heat/loca2_facility_heat.csv` (357 facilities × absolute and relative
-threshold counts for all three periods). Cell assignment is cached in `loca2_facility_cells.csv`; a
-per-member JSON cache lives in `loca2_members/` (gitignored, regenerable) so interrupted runs resume
-for free.
+- `extract_loca2_heat.py` — LOCA2-CA daily projections (Cal-Adapt / cadcat S3 zarr via `intake-esm`)
+  → `data_sources/hazards/heat/loca2_facility_heat.csv`
+- `extract_gridmet_heat.py` — gridMET observed daily tmax → `heat_activations_{daily,annual,monthly}.csv`
+- `extract_gridmet_summer_avg.py` — gridMET summer-mean tmax → `summer_avg_tmax_annual.csv`
 
-```
-python3 scrapers/extract_loca2_heat.py            # cells → extract → pool
-python3 scrapers/extract_loca2_heat.py --pool-only # re-pool cached members without re-extracting
-```
-
-**~6 hours.** Run it detached — the script uses a double-fork `os.setsid()` launcher (under
-`caffeinate`) because harness-tracked background jobs are reaped around 60–80 min. Full method,
-ensemble rationale, spatial rule, and the reproduction gate against the published Cal-Adapt layer are
-documented in `data_sources/hazards/heat/README.md`. Re-run only when the model set, cell rule, or
-threshold definitions change — LOCA2-CA is a fixed projection product with no seasonal cadence.
-(A pending refactor will move this and the gridMET extractors out of `scrapers/` into
-`data_sources/hazards/heat/extraction/`, since they are reads rather than scrapes.)
+Method, ensemble rationale, spatial rule, and run instructions are documented in
+`data_sources/hazards/heat/README.md` and `data_sources/hazards/README.md`.
 
 ---
 

@@ -59,7 +59,7 @@ Facilities with `uhi_normalized = 0` (urban cooling or no positive ΔT): CAL, SQ
 
 ## Historic Observed Temperatures — CDCR State Prisons
 
-Daily and annual observed outdoor temperatures at CDCR state prisons, derived from gridMET 4km gridded daily maximum temperature (`tmmx`). Scraper: `scrapers/extract_gridmet_heat.py`.
+Daily and annual observed outdoor temperatures at CDCR state prisons, derived from gridMET 4km gridded daily maximum temperature (`tmmx`). Scraper: `data_sources/hazards/heat/extraction/extract_gridmet_heat.py`.
 
 **Source:** Abatzoglou, J.T. (2013). Development of gridded surface meteorological data for ecological applications and modelling. *International Journal of Climatology*, 33(1), 121–131. doi:10.1002/joc.3413. Data accessed via [climatologylab.org/gridmet.html](http://www.climatologylab.org/gridmet.html).
 
@@ -104,7 +104,7 @@ The 90°F and 95°F thresholds have no direct mortality calibration in the liter
 ## Modeled Projected Temperatures — all 357 facilities
 
 Facility-relative heat thresholds for the hazard index come from a LOCA2-CA daily extraction.
-Extraction script: `scrapers/extract_loca2_heat.py`. Product: `heat/loca2_facility_heat.csv`
+Extraction script: `data_sources/hazards/heat/extraction/extract_loca2_heat.py`. Product: `heat/loca2_facility_heat.csv`
 (357 facilities × 3 periods). Full method write-up with citations: `data_sources/hazards/heat/README.md`.
 
 - **Source.** LOCA2-CA daily `tasmax`/`tasmin`, accessed anonymously from the cadcat S3 zarr store

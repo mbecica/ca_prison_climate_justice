@@ -21,7 +21,7 @@ Source: LOCA2-CA (Pierce, Cayan & Dehann), grid d03 at 1/32 degree, via the Cal-
         Analytics Engine S3 zarr store. Anonymous access, no download required.
 
 Usage:
-  caffeinate -is conda run --no-capture-output -n data_science python3 scrapers/extract_loca2_heat.py
+  caffeinate -is conda run --no-capture-output -n data_science python3 data_sources/hazards/heat/extraction/extract_loca2_heat.py
 
 Runtime: ~6 hours from cold (62 members x 3 periods x 2 variables). Safe to interrupt and
 re-run — completed members are cached and skipped. When a v0.1 cache is present, only tasmin
@@ -84,7 +84,7 @@ NIGHT_PCTLS = [95, 98]
 # contiguous land and sheltered as the facility is.
 SQ_OVERRIDE = (37.953125, -122.515625)
 
-REPO_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[4]
 ALL_FACILITIES_CSV = REPO_ROOT / "data_sources" / "facilities" / "ca_facilities.csv"
 CDCR_FACILITIES_CSV = REPO_ROOT / "data" / "cdcr" / "cdcr_facilities.csv"
 OUTPUT_DIR = REPO_ROOT / "data_sources" / "hazards" / "heat"

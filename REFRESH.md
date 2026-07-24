@@ -1,7 +1,5 @@
 # REFRESH.md — Data Refresh Runbook
 
-**DRAFT — pending review of the frozen/living classification. Do not treat as adopted.**
-
 How to refresh the data in this repository, family by family: which scraper to run,
 which notebook/script rebuilds what, which `data/` outputs change, and which downstream
 consumers need to be rebuilt afterward. Consumers include the
@@ -187,7 +185,7 @@ daytime and nighttime heat, and moves the heat hazard from tract joins to per-fa
 
 | Step | What |
 |---|---|
-| Extraction | `scrapers/extract_loca2_heat.py` — anonymous cadcat S3 zarr read (intake-esm), 14 models / 62 members × 3 periods × `tasmax`+`tasmin` at 274 distinct cells → `data_sources/hazards/heat/loca2_facility_heat.csv` (357 facilities). **~6 h**; run detached (double-fork `os.setsid` launcher under `caffeinate`) — harness-tracked background jobs get reaped at ~60–80 min. Per-member JSON cache (`heat/loca2_members/`, gitignored) makes restarts free; `--pool-only` re-pools without re-extracting. |
+| Extraction | `data_sources/hazards/heat/extraction/extract_loca2_heat.py` — anonymous cadcat S3 zarr read (intake-esm), 14 models / 62 members × 3 periods × `tasmax`+`tasmin` at 274 distinct cells → `data_sources/hazards/heat/loca2_facility_heat.csv` (357 facilities). **~6 h**; run detached (double-fork `os.setsid` launcher under `caffeinate`) — harness-tracked background jobs get reaped at ~60–80 min. Per-member JSON cache (`heat/loca2_members/`, gitignored) makes restarts free; `--pool-only` re-pools without re-extracting. |
 | Classification | The relative-threshold **baselines are FROZEN by definition** (hot days 1981–2010; warm nights 1961–1990 Apr–Oct P95) — never re-window. The counts are **re-run only** when the ensemble definition, cell assignment, or thresholds change, not seasonally; LOCA2-CA is a fixed projection product, so there is no new-vintage cadence. |
 | Trigger | Re-run only if: cadcat republishes LOCA2-CA, the model/member set or spatial rule changes, or a threshold definition changes. Not event-driven or seasonal. |
 | Consumers | `heat_hazard.ipynb` (→ `heat_air_hazard.csv`). The product also stands alone (all 357 facilities, 3 periods, absolute + relative thresholds) for anyone wanting facility-level heat metrics. |
@@ -197,7 +195,7 @@ daytime and nighttime heat, and moves the heat hazard from tract joins to per-fa
 
 | Step | What |
 |---|---|
-| Scrapers | `extract_gridmet_heat.py` (fully automatic, ~5.8 GB / 30–45 min) → `heat_activations_{daily,annual,monthly}.csv`; `extract_gridmet_summer_avg.py` (~3.5 GB) → `summer_avg_tmax_annual.csv` |
+| Extractors | In `data_sources/hazards/heat/extraction/`: `extract_gridmet_heat.py` (fully automatic, ~5.8 GB / 30–45 min) → `heat_activations_{daily,annual,monthly}.csv`; `extract_gridmet_summer_avg.py` (~3.5 GB) → `summer_avg_tmax_annual.csv` |
 | ⚠ Path drift | Both scripts write to `data_sources/hazards/` but the committed CSVs live in `data_sources/hazards/heat/` — fix the output constants (or move files) before re-running |
 | Classification | The 1991–2020 mean summer tmax baseline (`base1991_2020` in the column names) inside `extract_gridmet_heat.py` is **FROZEN by definition** (WMO normal period — never re-window). The daily/annual/monthly activation files and `summer_avg_tmax_annual.csv` are **LIVING-extendable**: re-running with `ANALYSIS_YEARS` extended appends seasons under the same names |
 | Consumers | `build_heat_operations_panel.py` (family 8) · the heat_activations report · Heat Tracker baseline **validation** (one-time cross-check, not a runtime dependency) |
@@ -219,7 +217,7 @@ overwrite. In practice these need no action during a routine refresh.
 | Step | What |
 |---|---|
 | Rebuild | `analysis/CDCR_risk_indices/heat_risk_index.ipynb` (inputs: `cdcr_facilities.csv`, `heat_air_hazard.csv`, `indoor_outdoor_heat_2025.csv`) and `sensitivity_analysis.ipynb` |
-| Outputs | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` — **FROZEN: this is the 2025-vintage analysis PHI ships.** The next re-cut lands alongside with a vintage in the name (rule 4); these files are never overwritten |
+| Outputs | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` — **VERSIONED (semantic `index_version`, currently v0.3), not filename-vintaged.** Unlike the frozen data snapshots, the index is a methodology artifact: the top-level file is always the **current** version and a re-cut **overwrites** it. Before overwriting, the notebooks archive the on-disk build (keyed by its own `index_version`) to `data/cdcr/archive/CDCR_heat_risk_*_vX.Y.csv`, so every shipped version stays retrievable. The `index_version` column identifies which build produced any row. See the changelog in `analysis/README.md`. |
 | Consumers | PHI `build_app_data.py` · `generate_heat_risk_report.py` · `sensitivity_analysis.ipynb` |
 | Orphans | `CDCR_heat_risk_index_multiplicative.csv` (no builder, no consumer — likely a stale variant), `facility_tmin_2025.csv` (no builder, no consumer). Candidates to delete or document |
 
@@ -252,10 +250,9 @@ files. Then commit each repo; the app-repo commit triggers its Cloudflare rebuil
 
 ---
 
-# Classification table (review me)
+# Classification table
 
-Every tracked output, with its draft frozen/living call. **This table is the part
-that needs Mary's sign-off before this runbook is adopted.**
+Every tracked output, with its frozen/living/versioned classification.
 
 | Output | Class | Rationale |
 |---|---|---|
@@ -269,7 +266,7 @@ that needs Mary's sign-off before this runbook is adopted.**
 | `data/allfacilities_climate_hazards.csv` | LIVING | Join of living inputs |
 | `data_sources/hazards/heat/heat_activations_*.csv`, `summer_avg_tmax_annual.csv` | LIVING (extendable) | Seasons appended; the mean summer tmax baseline inside is definitionally fixed |
 | `data_sources/hazards/heat/loca2_facility_heat.csv` | FROZEN (fixed projection product) | LOCA2-CA daily extraction (family 6b); the relative-threshold baselines are definitionally fixed. Regenerable from `extract_loca2_heat.py`; re-run only if the model set, cell rule, or thresholds change |
-| `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` | **FROZEN (2025 vintage)** | The analysis PHI ships; next cut gets a vintage name alongside |
+| `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` | **VERSIONED (current build)** | Semantic `index_version` (v0.3); top-level file is the current version and is overwritten on re-cut, with prior builds archived under `data/cdcr/archive/` and the app JSON under `analysis/app_export/output/archive/` |
 | `data/cdcr/indoor_outdoor_heat_2025.csv` | FROZEN (manual, one-time) | Built once from a specific CDCR PDF for the memo; no builder script exists. ⚠ Gap: if indoor data is ever re-released, write a builder then — otherwise it never updates |
 | `data/cdcr/CDCR_heat_risk_index_multiplicative.csv` | FROZEN (alternate method) | Intentional alternate index formulation, kept for possible future re-evaluation — not stale, do not delete |
 | `data/ca_outline.json`, `ca_outline_simple.json` | LIVING (static asset) | No builder; effectively never changes |

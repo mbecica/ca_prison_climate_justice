@@ -21,7 +21,7 @@
       "endcentury"
     ],
     "period_note": "Periods are modeled climate data, not observed weather. Only the heat hazard changes between periods; exposure and vulnerability are held constant (2025 values).",
-    "scale_note": "Scores are relative to California's 31 state prisons: the lowest sits near 0 and the highest near 100. A low score means lower risk than other prisons, not that the heat is safe.",
+    "scale_note": "Scores are relative to California's 31 state prisons: a higher score means more at risk from extreme heat than the other prisons. A low score means lower risk than other prisons, not that the heat is safe.",
     "categories": [
       "Lowest",
       "Moderate",

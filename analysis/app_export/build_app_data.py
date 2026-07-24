@@ -382,6 +382,21 @@ def main():
     (SITE / "static/data").mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
     payload = json.dumps(bundle, ensure_ascii=False, indent=2)
+
+    # Archive the canonical JSON currently on disk before overwriting it, keyed by its own
+    # index version, so every shipped version stays retrievable under output/archive/ (mirrors
+    # the index/sensitivity CSV archiving). Idempotent.
+    canonical = OUT / "prison_heat_index.json"
+    if canonical.exists():
+        prev_ver = json.loads(canonical.read_text()).get("meta", {}).get("index_version", "unknown")
+        snap = OUT / "archive" / f"prison_heat_index_{prev_ver}.json"
+        # Archive only a SUPERSEDED build — skip when on-disk is already the version being written,
+        # so the archive holds only prior versions and the top-level file is the single active one.
+        if prev_ver != index_version and not snap.exists():
+            snap.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(canonical, snap)
+            print(f"Archived superseded JSON ({prev_ver}) -> {snap}")
+
     (OUT / "prison_heat_index.json").write_text(payload)
     (SITE / "data/prison_heat_index.json").write_text(payload)
     (SITE / "static/data/prison_heat_index.json").write_text(payload)

@@ -17,7 +17,7 @@ Summary statistics (2016–2025):
 
 ### Historical summer temperature (1990–2025)
 
-Summer average tmax (mean Jun–Aug daily maximum temperature) per facility per year, 1990–2025. Source: gridMET annual tmax files for 1990–2015 (downloaded and deleted); `heat_activations_daily.csv` for 2016–2025. Scraper: `scrapers/extract_gridmet_summer_avg.py`. Output: `data_sources/hazards/summer_avg_tmax_annual.csv`.
+Summer average tmax (mean Jun–Aug daily maximum temperature) per facility per year, 1990–2025. Source: gridMET annual tmax files for 1990–2015 (downloaded and deleted); `heat_activations_daily.csv` for 2016–2025. Scraper: `data_sources/hazards/heat/extraction/extract_gridmet_summer_avg.py`. Output: `data_sources/hazards/summer_avg_tmax_annual.csv`.
 
 - **System-wide average line** — mean Jun–Aug tmax across all facilities, 1990–2025
 - **Per-facility line chart** — one line per facility, same red color scale as heat activation charts; bold black system average overlay

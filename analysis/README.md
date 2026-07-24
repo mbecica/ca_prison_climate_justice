@@ -173,9 +173,12 @@ Overall risk rank correlates with v0.1 at Spearman ρ ≈ 0.84; exposure and vul
 The index is versioned so an exported artifact is self-identifying. The present state is **v0.3**;
 the prior states are retroactively **v0.2** and **v0.1**. The version is carried in the `index_version`
 column of `CDCR_heat_risk_index_additive_25_25_50.csv` and `CDCR_heat_risk_sensitivity.csv`, and in the
-`meta.index_version` field of `prison_heat_index.json`. Prior outputs are retained alongside the current
-build (`*_v0.1.csv`, `*_v0.2.csv`, `prison_heat_index_v0.1.json`, `prison_heat_index_v0.2.json`) so
-versions can be compared and any circulated figure stays traceable to the version that produced it.
+`meta.index_version` field of `prison_heat_index.json`. The top-level files are always the current
+build; a copy of **every shipped version** is retained in dedicated archive directories —
+`data/cdcr/archive/` for the CSVs and `analysis/app_export/output/archive/` for the app JSON
+(`*_v0.1.*` through the current version) — so versions can be compared and any circulated figure stays
+traceable. The build notebooks archive the on-disk build (keyed by its own `index_version`) before
+overwriting, so the archive fills automatically.
 
 #### Changelog — v0.3
 

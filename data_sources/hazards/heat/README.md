@@ -4,7 +4,7 @@ Facility-level heat metrics for all 357 California correctional facilities, comp
 LOCA2-CA daily `tasmax` and `tasmin`. This replaces the tract-level joins that previously
 supplied daytime heat from `heatdays_alltimes_tract.csv`.
 
-Extraction script: `scrapers/extract_loca2_heat.py`. Observed-temperature counterparts, on
+Extraction script: `data_sources/hazards/heat/extraction/extract_loca2_heat.py`. Observed-temperature counterparts, on
 gridMET rather than model data, are documented in `../README.md`.
 
 ## Source

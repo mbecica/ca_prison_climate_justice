@@ -10,7 +10,7 @@ Output:
   Columns: cdcr_code, year, avg_summer_tmax_f
 
 Usage:
-  conda run -n data_science python3 scrapers/extract_gridmet_summer_avg.py
+  conda run -n data_science python3 data_sources/hazards/heat/extraction/extract_gridmet_summer_avg.py
 
 Runtime: ~15–25 minutes (downloads ~3.5 GB across 26 year files; deleted after use).
 """
@@ -32,8 +32,8 @@ import xarray as xr
 
 GRIDMET_URL   = "https://www.northwestknowledge.net/metdata/data/tmmx_{year}.nc"
 DOWNLOAD_YEARS = range(1990, 2016)   # 1990–2015; 2016–2025 read from existing CSV
-REPO_ROOT      = Path(__file__).parent.parent
-FACILITIES_CSV = REPO_ROOT / "data" / "cdcr_facilities.csv"
+REPO_ROOT      = Path(__file__).resolve().parents[4]
+FACILITIES_CSV = REPO_ROOT / "data" / "cdcr" / "cdcr_facilities.csv"
 DAILY_CSV      = REPO_ROOT / "data_sources" / "hazards" / "heat_activations_daily.csv"
 OUTPUT_CSV     = REPO_ROOT / "data_sources" / "hazards" / "summer_avg_tmax_annual.csv"
 

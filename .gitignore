@@ -251,7 +251,7 @@ data_sources/hazards/heat/aqi_heat_compound.md
 data_sources/hazards/heat/loca2_extract_v2.log
 
 # LOCA2-CA per-member extraction cache — resumable intermediate, ~11 MB.
-# Rebuilt by scrapers/extract_loca2_heat.py; the committed product is
+# Rebuilt by data_sources/hazards/heat/extraction/extract_loca2_heat.py; the committed product is
 # data_sources/hazards/heat/loca2_facility_heat.csv
 data_sources/hazards/heat/loca2_members/
 data_sources/hazards/heat/loca2_facility_heat_PREVIEW.csv
