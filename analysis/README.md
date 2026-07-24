@@ -12,7 +12,7 @@ Notebooks and scripts are in this directory. Outputs are written to `data/cdcr/`
 
 ### Framework
 
-Risk = 0.25H + 0.25E + 0.50V (additive, vulnerability double-weighted), following Ovienmhada et al. (2024). Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods so that current and mid-century scores are directly comparable on the same scale.
+Risk = 0.25H + 0.25E + 0.50V (additive, vulnerability double-weighted), following Ovienmhada et al. (2024). Each component is an equal-weight composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods by max-normalization (dividing by the shared cross-period maximum), so current and mid-century scores are directly comparable on the same scale and no facility is forced to a false 0.
 
 Vulnerability receives double weight because cooling in prisons is controlled by staff who, as Brunn et al. (2025) document, withhold AC, water, and shade to punish and retaliate. The additive form also prevents a facility with full mechanical AC from scoring zero risk; a multiplicative model would zero out CHCF, which has the highest vulnerability in the system but no indoor heat days.
 
@@ -103,29 +103,35 @@ The following variables were considered for inclusion and rejected after methodo
 
 ### Risk Tier Classification
 
-Mid-century risk scores are classified into four tiers using Jenks natural breaks, computed to minimize within-class variance. Breaks are applied to the mid-century distribution only; historic scores use the same thresholds for comparability.
+Risk scores are classified into four tiers using Jenks natural breaks (k=4, `jenkspy`), computed to minimize within-class variance. As of **v0.3, breaks are computed separately for each time period** — each period is classified against its own range — so both periods span all four tiers. (v0.2 applied the mid-century breaks to both periods; because the cross-period score makes the cooler current period genuinely lower, that collapsed the current period into just Moderate and Lowest.)
+
+A category is therefore **relative within a period**: "Highest" in the current period is a lower absolute risk than "Highest" mid-century. The 0–100 risk score stays cross-period normalized (see Versioning → v0.3), so the absolute current → mid-century increase is carried by the score; only the label is within-period. One consequence: a facility high on the constant exposure + vulnerability (e.g. RJD, PBSP) can sit a tier higher in the current period — where hazard spread is compressed — than mid-century, even though its score rises.
 
 Tiers are named to reflect relative risk within the CDCR system. All incarcerated people face elevated heat risk compared to the general population; these labels indicate which facilities face the highest risk relative to peers, not that lower-ranked facilities are safe.
 
-The table below reflects the **additive default model** (Risk = 0.25 H + 0.25 E + 0.50 V), which
-has been the published default since the 2026-04-21 switch from the multiplicative baseline. Scores
-and tiers are **heat index v0.2** (facility-relative hazard thresholds — see the changelog). The
-score range shown for each tier is the observed span of mid-century scores within it; Jenks breaks
-fall in the gaps between tiers.
+The tables below reflect the **additive default model** (Risk = 0.25 H + 0.25 E + 0.50 V), the published default since the 2026-04-21 switch from the multiplicative baseline, at **heat index v0.3**. The score span shown for each tier is the observed span within that tier; Jenks breaks fall in the gaps between tiers.
 
-| Tier | Mid-century score span | n facilities | Facilities | Color |
+**Mid-century (2041–2070):**
+
+| Tier | Score span | n | Facilities | Color |
 | :--- | :--- | :--- | :--- | :--- |
-| Highest | 86.6 – 100.0 | 5 | CIM, CMF, CIW, COR, SATF | `#7a1010` |
-| High | 68.0 – 80.1 | 8 | SAC, CHCF, CCWF, LAC, VSP, RJD, CRC, SOL | `#c44020` |
-| Moderate | 48.5 – 63.4 | 10 | MCSP, KVSP, NKSP, SQ, HDSP, CCI, WSP, FOL, PBSP, CMC | `#e89050` |
-| Lowest | 22.8 – 44.5 | 8 | CTF, SVSP, PVSP, ASP, SCC, ISP, CAL, CEN | `#e8e0c8` |
+| Highest | 91.2 – 100.0 | 5 | CIM, CMF, CIW, COR, SATF | `#7a1010` |
+| High | 78.9 – 86.8 | 8 | SAC, CHCF, CCWF, LAC, VSP, RJD, CRC, SOL | `#c44020` |
+| Moderate | 66.0 – 75.9 | 10 | MCSP, KVSP, NKSP, SQ, HDSP, CCI, WSP, FOL, PBSP, CMC | `#e89050` |
+| Lowest | 49.1 – 63.4 | 8 | CTF, SVSP, PVSP, ASP, SCC, ISP, CAL, CEN | `#e8e0c8` |
 
-Applying the same mid-century breaks to the current period gives Moderate 7, Lowest 24, and no
-facilities in the Highest or High tiers: the warming signal between periods is large, so
-current-period hazard sits well below mid-century and every current score falls beneath the High
-break.
+**Current (1991–2020):**
 
-**Mid-century top 5 by risk score:** CIM (100.0), CMF (87.6), CIW (87.2), COR (87.1), SATF (86.6).
+| Tier | Score span | n | Facilities | Color |
+| :--- | :--- | :--- | :--- | :--- |
+| Highest | 65.7 – 75.3 | 7 | CIM, CMF, COR, SATF, SAC, CIW, RJD | `#7a1010` |
+| High | 55.9 – 63.2 | 9 | CHCF, CCWF, SOL, LAC, VSP, CRC, MCSP, PBSP, KVSP | `#c44020` |
+| Moderate | 48.5 – 54.2 | 9 | CMC, NKSP, SQ, WSP, CTF, FOL, HDSP, SVSP, CCI | `#e89050` |
+| Lowest | 34.0 – 43.2 | 6 | ASP, PVSP, CAL, SCC, ISP, CEN | `#e8e0c8` |
+
+No current-period score is 0: max-normalization (v0.3) removes the false floor that put CEN at exactly 0.0 under v0.2's min-max. The lowest current score is CEN at 34.0.
+
+**Mid-century top 5 by risk score:** CIM (100.0), CMF (92.5), CIW (92.1), COR (91.7), SATF (90.9).
 
 Overall risk rank correlates with v0.1 at Spearman ρ ≈ 0.84; exposure and vulnerability are unchanged, only the hazard component was rebuilt. The 50/50 daytime blend correlates with a pure-relative daytime term at ρ ≈ 0.96.
 
@@ -160,16 +166,35 @@ Overall risk rank correlates with v0.1 at Spearman ρ ≈ 0.84; exposure and vul
 | `in_urban_area_2020` | Whether facility falls within a 2020 Census urban area boundary — descriptive only, not scored |
 | `california_model_facility` | Whether facility is designated a California Model facility — descriptive only, not scored |
 | `year_opened` | Year the facility opened — descriptive only, not scored |
-| `index_version` | Heat index version that produced the row (`v0.2`) |
+| `index_version` | Heat index version that produced the row (`v0.3`) |
 
 ### Versioning
 
-The index is versioned so an exported artifact is self-identifying. The present state is **v0.2**;
-the prior state is retroactively **v0.1**. The version is carried in the `index_version` column of
-`CDCR_heat_risk_index_additive_25_25_50.csv` and `CDCR_heat_risk_sensitivity.csv`, and in the
-`meta.index_version` field of `prison_heat_index.json`. v0.1 outputs are retained alongside v0.2
-(`*_v0.1.csv`, `prison_heat_index_v0.1.json`) so the two can be compared and any circulated figure
-stays traceable to the version that produced it.
+The index is versioned so an exported artifact is self-identifying. The present state is **v0.3**;
+the prior states are retroactively **v0.2** and **v0.1**. The version is carried in the `index_version`
+column of `CDCR_heat_risk_index_additive_25_25_50.csv` and `CDCR_heat_risk_sensitivity.csv`, and in the
+`meta.index_version` field of `prison_heat_index.json`. Prior outputs are retained alongside the current
+build (`*_v0.1.csv`, `*_v0.2.csv`, `prison_heat_index_v0.1.json`, `prison_heat_index_v0.2.json`) so
+versions can be compared and any circulated figure stays traceable to the version that produced it.
+
+#### Changelog — v0.3
+
+- **Risk-score normalization: min-max → max-norm.** The final 0–100 risk score is now divided by the
+  cross-period maximum only, with no minimum subtracted. Under v0.2's min-max, the single lowest
+  facility-period was forced to exactly 0 — a misleading "zero heat risk" (CEN read 0.0 in the current
+  period). Max-normalization keeps the shared cross-period denominator, so both periods stay comparable
+  and the current → mid-century increase is preserved, while removing the false floor (CEN current is
+  now 34.0). This mirrors the max-normalization already used inside the hazard component.
+- **Risk categories: shared mid-century breaks → per-period Jenks.** Categories are now Jenks-classified
+  separately for each period, so both periods span all four tiers. v0.2 applied the mid-century breaks
+  to both periods, collapsing the cooler current period into just Moderate/Lowest. The trade-off: a
+  category is now relative *within* a period (see Risk Tier Classification), while the score remains
+  cross-period comparable.
+- **Unchanged:** the hazard, exposure, and vulnerability components and all their inputs; the weights
+  (0.25/0.25/0.50); the two periods; and the fact that the score is normalized jointly across both
+  periods. v0.3 changes only the final combination step (normalization method + category breaks), so
+  v0.2 → v0.3 rank movement within a period is small; what changes is the score floor and the
+  current-period tier spread.
 
 #### Changelog — v0.2
 
@@ -211,7 +236,7 @@ Three alternative weighting schemes are tested against the equal-weight multipli
 | B — Additive 25/25/50 | 0.25H + 0.25E + 0.50V, normalized 0–100 | Ovienmhada vulnerability upweighting; additive structure means high vulnerability alone can drive rank |
 | C — Multiplicative V² | H × E × V², normalized 0–100 | Preserves multiplicative structure; vulnerability amplified but still requires hazard and exposure |
 
-Spearman rank correlations across schemes (heat index v0.2): A vs B = 0.901, A vs C = 0.945, B vs C = 0.971. Most facilities are stable across schemes. CHCF has the largest rank swing (17 positions): it ranks 26th under equal weighting but rises to 9th under the additive scheme, because high medical complexity drives vulnerability even without indoor heat exposure days (full AC). CRC has the next largest swing (7 positions).
+Spearman rank correlations across schemes (heat index v0.3; unchanged from v0.2 — the scheme scores are min-max within mid-century and invariant to the v0.3 final-normalization change): A vs B = 0.901, A vs C = 0.945, B vs C = 0.971. Most facilities are stable across schemes. CHCF has the largest rank swing (17 positions): it ranks 26th under equal weighting but rises to 9th under the additive scheme, because high medical complexity drives vulnerability even without indoor heat exposure days (full AC). CRC has the next largest swing (7 positions).
 
 VCP's `ExHeatHealth_Idx` for each prison's surrounding non-institutional census tracts (Pct_GroupQuarters ≤ 25%) is included for comparison. Spearman r between our index and the surrounding community VCP index is −0.17 — the low correlation supports the case for a prison-specific framework rather than applying community-facing indices directly to carceral facilities.
 

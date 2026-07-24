@@ -1,6 +1,6 @@
 {
   "meta": {
-    "index_version": "v0.3",
+    "index_version": "v0.2",
     "n_prisons": 31,
     "weights": {
       "hazard": 0.25,
@@ -69,8 +69,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 43.23,
-            "display": 43,
+            "value": 13.96,
+            "display": 14,
             "category": "Lowest"
           },
           "hazard": {
@@ -92,8 +92,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 58.99,
-            "display": 59,
+            "value": 37.86,
+            "display": 38,
             "category": "Lowest"
           },
           "hazard": {
@@ -168,8 +168,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-correctional-institution",
-          "name": "California Correctional Institution"
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
         },
         "lower": {
           "slug": "pleasant-valley-state-prison",
@@ -194,9 +194,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 48.46,
-            "display": 48,
-            "category": "Moderate"
+            "value": 21.9,
+            "display": 22,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.22,
@@ -213,12 +213,12 @@
             "display": 26,
             "category": "Moderate"
           },
-          "risk_rank": 25
+          "risk_rank": 24
         },
         "midcentury": {
           "risk": {
-            "value": 70.17,
-            "display": 70,
+            "value": 54.79,
+            "display": 55,
             "category": "Moderate"
           },
           "hazard": {
@@ -293,12 +293,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
         },
         "lower": {
-          "slug": "avenal-state-prison",
-          "name": "Avenal State Prison"
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
         }
       }
     },
@@ -319,9 +319,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 63.19,
-            "display": 63,
-            "category": "High"
+            "value": 44.22,
+            "display": 44,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.33,
@@ -342,8 +342,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 84.65,
-            "display": 85,
+            "value": 76.73,
+            "display": 77,
             "category": "High"
           },
           "hazard": {
@@ -444,9 +444,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 75.3,
-            "display": 75,
-            "category": "Highest"
+            "value": 62.57,
+            "display": 63,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.37,
@@ -566,9 +566,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 68.22,
-            "display": 68,
-            "category": "Highest"
+            "value": 51.84,
+            "display": 52,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.36,
@@ -589,8 +589,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 91.52,
-            "display": 92,
+            "value": 87.15,
+            "display": 87,
             "category": "Highest"
           },
           "hazard": {
@@ -691,9 +691,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 74.57,
-            "display": 75,
-            "category": "Highest"
+            "value": 61.46,
+            "display": 61,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.32,
@@ -714,8 +714,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 91.79,
-            "display": 92,
+            "value": 87.56,
+            "display": 88,
             "category": "Highest"
           },
           "hazard": {
@@ -816,9 +816,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 54.21,
-            "display": 54,
-            "category": "Moderate"
+            "value": 30.6,
+            "display": 31,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.27,
@@ -839,8 +839,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 66.01,
-            "display": 66,
+            "value": 48.48,
+            "display": 48,
             "category": "Moderate"
           },
           "hazard": {
@@ -941,9 +941,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 57.49,
-            "display": 57,
-            "category": "High"
+            "value": 35.58,
+            "display": 36,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.35,
@@ -964,8 +964,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 80.05,
-            "display": 80,
+            "value": 69.76,
+            "display": 70,
             "category": "High"
           },
           "hazard": {
@@ -1066,9 +1066,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 69.77,
-            "display": 70,
-            "category": "Highest"
+            "value": 54.18,
+            "display": 54,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.36,
@@ -1089,8 +1089,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 91.5,
-            "display": 92,
+            "value": 87.11,
+            "display": 87,
             "category": "Highest"
           },
           "hazard": {
@@ -1191,9 +1191,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 61.04,
-            "display": 61,
-            "category": "High"
+            "value": 40.96,
+            "display": 41,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.32,
@@ -1214,8 +1214,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 82.16,
-            "display": 82,
+            "value": 72.97,
+            "display": 73,
             "category": "High"
           },
           "hazard": {
@@ -1316,9 +1316,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 69.26,
-            "display": 69,
-            "category": "Highest"
+            "value": 53.42,
+            "display": 53,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.29,
@@ -1339,8 +1339,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 86.85,
-            "display": 87,
+            "value": 80.07,
+            "display": 80,
             "category": "High"
           },
           "hazard": {
@@ -1441,9 +1441,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 61.68,
-            "display": 62,
-            "category": "High"
+            "value": 41.92,
+            "display": 42,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.32,
@@ -1464,8 +1464,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 78.9,
-            "display": 79,
+            "value": 68.02,
+            "display": 68,
             "category": "High"
           },
           "hazard": {
@@ -1566,9 +1566,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 69.44,
-            "display": 69,
-            "category": "Highest"
+            "value": 53.68,
+            "display": 54,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.36,
@@ -1589,8 +1589,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 91.17,
-            "display": 91,
+            "value": 86.62,
+            "display": 87,
             "category": "Highest"
           },
           "hazard": {
@@ -1691,8 +1691,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 38.26,
-            "display": 38,
+            "value": 6.43,
+            "display": 6,
             "category": "Lowest"
           },
           "hazard": {
@@ -1714,8 +1714,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 52.02,
-            "display": 52,
+            "value": 27.28,
+            "display": 27,
             "category": "Lowest"
           },
           "hazard": {
@@ -1816,8 +1816,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 34.01,
-            "display": 34,
+            "value": 0,
+            "display": 0,
             "category": "Lowest"
           },
           "hazard": {
@@ -1839,8 +1839,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 49.08,
-            "display": 49,
+            "value": 22.83,
+            "display": 23,
             "category": "Lowest"
           },
           "hazard": {
@@ -1938,9 +1938,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 62.8,
-            "display": 63,
-            "category": "High"
+            "value": 43.63,
+            "display": 44,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.33,
@@ -1961,8 +1961,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 84.38,
-            "display": 84,
+            "value": 76.33,
+            "display": 76,
             "category": "High"
           },
           "hazard": {
@@ -2063,9 +2063,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 50.45,
-            "display": 50,
-            "category": "Moderate"
+            "value": 24.91,
+            "display": 25,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.26,
@@ -2086,8 +2086,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 63.37,
-            "display": 63,
+            "value": 44.49,
+            "display": 44,
             "category": "Lowest"
           },
           "hazard": {
@@ -2188,9 +2188,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 50.32,
-            "display": 50,
-            "category": "Moderate"
+            "value": 24.71,
+            "display": 25,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.33,
@@ -2211,8 +2211,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 68.91,
-            "display": 69,
+            "value": 52.89,
+            "display": 53,
             "category": "Moderate"
           },
           "hazard": {
@@ -2313,9 +2313,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 49.1,
-            "display": 49,
-            "category": "Moderate"
+            "value": 22.87,
+            "display": 23,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.28,
@@ -2336,8 +2336,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 70.19,
-            "display": 70,
+            "value": 54.83,
+            "display": 55,
             "category": "Moderate"
           },
           "hazard": {
@@ -2416,8 +2416,8 @@
           "name": "Folsom State Prison"
         },
         "lower": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
         }
       }
     },
@@ -2438,8 +2438,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 35.93,
-            "display": 36,
+            "value": 2.91,
+            "display": 3,
             "category": "Lowest"
           },
           "hazard": {
@@ -2461,8 +2461,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 52.63,
-            "display": 53,
+            "value": 28.21,
+            "display": 28,
             "category": "Lowest"
           },
           "hazard": {
@@ -2563,9 +2563,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 55.89,
-            "display": 56,
-            "category": "High"
+            "value": 33.16,
+            "display": 33,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.35,
@@ -2586,8 +2586,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 75.17,
-            "display": 75,
+            "value": 62.37,
+            "display": 62,
             "category": "Moderate"
           },
           "hazard": {
@@ -2688,9 +2688,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 56.89,
-            "display": 57,
-            "category": "High"
+            "value": 34.67,
+            "display": 35,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.32,
@@ -2711,8 +2711,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 75.86,
-            "display": 76,
+            "value": 63.42,
+            "display": 63,
             "category": "Moderate"
           },
           "hazard": {
@@ -2813,9 +2813,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 53.46,
-            "display": 53,
-            "category": "Moderate"
+            "value": 29.47,
+            "display": 29,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.35,
@@ -2836,8 +2836,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 73.07,
-            "display": 73,
+            "value": 59.18,
+            "display": 59,
             "category": "Moderate"
           },
           "hazard": {
@@ -2938,9 +2938,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 56.36,
-            "display": 56,
-            "category": "High"
+            "value": 33.87,
+            "display": 34,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.2,
@@ -2961,8 +2961,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 68.87,
-            "display": 69,
+            "value": 52.83,
+            "display": 53,
             "category": "Moderate"
           },
           "hazard": {
@@ -3063,8 +3063,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 41.72,
-            "display": 42,
+            "value": 11.67,
+            "display": 12,
             "category": "Lowest"
           },
           "hazard": {
@@ -3086,8 +3086,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 59.25,
-            "display": 59,
+            "value": 38.25,
+            "display": 38,
             "category": "Lowest"
           },
           "hazard": {
@@ -3188,9 +3188,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 65.65,
-            "display": 66,
-            "category": "Highest"
+            "value": 47.94,
+            "display": 48,
+            "category": "Moderate"
           },
           "hazard": {
             "value": 0.27,
@@ -3211,8 +3211,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 80.82,
-            "display": 81,
+            "value": 70.93,
+            "display": 71,
             "category": "High"
           },
           "hazard": {
@@ -3313,9 +3313,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 48.47,
-            "display": 48,
-            "category": "Moderate"
+            "value": 21.9,
+            "display": 22,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.25,
@@ -3332,12 +3332,12 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 24
+          "risk_rank": 25
         },
         "midcentury": {
           "risk": {
-            "value": 61.98,
-            "display": 62,
+            "value": 42.38,
+            "display": 42,
             "category": "Lowest"
           },
           "hazard": {
@@ -3412,12 +3412,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "high-desert-state-prison",
-          "name": "High Desert State Prison"
-        },
-        "lower": {
           "slug": "california-correctional-institution",
           "name": "California Correctional Institution"
+        },
+        "lower": {
+          "slug": "avenal-state-prison",
+          "name": "Avenal State Prison"
         }
       }
     },
@@ -3438,9 +3438,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 53.37,
-            "display": 53,
-            "category": "Moderate"
+            "value": 29.33,
+            "display": 29,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.26,
@@ -3461,8 +3461,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 72.36,
-            "display": 72,
+            "value": 58.11,
+            "display": 58,
             "category": "Moderate"
           },
           "hazard": {
@@ -3563,8 +3563,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 37.62,
-            "display": 38,
+            "value": 5.46,
+            "display": 5,
             "category": "Lowest"
           },
           "hazard": {
@@ -3586,8 +3586,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 56.44,
-            "display": 56,
+            "value": 33.98,
+            "display": 34,
             "category": "Lowest"
           },
           "hazard": {
@@ -3688,9 +3688,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 59.87,
-            "display": 60,
-            "category": "High"
+            "value": 39.19,
+            "display": 39,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.34,
@@ -3711,8 +3711,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 81.16,
-            "display": 81,
+            "value": 71.46,
+            "display": 71,
             "category": "High"
           },
           "hazard": {
@@ -3813,9 +3813,9 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 52.6,
-            "display": 53,
-            "category": "Moderate"
+            "value": 28.17,
+            "display": 28,
+            "category": "Lowest"
           },
           "hazard": {
             "value": 0.35,
@@ -3836,8 +3836,8 @@
         },
         "midcentury": {
           "risk": {
-            "value": 69.94,
-            "display": 70,
+            "value": 54.44,
+            "display": 54,
             "category": "Moderate"
           },
           "hazard": {

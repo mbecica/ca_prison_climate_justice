@@ -251,11 +251,12 @@ sens_df = None
 if SENS.exists():
     sens_df = pd.read_csv(SENS)
 
-# Compute Jenks breaks from mid-century scores (reproduce)
-mc_scores = mc['risk_score'].values
-import mapclassify as mc_cls
-jnb = mc_cls.NaturalBreaks(mc_scores, k=4)
-breaks_arr = jnb.bins
+# Reproduce the mid-century Jenks breaks for the tier-table display. Use jenkspy (as the index
+# notebook does) — NOT mapclassify, which yields slightly different breaks. Categories are now
+# computed per period (v0.3); this table reports the mid-century breaks.
+mc_scores = mc['risk_score'].tolist()
+import jenkspy
+breaks_arr = jenkspy.jenks_breaks(mc_scores, n_classes=4)[1:]  # drop running min; inner edges + max
 break_low_mod   = round(float(breaks_arr[0]), 1)
 break_mod_high  = round(float(breaks_arr[1]), 1)
 break_high_crit = round(float(breaks_arr[2]), 1)
@@ -280,7 +281,7 @@ md_lines = [
     f'',
     f'## Framework',
     f'',
-    f'**Risk = 0.25·Hazard + 0.25·Exposure + 0.50·Vulnerability**, following Ovienmhada et al. (2024) and the California Vulnerable Communities Platform (VCP) methodology. Vulnerability is double-weighted: the index answers "where are people most at risk if cooling fails?", and the additive form keeps a fully air-conditioned but highly vulnerable facility from scoring zero risk. Each component is a composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods (current: 1991–2020; mid-century: 2041–2070, SSP3-7.0). This report reflects heat index **v0.2**, whose hazard component uses facility-relative temperature thresholds from a LOCA2-CA daily extraction.',
+    f'**Risk = 0.25·Hazard + 0.25·Exposure + 0.50·Vulnerability**, following Ovienmhada et al. (2024) and the California Vulnerable Communities Platform (VCP) methodology. Vulnerability is double-weighted: the index answers "where are people most at risk if cooling fails?", and the additive form keeps a fully air-conditioned but highly vulnerable facility from scoring zero risk. Each component is a composite of sub-indicators normalized 0–1 across the 31 facilities before averaging. The final risk score is normalized 0–100 jointly across both time periods by max-normalization (current: 1991–2020; mid-century: 2041–2070, SSP3-7.0) — dividing by the shared cross-period maximum so the periods stay comparable and no facility is forced to a false 0. This report reflects heat index **v0.3**, whose hazard component uses facility-relative temperature thresholds from a LOCA2-CA daily extraction; v0.3 switched the risk-score normalization from min-max to max-norm and classifies risk categories per time period.',
     f'',
     f'Adaptive capacity is excluded as a standalone component following Ovienmhada et al. (2024). Incarcerated people cannot relocate, purchase cooling, or leave the facility — the institutional structure of incarceration removes the individual and collective agency that adaptive capacity metrics are designed to measure.',
     f'',
@@ -382,7 +383,7 @@ md_lines += [
     f'| Moderate | {break_low_mod} – {break_mod_high} | {n_mod} | {mod_list} |',
     f'| Lowest | ≤ {break_low_mod} | {n_lowest} | {lowest_list} |',
     f'',
-    f'> Jenks natural breaks computed on mid-century risk scores (k=4). Same thresholds applied to current-period scores for comparability.',
+    f'> Jenks natural breaks (k=4) computed on mid-century risk scores. As of v0.3, categories are computed separately for each period (each period classified against its own range), so the current-period map spans all four tiers; the cross-period max-normalized score still carries the absolute current → mid-century increase.',
     f'',
     f'---',
     f'',

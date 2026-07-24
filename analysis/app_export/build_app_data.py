@@ -255,7 +255,7 @@ def main():
             "periods": {"historic": period(c), "midcentury": period(m)},
             "profile": {
                 "hazard": {
-                    # Modeled outdoor climate (heat index v0.2). days_over_90 is an
+                    # Modeled outdoor climate (heat index v0.3). days_over_90 is an
                     # absolute-threshold display metric; the hazard SCORE is built on
                     # the relative thresholds below (hot days above the facility's own
                     # summer mean +10°F, warm nights above its 1961-1990 Apr-Oct P95).
