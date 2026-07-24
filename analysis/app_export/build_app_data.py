@@ -194,6 +194,9 @@ def main():
     fac = pd.read_csv(FAC_CSV).dropna(subset=["cdcr_code"])
     haz = pd.read_csv(HAZ_CSV).set_index("facilityid")   # outdoor climate, by facilityid
 
+    # Self-identifying index version (from the index CSV; defaults to v0.2).
+    index_version = str(risk["index_version"].iloc[0]) if "index_version" in risk.columns else "v0.2"
+
     cur = risk[risk.time_period == "current"].set_index("cdcr_code")
     mid = risk[risk.time_period == "midcentury"].set_index("cdcr_code")
     facx = fac.set_index("cdcr_code")
@@ -252,14 +255,21 @@ def main():
             "periods": {"historic": period(c), "midcentury": period(m)},
             "profile": {
                 "hazard": {
-                    # Modeled outdoor climate; heat days + hot nights vary by period.
+                    # Modeled outdoor climate (heat index v0.2). days_over_90 is an
+                    # absolute-threshold display metric; the hazard SCORE is built on
+                    # the relative thresholds below (hot days above the facility's own
+                    # summer mean +10°F, warm nights above its 1961-1990 Apr-Oct P95).
                     "days_over_90": {
                         "historic": num(hz("heat_days_over_90_historic")),
                         "midcentury": num(hz("heat_days_over_90_midcentury")),
                     },
-                    "hotnights_pct": {
-                        "historic": num(hz("heat_hotnights_historic_pct"), 1),
-                        "midcentury": num(hz("heat_hotnights_midcentury_pct"), 1),
+                    "hot_days": {  # days_over_avg_plus10 (relative, Skarha threshold)
+                        "historic": num(hz("heat_days_over_avg_plus10_historic"), 1),
+                        "midcentury": num(hz("heat_days_over_avg_plus10_midcentury"), 1),
+                    },
+                    "warm_nights": {  # nights_over_p95, Apr-Oct, per year (relative)
+                        "historic": num(hz("heat_nights_over_p95_historic"), 1),
+                        "midcentury": num(hz("heat_nights_over_p95_midcentury"), 1),
                     },
                     "aqi_pctile": num(hz("heat_aqi_pctile")),
                 },
@@ -330,6 +340,7 @@ def main():
 
     bundle = {
         "meta": {
+            "index_version": index_version,
             "n_prisons": len(prisons),
             "weights": {"hazard": 0.25, "exposure": 0.25, "vulnerability": 0.50},
             "periods": {

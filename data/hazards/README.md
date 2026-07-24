@@ -1,6 +1,6 @@
 # Hazard Index Methods
 
-Tract-level hazard indices for all 357 CA carceral facilities. Each index is built in `data_sources/hazards/` and joined to facilities in `analysis/hazards/join_climate_hazards.ipynb` via `tract_geoid`.
+Hazard indices for all 357 CA carceral facilities, built in `data_sources/hazards/` and joined in `analysis/hazards/join_climate_hazards.ipynb`. As of heat index **v0.2**, heat is **facility-level** — each facility carries its own LOCA2-CA grid cell and joins by `facilityid`. Flood and drought remain **tract-level** joins (via `tract_geoid`). This mixed basis is an improvement over the prior all-tract state (where heat was tract-level too) and is stated here plainly; flood and drought are the candidates for the same facility-level treatment in a later version.
 
 VCP excludes census tracts with high group-quarters populations (including state prisons) from its composite scores, but the underlying raw indicators are available for all tracts and are used directly here.
 
@@ -8,32 +8,42 @@ VCP excludes census tracts with high group-quarters populations (including state
 
 ---
 
-## Heat and Air Quality Index
+## Heat and Air Quality Index (v0.2)
 
-**Notebook:** `data_sources/hazards/heat_hazard.ipynb`
+**Notebook:** `data_sources/hazards/heat/heat_hazard.ipynb`
 
-Combines daytime heat, nighttime heat recovery failure, and air quality into two comparable indices — current and mid-century. Each temperature indicator is normalized min-max across both time periods combined. Hot nights use VCP's relative definition (% of nights exceeding the 98th percentile of each tract's own historical minimum temperature), which accounts for local acclimatization. AQI is held at historic CalEnviroScreen values for both indices, as tract-level air quality cannot be reliably projected. All three components carry equal weight, giving temperature 2/3 collective weight and AQI 1/3.
+Combines daytime heat, nighttime heat recovery failure, and air quality into two comparable indices — current and mid-century — for all 357 facilities. Both temperature indicators are **facility-relative** and drawn from a LOCA2-CA daily extraction (`loca2_facility_heat.csv`), not the tract product used in v0.1.
+
+- **Hot days** — days above the facility's own mean summer daily-max + 10°F (Skarha threshold, 1981–2010 baseline).
+- **Warm nights** — April–October nights above the 95th percentile of the facility's **1961–1990** April–October minimum-temperature distribution (OEHHA convention). The baseline window is fixed and differs from the counting window, so the count measures distributional shift rather than moving with the climate it detects.
+
+Each temperature indicator is **max-normalized** across the facilities and both periods (dividing by the cross-period max, not min-max), so a facility with no heat scores 0 while the coolest facility keeps its real, non-zero score. The two are averaged, then amplified by air quality as a **multiplicative modifier**: `H = temp × (1 + 0.30·AQI_norm/100)`. AQI enters as an amplifier rather than an additive third — it raises the hazard where heat is present but cannot create hazard from pollution alone (×1.0 at AQI = 0). AQI is held at historic CalEnviroScreen values for both periods; β = 0.30 is a design parameter capping amplification at +30% at the worst-air facility.
+
+**Provenance.** LOCA2-CA daily, accessed anonymously from the cadcat S3 zarr store (`s3://cadcat/loca2/ucsd/...`, grid `d03`, ≈3 km cells). The ensemble is **14 models** (HadGEM3-GC31-LL dropped — no ssp370 on cadcat), pooled by **model democracy**: counts are computed per member, averaged within model, then across models, so each model carries weight 1/14 regardless of how many members it contributes. Threshold and count are computed **per member, then pooled** — computing a threshold from the ensemble mean would smooth away the daily variance the exceedance count measures. Historic = 1981–2010, mid-century = 2041–2070 (ssp370). See `data_sources/hazards/README.md` for the spatial cell-assignment rule and the reproduction-gate result against the published Cal-Adapt layer.
 
 | Component | Current | Mid-century | Source |
 | :--- | :--- | :--- | :--- |
-| Daytime heat | Days over 90°F (1991–2020) | Days over 90°F (2041–2070) | Cal-Adapt, LOCA 2 downscaled |
-| Hot nights | % nights > 98th pctl of tract's own historical min temp (2015–2044) | Same threshold (2045–2074) | LCI VCP / LOCA 2 CA Hybrid SSP 370 |
-| Air quality | AQI from ozone, PM2.5, diesel percentiles | Held at historic — no tract-level projection | CalEnviroScreen 5.0, 2025 |
+| Hot days | Days above facility summer-mean tmax + 10°F (1981–2010) | Same threshold (2041–2070) | LOCA2-CA daily (SSP3-7.0) via cadcat |
+| Warm nights | Apr–Oct nights > P95 of facility 1961–1990 Apr–Oct tmin | Same threshold (2041–2070) | LOCA2-CA daily (SSP3-7.0) via cadcat |
+| Air quality | Multiplicative modifier `× (1 + 0.30·AQI/100)` | Held at historic — no tract-level projection | CalEnviroScreen 5.0, 2025 |
 
 ### Columns in `heat_air_hazard.csv`
 
+Keyed on `facilityid`; 357 facilities. The composite here is normalized across all 357; the CDCR index recomputes the same equation across its 31 facilities.
+
 | Column | Description |
 | :--- | :--- |
-| `GEOID` | 11-digit census tract GEOID |
-| `uhi_normalized` | Urban heat island score (0–1). See `data_sources/hazards/README.md` for UHI methodology. |
-| `days_over_90_historic` | Annual days over 90°F, 1991–2020 average |
-| `days_over_90_midcentury` | Annual days over 90°F, 2041–2070 projected |
-| `delta_90` | Change in annual days over 90°F (mid-century minus historic) |
-| `hotnights_pre_pct` | % of nights exceeding tract 98th-pctl min temp, current (2015–2044) |
-| `hotnights_fut_pct` | % of nights exceeding tract 98th-pctl min temp, mid-century (2045–2074) |
+| `facilityid` / `name` / `cdcr_code` / `tract_geoid` | Facility keys (`cdcr_code` blank for non-CDCR facilities) |
+| `loca2_days_over_avg_plus10_historic` / `_midcentury` | Annual days above facility summer-mean tmax + 10°F |
+| `loca2_nights_over_p95_historic` / `_midcentury` | Annual Apr–Oct nights above facility 1961–1990 Apr–Oct P95 tmin |
+| `loca2_days_over_90_historic` / `_midcentury` | Annual days over an absolute 90°F — display metric, not scored |
+| `loca2_avg_summer_tmax_f` | Facility mean summer (Jun–Aug) daily-max, °F — hot-day baseline (auditability) |
+| `loca2_p95_tmin_f` | Facility P95 of 1961–1990 Apr–Oct tmin, °F — warm-night baseline (auditability) |
 | `AQI_norm` | AQI percentile (0–100) from CalEnviroScreen ozone, PM2.5, diesel sub-indicators |
-| `heat_hazard_idx_norm` | Heat & AQI Hazard Index (0–100), current → renamed `heat_hazard_historic_idx` in output |
-| `heat_hazard_fut_idx_norm` | Heat & AQI Hazard Index (0–100), mid-century → renamed `heat_hazard_midcentury_idx` in output |
+| `heat_hazard_historic_idx` | Heat & AQI Hazard Index (0–100), current, normalized across all 357 |
+| `heat_hazard_midcentury_idx` | Heat & AQI Hazard Index (0–100), mid-century, normalized across all 357 |
+
+The full three-period facility grid (including end-century and absolute-threshold counts) lives in the standalone data product `data_sources/hazards/heat/loca2_facility_heat.csv`. Flood and drought remain **two-period** (`_historic`/`_midcentury`); end-century is out of scope for the multi-hazard comparison because flood and drought have no end-century layer.
 
 ---
 

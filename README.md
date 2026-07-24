@@ -41,21 +41,20 @@ CDCR state prison facilities have additional variables covering population demog
 
 ## Climate Hazard Data
 
-### Heat and Air Quality Index
+### Heat and Air Quality Index (v0.2)
 
-Equal-weight mean of normalized days over 90°F, hot nights frequency (% nights exceeding each tract's own 98th-percentile historical minimum temperature), and AQI. Temperature carries 2/3 collective weight; AQI 1/3. AQI held at historic values for both periods — no tract-level projection available. See [`data/hazards/README.md`](data/hazards/README.md) for full methodology.
+Two facility-relative temperature indicators — hot days (above the facility's own summer-mean tmax + 10°F) and warm nights (Apr–Oct nights above the facility's 1961–1990 Apr–Oct P95) — each max-normalized across facilities and averaged, then amplified by an air-quality modifier (`× (1 + 0.30·AQI/100)`). Both come from a per-facility LOCA2-CA daily extraction; heat is joined by `facilityid`, while flood and drought remain tract-level. AQI is held at historic values for both periods. See [`data/hazards/README.md`](data/hazards/README.md) for full methodology.
 
 | Variable | Description | Source |
 | :--- | :--- | :--- |
 | `heat_uhi_normalized` | Urban heat island exposure score (0–1, may slightly exceed 1 for non-CDCR facilities). Derived from Benz & Burney (2021) daytime surface UHI anomaly (ΔT), normalized against the max ΔT across state prisons (7.247°C, CIM). 82 facilities null (rural/undeveloped tracts). | Benz & Burney (2021), Harvard Dataverse doi:10.7910/DVN/1F72FB |
-| `heat_days_over_90_historic` | Near-historic annual number of days over 90°F per census tract. | Cal-Adapt, 2025 |
-| `heat_days_over_90_midcentury` | Projected annual number of days over 90°F per census tract by mid-century (2041–2070). | Cal-Adapt, 2025 |
-| `heat_days_over_90_delta` | Change in annual days over 90°F between mid-century and historic. | Cal-Adapt, 2025 |
-| `heat_hotnights_historic_pct` | % of nights exceeding the 98th percentile of each tract's historical minimum temperature, current timescale (2015–2044). | LCI VCP, 2025, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
-| `heat_hotnights_midcentury_pct` | % of nights exceeding the 98th percentile of each tract's historical minimum temperature, mid-century timescale (2045–2074). | LCI VCP, 2025, derived from LOCA 2 CA Hybrid (SSP 370, 2023) |
-| `heat_aqi_pctile` | AQI exposure percentile (0–100) per census tract. Calculated from Ozone, PM2.5, and Diesel exposure percentiles. | CalEnviroScreen 5.0, 2025 |
-| `heat_hazard_historic_idx` | Heat and Air Quality Hazard Index (0–100), current. Equal-weight mean of normalized historic days over 90°F, current hot nights frequency, and AQI. | Derived from Cal-Adapt, 2025; LCI VCP, 2025; CalEnviroScreen 5.0, 2025 |
-| `heat_hazard_midcentury_idx` | Heat and Air Quality Hazard Index (0–100), mid-century (2041–2070). Equal-weight mean of normalized mid-century days over 90°F, mid-century hot nights frequency, and AQI (held at historic levels). | Derived from Cal-Adapt, 2025; LCI VCP, 2025; CalEnviroScreen 5.0, 2025 |
+| `heat_days_over_avg_plus10_historic` / `_midcentury` | Annual days above the facility's own mean summer daily-max + 10°F (Skarha threshold, 1981–2010 baseline). Primary daytime hazard indicator. | LOCA2-CA daily (SSP3-7.0), Cal-Adapt via cadcat |
+| `heat_nights_over_p95_historic` / `_midcentury` | Annual Apr–Oct nights above the 95th percentile of the facility's 1961–1990 Apr–Oct minimum-temperature distribution. Primary nighttime hazard indicator. | LOCA2-CA daily (SSP3-7.0), Cal-Adapt via cadcat |
+| `heat_days_over_90_historic` / `_midcentury` | Annual days over an absolute 90°F at the facility's LOCA2 cell. Display metric, not part of the hazard score. | LOCA2-CA daily, Cal-Adapt via cadcat |
+| `heat_avg_summer_tmax_f` / `heat_p95_tmin_f` | Facility hot-day and warm-night baselines (°F), emitted for auditability. | LOCA2-CA daily, Cal-Adapt via cadcat |
+| `heat_aqi_pctile` | AQI exposure percentile (0–100) per census tract. Calculated from Ozone, PM2.5, and Diesel exposure percentiles; enters the hazard as a multiplicative modifier. | CalEnviroScreen 5.0, 2025 |
+| `heat_hazard_historic_idx` | Heat and Air Quality Hazard Index (0–100), current. Max-normalized mean of the two relative temperature indicators × the AQI modifier, normalized across all 357 facilities. | Derived from LOCA2-CA + CalEnviroScreen 5.0, 2025 |
+| `heat_hazard_midcentury_idx` | Heat and Air Quality Hazard Index (0–100), mid-century (2041–2070). Same equation, mid-century counts, AQI held at historic levels. | Derived from LOCA2-CA + CalEnviroScreen 5.0, 2025 |
 
 ### Flood Risk
 

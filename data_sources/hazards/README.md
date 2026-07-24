@@ -101,6 +101,31 @@ The 90°F and 95°F thresholds have no direct mortality calibration in the liter
 
 ---
 
+## Modeled Projected Temperatures — all 357 facilities
+
+Facility-relative heat thresholds for the hazard index come from a LOCA2-CA daily extraction.
+Extraction script: `scrapers/extract_loca2_heat.py`. Product: `heat/loca2_facility_heat.csv`
+(357 facilities × 3 periods). Full method write-up with citations: `data_sources/hazards/heat/README.md`.
+
+- **Source.** LOCA2-CA daily `tasmax`/`tasmin`, accessed anonymously from the cadcat S3 zarr store
+  (`s3://cadcat/loca2/ucsd/<model>/<experiment>/<member>/day/<var>/d03/`, ≈3 km cells). This is an
+  API/catalog read, not a scrape.
+- **Ensemble.** 14 models (HadGEM3-GC31-LL dropped — no ssp370 on cadcat), 62 members, pooled by
+  **model democracy** (per member, then within model, then across models; each model weight 1/14).
+  Thresholds and counts are computed **per member, then pooled**. Periods: historic 1981–2010,
+  mid-century 2041–2070 (ssp370), plus an end-century layer in the product (out of scope for the index).
+- **Spatial rule.** Each facility is assigned the LOCA2 cell **containing** its point (357 facilities →
+  274 distinct cells). A cell is ≈3.4 km across, already broader than a prison compound, so this is an
+  areal average, not point interpolation; a 3×3 mean is reported as a documented sensitivity. San
+  Quentin is the **only** override (its containing cell is masked water) — resolved to the nearest
+  contiguous-land cell, demonstrated rather than assumed.
+- **Reproduction gate.** Reproducing Cal-Adapt's published `annualavgcount_gt_{80,90,100,110}_tasmax`
+  at the facility cells from the daily data matched to float32 at the 100°F and 110°F thresholds and to
+  within 0.005 days at 90°F, verifying extraction, calendar handling, unit conversion, and pooling
+  before the relative thresholds were swapped in.
+
+---
+
 ## References
 
 Abatzoglou, J.T. (2013). Development of gridded surface meteorological data for ecological applications and modelling. *International Journal of Climatology*, 33(1), 121–131. doi:10.1002/joc.3413

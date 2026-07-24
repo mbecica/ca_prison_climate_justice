@@ -175,10 +175,23 @@ on the seasonal calendar.
 
 | Step | What |
 |---|---|
-| Sources | All **manual downloads**, refreshed only when the agencies re-release: Cal-Adapt tract extracts (`heatdays_alltimes_tract.csv`, `droughtfrequency_tract.csv`), OPR/LCI `VCP_Tracts.geojson`, CalEnviroScreen (`calenviroscreen50csv_d_12226.csv`), Benz & Burney UHI (⚠ processing not scripted in-repo), CalFire FHSZ + WUI |
-| Rebuild | `data_sources/hazards/heat/heat_hazard.ipynb` → `data/hazards/heat_air_hazard.csv`; `flood/flood_hazard.ipynb` → `flood_hazard.csv`; `drought/drought_hazard.ipynb` → `drought_hazard.csv` (all **LIVING**); then `analysis/hazards/join_climate_hazards.ipynb` → `data/allfacilities_climate_hazards.csv` (**LIVING**) |
+| Sources | Manual downloads, refreshed only when the agencies re-release: `droughtfrequency_tract.csv`, OPR/LCI `VCP_Tracts.geojson`, CalEnviroScreen (`calenviroscreen50csv_d_12226.csv`, still the AQI source), Benz & Burney UHI (⚠ processing not scripted in-repo), CalFire FHSZ + WUI. **Heat daytime/nighttime no longer come from the Cal-Adapt `heatdays_alltimes_tract.csv` extract or the VCP hot-nights field** — as of heat index v0.2 they come from the scripted LOCA2-CA daily extraction (family 6b). `heatdays_alltimes_tract.csv` is **DEPRECATED** (still read only by the frozen `hazard_top10_table.ipynb` / `hazard_heatmap_table.ipynb`, which are not maintained). |
+| Rebuild | `data_sources/hazards/heat/heat_hazard.ipynb` (inputs: `heat/loca2_facility_heat.csv` from family 6b + CalEnviroScreen AQI) → `data/hazards/heat_air_hazard.csv`; `flood/flood_hazard.ipynb` → `flood_hazard.csv`; `drought/drought_hazard.ipynb` → `drought_hazard.csv` (all **LIVING**); then `analysis/hazards/join_climate_hazards.ipynb` → `data/allfacilities_climate_hazards.csv` (**LIVING**). Heat now joins by `facilityid`; flood/drought stay tract-level. The join snapshots `allfacilities_climate_hazards_v0.1.csv` on first v0.2 run. |
 | Consumers | PHI `build_app_data.py` (outdoor climate block) · `heat_risk_index.ipynb` · hazard-rank notebooks |
-| After refresh | Rerun `join_climate_hazards.ipynb`, then any analyses you intend to re-cut. The Heat Tracker does **not** consume these (it uses its own ERA5 pulls) |
+| After refresh | Rerun `join_climate_hazards.ipynb`, then any analyses you intend to re-cut. The Heat Tracker does **not** consume these (it reads only `ca_facilities.csv` / `cdcr_facilities.csv`; its baseline is PRISM, per family 11) |
+
+## 6b. LOCA2-CA daily heat extraction (modeled — feeds the heat hazard)
+
+Introduced with heat index **v0.2**. Replaces the Cal-Adapt tract heatdays extract as the source of
+daytime and nighttime heat, and moves the heat hazard from tract joins to per-facility LOCA2 cells.
+
+| Step | What |
+|---|---|
+| Extraction | `scrapers/extract_loca2_heat.py` — anonymous cadcat S3 zarr read (intake-esm), 14 models / 62 members × 3 periods × `tasmax`+`tasmin` at 274 distinct cells → `data_sources/hazards/heat/loca2_facility_heat.csv` (357 facilities). **~6 h**; run detached (double-fork `os.setsid` launcher under `caffeinate`) — harness-tracked background jobs get reaped at ~60–80 min. Per-member JSON cache (`heat/loca2_members/`, gitignored) makes restarts free; `--pool-only` re-pools without re-extracting. |
+| Classification | The relative-threshold **baselines are FROZEN by definition** (hot days 1981–2010; warm nights 1961–1990 Apr–Oct P95) — never re-window. The counts are **re-run only** when the ensemble definition, cell assignment, or thresholds change, not seasonally; LOCA2-CA is a fixed projection product, so there is no new-vintage cadence. |
+| Trigger | Re-run only if: cadcat republishes LOCA2-CA, the model/member set or spatial rule changes, or a threshold definition changes. Not event-driven or seasonal. |
+| Consumers | `heat_hazard.ipynb` (→ `heat_air_hazard.csv`). The product also stands alone (all 357 facilities, 3 periods, absolute + relative thresholds) for anyone wanting facility-level heat metrics. |
+| Note | This is an **API/catalog read, not a scrape** — a pending refactor will move it (and the gridMET extractors) out of `scrapers/` into `data_sources/hazards/heat/extraction/`; not yet done. |
 
 ## 7. gridMET heat activations & summer averages (CDCR-only)
 
@@ -255,6 +268,7 @@ that needs Mary's sign-off before this runbook is adopted.**
 | `data/hazards/{heat_air,flood,drought}_hazard.csv` | LIVING | Rebuilt only when a source layer re-releases (unscheduled) |
 | `data/allfacilities_climate_hazards.csv` | LIVING | Join of living inputs |
 | `data_sources/hazards/heat/heat_activations_*.csv`, `summer_avg_tmax_annual.csv` | LIVING (extendable) | Seasons appended; the mean summer tmax baseline inside is definitionally fixed |
+| `data_sources/hazards/heat/loca2_facility_heat.csv` | FROZEN (fixed projection product) | LOCA2-CA daily extraction (family 6b); the relative-threshold baselines are definitionally fixed. Regenerable from `extract_loca2_heat.py`; re-run only if the model set, cell rule, or thresholds change |
 | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` | **FROZEN (2025 vintage)** | The analysis PHI ships; next cut gets a vintage name alongside |
 | `data/cdcr/indoor_outdoor_heat_2025.csv` | FROZEN (manual, one-time) | Built once from a specific CDCR PDF for the memo; no builder script exists. ⚠ Gap: if indoor data is ever re-released, write a builder then — otherwise it never updates |
 | `data/cdcr/CDCR_heat_risk_index_multiplicative.csv` | FROZEN (alternate method) | Intentional alternate index formulation, kept for possible future re-evaluation — not stale, do not delete |
