@@ -34,8 +34,8 @@ GRIDMET_URL   = "https://www.northwestknowledge.net/metdata/data/tmmx_{year}.nc"
 DOWNLOAD_YEARS = range(1990, 2016)   # 1990–2015; 2016–2025 read from existing CSV
 REPO_ROOT      = Path(__file__).resolve().parents[4]
 FACILITIES_CSV = REPO_ROOT / "data" / "cdcr" / "cdcr_facilities.csv"
-DAILY_CSV      = REPO_ROOT / "data_sources" / "hazards" / "heat_activations_daily.csv"
-OUTPUT_CSV     = REPO_ROOT / "data_sources" / "hazards" / "summer_avg_tmax_annual.csv"
+DAILY_CSV      = REPO_ROOT / "data_sources" / "hazards" / "heat" / "heat_activations_daily.csv"
+OUTPUT_CSV     = REPO_ROOT / "data_sources" / "hazards" / "heat" / "summer_avg_tmax_annual.csv"
 
 
 # ---------------------------------------------------------------------------

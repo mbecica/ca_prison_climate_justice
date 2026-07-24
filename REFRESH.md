@@ -68,7 +68,7 @@ refresh, grab the latest for whichever families you're updating:
 | Specialized beds | cchcs.ca.gov/reports (Bed Need Study, MHCB/PIP census) | `data_sources/facilities/CDCR/specialized_beds/` | prefix each with `YYYY-MM-DD_` (report date) |
 | SCO staffing | State Controller "Active State Employees by Department" (Wayback) | `data_sources/facilities/CDCR/cdcr_staffing/` | `YYYY[_month]_active_state_employees_by_department.pdf` |
 | Violent incidents | CDCR CompStat / Public incident reports | `data_sources/facilities/CDCR/cdcr_incidents/` | ⚠ filenames are hardcoded in `extract_violent_incidents.py` — add the new PDF, then add its filename to the script's list |
-| Cooling / master plan | CDCR MPAR + Air Cooling reports | `data_sources/facilities/CDCR/cdcr_facilities_planning/` | (manually transcribed, not auto-parsed) |
+| Cooling / master plan | CDCR MPAR + Air Cooling reports | `data_sources/facilities/CDCR/cdcr_facilities_planning/` | (manually transcribed) |
 
 The Power BI scrapers (CCHCS, SB 601) don't use PDFs — they drive live dashboards and need
 a visible browser; see each family's section.
@@ -92,34 +92,13 @@ the tracker's `pipeline/build_facilities.py` (app repo), and the PHI/tracker met
 
 ## 2. CDCR population, demographics & capacity
 
-✅ **Resolved (investigated Jul 17 2026): scrape the dashboard, retire the population PDFs.**
-The `average_2025_population` column that everything consumes does **not** come from the
-TPOP-1 PDFs — `create_cdcr_facilities.ipynb` merges it from a hand-made
-`CDCR_2025_pop_averages.csv` (Facility_Name, Facility_Code, Average_2025_Population), and
-the TPOP-1 scraper's output isn't wired into the population column at all. The **Population
-Data Points dashboard carries this data directly**: *In-Custody → Crosstabs → Rows =
-Location, Columns = None* yields monthly in-custody population per CDCR institution code
-(ASP, CTF, SATF, …) for Jan 2023 – Jun 2026 (counts < 10 suppressed; the Location list
-also includes a few non-institution programs — Community Reentry, DSH, Alternative Custody
-— that a scraper filters out). **Plan:** build `fetch_cdcr_population.js` (sibling to
-`fetch_cdcr_avg_sentence.js`, same navigation) to scrape Year/Month/Location/In-Custody,
-average the 12 months per institution per year, and emit `CDCR_YYYY_pop_averages.csv`
-directly — removing both the manual transcription and the PDF download. TPOP-1 PDFs
-(`extract_tpop1.py`) can then be retired for population (they'd only be needed if we ever
-want design/staffed *capacity*, which currently comes from FEMA anyway).
-
 | Step | What |
 |---|---|
-| Sources | **Population (current, manual):** hand-made `CDCR_2025_pop_averages.csv` (**FROZEN**, a new year lands alongside as `CDCR_2026_pop_averages.csv`). **Demographics:** `cdcr_in-custody-*_2025.csv` from the CDCR Population Data Set (**manual → FROZEN**). **Capacity:** the FEMA `capacity` column already in `ca_facilities.csv`. **TPOP-1 PDFs** (`extract_tpop1.py`) feed capacity/occupancy series only, and are a candidate to retire — see the open question above |
+| Sources | **Population (current, manual):** hand-made `CDCR_2025_pop_averages.csv` (**FROZEN**, a new year lands alongside as `CDCR_2026_pop_averages.csv`); it is the source of `average_2025_population`. **Demographics:** `cdcr_in-custody-*_2025.csv` from the CDCR Population Data Set (**manual → FROZEN**). **Capacity:** the FEMA `capacity` column already in `ca_facilities.csv`. **TPOP-1 PDFs** (`extract_tpop1.py`) feed capacity/occupancy series only |
 | Rebuild | `data_sources/facilities/create_cdcr_facilities.ipynb` |
 | Output | `data/cdcr/cdcr_facilities.csv` — **LIVING file with FROZEN vintaged columns** (`average_2025_population`, `capacity_percent_2025`, `cchcs_*_2025`, `rhu_pct_2025`, …). A refresh **adds** `*_2026` columns; it does not rename or drop `*_2025` |
 | Consumers | PHI `build_app_data.py` (pinned to `_2025` columns) · `heat_risk_index.ipynb` · `sensitivity_analysis.ipynb` · hazard-rank notebooks · `build_indoor_outdoor_analysis.py` · **Heat Tracker** `build_facilities.py` (auto-discovers the latest `average_YYYY_population` / `cchcs_*_YYYY` columns) |
 | After refresh | Rerun Heat Tracker `build_facilities.py` (picks up the new vintage automatically). PHI stays on its pinned vintage until deliberately re-exported |
-
-**Next task (confirmed feasible, off the heat-data critical path):** build
-`fetch_cdcr_population.js` (In-Custody → Crosstabs → Location) to write
-`CDCR_YYYY_pop_averages.csv` directly, then update `create_cdcr_facilities.ipynb` to read
-it and drop the manual step + PDF download from the population refresh.
 
 ## 3. CCHCS vulnerability (risk tiers, EOP, DPP, age 50+)
 
@@ -132,14 +111,14 @@ it and drop the manual step + PDF download from the population refresh.
 
 The companion `fetch_cchcs_measures.js` (staffing/costs, same `LATEST_YEAR` knob; its
 checkpoint `cchcs_measures_checkpoint.json` is now git-ignored and must be deleted
-for a full re-scrape) feeds the heat-operations panel (family 8), not `cdcr_facilities.csv`.
+for a full re-scrape) feeds the heat-operations panel (family 8).
 
 ## 4. CDCR cooling infrastructure
 
 **Never on a schedule — always a separate, user-initiated update.** Cooling data changes
 only when a master-plan project completes (extracted from the MPAR PDFs) or CDCR/FOIA
 releases a new cooling report. There is no cadence; this section documents *how* to fold
-in a new release when one appears, not *when*.
+in a new release when one appears.
 
 | Step | What |
 |---|---|
@@ -173,39 +152,37 @@ on the seasonal calendar.
 
 | Step | What |
 |---|---|
-| Sources | Manual downloads, refreshed only when the agencies re-release: `droughtfrequency_tract.csv`, OPR/LCI `VCP_Tracts.geojson`, CalEnviroScreen (`calenviroscreen50csv_d_12226.csv`, still the AQI source), Benz & Burney UHI (⚠ processing not scripted in-repo), CalFire FHSZ + WUI. **Heat daytime/nighttime no longer come from the Cal-Adapt `heatdays_alltimes_tract.csv` extract or the VCP hot-nights field** — as of heat index v0.2 they come from the scripted LOCA2-CA daily extraction (family 6b). `heatdays_alltimes_tract.csv` is **DEPRECATED** (still read only by the frozen `hazard_top10_table.ipynb` / `hazard_heatmap_table.ipynb`, which are not maintained). |
+| Sources | Manual downloads, refreshed only when the agencies re-release: `droughtfrequency_tract.csv`, OPR/LCI `VCP_Tracts.geojson`, CalEnviroScreen (`calenviroscreen50csv_d_12226.csv`, still the AQI source), Benz & Burney UHI (⚠ processing not scripted in-repo), CalFire FHSZ + WUI. **Heat daytime/nighttime come from the LOCA2-CA daily extraction (family 6b).** `heatdays_alltimes_tract.csv` is **DEPRECATED** (read only by the frozen `hazard_top10_table.ipynb` / `hazard_heatmap_table.ipynb`). |
 | Rebuild | `data_sources/hazards/heat/heat_hazard.ipynb` (inputs: `heat/loca2_facility_heat.csv` from family 6b + CalEnviroScreen AQI) → `data/hazards/heat_air_hazard.csv`; `flood/flood_hazard.ipynb` → `flood_hazard.csv`; `drought/drought_hazard.ipynb` → `drought_hazard.csv` (all **LIVING**); then `analysis/hazards/join_climate_hazards.ipynb` → `data/allfacilities_climate_hazards.csv` (**LIVING**). Heat now joins by `facilityid`; flood/drought stay tract-level. The join snapshots `allfacilities_climate_hazards_v0.1.csv` on first v0.2 run. |
 | Consumers | PHI `build_app_data.py` (outdoor climate block) · `heat_risk_index.ipynb` · hazard-rank notebooks |
 | After refresh | Rerun `join_climate_hazards.ipynb`, then any analyses you intend to re-cut. The Heat Tracker does **not** consume these (it reads only `ca_facilities.csv` / `cdcr_facilities.csv`; its baseline is PRISM, per family 11) |
 
 ## 6b. LOCA2-CA daily heat extraction (modeled — feeds the heat hazard)
 
-Introduced with heat index **v0.2**. Replaces the Cal-Adapt tract heatdays extract as the source of
-daytime and nighttime heat, and moves the heat hazard from tract joins to per-facility LOCA2 cells.
+Supplies the heat hazard's daytime and nighttime heat, extracted per facility from LOCA2-CA
+daily projections at each facility's grid cell.
 
 | Step | What |
 |---|---|
 | Extraction | `data_sources/hazards/heat/extraction/extract_loca2_heat.py` — anonymous cadcat S3 zarr read (intake-esm), 14 models / 62 members × 3 periods × `tasmax`+`tasmin` at 274 distinct cells → `data_sources/hazards/heat/loca2_facility_heat.csv` (357 facilities). **~6 h**; run detached (double-fork `os.setsid` launcher under `caffeinate`) — harness-tracked background jobs get reaped at ~60–80 min. Per-member JSON cache (`heat/loca2_members/`, gitignored) makes restarts free; `--pool-only` re-pools without re-extracting. |
-| Classification | The relative-threshold **baselines are FROZEN by definition** (hot days 1981–2010; warm nights 1961–1990 Apr–Oct P95) — never re-window. The counts are **re-run only** when the ensemble definition, cell assignment, or thresholds change, not seasonally; LOCA2-CA is a fixed projection product, so there is no new-vintage cadence. |
-| Trigger | Re-run only if: cadcat republishes LOCA2-CA, the model/member set or spatial rule changes, or a threshold definition changes. Not event-driven or seasonal. |
+| Classification | The relative-threshold **baselines are FROZEN by definition** (hot days 1981–2010; warm nights 1961–1990 Apr–Oct P95) — never re-window. The counts are **re-run only** when the ensemble definition, cell assignment, or thresholds change; LOCA2-CA is a fixed projection product, so there is no new-vintage cadence. |
+| Trigger | Re-run only if: cadcat republishes LOCA2-CA, the model/member set or spatial rule changes, or a threshold definition changes. |
 | Consumers | `heat_hazard.ipynb` (→ `heat_air_hazard.csv`). The product also stands alone (all 357 facilities, 3 periods, absolute + relative thresholds) for anyone wanting facility-level heat metrics. |
-| Note | This is an **API/catalog read, not a scrape** — a pending refactor will move it (and the gridMET extractors) out of `scrapers/` into `data_sources/hazards/heat/extraction/`; not yet done. |
 
 ## 7. gridMET heat activations & summer averages (CDCR-only)
 
 | Step | What |
 |---|---|
 | Extractors | In `data_sources/hazards/heat/extraction/`: `extract_gridmet_heat.py` (fully automatic, ~5.8 GB / 30–45 min) → `heat_activations_{daily,annual,monthly}.csv`; `extract_gridmet_summer_avg.py` (~3.5 GB) → `summer_avg_tmax_annual.csv` |
-| ⚠ Path drift | Both scripts write to `data_sources/hazards/` but the committed CSVs live in `data_sources/hazards/heat/` — fix the output constants (or move files) before re-running |
+| Outputs | All four CSVs write to `data_sources/hazards/heat/` (where the committed files live). |
 | Classification | The 1991–2020 mean summer tmax baseline (`base1991_2020` in the column names) inside `extract_gridmet_heat.py` is **FROZEN by definition** (WMO normal period — never re-window). The daily/annual/monthly activation files and `summer_avg_tmax_annual.csv` are **LIVING-extendable**: re-running with `ANALYSIS_YEARS` extended appends seasons under the same names |
-| Consumers | `build_heat_operations_panel.py` (family 8) · the heat_activations report · Heat Tracker baseline **validation** (one-time cross-check, not a runtime dependency) |
+| Consumers | `build_heat_operations_panel.py` (family 8) · the heat_activations report · Heat Tracker baseline **validation** (one-time cross-check) |
 
 ## 8. CJC report analyses (heat operations, indoor/outdoor, risk report)
 
 The CJC reports are **one-time memos: FROZEN.** Their outputs (and the hazard-rank
 tables that feed them) are published analyses and are never refreshed in place — if a
-report is ever redone for a new period it's a new vintage (new subdir/filename), not an
-overwrite. In practice these need no action during a routine refresh.
+report is ever redone for a new period it's a new vintage (new subdir/filename). In practice these need no action during a routine refresh.
 
 - Heat operations panel: `build_heat_operations_panel.py` → `run_heat_operations_regression.py` → `run_event_study.py` (inputs: SB601 operations, CCHCS measures, TPOP-1, air-cooling infra, violent incidents, `ca_facilities.csv`, `heat_activations_daily.csv`).
 - Indoor/outdoor heat: `build_indoor_outdoor_analysis.py`, `build_improved_clustering.py` (inputs incl. `data/cdcr/indoor_outdoor_heat_2025.csv` — ⚠ **no in-repo builder**; document/script its upstream before it's needed again).
@@ -217,9 +194,8 @@ overwrite. In practice these need no action during a routine refresh.
 | Step | What |
 |---|---|
 | Rebuild | `analysis/CDCR_risk_indices/heat_risk_index.ipynb` (inputs: `cdcr_facilities.csv`, `heat_air_hazard.csv`, `indoor_outdoor_heat_2025.csv`) and `sensitivity_analysis.ipynb` |
-| Outputs | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` — **VERSIONED (semantic `index_version`, currently v0.3), not filename-vintaged.** Unlike the frozen data snapshots, the index is a methodology artifact: the top-level file is always the **current** version and a re-cut **overwrites** it. Before overwriting, the notebooks archive the on-disk build (keyed by its own `index_version`) to `data/cdcr/archive/CDCR_heat_risk_*_vX.Y.csv`, so every shipped version stays retrievable. The `index_version` column identifies which build produced any row. See the changelog in `analysis/README.md`. |
+| Outputs | `data/cdcr/CDCR_heat_risk_index_additive_25_25_50.csv`, `CDCR_heat_risk_sensitivity.csv` — **VERSIONED (semantic `index_version`, currently v0.3).** The index is a methodology artifact: the top-level file is always the **current** version and a re-cut **overwrites** it. Before overwriting, the notebooks archive the on-disk build (keyed by its own `index_version`) to `data/cdcr/archive/CDCR_heat_risk_*_vX.Y.csv`, so every shipped version stays retrievable. The `index_version` column identifies which build produced any row. See the changelog in `analysis/README.md`. |
 | Consumers | PHI `build_app_data.py` · `generate_heat_risk_report.py` · `sensitivity_analysis.ipynb` |
-| Orphans | `CDCR_heat_risk_index_multiplicative.csv` (no builder, no consumer — likely a stale variant), `facility_tmin_2025.csv` (no builder, no consumer). Candidates to delete or document |
 
 ## 10. Prison Heat Index app export (→ website repo)
 
@@ -231,14 +207,12 @@ overwrite. In practice these need no action during a routine refresh.
 
 ## 11. Heat Tracker — this repo is only an input
 
-**The Heat Tracker's build scripts live in its own repo now** —
-`ca-carceral-heat-tracker/pipeline/` (moved out of here Jul 17 2026). This repo just
-supplies two **inputs** the tracker reads as a sibling checkout: `ca_facilities.csv`
-and `data/cdcr/cdcr_facilities.csv`. Nothing here consumes the tracker's outputs, and
-the tracker's own data (baselines, bands, slug registry, live feed) lives entirely in
-its repo. Its build/refresh runbook lives there too (`ca-carceral-heat-tracker/pipeline/`
-+ that repo's docs); the tracker no longer uses Open-Meteo/ERA5 — baseline is PRISM and
-band/live are NWS/RTMA via Google Earth Engine (see that repo's SCOPE_AND_PLAN §2).
+**The Heat Tracker's build scripts live in its own repo** —
+`ca-carceral-heat-tracker/pipeline/`. This repo just supplies two **inputs** the tracker
+reads as a sibling checkout: `ca_facilities.csv` and `data/cdcr/cdcr_facilities.csv`.
+Nothing here consumes the tracker's outputs, and the tracker's own data (baselines, bands,
+slug registry, live feed) lives entirely in its repo. Its build/refresh runbook lives there
+too (`ca-carceral-heat-tracker/pipeline/` + that repo's docs).
 
 **What a refresh here means for the tracker:** when you re-scrape and rebuild
 `cdcr_facilities.csv` / `ca_facilities.csv` (families 1–4), afterward go to the app repo
@@ -258,8 +232,8 @@ Every tracked output, with its frozen/living/versioned classification.
 |---|---|---|
 | `data_sources/facilities/ca_facilities.csv` | LIVING | Current facility roster; consumers want "now" |
 | `data/cdcr/cdcr_facilities.csv` | LIVING (vintaged columns FROZEN) | One row per facility stays current; `*_2025` columns are immutable, `*_2026` added alongside |
-| **Re-scraped time series** — `cchcs_ipc.csv`, `cchcs_measures.csv`, `sb601_operations.csv`, `sb601_programs.csv`, `sco_staffing.csv`, `sco_staffing_avg.csv`, `restricted_housing.csv` | **LIVING (extendable)** | Each refresh re-scrapes the full history and the series grows. ✅ Filenames are now stable (no baked-in year) with a single `LATEST_YEAR`/`FISCAL_YEAR` knob per scraper — see the appendix |
-| `tpop1_institutions.csv`, `tpop1_summary.csv` | LIVING (extendable) | Month rows appended; no vintage in name (may be retired — see §2 open question) |
+| **Re-scraped time series** — `cchcs_ipc.csv`, `cchcs_measures.csv`, `sb601_operations.csv`, `sb601_programs.csv`, `sco_staffing.csv`, `sco_staffing_avg.csv`, `restricted_housing.csv` | **LIVING (extendable)** | Each refresh re-scrapes the full history and the series grows. Filenames are stable (no baked-in year); advance a year with the single `LATEST_YEAR`/`FISCAL_YEAR` knob at the top of each scraper |
+| `tpop1_institutions.csv`, `tpop1_summary.csv` | LIVING (extendable) | Month rows appended; no vintage in name |
 | `specialized_beds` outputs, `cdcr_recidivism_los.csv`, `cdcr_avg_sentence_by_admission.csv` | LIVING (extendable) | Report-date/month rows appended |
 | **Manual vintaged snapshots** — `CDCR_YYYY_pop_averages.csv`, `cdcr_in-custody-*_YYYY.csv`, `air_cooling_*_dec2025.csv`, `cchcs_mortality_2006-2024.csv`, MPAR extracts | FROZEN | Hand-made point-in-time snapshots; a new one lands alongside |
 | `data/hazards/{heat_air,flood,drought}_hazard.csv` | LIVING | Rebuilt only when a source layer re-releases (unscheduled) |
@@ -273,46 +247,3 @@ Every tracked output, with its frozen/living/versioned classification.
 | `analysis/cjc reports/**` outputs | **FROZEN (one-time memos)** | Published analyses; never refreshed in place |
 | `analysis/CDCR_hazard_rank/*.csv` | FROZEN | Feed the frozen CJC memos |
 | PHI export (`app_export/output/*`, website copies) | LIVING (deliberate rebuilds only) | Regenerated wholesale by `build_app_data.py` |
-
-## Resolved (Mary, Jul 17 2026)
-
-1. **`indoor_outdoor_heat_2025.csv`** — one-time manual build from a specific PDF for the memo; no builder exists (documented gap). Add a builder only if indoor data is re-released.
-2. **`facility_tmin_2025.csv`** — ✅ deleted (orphan, no builder/consumer).
-3. **`CDCR_heat_risk_index_multiplicative.csv`** — kept: valid alternate index method for future re-evaluation. Reclassified FROZEN (alternate method), not orphan.
-4. **Population source** (§2) — ✅ confirmed: the dashboard carries per-institution monthly population (In-Custody → Crosstabs → Location). Build `fetch_cdcr_population.js`, retire the population PDFs.
-5. **`cchcs_measures_checkpoint.json`** — regenerable scraper resume-state, not source data. Pending Mary's OK to git-ignore.
-
-# Known issues to fix before the next refresh
-
-1. **gridMET path drift** — `extract_gridmet_heat.py` / `extract_gridmet_summer_avg.py` write to `data_sources/hazards/` but files live in `data_sources/hazards/heat/`.
-2. ✅ **`restricted_housing.csv`** — resolved: stable filename, now reprocesses every PDF in the folder (all years) instead of mixing vintages under a `_2025` name.
-3. **`indoor_outdoor_heat_2025.csv`** — live dependency of the risk index with no in-repo builder; document or script its upstream.
-4. ✅ **Hardcoded year ranges** — resolved: `fetch_cchcs_*.js` and `fetch_sb601_*.js` now use a single `LATEST_YEAR`/`FISCAL_YEAR` knob with stable filenames (see appendix).
-5. ✅ **`cchcs_measures_checkpoint.json`** — resolved: git-ignored and untracked (regenerable resume-state); delete on disk to force a full re-scrape.
-6. **Benz UHI processing** not scripted in-repo (outputs only).
-7. **`extract_violent_incidents.py`** lives outside `scrapers/` with 5 hardcoded input PDF names; not covered by `scrapers/README.md`.
-8. **`heat_activations` report** has no builder script in-repo.
-9. **Power BI scraper fragility** — all five depend on exact dashboard DOM/canvas layouts; expect breakage after CDCR/CCHCS dashboard updates.
-
-# Appendix: hardcoded-date cleanup (✅ DONE, Jul 17 2026)
-
-The re-scraped time series were conceptually LIVING but their filenames/loops baked in a
-year. **All six were in scope** — a dataset that feeds only a frozen memo is still a living
-dataset new analyses will re-consume; freezing the *memo* doesn't freeze the *data*.
-
-**Applied option A:** each scraper now has a single dated knob (`LATEST_YEAR` /
-`FISCAL_YEAR` / `FISCAL_YEARS`) and a **stable, un-dated output filename**; the existing
-data files were `git mv`'d to the stable names and every downstream read was updated.
-Advancing a year is now a one-line edit, no rename.
-
-| Scraper | Knob to bump | Stable output | Downstream updated |
-|---|---|---|---|
-| `fetch_cchcs_ipc.js` | `LATEST_YEAR` | `cchcs_ipc.csv` | `create_cdcr_facilities.ipynb` |
-| `fetch_cchcs_measures.js` | `LATEST_YEAR` | `cchcs_measures.csv` | `build_heat_operations_panel.py` |
-| `fetch_sb601_programs.js` | `FISCAL_YEAR` | `sb601_programs.csv` | `create_cdcr_facilities.ipynb` |
-| `fetch_sb601_operations.js` | `FISCAL_YEARS` | `sb601_operations.csv` | `build_heat_operations_panel.py`, `run_event_study.py` |
-| `extract_sco_staffing.py` + `build_sco_staffing_avg.py` | `LATEST_YEAR` (avg script) | `sco_staffing.csv` / `sco_staffing_avg.csv` | `create_cdcr_facilities.ipynb` |
-| `extract_restricted_housing.py` | (none — reprocesses all PDFs) | `restricted_housing.csv` | none (rhu_pct column wiring is a separate undocumented gap) |
-
-The interactive Power BI scrapers can't be test-run headless, so their code paths are
-verified by inspection here; the next manual refresh exercises them end-to-end.
