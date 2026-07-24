@@ -69,13 +69,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 18.92,
-            "display": 19,
+            "value": 13.96,
+            "display": 14,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.2,
-            "display": 20,
+            "value": 0.31,
+            "display": 31,
             "category": "Lowest"
           },
           "exposure": {
@@ -92,13 +92,13 @@
         },
         "midcentury": {
           "risk": {
-            "value": 40.34,
-            "display": 40,
+            "value": 37.86,
+            "display": 38,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.61,
-            "display": 61,
+            "value": 0.71,
+            "display": 71,
             "category": "High"
           },
           "exposure": {
@@ -167,8 +167,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "wasco-state-prison",
-          "name": "Wasco State Prison"
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
         },
         "lower": {
           "slug": "pleasant-valley-state-prison",
@@ -193,8 +193,8 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 31.79,
-            "display": 32,
+            "value": 21.9,
+            "display": 22,
             "category": "Lowest"
           },
           "hazard": {
@@ -212,18 +212,18 @@
             "display": 26,
             "category": "Moderate"
           },
-          "risk_rank": 21
+          "risk_rank": 24
         },
         "midcentury": {
           "risk": {
-            "value": 63.42,
-            "display": 63,
+            "value": 54.79,
+            "display": 55,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.83,
-            "display": 83,
-            "category": "Highest"
+            "value": 0.77,
+            "display": 77,
+            "category": "High"
           },
           "exposure": {
             "value": 0.5,
@@ -235,7 +235,7 @@
             "display": 26,
             "category": "Moderate"
           },
-          "risk_rank": 17
+          "risk_rank": 19
         }
       },
       "profile": {
@@ -291,12 +291,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "kern-valley-state-prison",
-          "name": "Kern Valley State Prison"
+          "slug": "high-desert-state-prison",
+          "name": "High Desert State Prison"
         },
         "lower": {
-          "slug": "north-kern-state-prison",
-          "name": "North Kern State Prison"
+          "slug": "salinas-valley-state-prison",
+          "name": "Salinas Valley State Prison"
         }
       }
     },
@@ -317,37 +317,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 47.02,
-            "display": 47,
-            "category": "Moderate"
-          },
-          "hazard": {
-            "value": 0.25,
-            "display": 25,
-            "category": "Moderate"
-          },
-          "exposure": {
-            "value": 0.09,
-            "display": 9,
+            "value": 44.22,
+            "display": 44,
             "category": "Lowest"
           },
-          "vulnerability": {
-            "value": 0.6,
-            "display": 60,
-            "category": "Highest"
-          },
-          "risk_rank": 9
-        },
-        "midcentury": {
-          "risk": {
-            "value": 75.95,
-            "display": 76,
-            "category": "High"
-          },
           "hazard": {
-            "value": 0.8,
-            "display": 80,
-            "category": "Highest"
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.09,
@@ -360,6 +337,29 @@
             "category": "Highest"
           },
           "risk_rank": 8
+        },
+        "midcentury": {
+          "risk": {
+            "value": 76.73,
+            "display": 77,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.87,
+            "display": 87,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.09,
+            "display": 9,
+            "category": "Lowest"
+          },
+          "vulnerability": {
+            "value": 0.6,
+            "display": 60,
+            "category": "Highest"
+          },
+          "risk_rank": 7
         }
       },
       "profile": {
@@ -415,12 +415,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-state-prison-solano",
-          "name": "California State Prison, Solano"
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
         },
         "lower": {
-          "slug": "pelican-bay-state-prison",
-          "name": "Pelican Bay State Prison"
+          "slug": "central-california-womens-facility",
+          "name": "Central California Women's Facility"
         }
       }
     },
@@ -441,13 +441,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 64.83,
-            "display": 65,
+            "value": 62.57,
+            "display": 63,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.33,
-            "display": 33,
+            "value": 0.37,
+            "display": 37,
             "category": "Moderate"
           },
           "exposure": {
@@ -460,7 +460,7 @@
             "display": 44,
             "category": "Highest"
           },
-          "risk_rank": 2
+          "risk_rank": 1
         },
         "midcentury": {
           "risk": {
@@ -538,13 +538,10 @@
       },
       "risk_rank_total": 31,
       "neighbors": {
-        "higher": {
+        "higher": null,
+        "lower": {
           "slug": "california-medical-facility",
           "name": "California Medical Facility"
-        },
-        "lower": {
-          "slug": "california-state-prison-sacramento",
-          "name": "California State Prison, Sacramento"
         }
       }
     },
@@ -565,13 +562,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 55.36,
-            "display": 55,
+            "value": 51.84,
+            "display": 52,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.32,
-            "display": 32,
+            "value": 0.36,
+            "display": 36,
             "category": "Moderate"
           },
           "exposure": {
@@ -584,17 +581,17 @@
             "display": 41,
             "category": "High"
           },
-          "risk_rank": 5
+          "risk_rank": 6
         },
         "midcentury": {
           "risk": {
-            "value": 88.52,
-            "display": 89,
+            "value": 87.15,
+            "display": 87,
             "category": "Highest"
           },
           "hazard": {
-            "value": 0.95,
-            "display": 95,
+            "value": 0.96,
+            "display": 96,
             "category": "Highest"
           },
           "exposure": {
@@ -663,12 +660,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "richard-j-donovan-correctional-facility",
-          "name": "Richard J. Donovan Correctional Facility"
+          "slug": "california-state-prison-sacramento",
+          "name": "California State Prison, Sacramento"
         },
         "lower": {
-          "slug": "california-state-prison-corcoran",
-          "name": "California State Prison, Corcoran"
+          "slug": "richard-j-donovan-correctional-facility",
+          "name": "Richard J. Donovan Correctional Facility"
         }
       }
     },
@@ -689,14 +686,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 65.49,
-            "display": 65,
-            "category": "High"
+            "value": 61.46,
+            "display": 61,
+            "category": "Moderate"
           },
           "hazard": {
-            "value": 0.3,
-            "display": 30,
-            "category": "Moderate"
+            "value": 0.32,
+            "display": 32,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.49,
@@ -708,18 +705,18 @@
             "display": 55,
             "category": "Highest"
           },
-          "risk_rank": 1
+          "risk_rank": 2
         },
         "midcentury": {
           "risk": {
-            "value": 89.33,
-            "display": 89,
+            "value": 87.56,
+            "display": 88,
             "category": "Highest"
           },
           "hazard": {
             "value": 0.76,
             "display": 76,
-            "category": "Highest"
+            "category": "High"
           },
           "exposure": {
             "value": 0.49,
@@ -786,10 +783,13 @@
       },
       "risk_rank_total": 31,
       "neighbors": {
-        "higher": null,
-        "lower": {
+        "higher": {
           "slug": "california-institution-for-men",
           "name": "California Institution for Men"
+        },
+        "lower": {
+          "slug": "california-state-prison-corcoran",
+          "name": "California State Prison, Corcoran"
         }
       }
     },
@@ -810,14 +810,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 44.44,
-            "display": 44,
-            "category": "Moderate"
+            "value": 30.6,
+            "display": 31,
+            "category": "Lowest"
           },
           "hazard": {
-            "value": 0.37,
-            "display": 37,
-            "category": "Moderate"
+            "value": 0.27,
+            "display": 27,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.28,
@@ -829,17 +829,17 @@
             "display": 41,
             "category": "High"
           },
-          "risk_rank": 11
+          "risk_rank": 17
         },
         "midcentury": {
           "risk": {
-            "value": 64.22,
-            "display": 64,
+            "value": 48.48,
+            "display": 48,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.75,
-            "display": 75,
+            "value": 0.57,
+            "display": 57,
             "category": "High"
           },
           "exposure": {
@@ -852,7 +852,7 @@
             "display": 41,
             "category": "High"
           },
-          "risk_rank": 16
+          "risk_rank": 23
         }
       },
       "profile": {
@@ -908,12 +908,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "pelican-bay-state-prison",
-          "name": "Pelican Bay State Prison"
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
         },
         "lower": {
-          "slug": "central-california-womens-facility",
-          "name": "Central California Women's Facility"
+          "slug": "north-kern-state-prison",
+          "name": "North Kern State Prison"
         }
       }
     },
@@ -934,13 +934,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 39.54,
-            "display": 40,
+            "value": 35.58,
+            "display": 36,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.28,
-            "display": 28,
+            "value": 0.35,
+            "display": 35,
             "category": "Moderate"
           },
           "exposure": {
@@ -953,17 +953,17 @@
             "display": 25,
             "category": "Moderate"
           },
-          "risk_rank": 15
+          "risk_rank": 13
         },
         "midcentury": {
           "risk": {
-            "value": 71.37,
-            "display": 71,
+            "value": 69.76,
+            "display": 70,
             "category": "High"
           },
           "hazard": {
-            "value": 0.89,
-            "display": 89,
+            "value": 0.93,
+            "display": 93,
             "category": "Highest"
           },
           "exposure": {
@@ -1036,8 +1036,8 @@
           "name": "Valley State Prison"
         },
         "lower": {
-          "slug": "san-quentin-rehabilitation-center",
-          "name": "San Quentin Rehabilitation Center"
+          "slug": "mule-creek-state-prison",
+          "name": "Mule Creek State Prison"
         }
       }
     },
@@ -1058,14 +1058,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 51.84,
-            "display": 52,
+            "value": 54.18,
+            "display": 54,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.2,
-            "display": 20,
-            "category": "Lowest"
+            "value": 0.36,
+            "display": 36,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.66,
@@ -1077,17 +1077,17 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 6
+          "risk_rank": 3
         },
         "midcentury": {
           "risk": {
-            "value": 81.16,
-            "display": 81,
-            "category": "High"
+            "value": 87.11,
+            "display": 87,
+            "category": "Highest"
           },
           "hazard": {
-            "value": 0.77,
-            "display": 77,
+            "value": 0.91,
+            "display": 91,
             "category": "Highest"
           },
           "exposure": {
@@ -1156,8 +1156,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-institution-for-women",
-          "name": "California Institution for Women"
+          "slug": "california-medical-facility",
+          "name": "California Medical Facility"
         },
         "lower": {
           "slug": "california-substance-abuse-treatment-facility",
@@ -1182,13 +1182,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 43.16,
-            "display": 43,
-            "category": "Moderate"
+            "value": 40.96,
+            "display": 41,
+            "category": "Lowest"
           },
           "hazard": {
-            "value": 0.22,
-            "display": 22,
+            "value": 0.32,
+            "display": 32,
             "category": "Lowest"
           },
           "exposure": {
@@ -1201,17 +1201,17 @@
             "display": 47,
             "category": "Highest"
           },
-          "risk_rank": 13
+          "risk_rank": 11
         },
         "midcentury": {
           "risk": {
-            "value": 72.69,
+            "value": 72.97,
             "display": 73,
             "category": "High"
           },
           "hazard": {
-            "value": 0.79,
-            "display": 79,
+            "value": 0.86,
+            "display": 86,
             "category": "Highest"
           },
           "exposure": {
@@ -1224,7 +1224,7 @@
             "display": 47,
             "category": "Highest"
           },
-          "risk_rank": 10
+          "risk_rank": 9
         }
       },
       "profile": {
@@ -1280,8 +1280,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "central-california-womens-facility",
-          "name": "Central California Women's Facility"
+          "slug": "california-state-prison-solano",
+          "name": "California State Prison, Solano"
         },
         "lower": {
           "slug": "valley-state-prison",
@@ -1306,13 +1306,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 56.23,
-            "display": 56,
+            "value": 53.42,
+            "display": 53,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.23,
-            "display": 23,
+            "value": 0.29,
+            "display": 29,
             "category": "Lowest"
           },
           "exposure": {
@@ -1325,17 +1325,17 @@
             "display": 51,
             "category": "Highest"
           },
-          "risk_rank": 3
+          "risk_rank": 5
         },
         "midcentury": {
           "risk": {
-            "value": 80.76,
-            "display": 81,
+            "value": 80.07,
+            "display": 80,
             "category": "High"
           },
           "hazard": {
-            "value": 0.7,
-            "display": 70,
+            "value": 0.73,
+            "display": 73,
             "category": "High"
           },
           "exposure": {
@@ -1348,7 +1348,7 @@
             "display": 51,
             "category": "Highest"
           },
-          "risk_rank": 5
+          "risk_rank": 6
         }
       },
       "profile": {
@@ -1404,12 +1404,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-institution-for-men",
-          "name": "California Institution for Men"
+          "slug": "california-substance-abuse-treatment-facility",
+          "name": "California Substance Abuse Treatment Facility"
         },
         "lower": {
-          "slug": "richard-j-donovan-correctional-facility",
-          "name": "Richard J. Donovan Correctional Facility"
+          "slug": "california-institution-for-women",
+          "name": "California Institution for Women"
         }
       }
     },
@@ -1430,14 +1430,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 48.34,
-            "display": 48,
-            "category": "Moderate"
+            "value": 41.92,
+            "display": 42,
+            "category": "Lowest"
           },
           "hazard": {
-            "value": 0.3,
-            "display": 30,
-            "category": "Moderate"
+            "value": 0.32,
+            "display": 32,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.62,
@@ -1449,18 +1449,18 @@
             "display": 32,
             "category": "Moderate"
           },
-          "risk_rank": 8
+          "risk_rank": 10
         },
         "midcentury": {
           "risk": {
-            "value": 72.19,
-            "display": 72,
+            "value": 68.02,
+            "display": 68,
             "category": "High"
           },
           "hazard": {
             "value": 0.76,
             "display": 76,
-            "category": "Highest"
+            "category": "High"
           },
           "exposure": {
             "value": 0.62,
@@ -1472,7 +1472,7 @@
             "display": 32,
             "category": "Moderate"
           },
-          "risk_rank": 11
+          "risk_rank": 13
         }
       },
       "profile": {
@@ -1528,12 +1528,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-substance-abuse-treatment-facility",
-          "name": "California Substance Abuse Treatment Facility"
+          "slug": "central-california-womens-facility",
+          "name": "Central California Women's Facility"
         },
         "lower": {
-          "slug": "california-health-care-facility",
-          "name": "California Health Care Facility"
+          "slug": "california-state-prison-los-angeles-county",
+          "name": "California State Prison, Los Angeles County"
         }
       }
     },
@@ -1554,14 +1554,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 51.4,
-            "display": 51,
+            "value": 53.68,
+            "display": 54,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.2,
-            "display": 20,
-            "category": "Lowest"
+            "value": 0.36,
+            "display": 36,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.6,
@@ -1573,17 +1573,17 @@
             "display": 40,
             "category": "High"
           },
-          "risk_rank": 7
+          "risk_rank": 4
         },
         "midcentury": {
           "risk": {
-            "value": 80.72,
-            "display": 81,
-            "category": "High"
+            "value": 86.62,
+            "display": 87,
+            "category": "Highest"
           },
           "hazard": {
-            "value": 0.77,
-            "display": 77,
+            "value": 0.91,
+            "display": 91,
             "category": "Highest"
           },
           "exposure": {
@@ -1596,7 +1596,7 @@
             "display": 40,
             "category": "High"
           },
-          "risk_rank": 6
+          "risk_rank": 5
         }
       },
       "profile": {
@@ -1656,8 +1656,8 @@
           "name": "California State Prison, Corcoran"
         },
         "lower": {
-          "slug": "california-state-prison-solano",
-          "name": "California State Prison, Solano"
+          "slug": "california-state-prison-sacramento",
+          "name": "California State Prison, Sacramento"
         }
       }
     },
@@ -1678,14 +1678,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 5.66,
+            "value": 6.43,
             "display": 6,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.16,
-            "display": 16,
-            "category": "Lowest"
+            "value": 0.39,
+            "display": 39,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.22,
@@ -1697,17 +1697,17 @@
             "display": 18,
             "category": "Lowest"
           },
-          "risk_rank": 29
+          "risk_rank": 28
         },
         "midcentury": {
           "risk": {
-            "value": 24.51,
-            "display": 25,
+            "value": 27.28,
+            "display": 27,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.52,
-            "display": 52,
+            "value": 0.75,
+            "display": 75,
             "category": "High"
           },
           "exposure": {
@@ -1776,12 +1776,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "sierra-conservation-center",
-          "name": "Sierra Conservation Center"
+          "slug": "pleasant-valley-state-prison",
+          "name": "Pleasant Valley State Prison"
         },
         "lower": {
-          "slug": "ironwood-state-prison",
-          "name": "Ironwood State Prison"
+          "slug": "sierra-conservation-center",
+          "name": "Sierra Conservation Center"
         }
       }
     },
@@ -1807,9 +1807,9 @@
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.17,
-            "display": 17,
-            "category": "Lowest"
+            "value": 0.4,
+            "display": 40,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.07,
@@ -1825,13 +1825,13 @@
         },
         "midcentury": {
           "risk": {
-            "value": 20.06,
-            "display": 20,
+            "value": 22.83,
+            "display": 23,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.55,
-            "display": 55,
+            "value": 0.79,
+            "display": 79,
             "category": "High"
           },
           "exposure": {
@@ -1923,37 +1923,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 44.09,
+            "value": 43.63,
             "display": 44,
-            "category": "Moderate"
-          },
-          "hazard": {
-            "value": 0.21,
-            "display": 21,
             "category": "Lowest"
           },
-          "exposure": {
-            "value": 0.43,
-            "display": 43,
-            "category": "Moderate"
-          },
-          "vulnerability": {
-            "value": 0.42,
-            "display": 42,
-            "category": "High"
-          },
-          "risk_rank": 12
-        },
-        "midcentury": {
-          "risk": {
-            "value": 73.95,
-            "display": 74,
-            "category": "High"
-          },
           "hazard": {
-            "value": 0.78,
-            "display": 78,
-            "category": "Highest"
+            "value": 0.33,
+            "display": 33,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.43,
@@ -1966,6 +1943,29 @@
             "category": "High"
           },
           "risk_rank": 9
+        },
+        "midcentury": {
+          "risk": {
+            "value": 76.33,
+            "display": 76,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.88,
+            "display": 88,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.43,
+            "display": 43,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.42,
+            "display": 42,
+            "category": "High"
+          },
+          "risk_rank": 8
         }
       },
       "profile": {
@@ -2021,12 +2021,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-mens-colony",
-          "name": "California Men's Colony"
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
         },
         "lower": {
-          "slug": "california-state-prison-los-angeles-county",
-          "name": "California State Prison, Los Angeles County"
+          "slug": "california-state-prison-solano",
+          "name": "California State Prison, Solano"
         }
       }
     },
@@ -2047,14 +2047,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 36.43,
-            "display": 36,
+            "value": 24.91,
+            "display": 25,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.3,
-            "display": 30,
-            "category": "Moderate"
+            "value": 0.26,
+            "display": 26,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.37,
@@ -2066,17 +2066,17 @@
             "display": 33,
             "category": "Moderate"
           },
-          "risk_rank": 18
+          "risk_rank": 21
         },
         "midcentury": {
           "risk": {
-            "value": 54.89,
-            "display": 55,
-            "category": "Moderate"
+            "value": 44.49,
+            "display": 44,
+            "category": "Lowest"
           },
           "hazard": {
-            "value": 0.66,
-            "display": 66,
+            "value": 0.59,
+            "display": 59,
             "category": "High"
           },
           "exposure": {
@@ -2089,7 +2089,7 @@
             "display": 33,
             "category": "Moderate"
           },
-          "risk_rank": 23
+          "risk_rank": 24
         }
       },
       "profile": {
@@ -2145,12 +2145,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "mule-creek-state-prison",
-          "name": "Mule Creek State Prison"
+          "slug": "wasco-state-prison",
+          "name": "Wasco State Prison"
         },
         "lower": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
+          "slug": "folsom-state-prison",
+          "name": "Folsom State Prison"
         }
       }
     },
@@ -2171,37 +2171,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 30.12,
-            "display": 30,
+            "value": 24.71,
+            "display": 25,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.26,
-            "display": 26,
+            "value": 0.33,
+            "display": 33,
             "category": "Moderate"
-          },
-          "exposure": {
-            "value": 0.45,
-            "display": 45,
-            "category": "High"
-          },
-          "vulnerability": {
-            "value": 0.25,
-            "display": 25,
-            "category": "Moderate"
-          },
-          "risk_rank": 23
-        },
-        "midcentury": {
-          "risk": {
-            "value": 56.09,
-            "display": 56,
-            "category": "Moderate"
-          },
-          "hazard": {
-            "value": 0.76,
-            "display": 76,
-            "category": "Highest"
           },
           "exposure": {
             "value": 0.45,
@@ -2214,6 +2191,29 @@
             "category": "Moderate"
           },
           "risk_rank": 22
+        },
+        "midcentury": {
+          "risk": {
+            "value": 52.89,
+            "display": 53,
+            "category": "Moderate"
+          },
+          "hazard": {
+            "value": 0.81,
+            "display": 81,
+            "category": "Highest"
+          },
+          "exposure": {
+            "value": 0.45,
+            "display": 45,
+            "category": "High"
+          },
+          "vulnerability": {
+            "value": 0.25,
+            "display": 25,
+            "category": "Moderate"
+          },
+          "risk_rank": 21
         }
       },
       "profile": {
@@ -2269,8 +2269,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "north-kern-state-prison",
-          "name": "North Kern State Prison"
+          "slug": "correctional-training-facility",
+          "name": "Correctional Training Facility"
         },
         "lower": {
           "slug": "high-desert-state-prison",
@@ -2295,14 +2295,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 29.95,
-            "display": 30,
+            "value": 22.87,
+            "display": 23,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.24,
-            "display": 24,
-            "category": "Moderate"
+            "value": 0.28,
+            "display": 28,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.4,
@@ -2314,17 +2314,17 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 24
+          "risk_rank": 23
         },
         "midcentury": {
           "risk": {
-            "value": 61.14,
-            "display": 61,
+            "value": 54.83,
+            "display": 55,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.83,
-            "display": 83,
+            "value": 0.82,
+            "display": 82,
             "category": "Highest"
           },
           "exposure": {
@@ -2337,7 +2337,7 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 19
+          "risk_rank": 18
         }
       },
       "profile": {
@@ -2397,8 +2397,8 @@
           "name": "Folsom State Prison"
         },
         "lower": {
-          "slug": "wasco-state-prison",
-          "name": "Wasco State Prison"
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
         }
       }
     },
@@ -2419,14 +2419,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 1.66,
-            "display": 2,
+            "value": 2.91,
+            "display": 3,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.18,
-            "display": 18,
-            "category": "Lowest"
+            "value": 0.43,
+            "display": 43,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0,
@@ -2442,14 +2442,14 @@
         },
         "midcentury": {
           "risk": {
-            "value": 24.52,
-            "display": 25,
+            "value": 28.21,
+            "display": 28,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.62,
-            "display": 62,
-            "category": "High"
+            "value": 0.86,
+            "display": 86,
+            "category": "Highest"
           },
           "exposure": {
             "value": 0,
@@ -2517,8 +2517,8 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "calipatria-state-prison",
-          "name": "Calipatria State Prison"
+          "slug": "sierra-conservation-center",
+          "name": "Sierra Conservation Center"
         },
         "lower": {
           "slug": "centinela-state-prison",
@@ -2543,14 +2543,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 33.54,
-            "display": 34,
+            "value": 33.16,
+            "display": 33,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.2,
-            "display": 20,
-            "category": "Lowest"
+            "value": 0.35,
+            "display": 35,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.37,
@@ -2562,18 +2562,18 @@
             "display": 35,
             "category": "Moderate"
           },
-          "risk_rank": 20
+          "risk_rank": 16
         },
         "midcentury": {
           "risk": {
-            "value": 59.98,
-            "display": 60,
+            "value": 62.37,
+            "display": 62,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.71,
-            "display": 71,
-            "category": "High"
+            "value": 0.84,
+            "display": 84,
+            "category": "Highest"
           },
           "exposure": {
             "value": 0.37,
@@ -2585,7 +2585,7 @@
             "display": 35,
             "category": "Moderate"
           },
-          "risk_rank": 20
+          "risk_rank": 15
         }
       },
       "profile": {
@@ -2641,12 +2641,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "salinas-valley-state-prison",
-          "name": "Salinas Valley State Prison"
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
         },
         "lower": {
-          "slug": "california-correctional-institution",
-          "name": "California Correctional Institution"
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
         }
       }
     },
@@ -2667,14 +2667,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 38.48,
-            "display": 38,
+            "value": 34.67,
+            "display": 35,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.24,
-            "display": 24,
-            "category": "Moderate"
+            "value": 0.32,
+            "display": 32,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.3,
@@ -2686,18 +2686,18 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 17
+          "risk_rank": 14
         },
         "midcentury": {
           "risk": {
-            "value": 65,
-            "display": 65,
+            "value": 63.42,
+            "display": 63,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.75,
-            "display": 75,
-            "category": "High"
+            "value": 0.8,
+            "display": 80,
+            "category": "Highest"
           },
           "exposure": {
             "value": 0.3,
@@ -2709,7 +2709,7 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 15
+          "risk_rank": 14
         }
       },
       "profile": {
@@ -2765,12 +2765,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "san-quentin-rehabilitation-center",
-          "name": "San Quentin Rehabilitation Center"
+          "slug": "california-rehabilitation-center",
+          "name": "California Rehabilitation Center"
         },
         "lower": {
-          "slug": "correctional-training-facility",
-          "name": "Correctional Training Facility"
+          "slug": "pelican-bay-state-prison",
+          "name": "Pelican Bay State Prison"
         }
       }
     },
@@ -2791,14 +2791,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 30.35,
-            "display": 30,
+            "value": 29.47,
+            "display": 29,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.2,
-            "display": 20,
-            "category": "Lowest"
+            "value": 0.35,
+            "display": 35,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.62,
@@ -2810,18 +2810,18 @@
             "display": 20,
             "category": "Lowest"
           },
-          "risk_rank": 22
+          "risk_rank": 18
         },
         "midcentury": {
           "risk": {
-            "value": 57.44,
-            "display": 57,
+            "value": 59.18,
+            "display": 59,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.72,
-            "display": 72,
-            "category": "High"
+            "value": 0.85,
+            "display": 85,
+            "category": "Highest"
           },
           "exposure": {
             "value": 0.62,
@@ -2833,7 +2833,7 @@
             "display": 20,
             "category": "Lowest"
           },
-          "risk_rank": 21
+          "risk_rank": 16
         }
       },
       "profile": {
@@ -2889,12 +2889,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-correctional-institution",
-          "name": "California Correctional Institution"
+          "slug": "california-mens-colony",
+          "name": "California Men's Colony"
         },
         "lower": {
-          "slug": "folsom-state-prison",
-          "name": "Folsom State Prison"
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
         }
       }
     },
@@ -2915,14 +2915,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 44.73,
-            "display": 45,
-            "category": "Moderate"
+            "value": 33.87,
+            "display": 34,
+            "category": "Lowest"
           },
           "hazard": {
-            "value": 0.26,
-            "display": 26,
-            "category": "Moderate"
+            "value": 0.2,
+            "display": 20,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.67,
@@ -2934,17 +2934,17 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 10
+          "risk_rank": 15
         },
         "midcentury": {
           "risk": {
-            "value": 62.71,
-            "display": 63,
+            "value": 52.83,
+            "display": 53,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.6,
-            "display": 60,
+            "value": 0.52,
+            "display": 52,
             "category": "High"
           },
           "exposure": {
@@ -2957,7 +2957,7 @@
             "display": 28,
             "category": "Moderate"
           },
-          "risk_rank": 18
+          "risk_rank": 22
         }
       },
       "profile": {
@@ -3013,12 +3013,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-health-care-facility",
-          "name": "California Health Care Facility"
+          "slug": "mule-creek-state-prison",
+          "name": "Mule Creek State Prison"
         },
         "lower": {
-          "slug": "california-mens-colony",
-          "name": "California Men's Colony"
+          "slug": "kern-valley-state-prison",
+          "name": "Kern Valley State Prison"
         }
       }
     },
@@ -3039,13 +3039,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 16.29,
-            "display": 16,
+            "value": 11.67,
+            "display": 12,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.19,
-            "display": 19,
+            "value": 0.31,
+            "display": 31,
             "category": "Lowest"
           },
           "exposure": {
@@ -3062,13 +3062,13 @@
         },
         "midcentury": {
           "risk": {
-            "value": 40.62,
-            "display": 41,
+            "value": 38.25,
+            "display": 38,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.65,
-            "display": 65,
+            "value": 0.75,
+            "display": 75,
             "category": "High"
           },
           "exposure": {
@@ -3141,8 +3141,8 @@
           "name": "Avenal State Prison"
         },
         "lower": {
-          "slug": "sierra-conservation-center",
-          "name": "Sierra Conservation Center"
+          "slug": "calipatria-state-prison",
+          "name": "Calipatria State Prison"
         }
       }
     },
@@ -3163,37 +3163,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 56.16,
-            "display": 56,
+            "value": 47.94,
+            "display": 48,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.31,
-            "display": 31,
-            "category": "Moderate"
-          },
-          "exposure": {
-            "value": 0.37,
-            "display": 37,
-            "category": "Moderate"
-          },
-          "vulnerability": {
-            "value": 0.52,
-            "display": 52,
-            "category": "Highest"
-          },
-          "risk_rank": 4
-        },
-        "midcentury": {
-          "risk": {
-            "value": 78.86,
-            "display": 79,
-            "category": "High"
-          },
-          "hazard": {
-            "value": 0.74,
-            "display": 74,
-            "category": "High"
+            "value": 0.27,
+            "display": 27,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.37,
@@ -3206,6 +3183,29 @@
             "category": "Highest"
           },
           "risk_rank": 7
+        },
+        "midcentury": {
+          "risk": {
+            "value": 70.93,
+            "display": 71,
+            "category": "High"
+          },
+          "hazard": {
+            "value": 0.66,
+            "display": 66,
+            "category": "High"
+          },
+          "exposure": {
+            "value": 0.37,
+            "display": 37,
+            "category": "Moderate"
+          },
+          "vulnerability": {
+            "value": 0.52,
+            "display": 52,
+            "category": "Highest"
+          },
+          "risk_rank": 11
         }
       },
       "profile": {
@@ -3261,12 +3261,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-state-prison-sacramento",
-          "name": "California State Prison, Sacramento"
-        },
-        "lower": {
           "slug": "california-institution-for-women",
           "name": "California Institution for Women"
+        },
+        "lower": {
+          "slug": "california-health-care-facility",
+          "name": "California Health Care Facility"
         }
       }
     },
@@ -3287,14 +3287,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 34.18,
-            "display": 34,
+            "value": 21.9,
+            "display": 22,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.3,
-            "display": 30,
-            "category": "Moderate"
+            "value": 0.25,
+            "display": 25,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.22,
@@ -3306,17 +3306,17 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 19
+          "risk_rank": 25
         },
         "midcentury": {
           "risk": {
-            "value": 53.83,
-            "display": 54,
-            "category": "Moderate"
+            "value": 42.38,
+            "display": 42,
+            "category": "Lowest"
           },
           "hazard": {
-            "value": 0.68,
-            "display": 68,
+            "value": 0.59,
+            "display": 59,
             "category": "High"
           },
           "exposure": {
@@ -3329,7 +3329,7 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 24
+          "risk_rank": 25
         }
       },
       "profile": {
@@ -3385,12 +3385,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "correctional-training-facility",
-          "name": "Correctional Training Facility"
+          "slug": "california-correctional-institution",
+          "name": "California Correctional Institution"
         },
         "lower": {
-          "slug": "kern-valley-state-prison",
-          "name": "Kern Valley State Prison"
+          "slug": "avenal-state-prison",
+          "name": "Avenal State Prison"
         }
       }
     },
@@ -3411,14 +3411,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 39.3,
-            "display": 39,
+            "value": 29.33,
+            "display": 29,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.28,
-            "display": 28,
-            "category": "Moderate"
+            "value": 0.26,
+            "display": 26,
+            "category": "Lowest"
           },
           "exposure": {
             "value": 0.34,
@@ -3430,18 +3430,18 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 16
+          "risk_rank": 19
         },
         "midcentury": {
           "risk": {
-            "value": 65.49,
-            "display": 65,
+            "value": 58.11,
+            "display": 58,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.78,
-            "display": 78,
-            "category": "Highest"
+            "value": 0.74,
+            "display": 74,
+            "category": "High"
           },
           "exposure": {
             "value": 0.34,
@@ -3453,7 +3453,7 @@
             "display": 38,
             "category": "High"
           },
-          "risk_rank": 14
+          "risk_rank": 17
         }
       },
       "profile": {
@@ -3509,12 +3509,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "california-rehabilitation-center",
-          "name": "California Rehabilitation Center"
+          "slug": "north-kern-state-prison",
+          "name": "North Kern State Prison"
         },
         "lower": {
-          "slug": "mule-creek-state-prison",
-          "name": "Mule Creek State Prison"
+          "slug": "wasco-state-prison",
+          "name": "Wasco State Prison"
         }
       }
     },
@@ -3535,13 +3535,13 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 12.64,
-            "display": 13,
+            "value": 5.46,
+            "display": 5,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.22,
-            "display": 22,
+            "value": 0.3,
+            "display": 30,
             "category": "Lowest"
           },
           "exposure": {
@@ -3554,17 +3554,17 @@
             "display": 8,
             "category": "Lowest"
           },
-          "risk_rank": 28
+          "risk_rank": 29
         },
         "midcentury": {
           "risk": {
-            "value": 39.44,
-            "display": 39,
+            "value": 33.98,
+            "display": 34,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.73,
-            "display": 73,
+            "value": 0.78,
+            "display": 78,
             "category": "High"
           },
           "exposure": {
@@ -3633,12 +3633,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "pleasant-valley-state-prison",
-          "name": "Pleasant Valley State Prison"
-        },
-        "lower": {
           "slug": "calipatria-state-prison",
           "name": "Calipatria State Prison"
+        },
+        "lower": {
+          "slug": "ironwood-state-prison",
+          "name": "Ironwood State Prison"
         }
       }
     },
@@ -3659,14 +3659,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 40.15,
-            "display": 40,
+            "value": 39.19,
+            "display": 39,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.21,
-            "display": 21,
-            "category": "Lowest"
+            "value": 0.34,
+            "display": 34,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.36,
@@ -3678,17 +3678,17 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 14
+          "risk_rank": 12
         },
         "midcentury": {
           "risk": {
-            "value": 69.63,
-            "display": 70,
+            "value": 71.46,
+            "display": 71,
             "category": "High"
           },
           "hazard": {
-            "value": 0.78,
-            "display": 78,
+            "value": 0.88,
+            "display": 88,
             "category": "Highest"
           },
           "exposure": {
@@ -3701,7 +3701,7 @@
             "display": 42,
             "category": "High"
           },
-          "risk_rank": 13
+          "risk_rank": 10
         }
       },
       "profile": {
@@ -3783,14 +3783,14 @@
       "periods": {
         "historic": {
           "risk": {
-            "value": 28.92,
-            "display": 29,
+            "value": 28.17,
+            "display": 28,
             "category": "Lowest"
           },
           "hazard": {
-            "value": 0.2,
-            "display": 20,
-            "category": "Lowest"
+            "value": 0.35,
+            "display": 35,
+            "category": "Moderate"
           },
           "exposure": {
             "value": 0.6,
@@ -3802,17 +3802,17 @@
             "display": 20,
             "category": "Lowest"
           },
-          "risk_rank": 25
+          "risk_rank": 20
         },
         "midcentury": {
           "risk": {
-            "value": 52.85,
-            "display": 53,
+            "value": 54.44,
+            "display": 54,
             "category": "Moderate"
           },
           "hazard": {
-            "value": 0.66,
-            "display": 66,
+            "value": 0.79,
+            "display": 79,
             "category": "High"
           },
           "exposure": {
@@ -3825,7 +3825,7 @@
             "display": 20,
             "category": "Lowest"
           },
-          "risk_rank": 25
+          "risk_rank": 20
         }
       },
       "profile": {
@@ -3881,12 +3881,12 @@
       "risk_rank_total": 31,
       "neighbors": {
         "higher": {
-          "slug": "high-desert-state-prison",
-          "name": "High Desert State Prison"
+          "slug": "san-quentin-rehabilitation-center",
+          "name": "San Quentin Rehabilitation Center"
         },
         "lower": {
-          "slug": "avenal-state-prison",
-          "name": "Avenal State Prison"
+          "slug": "correctional-training-facility",
+          "name": "Correctional Training Facility"
         }
       }
     }

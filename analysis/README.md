@@ -20,15 +20,15 @@ Adaptive capacity is not included as a fourth component, following Ovienmhada et
 
 ### Hazard Component
 
-Two relative-threshold temperature indicators, each **max-normalized** 0–1 across the 31 facilities (cross-period) and averaged, then amplified by an air-quality modifier. Temperature counts come from a LOCA2-CA daily extraction at each facility's own grid cell (14-model ensemble, model democracy — see `data/hazards/README.md`). Max-normalization keeps a true zero: 0 means *no heat*, not *coldest of the 31*, so the coolest facility keeps its real, non-zero score.
+A blended daytime term and a warm-night term, each max-normalized 0–1 across the 31 facilities (cross-period), averaged, then multiplied by an air-quality modifier. Counts come from a LOCA2-CA daily extraction at each facility's grid cell (14-model ensemble, model democracy — see `data/hazards/README.md`). Max-normalization (not min-max) means a facility with no exceedances scores 0.
 
 | Sub-indicator | Variable | Description | Source |
 | :--- | :--- | :--- | :--- |
-| Hot days | `loca2_days_over_avg_plus10_historic` / `_midcentury` | Annual days above the facility's own mean summer daily-max + 10°F (Skarha threshold, 1981–2010 baseline). A facility-relative threshold: a +10°F anomaly is a shock to a cool-climate facility that an absolute 90°F count misses. | LOCA2-CA daily (SSP3-7.0), Cal-Adapt via cadcat |
-| Warm nights | `loca2_nights_over_p95_historic` / `_midcentury` | Annual April–October nights with tmin above the 95th percentile of the facility's **1961–1990** April–October minimum-temperature distribution (OEHHA convention). The fixed baseline window makes the count measure distributional shift rather than moving with the climate it detects. | LOCA2-CA daily (SSP3-7.0), Cal-Adapt via cadcat |
-| Air quality (modifier) | `AQI_norm` | Enters **multiplicatively**, not as a separate additive term: `H = temp × (1 + 0.30·AQI_norm/100)`. It amplifies heat where both are present but cannot create hazard from pollution alone (×1.0 at AQI = 0). AQI_norm is the CalEnviroScreen 5.0 ozone/PM2.5/diesel percentile mean, held at historic values for both periods. β = 0.30 is a design parameter capping amplification at +30% at the worst-air facility; it is not a carceral-validated coefficient. | CalEnviroScreen 5.0, 2025 |
+| Hot days (blended) | `loca2_days_over_avg_plus10` ⊕ `loca2_days_over_90` | 50/50 blend of a facility-relative threshold (days above the facility's mean summer daily-max + 10°F, 1981–2010 baseline) and an absolute threshold (days over 90°F), each max-normalized before blending. The 50% weight is a parameter (`W_REL`). | LOCA2-CA daily (SSP3-7.0), Cal-Adapt via cadcat |
+| Warm nights | `loca2_nights_over_p95_historic` / `_midcentury` | April–October nights with tmin above the 95th percentile of the facility's 1961–1990 April–October minimum-temperature distribution (OEHHA convention). | LOCA2-CA daily (SSP3-7.0), Cal-Adapt via cadcat |
+| Air quality (modifier) | `AQI_norm` | Multiplicative modifier: `H = temp × (1 + 0.30·AQI_norm/100)`, ×1.0 at AQI = 0. AQI_norm is the CalEnviroScreen 5.0 ozone/PM2.5/diesel percentile mean, held at historic values for both periods. β = 0.30 is a parameter. | CalEnviroScreen 5.0, 2025 |
 
-The two temperature indicators use different baseline windows by design (hot days 1981–2010; warm nights 1961–1990) and are normalized independently before averaging, so the asymmetry introduces no arithmetic error. The all-facilities hazard product is computed by census-facility in `data_sources/hazards/heat/heat_hazard.ipynb` (357 facilities, normalized across all 357); the index recomputes the same equation across its 31 facilities and joins by `cdcr_code`.
+The all-facilities hazard product is built for 357 facilities in `data_sources/hazards/heat/heat_hazard.ipynb` (normalized across all 357); the index recomputes the same equation across its 31 facilities and joins by `cdcr_code`.
 
 ### Exposure Component
 
@@ -115,25 +115,19 @@ fall in the gaps between tiers.
 
 | Tier | Mid-century score span | n facilities | Facilities | Color |
 | :--- | :--- | :--- | :--- | :--- |
-| Highest | 94.6 – 100.0 | 3 | CIM, CIW, CMF | `#7a1010` |
-| High | 75.2 – 87.7 | 9 | COR, SATF, SAC, RJD, CHCF, CCWF, SOL, LAC, VSP | `#c44020` |
-| Moderate | 56.9 – 72.0 | 13 | CMC, MCSP, CCI, PBSP, CRC, HDSP, KVSP, NKSP, SQ, FOL, CTF, SVSP, WSP | `#e89050` |
-| Lowest | 21.7 – 43.7 | 6 | PVSP, ASP, SCC, ISP, CAL, CEN | `#e8e0c8` |
+| Highest | 86.6 – 100.0 | 5 | CIM, CMF, CIW, COR, SATF | `#7a1010` |
+| High | 68.0 – 80.1 | 8 | SAC, CHCF, CCWF, LAC, VSP, RJD, CRC, SOL | `#c44020` |
+| Moderate | 48.5 – 63.4 | 10 | MCSP, KVSP, NKSP, SQ, HDSP, CCI, WSP, FOL, PBSP, CMC | `#e89050` |
+| Lowest | 22.8 – 44.5 | 8 | CTF, SVSP, PVSP, ASP, SCC, ISP, CAL, CEN | `#e8e0c8` |
 
-Applying the same mid-century breaks to the current period gives Moderate 13, Lowest 18, and no
-facilities in the Highest or High tiers: under the relative thresholds the warming signal between
-periods is larger, so current-period hazard sits well below mid-century and every current score
-falls beneath the High break.
+Applying the same mid-century breaks to the current period gives Moderate 7, Lowest 24, and no
+facilities in the Highest or High tiers: the warming signal between periods is large, so
+current-period hazard sits well below mid-century and every current score falls beneath the High
+break.
 
-**Mid-century top 5 by risk score:** CIM (100.0), CMF (96.9), CIW (94.6), COR (87.7), SATF (87.4).
+**Mid-century top 5 by risk score:** CIM (100.0), CMF (87.6), CIW (87.2), COR (87.1), SATF (86.6).
 
-The relative threshold reorders the hazard component almost completely (Spearman ρ ≈ 0.11 between
-v0.1 and v0.2 hazard scores), but overall risk rank is more stable (ρ ≈ 0.84) because exposure and
-vulnerability are unchanged. The clearest movers: COR and SATF fall out of Highest into High
-(they dominated on *absolute* heat, which the relative threshold removes), while CIM, CMF, and CIW
-rise into the top three (cool-climate, high-vulnerability facilities whose summers take a +10°F
-anomaly as a genuine shock). CMC and PBSP climb from Lowest to Moderate for the same reason; WSP,
-KVSP, and NKSP fall from High to Moderate as their absolute-heat advantage disappears.
+Overall risk rank correlates with v0.1 at Spearman ρ ≈ 0.84; exposure and vulnerability are unchanged, only the hazard component was rebuilt. The 50/50 daytime blend correlates with a pure-relative daytime term at ρ ≈ 0.96.
 
 ### Output Column Reference
 
@@ -179,16 +173,22 @@ stays traceable to the version that produced it.
 
 #### Changelog — v0.2
 
-- **Hazard thresholds: absolute → relative.** Daytime heat moves from an absolute 90°F count
-  (Cal-Adapt tract product) to days above the facility's own mean summer max + 10°F. Warm nights are
-  rebuilt in-house from LOCA2-CA `tasmin` (Apr–Oct P95 of the facility's 1961–1990 distribution),
-  replacing the VCP hot-nights field.
+- **Daytime heat.** v0.1 used an absolute 90°F count (Cal-Adapt tract product). v0.2 daytime heat is a
+  50/50 blend of a facility-relative threshold (days above the facility's mean summer max + 10°F) and
+  an absolute 90°F count, each max-normalized before blending. The 50% weight is a parameter (`W_REL`).
+- **Warm nights.** Rebuilt from LOCA2-CA `tasmin` (Apr–Oct P95 of the facility's 1961–1990
+  distribution), replacing the VCP hot-nights field.
 - **Heat hazard moves from tract joins to facility cells.** Every facility now carries its own
   LOCA2-CA grid cell (14-model ensemble, model democracy), replacing the tract-centroid join. This
   applies to all 357 CA carceral facilities in the hazard data product; the index remains CDCR-31.
 - **AQI becomes a multiplicative modifier.** Air quality was an equal additive third of the hazard
   in v0.1; in v0.2 it multiplies the temperature hazard (`× (1 + 0.30·AQI_norm/100)`) so it amplifies
   heat where present but cannot create hazard from pollution alone.
+- **AC sub-indicator source corrected.** The exposure "no-AC" term now uses `pct_hu_mechanical` from
+  the CDCR Air Cooling Pilot Supplemental Report (Jan 2026, as of Dec 2025) — the complete per-facility
+  housing-unit inventory — replacing the older, incomplete Reuters FOIA equipment inventory that
+  overstated AC at 16 of 31 facilities (e.g. CIM 100% vs the report's ~43%). See
+  `data_sources/facilities/CDCR/README.md`.
 - **Hazard normalization: min-max → max-norm.** The temperature indicators are divided by their
   cross-period max rather than min-max scaled, so the coolest facility keeps a real, non-zero score
   instead of a false floor of 0.

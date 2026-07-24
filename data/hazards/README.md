@@ -12,18 +12,18 @@ VCP excludes census tracts with high group-quarters populations (including state
 
 **Notebook:** `data_sources/hazards/heat/heat_hazard.ipynb`
 
-Combines daytime heat, nighttime heat recovery failure, and air quality into two comparable indices — current and mid-century — for all 357 facilities. Both temperature indicators are **facility-relative** and drawn from a LOCA2-CA daily extraction (`loca2_facility_heat.csv`), not the tract product used in v0.1.
+Combines daytime heat, nighttime heat recovery failure, and air quality into two comparable indices — current and mid-century — for all 357 facilities. Temperature indicators are drawn from a LOCA2-CA daily extraction (`loca2_facility_heat.csv`), not the tract product used in v0.1.
 
-- **Hot days** — days above the facility's own mean summer daily-max + 10°F (Skarha threshold, 1981–2010 baseline).
-- **Warm nights** — April–October nights above the 95th percentile of the facility's **1961–1990** April–October minimum-temperature distribution (OEHHA convention). The baseline window is fixed and differs from the counting window, so the count measures distributional shift rather than moving with the climate it detects.
+- **Hot days (blended)** — a 50/50 blend of a facility-relative threshold (days above the facility's mean summer daily-max + 10°F, 1981–2010 baseline) and an absolute threshold (days over 90°F), each max-normalized before blending. The 50% weight is a parameter.
+- **Warm nights** — April–October nights above the 95th percentile of the facility's 1961–1990 April–October minimum-temperature distribution (OEHHA convention).
 
-Each temperature indicator is **max-normalized** across the facilities and both periods (dividing by the cross-period max, not min-max), so a facility with no heat scores 0 while the coolest facility keeps its real, non-zero score. The two are averaged, then amplified by air quality as a **multiplicative modifier**: `H = temp × (1 + 0.30·AQI_norm/100)`. AQI enters as an amplifier rather than an additive third — it raises the hazard where heat is present but cannot create hazard from pollution alone (×1.0 at AQI = 0). AQI is held at historic CalEnviroScreen values for both periods; β = 0.30 is a design parameter capping amplification at +30% at the worst-air facility.
+The blended daytime term and the warm-night term are each max-normalized across the facilities and both periods (dividing by the cross-period max, not min-max), so a facility with no exceedances scores 0. The two are averaged, then multiplied by an air-quality modifier: `H = temp × (1 + 0.30·AQI_norm/100)`, ×1.0 at AQI = 0. AQI is held at historic CalEnviroScreen values for both periods; β = 0.30 is a parameter.
 
 **Provenance.** LOCA2-CA daily, accessed anonymously from the cadcat S3 zarr store (`s3://cadcat/loca2/ucsd/...`, grid `d03`, ≈3 km cells). The ensemble is **14 models** (HadGEM3-GC31-LL dropped — no ssp370 on cadcat), pooled by **model democracy**: counts are computed per member, averaged within model, then across models, so each model carries weight 1/14 regardless of how many members it contributes. Threshold and count are computed **per member, then pooled** — computing a threshold from the ensemble mean would smooth away the daily variance the exceedance count measures. Historic = 1981–2010, mid-century = 2041–2070 (ssp370). See `data_sources/hazards/README.md` for the spatial cell-assignment rule and the reproduction-gate result against the published Cal-Adapt layer.
 
 | Component | Current | Mid-century | Source |
 | :--- | :--- | :--- | :--- |
-| Hot days | Days above facility summer-mean tmax + 10°F (1981–2010) | Same threshold (2041–2070) | LOCA2-CA daily (SSP3-7.0) via cadcat |
+| Hot days (blended) | 50/50 blend: days above facility summer-mean tmax + 10°F (relative, 1981–2010) ⊕ days over 90°F (absolute) | Same thresholds (2041–2070) | LOCA2-CA daily (SSP3-7.0) via cadcat |
 | Warm nights | Apr–Oct nights > P95 of facility 1961–1990 Apr–Oct tmin | Same threshold (2041–2070) | LOCA2-CA daily (SSP3-7.0) via cadcat |
 | Air quality | Multiplicative modifier `× (1 + 0.30·AQI/100)` | Held at historic — no tract-level projection | CalEnviroScreen 5.0, 2025 |
 
