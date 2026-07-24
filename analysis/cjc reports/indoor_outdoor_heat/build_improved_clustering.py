@@ -10,7 +10,7 @@ motivated by methods_review_clustering.ipynb:
   2. Zeros       -> the three compositional, zero-inflated cooling shares
                     (refrigeration / evaporation / ventilation) are collapsed to ONE
                     categorical feature: the facility's dominant cooling system.
-  3. Data fix    -> pct_buildings_evaporation clipped to <= 1 (SATF was 1.03).
+  3. Data fix    -> pct_hu_evaporative clipped to <= 1 (SATF was 1.03).
   4. k           -> k = 3, which is the most stable choice once (1)-(2) are applied
                     (resample ARI ~0.85; Gower+K-Medoids converges to the same
                     partition once cooling is fairly weighted).
@@ -38,13 +38,13 @@ CSV  = HERE / 'indoor_outdoor_heat_2025.csv'
 RANDOM_STATE, N_INIT = 42, 50
 
 # The nine raw features (used only for the z-score PROFILE / interpretation) --------
-FEATURES9 = ['year_opened', 'pct_buildings_refrigeration', 'pct_buildings_evaporation',
+FEATURES9 = ['year_opened', 'pct_hu_mechanical', 'pct_hu_evaporative',
              'days_outdoor_above_78f_2025', 'days_indoor_above_78f_2025', 'uhi_normalized',
              'elevation_m', 'latitude', 'hotnights_pre_pct']
 # Numeric features that actually go into the improved clustering (Yeo-Johnson'd) -----
 CLUSTER_NUM = ['year_opened', 'days_outdoor_above_78f_2025', 'days_indoor_above_78f_2025',
                'uhi_normalized', 'elevation_m', 'latitude', 'hotnights_pre_pct']
-COOL_COLS   = ['pct_buildings_refrigeration', 'pct_buildings_evaporation', 'pct_buildings_ventilation']
+COOL_COLS   = ['pct_hu_mechanical', 'pct_hu_evaporative', 'pct_hu_air_handlers']
 
 # ── Load & clean ──────────────────────────────────────────────────────────────
 df = pd.read_csv(CSV)
@@ -52,13 +52,13 @@ df['uhi_normalized']    = df['uhi_normalized'].fillna(0)
 df['hotnights_pre_pct'] = df['hotnights_pre_pct'].fillna(0)
 
 # Data fix: evaporation share cannot exceed 1 (SATF = 1.03)
-bad = df['pct_buildings_evaporation'] > 1
+bad = df['pct_hu_evaporative'] > 1
 if bad.any():
-    print(f"Data fix: clipping pct_buildings_evaporation > 1 for {df.loc[bad,'cdcr_code'].tolist()}")
-    df['pct_buildings_evaporation'] = df['pct_buildings_evaporation'].clip(upper=1.0)
+    print(f"Data fix: clipping pct_hu_evaporative > 1 for {df.loc[bad,'cdcr_code'].tolist()}")
+    df['pct_hu_evaporative'] = df['pct_hu_evaporative'].clip(upper=1.0)
 
 # Dominant cooling system -> single categorical feature
-df['cooling_type'] = df[COOL_COLS].idxmax(axis=1).str.replace('pct_buildings_', '', regex=False)
+df['cooling_type'] = df[COOL_COLS].idxmax(axis=1).str.replace('pct_hu_', '', regex=False)
 
 # ── Improved feature matrix: Yeo-Johnson numerics + one-hot cooling ───────────
 num_yj = PowerTransformer('yeo-johnson', standardize=True).fit_transform(df[CLUSTER_NUM])

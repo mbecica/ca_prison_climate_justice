@@ -48,8 +48,8 @@ print(f"  securelvl nulls (NOT AVAILABLE): {df['is_maximum'].isna().sum()} "
 # 9 features from the HTML report
 BASE_FEATURES = [
     'year_opened',
-    'pct_buildings_refrigeration',
-    'pct_buildings_evaporation',
+    'pct_hu_mechanical',
+    'pct_hu_evaporative',
     'days_outdoor_above_78f_2025',
     'days_indoor_above_78f_2025',
     'uhi_normalized',
@@ -103,19 +103,19 @@ print(f"  With security level: n={len(df_reg_sec)} (SATF + CHCF excluded, secure
 models = {}
 
 # Model 1: AC fraction only (baseline)
-m1 = smf.ols('ratio_indoor_to_outdoor ~ pct_buildings_refrigeration', data=df_reg).fit()
+m1 = smf.ols('ratio_indoor_to_outdoor ~ pct_hu_mechanical', data=df_reg).fit()
 models['AC only'] = m1
 
 # Model 2: AC + capacity %
-m2 = smf.ols('ratio_indoor_to_outdoor ~ pct_buildings_refrigeration + cap_pct', data=df_reg).fit()
+m2 = smf.ols('ratio_indoor_to_outdoor ~ pct_hu_mechanical + cap_pct', data=df_reg).fit()
 models['AC + capacity'] = m2
 
 # Model 3: AC + security level (on restricted n)
-m3 = smf.ols('ratio_indoor_to_outdoor ~ pct_buildings_refrigeration + is_maximum', data=df_reg_sec).fit()
+m3 = smf.ols('ratio_indoor_to_outdoor ~ pct_hu_mechanical + is_maximum', data=df_reg_sec).fit()
 models['AC + security'] = m3
 
 # Model 4: AC + capacity + security (restricted n)
-m4 = smf.ols('ratio_indoor_to_outdoor ~ pct_buildings_refrigeration + cap_pct + is_maximum', data=df_reg_sec).fit()
+m4 = smf.ols('ratio_indoor_to_outdoor ~ pct_hu_mechanical + cap_pct + is_maximum', data=df_reg_sec).fit()
 models['AC + capacity + security'] = m4
 
 print("\n── OLS results: ratio_indoor_to_outdoor ──")
@@ -124,8 +124,8 @@ for name, m in models.items():
     n = int(m.nobs)
     r2 = m.rsquared
     ar2 = m.rsquared_adj
-    ac_c  = m.params.get('pct_buildings_refrigeration', np.nan)
-    ac_p  = m.pvalues.get('pct_buildings_refrigeration', np.nan)
+    ac_c  = m.params.get('pct_hu_mechanical', np.nan)
+    ac_p  = m.pvalues.get('pct_hu_mechanical', np.nan)
     cap_c = m.params.get('cap_pct', np.nan)
     cap_p = m.pvalues.get('cap_pct', np.nan)
     sec_c = m.params.get('is_maximum', np.nan)
@@ -203,8 +203,8 @@ for name, m in models.items():
         'n': int(m.nobs),
         'r2': round(m.rsquared, 4),
         'adj_r2': round(m.rsquared_adj, 4),
-        'ac_coef': round(m.params.get('pct_buildings_refrigeration', np.nan), 4),
-        'ac_pvalue': round(m.pvalues.get('pct_buildings_refrigeration', np.nan), 4),
+        'ac_coef': round(m.params.get('pct_hu_mechanical', np.nan), 4),
+        'ac_pvalue': round(m.pvalues.get('pct_hu_mechanical', np.nan), 4),
         'capacity_coef': round(m.params.get('cap_pct', np.nan), 4) if 'cap_pct' in m.params else None,
         'capacity_pvalue': round(m.pvalues.get('cap_pct', np.nan), 4) if 'cap_pct' in m.params else None,
         'security_coef': round(m.params.get('is_maximum', np.nan), 4) if 'is_maximum' in m.params else None,

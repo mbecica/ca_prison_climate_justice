@@ -36,7 +36,7 @@ Pre-2017 roofing was funded through a pooled annual special repair appropriation
 | :--- | :--- |
 | `days_indoor_above_78f_2025` | CDCR Air Cooling Pilot Program Supplemental Report, January 2026, Table 1 |
 | `days_outdoor_above_78f_2025`, `days_outdoor_90f_2025` | gridMET daily tmax (tmmx), University of Idaho, 2025. Days computed May–October. |
-| `pct_buildings_refrigeration/evaporation/ventilation` | Reuters FOIA AHU data (June 2025); CTF corrected per CDCR email |
+| `pct_hu_mechanical/evaporation/ventilation` | Reuters FOIA AHU data (June 2025); CTF corrected per CDCR email |
 | `uhi_normalized` | Benz & Burney (2021), same as facilities dataset |
 | `hotnights_pre_pct` | CalEnviroScreen 4.0 / OEHHA |
 | `elevation_m` | USGS National Elevation Dataset (EPQS API) |

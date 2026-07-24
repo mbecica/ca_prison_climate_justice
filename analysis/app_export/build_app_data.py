@@ -281,10 +281,10 @@ def main():
                     # units are counted under each type, so shares can sum slightly >1.
                     # Only "mechanical" is refrigerated AC; evaporative and ventilation
                     # do not provide reliable cooling.
-                    "mechanical_pct": num(f["pct_buildings_refrigeration"], 4),
-                    "evaporative_pct": num(f["pct_buildings_evaporation"], 4),
-                    "ventilation_pct": num(f["pct_buildings_ventilation"], 4),
-                    "n_housing_units": num(f["n_housing_buildings"]),
+                    "mechanical_pct": num(f["pct_hu_mechanical"], 4),
+                    "evaporative_pct": num(f["pct_hu_evaporative"], 4),
+                    "air_handlers_pct": num(f["pct_hu_air_handlers"], 4),
+                    "n_housing_units": num(f["n_housing_units"]),
                     "as_of": "2025-12",
                     "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026",
                 },

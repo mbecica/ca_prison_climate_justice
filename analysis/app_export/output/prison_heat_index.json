@@ -133,7 +133,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 1,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 20,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -257,7 +257,7 @@
         "cooling": {
           "mechanical_pct": 0.0455,
           "evaporative_pct": 0,
-          "ventilation_pct": 0.9545,
+          "air_handlers_pct": 0.9545,
           "n_housing_units": 22,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -381,7 +381,7 @@
         "cooling": {
           "mechanical_pct": 1,
           "evaporative_pct": 0,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 29,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -505,7 +505,7 @@
         "cooling": {
           "mechanical_pct": 0.4286,
           "evaporative_pct": 0,
-          "ventilation_pct": 0.5714,
+          "air_handlers_pct": 0.5714,
           "n_housing_units": 21,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -629,7 +629,7 @@
         "cooling": {
           "mechanical_pct": 0.3636,
           "evaporative_pct": 0.6364,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 11,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -753,7 +753,7 @@
         "cooling": {
           "mechanical_pct": 0.5283,
           "evaporative_pct": 0.4717,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 53,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -874,7 +874,7 @@
         "cooling": {
           "mechanical_pct": 0.1875,
           "evaporative_pct": 0,
-          "ventilation_pct": 0.8125,
+          "air_handlers_pct": 0.8125,
           "n_housing_units": 16,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -998,7 +998,7 @@
         "cooling": {
           "mechanical_pct": 0.0833,
           "evaporative_pct": 0.0278,
-          "ventilation_pct": 0.8889,
+          "air_handlers_pct": 0.8889,
           "n_housing_units": 36,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1122,7 +1122,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 1,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 24,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1246,7 +1246,7 @@
         "cooling": {
           "mechanical_pct": 0.0455,
           "evaporative_pct": 0.9545,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 22,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1370,7 +1370,7 @@
         "cooling": {
           "mechanical_pct": 0.08,
           "evaporative_pct": 0.92,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 25,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1494,7 +1494,7 @@
         "cooling": {
           "mechanical_pct": 0.16,
           "evaporative_pct": 0.24,
-          "ventilation_pct": 0.6,
+          "air_handlers_pct": 0.6,
           "n_housing_units": 25,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1618,7 +1618,7 @@
         "cooling": {
           "mechanical_pct": 0.0625,
           "evaporative_pct": 1.0312,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 32,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1742,7 +1742,7 @@
         "cooling": {
           "mechanical_pct": 1,
           "evaporative_pct": 0,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 24,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1866,7 +1866,7 @@
         "cooling": {
           "mechanical_pct": 1,
           "evaporative_pct": 0,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 24,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -1987,7 +1987,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 1,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 16,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2111,7 +2111,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 0.0455,
-          "ventilation_pct": 0.9545,
+          "air_handlers_pct": 0.9545,
           "n_housing_units": 22,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2235,7 +2235,7 @@
         "cooling": {
           "mechanical_pct": 0.25,
           "evaporative_pct": 0.75,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 16,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2359,7 +2359,7 @@
         "cooling": {
           "mechanical_pct": 0.0345,
           "evaporative_pct": 0.9655,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 29,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2483,7 +2483,7 @@
         "cooling": {
           "mechanical_pct": 1,
           "evaporative_pct": 0,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 23,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2607,7 +2607,7 @@
         "cooling": {
           "mechanical_pct": 0.1,
           "evaporative_pct": 0,
-          "ventilation_pct": 0.9,
+          "air_handlers_pct": 0.9,
           "n_housing_units": 20,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2731,7 +2731,7 @@
         "cooling": {
           "mechanical_pct": 0.1364,
           "evaporative_pct": 0.8636,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 22,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2855,7 +2855,7 @@
         "cooling": {
           "mechanical_pct": 0.04,
           "evaporative_pct": 0.96,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 25,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -2979,7 +2979,7 @@
         "cooling": {
           "mechanical_pct": 0.0345,
           "evaporative_pct": 0,
-          "ventilation_pct": 0.9655,
+          "air_handlers_pct": 0.9655,
           "n_housing_units": 29,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3103,7 +3103,7 @@
         "cooling": {
           "mechanical_pct": 0.0435,
           "evaporative_pct": 0.9565,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 23,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3227,7 +3227,7 @@
         "cooling": {
           "mechanical_pct": 0.3478,
           "evaporative_pct": 0,
-          "ventilation_pct": 0.6522,
+          "air_handlers_pct": 0.6522,
           "n_housing_units": 23,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3351,7 +3351,7 @@
         "cooling": {
           "mechanical_pct": 0.1304,
           "evaporative_pct": 0.8696,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 23,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3475,7 +3475,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 0,
-          "ventilation_pct": 1,
+          "air_handlers_pct": 1,
           "n_housing_units": 11,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3599,7 +3599,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 0.0617,
-          "ventilation_pct": 0.9383,
+          "air_handlers_pct": 0.9383,
           "n_housing_units": 81,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3723,7 +3723,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 1,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 16,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
@@ -3847,7 +3847,7 @@
         "cooling": {
           "mechanical_pct": 0,
           "evaporative_pct": 1,
-          "ventilation_pct": 0,
+          "air_handlers_pct": 0,
           "n_housing_units": 28,
           "as_of": "2025-12",
           "source": "CDCR Air Cooling Pilot Supplemental Report, Jan 2026"
