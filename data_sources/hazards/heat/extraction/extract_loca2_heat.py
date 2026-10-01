@@ -34,6 +34,7 @@ an incomplete run exits without writing. Use --allow-partial to write a labelled
 loca2_facility_heat_PREVIEW.csv instead, and --pool-only to re-pool without re-extracting.
 """
 
+import sys
 import os
 import json
 import time
@@ -85,8 +86,9 @@ NIGHT_PCTLS = [95, 98]
 SQ_OVERRIDE = (37.953125, -122.515625)
 
 REPO_ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(REPO_ROOT / "data_sources" / "facilities"))
+from facility_name_normalizer import cdcr_code_from_name  # noqa: E402
 ALL_FACILITIES_CSV = REPO_ROOT / "data_sources" / "facilities" / "ca_facilities.csv"
-CDCR_FACILITIES_CSV = REPO_ROOT / "data" / "cdcr" / "cdcr_facilities.csv"
 OUTPUT_DIR = REPO_ROOT / "data_sources" / "hazards" / "heat"
 MEMBER_CACHE = OUTPUT_DIR / "loca2_members"
 CELLS_CSV = OUTPUT_DIR / "loca2_facility_cells.csv"
@@ -130,18 +132,11 @@ def open_member(cat, source_id, experiment_id, member_id, variable_id):
 def build_cell_assignment(cat):
     print("\n=== Step 1: facility -> cell assignment ===")
     allf = pd.read_csv(ALL_FACILITIES_CSV)
-    cdcr = pd.read_csv(CDCR_FACILITIES_CSV)
 
     fac = allf[["facilityid", "name", "latitude", "longitude"]].dropna(
         subset=["latitude", "longitude"]).reset_index(drop=True)
 
-    # ca_facilities names carry a trailing "(CODE)"; cdcr_facilities names do not.
-    # Joining on name matches 1 of 357 rows and silently disables the SQ override.
-    fac["cdcr_code"] = fac["name"].str.extract(r"\(([A-Z0-9]{2,5})\)$")[0]
-    known = set(cdcr["cdcr_code"].dropna())
-    fac.loc[~fac["cdcr_code"].isin(known), "cdcr_code"] = np.nan
-    by_id = cdcr.dropna(subset=["cdcr_code"]).set_index("facilityid")["cdcr_code"].to_dict()
-    fac["cdcr_code"] = fac["cdcr_code"].fillna(fac["facilityid"].map(by_id))
+    fac["cdcr_code"] = [cdcr_code_from_name(n, i) for n, i in zip(fac["name"], fac["facilityid"])]
     print(f"  {len(fac)} facilities, {fac.cdcr_code.notna().sum()} matched to a cdcr_code")
 
     masks = {}

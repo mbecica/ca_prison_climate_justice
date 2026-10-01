@@ -63,11 +63,10 @@ MC_SURNAMES = {
 # lone letter, or already correct).
 ROMAN_NUMERALS = {"II", "III", "IV", "VI", "VII", "VIII", "IX"}
 
-# Valid CDCR facility codes, verified against data/cdcr/cdcr_facilities.csv
-# (the authoritative source). A parenthetical token in a name is only treated
-# as a code — and uppercased — when it resolves into this set; otherwise the
-# parenthetical is descriptive text (e.g. "(South)", "(Honor Farm)") and is
-# left in title case.
+# Valid CDCR facility codes (cdcr_facility_data/crosswalk/institutions.csv).
+# A parenthetical token in a name is only treated as a code — and uppercased —
+# when it resolves into this set; otherwise the parenthetical is descriptive
+# text (e.g. "(South)", "(Honor Farm)") and is left in title case.
 VALID_CDCR_CODES = {
     "ASP", "CAC", "CAL", "CCI", "CCWF", "CEN", "CHCF", "CIM", "CIW", "CMC",
     "CMF", "COR", "CRC", "CTF", "CVSP", "FOL", "FWF", "HDSP", "ISP", "KVSP",
@@ -76,8 +75,7 @@ VALID_CDCR_CODES = {
 }
 
 # FEMA parenthetical codes that don't match CDCR's own code for the facility.
-# Mirrors the fema_to_cdcr map in create_cdcr_facilities.ipynb so the visible
-# code in ca_facilities.csv agrees with the authoritative cdcr_code column.
+# Matches the alias codes in cdcr_facility_data/crosswalk/institutions.csv.
 FEMA_CODE_FIX = {
     "CCFW": "CCWF",  # Central California Women's Facility: FEMA transposed the letters
     "FSP": "FOL",    # Folsom State Prison: FEMA uses FSP, CDCR uses FOL
@@ -88,6 +86,27 @@ FEMA_CODE_FIX = {
 # keeps its capital.
 _POSSESSIVE_RE = re.compile(r"'(S|T|D|M|LL|RE|VE)(?![A-Za-z])", re.IGNORECASE)
 _PAREN_RE = re.compile(r"\(([^)]+)\)")
+
+
+# Avenal State Prison's FEMA name carries no parenthetical code.
+AVENAL_FACILITYID = 10000826
+_TRAILING_CODE_RE = re.compile(r"\(([A-Za-z0-9]{2,5})\)\s*$")
+
+
+def cdcr_code_from_name(name, facilityid=None):
+    """Return the CDCR institution code for a FEMA facility record, or None.
+
+    Reads the trailing parenthetical code in the facility name, applies the
+    FEMA_CODE_FIX corrections, and keeps it only if it is a valid CDCR code.
+    """
+    if facilityid == AVENAL_FACILITYID:
+        return "ASP"
+    m = _TRAILING_CODE_RE.search(str(name))
+    if not m:
+        return None
+    code = m.group(1).upper()
+    code = FEMA_CODE_FIX.get(code, code)
+    return code if code in VALID_CDCR_CODES else None
 _TOKEN_SPLIT_RE = re.compile(r"(\s+)")
 _ALPHA_ONLY_RE = re.compile(r"[^A-Za-z]")
 
