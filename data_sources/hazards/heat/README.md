@@ -1,11 +1,9 @@
-# Heat Hazard — LOCA2-CA Daily Extraction
+# LOCA2-CA Daily Heat Extraction
 
 Facility-level heat metrics for all 357 California correctional facilities, computed from
-LOCA2-CA daily `tasmax` and `tasmin`. This replaces the tract-level joins that previously
-supplied daytime heat from `heatdays_alltimes_tract.csv`.
+LOCA2-CA daily `tasmax` and `tasmin`.
 
-Extraction script: `data_sources/hazards/heat/extraction/extract_loca2_heat.py`. Observed-temperature counterparts, on
-gridMET rather than model data, are documented in `../README.md`.
+Extraction script: `data_sources/hazards/heat/extraction/extract_loca2_heat.py`.
 
 ## Source
 
@@ -21,10 +19,6 @@ intake.open_esm_datastore('https://cadcat.s3.amazonaws.com/cae-collection.json')
 Grid `d03` is 1/32° (about 3 km), 495 × 559 cells covering 29.58–45.02 N and 128.42–110.98 W.
 Access is anonymous and supports lazy point selection, so only the chunks containing facility
 cells are read.
-
-The pre-reduced `LOCA2CA.*.annual_count.nc` files in the recj-fifth-assessment repository cannot
-substitute for this. They hold 30-year mean annual counts over fixed absolute thresholds, so no
-daily distribution survives in them and no relative or percentile threshold can be recovered.
 
 ## Ensemble
 
@@ -81,8 +75,8 @@ multi-hazard comparison with nothing to compare against.
 
 ## Reproduction Against the Published Product
 
-Before any of the relative thresholds were built, the extraction was checked by reproducing
-`annualavgcount_gt_{80,90,100,110}_tasmax` from the Cal-Adapt `.nc` files at the facility cells,
+The extraction was validated by reproducing Cal-Adapt's published
+`annualavgcount_gt_{80,90,100,110}_tasmax` from the daily data at the facility cells,
 using Ullrich's own weighting of all 70 historical member runs. Agreement at the 33 valid CDCR
 cells:
 
@@ -101,13 +95,12 @@ exactly, so no regridding enters the comparison.
 
 The published metric was built with
 [TempestExtremes](https://github.com/ClimateGlobalChange/tempestextremes). Matching it on all
-four thresholds is what licenses the claim that this pipeline uses the same definition: calendar
-handling, Kelvin-to-Fahrenheit conversion, the comparison convention, the 30-year annual-count
-definition and ensemble pooling all agree.
+four thresholds shows that calendar handling, Kelvin-to-Fahrenheit conversion, the comparison
+convention, the 30-year annual-count definition and ensemble pooling all agree with it.
 
 ## Spatial Assignment
 
-Each facility takes the single cell that contains it. We apply no neighborhood averaging and no
+Each facility takes the single cell that contains it, with no neighborhood averaging or
 interpolation. Spatial averaging is a low-pass filter and damps the daily peaks these metrics
 count; bilinear interpolation alters the tails of the daily distribution that statistical
 downscaling exists to produce (Maraun 2013; Maraun and Widmann 2018; IPCC AR6 WGI Ch. 11 §11.2.1,
@@ -140,12 +133,6 @@ override. It sits on water in the LOCA2 land mask. Nearest-by-distance selects 3
 used instead is 37.9531, −122.5156, 2.65 km WNW, on contiguous land and sheltered as the facility
 is. Mean tmax differs by 3.1 °F between them. The `tasmin` mask was checked separately and is
 identical to the `tasmax` mask.
-
-Two failure modes abort the run rather than being reported afterwards. NaN silently fails a
-`> threshold` comparison and yields a count of 0 instead of an error, so any NaN cell raises; and
-every period must return exactly 30 years. Distances are computed as `dlat × 111` and
-`dlon × 111 × cos(lat)`, since at latitude 38 raw degrees overweight longitude by about 25% and
-select the wrong nearest cell.
 
 ## Columns
 
@@ -192,16 +179,13 @@ carry a spatial signal. The absolute night counts (`nights_over_{60,70,80,90}`) 
 totals, matching the published tasmin variables; the relative warm-night counts run April through
 October, matching the agencies' warm-night season.
 
-**Baseline asymmetry, stated deliberately.** Hot days are anchored to summer 1981–2010; warm
+**Different baselines.** Hot days are anchored to summer 1981–2010; warm
 nights to April–October 1961–1990. Each threshold is adopted from the evidence base that
 calibrated it. The two indicators are normalized independently and averaged into the hazard
-component — never differenced against each other — so the different anchors introduce no
+component and are never differenced against each other, so the different anchors introduce no
 arithmetic inconsistency.
 
-Naming follows the convention in `../README.md`: a source prefix on every column, and the
-baseline window named wherever a threshold is relative. The gridMET observed columns are anchored
-to 1991–2020 and carry `base1991_2020`; the LOCA2 modeled columns here are not interchangeable
-with them.
+Every column carries the `loca2_` source prefix.
 
 ## Mixed Basis With Other Hazards
 
@@ -248,8 +232,9 @@ United States prison landscapes. *GeoHealth*, 8(9), e2024GH001108. doi:10.1029/2
 Milinski, S., Maher, N., & Olonscheck, D. (2020). How large does a large ensemble need to be?
 *Earth System Dynamics*, 11(4), 885–901. doi:10.5194/esd-11-885-2020
 
-Skarha, J., Jackson, A., Zlotnik, H., Williams, B., & Wildeman, C. (2023). Heat and mortality in
-US state prisons. *PLOS ONE*.
+Skarha, J., Spangler, K., Dosa, D., Rich, J. D., Savitz, D. A., & Zanobetti, A. (2023). Heat-related
+mortality in U.S. state and private prisons: A case-crossover analysis. *PLOS ONE*, 18(3),
+e0281389. doi:10.1371/journal.pone.0281389
 
 Tebaldi, C., & Knutti, R. (2007). The use of the multi-model ensemble in probabilistic climate
 projections. *Philosophical Transactions of the Royal Society A*, 365(1857), 2053–2075.
