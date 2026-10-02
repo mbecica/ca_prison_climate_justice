@@ -1,13 +1,7 @@
-"""Robust casing normalizer for California carceral-facility names/addresses.
+"""Casing normalizer for California carceral-facility names and addresses.
 
-Background
-----------
-The base facilities data comes from FEMA RAPT in ALL CAPS. The build notebooks
-(``create_facilities.ipynb`` -> ``ca_facilities.csv``,
-``create_cdcr_facilities.ipynb`` -> ``cdcr_facilities.csv``) used to run a naive
-``str.title()`` over the name/address/city columns. Python's ``.title()`` leaves
-a family of predictable artifacts that flow downstream into the CA Carceral
-Facility Heat Tracker:
+The FEMA facility data is in all caps. Python's ``str.title()`` produces
+predictable artifacts on these names:
 
     "WOMEN'S"  -> "Women'S"   (should be "Women's")
     "FCI DUBLIN" -> "Fci Dublin"  (should be "FCI Dublin")
@@ -15,19 +9,18 @@ Facility Heat Tracker:
     "BRYAN II"  -> "Bryan Ii"     (should be "Bryan II")
     "... (CCFW)" -> "... (Ccfw)"  (should be "... (CCWF)" — FEMA transposed it)
 
-This module replaces the naive title-casing with a *curated* normalizer built
-from explicit sets/maps rather than a pile of one-off ``.replace()`` calls, so a
-name like "O'Brien" (a real surname, not a possessive) survives untouched.
+This module applies curated rules built from explicit sets and maps, so a name
+like "O'Brien" (a real surname, not a possessive) is left untouched.
 
-The public entry point is :func:`normalize_facility_name`, used for the name,
-address, and city columns alike.
+:func:`normalize_facility_name` is used for the name, address, and city columns.
+:func:`cdcr_code_from_name` returns the CDCR institution code for a facility.
 """
 
 from __future__ import annotations
 
 import re
 
-__all__ = ["normalize_facility_name"]
+__all__ = ["normalize_facility_name", "cdcr_code_from_name"]
 
 
 # --- Curated data -----------------------------------------------------------

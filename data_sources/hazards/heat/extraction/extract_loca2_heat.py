@@ -24,9 +24,9 @@ Usage:
   caffeinate -is conda run --no-capture-output -n data_science python3 data_sources/hazards/heat/extraction/extract_loca2_heat.py
 
 Runtime: ~6 hours from cold (62 members x 3 periods x 2 variables). Safe to interrupt and
-re-run — completed members are cached and skipped. When a v0.1 cache is present, only tasmin
-is re-read (~3.5 hours): the validated tasmax counts are reused and the tasmin warm-night
-metrics are recomputed under the v0.2 definition (Apr-Oct P95/P98, 1961-1990 baseline).
+re-run — completed members are cached and skipped. Cache entries without the April–October
+warm-night metrics (P95/P98, 1961-1990 baseline) have only tasmin re-read (~3.5 hours); their
+tasmax counts are reused.
 
 The data product is written only when all 62 members are cached. A partial cache would pool
 into a product built on a smaller ensemble than the method claims while looking complete, so
@@ -241,7 +241,7 @@ def _read_points(cat, model, exp, member, var, y0, y1, ilat, ilon):
 
 def extract_tasmax(cat, model, member, ilat, ilon):
     """Absolute counts + relative avg / avg+10, baseline = summer 1981-2010.
-    Unchanged from the validated v0.1 path (reproduction gate)."""
+    Validated against Cal-Adapt's published counts (see heat/README.md)."""
     res = {}
     base_mean = None
     for pname, exp, y0, y1 in PERIODS:
@@ -303,8 +303,8 @@ def extract_member(cat, model, member, ilat, ilon):
     return res
 
 
-# Sentinel key marking a cache entry as carrying the v0.2 warm-night definition.
-# A v0.1 cache has full-year rel_tasmin_p98 and rel_tasmin_avg instead.
+# Sentinel key marking a cache entry that carries the April–October warm-night metrics.
+# Older entries have full-year rel_tasmin_p98 and rel_tasmin_avg instead.
 NIGHT_SENTINEL = "rel_tasmin_p95_historic"
 
 
@@ -326,12 +326,12 @@ def extract_all(cat, roster, ilat, ilon):
             cached = json.load(open(path)) if path.exists() else None
 
             if cached is not None and _is_v2_tasmin(cached):
-                print(f"  [{n:2d}/{total}] {model:18s} {member:10s} cached (v0.2)", flush=True)
+                print(f"  [{n:2d}/{total}] {model:18s} {member:10s} cached", flush=True)
                 continue
 
             tmin = extract_tasmin(cat, model, member, ilat, ilon)
             if cached is not None:
-                # Reuse the validated v0.1 tasmax computation; replace only the
+                # Reuse the cached tasmax counts; replace only the
                 # tasmin keys (drops the discarded full-year p98 / avg / avg+10),
                 # and drop the unused tasmax p98 baseline so key sets stay uniform.
                 tasmax = {k: v for k, v in cached.items()
